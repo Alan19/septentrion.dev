@@ -1,5 +1,5 @@
 import {Grid} from "@mui/material";
-import {ButtonStack} from "./ButtonStack";
+import {SocialsLinks} from "./SocialsLinks";
 import React from "react";
 import {Header} from "./Header";
 
@@ -11,7 +11,7 @@ export function Summary() {
         <Grid item>
             <Grid container>
                 <Grid item xs={12} lg={5}>
-                    <ButtonStack/>
+                    <SocialsLinks/>
                 </Grid>
             </Grid>
         </Grid>

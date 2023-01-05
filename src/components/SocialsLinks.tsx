@@ -4,8 +4,9 @@ import {GitHub, Image, Telegram, Twitter} from "@mui/icons-material";
 import {SocialMediaButton} from "./SocialMediaButton";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTwitch} from "@fortawesome/free-brands-svg-icons/faTwitch";
+import {faCircle} from "@fortawesome/free-solid-svg-icons/faCircle"
 
-export function ButtonStack() {
+export function SocialsLinks() {
     return (
         <Stack spacing={2} alignItems={"stretch"}>
             <SocialMediaButton
@@ -32,6 +33,11 @@ export function ButtonStack() {
                 icon={<Telegram/>}
                 text={"Telegram"}
                 link={"https://telegram.dog/FaintAlcor"}
+            />
+            <SocialMediaButton
+                icon={<FontAwesomeIcon icon={faCircle}/>}
+                text={"Cohost"}
+                link={"https://cohost.org/alcor"}
             />
         </Stack>
     );
