@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Chip, Grid, ImageList, ImageListItem, Paper, Typography} from "@mui/material";
+import {Chip, Grid, ImageList, ImageListItem, Paper, Typography, useMediaQuery} from "@mui/material";
 import {ArtTag} from "../ImageData";
 import {
     Category,
@@ -12,6 +12,7 @@ import {
 } from "@mui/icons-material";
 import {itemData} from "./images";
 import "./gallery.css";
+import {theme} from "../../App";
 
 export function Gallery() {
     type TagState = {
@@ -47,10 +48,25 @@ export function Gallery() {
     }
 
     let shownImages = itemData.filter(value => enabledTags.length === 0 ? true : enabledTags.some(tag => value.tags?.includes(tag) ?? false));
+    const isSmallOrAbove = useMediaQuery(theme.breakpoints.up('sm'));
+    const isMediumOrAbove = useMediaQuery(theme.breakpoints.up('md'));
+
+    function getCols() {
+        if (isMediumOrAbove) {
+            return 4;
+        }
+        else if (isSmallOrAbove) {
+            return 3;
+        }
+        else {
+            return 1;
+        }
+    }
+
     return <>
         <Grid container spacing={2}>
             <Grid item md={3}>
-                <Paper elevation={3} className={"filters"}>
+                <Paper elevation={3} className={`filters ${isMediumOrAbove ? 'medium' : ''}`}>
                     <Typography variant={"h5"} style={{marginTop: "8px"}}><Filter/> Filter Gallery</Typography>
                     {filterCategories(<PetsOutlined/>, "Forms", value => value.includes("Form"))}
                     {filterCategories(<DryCleaningOutlined/>, "Superhero Suits", value => value.includes("Suit"))}
@@ -58,7 +74,7 @@ export function Gallery() {
                 </Paper>
             </Grid>
             <Grid item md>
-                <ImageList variant={"masonry"} cols={4} gap={8}>
+                <ImageList variant={"masonry"} cols={getCols()} gap={8}>
                     {
                         shownImages.map(value =>
                             <ImageListItem key={value.title}>
