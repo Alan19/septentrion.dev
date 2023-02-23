@@ -16,11 +16,11 @@ export const theme = createTheme({
 
 const router = createHashRouter([
     {
-        path: "/Personal-Website",
+        path: "/",
         element: <Main />,
     },
     {
-        path: "/Personal-Website/gallery",
+        path: "/gallery",
         element: <Gallery />
     }
 ]);
