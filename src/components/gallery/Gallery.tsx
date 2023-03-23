@@ -1,22 +1,14 @@
 import React, {useState} from "react";
 import {Chip, Grid, ImageList, ImageListItem, Paper, Typography, useMediaQuery} from "@mui/material";
-import {ArtTag} from "../ImageData";
-import {
-    Category,
-    CategoryOutlined,
-    DryCleaning,
-    DryCleaningOutlined,
-    Filter,
-    Pets,
-    PetsOutlined
-} from "@mui/icons-material";
-import {itemData} from "./images";
+import {ArtTag, ImageData} from "../ImageData";
+import {CategoryOutlined, DryCleaningOutlined, Filter, PetsOutlined, Remove} from "@mui/icons-material";
 import "./gallery.css";
 import {theme} from "../../App";
+import images from './images.json';
 
 export function Gallery() {
     type TagState = {
-        [tag in ArtTag]: boolean;
+        [tag in ArtTag]: number;
     };
 
     const [tags, setTags] = useState<TagState>(Object.values(ArtTag).reduce((previousValue, currentValue) => {
@@ -26,28 +18,65 @@ export function Gallery() {
         }
     }, {}) as TagState);
 
-    const enabledTags: ArtTag[] = Object.keys(tags).filter(value => tags[value as ArtTag]) as ArtTag[];
+    const enabledTags: ArtTag[] = Object.keys(tags).filter(value => tags[value as ArtTag] === 1) as ArtTag[];
+    const hiddenTags: ArtTag[] = Object.keys(tags).filter(value => tags[value as ArtTag] === -1) as ArtTag[];
 
-    function toggleTag(tagName: ArtTag) {
-        const newVal = !tags[tagName];
-        setTags({...tags, [tagName]: newVal})
+    function toggleHide(tagName: ArtTag) {
+        if (tags[tagName] !== 1) {
+            setTags({...tags, [tagName]: 1})
+
+        }
+        else {
+            setTags({...tags, [tagName]: 0})
+        }
+    }
+
+    function filterTag(tagName: ArtTag) {
+        if (tags[tagName] !== -1){
+            setTags({...tags, [tagName]: -1})
+        }
+        else {
+            setTags({...tags, [tagName]: 0})
+        }
     }
 
     function filterCategories(element: JSX.Element, categoryname: string, filterFunction: (value: ArtTag) => boolean) {
+        function getColor(tag: ArtTag) {
+            switch (tags[tag]) {
+                case 1:
+                    return "primary";
+                case -1:
+                    return "error"
+                default:
+                    return "default";
+            }
+        }
+
         return <>
             <Typography variant={"h6"} style={{marginTop: "8px"}}>{element} {categoryname}</Typography>
             <Grid container direction={"row"} spacing={1}>
                 {Object.values(ArtTag).filter(filterFunction).map(tag => <Grid item>
                     <Chip label={tag}
-                          onClick={() => toggleTag(tag)}
+                          onClick={() => toggleHide(tag)}
                           variant={tags[tag] ? "filled" : "outlined"}
-                          color={tags[tag] ? "primary" : "default"}/>
+                          deleteIcon={<Remove />}
+                          onDelete={() => filterTag(tag)}
+                          color={getColor(tag)}/>
                 </Grid>)}
             </Grid>
         </>;
     }
 
-    let shownImages = itemData.filter(value => enabledTags.length === 0 ? true : enabledTags.some(tag => value.tags?.includes(tag) ?? false));
+    const itemData: ImageData[] = images;
+    let shownImages = itemData.filter(value => {
+        const hasFilterTag = enabledTags.some(tag => value.tags?.includes(tag) ?? false);
+        const hasHiddenTag = hiddenTags.some(tag => value.tags?.includes(tag) ?? false);
+        if (enabledTags.length === 0) {
+            return !hasHiddenTag;
+        } else {
+            return hasFilterTag && !hasHiddenTag;
+        }
+    });
     const isSmallOrAbove = useMediaQuery(theme.breakpoints.up('sm'));
     const isMediumOrAbove = useMediaQuery(theme.breakpoints.up('md'));
 
@@ -74,15 +103,15 @@ export function Gallery() {
                 </Paper>
             </Grid>
             <Grid item md>
-                <ImageList variant={"masonry"} cols={getCols()} gap={8}>
+                <ImageList variant={"masonry"} cols={getCols()} gap={8} >
                     {
                         shownImages.map(value =>
                             <ImageListItem key={value.title}>
                                 <img
-                                    src={value.img}
+                                    src={value.src}
                                     alt={value.title}
                                     loading={"lazy"}
-                                    onClick={() => window.open(value.source, "_blank")}
+                                    onClick={() => window.open(value.href, "_blank")}
                                     className={"artImage"}
                                 />
                             </ImageListItem>)

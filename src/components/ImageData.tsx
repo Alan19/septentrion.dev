@@ -22,12 +22,12 @@ export enum ArtTag {
 }
 
 export type ImageData = {
-    img: string;
-    source: string;
+    src: string;
+    href: string;
     title?: string;
-    author?: string;
+    artist?: string;
     rows?: number;
     cols?: number;
     artistURL?: string;
-    tags?: ArtTag[];
+    tags?: string[];
 }
