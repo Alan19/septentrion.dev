@@ -1,22 +1,21 @@
-import React, {useState} from "react";
+import React from "react";
 import {Chip, Grid, ImageList, ImageListItem, Paper, Typography, useMediaQuery} from "@mui/material";
 import {ArtTag, ImageData} from "../ImageData";
 import {CategoryOutlined, DryCleaningOutlined, Filter, PetsOutlined, Remove} from "@mui/icons-material";
 import "./gallery.css";
 import {theme} from "../../App";
 import images from './images.json';
+import {useTagHooks} from "./UseTagHooks";
+
+export type TagState = {
+    [tag in ArtTag]: number;
+};
 
 export function Gallery() {
-    type TagState = {
-        [tag in ArtTag]: number;
-    };
 
-    const [tags, setTags] = useState<TagState>(Object.values(ArtTag).reduce((previousValue, currentValue) => {
-        return {
-            ...previousValue,
-            [currentValue]: false
-        }
-    }, {}) as TagState);
+    const {getTags, setTags} = useTagHooks();
+
+    let tags: TagState = getTags();
 
     const enabledTags: ArtTag[] = Object.keys(tags).filter(value => tags[value as ArtTag] === 1) as ArtTag[];
     const hiddenTags: ArtTag[] = Object.keys(tags).filter(value => tags[value as ArtTag] === -1) as ArtTag[];
@@ -25,17 +24,15 @@ export function Gallery() {
         if (tags[tagName] !== 1) {
             setTags({...tags, [tagName]: 1})
 
-        }
-        else {
+        } else {
             setTags({...tags, [tagName]: 0})
         }
     }
 
     function filterTag(tagName: ArtTag) {
-        if (tags[tagName] !== -1){
+        if (tags[tagName] !== -1) {
             setTags({...tags, [tagName]: -1})
-        }
-        else {
+        } else {
             setTags({...tags, [tagName]: 0})
         }
     }
@@ -59,7 +56,7 @@ export function Gallery() {
                     <Chip label={tag}
                           onClick={() => toggleHide(tag)}
                           variant={tags[tag] ? "filled" : "outlined"}
-                          deleteIcon={<Remove />}
+                          deleteIcon={<Remove/>}
                           onDelete={() => filterTag(tag)}
                           color={getColor(tag)}/>
                 </Grid>)}
@@ -83,11 +80,9 @@ export function Gallery() {
     function getCols() {
         if (isMediumOrAbove) {
             return 4;
-        }
-        else if (isSmallOrAbove) {
+        } else if (isSmallOrAbove) {
             return 3;
-        }
-        else {
+        } else {
             return 1;
         }
     }
@@ -99,11 +94,12 @@ export function Gallery() {
                     <Typography variant={"h5"} style={{marginTop: "8px"}}><Filter/> Filter Gallery</Typography>
                     {filterCategories(<PetsOutlined/>, "Forms", value => value.includes("Form"))}
                     {filterCategories(<DryCleaningOutlined/>, "Superhero Suits", value => value.includes("Suit"))}
-                    {filterCategories(<CategoryOutlined/>, "Miscellaneous", value => !["Suit", "Form"].some(keyword => value.includes(keyword)))}
+                    {filterCategories(
+                        <CategoryOutlined/>, "Miscellaneous", value => !["Suit", "Form"].some(keyword => value.includes(keyword)))}
                 </Paper>
             </Grid>
             <Grid item md>
-                <ImageList variant={"masonry"} cols={getCols()} gap={8} >
+                <ImageList variant={"masonry"} cols={getCols()} gap={8}>
                     {
                         shownImages.map(value =>
                             <ImageListItem key={value.title}>
