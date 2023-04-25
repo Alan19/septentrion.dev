@@ -4,7 +4,7 @@ import {Container, createTheme, ThemeProvider,} from "@mui/material";
 import {blue} from "@mui/material/colors";
 import {Gallery} from "./components/gallery/Gallery";
 import {Main} from "./components/Main";
-import {createBrowserRouter, createHashRouter, RouterProvider} from "react-router-dom";
+import {createHashRouter, RouterProvider} from "react-router-dom";
 
 export const theme = createTheme({
     palette: {

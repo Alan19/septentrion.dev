@@ -1,4 +1,5 @@
 export enum ArtTag {
+    featured = 'Featured',
     superhero = 'Superhero',
     bows = 'Bow',
     lances = 'Lances',
@@ -10,7 +11,7 @@ export enum ArtTag {
     hoodie = 'Hoodie',
     castor = 'Castor',
     aicore = 'AICore Form',
-    awakened = 'Messier⬡ Form',
+    awakened = 'M⬡ Form',
     ultra = 'Triangulum Form',
     thuban = 'Thuban Form',
     rastaban = 'Rastaban Form',
@@ -18,7 +19,9 @@ export enum ArtTag {
     indra = 'Indra Suit',
     gungrir = 'Gungrir Suit',
     aldhibah = 'Aldhibah Form',
-    icarus = 'Icarus Suit'
+    icarus = 'Icarus Suit',
+    tf = 'Transformation',
+    eclipse = 'Eclipse Deity'
 }
 
 export type ImageData = {

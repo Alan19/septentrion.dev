@@ -37,7 +37,7 @@ export function Gallery() {
         }
     }
 
-    function filterCategories(element: JSX.Element, categoryname: string, filterFunction: (value: ArtTag) => boolean) {
+    function filterCategories(element: JSX.Element, categoryName: string, filterFunction: (value: ArtTag) => boolean) {
         function getColor(tag: ArtTag) {
             switch (tags[tag]) {
                 case 1:
@@ -50,7 +50,7 @@ export function Gallery() {
         }
 
         return <>
-            <Typography variant={"h6"} style={{marginTop: "8px"}}>{element} {categoryname}</Typography>
+            <Typography variant={"h6"} style={{marginTop: "8px"}}>{element} {categoryName}</Typography>
             <Grid container direction={"row"} spacing={1}>
                 {Object.values(ArtTag).filter(filterFunction).map(tag => <Grid item>
                     <Chip label={tag}

@@ -5,6 +5,8 @@ import {SocialMediaButton} from "./SocialMediaButton";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTwitch} from "@fortawesome/free-brands-svg-icons/faTwitch";
 import {faCircle} from "@fortawesome/free-solid-svg-icons/faCircle"
+import CollectionsIcon from '@mui/icons-material/Collections';
+import {InternalLinkButton} from "./InternalLinkButton";
 
 export function SocialsLinks() {
     return (
@@ -39,6 +41,7 @@ export function SocialsLinks() {
                 text={"Cohost"}
                 link={"https://cohost.org/alcor"}
             />
+            <InternalLinkButton icon={<CollectionsIcon />} text={"Gallery (Beta)"} link={'/gallery?Featured=1'} />
         </Stack>
     );
 }

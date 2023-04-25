@@ -1,41 +1,22 @@
 [
   {
-    "src": "https://pbs.twimg.com/media/FTkSbIYaQAALr_G?format=jpg&name=large",
-    "title": "Awakened Workout",
-    "href": "https://twitter.com/purpledragonrei/status/1529275140957437954?s=20&t=IQ_4HE6QZFQn8s7KgKDGqQ",
-    "artist": "@PurpleDragonRei",
-    "tags": [
-      "Messier⬡ Form"
-    ]
-  },
-  {
-    "src": "https://pbs.twimg.com/media/FTfg_0eVIAADZpm?format=jpg&name=large",
-    "title": "Symbiotic Form",
-    "href": "https://twitter.com/AmpedDragon/status/1528938543912873984?s=20",
-    "artist": "@AmpedDragon",
-    "tags": [
-      "AICore Form",
-      "Rastaban Form"
-    ]
-  },
-  {
-    "src": "https://pbs.twimg.com/media/FOBdASRWYAYYG_b?format=jpg&name=4096x4096",
-    "title": "Cafe Superhero",
-    "href": "https://twitter.com/FaintAlcor/status/1504306403208486912?s=20&t=zA57hIGuprCpbPwSIW7YJg",
-    "artist": "@graysheartart",
-    "tags": [
-      "Superhero",
-      "Eltanin Form",
-      "Gungrir Suit"
-    ]
-  },
-  {
     "src": "https://pbs.twimg.com/media/FQbUBrTWUAEToWA?format=jpg&name=4096x4096",
     "title": "Beach Boy",
     "href": "https://twitter.com/FaintAlcor/status/1515132564297732096?s=20&t=SWiTBSL9DioRcYH7ZyfJ0w",
     "artist": "@KuroPenguinEx",
     "tags": [
-      "Thuban Form"
+      "Thuban Form",
+      "Featured"
+    ]
+  },
+  {
+    "title": "M⬡ Form",
+    "src": "https://storage.googleapis.com/alcor-image-bucket/m6_form.jpg",
+    "href": "https://twitter.com/wolfmalro/status/1477512241247567877",
+    "artist": "@wolfmalro",
+    "tags": [
+      "M⬡ Form",
+      "Featured"
     ]
   },
   {
@@ -64,7 +45,39 @@
     "href": "https://twitter.com/KuroPenguinEx/status/1602624683211227136/photo/1",
     "artist": "@KuroPenguinEx",
     "tags": [
-      "AICore Form","Thuban Form"
+      "AICore Form",
+      "Thuban Form",
+      "Featured"
+    ]
+  },
+  {
+    "src": "https://pbs.twimg.com/media/FTkSbIYaQAALr_G?format=jpg&name=large",
+    "title": "Awakened Workout",
+    "href": "https://twitter.com/purpledragonrei/status/1529275140957437954?s=20&t=IQ_4HE6QZFQn8s7KgKDGqQ",
+    "artist": "@PurpleDragonRei",
+    "tags": [
+      "M⬡ Form"
+    ]
+  },
+  {
+    "src": "https://pbs.twimg.com/media/FTfg_0eVIAADZpm?format=jpg&name=large",
+    "title": "Symbiotic Form",
+    "href": "https://twitter.com/AmpedDragon/status/1528938543912873984?s=20",
+    "artist": "@AmpedDragon",
+    "tags": [
+      "AICore Form",
+      "Rastaban Form"
+    ]
+  },
+  {
+    "src": "https://pbs.twimg.com/media/FOBdASRWYAYYG_b?format=jpg&name=4096x4096",
+    "title": "Cafe Superhero",
+    "href": "https://twitter.com/FaintAlcor/status/1504306403208486912?s=20&t=zA57hIGuprCpbPwSIW7YJg",
+    "artist": "@graysheartart",
+    "tags": [
+      "Superhero",
+      "Eltanin Form",
+      "Gungrir Suit"
     ]
   },
   {
@@ -76,7 +89,8 @@
       "Indra Suit",
       "Bow",
       "Bodysuit",
-      "Thuban Form"
+      "Thuban Form",
+      "Featured"
     ],
     "artist": "@YamainuKen"
   },
@@ -104,7 +118,7 @@
     "artist": "@jw_bash"
   },
   {
-    "src": "https://pbs.twimg.com/media/FT8lpBpVEAAzPn-?format=jpg&name=large",
+    "src": "https://storage.googleapis.com/alcor-image-bucket/triangulum_form.jpg",
     "title": "Triangulum Form",
     "href": "https://twitter.com/DRACOICE08/status/1530984106804203520",
     "tags": [
@@ -120,7 +134,9 @@
     "tags": [
       "Castor",
       "AICore Form",
-      "Aldhibah Form"
+      "Aldhibah Form",
+      "Featured",
+      "Transformation"
     ]
   },
   {
@@ -129,7 +145,7 @@
     "href": "https://twitter.com/jcxraf/status/1603210053393125376",
     "artist": "@jcxraf",
     "tags": [
-      "Messier⬡ Form",
+      "M⬡ Form",
       "AICore Form"
     ]
   },
@@ -154,7 +170,8 @@
       "Techwear",
       "AICore Form",
       "Castor",
-      "Thuban Form"
+      "Thuban Form",
+      "Featured"
     ]
   },
   {
@@ -164,7 +181,8 @@
     "artist": "greyy_arts",
     "tags": [
       "Rastaban Form",
-      "Hoodie"
+      "Hoodie",
+      "Featured"
     ]
   },
   {
@@ -173,14 +191,15 @@
     "src": "https://pbs.twimg.com/media/FYrzr4aVEAABlTO?format=jpg&name=large",
     "tags": [
       "Thuban Form",
-      "Knives"
+      "Knives",
+      "Featured"
     ],
     "title": "Astrologist Monk-Rogue"
   },
   {
     "title": "AICore Reference Sheet",
     "href": "https://twitter.com/_IF8_/status/1511456805255204864?s=20&t=LDMcFgp5TKPMy3gynfKchA",
-    "src": "https://pbs.twimg.com/media/FPnFvprUcAIfQbn?format=jpg&name=medium",
+    "src": "https://storage.googleapis.com/alcor-image-bucket/aicore_reference_sheet.jpg",
     "artist": "_IF8_",
     "tags": [
       "AICore Form",
@@ -196,7 +215,8 @@
     "tags": [
       "Rastaban Form",
       "Gungrir Suit",
-      "Lances"
+      "Lances",
+      "Featured"
     ]
   },
   {
@@ -216,7 +236,8 @@
     "tags": [
       "Rastaban Form",
       "Knives",
-      "Standard Outfit"
+      "Standard Outfit",
+      "Featured"
     ]
   },
   {
@@ -227,7 +248,8 @@
     "tags": [
       "Techwear",
       "Knives",
-      "Rastaban Form"
+      "Rastaban Form",
+      "Featured"
     ]
   },
   {
@@ -272,7 +294,8 @@
       "Knives",
       "Hoodie",
       "Techwear",
-      "Bodysuit"
+      "Bodysuit",
+      "Featured"
     ]
   },
   {
@@ -280,6 +303,118 @@
     "href": "https://twitter.com/osanpogakari/status/1526569393727377408?s=20&t=cLPM3T6OyGCPhZwUEF5xXA",
     "artist": "@osanpogakari",
     "src": "https://cloud.refsheet.net/images/images/001/265/786/large/781087-2.output.png?1653784810",
-    "tags": ["Aldhibah Form"]
+    "tags": [
+      "Aldhibah Form"
+    ]
+  },
+  {
+    "title": "Kemomecha",
+    "src": "https://pbs.twimg.com/media/FauXCWsaIAE8WND?format=jpg&name=large",
+    "href": "https://twitter.com/KnightmareFox/status/1561507766136877057?s=20",
+    "artist": "@KnightmareFox",
+    "tags": [
+      "Thuban Form",
+      "Featured"
+    ]
+  },
+  {
+    "title": "AICore Transformation",
+    "src": "https://storage.googleapis.com/alcor-image-bucket/bec_gift_art.jpeg",
+    "href": "https://twitter.com/Becquerel_uwu/status/1641998060409741312?s=20",
+    "artist": "@Becquerel_uwu",
+    "tags": [
+      "AICore Form",
+      "Rastaban Form",
+      "Transformation"
+    ]
+  },
+  {
+    "title": "Eclipse Deity",
+    "src": "https://storage.googleapis.com/alcor-image-bucket/eclipse_deity.jpg",
+    "href": "https://twitter.com/AkiE_AkikO/status/1581677248163500032",
+    "artist": "@AkiE_AkikO",
+    "tags": [
+      "Eclipse Deity",
+      "Featured"
+    ]
+  },
+  {
+    "title": "Come and Find Me",
+    "src": "https://storage.googleapis.com/alcor-image-bucket/come_and_find_me.jpg",
+    "href": "https://twitter.com/Hemuchang/status/1538903529355563008?s=20&t=eKwrDBRmUWuDjCiUR5suyg",
+    "artist": "@Hemuchang",
+    "tags": [
+      "Thuban Form",
+      "Featured"
+    ]
+  },
+  {
+    "title": "Alcor Sketchpage",
+    "src": "https://storage.googleapis.com/alcor-image-bucket/alcor_sketchpage.jpg",
+    "href": "https://twitter.com/jw_bash/status/1442957289627930630?s=20",
+    "artist": "@jw_bash",
+    "tags": [
+      "Standard Outfit",
+      "Rastaban Form",
+      "Eltanin Form",
+      "Knives"
+    ]
+  },
+  {
+    "title": "PNGTuber Idle",
+    "src": "https://storage.googleapis.com/alcor-image-bucket/pngtuber_art_1.jpg",
+    "href": "https://twitter.com/Cat_Mantis_Art/status/1436487151705726978?s=20",
+    "artist": "@Cat_Mantis_Art",
+    "tags": [
+      "Rastaban Form",
+      "Hoodie"
+    ]
+  },
+  {
+    "title": "PNGTuber Talking",
+    "src": "https://storage.googleapis.com/alcor-image-bucket/pngtuber_art_2.jpg",
+    "href": "https://twitter.com/Cat_Mantis_Art/status/1436487151705726978?s=20",
+    "artist": "@Cat_Mantis_Art",
+    "tags": [
+      "Rastaban Form",
+      "Hoodie"
+    ]
+  },
+  {
+    "title": "Night",
+    "src": "https://storage.googleapis.com/alcor-image-bucket/night.jpg",
+    "href": "https://twitter.com/jw_bash/status/1493782186981421056?s=20&t=0aakwgrJzrPBrpfHwICvGA",
+    "artist": "@jw_bash",
+    "tags": [
+      "M⬡ Form"
+    ]
+  },
+  {
+    "title": "Cool Trio",
+    "src": "https://storage.googleapis.com/alcor-image-bucket/cool_trio.jpg",
+    "href": "https://twitter.com/jw_bash/status/1472189910597648385?s=20",
+    "artist": "@jw_bash",
+    "tags": [
+      "Rastaban Form"
+    ]
+  },
+  {
+    "title": "M⬡ Raid Icon",
+    "src": "https://storage.googleapis.com/alcor-image-bucket/m6_mh_icon.jpg",
+    "href": "https://twitter.com/SpottyBoyo/status/1481760818509324289?s=20",
+    "artist": "@SpottyBoyo",
+    "tags": [
+      "M⬡ Form"
+    ]
+  },
+  {
+    "title": "Raichu Stream Gift Art",
+    "src": "https://storage.googleapis.com/alcor-image-bucket/rai_stream_gift_art.jpg",
+    "href": "https://twitter.com/leOtterArt/status/1457505924730478600?s=20",
+    "artist": "@leOtterArt",
+    "tags": [
+      "Rastaban Form",
+      "Standard Outfit"
+    ]
   }
 ]
