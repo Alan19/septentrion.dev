@@ -11,7 +11,7 @@
   },
   {
     "title": "M⬡ Form",
-    "src": "https://storage.googleapis.com/alcor-image-bucket/m6_form.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/m6_form.jpg",
     "href": "https://twitter.com/wolfmalro/status/1477512241247567877",
     "artist": "@wolfmalro",
     "tags": [
@@ -118,7 +118,7 @@
     "artist": "@jw_bash"
   },
   {
-    "src": "https://storage.googleapis.com/alcor-image-bucket/triangulum_form.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangulum_form.jpg",
     "title": "Triangulum Form",
     "href": "https://twitter.com/DRACOICE08/status/1530984106804203520",
     "tags": [
@@ -140,7 +140,7 @@
     ]
   },
   {
-    "src": "https://pbs.twimg.com/media/Fj-_C_hVsAIBei9?format=jpg&name=large",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/raf_buff_techwear.jpeg",
     "title": "Bulk Up Clothing Replacements",
     "href": "https://twitter.com/jcxraf/status/1603210053393125376",
     "artist": "@jcxraf",
@@ -199,7 +199,7 @@
   {
     "title": "AICore Reference Sheet",
     "href": "https://twitter.com/_IF8_/status/1511456805255204864?s=20&t=LDMcFgp5TKPMy3gynfKchA",
-    "src": "https://storage.googleapis.com/alcor-image-bucket/aicore_reference_sheet.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aicore_reference_sheet.jpg",
     "artist": "_IF8_",
     "tags": [
       "AICore Form",
@@ -319,7 +319,7 @@
   },
   {
     "title": "AICore Transformation",
-    "src": "https://storage.googleapis.com/alcor-image-bucket/bec_gift_art.jpeg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/bec_gift_art.jpeg",
     "href": "https://twitter.com/Becquerel_uwu/status/1641998060409741312?s=20",
     "artist": "@Becquerel_uwu",
     "tags": [
@@ -330,7 +330,7 @@
   },
   {
     "title": "Eclipse Deity",
-    "src": "https://storage.googleapis.com/alcor-image-bucket/eclipse_deity.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/eclipse_deity.jpg",
     "href": "https://twitter.com/AkiE_AkikO/status/1581677248163500032",
     "artist": "@AkiE_AkikO",
     "tags": [
@@ -340,7 +340,7 @@
   },
   {
     "title": "Come and Find Me",
-    "src": "https://storage.googleapis.com/alcor-image-bucket/come_and_find_me.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/come_and_find_me.jpg",
     "href": "https://twitter.com/Hemuchang/status/1538903529355563008?s=20&t=eKwrDBRmUWuDjCiUR5suyg",
     "artist": "@Hemuchang",
     "tags": [
@@ -350,7 +350,7 @@
   },
   {
     "title": "Alcor Sketchpage",
-    "src": "https://storage.googleapis.com/alcor-image-bucket/alcor_sketchpage.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_sketchpage.jpg",
     "href": "https://twitter.com/jw_bash/status/1442957289627930630?s=20",
     "artist": "@jw_bash",
     "tags": [
@@ -362,7 +362,7 @@
   },
   {
     "title": "PNGTuber Idle",
-    "src": "https://storage.googleapis.com/alcor-image-bucket/pngtuber_art_1.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/pngtuber_art_1.jpg",
     "href": "https://twitter.com/Cat_Mantis_Art/status/1436487151705726978?s=20",
     "artist": "@Cat_Mantis_Art",
     "tags": [
@@ -372,7 +372,7 @@
   },
   {
     "title": "PNGTuber Talking",
-    "src": "https://storage.googleapis.com/alcor-image-bucket/pngtuber_art_2.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/pngtuber_art_2.jpg",
     "href": "https://twitter.com/Cat_Mantis_Art/status/1436487151705726978?s=20",
     "artist": "@Cat_Mantis_Art",
     "tags": [
@@ -382,7 +382,7 @@
   },
   {
     "title": "Night",
-    "src": "https://storage.googleapis.com/alcor-image-bucket/night.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/night.jpg",
     "href": "https://twitter.com/jw_bash/status/1493782186981421056?s=20&t=0aakwgrJzrPBrpfHwICvGA",
     "artist": "@jw_bash",
     "tags": [
@@ -391,7 +391,7 @@
   },
   {
     "title": "Cool Trio",
-    "src": "https://storage.googleapis.com/alcor-image-bucket/cool_trio.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cool_trio.jpg",
     "href": "https://twitter.com/jw_bash/status/1472189910597648385?s=20",
     "artist": "@jw_bash",
     "tags": [
@@ -400,7 +400,7 @@
   },
   {
     "title": "M⬡ Raid Icon",
-    "src": "https://storage.googleapis.com/alcor-image-bucket/m6_mh_icon.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/m6_mh_icon.jpg",
     "href": "https://twitter.com/SpottyBoyo/status/1481760818509324289?s=20",
     "artist": "@SpottyBoyo",
     "tags": [
@@ -409,7 +409,7 @@
   },
   {
     "title": "Raichu Stream Gift Art",
-    "src": "https://storage.googleapis.com/alcor-image-bucket/rai_stream_gift_art.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rai_stream_gift_art.jpg",
     "href": "https://twitter.com/leOtterArt/status/1457505924730478600?s=20",
     "artist": "@leOtterArt",
     "tags": [
