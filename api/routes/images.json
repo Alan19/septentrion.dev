@@ -416,5 +416,64 @@
       "Rastaban Form",
       "Standard Outfit"
     ]
+  },
+  {
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/autumnal_techwear.png",
+    "title": "autumnal_techwear.png",
+    "artist": "",
+    "tags": [
+      "Techwear",
+      "Rastaban Form"
+    ],
+    "href": ""
+  },
+  {
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/outdoors_hot_springs.png",
+    "title": "outdoors_hot_springs.png",
+    "artist": "@KitsuLev",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://twitter.com/KitsuLev/status/1549170578510479360"
+  },
+  {
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rsn_sketch.jpg",
+    "title": "rsn_sketch.jpg",
+    "artist": "@RSN_07",
+    "tags": [
+      "Rastaban Form",
+      "Techwear"
+    ],
+    "href": "https://twitter.com/RSN_07/status/1580340889355833345"
+  },
+  {
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/big_derg.png",
+    "title": "big_derg.png",
+    "artist": "@Felix_Doodles",
+    "tags": [
+      "M⬡ Form"
+    ],
+    "href": ""
+  },
+  {
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/chibi_alcor_and_lava.png",
+    "title": "chibi_alcor_and_lava.png",
+    "artist": "@Gabnart",
+    "tags": [
+      "Rastaban Form",
+      "Knives",
+      "Lava"
+    ],
+    "href": "https://twitter.com/Gabnart/status/1667200094142189574?s=20"
+  },
+  {
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_human_v2.png",
+    "title": "alcor_human_v2.png",
+    "artist": "@tg_marlo",
+    "tags": [
+      "Aldhibah Form",
+      "Castor"
+    ],
+    "href": "https://twitter.com/tg_marlo/status/1691720318459764895?s=20"
   }
 ]
