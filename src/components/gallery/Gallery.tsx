@@ -12,8 +12,9 @@ export type TagState = {
 };
 
 export function Gallery() {
-    const {getTags, setTags, images} = useTagHooks();
+    const {getTags, setTags, images, loadImageInfo} = useTagHooks();
     const [currentImage, setCurrentImage] = useState<ImageData>();
+
 
     let tags: TagState = getTags();
 
@@ -200,7 +201,7 @@ export function Gallery() {
                     </ImageList>
                 </Grid>
             </Grid>
-            <Uploader/>
+            <Uploader loadImageInfo={loadImageInfo}/>
         </>
     );
 }

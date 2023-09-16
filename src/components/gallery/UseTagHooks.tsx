@@ -8,7 +8,10 @@ import {useEffect, useState} from "react";
 
 export function useTagHooks() {
     const [tagURLParam, setTagURLParams] = useSearchParams();
+
+
     const [imageData, setImageData] = useState<ImageData[]>([]);
+
     /**
      * Deserializes the tag state from the URL params, basically converts the url a tagstate, with anything that isn't defined in the URL being set to 0
      */
@@ -46,5 +49,5 @@ export function useTagHooks() {
         }
     }
 
-    return {getTags, setTags, images: imageData};
+    return {getTags, setTags, images: imageData, loadImageInfo};
 }

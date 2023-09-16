@@ -22,9 +22,16 @@ router.post('/', upload.single('image'), (req, res) => {
   const file = req.file;
   const {artist, href, tags, title} = req.body;
 
+  function convertToSnakeCase(str) {
+    return str && str.match(
+      /[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+      .map(s => s.toLowerCase())
+      .join('_');
+  }
+
   const params = {
     Bucket: process.env.BUCKET_NAME,
-    Key: title,
+    Key: convertToSnakeCase(title) + '.' + file.originalname.split('.').pop(),
     Body: file.buffer,
     ContentType: file.mimetype
   };
@@ -47,7 +54,6 @@ router.post('/', upload.single('image'), (req, res) => {
       href: href
     };
     res.json(jsonOutput);
-
 
     addToJson(jsonOutput);
   });

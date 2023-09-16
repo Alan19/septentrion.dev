@@ -22,7 +22,7 @@ function doesParameterContainTag(image, queryParams) {
 /* GET home page. */
 router.get('/', function (req, res, next) {
   const queryParams = req.query;
-  const images = JSON.parse(fs.readFileSync('./images.json', 'utf-8'));
+  const images = JSON.parse(fs.readFileSync('D:\\Users\\alanx\\WebstormProjects\\Personal-Website\\api\\routes\\images.json', 'utf-8'));
   res.send(images.filter(image => doesParameterContainTag(image, queryParams)))
 });
 
