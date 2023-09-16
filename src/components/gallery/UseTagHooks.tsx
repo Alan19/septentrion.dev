@@ -5,6 +5,7 @@ import {useSearchParams} from "react-router-dom";
 import {ArtTag, ImageData} from "../ImageData";
 import {TagState} from "./Gallery";
 import {useEffect, useState} from "react";
+import images from './images.json'
 
 export function useTagHooks() {
     const [tagURLParam, setTagURLParams] = useSearchParams();
@@ -43,9 +44,13 @@ export function useTagHooks() {
 
     async function loadImageInfo() {
         const tags = getTags();
-        const response: AxiosResponse = await axios.get<ImageData[]>('http://localhost:9000/images/', {params: tags})
-        if (response.status === 200) {
-            setImageData(response.data)
+        try {
+            const response: AxiosResponse = await axios.get<ImageData[]>('http://localhost:9000/images/', {params: tags})
+            if (response.status === 200) {
+                setImageData(response.data)
+            }
+        } catch (e) {
+            setImageData(images)
         }
     }
 
