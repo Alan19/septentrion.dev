@@ -20,7 +20,7 @@ const upload = multer({storage});
 
 router.post('/', upload.single('image'), (req, res) => {
   const file = req.file;
-  const {artist, href, tags, title} = req.body;
+  const {artist, href, tags, title, published} = req.body;
 
   function convertToSnakeCase(str) {
     return str && str.match(
@@ -51,7 +51,8 @@ router.post('/', upload.single('image'), (req, res) => {
       title: title,
       artist: artist,
       tags: tags.split(',').map(tag => tag.trim()),
-      href: href
+      href: href,
+      published: published
     };
     res.json(jsonOutput);
 

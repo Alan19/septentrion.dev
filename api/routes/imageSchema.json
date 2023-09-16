@@ -26,6 +26,11 @@
         "description": "A link to the artist's social media page",
         "type": "string"
       },
+      "date": {
+        "description": "The date when the artwork was published",
+        "type": "string",
+        "format": "date"
+      },
       "tags": {
         "description": "An array of tags for the art",
         "type": "array",
@@ -56,7 +61,8 @@
             "Icarus Suit",
             "Transformation",
             "Featured",
-            "Eclipse Deity"
+            "Eclipse Deity",
+            "Vernal"
           ]
         }
       }

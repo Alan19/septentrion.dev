@@ -5,6 +5,8 @@ import {blue} from "@mui/material/colors";
 import {Gallery} from "./components/gallery/Gallery";
 import {Main} from "./components/Main";
 import {createHashRouter, RouterProvider} from "react-router-dom";
+import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs'
+import {LocalizationProvider} from "@mui/x-date-pickers";
 
 export const theme = createTheme({
     palette: {
@@ -17,24 +19,26 @@ export const theme = createTheme({
 const router = createHashRouter([
     {
         path: "/",
-        element: <Main />,
+        element: <Main/>,
     },
     {
         path: "/gallery",
-        element: <Gallery />
+        element: <Gallery/>
     }
 ]);
 
 function App() {
 
     return (
-        <ThemeProvider theme={theme}>
-            <div className="App">
-                <Container>
-                    <RouterProvider router={router} />
-                </Container>
-            </div>
-        </ThemeProvider>
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <ThemeProvider theme={theme}>
+                <div className="App">
+                    <Container>
+                        <RouterProvider router={router}/>
+                    </Container>
+                </div>
+            </ThemeProvider>
+        </LocalizationProvider>
     );
 }
 

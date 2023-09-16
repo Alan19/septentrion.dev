@@ -17,6 +17,8 @@ import {ArtTag} from "../ImageData";
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import AddIcon from "@mui/icons-material/Add";
+import {DatePicker} from "@mui/x-date-pickers";
+import dayjs, {Dayjs} from "dayjs";
 
 export default function Uploader(props: { loadImageInfo: () => Promise<void>; }) {
     const [selectedFile, setSelectedFile] = useState<Blob>();
@@ -27,6 +29,7 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
     const [uploading, setUploading] = useState<boolean>(false);
     const [open, setOpen] = React.useState(false);
     const [snackbarOpen, setSnackbarOpen] = React.useState(false);
+    const [publishedDate, setPublishedDate] = React.useState<Dayjs | null>(dayjs());
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -78,6 +81,7 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
             formData.append('title', title);
             formData.append('artist', artist);
             formData.append('href', href);
+            formData.append('published', publishedDate?.format('YYYY-MM-DD') ?? dayjs().format('YYYY-MM-DD'))
             setUploading(true);
             axios.post('http://localhost:9000/upload', formData, {headers: {'Content-Type': 'multipart/form-data'}})
                 .then(value => props.loadImageInfo().then(handleSuccessfulUpload))
@@ -192,14 +196,15 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
                         variant="standard"
                         value={title}
                         onChange={handleTitleChange}
+                        required
                     />
+                    <DatePicker label={"Published Date"} value={publishedDate}
+                                onChange={value => setPublishedDate(value)}/>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose}>Cancel</Button>
-                    <Button onClick={handleUpload}>Upload</Button>
+                    <Button disabled={uploading} onClick={handleUpload}>{uploading ? 'Uploading...' : 'Upload'}</Button>
                 </DialogActions>
-                {/*<button type={"submit"}*/}
-                {/*        disabled={uploading && !!selectedFile}>{uploading ? 'Uploading...' : 'Upload'}</button>*/}
             </Dialog>
         </>
     );
