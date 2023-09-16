@@ -4,7 +4,6 @@ const AWS = require('aws-sdk');
 const router = express();
 const fs = require('fs')
 const dotenv = require('dotenv');
-
 dotenv.config();
 router.use(express.json());
 
@@ -55,11 +54,11 @@ router.post('/', upload.single('image'), (req, res) => {
 });
 
 function addToJson(jsonOutput) {
-  fs.readFile('D:\\Users\\alanx\\WebstormProjects\\Personal-Website\\src\\components\\gallery\\images.json', (err, data) => {
+  fs.readFile('D:\\Users\\alanx\\WebstormProjects\\Personal-Website\\api\\routes\\images.json', (err, data) => {
     let json = JSON.parse(data);
     json.push(jsonOutput);
 
-    fs.writeFile('D:\\Users\\alanx\\WebstormProjects\\Personal-Website\\src\\components\\gallery\\images.json', JSON.stringify(json, null, 2), err1 => {
+    fs.writeFile('D:\\Users\\alanx\\WebstormProjects\\Personal-Website\\api\\routes\\images.json', JSON.stringify(json, null, 2), err1 => {
       console.log(err1)
     });
   })

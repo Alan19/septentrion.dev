@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-let images = require('./images.json')
+const fs = require('fs');
 
+//TODO Refresh images every time it opens
 function doesParameterContainTag(image, queryParams) {
   const enabledTags = Object.keys(queryParams).filter(value => queryParams[value] === "1");
   const hiddenTags = Object.keys(queryParams).filter(value => queryParams[value] === "-1");
@@ -21,6 +22,7 @@ function doesParameterContainTag(image, queryParams) {
 /* GET home page. */
 router.get('/', function (req, res, next) {
   const queryParams = req.query;
+  const images = JSON.parse(fs.readFileSync('./images.json', 'utf-8'));
   res.send(images.filter(image => doesParameterContainTag(image, queryParams)))
 });
 
