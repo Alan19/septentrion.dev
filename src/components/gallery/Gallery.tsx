@@ -6,6 +6,7 @@ import "./gallery.css";
 import {theme} from "../../App";
 import {useTagHooks} from "./UseTagHooks";
 import Uploader from "./Uploader";
+import dayjs from "dayjs";
 
 export type TagState = {
     [tag in ArtTag]: number;
@@ -108,6 +109,7 @@ export function Gallery() {
         }
     }
 
+    console.log(currentImage);
     return (
         <>
             <Modal
@@ -154,8 +156,17 @@ export function Gallery() {
                                 />
                             </Grid>
                         )}
-                        <Grid item md={3}>
-                            <Typography>Extra text</Typography>
+                        <Grid item md={3} style={{padding: "8px 8px 8px 8px"}}>
+                            <Typography variant={"h4"}>{currentImage?.title}</Typography>
+                            <Typography variant={"subtitle1"}>Artist: {currentImage?.artist}</Typography>
+                            <Grid container direction={"row"} spacing={1}>
+                                {currentImage?.tags?.map(value => <Grid item><Chip label={value}/></Grid>)}
+                            </Grid>
+                            {currentImage?.published && <Typography variant={"subtitle1"} style={{
+                                position: "absolute",
+                                right: 8,
+                                bottom: 8
+                            }}>{dayjs(currentImage?.published).format('MMM DD YYYY')}</Typography>}
                         </Grid>
                     </Grid>
                 </Box>

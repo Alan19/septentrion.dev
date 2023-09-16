@@ -38,4 +38,5 @@ export type ImageData = {
     cols?: number;
     artistURL?: string;
     tags?: string[];
+    published?: string;
 }
