@@ -15,7 +15,7 @@ export type TagState = {
 export function Gallery() {
     const {getTags, setTags, images, loadImageInfo} = useTagHooks();
     const [currentImage, setCurrentImage] = useState<ImageData>();
-
+    const portrait = useMediaQuery('(orientation: portrait)');
 
     let tags: TagState = getTags();
 
@@ -83,19 +83,36 @@ export function Gallery() {
         );
     }
 
-    let shownImages = images.filter((value) => {
-        const hasFilterTag = enabledTags.some(
-            (tag) => value.tags?.includes(tag) ?? false
-        );
-        const hasHiddenTag = hiddenTags.some(
-            (tag) => value.tags?.includes(tag) ?? false
-        );
-        if (enabledTags.length === 0) {
-            return !hasHiddenTag;
-        } else {
-            return hasFilterTag && !hasHiddenTag;
-        }
-    });
+    let shownImages = images
+        .filter((value) => {
+            const hasFilterTag = enabledTags.some(
+                (tag) => value.tags?.includes(tag) ?? false
+            );
+            const hasHiddenTag = hiddenTags.some(
+                (tag) => value.tags?.includes(tag) ?? false
+            );
+            if (enabledTags.length === 0) {
+                return !hasHiddenTag;
+            } else {
+                return hasFilterTag && !hasHiddenTag;
+            }
+        })
+        .sort(imageSort);
+
+    function imageSort(a: ImageData, b: ImageData) {
+        // const aFeatured = a.tags?.includes("Featured");
+        // const bFeatured = b.tags?.includes("Featured");
+        // if (aFeatured != bFeatured) {
+        //     if (aFeatured) {
+        //         return -1;
+        //     }
+        //     if (bFeatured) {
+        //         return 1;
+        //     }
+        // }
+        return dayjs(b.published).unix() - dayjs(a.published).unix();
+    }
+
     const isSmallOrAbove = useMediaQuery(theme.breakpoints.up("sm"));
     const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
 
@@ -109,7 +126,6 @@ export function Gallery() {
         }
     }
 
-    console.log(currentImage);
     return (
         <>
             <Modal
@@ -130,43 +146,59 @@ export function Gallery() {
                         minWidth: "80%",
                     }}
                 >
-                    <Grid container style={{height: "100%"}}>
+                    <Grid container style={{height: "100%"}} direction={portrait ? 'column' : 'row'}>
                         {currentImage && (
                             <Grid
                                 item
                                 md={9}
+                                sm={7}
+                                xs={5}
                                 style={{
                                     display: "flex",
                                     backgroundColor: "black",
                                     height: "100%",
                                 }}
-                                onClick={() => window.open(currentImage.href, "_blank")}
                                 className={"artImage"}
                             >
-                                <img
-                                    src={currentImage.src}
-                                    alt={currentImage.title}
-                                    style={{
-                                        maxWidth: "100%",
-                                        maxHeight: "100%",
-                                        alignSelf: "center",
-                                        margin: "auto",
-                                    }}
-                                    loading={"lazy"}
-                                />
+                                <a href={currentImage.href} target={"_blank"} style={{width: "100%", display: "flex"}}>
+                                    <img
+                                        src={currentImage.src}
+                                        alt={currentImage.title}
+                                        style={{
+                                            maxWidth: "100%",
+                                            maxHeight: "100%",
+                                            alignSelf: "center",
+                                            margin: "auto"
+                                        }}
+                                        loading={"lazy"}
+                                    />
+                                </a>
                             </Grid>
                         )}
-                        <Grid item md={3} style={{padding: "8px 8px 8px 8px"}}>
+                        <Grid item md={3} xs={6} sm={5} style={{padding: "16px"}}>
                             <Typography variant={"h4"}>{currentImage?.title}</Typography>
-                            <Typography variant={"subtitle1"}>Artist: {currentImage?.artist}</Typography>
+                            <Typography variant={"subtitle1"}>
+                                Artist: {currentImage?.artist}
+                            </Typography>
                             <Grid container direction={"row"} spacing={1}>
-                                {currentImage?.tags?.map(value => <Grid item><Chip label={value}/></Grid>)}
+                                {currentImage?.tags?.map((value) => (
+                                    <Grid item>
+                                        <Chip label={value}/>
+                                    </Grid>
+                                ))}
                             </Grid>
-                            {currentImage?.published && <Typography variant={"subtitle1"} style={{
-                                position: "absolute",
-                                right: 8,
-                                bottom: 8
-                            }}>{dayjs(currentImage?.published).format('MMM DD YYYY')}</Typography>}
+                            {currentImage?.published && (
+                                <Typography
+                                    variant={"subtitle1"}
+                                    style={{
+                                        position: "absolute",
+                                        right: 8,
+                                        bottom: 8,
+                                    }}
+                                >
+                                    {dayjs(currentImage?.published).format("MMM DD, YYYY")}
+                                </Typography>
+                            )}
                         </Grid>
                     </Grid>
                 </Box>
@@ -201,7 +233,7 @@ export function Gallery() {
                         {shownImages.map((value) => (
                             <ImageListItem key={value.title}>
                                 <img
-                                    src={value.src}
+                                    src={value.thumbnailUrl ?? value.src}
                                     alt={value.title}
                                     loading={"lazy"}
                                     onClick={() => setCurrentImage(value)}

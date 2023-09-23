@@ -14,6 +14,10 @@
         "description": "The link to direct the viewer to upon clicking the image",
         "type": "string"
       },
+      "thumbnailURL": {
+        "description": "The link to the smaller version of the image to display on the gallery",
+        "type": "string"
+      },
       "title": {
         "description": "A title for the image for display on the gallery",
         "type": "string"
@@ -26,7 +30,7 @@
         "description": "A link to the artist's social media page",
         "type": "string"
       },
-      "date": {
+      "published": {
         "description": "The date when the artwork was published",
         "type": "string",
         "format": "date"

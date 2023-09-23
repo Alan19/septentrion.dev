@@ -4,6 +4,7 @@ const AWS = require('aws-sdk');
 const router = express();
 const fs = require('fs')
 const dotenv = require('dotenv');
+const sharp = require('sharp')
 dotenv.config();
 router.use(express.json());
 
@@ -18,7 +19,7 @@ const s3 = new AWS.S3();
 const storage = multer.memoryStorage();
 const upload = multer({storage});
 
-router.post('/', upload.single('image'), (req, res) => {
+router.post('/', upload.single('image'), async (req, res) => {
   const file = req.file;
   const {artist, href, tags, title, published} = req.body;
 
@@ -29,6 +30,26 @@ router.post('/', upload.single('image'), (req, res) => {
       .join('_');
   }
 
+
+  const sharpBuffer = sharp(file.buffer);
+  const jsonOutput = {
+    title: title,
+    artist: artist,
+    tags: tags.split(',').map(tag => tag.trim()),
+    href: href,
+    published: published
+  };
+
+  if ((await sharpBuffer.metadata()).width > 500) {
+    const compressedParams = {
+      Bucket: process.env.BUCKET_NAME,
+      Key: `500w/${convertToSnakeCase(title)}.${file.originalname.split('.').pop()}`,
+      Body: sharpBuffer.resize({width: 500}).jpeg(),
+      ContentType: file.mimetype
+    }
+    jsonOutput['thumbnailUrl'] = (await s3.upload(compressedParams).promise()).Location;
+  }
+
   const params = {
     Bucket: process.env.BUCKET_NAME,
     Key: convertToSnakeCase(title) + '.' + file.originalname.split('.').pop(),
@@ -36,28 +57,9 @@ router.post('/', upload.single('image'), (req, res) => {
     ContentType: file.mimetype
   };
 
-  s3.upload(params, (err, data) => {
-    if (err) {
-      console.error(err);
-      return res.status(500).json({error: 'Error uploading image'});
-    }
-
-    const imageUrl = data.Location;
-
-    // Update your JSON file with the image link and tags
-    // Update the JSON file and send a response to the client
-    const jsonOutput = {
-      src: imageUrl,
-      title: title,
-      artist: artist,
-      tags: tags.split(',').map(tag => tag.trim()),
-      href: href,
-      published: published
-    };
-    res.json(jsonOutput);
-
-    addToJson(jsonOutput);
-  });
+  jsonOutput['src'] = (await s3.upload(params).promise()).Location;
+  addToJson(jsonOutput);
+  res.json(jsonOutput);
 });
 
 function addToJson(jsonOutput) {
@@ -65,7 +67,7 @@ function addToJson(jsonOutput) {
     let json = JSON.parse(data);
     json.push(jsonOutput);
 
-    fs.writeFile('D:\\Users\\alanx\\WebstormProjects\\Personal-Website\\api\\routes\\images.json', JSON.stringify(json, null, 2), err1 => {
+    fs.writeFile('D:\\Users\\alanx\\WebstormProjects\\Personal-Website\\api\\routes\\images.json', JSON.stringify(json, null, 2), (err1) => {
       console.log(err1)
     });
   })

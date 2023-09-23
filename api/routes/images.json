@@ -105,21 +105,6 @@
     "published": "2022-09-28"
   },
   {
-    "src": "https://pbs.twimg.com/media/Fc4YGwRWAAAp6-4?format=jpg&name=4096x4096",
-    "title": "Alcor Body Study",
-    "href": "https://twitter.com/jw_bash/status/1571302995920269312",
-    "tags": [
-      "AICore Form",
-      "Castor",
-      "Thuban Form",
-      "Rastaban Form",
-      "Eltanin Form",
-      "Triangulum Form"
-    ],
-    "artist": "@jw_bash",
-    "published": "2022-09-17"
-  },
-  {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangulum_form.jpg",
     "title": "Triangulum Form",
     "href": "https://twitter.com/DRACOICE08/status/1530984106804203520",
@@ -182,18 +167,6 @@
       "Featured"
     ],
     "published": "2022-09-09"
-  },
-  {
-    "src": "https://pbs.twimg.com/media/FmUuTHMacAE5Me8?format=jpg&name=large",
-    "title": "Evening Train",
-    "href": "https://twitter.com/greyy_arts/status/1613748293531758593",
-    "artist": "greyy_arts",
-    "tags": [
-      "Rastaban Form",
-      "Hoodie",
-      "Featured"
-    ],
-    "published": "2023-01-12"
   },
   {
     "artist": "@DazureSky",
@@ -508,20 +481,8 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/chibi_alcor_and_lava.jpeg"
   },
   {
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_human_v2.png",
-    "title": "alcor_human_v2.png",
-    "artist": "@tg_marlo",
-    "tags": [
-      "Aldhibah Form",
-      "Castor"
-    ],
-    "href": "https://twitter.com/tg_marlo/status/1691720318459764895?s=20",
-    "published": "2023-08-16",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/alcor_human_v2.jpeg"
-  },
-  {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/twewy_team.png",
-    "title": "twewy_team.png",
+    "title": "TWEWY Team",
     "artist": "@DumbDogDoodles",
     "tags": [
       "Estival Checker",
@@ -961,5 +922,144 @@
     "href": "https://x.com/outlord_s/status/1592877187447017473?s=20",
     "published": "2022-11-16",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/icarus_suit.jpeg"
+  },
+  {
+    "title": "Starforce Protagonist Alcor",
+    "artist": "@tg_marlo",
+    "tags": [
+      "Aldhibah Form",
+      "Castor",
+      "Indra Suit",
+      "Superhero",
+      "Bodysuit",
+      "Autumnal Wavesniper"
+    ],
+    "href": "https://twitter.com/tg_marlo/status/1691720318459764895?s=20",
+    "published": "2023-08-16",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/starforce_protagonist_alcor.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/starforce_protagonist_alcor.png"
+  },
+  {
+    "title": "Evening Train",
+    "artist": "@greyy_arts",
+    "tags": [
+      "Estival Checker",
+      "Rastaban Form",
+      "Hoodie",
+      "Featured"
+    ],
+    "href": "https://twitter.com/greyy_arts/status/1613748293531758593",
+    "published": "2023-01-12",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/evening_train.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train.png"
+  },
+  {
+    "title": "Lava's Patreon Gift",
+    "artist": "@Lavastan",
+    "tags": [
+      "Castor",
+      "Rastaban Form",
+      "Standard Outfit"
+    ],
+    "href": "",
+    "published": "2022-12-13",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/lava_s_patreon_gift.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/lava_s_patreon_gift.png"
+  },
+  {
+    "title": "Testing Ryle's Symbiote Form",
+    "artist": "@wolfmalro",
+    "tags": [
+      "Thuban Form",
+      "Bodysuit"
+    ],
+    "href": "https://x.com/wolfmalro/status/1604451379736502274?s=20",
+    "published": "2022-12-18",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/testing_ryle_s_symbiote_form.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/testing_ryle_s_symbiote_form.jpg"
+  },
+  {
+    "title": "Shiro December Sketch",
+    "artist": "@MelonFoxBoba",
+    "tags": [
+      "Rastaban Form",
+      "Standard Outfit"
+    ],
+    "href": "https://x.com/MelonFoxBoba/status/1606062288913383426?s=20",
+    "published": "2022-12-22",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/shiro_december_sketch.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/shiro_december_sketch.png"
+  },
+  {
+    "title": "Midnight Pec Grab",
+    "artist": "@jw_bash",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "",
+    "published": "2022-10-28",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/midnight_pec_grab.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/midnight_pec_grab.jpg"
+  },
+  {
+    "title": "Deer Alcor",
+    "artist": "@vanilla_aster",
+    "tags": [
+      "Rastaban Form",
+      "Standard Outfit"
+    ],
+    "href": "https://x.com/vanilla_aster/status/1604982080710266881?s=20",
+    "published": "2022-12-19",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/deer_alcor.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/deer_alcor.jpg"
+  },
+  {
+    "title": "Meditating with a Lemiolu on top",
+    "artist": "@laywithfull",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/laywithfull/status/1555685716746592256?s=20",
+    "published": "2022-08-05",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/meditating_with_a_lemiolu_on_top.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/meditating_with_a_lemiolu_on_top.jpg"
+  },
+  {
+    "title": "AICore Bridal Carry",
+    "artist": "@HareWolf126",
+    "tags": [
+      "AICore Form"
+    ],
+    "href": "",
+    "published": "2022-12-25",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/ai_core_bridal_carry.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ai_core_bridal_carry.png"
+  },
+  {
+    "title": "Alcor Body Study Sketchpage",
+    "artist": "@jw_bash",
+    "tags": [
+      "Thuban Form",
+      "Triangulum Form",
+      "Rastaban Form",
+      "Eltanin Form",
+      "AICore Form",
+      "Castor"
+    ],
+    "href": "https://x.com/jw_bash/status/1571302995920269312?s=20",
+    "published": "2022-09-19",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/alcor_body_study_sketchpage.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_body_study_sketchpage.jpg"
+  },
+  {
+    "title": "Outfit Bois",
+    "artist": "@jw_bash",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://twitter.com/jw_bash/status/1461821586885988360",
+    "published": "2021-11-19",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/outfit_bois.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/outfit_bois.png"
   }
 ]

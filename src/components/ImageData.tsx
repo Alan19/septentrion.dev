@@ -39,4 +39,5 @@ export type ImageData = {
     artistURL?: string;
     tags?: string[];
     published?: string;
+    thumbnailUrl?: string;
 }

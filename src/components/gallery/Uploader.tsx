@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import axios from 'axios';
+import axios from "axios";
 import {
     Autocomplete,
     Button,
@@ -11,21 +11,24 @@ import {
     DialogTitle,
     Fab,
     Snackbar,
-    TextField
+    TextField,
+    Typography,
 } from "@mui/material";
 import {ArtTag} from "../ImageData";
-import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
+import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import AddIcon from "@mui/icons-material/Add";
 import {DatePicker} from "@mui/x-date-pickers";
 import dayjs, {Dayjs} from "dayjs";
 
-export default function Uploader(props: { loadImageInfo: () => Promise<void>; }) {
+export default function Uploader(props: {
+    loadImageInfo: () => Promise<void>;
+}) {
     const [selectedFile, setSelectedFile] = useState<Blob>();
     const [tags, setTags] = useState<ArtTag[]>([]);
-    const [href, setHref] = useState('');
-    const [title, setTitle] = useState('');
-    const [artist, setArtist] = useState('');
+    const [href, setHref] = useState("");
+    const [title, setTitle] = useState("");
+    const [artist, setArtist] = useState("");
     const [uploading, setUploading] = useState<boolean>(false);
     const [open, setOpen] = React.useState(false);
     const [snackbarOpen, setSnackbarOpen] = React.useState(false);
@@ -39,11 +42,10 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
         setOpen(false);
     };
 
-
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.files) {
             setSelectedFile(event.target.files[0]);
-            setTitle(event.target.files[0].name.split('.')[0]);
+            setTitle(event.target.files[0].name.split(".")[0]);
         }
     };
 
@@ -51,14 +53,16 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
         setTags(value);
     };
 
-    const handleSnackbarClose = (event: React.SyntheticEvent | Event, reason?: string) => {
-        if (reason === 'clickaway') {
+    const handleSnackbarClose = (
+        event: React.SyntheticEvent | Event,
+        reason?: string
+    ) => {
+        if (reason === "clickaway") {
             return;
         }
 
         setSnackbarOpen(false);
     };
-
 
     function handleUpload(e: any) {
         e.preventDefault();
@@ -67,25 +71,32 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
             handleClose();
             setSelectedFile(undefined);
             setTags([]);
-            setHref('');
-            setTitle('');
-            setArtist('');
+            setHref("");
+            setTitle("");
+            setArtist("");
+            setPublishedDate(dayjs())
             setSnackbarOpen(true);
         }
 
         if (selectedFile) {
             setUploading(true);
             const formData = new FormData();
-            formData.append('image', selectedFile);
-            formData.append('tags', tags.join(', '));
-            formData.append('title', title);
-            formData.append('artist', artist);
-            formData.append('href', href);
-            formData.append('published', publishedDate?.format('YYYY-MM-DD') ?? dayjs().format('YYYY-MM-DD'))
+            formData.append("image", selectedFile);
+            formData.append("tags", tags.join(", "));
+            formData.append("title", title);
+            formData.append("artist", artist);
+            formData.append("href", href);
+            formData.append(
+                "published",
+                publishedDate?.format("YYYY-MM-DD") ?? dayjs().format("YYYY-MM-DD")
+            );
             setUploading(true);
-            axios.post('http://localhost:9000/upload', formData, {headers: {'Content-Type': 'multipart/form-data'}})
-                .then(value => props.loadImageInfo().then(handleSuccessfulUpload))
-                .catch(reason => console.log(reason))
+            axios
+                .post("http://localhost:9000/upload", formData, {
+                    headers: {"Content-Type": "multipart/form-data"},
+                })
+                .then((value) => props.loadImageInfo().then(handleSuccessfulUpload))
+                .catch((reason) => console.log(reason))
                 .finally(() => {
                     setUploading(false);
                 });
@@ -93,19 +104,19 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
     }
 
     function handleHrefChange(event: React.ChangeEvent<HTMLInputElement>) {
-        setHref(event.target.value)
+        setHref(event.target.value);
     }
 
     function handleArtistChange(event: React.ChangeEvent<HTMLInputElement>) {
-        setArtist(event.target.value)
+        setArtist(event.target.value);
     }
 
     function handleTitleChange(event: React.ChangeEvent<HTMLInputElement>) {
-        setTitle(event.target.value)
+        setTitle(event.target.value);
     }
 
     const fabStyle = {
-        position: 'fixed',
+        position: "fixed",
         bottom: 16,
         right: 16,
     };
@@ -118,19 +129,25 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
                 onClose={handleSnackbarClose}
                 message="Artwork uploaded!"
             />
-            <Fab sx={fabStyle} color="primary" aria-label="add" onClick={handleClickOpen}>
+            <Fab
+                sx={fabStyle}
+                color="primary"
+                aria-label="add"
+                onClick={handleClickOpen}
+            >
                 <AddIcon/>
             </Fab>
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Upload New Image</DialogTitle>
                 <DialogContent>
                     <DialogContentText>
-                        Enter a list of tags, the handle of the artist, and the file name to automatically compress and
-                        upload this file!
+                        Enter a list of tags, the handle of the artist, and the file name to
+                        automatically compress and upload this file!
                     </DialogContentText>
                     <Button
                         variant="contained"
                         component="label"
+                        style={{marginBottom: "16px", marginTop: "8px"}}
                     >
                         Upload File
                         <input
@@ -140,6 +157,8 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
                             hidden
                         />
                     </Button>
+                    <Typography style={{marginLeft: "8px"}}
+                                component={"span"}>{selectedFile && selectedFile.name}</Typography>
                     <Autocomplete
                         multiple
                         fullWidth
@@ -197,13 +216,19 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
                         value={title}
                         onChange={handleTitleChange}
                         required
+                        style={{marginBottom: "16px"}}
                     />
-                    <DatePicker label={"Published Date"} value={publishedDate}
-                                onChange={value => setPublishedDate(value)}/>
+                    <DatePicker
+                        label={"Published Date"}
+                        value={publishedDate}
+                        onChange={(value) => setPublishedDate(value)}
+                    />
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose}>Cancel</Button>
-                    <Button disabled={uploading} onClick={handleUpload}>{uploading ? 'Uploading...' : 'Upload'}</Button>
+                    <Button disabled={uploading} onClick={handleUpload}>
+                        {uploading ? "Uploading..." : "Upload"}
+                    </Button>
                 </DialogActions>
             </Dialog>
         </>
