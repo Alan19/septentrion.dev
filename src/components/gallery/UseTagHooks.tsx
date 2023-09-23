@@ -1,6 +1,6 @@
 // noinspection JSIgnoredPromiseFromCall
 
-import axios, {AxiosResponse} from "axios";
+import axios from "axios";
 import {useSearchParams} from "react-router-dom";
 import {ArtTag, ImageData} from "../ImageData";
 import {TagState} from "./Gallery";
@@ -11,7 +11,7 @@ export function useTagHooks() {
     const [tagURLParam, setTagURLParams] = useSearchParams();
 
 
-    const [imageData, setImageData] = useState<ImageData[]>([]);
+    const [imageData, setImageData] = useState<ImageData[]>(images);
 
     /**
      * Deserializes the tag state from the URL params, basically converts the url a tagstate, with anything that isn't defined in the URL being set to 0
@@ -44,14 +44,9 @@ export function useTagHooks() {
 
     async function loadImageInfo() {
         const tags = getTags();
-        try {
-            const response: AxiosResponse = await axios.get<ImageData[]>('http://localhost:9000/images/', {params: tags})
-            if (response.status === 200) {
-                setImageData(response.data)
-            }
-        } catch (e) {
-            setImageData(images)
-        }
+        await axios.get<ImageData[]>('http://localhost:9000/images/', {params: tags})
+            .then(value => setImageData(value.data))
+            .catch(reason => setImageData(images))
     }
 
     return {getTags, setTags, images: imageData, loadImageInfo};
