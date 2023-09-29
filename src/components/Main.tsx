@@ -1,7 +1,6 @@
 import {Grid, useMediaQuery} from "@mui/material";
 import {Summary} from "./Summary";
 import {CharacterImageGrid} from "./CharacterImageGrid";
-import React from "react";
 import {theme} from "../App";
 
 export function Main() {

@@ -255,17 +255,6 @@
     "published": "2022-09-30"
   },
   {
-    "title": "Enjoying the view huh?",
-    "href": "https://twitter.com/FreneticWolf/status/1531110605611929600?s=20&t=lHYWmxw2ydAavTrpa5YPaA",
-    "src": "https://pbs.twimg.com/media/FT-Y-h4aIAAORHB?format=jpg&name=large",
-    "artist": "FreneticWolf",
-    "tags": [
-      "Bodysuit",
-      "Rastaban Form"
-    ],
-    "published": "2022-05-29"
-  },
-  {
     "title": "Sci-fi Mode: ON",
     "href": "https://twitter.com/AxyUsagi/status/1543041029674344448?s=20&t=tlXwc5aegdXuQeLhgdUw-Q",
     "artist": "@AxyUsagi",
@@ -469,7 +458,7 @@
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/chibi_alcor_and_lava.png",
-    "title": "chibi_alcor_and_lava.png",
+    "title": "Chibi Alcor and Lava",
     "artist": "@Gabnart",
     "tags": [
       "Rastaban Form",
@@ -848,8 +837,8 @@
     "tags": [
       "AICore Form"
     ],
-    "href": "",
-    "published": "2022-10-26",
+    "href": "https://twitter.com/AlienRascal/status/1601056234677108738/photo/3",
+    "published": "2022-12-08",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/monstrous_symbiote.jpeg"
   },
   {
@@ -1061,5 +1050,172 @@
     "published": "2021-11-19",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/outfit_bois.png",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/outfit_bois.png"
+  },
+  {
+    "title": "Mintea Icon",
+    "artist": "@Mintealon",
+    "tags": [
+      "Rastaban Form",
+      "Hoodie",
+      "Techwear",
+      "Hibernal Assassin",
+      "Featured"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1707575833311731782?s=20",
+    "published": "2023-09-29",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/mintea_icon.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/mintea_icon.jpg"
+  },
+  {
+    "title": "Aerospray RG",
+    "artist": "@CompaTibu",
+    "tags": [
+      "Thuban Form",
+      "Techwear"
+    ],
+    "href": "",
+    "published": "2023-01-12",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/aerospray_rg.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aerospray_rg.png"
+  },
+  {
+    "title": "Cougar Cantus",
+    "artist": "@jw_bash",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/jw_bash/status/1463583201746509827?s=20",
+    "published": "2021-11-24",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/cougar_cantus.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cougar_cantus.png"
+  },
+  {
+    "title": "NekoTiger Stream Outfit Doodle",
+    "artist": "",
+    "tags": [
+      "Rastaban Form",
+      "Hoodie"
+    ],
+    "href": "https://x.com/nekotiger/status/1563206167580778497?s=20",
+    "published": "2022-05-31",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/neko_tiger_stream_outfit_doodle.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/neko_tiger_stream_outfit_doodle.png"
+  },
+  {
+    "title": "NekoTiger Raichu Hoodie Sketch",
+    "artist": "@NekoTiger",
+    "tags": [
+      "Knives",
+      "Rastaban Form",
+      "Hoodie"
+    ],
+    "href": "https://x.com/nekotiger/status/1563206167580778497?s=20",
+    "published": "2022-05-31",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/neko_tiger_raichu_hoodie_sketch.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/neko_tiger_raichu_hoodie_sketch.png"
+  },
+  {
+    "title": "NekoTiger Alcor Sketch",
+    "artist": "@NekoTiger",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/nekotiger/status/1563206167580778497?s=20",
+    "published": "2022-05-31",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/neko_tiger_alcor_sketch.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/neko_tiger_alcor_sketch.png"
+  },
+  {
+    "title": "LemonBeagle Mini Set",
+    "artist": "@LemonyBeagle",
+    "tags": [
+      "Thuban Form",
+      "Hoodie",
+      "Knives"
+    ],
+    "href": "https://x.com/LemonyBeagle/status/1510677861518127107?s=20",
+    "published": "2022-04-03",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/lemon_beagle_mini_set.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/lemon_beagle_mini_set.png"
+  },
+  {
+    "title": "Prototype Alcor Icon",
+    "artist": "@Mike202112",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "",
+    "published": "2021-05-01",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/prototype_alcor_icon.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/prototype_alcor_icon.jpg"
+  },
+  {
+    "title": "Pin Icon from Lava",
+    "artist": "@Lavastan",
+    "tags": [
+      "Rastaban Form",
+      "Standard Outfit"
+    ],
+    "href": "",
+    "published": "2022-03-30",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/pin_icon_from_lava.png"
+  },
+  {
+    "title": "Icon Gift from Midnight",
+    "artist": "",
+    "tags": [
+      "Rastaban Form",
+      "Standard Outfit"
+    ],
+    "href": "",
+    "published": "2021-12-01",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/icon_gift_from_midnight.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/icon_gift_from_midnight.jpg"
+  },
+  {
+    "title": "Gift Icon from MidnightAus 2",
+    "artist": "@Siplick",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "",
+    "published": "2021-12-28",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/gift_icon_from_midnight_aus_2.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/gift_icon_from_midnight_aus_2.png"
+  },
+  {
+    "title": "Cosmic Style Icon",
+    "artist": "@thatonefrogxd",
+    "tags": [
+      "Rastaban Form",
+      "Standard Outfit"
+    ],
+    "href": "https://x.com/thatonefrogxd/status/1490092047541415938?s=20",
+    "published": "2022-02-05",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/cosmic_style_icon.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cosmic_style_icon.png"
+  },
+  {
+    "title": "Christmas Doodle",
+    "artist": "@jw_bash",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/jw_bash/status/1474509871571738626?s=20",
+    "published": "2021-12-24",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/christmas_doodle.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/christmas_doodle.png"
+  },
+  {
+    "title": "Enjoying the View huh?",
+    "artist": "@FreneticWolf",
+    "tags": [
+      "Rastaban Form",
+      "Bodysuit"
+    ],
+    "href": "https://x.com/FreneticWolf/status/1531110605611929600?s=20",
+    "published": "2022-05-29",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/enjoying_the_view.jpeg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/enjoying_the_view.jpeg"
   }
 ]
