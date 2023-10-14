@@ -6,7 +6,7 @@ var logger = require('morgan');
 var cors = require("cors")
 var upload = require("./routes/upload")
 var images = require("./routes/images")
-
+var compressExisting = require('./routes/compress_existing')
 const bodyParser = require('body-parser')
 
 var indexRouter = require('./routes/index');
@@ -31,6 +31,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/upload', upload);
 app.use('/images', images)
+app.use('/uploadCompressed', compressExisting);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

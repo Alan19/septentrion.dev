@@ -22,11 +22,12 @@ export enum ArtTag {
     icarus = 'Icarus Suit',
     tf = 'Transformation',
     eclipse = 'Eclipse Deity',
-    vernal = 'Vernal ',
+    vernal = 'Vernal',
     estival = 'Estival Checker',
     serotinal = 'Serotinal Circuitboard',
     autumnal = 'Autumnal Wavesniper',
-    winter = 'Hibernal Assassin'
+    winter = 'Hibernal Assassin',
+    aquarius = 'Aquarius Form'
 }
 
 export type ImageData = {
