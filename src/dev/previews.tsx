@@ -5,6 +5,7 @@ import {AlcorForms} from "../components/alcor-forms/AlcorForms";
 import {Gallery} from "../components/gallery/Gallery";
 import App from "../App";
 import {Main} from "../components/Main";
+import {AquariusForm} from "../components/alcor-forms/AquariusForm";
 
 const ComponentPreviews = () => {
     return (
@@ -23,6 +24,9 @@ const ComponentPreviews = () => {
             </ComponentPreview>
             <ComponentPreview path="/ComponentPreviews">
                 <ComponentPreviews/>
+            </ComponentPreview>
+            <ComponentPreview path="/AquariusForm">
+                <AquariusForm/>
             </ComponentPreview>
         </Previews>
     );

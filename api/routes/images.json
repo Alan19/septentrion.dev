@@ -12,8 +12,8 @@
   },
   {
     "title": "M⬡ Form",
-    "src": "ht/alcorsiteartbucket.s3.amazonaws.com/m6_form.jpg",
-    "href": "htttps:/ps://twitter.com/wolfmalro/status/1477512241247567877",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/m6_form.jpg",
+    "href": "https://x.com/wolfmalro/status/1477512241247567877?s=20",
     "artist": "@wolfmalro",
     "tags": [
       "M⬡ Form",
@@ -85,10 +85,10 @@
   },
   {
     "src": "https://pbs.twimg.com/media/FdwPgQEaEAA3Unn?format=jpg&name=large",
-    "title": "Zinogre Form",
+    "title": "Jupiter Form",
     "href": "https://twitter.com/Vamp_Arts/status/1575151183978975232",
     "tags": [
-      "Zinogre Form"
+      "Jupiter Form"
     ],
     "artist": "@Vamp_Arts",
     "published": "2022-09-28"
@@ -179,7 +179,8 @@
       "Rastaban Form",
       "Gungrir Suit",
       "Lances",
-      "Featured"
+      "Featured",
+      "Superhero"
     ],
     "published": "2022-05-04"
   },
@@ -1534,7 +1535,7 @@
     "title": "Project Jupiter",
     "artist": "@SolarD0GG0",
     "tags": [
-      "Zinogre Form",
+      "Jupiter Form",
       "Lances",
       "Techwear"
     ],
@@ -1594,7 +1595,7 @@
     "title": "Zinogre and Roy",
     "artist": "@jw_bash",
     "tags": [
-      "Zinogre Form"
+      "Jupiter Form"
     ],
     "href": "https://x.com/jw_bash/status/1602866030954553347?s=20",
     "published": "2022-12-13",
@@ -1679,5 +1680,41 @@
     "published": "2022-05-23",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/ai_core_raffle_sketch.jpg",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/ai_core_raffle_sketch.jpg"
+  },
+  {
+    "title": "Future Spark",
+    "artist": "@KuroPenguinEx",
+    "tags": [
+      "Jupiter Form",
+      "Lances",
+      "Techwear"
+    ],
+    "href": "https://x.com/KuroPenguinEx/status/1720766384781865132?s=20",
+    "published": "2023-11-04",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/future_spark.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/future_spark.png"
+  },
+  {
+    "title": "Swim Team Outfit",
+    "artist": "@_alextwt",
+    "tags": [
+      "Aquarius Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1724609579017761067?s=20",
+    "published": "2023-11-14",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/swim_team_outfit.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/swim_team_outfit.jpg"
+  },
+  {
+    "title": "Aquarius Form Combar Outfit",
+    "artist": "@HaychelDA",
+    "tags": [
+      "Knives",
+      "Aquarius Form"
+    ],
+    "href": "https://x.com/HaychelDA/status/1725893938744369195?s=20",
+    "published": "2023-11-18",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/aquarius_form_combar_outfit.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form_combar_outfit.png"
   }
 ]

@@ -4,7 +4,7 @@ export enum ArtTag {
     bows = 'Bow',
     lances = 'Lances',
     knives = 'Knives',
-    zinogre = 'Zinogre Form',
+    jupiter = 'Jupiter Form',
     techwear = 'Techwear',
     standardOutfit = 'Standard Outfit',
     bodysuit = 'Bodysuit',

@@ -256,8 +256,6 @@ export function Gallery() {
                 </Grid>
                 <Grid item md>
                     {(pageSize < shownImages.length) && <Pagination style={{marginTop: '8px'}} count={Math.ceil(shownImages.length / pageSize)} page={page} onChange={handlePageChange} showFirstButton showLastButton/>}
-
-
                     <ImageList variant={"standard"} cols={getCols()} gap={8}>
                         {shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize).map((value) => (
                             <ImageListItem key={value.title}>
