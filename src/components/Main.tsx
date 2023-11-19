@@ -8,7 +8,7 @@ export function Main() {
         alignItems={"center"}
         container
         spacing={5}
-        style={{minHeight: "100vh"}}
+        style={{minHeight: "calc(100vh - 64px)"}}
         direction={
             useMediaQuery(theme.breakpoints.up("sm")) ? "row" : "column-reverse"
         }

@@ -85,14 +85,14 @@ function convertToSnakeCase(str) {
 }
 
 function addCompressedLink(keys) {
-  fs.readFile('D:\\Users\\alanx\\WebstormProjects\\Personal-Website\\api\\routes\\images.json', async (err, data) => {
+  fs.readFile('./images.json', async (err, data) => {
     let json = JSON.parse(data);
     keys.forEach(key => {
       const find = json.find(path => path.src.split('/').pop().split('.')[0] === key.split('/')[1].split('.')[0]);
       if (find) {
         console.log(`Compressed image for ${key} is available on https://alcorsiteartbucket.s3.amazonaws.com/${key}`)
         find['thumbnailUrl'] = `https://alcorsiteartbucket.s3.amazonaws.com/${key}`;
-        fs.writeFileSync('D:\\Users\\alanx\\WebstormProjects\\Personal-Website\\api\\routes\\images.json', JSON.stringify(json, null, 2), err1 => {
+        fs.writeFileSync('./images.json', JSON.stringify(json, null, 2), err1 => {
           console.log(err1)
         });
       }

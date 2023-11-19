@@ -1,5 +1,16 @@
-import React, {useState} from "react";
-import {Box, Chip, Grid, ImageList, ImageListItem, Modal, Paper, Typography, useMediaQuery,} from "@mui/material";
+import React, {useEffect, useState} from "react";
+import {
+    Box,
+    Chip,
+    Grid,
+    ImageList,
+    ImageListItem,
+    Modal,
+    Pagination,
+    Paper,
+    Typography,
+    useMediaQuery,
+} from "@mui/material";
 import {ArtTag, ImageData} from "../ImageData";
 import {CategoryOutlined, DryCleaningOutlined, Filter, PetsOutlined, Remove,} from "@mui/icons-material";
 import "./gallery.css";
@@ -13,8 +24,9 @@ export type TagState = {
 };
 
 export function Gallery() {
-    const {getTags, setTags, images, loadImageInfo} = useTagHooks();
     const [currentImage, setCurrentImage] = useState<ImageData>();
+    const {getTags, setTags, images, loadImageInfo} = useTagHooks();
+
     const portrait = useMediaQuery('(orientation: portrait)');
 
     let tags: TagState = getTags();
@@ -26,19 +38,25 @@ export function Gallery() {
         (value) => tags[value as ArtTag] === -1
     ) as ArtTag[];
 
+
+    function handleTagChange(tags: TagState) {
+        setTags(tags);
+        setPage(1);
+    }
+
     function toggleHide(tagName: ArtTag) {
         if (tags[tagName] !== 1) {
-            setTags({...tags, [tagName]: 1});
+            handleTagChange({...tags, [tagName]: 1});
         } else {
-            setTags({...tags, [tagName]: 0});
+            handleTagChange({...tags, [tagName]: 0});
         }
     }
 
     function filterTag(tagName: ArtTag) {
         if (tags[tagName] !== -1) {
-            setTags({...tags, [tagName]: -1});
+            handleTagChange({...tags, [tagName]: -1});
         } else {
-            setTags({...tags, [tagName]: 0});
+            handleTagChange({...tags, [tagName]: 0});
         }
     }
 
@@ -115,6 +133,8 @@ export function Gallery() {
 
     const isSmallOrAbove = useMediaQuery(theme.breakpoints.up("sm"));
     const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
+    const [pageSize, setPageSize] = useState<number>(12);
+    const [page, setPage] = useState<number>(1);
 
     function getCols() {
         if (isMediumOrAbove) {
@@ -126,8 +146,13 @@ export function Gallery() {
         }
     }
 
+    function handlePageChange(event: React.ChangeEvent<unknown>, value: number) {
+        setPage(value)
+    }
+
     return (
         <>
+            <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
             <Modal
                 open={!!currentImage}
                 onClose={() => setCurrentImage(undefined)}
@@ -160,7 +185,8 @@ export function Gallery() {
                                 }}
                                 className={"artImage"}
                             >
-                                <a href={currentImage.href} target={"_blank"} style={{width: "100%", display: "flex"}}>
+                                <a href={(currentImage.href && currentImage.href !== '') ? currentImage.href : currentImage.src}
+                                   target={"_blank"} style={{width: "100%", display: "flex"}}>
                                     <img
                                         src={currentImage.src}
                                         alt={currentImage.title}
@@ -229,8 +255,11 @@ export function Gallery() {
                     </Paper>
                 </Grid>
                 <Grid item md>
-                    <ImageList variant={"masonry"} cols={getCols()} gap={8}>
-                        {shownImages.map((value) => (
+                    {(pageSize < shownImages.length) && <Pagination style={{marginTop: '8px'}} count={Math.ceil(shownImages.length / pageSize)} page={page} onChange={handlePageChange} showFirstButton showLastButton/>}
+
+
+                    <ImageList variant={"standard"} cols={getCols()} gap={8}>
+                        {shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize).map((value) => (
                             <ImageListItem key={value.title}>
                                 <img
                                     src={value.thumbnailUrl ?? value.src}

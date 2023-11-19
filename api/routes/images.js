@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
+const path = require("path");
 
 //TODO Refresh images every time it opens
 function doesParameterContainTag(image, queryParams) {
@@ -22,7 +23,7 @@ function doesParameterContainTag(image, queryParams) {
 /* GET home page. */
 router.get('/', function (req, res, next) {
   const queryParams = req.query;
-  const images = JSON.parse(fs.readFileSync('D:\\Users\\alanx\\WebstormProjects\\Personal-Website\\api\\routes\\images.json', 'utf-8'));
+  const images = JSON.parse(fs.readFileSync(path.resolve(__dirname, './images.json'), 'utf-8'));
   res.send(images.filter(image => doesParameterContainTag(image, queryParams)))
 });
 

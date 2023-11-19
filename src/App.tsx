@@ -1,19 +1,23 @@
 import React from "react";
 import "./App.css";
 import {Container, createTheme, ThemeProvider,} from "@mui/material";
-import {blue} from "@mui/material/colors";
 import {Gallery} from "./components/gallery/Gallery";
 import {Main} from "./components/Main";
 import {createHashRouter, RouterProvider} from "react-router-dom";
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs'
 import {LocalizationProvider} from "@mui/x-date-pickers";
+import {AlcorForms} from "./components/alcor-forms/AlcorForms";
 
 export const theme = createTheme({
     palette: {
         primary: {
-            main: blue[500],
+            main: '#d1e4ff',
+
         },
-    },
+        secondary: {
+            main: '#ffe07d',
+        }
+    }
 });
 
 const router = createHashRouter([
@@ -24,6 +28,10 @@ const router = createHashRouter([
     {
         path: "/gallery",
         element: <Gallery/>
+    },
+    {
+        path: "/alcor_forms",
+        element: <AlcorForms/>
     }
 ]);
 
@@ -33,6 +41,7 @@ function App() {
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <ThemeProvider theme={theme}>
                 <div className="App">
+                    {/*<SiteAppBar />*/}
                     <Container>
                         <RouterProvider router={router}/>
                     </Container>

@@ -27,7 +27,8 @@ export enum ArtTag {
     serotinal = 'Serotinal Circuitboard',
     autumnal = 'Autumnal Wavesniper',
     winter = 'Hibernal Assassin',
-    aquarius = 'Aquarius Form'
+    aquarius = 'Aquarius Form',
+    auriga = 'Auriga Form'
 }
 
 export type ImageData = {

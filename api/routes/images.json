@@ -12,8 +12,8 @@
   },
   {
     "title": "M⬡ Form",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/m6_form.jpg",
-    "href": "https://twitter.com/wolfmalro/status/1477512241247567877",
+    "src": "ht/alcorsiteartbucket.s3.amazonaws.com/m6_form.jpg",
+    "href": "htttps:/ps://twitter.com/wolfmalro/status/1477512241247567877",
     "artist": "@wolfmalro",
     "tags": [
       "M⬡ Form",
@@ -55,17 +55,6 @@
       "Bodysuit"
     ],
     "published": "2022-05-24"
-  },
-  {
-    "src": "https://pbs.twimg.com/media/FTfg_0eVIAADZpm?format=jpg&name=large",
-    "title": "Symbiotic Form",
-    "href": "https://twitter.com/AmpedDragon/status/1528938543912873984?s=20",
-    "artist": "@AmpedDragon",
-    "tags": [
-      "AICore Form",
-      "Rastaban Form"
-    ],
-    "published": "2022-03-23"
   },
   {
     "src": "https://pbs.twimg.com/media/FOBdASRWYAYYG_b?format=jpg&name=4096x4096",
@@ -169,18 +158,6 @@
     "published": "2022-09-09"
   },
   {
-    "artist": "@DazureSky",
-    "href": "https://twitter.com/DazureSky/status/1552320959448698880?s=20&t=B86P7YXB3gEYFu9CtOW6gg",
-    "src": "https://pbs.twimg.com/media/FYrzr4aVEAABlTO?format=jpg&name=large",
-    "tags": [
-      "Thuban Form",
-      "Knives",
-      "Featured"
-    ],
-    "title": "Astrologist Monk-Rogue",
-    "published": "2022-07-27"
-  },
-  {
     "title": "AICore Reference Sheet",
     "href": "https://twitter.com/_IF8_/status/1511456805255204864?s=20&t=LDMcFgp5TKPMy3gynfKchA",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/aicore_reference_sheet.jpg",
@@ -238,7 +215,8 @@
       "Techwear",
       "Knives",
       "Rastaban Form",
-      "Featured"
+      "Featured",
+      "Hibernal Assassin"
     ],
     "published": "2022-12-29"
   },
@@ -1319,9 +1297,387 @@
       "Techwear",
       "Castor"
     ],
-    "href": "",
-    "published": "2023-10-03",
+    "href": "https://x.com/DrawingDDoom/status/1715601315492245545?s=20",
+    "published": "2023-10-21",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/happy_24_th_birthday.png",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/happy_24_th_birthday.png"
+  },
+  {
+    "title": "Loincloth",
+    "artist": "@PurpleDragonRei",
+    "tags": [
+      "Eltanin Form"
+    ],
+    "href": "",
+    "published": "2022-12-28",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/loincloth.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/loincloth.png"
+  },
+  {
+    "title": "Lava Pinning Alcor",
+    "artist": "@Lavastan",
+    "tags": [
+      "Standard Outfit",
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/Lavastan/status/1626213341487312897?s=20",
+    "published": "2023-02-16",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/lava_pinning_alcor.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/lava_pinning_alcor.jpg"
+  },
+  {
+    "title": "Casual Cupid",
+    "artist": "@KuroPenguinEx",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1630026310759186442?s=20",
+    "published": "2023-02-26",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/casual_cupid.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/casual_cupid.png"
+  },
+  {
+    "title": "Christmas PJs",
+    "artist": "@KuroPenguinEX",
+    "tags": [
+      "AICore Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1606745191687376896?s=20",
+    "published": "2022-12-24",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/christmas_p_js.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/christmas_p_js.png"
+  },
+  {
+    "title": "Chibi AICore",
+    "artist": "@KemoMaty",
+    "tags": [
+      "AICore Form"
+    ],
+    "href": "",
+    "published": "2023-03-02",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/chibi_ai_core.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/chibi_ai_core.png"
+  },
+  {
+    "title": "Valentine's Day 2023",
+    "artist": "@KogiKogiKogi1",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/KogiKogiKogi1/status/1620374111687176194?s=20",
+    "published": "2023-01-31",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/valentine_s_day_2023.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/valentine_s_day_2023.jpg"
+  },
+  {
+    "title": "Confused Alcor",
+    "artist": "@MelonFoxBoba",
+    "tags": [
+      "Rastaban Form",
+      "Castor",
+      "Standard Outfit"
+    ],
+    "href": "https://x.com/MelonFoxBoba/status/1665724155227152387?s=20",
+    "published": "2023-06-05",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/confused_alcor.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/confused_alcor.png"
+  },
+  {
+    "title": "Pride Month YCH 2023",
+    "artist": "@Lavastan",
+    "tags": [
+      "Aquarius Form"
+    ],
+    "href": "https://x.com/Lavastan/status/1666271120797077504?s=20",
+    "published": "2023-06-06",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/pride_month_ych_2023.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/pride_month_ych_2023.jpg"
+  },
+  {
+    "title": "Inkling Alcor and Octoling Lava",
+    "artist": "@rn_mnrn",
+    "tags": [
+      "Techwear"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1672392619291287553?s=20",
+    "published": "2023-06-23",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/inkling_alcor_and_octoling_lava.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/inkling_alcor_and_octoling_lava.png"
+  },
+  {
+    "title": "Monster Constume",
+    "artist": "@KuroPenguinEX",
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1674051065115811841?s=20",
+    "published": "2023-06-28",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/monster_constume.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/monster_constume.png"
+  },
+  {
+    "title": "Ice Cream",
+    "artist": "@kukalakuku",
+    "tags": [
+      "Serotinal Circuitboard"
+    ],
+    "href": "https://x.com/kukalakuku/status/1645184227934367746?s=20",
+    "published": "2023-04-09",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/ice_cream.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ice_cream.png"
+  },
+  {
+    "title": "Resting Gladiator",
+    "artist": "@Hachariko",
+    "tags": [
+      "Eltanin Form"
+    ],
+    "href": "https://x.com/Hachariko/status/1653122259429490690?s=20",
+    "published": "2023-05-01",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/resting_gladiator.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/resting_gladiator.png"
+  },
+  {
+    "title": "Gladiator Sketch",
+    "artist": "@KuroPenguinEX",
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1640748522071814146?s=20",
+    "published": "2023-05-28",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/gladiator_sketch.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/gladiator_sketch.png"
+  },
+  {
+    "title": "Sportswear Sketch",
+    "artist": "@KuroPenguinEX",
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1647431925106081792?s=20",
+    "published": "2023-04-15",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/sportswear_sketch.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/sportswear_sketch.png"
+  },
+  {
+    "title": "Zaaru Doodle",
+    "artist": "@Zaaruchan",
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "https://x.com/Zaaruchan/status/1648147376400478209?s=20",
+    "published": "2023-04-17",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/zaaru_doodle.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/zaaru_doodle.png"
+  },
+  {
+    "title": "Alcor Icon from Ryze",
+    "artist": "@SulfurousDragon",
+    "tags": [
+      "Standard Outfit",
+      "Rastaban Form"
+    ],
+    "href": "",
+    "published": "2023-04-16",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/alcor_icon_from_ryze.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_icon_from_ryze.png"
+  },
+  {
+    "title": "Inventor Sketch",
+    "artist": "@KuroPekoEX",
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1661030521235726338?s=20",
+    "published": "2023-05-23",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/inventor_sketch.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/inventor_sketch.png"
+  },
+  {
+    "title": "Summer Outfit 2023 Sketch",
+    "artist": "@KuroPenguinEX",
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1684228825369006080?s=20",
+    "published": "2023-07-26",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/summer_outfit_2023_sketch.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/summer_outfit_2023_sketch.png"
+  },
+  {
+    "title": "Terri Illustration 348",
+    "artist": "@Terri_TF_art",
+    "tags": [
+      "Thuban Form",
+      "Transformation",
+      "Aldhibah Form",
+      "Autumnal Wavesniper",
+      "Techwear"
+    ],
+    "href": "https://x.com/Terri_TF_art/status/1682449525804355610?s=20",
+    "published": "2023-07-21",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/terri_illustration_348.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/terri_illustration_348.png"
+  },
+  {
+    "title": "Ronin Sketch",
+    "artist": "@KuroPenguinEX",
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1695880435853627504?s=20",
+    "published": "2023-08-27",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/ronin_sketch.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ronin_sketch.png"
+  },
+  {
+    "title": "Project Jupiter",
+    "artist": "@SolarD0GG0",
+    "tags": [
+      "Zinogre Form",
+      "Lances",
+      "Techwear"
+    ],
+    "href": "",
+    "published": "2023-10-09",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/project_jupiter.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/project_jupiter.png"
+  },
+  {
+    "title": "Mech suit update 2023",
+    "artist": "@TORU_R8",
+    "tags": [
+      "Thuban Form",
+      "Lances",
+      "Bodysuit"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1713623103580909999?s=20",
+    "published": "2023-10-15",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/mech_suit_update_2023.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/mech_suit_update_2023.png"
+  },
+  {
+    "title": "Symbiote Experiment",
+    "artist": "@soendapuss",
+    "tags": [
+      "Castor",
+      "Auriga Form"
+    ],
+    "href": "",
+    "published": "2023-07-02",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/symbiote_experiment.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/symbiote_experiment.png"
+  },
+  {
+    "title": "Alcor Daki",
+    "artist": "@KogiKogiKogi1",
+    "tags": [
+      "M⬡ Form"
+    ],
+    "href": "https://x.com/KogiKogiKogi1/status/1644894274721579008?s=20",
+    "published": "2023-04-10",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/alcor_daki.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_daki.png"
+  },
+  {
+    "title": "Castor Colored Undies",
+    "artist": "@IvanJhang",
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "",
+    "published": "2023-06-23",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/castor_colored_undies.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_colored_undies.png"
+  },
+  {
+    "title": "Zinogre and Roy",
+    "artist": "@jw_bash",
+    "tags": [
+      "Zinogre Form"
+    ],
+    "href": "https://x.com/jw_bash/status/1602866030954553347?s=20",
+    "published": "2022-12-13",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/zinogre_and_roy.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/zinogre_and_roy.jpg"
+  },
+  {
+    "title": "Diving",
+    "artist": "@jw_bash",
+    "tags": [
+      "Aquarius Form"
+    ],
+    "href": "",
+    "published": "2023-05-22",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/diving.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/diving.png"
+  },
+  {
+    "title": "Astrologist Monk Rogue",
+    "artist": "@DazureSky",
+    "tags": [
+      "Featured",
+      "Thuban Form",
+      "Knives"
+    ],
+    "href": "https://twitter.com/DazureSky/status/1552320959448698880?s=20&t=B86P7YXB3gEYFu9CtOW6gg",
+    "published": "2022-07-27",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/astrologist_monk_rogue.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/astrologist_monk_rogue.png"
+  },
+  {
+    "title": "Prototype Eclipse Deity Armor",
+    "artist": "@wolfmalro",
+    "tags": [
+      "Triangulum Form"
+    ],
+    "href": "https://x.com/wolfmalro/status/1716054566607978518?s=20",
+    "published": "2023-10-22",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/prototype_eclipse_deity_armor.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/prototype_eclipse_deity_armor.jpg"
+  },
+  {
+    "title": "Arknights Cosplay",
+    "artist": "@Hagrang_",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/Hagrang_/status/1717167846516826124?s=20",
+    "published": "2023-10-25",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/arknights_cosplay.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/arknights_cosplay.png"
+  },
+  {
+    "title": "Grim Reaper Costume Sketch",
+    "artist": "@KuroPenguinEX",
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1717658932682825984?s=20",
+    "published": "2023-10-26",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/grim_reaper_costume_sketch.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/grim_reaper_costume_sketch.png"
+  },
+  {
+    "title": "Growth Serum Test",
+    "artist": "@VoidFoxTamcin",
+    "tags": [
+      "Triangulum Form"
+    ],
+    "href": "",
+    "published": "2023-10-21",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/growth_serum_test.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/growth_serum_test.png"
+  },
+  {
+    "title": "AICore Raffle Sketch",
+    "artist": "@AmpedDragon",
+    "tags": [
+      "AICore Form"
+    ],
+    "href": "https://x.com/AmpedDragon/status/1528938543912873984?s=20",
+    "published": "2022-05-23",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/ai_core_raffle_sketch.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ai_core_raffle_sketch.jpg"
   }
 ]

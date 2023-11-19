@@ -25,7 +25,7 @@ import {useIsLocalhost} from "./UseIsLocalhost";
 export default function Uploader(props: {
     loadImageInfo: () => Promise<void>;
 }) {
-    const [selectedFile, setSelectedFile] = useState<Blob>();
+    const [selectedFile, setSelectedFile] = useState<File>();
     const [tags, setTags] = useState<ArtTag[]>([]);
     const [href, setHref] = useState("");
     const [title, setTitle] = useState("");

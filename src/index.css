@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Origin Tech';
+  src: local('Origin Tech'),
+  url("./fonts/OriginTech personal use.otf") format('opentype'),
+  url("./fonts/OriginTech personal use.ttf") format('truetype');
+}
