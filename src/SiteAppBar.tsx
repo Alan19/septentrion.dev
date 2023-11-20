@@ -1,29 +1,21 @@
-import {AppBar, Container, IconButton, Toolbar, Typography} from "@mui/material";
+import {Container, IconButton} from "@mui/material";
 import React from "react";
+import {Link, Outlet, useLocation} from "react-router-dom";
+import {Home} from "@mui/icons-material";
+import {LinksPage} from "./components/links/LinksPage";
 
-function SiteAppBar() {
-    return <AppBar style={{position: "static"}}>
-        <Container maxWidth={"xl"}>
-            <Toolbar disableGutters>
-                <a href={'/'}>
-                    <img src={process.env.PUBLIC_URL + "/favicon.ico"} style={{height: "60px"}}/>
-                </a>
-                <Typography
-                        variant="h6"
-                        noWrap
-                        sx={{
-                            mr: 2,
-                            display: {xs: "none", md: "flex"},
-                            fontFamily: "monospace",
-                            fontWeight: 700,
-                            letterSpacing: ".3rem",
-                            color: "inherit",
-                            textDecoration: "none",
-                        }}
-                    >
-                        Alcor's Site
-                    </Typography>
-            </Toolbar>
+export function SiteAppBar() {
+    return <>
+        <Container>
+            <Link to={'/'} style={{marginTop: '16px'}}>
+                <IconButton>
+                    <Home/>
+                </IconButton>
+            </Link>
+            {
+                useLocation().pathname === '/' && <LinksPage/>
+            }
+            <Outlet/>
         </Container>
-    </AppBar>;
+    </>;
 }

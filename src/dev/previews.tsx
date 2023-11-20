@@ -4,8 +4,9 @@ import {PaletteTree} from "./palette";
 import {AlcorForms} from "../components/alcor-forms/AlcorForms";
 import {Gallery} from "../components/gallery/Gallery";
 import App from "../App";
-import {Main} from "../components/Main";
+import {LinksPage} from "../components/links/LinksPage";
 import {AquariusForm} from "../components/alcor-forms/AquariusForm";
+import {SiteAppBar} from "../SiteAppBar";
 
 const ComponentPreviews = () => {
     return (
@@ -19,14 +20,17 @@ const ComponentPreviews = () => {
             <ComponentPreview path="/App">
                 <App/>
             </ComponentPreview>
-            <ComponentPreview path="/Main">
-                <Main/>
+            <ComponentPreview path="/LinksPage">
+                <LinksPage/>
             </ComponentPreview>
             <ComponentPreview path="/ComponentPreviews">
                 <ComponentPreviews/>
             </ComponentPreview>
             <ComponentPreview path="/AquariusForm">
                 <AquariusForm/>
+            </ComponentPreview>
+            <ComponentPreview path="/SiteAppBar">
+                <SiteAppBar/>
             </ComponentPreview>
         </Previews>
     );

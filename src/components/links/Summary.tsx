@@ -1,7 +1,7 @@
 import {Grid} from "@mui/material";
 import {SocialsLinks} from "./SocialsLinks";
 import React from "react";
-import {Header} from "./Header";
+import {Header} from "../Header";
 
 export function Summary() {
     return <Grid container direction={"column"} spacing={3}>

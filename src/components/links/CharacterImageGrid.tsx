@@ -1,7 +1,7 @@
 import {IconButton, ImageList, ImageListItem, ImageListItemBar,} from "@mui/material";
 import React from "react";
 import InfoIcon from "@mui/icons-material/Info";
-import {ArtTag, ImageData} from "./ImageData";
+import {ArtTag, ImageData} from "../ImageData";
 
 export function CharacterImageGrid() {
     const itemData: ImageData[] = [

@@ -6,8 +6,9 @@ import {faTwitch} from "@fortawesome/free-brands-svg-icons/faTwitch";
 import {faCircle} from "@fortawesome/free-solid-svg-icons/faCircle"
 import {faCloud} from "@fortawesome/free-solid-svg-icons/faCloud"
 import CollectionsIcon from '@mui/icons-material/Collections';
-import {InternalLinkButton} from "./InternalLinkButton";
 import {faDragon} from "@fortawesome/free-solid-svg-icons";
+import React from "react";
+import InternalLinkButton from "./InternalLinkButton";
 
 export function SocialsLinks() {
     return (

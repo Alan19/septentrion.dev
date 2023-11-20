@@ -1,4 +1,4 @@
-import {Container, Divider, Grid, Stack, Typography, useMediaQuery} from "@mui/material";
+import {Container, Divider, Fade, Grid, Typography, useMediaQuery} from "@mui/material";
 import React from "react";
 import {Link, Outlet} from "react-router-dom";
 import './form-page.css'
@@ -41,23 +41,25 @@ export function AlcorForms() {
         }
     ]
     return (
-        <Container style={{marginTop: '8px'}}>
-            <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Forms</Typography>
-            <Grid container direction={"row"} spacing={1}>
-                {
-                    formInfo.map(value => <Grid item md={2}>
-                        <Link to={value.link}>
-                            <figure style={{margin: 0}}>
-                                <img alt={value.name} className={'form-splash-image'} src={value.src}/>
-                                <figcaption>{value.name}</figcaption>
-                            </figure>
-                        </Link>
-                    </Grid>)
-                }
-                {/*    TODO Add link to gallery*/}
-            </Grid>
-            <Divider style={{marginBottom: '32px', marginTop: '32px'}}/>
-            <Outlet/>
-        </Container>
+        <Fade in={true}>
+            <Container style={{marginTop: '8px'}}>
+                <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Forms</Typography>
+                <Grid container direction={"row"} spacing={1}>
+                    {
+                        formInfo.map(value => <Grid item md={2}>
+                            <Link to={value.link}>
+                                <figure style={{margin: 0}}>
+                                    <img alt={value.name} className={'form-splash-image'} src={value.src}/>
+                                    <figcaption>{value.name}</figcaption>
+                                </figure>
+                            </Link>
+                        </Grid>)
+                    }
+                    {/*    TODO Add link to gallery*/}
+                </Grid>
+                <Divider style={{marginBottom: '32px', marginTop: '32px'}}/>
+                <Outlet/>
+            </Container>
+        </Fade>
     );
 }

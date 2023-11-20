@@ -1,9 +1,8 @@
 import React from "react";
 import "./App.css";
-import {Container, createTheme, ThemeProvider,} from "@mui/material";
+import {createTheme, ThemeProvider,} from "@mui/material";
 import {Gallery} from "./components/gallery/Gallery";
-import {Main} from "./components/Main";
-import {createHashRouter, Outlet, RouterProvider} from "react-router-dom";
+import {createHashRouter, RouterProvider} from "react-router-dom";
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs'
 import {LocalizationProvider} from "@mui/x-date-pickers";
 import {AlcorForms} from "./components/alcor-forms/AlcorForms";
@@ -13,6 +12,7 @@ import {MForm} from "./components/alcor-forms/MForm";
 import {AICoreForm} from "./components/alcor-forms/AICoreForm";
 import {JupiterForm} from "./components/alcor-forms/JupiterForm";
 import {TriangulumForm} from "./components/alcor-forms/TriangulumForm";
+import {SiteAppBar} from "./SiteAppBar";
 
 export const theme = createTheme({
     palette: {
@@ -28,36 +28,38 @@ export const theme = createTheme({
 
 const router = createHashRouter([
     {
-        path: "/",
-        element: <Main/>,
-    },
-    {
-        path: "/gallery",
-        element: <Gallery/>
-    },
-    {
-        path: "alcor_forms",
-        element: <AlcorForms/>,
+        path: '/',
+        element: <SiteAppBar/>,
         children: [
             {
-                path: "/alcor_forms/aquarius",
-                element: <AquariusForm />
+                path: "/gallery",
+                element: <Gallery/>
             },
             {
-                path: "/alcor_forms/m",
-                element: <MForm />
-            },
-            {
-                path: "/alcor_forms/aicore",
-                element: <AICoreForm />
-            },
-            {
-                path: "/alcor_forms/jupiter",
-                element: <JupiterForm />
-            },
-            {
-                path: "/alcor_forms/triangulum",
-                element: <TriangulumForm />
+                path: "alcor_forms",
+                element: <AlcorForms/>,
+                children: [
+                    {
+                        path: "/alcor_forms/aquarius",
+                        element: <AquariusForm/>
+                    },
+                    {
+                        path: "/alcor_forms/m",
+                        element: <MForm/>
+                    },
+                    {
+                        path: "/alcor_forms/aicore",
+                        element: <AICoreForm/>
+                    },
+                    {
+                        path: "/alcor_forms/jupiter",
+                        element: <JupiterForm/>
+                    },
+                    {
+                        path: "/alcor_forms/triangulum",
+                        element: <TriangulumForm/>
+                    }
+                ]
             }
         ]
     }
@@ -69,10 +71,7 @@ function App() {
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <ThemeProvider theme={theme}>
                 <div className="App">
-                    {/*<SiteAppBar />*/}
-                    <Container>
-                        <RouterProvider router={router}/>
-                    </Container>
+                    <RouterProvider router={router}/>
                 </div>
             </ThemeProvider>
         </LocalizationProvider>
