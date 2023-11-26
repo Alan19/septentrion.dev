@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "version": "1.0.0",
-  "homepage": "https://alan19.github.io/Personal-Website",
+  "homepage": "https://septentrion.dev/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
