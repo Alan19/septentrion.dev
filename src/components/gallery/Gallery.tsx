@@ -4,7 +4,6 @@ import {
     Chip,
     Dialog,
     DialogContent,
-    DialogTitle,
     Grid,
     ImageList,
     ImageListItem,
@@ -161,11 +160,8 @@ export function Gallery() {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
                 fullWidth={true}
-                maxWidth={"lg"}
+                maxWidth={"xl"}
             >
-                <DialogTitle>
-                    <Typography variant={"h4"}>{currentImage?.title}</Typography>
-                </DialogTitle>
                 <DialogContent>
                     <Grid container direction={portrait ? 'column' : 'row'} spacing={2}>
                         {currentImage && (
@@ -177,13 +173,13 @@ export function Gallery() {
                                 className={"artImage"}
                             >
                                 <a href={(currentImage.href && currentImage.href !== '') ? currentImage.href : currentImage.src}
-                                   target={"_blank"} style={{width: "100%", display: "flex"}}>
+                                   target={"_blank"} style={{width: "100%", display: "flex", backgroundColor: "black"}}>
                                     <img
                                         src={currentImage.src}
                                         alt={currentImage.title}
                                         style={{
                                             maxWidth: "100%",
-                                            maxHeight: portrait ? "inherit" : "80vh",
+                                            height: portrait ? "inherit" : "70vh",
                                             alignSelf: "center",
                                             margin: "auto",
                                             objectFit: "contain"
@@ -194,6 +190,7 @@ export function Gallery() {
                             </Grid>
                         )}
                         <Grid item md={4} xs sm={5} style={{paddingLeft: "16px", paddingRight: "16px"}}>
+                            <Typography variant={"h4"}>{currentImage?.title}</Typography>
                             <Button color="primary" variant="outlined">Artist: {currentImage?.artist}</Button>
                             <Grid container direction={"row"} spacing={1}>
                                 {currentImage?.tags?.map((value) => (
