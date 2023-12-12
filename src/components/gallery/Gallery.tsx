@@ -189,23 +189,30 @@ export function Gallery() {
                                 </a>
                             </Grid>
                         )}
-                        <Grid item md={4} xs sm={5} style={{paddingLeft: "16px", paddingRight: "16px"}}>
-                            <Typography variant={"h4"}>{currentImage?.title}</Typography>
-                            <Button color="primary" variant="outlined">Artist: {currentImage?.artist}</Button>
-                            <Grid container direction={"row"} spacing={1}>
-                                {currentImage?.tags?.map((value) => (
-                                    <Grid item>
-                                        <Chip label={value}/>
-                                    </Grid>
-                                ))}
-                            </Grid>
+                        <Grid item md={4} xs sm={5} style={{
+                            paddingLeft: "16px",
+                            paddingRight: "16px",
+                            display: "flex",
+                            flexDirection: "column"
+                        }}>
+                            <div>
+                                <Typography variant={"h4"}>{currentImage?.title}</Typography>
+                            </div>
+                            <div style={{flex: 1}}>
+                                <Button color="primary" variant="outlined">Artist: {currentImage?.artist}</Button>
+                                <Grid container direction={"row"} spacing={1}>
+                                    {currentImage?.tags?.map((value) => (
+                                        <Grid item>
+                                            <Chip label={value}/>
+                                        </Grid>
+                                    ))}
+                                </Grid>
+                            </div>
                             {currentImage?.published && (
                                 <Typography
                                     variant={"subtitle1"}
                                     style={{
-                                        position: "absolute",
-                                        right: 24,
-                                        bottom: 8,
+                                        textAlign: "right"
                                     }}
                                 >
                                     {dayjs(currentImage?.published).format("MMM DD, YYYY")}
@@ -241,7 +248,9 @@ export function Gallery() {
                     </Paper>
                 </Grid>
                 <Grid item md>
-                    {(pageSize < shownImages.length) && <Pagination style={{marginTop: '8px'}} count={Math.ceil(shownImages.length / pageSize)} page={page} onChange={handlePageChange} showFirstButton showLastButton/>}
+                    {(pageSize < shownImages.length) &&
+                        <Pagination style={{marginTop: '8px'}} count={Math.ceil(shownImages.length / pageSize)}
+                                    page={page} onChange={handlePageChange} showFirstButton showLastButton/>}
                     <ImageList variant={"standard"} cols={getCols()} gap={8}>
                         {shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize).map((value) => (
                             <ImageListItem key={value.title}>
