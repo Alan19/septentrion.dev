@@ -1,11 +1,13 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {
-    Box,
+    Button,
     Chip,
+    Dialog,
+    DialogContent,
+    DialogTitle,
     Grid,
     ImageList,
     ImageListItem,
-    Modal,
     Pagination,
     Paper,
     Typography,
@@ -153,36 +155,25 @@ export function Gallery() {
     return (
         <>
             <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
-            <Modal
+            <Dialog
                 open={!!currentImage}
                 onClose={() => setCurrentImage(undefined)}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
+                fullWidth={true}
+                maxWidth={"lg"}
             >
-                <Box
-                    sx={{
-                        position: "absolute" as "absolute",
-                        top: "50%",
-                        left: "50%",
-                        transform: "translate(-50%, -50%)",
-                        bgcolor: "background.paper",
-                        boxShadow: 24,
-                        height: "80%",
-                        minWidth: "80%",
-                    }}
-                >
-                    <Grid container style={{height: "100%"}} direction={portrait ? 'column' : 'row'}>
+                <DialogTitle>
+                    <Typography variant={"h4"}>{currentImage?.title}</Typography>
+                </DialogTitle>
+                <DialogContent>
+                    <Grid container direction={portrait ? 'column' : 'row'} spacing={2}>
                         {currentImage && (
                             <Grid
                                 item
-                                md={9}
+                                md={8}
                                 sm={7}
-                                xs={5}
-                                style={{
-                                    display: "flex",
-                                    backgroundColor: "black",
-                                    height: "100%",
-                                }}
+                                xs
                                 className={"artImage"}
                             >
                                 <a href={(currentImage.href && currentImage.href !== '') ? currentImage.href : currentImage.src}
@@ -192,20 +183,18 @@ export function Gallery() {
                                         alt={currentImage.title}
                                         style={{
                                             maxWidth: "100%",
-                                            maxHeight: "100%",
+                                            maxHeight: portrait ? "inherit" : "80vh",
                                             alignSelf: "center",
-                                            margin: "auto"
+                                            margin: "auto",
+                                            objectFit: "contain"
                                         }}
                                         loading={"lazy"}
                                     />
                                 </a>
                             </Grid>
                         )}
-                        <Grid item md={3} xs={6} sm={5} style={{padding: "16px"}}>
-                            <Typography variant={"h4"}>{currentImage?.title}</Typography>
-                            <Typography variant={"subtitle1"}>
-                                Artist: {currentImage?.artist}
-                            </Typography>
+                        <Grid item md={4} xs sm={5} style={{paddingLeft: "16px", paddingRight: "16px"}}>
+                            <Button color="primary" variant="outlined">Artist: {currentImage?.artist}</Button>
                             <Grid container direction={"row"} spacing={1}>
                                 {currentImage?.tags?.map((value) => (
                                     <Grid item>
@@ -218,7 +207,7 @@ export function Gallery() {
                                     variant={"subtitle1"}
                                     style={{
                                         position: "absolute",
-                                        right: 8,
+                                        right: 24,
                                         bottom: 8,
                                     }}
                                 >
@@ -227,8 +216,8 @@ export function Gallery() {
                             )}
                         </Grid>
                     </Grid>
-                </Box>
-            </Modal>
+                </DialogContent>
+            </Dialog>
             <Grid container spacing={2}>
                 <Grid item md={3}>
                     <Paper

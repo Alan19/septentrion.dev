@@ -46,7 +46,7 @@ export function useTagHooks() {
         const tags = getTags();
         await axios.get<ImageData[]>('http://localhost:9000/images/', {params: tags})
             .then(value => setImageData(value.data))
-            .catch(reason => setImageData(images))
+            .catch(() => setImageData(images))
     }
 
     return {getTags, setTags, images: imageData, loadImageInfo};
