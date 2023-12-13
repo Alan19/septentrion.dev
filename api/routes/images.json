@@ -1,16 +1,5 @@
 [
   {
-    "src": "https://pbs.twimg.com/media/FQbUBrTWUAEToWA?format=jpg&name=4096x4096",
-    "title": "Beach Boy",
-    "href": "https://twitter.com/FaintAlcor/status/1515132564297732096?s=20&t=SWiTBSL9DioRcYH7ZyfJ0w",
-    "artist": "@KuroPenguinEx",
-    "tags": [
-      "Thuban Form",
-      "Featured"
-    ],
-    "published": "2022-04-15"
-  },
-  {
     "title": "M⬡ Form",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/m6_form.jpg",
     "href": "https://x.com/wolfmalro/status/1477512241247567877?s=20",
@@ -1727,5 +1716,50 @@
     "published": "2023-05-16",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/auriga_form_reference.png",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/auriga_form_reference.png"
+  },
+  {
+    "title": "Goth Sketch",
+    "artist": "@KuroPenguinEx",
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1729205995799478278?s=20",
+    "published": "2023-11-27",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/goth_sketch.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/goth_sketch.png"
+  },
+  {
+    "title": "Alcor Tap",
+    "artist": "@Noarustar",
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1734983405102600206?s=20",
+    "published": "2023-12-13",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/alcor_tap.gif",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_tap.gif"
+  },
+  {
+    "title": "Castor Tap",
+    "artist": "@Noarustar",
+    "tags": [
+      "Castor"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1734983497767412146?s=20",
+    "published": "2023-12-13",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/castor_tap.gif",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_tap.gif"
+  },
+  {
+    "title": "Beach Boy",
+    "artist": "@KuroPenguinEx",
+    "tags": [
+      "Thuban Form",
+      "Featured"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1515132564297732096?s=20",
+    "published": "2022-04-15",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/beach_boy.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy.png"
   }
 ]
