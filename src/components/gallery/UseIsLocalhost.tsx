@@ -1,14 +1,13 @@
 // noinspection JSIgnoredPromiseFromCall
 
-import axios, {AxiosResponse} from "axios";
+import axios from "axios";
 import {useEffect, useState} from "react";
 
 export function useIsLocalhost() {
     const [isLocalHost, setIsLocalHost] = useState(false);
 
     async function loadImageInfo() {
-        const response: AxiosResponse = await axios.get<string>('http://localhost:9000/users')
-        setIsLocalHost(response.status === 200);
+        axios.get<string>('http://localhost:9000/users').then(value => setIsLocalHost(value.status === 200)).catch(() => setIsLocalHost(false))
     }
 
     useEffect(() => {

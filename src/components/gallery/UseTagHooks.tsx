@@ -10,7 +10,7 @@ import images from './images.json'
 export function useTagHooks() {
     const [tagURLParam, setTagURLParams] = useSearchParams();
 
-
+    // @ts-ignore
     const [imageData, setImageData] = useState<ImageData[]>(images);
 
     /**
