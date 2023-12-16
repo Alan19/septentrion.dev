@@ -74,6 +74,9 @@ dependencies:
   react-dom:
     specifier: ^18.1.0
     version: 18.2.0(react@18.2.0)
+  react-justified-layout:
+    specifier: ^0.1.0
+    version: 0.1.0(justified-layout@2.1.2)(react@18.2.0)
   react-lazy-load-image-component:
     specifier: ^1.6.0
     version: 1.6.0(react-dom@18.2.0)(react@18.2.0)
@@ -7522,6 +7525,12 @@ packages:
       object.values: 1.1.7
     dev: false
 
+  /justified-layout@2.1.2:
+    resolution: { integrity: sha512-Lp+xJO3Lv5oBcNW3ir+/tV1FZugkEManl9N6ajXgpcONgZVPntOPv+WvwxF6iVC8ee70OQfCei4Qtyr8aWwrTQ== }
+    dependencies:
+      merge: 1.2.1
+    dev: false
+
   /keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
     dependencies:
@@ -7744,6 +7753,10 @@ packages:
   /merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
+    dev: false
+
+  /merge@1.2.1:
+    resolution: { integrity: sha512-VjFo4P5Whtj4vsLzsYBu5ayHhoHJ0UqNm7ibvShmbmoz7tGi0vXaoJbGdB+GmDMLUdg8DpQXEIeVDAe8MaABvQ== }
     dev: false
 
   /methods@1.1.2:
@@ -9257,6 +9270,18 @@ packages:
 
   /react-is@18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+
+  /react-justified-layout@0.1.0(justified-layout@2.1.2)(react@18.2.0):
+    resolution: { integrity: sha512-+eA9sGKAul3NvNQkDMDyffiXsBBJlxkHIhAIPj0zdrLdd8RHITCdWcE4u6YA5xD8Og4fL7UnQ3CB/TvsldKsZQ== }
+    peerDependencies:
+      justified-layout: ^2.1.0
+      react: 15.x || 16.x
+    dependencies:
+      justified-layout: 2.1.2
+      lodash: 4.17.21
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
 
   /react-lazy-load-image-component@1.6.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-8KFkDTgjh+0+PVbH+cx0AgxLGbdTsxWMnxXzU5HEUztqewk9ufQAu8cstjZhyvtMIPsdMcPZfA0WAa7HtjQbBQ==}

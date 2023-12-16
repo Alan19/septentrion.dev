@@ -42,4 +42,5 @@ export type ImageData = {
     tags?: string[];
     published?: string;
     thumbnailUrl?: string;
-}
+    aspectRatio?: number;
+};

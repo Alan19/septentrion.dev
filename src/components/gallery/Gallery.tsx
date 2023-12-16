@@ -1,17 +1,5 @@
 import React, {useState} from "react";
-import {
-    Button,
-    Chip,
-    Dialog,
-    DialogContent,
-    Grid,
-    ImageList,
-    ImageListItem,
-    Pagination,
-    Paper,
-    Typography,
-    useMediaQuery,
-} from "@mui/material";
+import {Button, Chip, Dialog, DialogContent, Grid, Pagination, Paper, Typography, useMediaQuery,} from "@mui/material";
 import {ArtTag, ImageData} from "../ImageData";
 import {CategoryOutlined, DryCleaningOutlined, Filter, PetsOutlined, Remove,} from "@mui/icons-material";
 import "./gallery.css";
@@ -19,6 +7,9 @@ import {theme} from "../../App";
 import {useTagHooks} from "./UseTagHooks";
 import Uploader from "./Uploader";
 import dayjs from "dayjs";
+
+// @ts-ignore
+import JustifiedLayout from 'react-justified-layout';
 
 export type TagState = {
     [tag in ArtTag]: number;
@@ -251,19 +242,22 @@ export function Gallery() {
                     {(pageSize < shownImages.length) &&
                         <Pagination style={{marginTop: '8px'}} count={Math.ceil(shownImages.length / pageSize)}
                                     page={page} onChange={handlePageChange} showFirstButton showLastButton/>}
-                    <ImageList variant={"standard"} cols={getCols()} gap={8}>
-                        {shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize).map((value) => (
-                            <ImageListItem key={value.title}>
-                                <img
-                                    src={value.thumbnailUrl ?? value.src}
-                                    alt={value.title}
-                                    loading={"lazy"}
-                                    onClick={() => setCurrentImage(value)}
-                                    className={"artImage"}
-                                />
-                            </ImageListItem>
-                        ))}
-                    </ImageList>
+                    <JustifiedLayout>
+                        {shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize).map((value) => {
+                            return (
+                                // @ts-ignore
+                                <div aspectRatio={value.aspectRatio}>
+                                    <img
+                                        src={value.thumbnailUrl ?? value.src}
+                                        alt={value.title}
+                                        loading={"lazy"}
+                                        onClick={() => setCurrentImage(value)}
+                                        className={"artImage"}
+                                    />
+                                </div>
+                            )
+                        })}
+                    </JustifiedLayout>
                 </Grid>
             </Grid>
             <Uploader loadImageInfo={loadImageInfo}/>
