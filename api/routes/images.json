@@ -1909,5 +1909,19 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/beach_boy.png",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy.png",
     "aspectRatio": 1.6666666666666667
+  },
+  {
+    "title": "Warp Strike",
+    "artist": "@Yamainu_ken",
+    "tags": [
+      "AICore Form",
+      "Techwear",
+      "Castor"
+    ],
+    "href": "",
+    "published": "2023-12-15",
+    "aspectRatio": 1.4521739130434783,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/warp_strike.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/warp_strike.png"
   }
 ]

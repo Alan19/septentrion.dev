@@ -7,9 +7,11 @@ import {theme} from "../../App";
 import {useTagHooks} from "./UseTagHooks";
 import Uploader from "./Uploader";
 import dayjs from "dayjs";
+import useMeasure from 'react-use-measure';
 
 // @ts-ignore
 import JustifiedLayout from 'react-justified-layout';
+import {ResizeObserver} from '@juggle/resize-observer'
 
 export type TagState = {
     [tag in ArtTag]: number;
@@ -18,6 +20,7 @@ export type TagState = {
 export function Gallery() {
     const [currentImage, setCurrentImage] = useState<ImageData>();
     const {getTags, setTags, images, loadImageInfo} = useTagHooks();
+    const [ref, bounds] = useMeasure({polyfill: ResizeObserver})
 
     const portrait = useMediaQuery('(orientation: portrait)');
 
@@ -142,6 +145,8 @@ export function Gallery() {
         setPage(value)
     }
 
+    console.log(bounds.width)
+
     return (
         <>
             <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
@@ -214,6 +219,13 @@ export function Gallery() {
                 </DialogContent>
             </Dialog>
             <Grid container spacing={2}>
+                <Grid item md={3}/>
+                <Grid item md style={{visibility: "hidden", width: "100%"}}>
+                    <div ref={ref}>
+                    </div>
+                </Grid>
+            </Grid>
+            <Grid container spacing={2}>
                 <Grid item md={3}>
                     <Paper
                         elevation={3}
@@ -240,11 +252,13 @@ export function Gallery() {
                 </Grid>
                 <Grid item md>
                     {(pageSize < shownImages.length) &&
-                        <Pagination style={{marginTop: '8px'}} count={Math.ceil(shownImages.length / pageSize)}
+                        <Pagination style={{marginTop: '8px'}}
+                                    count={Math.ceil(shownImages.length / pageSize)}
                                     page={page} onChange={handlePageChange} showFirstButton showLastButton/>}
-                    <JustifiedLayout>
-                        {shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize).map((value) => {
-                            return (
+
+                    <div>
+                        <JustifiedLayout containerWidth={bounds.width}>
+                            {shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize).map(value =>
                                 // @ts-ignore
                                 <div aspectRatio={value.aspectRatio}>
                                     <img
@@ -254,10 +268,9 @@ export function Gallery() {
                                         onClick={() => setCurrentImage(value)}
                                         className={"artImage"}
                                     />
-                                </div>
-                            )
-                        })}
-                    </JustifiedLayout>
+                                </div>)}
+                        </JustifiedLayout>
+                    </div>
                 </Grid>
             </Grid>
             <Uploader loadImageInfo={loadImageInfo}/>

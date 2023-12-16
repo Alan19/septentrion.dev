@@ -33,15 +33,17 @@ router.post('/', upload.single('image'), async (req, res) => {
 
 
     const sharpBuffer = sharp(file.buffer);
+    const metadata = await sharpBuffer.metadata();
     const jsonOutput = {
         title: title,
         artist: artist,
         tags: tags.split(',').map(tag => tag.trim()),
         href: href,
-        published: published
+        published: published,
+        aspectRatio: metadata.width / metadata.height
     };
 
-    if ((await sharpBuffer.metadata()).width > 500) {
+    if (metadata.width > 500) {
         const compressedParams = {
             Bucket: process.env.BUCKET_NAME,
             Key: `500w/${convertToSnakeCase(title)}.${file.originalname.split('.').pop()}`,
