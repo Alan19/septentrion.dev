@@ -1,7 +1,6 @@
 import {ImageData} from "../ImageData";
 import React, {useEffect, useState} from "react";
 import {Skeleton} from "@mui/material";
-// @ts-ignore
 import JustifiedLayout from 'react-justified-layout';
 
 export function JustifiedImageGrid(props: {
@@ -26,10 +25,9 @@ export function JustifiedImageGrid(props: {
         setIsReady(checkIfImagesAreCached())
         console.log("Loading all images");
         const promises = sources.map((source) => {
-            return new Promise((resolve) => {
+            return new Promise<void>((resolve) => {
                 const img = new Image();
                 img.src = source;
-                // @ts-ignore
                 img.onload = () => resolve();
             });
         });
