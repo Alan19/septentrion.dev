@@ -10,7 +10,7 @@ import dayjs from "dayjs";
 import useMeasure from 'react-use-measure';
 
 import {ResizeObserver} from '@juggle/resize-observer'
-import {JustifiedImageGrid} from "./JustifiedImageGrid";
+import {JustifiedImageGrid2} from "./image-grid/JustifiedImageGrid2";
 
 export type TagState = {
     [tag in ArtTag]: number;
@@ -144,6 +144,9 @@ export function Gallery() {
         setPage(value)
     }
 
+    const imagesOnPage = shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize);
+
+    console.log(imagesOnPage);
     return (
         <>
             <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
@@ -247,17 +250,28 @@ export function Gallery() {
                         )}
                     </Paper>
                 </Grid>
-                <Grid item md>
+                <Grid item md style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
                     {(pageSize < shownImages.length) &&
                         <Pagination style={{marginTop: '8px'}}
                                     count={Math.ceil(shownImages.length / pageSize)}
                                     page={page} onChange={handlePageChange} showFirstButton showLastButton/>}
 
-                    <JustifiedImageGrid
+                    <JustifiedImageGrid2
                         width={bounds.width}
-                        images={shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize)}
-                        onClick={setCurrentImage}
-                    />
+                        rowSpacing={8}
+                        images={imagesOnPage.map(value => ({
+                            src: value.thumbnailUrl || value.src,
+                            dimensions: value.aspectRatio || 1
+                        }))}
+                        itemSpacing={8} targetRowHeight={320} targetRowHeightTolerance={.25}>
+                        {imagesOnPage.map(value => <img
+                            src={value.thumbnailUrl ?? value.src}
+                            alt={value.title}
+                            loading={"lazy"}
+                            className={"artImage"}
+                            onClick={() => setCurrentImage(value)}
+                        />)}
+                    </JustifiedImageGrid2>
                 </Grid>
             </Grid>
             <Uploader loadImageInfo={loadImageInfo}/>

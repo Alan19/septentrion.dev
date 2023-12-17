@@ -10,3 +10,7 @@ html {
 .medium {
     min-height: 85vh;
 }
+
+.container-div img {
+    height: 100%;
+}
