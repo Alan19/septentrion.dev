@@ -9,21 +9,19 @@ export function JustifiedImageGrid2(props: {
     width: number,
     children: any[]
 }) {
-    const rows: { src: string; dimensions: number; height: number }[][] = [];
-    let rowBuffer: { src: string; dimensions: number; }[] = [];
     const minAspectRatio = props.width / props.targetRowHeight * (1 - props.targetRowHeightTolerance);
     const maxAspectRatio = props.width / props.targetRowHeight * (1 + props.targetRowHeightTolerance);
-
     /**
      *
      * @param value The new aspect ratio to be checked
      * @param rowBuffer The buffer of items in the current row
      * @return A boolean array with a length of 2, the first value is whether the buffer can accept the new value, and the second value is whether the buffer should be pushed
      */
-    function canItemIntoBuffer(value: {
+    function canAddItemToBuffer(value: {
         src: string;
         dimensions: number
-    }, rowBuffer: { src: string; dimensions: number }[], isLast: boolean): [boolean, number] {
+    }, rowBuffer: { src: string; dimensions: number }[]): [boolean, number] {
+
         const newItems = rowBuffer.concat(value)
         const newAspectRatio = newItems.map(data => data.dimensions).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
         const rowWidthWithoutSpacing = props.width - (newItems.length - 1) * props.itemSpacing;
@@ -36,35 +34,51 @@ export function JustifiedImageGrid2(props: {
             } else {
                 const previousRowWidthWithoutSpacing = props.width - (rowBuffer.length - 1) * props.itemSpacing;
                 const previousAspectRatio = rowBuffer.map(data => data.dimensions).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
-                const previousTargetAspectRatio = previousRowWidthWithoutSpacing / previousAspectRatio;
-                return Math.abs(newAspectRatio - targetAspectRatio) <= Math.abs(previousAspectRatio - previousTargetAspectRatio) ? [false, previousRowWidthWithoutSpacing / previousAspectRatio] : [true, rowWidthWithoutSpacing / newAspectRatio];
+                const previousTargetAspectRatio = previousRowWidthWithoutSpacing / props.targetRowHeight;
+                if (Math.abs(newAspectRatio - targetAspectRatio) > Math.abs(previousAspectRatio - previousTargetAspectRatio)) {
+                    return [false, previousRowWidthWithoutSpacing / previousAspectRatio];
+                } else {
+                    return [true, rowWidthWithoutSpacing / newAspectRatio];
+                }
             }
         } else {
             return [true, rowWidthWithoutSpacing / newAspectRatio];
         }
     }
 
+    const rows: { items: { src: string; dimensions: number; }[]; height: number; }[] = [];
+    let rowBuffer: { src: string; dimensions: number; }[] = [];
+
+
     props.images.forEach((value, index, array) => {
-        const [canPush, startNewBuffer] = canItemIntoBuffer(value, rowBuffer, index === array.length - 1);
+        const [canPush, rowHeight] = canAddItemToBuffer(value, rowBuffer);
         if (canPush) {
             rowBuffer.push(value);
+        } else {
+            rows.push({items: rowBuffer, height: rowHeight})
+            rowBuffer = [value];
         }
-        if (startNewBuffer || index === array.length - 1) {
-            rows.push(rowBuffer.map(data => ({...data, height: startNewBuffer})));
+        if (rowHeight !== 0) {
+            rows.push({items: rowBuffer, height: rowHeight})
             rowBuffer = [];
         }
     })
+
+    // Handle orphaned content
+    if (rowBuffer.length !== 0) {
+        rows.push({items: rowBuffer, height: rows[rows.length - 1].height})
+    }
 
     console.log(rows);
 
     let childNodeCounter = -1;
 
-    function renderChildren(data: { src: string; dimensions: number; height: number }) {
+    function renderChildren(data1: { src: string; dimensions: number }, height: number) {
         childNodeCounter++;
         return cloneElement(props.children[childNodeCounter], {
             ...props.children[childNodeCounter].props, style: {
                 ...props.children[childNodeCounter].style,
-                height: data.height
+                height: height
             }
         })
 
@@ -77,10 +91,10 @@ export function JustifiedImageGrid2(props: {
                     return <div style={{
                         display: "flex",
                         flexDirection: "row",
-                        justifyContent: "space-between",
+                        gap: props.itemSpacing,
                         marginBottom: props.rowSpacing
                     }}>
-                        {value.map(data => <div><img src={data.src} style={{height: data.height}}/></div>)}
+                        {value.items.map(data => <div>{renderChildren(data, value.height)}</div>)}
                     </div>
                 })}
             </div>

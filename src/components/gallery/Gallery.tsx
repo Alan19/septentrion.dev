@@ -255,6 +255,11 @@ export function Gallery() {
                         <Pagination style={{marginTop: '8px'}}
                                     count={Math.ceil(shownImages.length / pageSize)}
                                     page={page} onChange={handlePageChange} showFirstButton showLastButton/>}
+                    {/*<JustifiedImageGrid*/}
+                    {/*    width={bounds.width}*/}
+                    {/*    images={shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize)}*/}
+                    {/*    onClick={setCurrentImage}*/}
+                    {/*/>*/}
 
                     <JustifiedImageGrid2
                         width={bounds.width}
