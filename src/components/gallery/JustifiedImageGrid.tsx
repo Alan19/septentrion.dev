@@ -1,7 +1,8 @@
 import {ImageData} from "../ImageData";
 import React, {useEffect, useState} from "react";
 import {Skeleton} from "@mui/material";
-import JustifiedLayout from 'react-justified-layout';
+
+const JustifiedLayout = require('react-justified-layout')
 
 export function JustifiedImageGrid(props: {
     images: ImageData[],
