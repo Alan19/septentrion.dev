@@ -9,9 +9,8 @@ import Uploader from "./Uploader";
 import dayjs from "dayjs";
 import useMeasure from 'react-use-measure';
 
-// @ts-ignore
-import JustifiedLayout from 'react-justified-layout';
 import {ResizeObserver} from '@juggle/resize-observer'
+import {JustifiedImageGrid} from "./JustifiedImageGrid";
 
 export type TagState = {
     [tag in ArtTag]: number;
@@ -145,8 +144,6 @@ export function Gallery() {
         setPage(value)
     }
 
-    console.log(bounds.width)
-
     return (
         <>
             <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
@@ -256,21 +253,11 @@ export function Gallery() {
                                     count={Math.ceil(shownImages.length / pageSize)}
                                     page={page} onChange={handlePageChange} showFirstButton showLastButton/>}
 
-                    <div>
-                        <JustifiedLayout containerWidth={bounds.width}>
-                            {shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize).map(value =>
-                                // @ts-ignore
-                                <div aspectRatio={value.aspectRatio}>
-                                    <img
-                                        src={value.thumbnailUrl ?? value.src}
-                                        alt={value.title}
-                                        loading={"lazy"}
-                                        onClick={() => setCurrentImage(value)}
-                                        className={"artImage"}
-                                    />
-                                </div>)}
-                        </JustifiedLayout>
-                    </div>
+                    <JustifiedImageGrid
+                        width={bounds.width}
+                        images={shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize)}
+                        onClick={setCurrentImage}
+                    />
                 </Grid>
             </Grid>
             <Uploader loadImageInfo={loadImageInfo}/>
