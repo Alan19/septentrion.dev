@@ -1,4 +1,5 @@
-import React, {cloneElement} from "react";
+import React, {cloneElement, useEffect, useState} from "react";
+import {Skeleton} from "@mui/material";
 
 type JustifiedImageGridProps = {
     images: { src: string, dimensions: number }[];
@@ -21,6 +22,40 @@ export function JustifiedImageGrid2({
                                         targetRowHeightTolerance = .25,
                                         width,
                                     }: JustifiedImageGridProps) {
+    const sources = images.map(value => value.src);
+
+    function checkIfImagesAreCached() {
+        return sources.every(value => {
+            const image = new Image();
+
+            image.src = value;
+            return image.complete;
+        })
+    }
+
+    const [isReady, setIsReady] = useState(false);
+
+    async function loadAll() {
+        setIsReady(checkIfImagesAreCached())
+        console.log("Loading all images");
+        const promises = sources.map((source) => {
+            return new Promise<void>((resolve) => {
+                const img = new Image();
+                img.src = source;
+                img.onload = () => resolve();
+            });
+        });
+
+        return Promise.all(promises).then(() => console.log("All done"));
+    }
+
+    useEffect(() => {
+        loadAll().then(() => {
+            console.log("Flipping the switch!")
+            setIsReady(true);
+        });
+    }, [images]);
+
     const minAspectRatio = width / targetRowHeight * (1 - targetRowHeightTolerance);
     const maxAspectRatio = width / targetRowHeight * (1 + targetRowHeightTolerance);
 
@@ -105,7 +140,9 @@ export function JustifiedImageGrid2({
                         gap: itemSpacing,
                         marginBottom: rowSpacing
                     }}>
-                        {value.items.map(data => <div>{renderChildren(data, value.height)}</div>)}
+                        {value.items.map(data => <div>{isReady ? renderChildren(data, value.height) :
+                            <Skeleton variant={"rectangular"}
+                                      style={{height: value.height, width: data.dimensions * value.height}}/>}</div>)}
                     </div>
                 })}
             </div>
