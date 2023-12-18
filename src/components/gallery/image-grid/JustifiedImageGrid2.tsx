@@ -1,5 +1,6 @@
 import React, {cloneElement, useEffect, useState} from "react";
-import {Skeleton} from "@mui/material";
+import {Skeleton, useMediaQuery} from "@mui/material";
+import {theme} from "../../../App";
 
 type JustifiedImageGridProps = {
     images: { src: string, dimensions: number }[];
@@ -62,35 +63,45 @@ export function JustifiedImageGrid2({
     /**
      *
      * @param value The new aspect ratio to be checked
-     * @param rowBuffer The buffer of items in the current row
      * @return A boolean array with a length of 2, the first value is whether the buffer can accept the new value, and the second value is whether the buffer should be pushed
-     */
-    function canAddItemToBuffer(value: {
+     * */
+    function addItem(value: {
         src: string;
         dimensions: number
-    }, rowBuffer: { src: string; dimensions: number }[]): [boolean, number] {
-
+    }) {
         const newItems = rowBuffer.concat(value)
         const newAspectRatio = newItems.map(data => data.dimensions).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
         const rowWidthWithoutSpacing = width - (newItems.length - 1) * itemSpacing;
         const targetAspectRatio = rowWidthWithoutSpacing / targetRowHeight;
         if (newAspectRatio < minAspectRatio) {
-            return [true, 0];
+            rowBuffer.push(value);
+            return true;
         } else if (newAspectRatio > maxAspectRatio) {
             if (rowBuffer.length === 0) {
-                return [true, rowWidthWithoutSpacing / newAspectRatio];
+                rowBuffer.push(value);
+                rows.push({items: rowBuffer, height: rowWidthWithoutSpacing / newAspectRatio});
+                rowBuffer = [];
+                return true;
             } else {
                 const previousRowWidthWithoutSpacing = width - (rowBuffer.length - 1) * itemSpacing;
                 const previousAspectRatio = rowBuffer.map(data => data.dimensions).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
                 const previousTargetAspectRatio = previousRowWidthWithoutSpacing / targetRowHeight;
                 if (Math.abs(newAspectRatio - targetAspectRatio) > Math.abs(previousAspectRatio - previousTargetAspectRatio)) {
-                    return [false, previousRowWidthWithoutSpacing / previousAspectRatio];
+                    rows.push({items: rowBuffer, height: previousRowWidthWithoutSpacing / previousAspectRatio})
+                    rowBuffer = []
+                    return false;
                 } else {
-                    return [true, rowWidthWithoutSpacing / newAspectRatio];
+                    rowBuffer.push(value);
+                    rows.push({items: rowBuffer, height: rowWidthWithoutSpacing / newAspectRatio})
+                    rowBuffer = []
+                    return true;
                 }
             }
         } else {
-            return [true, rowWidthWithoutSpacing / newAspectRatio];
+            rowBuffer.push(value);
+            rows.push({items: rowBuffer, height: rowWidthWithoutSpacing / newAspectRatio})
+            rowBuffer = []
+            return true;
         }
     }
 
@@ -99,27 +110,27 @@ export function JustifiedImageGrid2({
 
 
     images.forEach((value) => {
-        const [canPush, rowHeight] = canAddItemToBuffer(value, rowBuffer);
-        if (canPush) {
-            rowBuffer.push(value);
-        } else {
-            rows.push({items: rowBuffer, height: rowHeight})
-            rowBuffer = [value];
-        }
-        if (rowHeight !== 0) {
-            rows.push({items: rowBuffer, height: rowHeight})
-            rowBuffer = [];
+        const isItemSuccessfullyAdded = addItem(value);
+        if (!isItemSuccessfullyAdded) {
+            addItem(value);
         }
     })
 
+    const isSmallOrAbove = useMediaQuery(theme.breakpoints.up('sm'));
     // Handle orphaned content
     if (showWidows && rowBuffer.length !== 0) {
-        rows.push({items: rowBuffer, height: rows[rows.length - 1].height})
+        if (isSmallOrAbove) {
+            rows.push({items: rowBuffer, height: rows[rows.length - 1].height})
+        } else {
+            const aspectRatio = rowBuffer.map(value => value.dimensions).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+            const rowWidthWithoutSpacing = width - (rowBuffer.length - 1) * itemSpacing;
+            rows.push({items: rowBuffer, height: rowWidthWithoutSpacing / aspectRatio})
+        }
     }
 
     let childNodeCounter = -1;
 
-    function renderChildren(data1: { src: string; dimensions: number }, height: number) {
+    function renderChildren(height: number) {
         childNodeCounter++;
         return cloneElement(children[childNodeCounter], {
             ...children[childNodeCounter].props, style: {
@@ -140,9 +151,12 @@ export function JustifiedImageGrid2({
                         gap: itemSpacing,
                         marginBottom: rowSpacing
                     }}>
-                        {value.items.map(data => <div>{isReady ? renderChildren(data, value.height) :
-                            <Skeleton variant={"rectangular"}
-                                      style={{height: value.height, width: data.dimensions * value.height}}/>}</div>)}
+                        {value.items.map(data => <div style={{height: value.height}}>
+                            {isReady ? renderChildren(value.height) : <Skeleton variant={"rectangular"} style={{
+                                height: value.height,
+                                width: data.dimensions * value.height
+                            }}/>}
+                        </div>)}
                     </div>
                 })}
             </div>

@@ -258,12 +258,14 @@ export function Gallery() {
                     <JustifiedImageGrid2
                         width={bounds.width}
                         rowSpacing={8}
+                        itemSpacing={8}
                         images={imagesOnPage.map(value => ({
                             src: value.thumbnailUrl || value.src,
                             dimensions: value.aspectRatio || 1
                         }))}
                         showWidows={true}
-                        itemSpacing={8} targetRowHeight={320} targetRowHeightTolerance={.25}>
+                        targetRowHeight={320}
+                        targetRowHeightTolerance={.25}>
                         {imagesOnPage.map(value => <img
                             src={value.thumbnailUrl ?? value.src}
                             alt={value.title}
