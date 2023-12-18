@@ -252,15 +252,9 @@ export function Gallery() {
                 </Grid>
                 <Grid item md style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
                     {(pageSize < shownImages.length) &&
-                        <Pagination style={{marginTop: '8px'}}
+                        <Pagination style={{marginTop: '8px', marginBottom: "8px"}}
                                     count={Math.ceil(shownImages.length / pageSize)}
                                     page={page} onChange={handlePageChange} showFirstButton showLastButton/>}
-                    {/*<JustifiedImageGrid*/}
-                    {/*    width={bounds.width}*/}
-                    {/*    images={shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize)}*/}
-                    {/*    onClick={setCurrentImage}*/}
-                    {/*/>*/}
-
                     <JustifiedImageGrid2
                         width={bounds.width}
                         rowSpacing={8}
