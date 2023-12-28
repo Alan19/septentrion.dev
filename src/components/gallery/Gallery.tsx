@@ -195,7 +195,12 @@ export function Gallery() {
                                 <Typography variant={"h4"}>{currentImage?.title}</Typography>
                             </div>
                             <div style={{flex: 1}}>
-                                <Button color="primary" variant="outlined">Artist: {currentImage?.artist}</Button>
+                                <Button color="primary"
+                                        variant="outlined"
+                                        target={"noreferrer noopener"}
+                                        href={`https://twitter.com/${currentImage?.artist?.substring(1)}`}>
+                                    Artist: {currentImage?.artist}
+                                </Button>
                                 <Grid container direction={"row"} spacing={1}>
                                     {currentImage?.tags?.map((value) => (
                                         <Grid item>
