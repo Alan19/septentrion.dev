@@ -38,7 +38,6 @@ export function JustifiedImageGrid2({
 
     async function loadAll() {
         setIsReady(checkIfImagesAreCached())
-        console.log("Loading all images");
         const promises = sources.map((source) => {
             return new Promise<void>((resolve) => {
                 const img = new Image();
@@ -47,12 +46,11 @@ export function JustifiedImageGrid2({
             });
         });
 
-        return Promise.all(promises).then(() => console.log("All done"));
+        return Promise.all(promises);
     }
 
     useEffect(() => {
         loadAll().then(() => {
-            console.log("Flipping the switch!")
             setIsReady(true);
         });
     }, [images]);
