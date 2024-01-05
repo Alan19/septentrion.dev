@@ -268,9 +268,7 @@ export function Gallery() {
                             src: value.thumbnailUrl || value.src,
                             dimensions: value.aspectRatio || 1
                         }))}
-                        showWidows={true}
-                        targetRowHeight={320}
-                        targetRowHeightTolerance={.25}>
+                    >
                         {imagesOnPage.map(value => <img
                             src={value.thumbnailUrl ?? value.src}
                             alt={value.title}

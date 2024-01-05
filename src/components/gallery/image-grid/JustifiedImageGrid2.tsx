@@ -4,13 +4,13 @@ import {theme} from "../../../App";
 
 type JustifiedImageGridProps = {
     images: { src: string, dimensions: number }[];
-    itemSpacing: number;
-    rowSpacing: number;
-    targetRowHeight: number;
-    targetRowHeightTolerance: number;
+    itemSpacing?: number;
+    rowSpacing?: number;
+    targetRowHeight?: number;
+    targetRowHeightTolerance?: number;
     width: number;
     children: any[];
-    showWidows: boolean;
+    showWidows?: boolean;
 }
 
 export function JustifiedImageGrid2({
@@ -71,10 +71,14 @@ export function JustifiedImageGrid2({
         const newAspectRatio = newItems.map(data => data.dimensions).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
         const rowWidthWithoutSpacing = width - (newItems.length - 1) * itemSpacing;
         const targetAspectRatio = rowWidthWithoutSpacing / targetRowHeight;
+        // Row still has space
         if (newAspectRatio < minAspectRatio) {
             rowBuffer.push(value);
             return true;
-        } else if (newAspectRatio > maxAspectRatio) {
+        }
+        // Row ran out of space, and the new item is larger than the max aspect ratio for the row
+        else if (newAspectRatio > maxAspectRatio) {
+            // Always accept if it's just 1 item
             if (rowBuffer.length === 0) {
                 rowBuffer.push(value);
                 rows.push({items: rowBuffer, height: rowWidthWithoutSpacing / newAspectRatio});
@@ -84,11 +88,14 @@ export function JustifiedImageGrid2({
                 const previousRowWidthWithoutSpacing = width - (rowBuffer.length - 1) * itemSpacing;
                 const previousAspectRatio = rowBuffer.map(data => data.dimensions).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
                 const previousTargetAspectRatio = previousRowWidthWithoutSpacing / targetRowHeight;
+                // If the new aspect ratio is farther from the target after the insert, then push row buffer and insert new item into the next row
                 if (Math.abs(newAspectRatio - targetAspectRatio) > Math.abs(previousAspectRatio - previousTargetAspectRatio)) {
                     rows.push({items: rowBuffer, height: previousRowWidthWithoutSpacing / previousAspectRatio})
                     rowBuffer = []
                     return false;
-                } else {
+                }
+                // If the new aspect ratio is closer to the target aspect ratio, then insert item and push row buffer
+                else {
                     rowBuffer.push(value);
                     rows.push({items: rowBuffer, height: rowWidthWithoutSpacing / newAspectRatio})
                     rowBuffer = []
@@ -117,12 +124,19 @@ export function JustifiedImageGrid2({
     const isSmallOrAbove = useMediaQuery(theme.breakpoints.up('sm'));
     // Handle orphaned content
     if (showWidows && rowBuffer.length !== 0) {
+        const aspectRatio = rowBuffer.map(value => value.dimensions).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+        const rowWidthWithoutSpacing = width - (rowBuffer.length - 1) * itemSpacing;
+        const rowHeight = rowWidthWithoutSpacing / aspectRatio;
         if (isSmallOrAbove) {
-            rows.push({items: rowBuffer, height: rows[rows.length - 1].height})
+            const rowWidth = rowBuffer.map(value => value.dimensions * rows[rows.length - 1].height).reduce((previousValue, currentValue) => previousValue + currentValue, 0) - (rowBuffer.length - 1) * itemSpacing;
+            if (rowWidth < (width / 2)) {
+                rows.push({items: rowBuffer, height: rows[rows.length - 1].height})
+            } else {
+                rows.push({items: rowBuffer, height: rowHeight})
+            }
         } else {
-            const aspectRatio = rowBuffer.map(value => value.dimensions).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
-            const rowWidthWithoutSpacing = width - (rowBuffer.length - 1) * itemSpacing;
-            rows.push({items: rowBuffer, height: rowWidthWithoutSpacing / aspectRatio})
+            // Use full width of row
+            rows.push({items: rowBuffer, height: rowHeight})
         }
     }
 
