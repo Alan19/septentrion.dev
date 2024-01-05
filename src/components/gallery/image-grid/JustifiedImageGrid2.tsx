@@ -124,19 +124,12 @@ export function JustifiedImageGrid2({
     const isSmallOrAbove = useMediaQuery(theme.breakpoints.up('sm'));
     // Handle orphaned content
     if (showWidows && rowBuffer.length !== 0) {
-        const aspectRatio = rowBuffer.map(value => value.dimensions).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
-        const rowWidthWithoutSpacing = width - (rowBuffer.length - 1) * itemSpacing;
-        const rowHeight = rowWidthWithoutSpacing / aspectRatio;
         if (isSmallOrAbove) {
-            const rowWidth = rowBuffer.map(value => value.dimensions * rows[rows.length - 1].height).reduce((previousValue, currentValue) => previousValue + currentValue, 0) - (rowBuffer.length - 1) * itemSpacing;
-            if (rowWidth < (width / 2)) {
-                rows.push({items: rowBuffer, height: rows[rows.length - 1].height})
-            } else {
-                rows.push({items: rowBuffer, height: rowHeight})
-            }
+            rows.push({items: rowBuffer, height: rows[rows.length - 1].height})
         } else {
-            // Use full width of row
-            rows.push({items: rowBuffer, height: rowHeight})
+            const aspectRatio = rowBuffer.map(value => value.dimensions).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+            const rowWidthWithoutSpacing = width - (rowBuffer.length - 1) * itemSpacing;
+            rows.push({items: rowBuffer, height: rowWidthWithoutSpacing / aspectRatio})
         }
     }
 
