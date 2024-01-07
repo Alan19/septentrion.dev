@@ -125,7 +125,7 @@ export function JustifiedImageGrid2({
     // Handle orphaned content
     if (showWidows && rowBuffer.length !== 0) {
         if (isSmallOrAbove) {
-            rows.push({items: rowBuffer, height: rows[rows.length - 1].height})
+            rows.push({items: rowBuffer, height: rows.length === 0 ? targetRowHeight : rows[rows.length - 1].height})
         } else {
             const aspectRatio = rowBuffer.map(value => value.dimensions).reduce((previousValue, currentValue) => previousValue + currentValue, 0);
             const rowWidthWithoutSpacing = width - (rowBuffer.length - 1) * itemSpacing;

@@ -35,7 +35,7 @@ export function AICoreForm() {
             </Stack>
         </Grid>
         <Grid item md={5}>
-            <img style={{width: "100%"}} src={"https://alcorsiteartbucket.s3.amazonaws.com/ai_core_raffle_sketch.jpg"}/>
+            <img style={{width: "100%"}} src={"https://alcorsiteartbucket.s3.amazonaws.com/warp_strike.png"}/>
         </Grid>
 
     </Grid>;

@@ -1,8 +1,13 @@
-import {Container, Divider, Fade, Grid, Typography, useMediaQuery} from "@mui/material";
+import {Avatar, Grid, Stack, Typography, useMediaQuery} from "@mui/material";
 import React from "react";
-import {Link, Outlet} from "react-router-dom";
+import {Link, Outlet, useLocation} from "react-router-dom";
 import './form-page.css'
 import {theme} from "../../App";
+import aquariusIcon from "./form-icons/aquarius-icon.png"
+import aicoreIcon from "./form-icons/aicore-icon.png"
+import triangulumIcon from "./form-icons/triangulum-icon.png"
+import jupiterIcon from "./form-icons/jupiter-icon.png"
+import mIcon from "./form-icons/m-icon.png"
 
 export function CharacterAttribute(props: { fieldName: String, fieldValue: String }) {
     return <div>
@@ -16,50 +21,54 @@ export function AlcorForms() {
     const formInfo: {name: string, src: string, link: string}[] = [
         {
             name: "Aquarius Form",
-            src: "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form_combar_outfit.png",
+            src: aquariusIcon,
             link: "aquarius"
         },
         {
             name: "Jupiter Form",
-            src: "https://alcorsiteartbucket.s3.amazonaws.com/future_spark.png",
+            src: jupiterIcon,
             link: "jupiter"
         },
         {
             name:"AICore Form",
-            src: "https://pbs.twimg.com/media/FcNTqa8aUAE4uED?format=jpg&name=4096x4096",
+            src: aicoreIcon,
             link: "aicore"
         },
         {
             name: "M⬡ Form",
-            src: "https://alcorsiteartbucket.s3.amazonaws.com/m_form_centered.png",
+            src: mIcon,
             link: "m"
         },
         {
             name: "Triangulum Form",
-            src: "https://alcorsiteartbucket.s3.amazonaws.com/triangulum_form.jpg",
+            src: triangulumIcon,
             link: "triangulum"
         }
     ]
+
+    const selectedForm: string | null = useLocation().pathname.split('/')[2]
     return (
-        <Fade in={true}>
-            <Container style={{marginTop: '8px'}}>
+        <>
                 <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Forms</Typography>
-                <Grid container direction={"row"} spacing={1}>
-                    {
-                        formInfo.map(value => <Grid item md={2}>
-                            <Link to={value.link}>
-                                <figure style={{margin: 0}}>
-                                    <img alt={value.name} className={'form-splash-image'} src={value.src}/>
-                                    <figcaption>{value.name}</figcaption>
-                                </figure>
-                            </Link>
-                        </Grid>)
-                    }
-                    {/*    TODO Add link to gallery*/}
+            <Grid container spacing={1} style={{marginTop: "16px"}}>
+                <Grid item lg={1}>
+                    <Stack direction={isMediumOrUp ? "column" : "row"} spacing={2}>
+                        {
+                            formInfo.map(value => <Grid item md={2}>
+                                <Link to={value.link}>
+                                    <Avatar alt={value.name}
+                                            variant={selectedForm === value.link ? "rounded" : "circular"}
+                                            src={value.src} sx={{width: 80, height: 80}}/>
+                                </Link>
+                            </Grid>)
+                        }
+                        {/*    TODO Add link to gallery*/}
+                    </Stack>
                 </Grid>
-                <Divider style={{marginBottom: '32px', marginTop: '32px'}}/>
-                <Outlet/>
-            </Container>
-        </Fade>
+                <Grid item lg={11}>
+                    <Outlet/>
+                </Grid>
+            </Grid>
+        </>
     );
 }

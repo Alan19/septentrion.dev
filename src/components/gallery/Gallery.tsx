@@ -1,5 +1,17 @@
 import React, {useState} from "react";
-import {Button, Chip, Dialog, DialogContent, Grid, Pagination, Paper, Typography, useMediaQuery,} from "@mui/material";
+import {
+    Button,
+    Chip,
+    Dialog,
+    DialogContent,
+    FormControlLabel,
+    Grid,
+    Pagination,
+    Paper,
+    Switch,
+    Typography,
+    useMediaQuery,
+} from "@mui/material";
 import {ArtTag, ImageData} from "../ImageData";
 import {CategoryOutlined, DryCleaningOutlined, Filter, PetsOutlined, Remove,} from "@mui/icons-material";
 import "./gallery.css";
@@ -11,6 +23,7 @@ import useMeasure from 'react-use-measure';
 
 import {ResizeObserver} from '@juggle/resize-observer'
 import {JustifiedImageGrid2} from "./image-grid/JustifiedImageGrid2";
+import ChronologicalGallery from "./ChronologicalGallery";
 
 export type TagState = {
     [tag in ArtTag]: number;
@@ -20,6 +33,7 @@ export function Gallery() {
     const [currentImage, setCurrentImage] = useState<ImageData>();
     const {getTags, setTags, images, loadImageInfo} = useTagHooks();
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver})
+    const [splitByMonth, setSplitByMonth] = useState(false);
 
     const portrait = useMediaQuery('(orientation: portrait)');
 
@@ -112,16 +126,6 @@ export function Gallery() {
         .sort(imageSort);
 
     function imageSort(a: ImageData, b: ImageData) {
-        // const aFeatured = a.tags?.includes("Featured");
-        // const bFeatured = b.tags?.includes("Featured");
-        // if (aFeatured != bFeatured) {
-        //     if (aFeatured) {
-        //         return -1;
-        //     }
-        //     if (bFeatured) {
-        //         return 1;
-        //     }
-        // }
         return dayjs(b.published).unix() - dayjs(a.published).unix();
     }
 
@@ -146,7 +150,6 @@ export function Gallery() {
 
     const imagesOnPage = shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize);
 
-    console.log(imagesOnPage);
     return (
         <>
             <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
@@ -260,23 +263,30 @@ export function Gallery() {
                         <Pagination style={{marginTop: '8px', marginBottom: "8px"}}
                                     count={Math.ceil(shownImages.length / pageSize)}
                                     page={page} onChange={handlePageChange} showFirstButton showLastButton/>}
-                    <JustifiedImageGrid2
-                        width={bounds.width}
-                        rowSpacing={8}
-                        itemSpacing={8}
-                        images={imagesOnPage.map(value => ({
-                            src: value.thumbnailUrl || value.src,
-                            dimensions: value.aspectRatio || 1
-                        }))}
-                    >
-                        {imagesOnPage.map(value => <img
-                            src={value.thumbnailUrl ?? value.src}
-                            alt={value.title}
-                            loading={"lazy"}
-                            className={"artImage"}
-                            onClick={() => setCurrentImage(value)}
-                        />)}
-                    </JustifiedImageGrid2>
+                    <FormControlLabel control={<Switch value={splitByMonth}
+                                                       onChange={(event, checked) => setSplitByMonth(checked)}/>}
+                                      label="Separate by month"/>
+                    {splitByMonth ?
+                        <ChronologicalGallery displayedImages={imagesOnPage} width={bounds.width}
+                                              setCurrentImage={setCurrentImage}/> :
+                        <JustifiedImageGrid2
+                            width={bounds.width}
+                            rowSpacing={8}
+                            itemSpacing={8}
+                            images={imagesOnPage.map(value => ({
+                                src: value.thumbnailUrl || value.src,
+                                dimensions: value.aspectRatio || 1
+                            }))}
+                        >
+                            {imagesOnPage.map(value => <img
+                                src={value.thumbnailUrl ?? value.src}
+                                alt={value.title}
+                                loading={"lazy"}
+                                className={"artImage"}
+                                onClick={() => setCurrentImage(value)}
+                            />)}
+                        </JustifiedImageGrid2>}
+
                 </Grid>
             </Grid>
             <Uploader loadImageInfo={loadImageInfo}/>
