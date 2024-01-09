@@ -135,16 +135,6 @@ export function Gallery() {
     const [pageSize, setPageSize] = useState<number>(12);
     const [page, setPage] = useState<number>(1);
 
-    function getCols() {
-        if (isMediumOrAbove) {
-            return 4;
-        } else if (isSmallOrAbove) {
-            return 3;
-        } else {
-            return 1;
-        }
-    }
-
     function handlePageChange(event: React.ChangeEvent<unknown>, value: number) {
         setPage(value)
     }
@@ -276,10 +266,12 @@ export function Gallery() {
                                            layoutItems={imagesOnPage.map(value => (
                                                value.aspectRatio ?? 1
                                            ))}>
-                            {imagesOnPage.map(value => <LazyLoadedImage src={value.thumbnailUrl ?? value.src}
-                                                                        aspectRatio={value.aspectRatio ?? 1}
-                                                                        setCurrentImage={() => setCurrentImage(value)}
-                                                                        title={value.title ?? ""}/>)}
+                            {imagesOnPage.map(value => <LazyLoadedImage
+                                src={value.thumbnailUrl ?? value.src}
+                                aspectRatio={value.aspectRatio ?? 1}
+                                className={"artImage"}
+                                setCurrentImage={() => setCurrentImage(value)}
+                                title={value.title ?? ""}/>)}
                         </TSJustifiedLayout>
                     }
 
