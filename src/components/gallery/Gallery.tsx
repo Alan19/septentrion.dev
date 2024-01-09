@@ -22,8 +22,9 @@ import dayjs from "dayjs";
 import useMeasure from 'react-use-measure';
 
 import {ResizeObserver} from '@juggle/resize-observer'
-import {JustifiedImageGrid2} from "./image-grid/JustifiedImageGrid2";
 import ChronologicalGallery from "./ChronologicalGallery";
+import {TSJustifiedLayout} from "react-justified-layout-ts";
+import {LazyLoadedImage} from "./LazyLoadedImage";
 
 export type TagState = {
     [tag in ArtTag]: number;
@@ -269,23 +270,18 @@ export function Gallery() {
                     {splitByMonth ?
                         <ChronologicalGallery displayedImages={imagesOnPage} width={bounds.width}
                                               setCurrentImage={setCurrentImage}/> :
-                        <JustifiedImageGrid2
-                            width={bounds.width}
-                            rowSpacing={8}
-                            itemSpacing={8}
-                            images={imagesOnPage.map(value => ({
-                                src: value.thumbnailUrl || value.src,
-                                dimensions: value.aspectRatio || 1
-                            }))}
-                        >
-                            {imagesOnPage.map(value => <img
-                                src={value.thumbnailUrl ?? value.src}
-                                alt={value.title}
-                                loading={"lazy"}
-                                className={"artImage"}
-                                onClick={() => setCurrentImage(value)}
-                            />)}
-                        </JustifiedImageGrid2>}
+                        <TSJustifiedLayout width={bounds.width}
+                                           rowSpacing={8}
+                                           itemSpacing={8}
+                                           layoutItems={imagesOnPage.map(value => (
+                                               value.aspectRatio ?? 1
+                                           ))}>
+                            {imagesOnPage.map(value => <LazyLoadedImage src={value.thumbnailUrl ?? value.src}
+                                                                        aspectRatio={value.aspectRatio ?? 1}
+                                                                        setCurrentImage={() => setCurrentImage(value)}
+                                                                        title={value.title ?? ""}/>)}
+                        </TSJustifiedLayout>
+                    }
 
                 </Grid>
             </Grid>

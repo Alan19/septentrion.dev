@@ -2,7 +2,8 @@ import {Typography} from "@mui/material";
 import dayjs from "dayjs";
 import React from "react";
 import {ImageData} from "../ImageData";
-import {JustifiedImageGrid2} from "./image-grid/JustifiedImageGrid2";
+import {LazyLoadedImage} from "./LazyLoadedImage";
+import {TSJustifiedLayout} from "react-justified-layout-ts";
 
 function ChronologicalGallery(props: {
     displayedImages: ImageData[],
@@ -15,23 +16,21 @@ function ChronologicalGallery(props: {
 
     function renderGalleryForMonth(year: number, month: number) {
         const imagesForMonth = getImagesForMonth(year, month);
-        return <JustifiedImageGrid2
+        return <TSJustifiedLayout
             width={props.width}
             rowSpacing={8}
             itemSpacing={8}
-            images={imagesForMonth.map(value => ({
-                src: value.thumbnailUrl || value.src,
-                dimensions: value.aspectRatio || 1
-            }))}
+            layoutItems={imagesForMonth.map(value => (
+                value.aspectRatio ?? 1
+            ))}
         >
-            {imagesForMonth.map(value => <img
+            {imagesForMonth.map(value => <LazyLoadedImage
                 src={value.thumbnailUrl ?? value.src}
-                alt={value.title}
-                loading={"lazy"}
+                title={value.title ?? ""}
                 className={"artImage"}
-                onClick={() => props.setCurrentImage(value)}
-            />)}
-        </JustifiedImageGrid2>
+                setCurrentImage={() => props.setCurrentImage(value)}
+                aspectRatio={value.aspectRatio ?? 1}/>)}
+        </TSJustifiedLayout>
     }
 
 
