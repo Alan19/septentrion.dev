@@ -14,7 +14,7 @@ import {
     TextField,
     Typography,
 } from "@mui/material";
-import {ArtTag} from "../ImageData";
+import {ArtTag} from "../ImageInformation";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import AddIcon from "@mui/icons-material/Add";

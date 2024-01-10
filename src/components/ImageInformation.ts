@@ -31,7 +31,7 @@ export enum ArtTag {
     auriga = 'Auriga Form'
 }
 
-export type ImageData = {
+export type ImageInformation = {
     src: string;
     href: string;
     title?: string;

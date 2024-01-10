@@ -1,7 +1,7 @@
 import React, {MouseEventHandler, useEffect, useState} from "react";
 import {Skeleton} from "@mui/material";
 
-export function LazyLoadedImage(props: {
+export function GalleryImage(props: {
     src: string,
     aspectRatio: number,
     style?: any,

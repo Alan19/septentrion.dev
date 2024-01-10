@@ -1,10 +1,10 @@
 import {IconButton, ImageList, ImageListItem, ImageListItemBar,} from "@mui/material";
 import React from "react";
 import InfoIcon from "@mui/icons-material/Info";
-import {ArtTag, ImageData} from "../ImageData";
+import {ArtTag, ImageInformation} from "../ImageInformation";
 
 export function CharacterImageGrid() {
-    const itemData: ImageData[] = [
+    const itemData: ImageInformation[] = [
         {
             src: "https://pbs.twimg.com/media/FTkSbIYaQAALr_G?format=jpg&name=large",
             title: "Awakened Workout",

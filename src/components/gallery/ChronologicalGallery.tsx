@@ -1,14 +1,14 @@
 import {Typography} from "@mui/material";
 import dayjs from "dayjs";
 import React from "react";
-import {ImageData} from "../ImageData";
-import {LazyLoadedImage} from "./LazyLoadedImage";
+import {ImageInformation} from "../ImageInformation";
+import {GalleryImage} from "./GalleryImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 
 function ChronologicalGallery(props: {
-    displayedImages: ImageData[],
+    displayedImages: ImageInformation[],
     width: number,
-    setCurrentImage: (image: ImageData) => void
+    setCurrentImage: (image: ImageInformation) => void
 }) {
     function getImagesForMonth(year: number, month: number) {
         return props.displayedImages.filter(value => dayjs(value.published, "YYYY-MM-DD").isSame(dayjs().year(year).month(month), "month")).sort((a, b) => dayjs(b.published).unix() - dayjs(a.published).unix());
@@ -24,7 +24,7 @@ function ChronologicalGallery(props: {
                 value.aspectRatio ?? 1
             ))}
         >
-            {imagesForMonth.map(value => <LazyLoadedImage
+            {imagesForMonth.map(value => <GalleryImage
                 src={value.thumbnailUrl ?? value.src}
                 title={value.title ?? ""}
                 className={"artImage"}

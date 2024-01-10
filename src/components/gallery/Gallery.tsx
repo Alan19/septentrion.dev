@@ -1,19 +1,7 @@
 import React, {useState} from "react";
-import {
-    Button,
-    Chip,
-    Dialog,
-    DialogContent,
-    FormControlLabel,
-    Grid,
-    Pagination,
-    Paper,
-    Switch,
-    Typography,
-    useMediaQuery,
-} from "@mui/material";
-import {ArtTag, ImageData} from "../ImageData";
-import {CategoryOutlined, DryCleaningOutlined, Filter, PetsOutlined, Remove,} from "@mui/icons-material";
+import {Chip, FormControlLabel, Grid, Pagination, Switch, Typography, useMediaQuery,} from "@mui/material";
+import {ArtTag, ImageInformation} from "../ImageInformation";
+import {Remove,} from "@mui/icons-material";
 import "./gallery.css";
 import {theme} from "../../App";
 import {useTagHooks} from "./UseTagHooks";
@@ -24,19 +12,23 @@ import useMeasure from 'react-use-measure';
 import {ResizeObserver} from '@juggle/resize-observer'
 import ChronologicalGallery from "./ChronologicalGallery";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
-import {LazyLoadedImage} from "./LazyLoadedImage";
+import {GalleryImage} from "./GalleryImage";
+import {GalleryDialog} from "./GalleryDialog";
+import {FilterPane} from "./FilterPane";
 
 export type TagState = {
     [tag in ArtTag]: number;
 };
 
 export function Gallery() {
-    const [currentImage, setCurrentImage] = useState<ImageData>();
     const {getTags, setTags, images, loadImageInfo} = useTagHooks();
+    const [currentImage, setCurrentImage] = useState<ImageInformation>();
+    const [isDialogOpen, setIsDialogOpen] = useState(false)
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver})
     const [splitByMonth, setSplitByMonth] = useState(false);
+    const [pageSize, setPageSize] = useState<number>(12);
+    const [page, setPage] = useState<number>(1);
 
-    const portrait = useMediaQuery('(orientation: portrait)');
 
     let tags: TagState = getTags();
 
@@ -70,7 +62,7 @@ export function Gallery() {
     }
 
     function filterCategories(
-        element: JSX.Element,
+        element: React.JSX.Element,
         categoryName: string,
         filterFunction: (value: ArtTag) => boolean
     ) {
@@ -126,14 +118,11 @@ export function Gallery() {
         })
         .sort(imageSort);
 
-    function imageSort(a: ImageData, b: ImageData) {
+    function imageSort(a: ImageInformation, b: ImageInformation) {
         return dayjs(b.published).unix() - dayjs(a.published).unix();
     }
 
-    const isSmallOrAbove = useMediaQuery(theme.breakpoints.up("sm"));
     const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
-    const [pageSize, setPageSize] = useState<number>(12);
-    const [page, setPage] = useState<number>(1);
 
     function handlePageChange(event: React.ChangeEvent<unknown>, value: number) {
         setPage(value)
@@ -141,82 +130,19 @@ export function Gallery() {
 
     const imagesOnPage = shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize);
 
+    function closeModal() {
+        setIsDialogOpen(false);
+    }
+
+    function handleImageClicked(value: ImageInformation) {
+        setCurrentImage(value);
+        setIsDialogOpen(true);
+    }
+
     return (
         <>
             <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
-            <Dialog
-                open={!!currentImage}
-                onClose={() => setCurrentImage(undefined)}
-                aria-labelledby="modal-modal-title"
-                aria-describedby="modal-modal-description"
-                fullWidth={true}
-                maxWidth={"xl"}
-            >
-                <DialogContent>
-                    <Grid container direction={portrait ? 'column' : 'row'} spacing={2}>
-                        {currentImage && (
-                            <Grid
-                                item
-                                md={8}
-                                sm={7}
-                                xs
-                                className={"artImage"}
-                            >
-                                <a href={(currentImage.href && currentImage.href !== '') ? currentImage.href : currentImage.src}
-                                   target={"_blank"} style={{width: "100%", display: "flex", backgroundColor: "black"}}>
-                                    <img
-                                        src={currentImage.src}
-                                        alt={currentImage.title}
-                                        style={{
-                                            maxWidth: "100%",
-                                            height: portrait ? "inherit" : "70vh",
-                                            alignSelf: "center",
-                                            margin: "auto",
-                                            objectFit: "contain"
-                                        }}
-                                        loading={"lazy"}
-                                    />
-                                </a>
-                            </Grid>
-                        )}
-                        <Grid item md={4} xs sm={5} style={{
-                            paddingLeft: "16px",
-                            paddingRight: "16px",
-                            display: "flex",
-                            flexDirection: "column"
-                        }}>
-                            <div>
-                                <Typography variant={"h4"}>{currentImage?.title}</Typography>
-                            </div>
-                            <div style={{flex: 1}}>
-                                <Button color="primary"
-                                        variant="outlined"
-                                        target={"noreferrer noopener"}
-                                        href={`https://twitter.com/${currentImage?.artist?.substring(1)}`}>
-                                    Artist: {currentImage?.artist}
-                                </Button>
-                                <Grid container direction={"row"} spacing={1}>
-                                    {currentImage?.tags?.map((value) => (
-                                        <Grid item>
-                                            <Chip label={value}/>
-                                        </Grid>
-                                    ))}
-                                </Grid>
-                            </div>
-                            {currentImage?.published && (
-                                <Typography
-                                    variant={"subtitle1"}
-                                    style={{
-                                        textAlign: "right"
-                                    }}
-                                >
-                                    {dayjs(currentImage?.published).format("MMM DD, YYYY")}
-                                </Typography>
-                            )}
-                        </Grid>
-                    </Grid>
-                </DialogContent>
-            </Dialog>
+            <GalleryDialog isOpen={isDialogOpen} currentImage={currentImage} closeModal={closeModal}/>
             <Grid container spacing={2}>
                 <Grid item md={3}/>
                 <Grid item md style={{visibility: "hidden", width: "100%"}}>
@@ -226,28 +152,7 @@ export function Gallery() {
             </Grid>
             <Grid container spacing={2}>
                 <Grid item md={3}>
-                    <Paper
-                        elevation={3}
-                        className={`filters ${isMediumOrAbove ? "medium" : ""}`}
-                    >
-                        <Typography variant={"h5"} style={{marginTop: "8px"}}>
-                            <Filter/> Filter Gallery
-                        </Typography>
-                        {filterCategories(<PetsOutlined/>, "Forms", (value) =>
-                            value.includes("Form")
-                        )}
-                        {filterCategories(
-                            <DryCleaningOutlined/>,
-                            "Superhero Suits",
-                            (value) => value.includes("Suit")
-                        )}
-                        {filterCategories(
-                            <CategoryOutlined/>,
-                            "Miscellaneous",
-                            (value) =>
-                                !["Suit", "Form"].some((keyword) => value.includes(keyword))
-                        )}
-                    </Paper>
+                    <FilterPane isMediumOrAbove={isMediumOrAbove} filterCategories={filterCategories}/>
                 </Grid>
                 <Grid item md style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
                     {(pageSize < shownImages.length) &&
@@ -259,18 +164,18 @@ export function Gallery() {
                                       label="Separate by month"/>
                     {splitByMonth ?
                         <ChronologicalGallery displayedImages={imagesOnPage} width={bounds.width}
-                                              setCurrentImage={setCurrentImage}/> :
+                                              setCurrentImage={handleImageClicked}/> :
                         <TSJustifiedLayout width={bounds.width}
                                            rowSpacing={8}
                                            itemSpacing={8}
                                            layoutItems={imagesOnPage.map(value => (
                                                value.aspectRatio ?? 1
                                            ))}>
-                            {imagesOnPage.map(value => <LazyLoadedImage
+                            {imagesOnPage.map(value => <GalleryImage
                                 src={value.thumbnailUrl ?? value.src}
                                 aspectRatio={value.aspectRatio ?? 1}
                                 className={"artImage"}
-                                setCurrentImage={() => setCurrentImage(value)}
+                                setCurrentImage={() => handleImageClicked(value)}
                                 title={value.title ?? ""}/>)}
                         </TSJustifiedLayout>
                     }
