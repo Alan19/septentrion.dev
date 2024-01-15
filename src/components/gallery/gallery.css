@@ -14,3 +14,7 @@ html {
 .container-div img {
     height: 100%;
 }
+
+.MuiDialogContent-root {
+    padding: 0 !important;
+}

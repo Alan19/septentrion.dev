@@ -155,13 +155,15 @@ export function Gallery() {
                     <FilterPane isMediumOrAbove={isMediumOrAbove} filterCategories={filterCategories}/>
                 </Grid>
                 <Grid item md style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
+                    <FormControlLabel style={{marginTop: "8px"}}
+                                      control={<Switch value={splitByMonth}
+                                                       onChange={(_event, checked) => setSplitByMonth(checked)}/>}
+                                      label="Separate by month"/>
+
                     {(pageSize < shownImages.length) &&
-                        <Pagination style={{marginTop: '8px', marginBottom: "8px"}}
+                        <Pagination style={{marginBottom: "8px"}}
                                     count={Math.ceil(shownImages.length / pageSize)}
                                     page={page} onChange={handlePageChange} showFirstButton showLastButton/>}
-                    <FormControlLabel control={<Switch value={splitByMonth}
-                                                       onChange={(event, checked) => setSplitByMonth(checked)}/>}
-                                      label="Separate by month"/>
                     {splitByMonth ?
                         <ChronologicalGallery displayedImages={imagesOnPage} width={bounds.width}
                                               setCurrentImage={handleImageClicked}/> :

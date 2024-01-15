@@ -3,6 +3,7 @@ import dayjs from "dayjs";
 import React from "react";
 import {ImageInformation} from "../ImageInformation";
 import {ImageWithLoadingSkeleton} from "./ImageWithLoadingSkeleton";
+import "./gallery.css";
 
 export function GalleryDialog(props: {
     currentImage?: ImageInformation,
@@ -11,6 +12,20 @@ export function GalleryDialog(props: {
 }) {
     const isPortrait = useMediaQuery('(orientation: portrait)');
 
+    // Hacky workaround to make padding on borderless dialog look good
+    const portraitPadding = {
+        paddingLeft: 16 + 24,
+        paddingRight: 24,
+        paddingTop: 20,
+        paddingBottom: 20
+    };
+    let landscapePadding = {
+        paddingLeft: 24,
+        paddingRight: 24,
+        paddingTop: 20 + 16,
+        paddingBottom: 20
+
+    };
     return <Dialog
         open={props.isOpen}
         onClose={props.closeModal}
@@ -32,7 +47,7 @@ export function GalleryDialog(props: {
                                                   href={(props.currentImage.href && props.currentImage.href !== '') ? props.currentImage.href : props.currentImage.src}
                                                   aspectRatio={props.currentImage.aspectRatio ?? 1}>
                             <img
-                                src={props.currentImage.src}
+                                src={props.currentImage.webp ?? props.currentImage.src}
                                 alt={props.currentImage.title}
                                 style={{
                                     maxWidth: "100%",
@@ -47,11 +62,10 @@ export function GalleryDialog(props: {
                     </Grid>
                 )}
                 <Grid item md={4} xs sm={5} style={{
-                    paddingLeft: "16px",
-                    paddingRight: "16px",
                     display: "flex",
-                    flexDirection: "column"
-                }}>
+                    flexDirection: "column",
+                    ...isPortrait ? portraitPadding : landscapePadding
+                }} className={"dialog-description"}>
                     <div>
                         <Typography variant={"h4"}>{props.currentImage?.title}</Typography>
                     </div>
@@ -62,7 +76,7 @@ export function GalleryDialog(props: {
                                 href={`https://twitter.com/${props.currentImage?.artist?.substring(1)}`}>
                             Artist: {props.currentImage?.artist}
                         </Button>
-                        <Grid container direction={"row"} spacing={1}>
+                        <Grid style={{marginTop: "0"}} container direction={"row"} spacing={1}>
                             {props.currentImage?.tags?.map((value) => (
                                 <Grid item>
                                     <Chip label={value}/>

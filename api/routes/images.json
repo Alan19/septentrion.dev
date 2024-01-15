@@ -9,8 +9,9 @@
       "Featured"
     ],
     "published": "2022-01-02",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/m6_form.webp",
-    "aspectRatio": 1.2111057922450934
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/m6_form.webp",
+    "aspectRatio": 1.2111057922450934,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/m6_form.webp"
   },
   {
     "src": "https://pbs.twimg.com/media/FS3TACVVsAAQPl1?format=jpg&name=large",
@@ -98,8 +99,9 @@
     ],
     "artist": "DRACOICE08",
     "published": "2022-05-29",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/triangulum_form.webp",
-    "aspectRatio": 1.8250950570342206
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/triangulum_form.webp",
+    "aspectRatio": 1.8250950570342206,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangulum_form.webp"
   },
   {
     "src": "https://pbs.twimg.com/media/FWxBQsZakAAC85Z?format=jpg&name=large",
@@ -126,8 +128,9 @@
       "AICore Form"
     ],
     "published": "2022-12-14",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/raf_buff_techwear.webp",
-    "aspectRatio": 1.1995172968624297
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/raf_buff_techwear.webp",
+    "aspectRatio": 1.1995172968624297,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/raf_buff_techwear.webp"
   },
   {
     "src": "https://cloud.refsheet.net/images/images/001/361/397/large/EM_Wave_Change.png?1660694424",
@@ -169,8 +172,9 @@
       "Rastaban Form"
     ],
     "published": "2022-04-05",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/aicore_reference_sheet.webp",
-    "aspectRatio": 1.2139605462822458
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aicore_reference_sheet.webp",
+    "aspectRatio": 1.2139605462822458,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aicore_reference_sheet.webp"
   },
   {
     "title": "Lance Hero",
@@ -290,8 +294,9 @@
       "Transformation"
     ],
     "published": "2023-03-31",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/bec_gift_art.webp",
-    "aspectRatio": 0.6541666666666667
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/bec_gift_art.webp",
+    "aspectRatio": 0.6541666666666667,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/bec_gift_art.webp"
   },
   {
     "title": "Eclipse Deity",
@@ -303,8 +308,9 @@
       "Featured"
     ],
     "published": "2022-10-16",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/eclipse_deity.webp",
-    "aspectRatio": 1.2272950417280315
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/eclipse_deity.webp",
+    "aspectRatio": 1.2272950417280315,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/eclipse_deity.webp"
   },
   {
     "title": "Come and Find Me",
@@ -316,8 +322,9 @@
       "Featured"
     ],
     "published": "2022-06-20",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/come_and_find_me.webp",
-    "aspectRatio": 0.7069555302166477
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/come_and_find_me.webp",
+    "aspectRatio": 0.7069555302166477,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/come_and_find_me.webp"
   },
   {
     "title": "Alcor Sketchpage",
@@ -331,8 +338,9 @@
       "Knives"
     ],
     "published": "2021-09-28",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/alcor_sketchpage.webp",
-    "aspectRatio": 0.7008547008547008
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_sketchpage.webp",
+    "aspectRatio": 0.7008547008547008,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_sketchpage.webp"
   },
   {
     "title": "PNGTuber Idle",
@@ -344,8 +352,9 @@
       "Hoodie"
     ],
     "published": "2021-09-10",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/pngtuber_art_1.webp",
-    "aspectRatio": 1
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/pngtuber_art_1.webp",
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pngtuber_art_1.webp"
   },
   {
     "title": "PNGTuber Talking",
@@ -357,8 +366,9 @@
       "Hoodie"
     ],
     "published": "2021-09-10",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/pngtuber_art_2.webp",
-    "aspectRatio": 1
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/pngtuber_art_2.webp",
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pngtuber_art_2.webp"
   },
   {
     "title": "Night",
@@ -369,8 +379,9 @@
       "M⬡ Form"
     ],
     "published": "2022-02-15",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/night.webp",
-    "aspectRatio": 0.7119140625
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/night.webp",
+    "aspectRatio": 0.7119140625,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/night.webp"
   },
   {
     "title": "Cool Trio",
@@ -381,8 +392,9 @@
       "Rastaban Form"
     ],
     "published": "2021-12-18",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/cool_trio.webp",
-    "aspectRatio": 1.4054054054054055
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/cool_trio.webp",
+    "aspectRatio": 1.4054054054054055,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cool_trio.webp"
   },
   {
     "title": "M⬡ Raid Icon",
@@ -393,8 +405,9 @@
       "M⬡ Form"
     ],
     "published": "2022-01-13",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/m6_mh_icon.webp",
-    "aspectRatio": 1
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/m6_mh_icon.webp",
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/m6_mh_icon.webp"
   },
   {
     "title": "Raichu Stream Gift Art",
@@ -406,8 +419,9 @@
       "Standard Outfit"
     ],
     "published": "2021-11-07",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/rai_stream_gift_art.webp",
-    "aspectRatio": 0.7066666666666667
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/rai_stream_gift_art.webp",
+    "aspectRatio": 0.7066666666666667,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rai_stream_gift_art.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/autumnal_techwear.png",
@@ -419,8 +433,9 @@
     ],
     "href": "https://x.com/yorozu1217/status/1565594484414459904?s=20",
     "published": "2022-09-02",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/autumnal_techwear.webp",
-    "aspectRatio": 0.8333333333333334
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/autumnal_techwear.webp",
+    "aspectRatio": 0.8333333333333334,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/autumnal_techwear.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/outdoors_hot_springs.png",
@@ -431,8 +446,9 @@
     ],
     "href": "https://twitter.com/KitsuLev/status/1549170578510479360",
     "published": "2022-07-18",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/outdoors_hot_springs.webp",
-    "aspectRatio": 1.3888888888888888
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/outdoors_hot_springs.webp",
+    "aspectRatio": 1.3888888888888888,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/outdoors_hot_springs.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/rsn_sketch.jpg",
@@ -444,8 +460,9 @@
     ],
     "href": "https://twitter.com/RSN_07/status/1580340889355833345",
     "published": "2022-10-12",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/rsn_sketch.webp",
-    "aspectRatio": 0.6548
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/rsn_sketch.webp",
+    "aspectRatio": 0.6548,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rsn_sketch.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/big_derg.png",
@@ -456,8 +473,9 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1562584375589732354?s=20",
     "published": "2022-08-24",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/big_derg.webp",
-    "aspectRatio": 1.7207953603976802
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/big_derg.webp",
+    "aspectRatio": 1.7207953603976802,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/big_derg.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/chibi_alcor_and_lava.png",
@@ -470,8 +488,9 @@
     ],
     "href": "https://twitter.com/Gabnart/status/1667200094142189574?s=20",
     "published": "2023-06-09",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/chibi_alcor_and_lava.webp",
-    "aspectRatio": 1.38755980861244
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/chibi_alcor_and_lava.webp",
+    "aspectRatio": 1.38755980861244,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/chibi_alcor_and_lava.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/twewy_team.png",
@@ -483,8 +502,9 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1685310669082562561?s=20",
     "published": "2023-07-29",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/twewy_team.webp",
-    "aspectRatio": 1.7777777777777777
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/twewy_team.webp",
+    "aspectRatio": 1.7777777777777777,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/twewy_team.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_techsuit.jpeg",
@@ -499,8 +519,9 @@
     ],
     "href": "https://twitter.com/jotty777/status/1702178321222480069?s=20",
     "published": "2023-09-14",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/alcor_techsuit.webp",
-    "aspectRatio": 0.7777777777777778
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_techsuit.webp",
+    "aspectRatio": 0.7777777777777778,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_techsuit.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/scarlet_flame_x_galactic_b_hero_suit.png",
@@ -512,8 +533,9 @@
     ],
     "href": "https://skeb.jp/@harukaze110/works/34",
     "published": "2023-05-23",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/scarlet_flame_x_galactic_b_hero_suit.webp",
-    "aspectRatio": 0.813953488372093
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/scarlet_flame_x_galactic_b_hero_suit.webp",
+    "aspectRatio": 0.813953488372093,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/scarlet_flame_x_galactic_b_hero_suit.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/solarpunk_city_heroes.jpg",
@@ -525,8 +547,9 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1663735191460892672?s=20",
     "published": "2023-05-30",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/solarpunk_city_heroes.webp",
-    "aspectRatio": 1.4189516129032258
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/solarpunk_city_heroes.webp",
+    "aspectRatio": 1.4189516129032258,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/solarpunk_city_heroes.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/tamcin_buff_sketch.jpg",
@@ -539,7 +562,8 @@
     "href": "https://x.com/VoidFoxTamcin/status/1521471592957878272?s=20",
     "published": "2022-05-03",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/tamcin_buff_sketch.webp",
-    "aspectRatio": 1.25
+    "aspectRatio": 1.25,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/tamcin_buff_sketch.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/couple_s_sketchpage_2022.jpg",
@@ -553,8 +577,9 @@
     ],
     "href": "https://x.com/sketchtablet/status/1519407141991424000?s=20",
     "published": "2022-04-27",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/couple_s_sketchpage_2022.webp",
-    "aspectRatio": 1
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/couple_s_sketchpage_2022.webp",
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/couple_s_sketchpage_2022.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/power_up.png",
@@ -566,8 +591,9 @@
     ],
     "href": "https://x.com/laywithfull/status/1505351398954729476?s=20",
     "published": "2022-03-19",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/power_up.webp",
-    "aspectRatio": 1.3333333333333333
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/power_up.webp",
+    "aspectRatio": 1.3333333333333333,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/power_up.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/combat_ready_duo.png",
@@ -579,8 +605,9 @@
     ],
     "href": "https://skeb.jp/@arcielsummer/works/33",
     "published": "2023-05-05",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/combat_ready_duo.webp",
-    "aspectRatio": 1.7777777777777777
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/combat_ready_duo.webp",
+    "aspectRatio": 1.7777777777777777,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/combat_ready_duo.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/self_experimentation_part_1.png",
@@ -593,8 +620,9 @@
     ],
     "href": "https://x.com/CheezyChezu/status/1554869095450849280?s=20",
     "published": "2022-08-03",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/self_experimentation_part_1.webp",
-    "aspectRatio": 0.8266666666666667
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/self_experimentation_part_1.webp",
+    "aspectRatio": 0.8266666666666667,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/self_experimentation_part_1.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/black_cat_blades.png",
@@ -605,8 +633,9 @@
     ],
     "href": "https://twitter.com/Lavastan/status/1465845559961350148",
     "published": "2021-11-30",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/black_cat_blades.webp",
-    "aspectRatio": 1.25
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/black_cat_blades.webp",
+    "aspectRatio": 1.25,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/black_cat_blades.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/ralsei_themed_trick_or_treat.png",
@@ -617,8 +646,9 @@
     ],
     "href": "https://twitter.com/_BrokenNoise_/status/1454947365081726977",
     "published": "2021-10-31",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/ralsei_themed_trick_or_treat.webp",
-    "aspectRatio": 1.1363636363636365
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/ralsei_themed_trick_or_treat.webp",
+    "aspectRatio": 1.1363636363636365,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ralsei_themed_trick_or_treat.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/black_mage.png",
@@ -629,8 +659,9 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1465160989033349121?s=20",
     "published": "2021-11-28",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/black_mage.webp",
-    "aspectRatio": 1
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/black_mage.webp",
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/black_mage.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/monk_rouge_draft.png",
@@ -643,8 +674,9 @@
     ],
     "href": "",
     "published": "2021-12-24",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/monk_rouge_draft.webp",
-    "aspectRatio": 1.002534854245881
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/monk_rouge_draft.webp",
+    "aspectRatio": 1.002534854245881,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/monk_rouge_draft.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/monk_rogue_draft_2.png",
@@ -657,8 +689,9 @@
     ],
     "href": "",
     "published": "2021-12-24",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/monk_rogue_draft_2.webp",
-    "aspectRatio": 0.9962453066332916
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/monk_rogue_draft_2.webp",
+    "aspectRatio": 0.9962453066332916,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/monk_rogue_draft_2.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/sitting_on_a_couch.png",
@@ -670,8 +703,9 @@
     ],
     "href": "https://x.com/AlisonRobin/status/1477111219517415427?s=20",
     "published": "2021-12-31",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/sitting_on_a_couch.webp",
-    "aspectRatio": 0.75
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/sitting_on_a_couch.webp",
+    "aspectRatio": 0.75,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sitting_on_a_couch.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alan_and_lava_hug.png",
@@ -683,8 +717,9 @@
     ],
     "href": "",
     "published": "2022-03-30",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/alan_and_lava_hug.webp",
-    "aspectRatio": 1.2504030091348737
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alan_and_lava_hug.webp",
+    "aspectRatio": 1.2504030091348737,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alan_and_lava_hug.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/stay_gold.png",
@@ -695,8 +730,9 @@
     ],
     "href": "https://x.com/Lavastan/status/1526902156141334529?s=20",
     "published": "2022-05-18",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/stay_gold.webp",
-    "aspectRatio": 1.25
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/stay_gold.webp",
+    "aspectRatio": 1.25,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/stay_gold.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/power_trio_attack.png",
@@ -708,8 +744,9 @@
     ],
     "href": "",
     "published": "2022-06-20",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/power_trio_attack.webp",
-    "aspectRatio": 1.414516129032258
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/power_trio_attack.webp",
+    "aspectRatio": 1.414516129032258,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/power_trio_attack.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_and_gabe_session_attack.png",
@@ -720,8 +757,9 @@
     ],
     "href": "https://x.com/Lavastan/status/1539031864895483904?s=20",
     "published": "2022-06-20",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/alcor_and_gabe_session_attack.webp",
-    "aspectRatio": 1.1899095668729176
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_and_gabe_session_attack.webp",
+    "aspectRatio": 1.1899095668729176,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_and_gabe_session_attack.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pride_2022.jpg",
@@ -732,8 +770,9 @@
     ],
     "href": "https://x.com/KodiMitzuby/status/1532165298933178369?s=20",
     "published": "2022-06-01",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/pride_2022.webp",
-    "aspectRatio": 1.2269938650306749
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/pride_2022.webp",
+    "aspectRatio": 1.2269938650306749,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pride_2022.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/lifewonders_beach_outfits.jpg",
@@ -744,8 +783,9 @@
     ],
     "href": "",
     "published": "2022-07-16",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/lifewonders_beach_outfits.webp",
-    "aspectRatio": 1.4067388688327316
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/lifewonders_beach_outfits.webp",
+    "aspectRatio": 1.4067388688327316,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifewonders_beach_outfits.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/rogue_ych.png",
@@ -757,8 +797,9 @@
     ],
     "href": "https://x.com/Nevan_art/status/1549874498735849474?s=20",
     "published": "2022-07-20",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/rogue_ych.webp",
-    "aspectRatio": 0.7493707299532543
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/rogue_ych.webp",
+    "aspectRatio": 0.7493707299532543,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rogue_ych.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/shrine_sketch.jpeg",
@@ -769,8 +810,9 @@
     ],
     "href": "",
     "published": "2021-04-01",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/shrine_sketch.webp",
-    "aspectRatio": 0.7069555302166477
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/shrine_sketch.webp",
+    "aspectRatio": 0.7069555302166477,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/shrine_sketch.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/strawberry_boba_stream_anniversary.png",
@@ -782,8 +824,9 @@
     ],
     "href": "https://x.com/MelonFoxBoba/status/1565676956019896320?s=20",
     "published": "2022-08-26",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/strawberry_boba_stream_anniversary.webp",
-    "aspectRatio": 1.420596727622714
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/strawberry_boba_stream_anniversary.webp",
+    "aspectRatio": 1.420596727622714,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/strawberry_boba_stream_anniversary.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/balle_soleil_kigu.png",
@@ -794,8 +837,9 @@
     ],
     "href": "https://x.com/Terri_TF_art/status/1582908303704616960?s=20",
     "published": "2022-10-19",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/balle_soleil_kigu.webp",
-    "aspectRatio": 0.8
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/balle_soleil_kigu.webp",
+    "aspectRatio": 0.8,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/balle_soleil_kigu.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/monocolor_alcor_and_castor.png",
@@ -808,7 +852,8 @@
     "href": "https://x.com/thatonefrogxd/status/1576243278437310464?s=20",
     "published": "2022-10-01",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/monocolor_alcor_and_castor.webp",
-    "aspectRatio": 1.0859106529209621
+    "aspectRatio": 1.0859106529209621,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/monocolor_alcor_and_castor.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/autumn_sundae.png",
@@ -819,8 +864,9 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1568355665919492096?s=20",
     "published": "2022-09-09",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/autumn_sundae.webp",
-    "aspectRatio": 1
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/autumn_sundae.webp",
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/autumn_sundae.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/neon_blue_techwear_rogue.png",
@@ -834,8 +880,9 @@
     ],
     "href": "https://x.com/youjyo1223/status/1580760720022458368?s=20",
     "published": "2022-10-13",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/neon_blue_techwear_rogue.webp",
-    "aspectRatio": 0.9603841536614646
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/neon_blue_techwear_rogue.webp",
+    "aspectRatio": 0.9603841536614646,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/neon_blue_techwear_rogue.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_wow.png",
@@ -848,7 +895,8 @@
     "href": "",
     "published": "2022-09-21",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/alcor_wow.webp",
-    "aspectRatio": 1
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_wow.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_and_castor_wow.png",
@@ -862,7 +910,8 @@
     "href": "",
     "published": "2022-09-21",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/alcor_and_castor_wow.webp",
-    "aspectRatio": 1
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_and_castor_wow.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/monstrous_symbiote.png",
@@ -873,8 +922,9 @@
     ],
     "href": "https://twitter.com/AlienRascal/status/1601056234677108738/photo/3",
     "published": "2022-12-08",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/monstrous_symbiote.webp",
-    "aspectRatio": 0.7727272727272727
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/monstrous_symbiote.webp",
+    "aspectRatio": 0.7727272727272727,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/monstrous_symbiote.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alan_with_lava.png",
@@ -886,8 +936,9 @@
     ],
     "href": "https://x.com/Lavastan/status/1572603636768997376?s=20",
     "published": "2022-09-21",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/alan_with_lava.webp",
-    "aspectRatio": 0.75
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alan_with_lava.webp",
+    "aspectRatio": 0.75,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alan_with_lava.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_chef.png",
@@ -898,8 +949,9 @@
     ],
     "href": "https://x.com/MelonFoxBoba/status/1572582754893828096?s=20",
     "published": "2022-09-21",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/alcor_chef.webp",
-    "aspectRatio": 1.3333333333333333
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_chef.webp",
+    "aspectRatio": 1.3333333333333333,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_chef.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/snuggling_with_lava_plushie.PNG",
@@ -910,8 +962,9 @@
     ],
     "href": "https://x.com/wieneko138226/status/1596750788214546432?s=20",
     "published": "2022-11-27",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/snuggling_with_lava_plushie.webp",
-    "aspectRatio": 1
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/snuggling_with_lava_plushie.webp",
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/snuggling_with_lava_plushie.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_in_lava_s_clothes.jpg",
@@ -922,8 +975,9 @@
     ],
     "href": "",
     "published": "2022-11-04",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/alcor_in_lava_s_clothes.webp",
-    "aspectRatio": 0.75
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_in_lava_s_clothes.webp",
+    "aspectRatio": 0.75,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_in_lava_s_clothes.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/self_experimentation_part_2.png",
@@ -935,8 +989,9 @@
     ],
     "href": "https://x.com/CheezyChezu/status/1554869095450849280?s=20",
     "published": "2022-08-03",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/self_experimentation_part_2.webp",
-    "aspectRatio": 0.8266666666666667
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/self_experimentation_part_2.webp",
+    "aspectRatio": 0.8266666666666667,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/self_experimentation_part_2.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/icarus_suit.png",
@@ -950,8 +1005,9 @@
     ],
     "href": "https://x.com/outlord_s/status/1592877187447017473?s=20",
     "published": "2022-11-16",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/icarus_suit.webp",
-    "aspectRatio": 0.9
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/icarus_suit.webp",
+    "aspectRatio": 0.9,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/icarus_suit.webp"
   },
   {
     "title": "Starforce Protagonist Alcor",
@@ -966,9 +1022,10 @@
     ],
     "href": "https://twitter.com/tg_marlo/status/1691720318459764895?s=20",
     "published": "2023-08-16",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/starforce_protagonist_alcor.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/starforce_protagonist_alcor.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/starforce_protagonist_alcor.png",
-    "aspectRatio": 1
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/starforce_protagonist_alcor.webp"
   },
   {
     "title": "Evening Train",
@@ -981,9 +1038,10 @@
     ],
     "href": "https://twitter.com/greyy_arts/status/1613748293531758593",
     "published": "2023-01-12",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/evening_train.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/evening_train.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train.png",
-    "aspectRatio": 0.8203125
+    "aspectRatio": 0.8203125,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/evening_train.webp"
   },
   {
     "title": "Lava's Patreon Gift",
@@ -995,9 +1053,10 @@
     ],
     "href": "",
     "published": "2022-12-13",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/lava_s_patreon_gift.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/lava_s_patreon_gift.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/lava_s_patreon_gift.png",
-    "aspectRatio": 0.75
+    "aspectRatio": 0.75,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lava_s_patreon_gift.webp"
   },
   {
     "title": "Testing Ryle's Symbiote Form",
@@ -1008,9 +1067,10 @@
     ],
     "href": "https://x.com/wolfmalro/status/1604451379736502274?s=20",
     "published": "2022-12-18",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/testing_ryle_s_symbiote_form.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/testing_ryle_s_symbiote_form.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/testing_ryle_s_symbiote_form.jpg",
-    "aspectRatio": 1.3052899936265137
+    "aspectRatio": 1.3052899936265137,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/testing_ryle_s_symbiote_form.webp"
   },
   {
     "title": "Shiro December Sketch",
@@ -1021,9 +1081,10 @@
     ],
     "href": "https://x.com/MelonFoxBoba/status/1606062288913383426?s=20",
     "published": "2022-12-22",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/shiro_december_sketch.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/shiro_december_sketch.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/shiro_december_sketch.png",
-    "aspectRatio": 0.7500862961684501
+    "aspectRatio": 0.7500862961684501,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/shiro_december_sketch.webp"
   },
   {
     "title": "Midnight Pec Grab",
@@ -1033,9 +1094,10 @@
     ],
     "href": "",
     "published": "2022-10-28",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/midnight_pec_grab.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/midnight_pec_grab.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/midnight_pec_grab.jpg",
-    "aspectRatio": 0.699375
+    "aspectRatio": 0.699375,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/midnight_pec_grab.webp"
   },
   {
     "title": "Deer Alcor",
@@ -1046,9 +1108,10 @@
     ],
     "href": "https://x.com/vanilla_aster/status/1604982080710266881?s=20",
     "published": "2022-12-19",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/deer_alcor.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/deer_alcor.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/deer_alcor.jpg",
-    "aspectRatio": 0.58
+    "aspectRatio": 0.58,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/deer_alcor.webp"
   },
   {
     "title": "Meditating with a Lemiolu on top",
@@ -1058,9 +1121,10 @@
     ],
     "href": "https://x.com/laywithfull/status/1555685716746592256?s=20",
     "published": "2022-08-05",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/meditating_with_a_lemiolu_on_top.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/meditating_with_a_lemiolu_on_top.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/meditating_with_a_lemiolu_on_top.jpg",
-    "aspectRatio": 0.75
+    "aspectRatio": 0.75,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/meditating_with_a_lemiolu_on_top.webp"
   },
   {
     "title": "AICore Bridal Carry",
@@ -1070,9 +1134,10 @@
     ],
     "href": "",
     "published": "2022-12-25",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/ai_core_bridal_carry.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/ai_core_bridal_carry.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/ai_core_bridal_carry.png",
-    "aspectRatio": 0.8333333333333334
+    "aspectRatio": 0.8333333333333334,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ai_core_bridal_carry.webp"
   },
   {
     "title": "Alcor Body Study Sketchpage",
@@ -1087,9 +1152,10 @@
     ],
     "href": "https://x.com/jw_bash/status/1571302995920269312?s=20",
     "published": "2022-09-19",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/alcor_body_study_sketchpage.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_body_study_sketchpage.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_body_study_sketchpage.jpg",
-    "aspectRatio": 2.4140893470790377
+    "aspectRatio": 2.4140893470790377,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_body_study_sketchpage.webp"
   },
   {
     "title": "Outfit Bois",
@@ -1099,7 +1165,7 @@
     ],
     "href": "https://twitter.com/jw_bash/status/1461821586885988360",
     "published": "2021-11-19",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/outfit_bois.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/outfit_bois.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/outfit_bois.png",
     "aspectRatio": 0.7164134195877839
   },
@@ -1115,9 +1181,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1707575833311731782?s=20",
     "published": "2023-09-29",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/mintea_icon.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/mintea_icon.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/mintea_icon.jpg",
-    "aspectRatio": 0.9375
+    "aspectRatio": 0.9375,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/mintea_icon.webp"
   },
   {
     "title": "Aerospray RG",
@@ -1130,7 +1197,8 @@
     "published": "2023-01-12",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/aerospray_rg.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/aerospray_rg.png",
-    "aspectRatio": 1
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aerospray_rg.webp"
   },
   {
     "title": "Cougar Cantus",
@@ -1140,7 +1208,7 @@
     ],
     "href": "https://x.com/jw_bash/status/1463583201746509827?s=20",
     "published": "2021-11-24",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/cougar_cantus.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/cougar_cantus.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/cougar_cantus.png",
     "aspectRatio": 0.6997919667146744
   },
@@ -1153,9 +1221,10 @@
     ],
     "href": "https://x.com/nekotiger/status/1563206167580778497?s=20",
     "published": "2022-05-31",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/neko_tiger_stream_outfit_doodle.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/neko_tiger_stream_outfit_doodle.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/neko_tiger_stream_outfit_doodle.png",
-    "aspectRatio": 1
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/neko_tiger_stream_outfit_doodle.webp"
   },
   {
     "title": "NekoTiger Raichu Hoodie Sketch",
@@ -1167,9 +1236,10 @@
     ],
     "href": "https://x.com/nekotiger/status/1563206167580778497?s=20",
     "published": "2022-05-31",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/neko_tiger_raichu_hoodie_sketch.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/neko_tiger_raichu_hoodie_sketch.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/neko_tiger_raichu_hoodie_sketch.png",
-    "aspectRatio": 1
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/neko_tiger_raichu_hoodie_sketch.webp"
   },
   {
     "title": "NekoTiger Alcor Sketch",
@@ -1179,9 +1249,10 @@
     ],
     "href": "https://x.com/nekotiger/status/1563206167580778497?s=20",
     "published": "2022-05-31",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/neko_tiger_alcor_sketch.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/neko_tiger_alcor_sketch.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/neko_tiger_alcor_sketch.png",
-    "aspectRatio": 1
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/neko_tiger_alcor_sketch.webp"
   },
   {
     "title": "LemonBeagle Mini Set",
@@ -1193,9 +1264,10 @@
     ],
     "href": "https://x.com/LemonyBeagle/status/1510677861518127107?s=20",
     "published": "2022-04-03",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/lemon_beagle_mini_set.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/lemon_beagle_mini_set.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/lemon_beagle_mini_set.png",
-    "aspectRatio": 1.459233449477352
+    "aspectRatio": 1.459233449477352,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lemon_beagle_mini_set.webp"
   },
   {
     "title": "Prototype Alcor Icon",
@@ -1205,9 +1277,10 @@
     ],
     "href": "",
     "published": "2021-05-01",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/prototype_alcor_icon.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/prototype_alcor_icon.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/prototype_alcor_icon.jpg",
-    "aspectRatio": 0.9918032786885246
+    "aspectRatio": 0.9918032786885246,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/prototype_alcor_icon.webp"
   },
   {
     "title": "Pin Icon from Lava",
@@ -1219,7 +1292,8 @@
     "href": "",
     "published": "2022-03-30",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pin_icon_from_lava.png",
-    "aspectRatio": 1
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pin_icon_from_lava.webp"
   },
   {
     "title": "Icon Gift from Midnight",
@@ -1230,9 +1304,10 @@
     ],
     "href": "",
     "published": "2021-12-01",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/icon_gift_from_midnight.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/icon_gift_from_midnight.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/icon_gift_from_midnight.jpg",
-    "aspectRatio": 0.9026798307475318
+    "aspectRatio": 0.9026798307475318,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/icon_gift_from_midnight.webp"
   },
   {
     "title": "Gift Icon from MidnightAus 2",
@@ -1242,9 +1317,10 @@
     ],
     "href": "",
     "published": "2021-12-28",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/gift_icon_from_midnight_aus_2.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/gift_icon_from_midnight_aus_2.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/gift_icon_from_midnight_aus_2.png",
-    "aspectRatio": 1
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gift_icon_from_midnight_aus_2.webp"
   },
   {
     "title": "Cosmic Style Icon",
@@ -1255,9 +1331,10 @@
     ],
     "href": "https://x.com/thatonefrogxd/status/1490092047541415938?s=20",
     "published": "2022-02-05",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/cosmic_style_icon.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/cosmic_style_icon.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/cosmic_style_icon.png",
-    "aspectRatio": 1
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cosmic_style_icon.webp"
   },
   {
     "title": "Christmas Doodle",
@@ -1267,9 +1344,10 @@
     ],
     "href": "https://x.com/jw_bash/status/1474509871571738626?s=20",
     "published": "2021-12-24",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/christmas_doodle.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/christmas_doodle.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/christmas_doodle.png",
-    "aspectRatio": 0.5926288323548597
+    "aspectRatio": 0.5926288323548597,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/christmas_doodle.webp"
   },
   {
     "title": "Enjoying the View huh?",
@@ -1280,9 +1358,10 @@
     ],
     "href": "https://x.com/FreneticWolf/status/1531110605611929600?s=20",
     "published": "2022-05-29",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/enjoying_the_view.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/enjoying_the_view.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/enjoying_the_view.jpeg",
-    "aspectRatio": 1.3432835820895523
+    "aspectRatio": 1.3432835820895523,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/enjoying_the_view.webp"
   },
   {
     "title": "Aquarius Form",
@@ -1292,9 +1371,10 @@
     ],
     "href": "",
     "published": "2023-04-06",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/aquarius_form.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aquarius_form.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form.png",
-    "aspectRatio": 0.5692051139521956
+    "aspectRatio": 0.5692051139521956,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form.webp"
   },
   {
     "title": "Alcor Hug",
@@ -1305,7 +1385,8 @@
     "href": "https://x.com/StR_Lite/status/1696031049128759323?s=20",
     "published": "2023-08-28",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_hug.png",
-    "aspectRatio": 0.972
+    "aspectRatio": 0.972,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_hug.webp"
   },
   {
     "title": "Aquarius Form by Mixter",
@@ -1315,9 +1396,10 @@
     ],
     "href": "https://x.com/mixterart/status/1699513307307122931?s=20",
     "published": "2023-09-06",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/aquarius_form_by_mixter.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aquarius_form_by_mixter.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form_by_mixter.png",
-    "aspectRatio": 0.7500669702652023
+    "aspectRatio": 0.7500669702652023,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form_by_mixter.webp"
   },
   {
     "title": "We're ready to fight, no need to back down!",
@@ -1330,9 +1412,10 @@
     ],
     "href": "https://x.com/Lavastan/status/1706218027174572172?s=20",
     "published": "2023-09-22",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/we_re_ready_to_fight_no_need_to_back_down.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/we_re_ready_to_fight_no_need_to_back_down.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/we_re_ready_to_fight_no_need_to_back_down.jpg",
-    "aspectRatio": 1.7386870618228172
+    "aspectRatio": 1.7386870618228172,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/we_re_ready_to_fight_no_need_to_back_down.webp"
   },
   {
     "title": "City Neighborhood in Autumn",
@@ -1343,9 +1426,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1707933548265554109?s=20",
     "published": "2023-09-29",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/city_neighborhood_in_autumn.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/city_neighborhood_in_autumn.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/city_neighborhood_in_autumn.jpg",
-    "aspectRatio": 0.8192090395480226
+    "aspectRatio": 0.8192090395480226,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/city_neighborhood_in_autumn.webp"
   },
   {
     "title": "Chibi Cougar-Dragon with a Visor and Knife!",
@@ -1357,9 +1441,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1708166669908967866?s=20",
     "published": "2023-09-30",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/chibi_cougar_dragon_with_a_visor_and_knife.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/chibi_cougar_dragon_with_a_visor_and_knife.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/chibi_cougar_dragon_with_a_visor_and_knife.jpg",
-    "aspectRatio": 1
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/chibi_cougar_dragon_with_a_visor_and_knife.webp"
   },
   {
     "title": "Flexing YCH",
@@ -1369,9 +1454,10 @@
     ],
     "href": "",
     "published": "2023-10-01",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/flexing_ych.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/flexing_ych.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/flexing_ych.png",
-    "aspectRatio": 0.9092682926829269
+    "aspectRatio": 0.9092682926829269,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flexing_ych.webp"
   },
   {
     "title": "Halloween Daki",
@@ -1381,9 +1467,10 @@
     ],
     "href": "",
     "published": "2023-10-03",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/halloween_daki.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/halloween_daki.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/halloween_daki.png",
-    "aspectRatio": 0.625
+    "aspectRatio": 0.625,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/halloween_daki.webp"
   },
   {
     "title": "Happy 24th Birthday!",
@@ -1395,9 +1482,10 @@
     ],
     "href": "https://x.com/DrawingDDoom/status/1715601315492245545?s=20",
     "published": "2023-10-21",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/happy_24_th_birthday.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/happy_24_th_birthday.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/happy_24_th_birthday.png",
-    "aspectRatio": 0.6097560975609756
+    "aspectRatio": 0.6097560975609756,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/happy_24_th_birthday.webp"
   },
   {
     "title": "Loincloth",
@@ -1407,9 +1495,10 @@
     ],
     "href": "",
     "published": "2022-12-28",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/loincloth.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/loincloth.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/loincloth.png",
-    "aspectRatio": 0.7069555302166477
+    "aspectRatio": 0.7069555302166477,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/loincloth.webp"
   },
   {
     "title": "Lava Pinning Alcor",
@@ -1420,9 +1509,10 @@
     ],
     "href": "https://x.com/Lavastan/status/1626213341487312897?s=20",
     "published": "2023-02-16",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/lava_pinning_alcor.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/lava_pinning_alcor.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/lava_pinning_alcor.jpg",
-    "aspectRatio": 1.25
+    "aspectRatio": 1.25,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lava_pinning_alcor.webp"
   },
   {
     "title": "Casual Cupid",
@@ -1432,9 +1522,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1630026310759186442?s=20",
     "published": "2023-02-26",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/casual_cupid.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/casual_cupid.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/casual_cupid.png",
-    "aspectRatio": 0.7069555302166477
+    "aspectRatio": 0.7069555302166477,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/casual_cupid.webp"
   },
   {
     "title": "Christmas PJs",
@@ -1444,9 +1535,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1606745191687376896?s=20",
     "published": "2022-12-24",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/christmas_p_js.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/christmas_p_js.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/christmas_p_js.png",
-    "aspectRatio": 0.7069555302166477
+    "aspectRatio": 0.7069555302166477,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/christmas_p_js.webp"
   },
   {
     "title": "Chibi AICore",
@@ -1456,9 +1548,10 @@
     ],
     "href": "",
     "published": "2023-03-02",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/chibi_ai_core.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/chibi_ai_core.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/chibi_ai_core.png",
-    "aspectRatio": 1
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/chibi_ai_core.webp"
   },
   {
     "title": "Valentine's Day 2023",
@@ -1468,9 +1561,10 @@
     ],
     "href": "https://x.com/KogiKogiKogi1/status/1620374111687176194?s=20",
     "published": "2023-01-31",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/valentine_s_day_2023.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/valentine_s_day_2023.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/valentine_s_day_2023.jpg",
-    "aspectRatio": 1
+    "aspectRatio": 1,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/valentine_s_day_2023.webp"
   },
   {
     "title": "Confused Alcor",
@@ -1482,9 +1576,10 @@
     ],
     "href": "https://x.com/MelonFoxBoba/status/1665724155227152387?s=20",
     "published": "2023-06-05",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/confused_alcor.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/confused_alcor.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/confused_alcor.png",
-    "aspectRatio": 0.7500862961684501
+    "aspectRatio": 0.7500862961684501,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/confused_alcor.webp"
   },
   {
     "title": "Pride Month YCH 2023",
@@ -1494,9 +1589,10 @@
     ],
     "href": "https://x.com/Lavastan/status/1666271120797077504?s=20",
     "published": "2023-06-06",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/pride_month_ych_2023.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/pride_month_ych_2023.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pride_month_ych_2023.jpg",
-    "aspectRatio": 0.75
+    "aspectRatio": 0.75,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pride_month_ych_2023.webp"
   },
   {
     "title": "Inkling Alcor and Octoling Lava",
@@ -1506,9 +1602,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1672392619291287553?s=20",
     "published": "2023-06-23",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/inkling_alcor_and_octoling_lava.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/inkling_alcor_and_octoling_lava.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/inkling_alcor_and_octoling_lava.png",
-    "aspectRatio": 0.6869701726844584
+    "aspectRatio": 0.6869701726844584,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/inkling_alcor_and_octoling_lava.webp"
   },
   {
     "title": "Monster Constume",
@@ -1518,9 +1615,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1674051065115811841?s=20",
     "published": "2023-06-28",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/monster_constume.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/monster_constume.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/monster_constume.png",
-    "aspectRatio": 0.7069555302166477
+    "aspectRatio": 0.7069555302166477,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/monster_constume.webp"
   },
   {
     "title": "Ice Cream",
@@ -1530,9 +1628,10 @@
     ],
     "href": "https://x.com/kukalakuku/status/1645184227934367746?s=20",
     "published": "2023-04-09",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/ice_cream.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/ice_cream.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/ice_cream.png",
-    "aspectRatio": 0.7070608355729294
+    "aspectRatio": 0.7070608355729294,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ice_cream.webp"
   },
   {
     "title": "Resting Gladiator",
@@ -1542,9 +1641,10 @@
     ],
     "href": "https://x.com/Hachariko/status/1653122259429490690?s=20",
     "published": "2023-05-01",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/resting_gladiator.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/resting_gladiator.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/resting_gladiator.png",
-    "aspectRatio": 1.5018963337547409
+    "aspectRatio": 1.5018963337547409,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/resting_gladiator.webp"
   },
   {
     "title": "Gladiator Sketch",
@@ -1554,9 +1654,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1640748522071814146?s=20",
     "published": "2023-05-28",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/gladiator_sketch.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/gladiator_sketch.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/gladiator_sketch.png",
-    "aspectRatio": 0.7069555302166477
+    "aspectRatio": 0.7069555302166477,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gladiator_sketch.webp"
   },
   {
     "title": "Sportswear Sketch",
@@ -1566,9 +1667,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1647431925106081792?s=20",
     "published": "2023-04-15",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/sportswear_sketch.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/sportswear_sketch.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/sportswear_sketch.png",
-    "aspectRatio": 0.7069555302166477
+    "aspectRatio": 0.7069555302166477,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sportswear_sketch.webp"
   },
   {
     "title": "Zaaru Doodle",
@@ -1578,9 +1680,10 @@
     ],
     "href": "https://x.com/Zaaruchan/status/1648147376400478209?s=20",
     "published": "2023-04-17",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/zaaru_doodle.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/zaaru_doodle.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/zaaru_doodle.png",
-    "aspectRatio": 0.7147688838782412
+    "aspectRatio": 0.7147688838782412,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/zaaru_doodle.webp"
   },
   {
     "title": "Alcor Icon from Ryze",
@@ -1591,9 +1694,10 @@
     ],
     "href": "",
     "published": "2023-04-16",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/alcor_icon_from_ryze.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_icon_from_ryze.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_icon_from_ryze.png",
-    "aspectRatio": 0.9382978723404255
+    "aspectRatio": 0.9382978723404255,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_icon_from_ryze.webp"
   },
   {
     "title": "Inventor Sketch",
@@ -1603,9 +1707,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1661030521235726338?s=20",
     "published": "2023-05-23",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/inventor_sketch.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/inventor_sketch.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/inventor_sketch.png",
-    "aspectRatio": 0.7069555302166477
+    "aspectRatio": 0.7069555302166477,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/inventor_sketch.webp"
   },
   {
     "title": "Summer Outfit 2023 Sketch",
@@ -1615,9 +1720,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1684228825369006080?s=20",
     "published": "2023-07-26",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/summer_outfit_2023_sketch.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/summer_outfit_2023_sketch.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/summer_outfit_2023_sketch.png",
-    "aspectRatio": 0.7069555302166477
+    "aspectRatio": 0.7069555302166477,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/summer_outfit_2023_sketch.webp"
   },
   {
     "title": "Terri Illustration 348",
@@ -1631,9 +1737,10 @@
     ],
     "href": "https://x.com/Terri_TF_art/status/1682449525804355610?s=20",
     "published": "2023-07-21",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/terri_illustration_348.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/terri_illustration_348.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/terri_illustration_348.png",
-    "aspectRatio": 0.9163507109004739
+    "aspectRatio": 0.9163507109004739,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/terri_illustration_348.webp"
   },
   {
     "title": "Ronin Sketch",
@@ -1643,9 +1750,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1695880435853627504?s=20",
     "published": "2023-08-27",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/ronin_sketch.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/ronin_sketch.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/ronin_sketch.png",
-    "aspectRatio": 0.7069555302166477
+    "aspectRatio": 0.7069555302166477,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ronin_sketch.webp"
   },
   {
     "title": "Project Jupiter",
@@ -1657,9 +1765,10 @@
     ],
     "href": "",
     "published": "2023-10-09",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/project_jupiter.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/project_jupiter.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/project_jupiter.png",
-    "aspectRatio": 1.7769130998702982
+    "aspectRatio": 1.7769130998702982,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/project_jupiter.webp"
   },
   {
     "title": "Mech suit update 2023",
@@ -1671,9 +1780,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1713623103580909999?s=20",
     "published": "2023-10-15",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/mech_suit_update_2023.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/mech_suit_update_2023.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/mech_suit_update_2023.png",
-    "aspectRatio": 1.3593672763222937
+    "aspectRatio": 1.3593672763222937,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/mech_suit_update_2023.webp"
   },
   {
     "title": "Symbiote Experiment",
@@ -1684,9 +1794,10 @@
     ],
     "href": "",
     "published": "2023-07-02",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/symbiote_experiment.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/symbiote_experiment.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/symbiote_experiment.png",
-    "aspectRatio": 0.7069555302166477
+    "aspectRatio": 0.7069555302166477,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/symbiote_experiment.webp"
   },
   {
     "title": "Alcor Daki",
@@ -1696,9 +1807,10 @@
     ],
     "href": "https://x.com/KogiKogiKogi1/status/1644894274721579008?s=20",
     "published": "2023-04-10",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/alcor_daki.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_daki.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_daki.png",
-    "aspectRatio": 0.625
+    "aspectRatio": 0.625,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_daki.webp"
   },
   {
     "title": "Castor Colored Undies",
@@ -1708,9 +1820,10 @@
     ],
     "href": "",
     "published": "2023-06-23",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/castor_colored_undies.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/castor_colored_undies.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_colored_undies.png",
-    "aspectRatio": 0.6833333333333333
+    "aspectRatio": 0.6833333333333333,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_colored_undies.webp"
   },
   {
     "title": "Zinogre and Roy",
@@ -1720,9 +1833,10 @@
     ],
     "href": "https://x.com/jw_bash/status/1602866030954553347?s=20",
     "published": "2022-12-13",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/zinogre_and_roy.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/zinogre_and_roy.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/zinogre_and_roy.jpg",
-    "aspectRatio": 0.7216796875
+    "aspectRatio": 0.7216796875,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/zinogre_and_roy.webp"
   },
   {
     "title": "Diving",
@@ -1732,9 +1846,10 @@
     ],
     "href": "",
     "published": "2023-05-22",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/diving.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/diving.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/diving.png",
-    "aspectRatio": 0.7204502814258912
+    "aspectRatio": 0.7204502814258912,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/diving.webp"
   },
   {
     "title": "Astrologist Monk Rogue",
@@ -1746,9 +1861,10 @@
     ],
     "href": "https://twitter.com/DazureSky/status/1552320959448698880?s=20&t=B86P7YXB3gEYFu9CtOW6gg",
     "published": "2022-07-27",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/astrologist_monk_rogue.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/astrologist_monk_rogue.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/astrologist_monk_rogue.png",
-    "aspectRatio": 0.6841911764705882
+    "aspectRatio": 0.6841911764705882,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/astrologist_monk_rogue.webp"
   },
   {
     "title": "Prototype Eclipse Deity Armor",
@@ -1758,9 +1874,10 @@
     ],
     "href": "https://x.com/wolfmalro/status/1716054566607978518?s=20",
     "published": "2023-10-22",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/prototype_eclipse_deity_armor.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/prototype_eclipse_deity_armor.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/prototype_eclipse_deity_armor.jpg",
-    "aspectRatio": 0.9113737075332349
+    "aspectRatio": 0.9113737075332349,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/prototype_eclipse_deity_armor.webp"
   },
   {
     "title": "Arknights Cosplay",
@@ -1770,9 +1887,10 @@
     ],
     "href": "https://x.com/Hagrang_/status/1717167846516826124?s=20",
     "published": "2023-10-25",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/arknights_cosplay.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/arknights_cosplay.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/arknights_cosplay.png",
-    "aspectRatio": 1.1275611368142762
+    "aspectRatio": 1.1275611368142762,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/arknights_cosplay.webp"
   },
   {
     "title": "Grim Reaper Costume Sketch",
@@ -1782,9 +1900,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1717658932682825984?s=20",
     "published": "2023-10-26",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/grim_reaper_costume_sketch.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/grim_reaper_costume_sketch.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/grim_reaper_costume_sketch.png",
-    "aspectRatio": 0.7069555302166477
+    "aspectRatio": 0.7069555302166477,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/grim_reaper_costume_sketch.webp"
   },
   {
     "title": "Growth Serum Test",
@@ -1794,9 +1913,10 @@
     ],
     "href": "",
     "published": "2023-10-21",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/growth_serum_test.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/growth_serum_test.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/growth_serum_test.png",
-    "aspectRatio": 1.25
+    "aspectRatio": 1.25,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/growth_serum_test.webp"
   },
   {
     "title": "AICore Raffle Sketch",
@@ -1806,9 +1926,10 @@
     ],
     "href": "https://x.com/AmpedDragon/status/1528938543912873984?s=20",
     "published": "2022-05-23",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/ai_core_raffle_sketch.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/ai_core_raffle_sketch.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/ai_core_raffle_sketch.jpg",
-    "aspectRatio": 1.0362694300518134
+    "aspectRatio": 1.0362694300518134,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ai_core_raffle_sketch.webp"
   },
   {
     "title": "Future Spark",
@@ -1820,9 +1941,10 @@
     ],
     "href": "https://x.com/KuroPenguinEx/status/1720766384781865132?s=20",
     "published": "2023-11-04",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/future_spark.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/future_spark.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/future_spark.png",
-    "aspectRatio": 0.7673856077403749
+    "aspectRatio": 0.7673856077403749,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/future_spark.webp"
   },
   {
     "title": "Swim Team Outfit",
@@ -1832,9 +1954,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1724609579017761067?s=20",
     "published": "2023-11-14",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/swim_team_outfit.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/swim_team_outfit.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/swim_team_outfit.jpg",
-    "aspectRatio": 0.75244140625
+    "aspectRatio": 0.75244140625,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/swim_team_outfit.webp"
   },
   {
     "title": "Aquarius Form Combat Outfit",
@@ -1845,9 +1968,10 @@
     ],
     "href": "https://x.com/HaychelDA/status/1725893938744369195?s=20",
     "published": "2023-11-18",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/aquarius_form_combar_outfit.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aquarius_form_combar_outfit.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form_combar_outfit.png",
-    "aspectRatio": 0.9912
+    "aspectRatio": 0.9912,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form_combar_outfit.webp"
   },
   {
     "title": "Auriga Form Reference",
@@ -1857,9 +1981,10 @@
     ],
     "href": "https://x.com/Velk_Art/status/1658639215213842432?s=20",
     "published": "2023-05-16",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/auriga_form_reference.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/auriga_form_reference.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/auriga_form_reference.png",
-    "aspectRatio": 1.3415101571483328
+    "aspectRatio": 1.3415101571483328,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/auriga_form_reference.webp"
   },
   {
     "title": "Goth Sketch",
@@ -1869,9 +1994,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1729205995799478278?s=20",
     "published": "2023-11-27",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/goth_sketch.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/goth_sketch.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/goth_sketch.png",
-    "aspectRatio": 0.7069555302166477
+    "aspectRatio": 0.7069555302166477,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/goth_sketch.webp"
   },
   {
     "title": "Alcor Tap",
@@ -1883,7 +2009,8 @@
     "published": "2023-12-13",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/alcor_tap.gif",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_tap.gif",
-    "aspectRatio": 1.114519427402863
+    "aspectRatio": 1.114519427402863,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_tap.webp"
   },
   {
     "title": "Castor Tap",
@@ -1895,7 +2022,8 @@
     "published": "2023-12-13",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/castor_tap.gif",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_tap.gif",
-    "aspectRatio": 1.114519427402863
+    "aspectRatio": 1.114519427402863,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_tap.webp"
   },
   {
     "title": "Beach Boy",
@@ -1906,9 +2034,10 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1515132564297732096?s=20",
     "published": "2022-04-15",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/beach_boy.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/beach_boy.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy.png",
-    "aspectRatio": 1.6666666666666667
+    "aspectRatio": 1.6666666666666667,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/beach_boy.webp"
   },
   {
     "title": "Warp Strike",
@@ -1921,8 +2050,9 @@
     "href": "https://x.com/Yamainu_ken/status/1739179183602094584?s=20",
     "published": "2023-12-25",
     "aspectRatio": 1.4521739130434783,
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/warp_strike.webp",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/warp_strike.png"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/warp_strike.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/warp_strike.png",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/warp_strike.webp"
   },
   {
     "title": "Here's a Present",
@@ -1934,8 +2064,9 @@
     "href": "https://x.com/_Hatohui/status/1738268552229237212?s=20",
     "published": "2023-12-22",
     "aspectRatio": 0.67578125,
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/gb_r_2_pcb_m_a_a_3_dn9.webp",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/gb_r_2_pcb_m_a_a_3_dn9.jpg"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/gb_r_2_pcb_m_a_a_3_dn9.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/gb_r_2_pcb_m_a_a_3_dn9.jpg",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gb_r_2_pcb_m_a_a_3_dn9.webp"
   },
   {
     "title": "Winter Fashion Sketch",
@@ -1947,8 +2078,9 @@
     "href": "https://x.com/FaintAlcor/status/1739687938533752924?s=20",
     "published": "2023-12-26",
     "aspectRatio": 0.7069555302166477,
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/winter_fashion_sketch.webp",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/winter_fashion_sketch.png"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/winter_fashion_sketch.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/winter_fashion_sketch.png",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/winter_fashion_sketch.webp"
   },
   {
     "title": "New Year 2024",
@@ -1960,8 +2092,9 @@
     "href": "https://x.com/FaintAlcor/status/1742248274667675768?s=20",
     "published": "2024-01-02",
     "aspectRatio": 1,
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/new_year_2024.webp",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/new_year_2024.png"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/new_year_2024.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/new_year_2024.png",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/new_year_2024.webp"
   },
   {
     "title": "Chill Season / Painbrush",
@@ -1972,8 +2105,9 @@
     "href": "https://x.com/FaintAlcor/status/1743116617892979147?s=20",
     "published": "2024-01-02",
     "aspectRatio": 0.853219696969697,
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/chill_season_painbrush.webp",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/chill_season_painbrush.png"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/chill_season_painbrush.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/chill_season_painbrush.png",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/chill_season_painbrush.webp"
   },
   {
     "title": "Pec Inspection",
@@ -1984,7 +2118,8 @@
     "href": "https://x.com/FaintAlcor/status/1743116617892979147?s=20",
     "published": "2024-01-04",
     "aspectRatio": 0.7186126038104543,
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/pec_inspection.webp",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/pec_inspection.jpg"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/pec_inspection.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/pec_inspection.jpg",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pec_inspection.webp"
   }
 ]

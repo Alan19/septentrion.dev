@@ -43,19 +43,28 @@ router.post('/', upload.single('image'), async (req, res) => {
         aspectRatio: metadata.width / metadata.height
     };
 
-    if (metadata.width > 500) {
+    if (metadata.height > 600) {
         const compressedParams = {
             Bucket: process.env.BUCKET_NAME,
-            Key: `500w/${convertToSnakeCase(title)}.${file.originalname.split('.').pop()}`,
-            Body: sharpBuffer.resize({width: 500}).jpeg(),
+            Key: `600h/${convertToSnakeCase(title)}.${file.originalname.split('.').pop()}`,
+            Body: sharpBuffer.resize({width: 600}).webp(),
             ContentType: file.mimetype
         }
         jsonOutput['thumbnailUrl'] = (await s3.upload(compressedParams).promise()).Location;
     }
 
+    const webpParams = {
+        Bucket: process.env.BUCKET_NAME,
+        Key: `webp/${convertToSnakeCase(title)}.${file.originalname.split('.').pop()}`,
+        Body: sharpBuffer.webp(),
+        ContentType: file.mimetype
+    }
+    jsonOutput['webp'] = (await s3.upload(webpParams).promise()).Location;
+
+
     const params = {
         Bucket: process.env.BUCKET_NAME,
-        Key: convertToSnakeCase(title) + '.' + file.originalname.split('.').pop(),
+        Key: `${convertToSnakeCase(title)}.${file.originalname.split('.').pop()}`,
         Body: file.buffer,
         ContentType: file.mimetype
     };

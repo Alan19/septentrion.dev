@@ -36,9 +36,9 @@ async function compressImageOnS3(jsonEntries, key) {
 
     // noinspection JSCheckFunctionSignatures
     const sharpImage = sharp(originalImage.Body);
-    if ((await sharpImage.metadata()).height > 500) {
+    if ((await sharpImage.metadata()).height > 600) {
         const compressedImageBuffer = await sharpImage
-            .resize({height: 500})
+            .resize({height: 600})
             .webp()
             .toBuffer();
 
@@ -46,7 +46,7 @@ async function compressImageOnS3(jsonEntries, key) {
         console.log('Uploading ' + imageName)
         return s3.upload({
             Bucket: process.env.BUCKET_NAME,
-            Key: `500h/${imageName}.webp`,
+            Key: `600h/${imageName}.webp`,
             Body: compressedImageBuffer,
             ContentType: 'image/webp'
         }, (err, data) => {
