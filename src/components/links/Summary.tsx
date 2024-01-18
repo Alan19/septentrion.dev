@@ -10,7 +10,7 @@ export function Summary() {
         </Grid>
         <Grid item>
             <Grid container>
-                <Grid item xs={12} lg={5}>
+                <Grid item xs={12} lg={7}>
                     <SocialsLinks/>
                 </Grid>
             </Grid>

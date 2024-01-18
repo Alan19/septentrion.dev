@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import {Chip, FormControlLabel, Grid, Pagination, Switch, Typography, useMediaQuery,} from "@mui/material";
+import Chip from '@mui/material-next/Chip';
+import {FormControlLabel, Grid, Pagination, Switch, Typography, useMediaQuery,} from "@mui/material";
 import {ArtTag, ImageInformation} from "../ImageInformation";
 import {Remove,} from "@mui/icons-material";
 import "./gallery.css";
@@ -15,6 +16,8 @@ import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {GalleryImage} from "./GalleryImage";
 import {GalleryDialog} from "./GalleryDialog";
 import {FilterPane} from "./FilterPane";
+import {ChipPropsColorOverrides} from "@mui/material-next/Chip/Chip.types";
+import {OverridableStringUnion} from "@mui/types";
 
 export type TagState = {
     [tag in ArtTag]: number;
@@ -66,14 +69,14 @@ export function Gallery() {
         categoryName: string,
         filterFunction: (value: ArtTag) => boolean
     ) {
-        function getColor(tag: ArtTag) {
+        function getColor(tag: ArtTag): OverridableStringUnion<'primary' | 'secondary' | 'tertiary' | 'error' | 'info' | 'success' | 'warning', ChipPropsColorOverrides> {
             switch (tags[tag]) {
                 case 1:
                     return "primary";
                 case -1:
                     return "error";
                 default:
-                    return "default";
+                    return "primary";
             }
         }
 

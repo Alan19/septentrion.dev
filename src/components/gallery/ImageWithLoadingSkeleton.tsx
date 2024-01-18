@@ -41,9 +41,10 @@ export function ImageWithLoadingSkeleton(props: {
             {props.children}
         </a>;
     } else {
+        // TODO Have it adapt to any height
         return <Skeleton animation={"wave"}
                          style={{aspectRatio: props.aspectRatio}}
-                         height={props.isPortrait ? "inherit" : "70vh"}
+                         height={props.isPortrait ? "inherit" : "90vh"}
                          width={"100%"}
                          variant={"rounded"}/>;
     }

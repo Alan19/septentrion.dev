@@ -4,8 +4,8 @@
   "homepage": "https://septentrion.dev/",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-brands-svg-icons": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
@@ -13,6 +13,7 @@
     "@juggle/resize-observer": "^3.4.0",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.13.5",
+    "@mui/material-next": "6.0.0-alpha.117",
     "@mui/types": "^7.2.6",
     "@mui/x-date-pickers": "^6.14.0",
     "@react-buddy/ide-toolbox": "^2.4.0",

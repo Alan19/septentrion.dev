@@ -44,4 +44,11 @@ export type ImageInformation = {
     published?: string;
     thumbnailUrl?: string;
     aspectRatio?: number;
+    alts?: {
+        webp?: string;
+        src: string;
+        thumbnail?: string;
+        aspectRatio?: number;
+        href?: string;
+    }[]
 };
