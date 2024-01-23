@@ -43,7 +43,7 @@ export type ImageInformation = {
     cols?: number;
     artistURL?: string;
     tags?: string[];
-    published?: string;
+    published: string;
     alts?: {
         webp?: string;
         src: string;

@@ -1,9 +1,10 @@
 import {Typography} from "@mui/material";
-import dayjs from "dayjs";
-import React from "react";
+import React, {Fragment} from "react";
 import {ImageInformation} from "../ImageInformation";
 import {GalleryImage} from "./GalleryImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
+import {getMonthYearPairsInImageSet} from "./Gallery";
+
 
 function ChronologicalGallery(props: {
     displayedImages: ImageInformation[],
@@ -12,7 +13,7 @@ function ChronologicalGallery(props: {
     height?: number
 }) {
     function getImagesForMonth(year: number, month: number) {
-        return props.displayedImages.filter(value => dayjs(value.published, "YYYY-MM-DD").isSame(dayjs().year(year).month(month), "month")).sort((a, b) => dayjs(b.published).unix() - dayjs(a.published).unix());
+        return props.displayedImages.filter(value => value.published?.substring(0, 7).split("-").map(Number).toString() === [year, month].toString());
     }
 
     function renderGalleryForMonth(year: number, month: number) {
@@ -35,16 +36,23 @@ function ChronologicalGallery(props: {
         </TSJustifiedLayout>
     }
 
+    function getMonthYearPairs() {
+        const strings = Array.from(getMonthYearPairsInImageSet(props.displayedImages)).sort((a, b) => b.localeCompare(a));
+        return strings.map(value => value.split("-")).map(value => value.map(Number));
+    }
+
+    const months = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"];
 
     return <>
-        {[2024, 2023, 2022, 2021]
-            .map(year => [11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
-                .filter(month => getImagesForMonth(year, month).length > 0)
-                .map(value => <>
-                    <Typography variant={"h4"}>{dayjs().month(value).format("MMMM")} {year}</Typography>
-                    {renderGalleryForMonth(year, value)}
-                </>))}
+        {getMonthYearPairs().map((yearMonth) => {
+            const [year, month] = yearMonth;
+            return <Fragment key={yearMonth.join(" ")}>
+                <Typography variant={"h4"}>{months[month - 1]} {year}</Typography>
+                {renderGalleryForMonth(year, month)}
+            </Fragment>;
+        })}
     </>
 }
 
-export default React.memo(ChronologicalGallery)
+export default ChronologicalGallery
