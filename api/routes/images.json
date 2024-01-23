@@ -340,7 +340,12 @@
     "published": "2021-09-28",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_sketchpage.webp",
     "aspectRatio": 0.7008547008547008,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_sketchpage.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_sketchpage.webp",
+    "alts": [
+      {
+        "src": "https://pbs.twimg.com/media/FusN8ogX0AAdvZf?format=jpg&name=4096x4096"
+      }
+    ]
   },
   {
     "title": "PNGTuber Idle",
@@ -1155,7 +1160,54 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_body_study_sketchpage.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_body_study_sketchpage.jpg",
     "aspectRatio": 2.4140893470790377,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_body_study_sketchpage.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_body_study_sketchpage.webp",
+    "alts": [
+      {
+        "tags": [
+          "AICore Form",
+          "Rastaban Form",
+          "Castor",
+          "Thuban Form",
+          "Eltanin Form",
+          "Triangulum Form"
+        ],
+        "href": "https://twitter.com/FaintAlcor/status/1651429737078697984",
+        "aspectRatio": 2.4143518518518516,
+        "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_body_study_sketchpage/0.webp",
+        "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_body_study_sketchpage/0.webp",
+        "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_body_study_sketchpage/0.png"
+      },
+      {
+        "tags": [
+          "AICore Form"
+        ],
+        "href": "https://twitter.com/FaintAlcor/status/1651429737078697984",
+        "aspectRatio": 0.6283783783783784,
+        "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_body_study_sketchpage/1.webp",
+        "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_body_study_sketchpage/1.webp",
+        "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_body_study_sketchpage/1.png"
+      },
+      {
+        "tags": [
+          "Castor"
+        ],
+        "href": "https://twitter.com/FaintAlcor/status/1651429737078697984",
+        "aspectRatio": 0.5124260355029586,
+        "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_body_study_sketchpage/2.webp",
+        "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_body_study_sketchpage/2.webp",
+        "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_body_study_sketchpage/2.png"
+      },
+      {
+        "tags": [
+          "Triangulum Form"
+        ],
+        "href": "https://twitter.com/FaintAlcor/status/1651429737078697984",
+        "aspectRatio": 0.7501163331782225,
+        "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_body_study_sketchpage/3.webp",
+        "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_body_study_sketchpage/3.webp",
+        "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_body_study_sketchpage/3.png"
+      }
+    ]
   },
   {
     "title": "Outfit Bois",
@@ -2080,7 +2132,19 @@
     "aspectRatio": 0.7069555302166477,
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/winter_fashion_sketch.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/winter_fashion_sketch.png",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/winter_fashion_sketch.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/winter_fashion_sketch.webp",
+    "alts": [
+      {
+        "tags": [
+          ""
+        ],
+        "href": "https://x.com/FaintAlcor/status/1740055458570703214?s=20",
+        "aspectRatio": 0.7069555302166477,
+        "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/winter_fashion_sketch/0.webp",
+        "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/winter_fashion_sketch/0.webp",
+        "src": "https://alcorsiteartbucket.s3.amazonaws.com/winter_fashion_sketch/0.png"
+      }
+    ]
   },
   {
     "title": "New Year 2024",
@@ -2121,5 +2185,31 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/pec_inspection.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pec_inspection.jpg",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pec_inspection.webp"
+  },
+  {
+    "title": "Dialexus Emote Pack 1",
+    "artist": "@Dialexus",
+    "tags": [
+      "Standard Outfit",
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/Dialexus/status/1749415528635244545?s=20",
+    "published": "2024-01-22",
+    "aspectRatio": 1.7761989342806395,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/dialexus_emote_pack_1.jpg",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/dialexus_emote_pack_1.jpg"
+  },
+  {
+    "title": "Castor Evolved",
+    "artist": "@TOOMIRO",
+    "tags": [
+      "Castor"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1749579348045111636?s=20",
+    "published": "2024-01-22",
+    "aspectRatio": 1.48,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/castor_evolved.png",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_evolved.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_evolved.png"
   }
 ]

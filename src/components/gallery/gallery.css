@@ -18,3 +18,7 @@ html {
 .gallery-dialog .MuiDialogContent-root {
     padding: 0 !important;
 }
+
+.dialog-image:hover {
+    cursor: pointer;
+}

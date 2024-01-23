@@ -1,19 +1,24 @@
 import {Dialog, DialogContent, Divider, Grid, Typography, useMediaQuery} from "@mui/material";
 import dayjs from "dayjs";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {ImageInformation} from "../ImageInformation";
 import {ImageWithLoadingSkeleton} from "./ImageWithLoadingSkeleton";
 import "./gallery.css";
 import {Button} from "@mui/material-next";
 import Chip from "@mui/material-next/Chip";
+import AltsUploader from "./AltsUploader";
 
 export function GalleryDialog(props: {
     currentImage?: ImageInformation,
     closeModal: () => void,
     isOpen: boolean
 }) {
-    const [imageNumber, setImageNumber] = useState(0);
+    const [imageNumber, setImageNumber] = useState(-1);
     const isPortrait = useMediaQuery('(orientation: portrait)');
+
+    useEffect(() => {
+        setImageNumber(-1)
+    }, [props.currentImage]);
 
     // Hacky workaround to make padding on borderless dialog look good
     const portraitPadding = {
@@ -31,8 +36,15 @@ export function GalleryDialog(props: {
     };
 
     function handleAltImageClick(index: number) {
-        setImageNumber(index + 1);
-        window.scrollTo(0, 0);
+        setImageNumber(index);
+    }
+
+    function getSrc(currentImage: ImageInformation) {
+        if (imageNumber === -1) {
+            return currentImage.webp ?? currentImage.src;
+        } else if (currentImage.alts) {
+            return currentImage.alts[imageNumber].webp ?? currentImage.alts[imageNumber].src;
+        }
     }
 
     return <Dialog
@@ -56,7 +68,7 @@ export function GalleryDialog(props: {
                                                   href={(props.currentImage.href && props.currentImage.href !== '') ? props.currentImage.href : props.currentImage.src}
                                                   aspectRatio={props.currentImage.aspectRatio ?? 1}>
                             <img
-                                src={props.currentImage.webp ?? props.currentImage.src}
+                                src={getSrc(props.currentImage)}
                                 alt={props.currentImage.title}
                                 style={{
                                     maxWidth: "100%",
@@ -94,16 +106,19 @@ export function GalleryDialog(props: {
                             ))}
                         </Grid>
                     </div>
+
                     {props.currentImage?.alts && <>
                         <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
                         <Typography variant={"h5"}>Alts</Typography>
                         <Grid container spacing={1}>
                             <Grid item xs={6} sm={4}><img
-                                onClick={() => handleAltImageClick(0)}
+                                onClick={() => handleAltImageClick(-1)}
                                 style={{width: "100%"}}
+                                className={"dialog-image"}
                                 src={props.currentImage.thumbnailUrl ?? props.currentImage.webp ?? props.currentImage.src}/></Grid>
                             {props.currentImage?.alts?.map((value, index) => <Grid item xs={6} sm={4}><img
                                 onClick={() => handleAltImageClick(index)}
+                                className={"dialog-image"}
                                 style={{width: "100%"}}
                                 src={value.thumbnail ?? value.webp ?? value.src}/></Grid>)}
                         </Grid>
@@ -118,6 +133,7 @@ export function GalleryDialog(props: {
                             {dayjs(props.currentImage?.published).format("MMM DD, YYYY")}
                         </Typography>
                     )}
+                    {props.currentImage && <AltsUploader imageInformation={props.currentImage}/>}
                 </Grid>
             </Grid>
         </DialogContent>

@@ -10,7 +10,7 @@ export function LinksPage() {
             alignItems={"center"}
             container
             spacing={5}
-            style={{minHeight: "calc(100vh - 128px)"}}
+            style={{minHeight: "calc(100vh)"}}
             direction={
                 useMediaQuery(theme.breakpoints.up("sm")) ? "row" : "column-reverse"
             }

@@ -147,6 +147,7 @@ export function Gallery() {
             <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
             <GalleryDialog isOpen={isDialogOpen} currentImage={currentImage} closeModal={closeModal}/>
             <Grid container spacing={2}>
+                {/*TODO Make this use the same grid attributes as below*/}
                 <Grid item md={3}/>
                 <Grid item md style={{visibility: "hidden", width: "100%"}}>
                     <div ref={ref}>

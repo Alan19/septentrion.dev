@@ -20,6 +20,7 @@ const s3 = new AWS.S3();
 const storage = multer.memoryStorage();
 const upload = multer({storage});
 
+// Combine similar lines of code
 router.post('/', upload.single('image'), async (req, res) => {
     const file = req.file;
     const {artist, href, tags, title, published} = req.body;
@@ -47,7 +48,7 @@ router.post('/', upload.single('image'), async (req, res) => {
         const compressedParams = {
             Bucket: process.env.BUCKET_NAME,
             Key: `600h/${convertToSnakeCase(title)}.${file.originalname.split('.').pop()}`,
-            Body: sharpBuffer.resize({width: 600}).webp(),
+            Body: sharp(file.buffer).resize({width: 600}).webp(),
             ContentType: file.mimetype
         }
         jsonOutput['thumbnailUrl'] = (await s3.upload(compressedParams).promise()).Location;
@@ -56,7 +57,7 @@ router.post('/', upload.single('image'), async (req, res) => {
     const webpParams = {
         Bucket: process.env.BUCKET_NAME,
         Key: `webp/${convertToSnakeCase(title)}.${file.originalname.split('.').pop()}`,
-        Body: sharpBuffer.webp(),
+        Body: sharp(file.buffer).webp(),
         ContentType: file.mimetype
     }
     jsonOutput['webp'] = (await s3.upload(webpParams).promise()).Location;
@@ -73,6 +74,71 @@ router.post('/', upload.single('image'), async (req, res) => {
     addToJson(jsonOutput);
     res.json(jsonOutput);
 });
+
+router.post('/alt', upload.single('image'), async (req, res) => {
+    const file = req.file;
+    const {href, tags, imageName, altCount} = req.body;
+    const numberOfAlts = parseInt(altCount);
+
+    function convertToSnakeCase(str) {
+        return str && str.match(
+            /[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+            .map(s => s.toLowerCase())
+            .join('_');
+    }
+
+    const sharpBuffer = sharp(file.buffer);
+    const metadata = await sharpBuffer.metadata();
+    const jsonOutput = {
+        tags: tags.split(',').map(tag => tag.trim()),
+        href: href,
+        aspectRatio: metadata.width / metadata.height
+    };
+
+    if (metadata.height > 600) {
+        const compressedParams = {
+            Bucket: process.env.BUCKET_NAME,
+            Key: `600h/${convertToSnakeCase(imageName)}/${numberOfAlts}.webp`,
+            Body: sharp(file.buffer).resize({width: 600}).webp(),
+            ContentType: file.mimetype
+        }
+        jsonOutput['thumbnail'] = (await s3.upload(compressedParams).promise()).Location;
+    }
+
+    const webpParams = {
+        Bucket: process.env.BUCKET_NAME,
+        Key: `webp/${convertToSnakeCase(imageName)}/${numberOfAlts}.webp`,
+        Body: sharp(file.buffer).webp(),
+        ContentType: file.mimetype
+    }
+    jsonOutput['webp'] = (await s3.upload(webpParams).promise()).Location;
+
+
+    const params = {
+        Bucket: process.env.BUCKET_NAME,
+        Key: `${convertToSnakeCase(imageName)}/${numberOfAlts}.${file.originalname.split('.').pop()}`,
+        Body: file.buffer,
+        ContentType: file.mimetype
+    };
+
+    jsonOutput['src'] = (await s3.upload(params).promise()).Location;
+    addAltToJson(imageName, jsonOutput);
+    res.json(jsonOutput);
+});
+
+function addAltToJson(imageName, jsonOutput) {
+    fs.readFile(path.resolve(__dirname, './images.json'), (err, data) => {
+        let images = JSON.parse(data);
+        const image = images.find((element) => element.title === imageName);
+        if (image["alts"]) {
+            image["alts"].push(jsonOutput)
+        } else {
+            image["alts"] = [jsonOutput]
+        }
+        fs.writeFileSync("./routes/images.json", JSON.stringify(images));
+    });
+}
+
 
 function addToJson(jsonOutput) {
     fs.readFile(path.resolve(__dirname, './images.json'), (err, data) => {
