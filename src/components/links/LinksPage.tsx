@@ -7,21 +7,21 @@ import React from "react";
 export function LinksPage() {
     return <Fade in={true}>
         <Grid
-        alignItems={"center"}
-        container
-        spacing={5}
-        style={{minHeight: "calc(100vh - 128px)"}}
-        direction={
-            useMediaQuery(theme.breakpoints.up("sm")) ? "row" : "column-reverse"
-        }
-        justifyContent={"center"}
-    >
-        <Grid item lg={"auto"} md={"auto"} sm={5}>
-            <Summary/>
-        </Grid>
-        <Grid item lg md sm>
-            <CharacterImageGrid/>
-        </Grid>
+            alignItems={"center"}
+            container
+            spacing={5}
+            style={{minHeight: "calc(100vh)"}}
+            direction={
+                useMediaQuery(theme.breakpoints.up("sm")) ? "row" : "column-reverse"
+            }
+            justifyContent={"center"}
+        >
+            <Grid item sm={"auto"}>
+                <Summary/>
+            </Grid>
+            <Grid item sm>
+                <CharacterImageGrid/>
+            </Grid>
         </Grid>
     </Fade>;
 }

@@ -13,27 +13,23 @@ import {
     TextField,
     Typography,
 } from "@mui/material";
-import {ArtTag} from "../ImageInformation";
+import {ArtTag, ImageInformation} from "../ImageInformation";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import AddIcon from "@mui/icons-material/Add";
-import {DatePicker} from "@mui/x-date-pickers";
-import dayjs, {Dayjs} from "dayjs";
 import {useIsLocalhost} from "./UseIsLocalhost";
 import {Button} from "@mui/material-next";
 
-export default function Uploader(props: {
-    loadImageInfo: () => Promise<void>;
+// TODO Consolidate shared behavior with Uploader.json
+export default function AltsUploader(props: {
+    imageInformation: ImageInformation
 }) {
     const [selectedFile, setSelectedFile] = useState<File>();
     const [tags, setTags] = useState<ArtTag[]>([]);
     const [href, setHref] = useState("");
-    const [title, setTitle] = useState("");
-    const [artist, setArtist] = useState("");
     const [uploading, setUploading] = useState<boolean>(false);
     const [open, setOpen] = React.useState(false);
     const [snackbarOpen, setSnackbarOpen] = React.useState(false);
-    const [publishedDate, setPublishedDate] = React.useState<Dayjs | null>(dayjs());
     const {isLocalHost} = useIsLocalhost();
 
     const handleClickOpen = () => {
@@ -47,7 +43,6 @@ export default function Uploader(props: {
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.files) {
             setSelectedFile(event.target.files[0]);
-            setTitle(event.target.files[0].name.split(".")[0]);
         }
     };
 
@@ -66,6 +61,14 @@ export default function Uploader(props: {
         setSnackbarOpen(false);
     };
 
+    function convertToSnakeCase(str: string) {
+        // @ts-ignore
+        return str && str.match(
+            /[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+            .map(s => s.toLowerCase())
+            .join('_');
+    }
+
     function handleUpload(e: any) {
         e.preventDefault();
 
@@ -74,9 +77,6 @@ export default function Uploader(props: {
             setSelectedFile(undefined);
             setTags([]);
             setHref("");
-            setTitle("");
-            setArtist("");
-            setPublishedDate(dayjs())
             setSnackbarOpen(true);
         }
 
@@ -85,19 +85,14 @@ export default function Uploader(props: {
             const formData = new FormData();
             formData.append("image", selectedFile);
             formData.append("tags", tags.join(", "));
-            formData.append("title", title);
-            formData.append("artist", artist);
             formData.append("href", href);
-            formData.append(
-                "published",
-                publishedDate?.format("YYYY-MM-DD") ?? dayjs().format("YYYY-MM-DD")
-            );
+            formData.append("imageName", props.imageInformation.title)
+            formData.append("altCount", (props.imageInformation.alts?.length ?? 0).toString());
             setUploading(true);
             axios
-                .post("http://localhost:9000/upload", formData, {
+                .post(`http://localhost:9000/upload/alt`, formData, {
                     headers: {"Content-Type": "multipart/form-data"},
                 })
-                .then((value) => props.loadImageInfo().then(handleSuccessfulUpload))
                 .catch((reason) => console.log(reason))
                 .finally(() => {
                     setUploading(false);
@@ -109,19 +104,6 @@ export default function Uploader(props: {
         setHref(event.target.value);
     }
 
-    function handleArtistChange(event: React.ChangeEvent<HTMLInputElement>) {
-        setArtist(event.target.value);
-    }
-
-    function handleTitleChange(event: React.ChangeEvent<HTMLInputElement>) {
-        setTitle(event.target.value);
-    }
-
-    const fabStyle = {
-        position: "fixed",
-        bottom: 16,
-        right: 16,
-    };
 
     return (
         <>
@@ -132,21 +114,19 @@ export default function Uploader(props: {
                 message="Artwork uploaded!"
             />
             {
-                isLocalHost && <Fab
-                sx={fabStyle}
-                color="primary"
-                aria-label="add"
-                onClick={handleClickOpen}
-              >
-                <AddIcon/>
-              </Fab>
+                isLocalHost && <div style={{textAlign: "right"}}><Fab
+                    color="primary"
+                    aria-label="add"
+                    onClick={handleClickOpen}
+                >
+                    <AddIcon/>
+                </Fab></div>
             }
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Upload New Image</DialogTitle>
                 <DialogContent>
                     <DialogContentText>
-                        Enter a list of tags, the handle of the artist, and the file name to
-                        automatically compress and upload this file!
+                        Enter a list of tags to automatically compress and upload this file!
                     </DialogContentText>
                     <Button
                         variant={"outlined"}
@@ -197,35 +177,6 @@ export default function Uploader(props: {
                         variant="standard"
                         value={href}
                         onChange={handleHrefChange}
-                    />
-                    <TextField
-                        autoFocus
-                        margin="dense"
-                        id="href"
-                        label="Artist Handle"
-                        type="text"
-                        fullWidth
-                        variant="standard"
-                        value={artist}
-                        onChange={handleArtistChange}
-                    />
-                    <TextField
-                        autoFocus
-                        margin="dense"
-                        id="href"
-                        label="Art Title"
-                        type="url"
-                        fullWidth
-                        variant="standard"
-                        value={title}
-                        onChange={handleTitleChange}
-                        required
-                        style={{marginBottom: "16px"}}
-                    />
-                    <DatePicker
-                        label={"Published Date"}
-                        value={publishedDate}
-                        onChange={(value) => setPublishedDate(value)}
                     />
                 </DialogContent>
                 <DialogActions>

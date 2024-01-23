@@ -1,10 +1,11 @@
 import {IconButton, ImageList, ImageListItem, ImageListItemBar,} from "@mui/material";
 import React from "react";
 import InfoIcon from "@mui/icons-material/Info";
-import {ArtTag, ImageInformation} from "../ImageInformation";
+import {ArtTag} from "../ImageInformation";
 
 export function CharacterImageGrid() {
-    const itemData: ImageInformation[] = [
+    // TODO Refactor this to use images.json
+    const itemData = [
         {
             src: "https://pbs.twimg.com/media/FTkSbIYaQAALr_G?format=jpg&name=large",
             title: "Awakened Workout",
@@ -63,15 +64,9 @@ export function CharacterImageGrid() {
     return (
         <ImageList variant="quilted" cols={6}>
             {itemData.map(
-                ({cols = 1, src, rows = 1, title, artist, href, artistURL}) => {
+                ({cols = 1, src, rows = 1, title, artist, href}) => {
                     let linkProps = {};
-                    if (artistURL) {
-                        linkProps = {
-                            target: "noreferrer noopener",
-                            href: artistURL,
-                        };
-                    }
-                    else if (artist) {
+                    if (artist) {
                         linkProps = {
                             target: "noreferrer noopener",
                             href: `https://twitter.com/${artist.substring(1)}`,

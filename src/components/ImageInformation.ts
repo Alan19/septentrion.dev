@@ -33,15 +33,23 @@ export enum ArtTag {
 
 export type ImageInformation = {
     webp?: string;
+    thumbnailUrl?: string;
     src: string;
+    aspectRatio?: number;
     href: string;
-    title?: string;
+    title: string;
     artist?: string;
     rows?: number;
     cols?: number;
     artistURL?: string;
     tags?: string[];
-    published?: string;
-    thumbnailUrl?: string;
-    aspectRatio?: number;
+    published: string;
+    alts?: {
+        webp?: string;
+        src: string;
+        thumbnail?: string;
+        aspectRatio?: number;
+        href?: string;
+        tags?: string[];
+    }[]
 };

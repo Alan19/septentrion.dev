@@ -6,7 +6,7 @@ import {LinksPage} from "./components/links/LinksPage";
 
 export function SiteAppBar() {
     return <>
-        <Container>
+        <Container maxWidth={"xl"}>
             <Link to={'/'} style={{marginTop: '16px'}}>
                 <IconButton>
                     <Home/>

@@ -1,31 +1,25 @@
 import React from "react";
 import {OverridableStringUnion} from "@mui/types";
 import {ButtonPropsVariantOverrides} from "@mui/material/Button/Button";
-import {Button} from "@mui/material";
+import {IconButton} from "@mui/material";
 
 interface SocialMediaProps {
     icon: React.ReactNode;
     text: string;
-    variant?: OverridableStringUnion<"text" | "outlined" | "contained",
-        ButtonPropsVariantOverrides>;
+    variant?: OverridableStringUnion<'text' | 'outlined' | 'filled' | 'filledTonal' | 'elevated', ButtonPropsVariantOverrides>;
     link: string;
 }
 
 export function SocialMediaButton(props: SocialMediaProps) {
-    const {icon, text, variant = "contained", link} = props;
-    let leftButton: any = {
-        width: "100%",
-        textAlign: "left",
-    };
+    const {icon, text, variant = "text", link} = props;
 
     return (
-        <Button
+        <IconButton
+            color={"primary"}
             target={"noreferrer noopener"}
             href={link}
-            startIcon={icon}
-            variant={variant}
         >
-            <span style={leftButton}>{text}</span>
-        </Button>
+            {icon}
+        </IconButton>
     );
 }

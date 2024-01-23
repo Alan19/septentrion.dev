@@ -1,12 +1,12 @@
 import React, {useState} from "react";
-import {Chip, FormControlLabel, Grid, Pagination, Switch, Typography, useMediaQuery,} from "@mui/material";
+import Chip from '@mui/material-next/Chip';
+import {FormControlLabel, Grid, Pagination, Switch, Typography, useMediaQuery,} from "@mui/material";
 import {ArtTag, ImageInformation} from "../ImageInformation";
 import {Remove,} from "@mui/icons-material";
 import "./gallery.css";
 import {theme} from "../../App";
 import {useTagHooks} from "./UseTagHooks";
 import Uploader from "./Uploader";
-import dayjs from "dayjs";
 import useMeasure from 'react-use-measure';
 
 import {ResizeObserver} from '@juggle/resize-observer'
@@ -15,10 +15,17 @@ import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {GalleryImage} from "./GalleryImage";
 import {GalleryDialog} from "./GalleryDialog";
 import {FilterPane} from "./FilterPane";
+import {ChipPropsColorOverrides} from "@mui/material-next/Chip/Chip.types";
+import {OverridableStringUnion} from "@mui/types";
 
 export type TagState = {
     [tag in ArtTag]: number;
 };
+
+export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
+    // @ts-ignore
+    return new Set(images.filter(value => value.published !== undefined).map(value => value.published.substring(0, 7)));
+}
 
 export function Gallery() {
     const {getTags, setTags, images, loadImageInfo} = useTagHooks();
@@ -66,14 +73,14 @@ export function Gallery() {
         categoryName: string,
         filterFunction: (value: ArtTag) => boolean
     ) {
-        function getColor(tag: ArtTag) {
+        function getColor(tag: ArtTag): OverridableStringUnion<'primary' | 'secondary' | 'tertiary' | 'error' | 'info' | 'success' | 'warning', ChipPropsColorOverrides> {
             switch (tags[tag]) {
                 case 1:
                     return "primary";
                 case -1:
                     return "error";
                 default:
-                    return "default";
+                    return "primary";
             }
         }
 
@@ -119,7 +126,7 @@ export function Gallery() {
         .sort(imageSort);
 
     function imageSort(a: ImageInformation, b: ImageInformation) {
-        return dayjs(b.published).unix() - dayjs(a.published).unix();
+        return b.published.localeCompare(a.published);
     }
 
     const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
@@ -139,11 +146,17 @@ export function Gallery() {
         setIsDialogOpen(true);
     }
 
+    function getMonthsWhereImagesAreAvailable() {
+        return getMonthYearPairsInImageSet(shownImages).size;
+    }
+
+
     return (
         <>
             <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
             <GalleryDialog isOpen={isDialogOpen} currentImage={currentImage} closeModal={closeModal}/>
             <Grid container spacing={2}>
+                {/*TODO Make this use the same grid attributes as below*/}
                 <Grid item md={3}/>
                 <Grid item md style={{visibility: "hidden", width: "100%"}}>
                     <div ref={ref}>
@@ -160,12 +173,12 @@ export function Gallery() {
                                                        onChange={(_event, checked) => setSplitByMonth(checked)}/>}
                                       label="Separate by month"/>
 
-                    {(pageSize < shownImages.length) &&
+                    {(pageSize < shownImages.length) && !splitByMonth &&
                         <Pagination style={{marginBottom: "8px"}}
-                                    count={Math.ceil(shownImages.length / pageSize)}
+                                    count={splitByMonth ? Math.ceil(getMonthsWhereImagesAreAvailable() / 4) : Math.ceil(shownImages.length / pageSize)}
                                     page={page} onChange={handlePageChange} showFirstButton showLastButton/>}
                     {splitByMonth ?
-                        <ChronologicalGallery displayedImages={imagesOnPage} width={bounds.width}
+                        <ChronologicalGallery displayedImages={shownImages} width={bounds.width}
                                               setCurrentImage={handleImageClicked}/> :
                         <TSJustifiedLayout width={bounds.width}
                                            rowSpacing={8}

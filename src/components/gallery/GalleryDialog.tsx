@@ -1,16 +1,24 @@
-import {Button, Chip, Dialog, DialogContent, Grid, Typography, useMediaQuery} from "@mui/material";
+import {Dialog, DialogContent, Divider, Grid, Typography, useMediaQuery} from "@mui/material";
 import dayjs from "dayjs";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {ImageInformation} from "../ImageInformation";
 import {ImageWithLoadingSkeleton} from "./ImageWithLoadingSkeleton";
 import "./gallery.css";
+import {Button} from "@mui/material-next";
+import Chip from "@mui/material-next/Chip";
+import AltsUploader from "./AltsUploader";
 
 export function GalleryDialog(props: {
     currentImage?: ImageInformation,
     closeModal: () => void,
     isOpen: boolean
 }) {
+    const [imageNumber, setImageNumber] = useState(-1);
     const isPortrait = useMediaQuery('(orientation: portrait)');
+
+    useEffect(() => {
+        setImageNumber(-1)
+    }, [props.currentImage]);
 
     // Hacky workaround to make padding on borderless dialog look good
     const portraitPadding = {
@@ -26,12 +34,26 @@ export function GalleryDialog(props: {
         paddingBottom: 20
 
     };
+
+    function handleAltImageClick(index: number) {
+        setImageNumber(index);
+    }
+
+    function getSrc(currentImage: ImageInformation) {
+        if (imageNumber === -1) {
+            return currentImage.webp ?? currentImage.src;
+        } else if (currentImage.alts) {
+            return currentImage.alts[imageNumber].webp ?? currentImage.alts[imageNumber].src;
+        }
+    }
+
     return <Dialog
         open={props.isOpen}
         onClose={props.closeModal}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
         fullWidth={true}
+        className={"gallery-dialog"}
         maxWidth={"xl"}
     >
         <DialogContent>
@@ -39,19 +61,18 @@ export function GalleryDialog(props: {
                 {props.currentImage && (
                     <Grid
                         item
-                        md={8}
-                        sm={7}
+                        sm={9}
                         xs
                     >
                         <ImageWithLoadingSkeleton isPortrait={isPortrait}
                                                   href={(props.currentImage.href && props.currentImage.href !== '') ? props.currentImage.href : props.currentImage.src}
                                                   aspectRatio={props.currentImage.aspectRatio ?? 1}>
                             <img
-                                src={props.currentImage.webp ?? props.currentImage.src}
+                                src={getSrc(props.currentImage)}
                                 alt={props.currentImage.title}
                                 style={{
                                     maxWidth: "100%",
-                                    height: isPortrait ? "inherit" : "70vh",
+                                    height: isPortrait ? "inherit" : "90vh",
                                     alignSelf: "center",
                                     margin: "auto",
                                     objectFit: "contain"
@@ -59,9 +80,10 @@ export function GalleryDialog(props: {
                                 loading={"lazy"}
                             />
                         </ImageWithLoadingSkeleton>
+
                     </Grid>
                 )}
-                <Grid item md={4} xs sm={5} style={{
+                <Grid item sm xs={"auto"} style={{
                     display: "flex",
                     flexDirection: "column",
                     ...isPortrait ? portraitPadding : landscapePadding
@@ -84,6 +106,23 @@ export function GalleryDialog(props: {
                             ))}
                         </Grid>
                     </div>
+
+                    {props.currentImage?.alts && <>
+                        <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
+                        <Typography variant={"h5"}>Alts</Typography>
+                        <Grid container spacing={1}>
+                            <Grid item xs={6} sm={4}><img
+                                onClick={() => handleAltImageClick(-1)}
+                                style={{width: "100%"}}
+                                className={"dialog-image"}
+                                src={props.currentImage.thumbnailUrl ?? props.currentImage.webp ?? props.currentImage.src}/></Grid>
+                            {props.currentImage?.alts?.map((value, index) => <Grid item xs={6} sm={4}><img
+                                onClick={() => handleAltImageClick(index)}
+                                className={"dialog-image"}
+                                style={{width: "100%"}}
+                                src={value.thumbnail ?? value.webp ?? value.src}/></Grid>)}
+                        </Grid>
+                    </>}
                     {props.currentImage?.published && (
                         <Typography
                             variant={"subtitle1"}
@@ -94,6 +133,7 @@ export function GalleryDialog(props: {
                             {dayjs(props.currentImage?.published).format("MMM DD, YYYY")}
                         </Typography>
                     )}
+                    {props.currentImage && <AltsUploader imageInformation={props.currentImage}/>}
                 </Grid>
             </Grid>
         </DialogContent>
