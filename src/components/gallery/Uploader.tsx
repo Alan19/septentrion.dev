@@ -97,7 +97,7 @@ export default function Uploader(props: {
                 .post("http://localhost:9000/upload", formData, {
                     headers: {"Content-Type": "multipart/form-data"},
                 })
-                .then((value) => props.loadImageInfo().then(handleSuccessfulUpload))
+                .then(() => props.loadImageInfo().then(handleSuccessfulUpload))
                 .catch((reason) => console.log(reason))
                 .finally(() => {
                     setUploading(false);

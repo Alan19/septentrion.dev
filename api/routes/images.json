@@ -2211,5 +2211,33 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/castor_evolved.png",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_evolved.png",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_evolved.png"
+  },
+  {
+    "title": "Techwear Ninja v2",
+    "artist": "@edadrz",
+    "tags": [
+      "Rastaban Form",
+      "Techwear",
+      "Hibernal Assassin"
+    ],
+    "href": "https://x.com/edadrz2/status/1750189393833517203?s=20",
+    "published": "2024-01-24",
+    "aspectRatio": 0.7857142857142857,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/techwear_ninja_v2.png",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/techwear_ninja_v2.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/techwear_ninja_v2.png"
+  },
+  {
+    "title": "Glimmer on the Shore",
+    "artist": "@SiN_remyheart",
+    "tags": [
+      "Jupiter Form"
+    ],
+    "href": "https://x.com/SiN_remyheart/status/1750043825161244678?s=20",
+    "published": "2024-01-24",
+    "aspectRatio": 1.15625,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/glimmer_on_the_shore.png",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/glimmer_on_the_shore.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/glimmer_on_the_shore.png"
   }
 ]
