@@ -42,9 +42,12 @@ export function useTagHooks() {
 
     async function loadImageInfo() {
         const tags = getTags();
-        await axios.get<ImageInformation[]>('http://localhost:9000/images/', {params: tags})
-            .then(value => setImageData(value.data))
-            .catch(() => setImageData(images))
+        if (process.env.NODE_ENV === "development") {
+            await axios.get<ImageInformation[]>('http://localhost:9000/images/', {params: tags})
+                .then(value => setImageData(value.data));
+        } else {
+            setImageData(images);
+        }
     }
 
     return {getTags, setTags, images: imageData, loadImageInfo};
