@@ -19,7 +19,7 @@ import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import AddIcon from "@mui/icons-material/Add";
 import {DatePicker} from "@mui/x-date-pickers";
 import dayjs, {Dayjs} from "dayjs";
-import {useIsLocalhost} from "./UseIsLocalhost";
+import {useIsDevelopment} from "./UseIsDevelopment";
 import {Button} from "@mui/material-next";
 
 export default function Uploader(props: {
@@ -34,7 +34,7 @@ export default function Uploader(props: {
     const [open, setOpen] = React.useState(false);
     const [snackbarOpen, setSnackbarOpen] = React.useState(false);
     const [publishedDate, setPublishedDate] = React.useState<Dayjs | null>(dayjs());
-    const {isLocalHost} = useIsLocalhost();
+    const {isDevelopment} = useIsDevelopment();
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -132,7 +132,7 @@ export default function Uploader(props: {
                 message="Artwork uploaded!"
             />
             {
-                isLocalHost && <Fab
+                isDevelopment && <Fab
                 sx={fabStyle}
                 color="primary"
                 aria-label="add"

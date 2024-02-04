@@ -1,4 +1,5 @@
 import React, {MouseEventHandler, useEffect, useState} from "react";
+import PhotoLibraryIcon from '@mui/icons-material/PhotoLibraryOutlined';
 import {Skeleton} from "@mui/material";
 
 export function GalleryImage(props: {
@@ -7,7 +8,8 @@ export function GalleryImage(props: {
     style?: any,
     title: string,
     setCurrentImage: MouseEventHandler<HTMLImageElement>,
-    className?: string
+    className?: string,
+    hasAlts?: boolean
 }) {
     const [isReady, setIsReady] = useState(isImageCached());
 
@@ -34,14 +36,25 @@ export function GalleryImage(props: {
     }, [props.src]);
 
     return isReady ?
-        <img
-            src={props.src}
-            alt={props.title}
-            loading={"lazy"}
-            className={props.className}
-            onClick={props.setCurrentImage}
-            style={props.style}
-        /> :
+        <div style={{position: "relative"}}>
+            {
+                props.hasAlts && <PhotoLibraryIcon style={{
+                    position: "absolute",
+                    right: "8px",
+                    top: "8px",
+                    backgroundColor: "rgba(255, 255, 255, 0.5)",
+                    borderRadius: "8px"
+                }}/>
+            }
+
+            <img
+                src={props.src}
+                alt={props.title}
+                loading={"lazy"}
+                className={props.className}
+                onClick={props.setCurrentImage}
+                style={props.style}
+            ></img></div> :
         <Skeleton variant={"rectangular"}
                   style={{aspectRatio: props.aspectRatio}}
                   height={"100%"}/>

@@ -47,7 +47,7 @@ router.post('/', upload.single('image'), async (req, res) => {
     if (metadata.height > 600) {
         const compressedParams = {
             Bucket: process.env.BUCKET_NAME,
-            Key: `600h/${convertToSnakeCase(title)}.${file.originalname.split('.').pop()}`,
+            Key: `600h/${convertToSnakeCase(title)}.webp`,
             Body: sharp(file.buffer).resize({width: 600}).webp(),
             ContentType: file.mimetype
         }
@@ -56,7 +56,7 @@ router.post('/', upload.single('image'), async (req, res) => {
 
     const webpParams = {
         Bucket: process.env.BUCKET_NAME,
-        Key: `webp/${convertToSnakeCase(title)}.${file.originalname.split('.').pop()}`,
+        Key: `webp/${convertToSnakeCase(title)}.webp`,
         Body: sharp(file.buffer).webp(),
         ContentType: file.mimetype
     }

@@ -17,7 +17,7 @@ import {ArtTag, ImageInformation} from "../ImageInformation";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import AddIcon from "@mui/icons-material/Add";
-import {useIsLocalhost} from "./UseIsLocalhost";
+import {useIsDevelopment} from "./UseIsDevelopment";
 import {Button} from "@mui/material-next";
 
 // TODO Consolidate shared behavior with Uploader.json
@@ -30,7 +30,7 @@ export default function AltsUploader(props: {
     const [uploading, setUploading] = useState<boolean>(false);
     const [open, setOpen] = React.useState(false);
     const [snackbarOpen, setSnackbarOpen] = React.useState(false);
-    const {isLocalHost} = useIsLocalhost();
+    const {isDevelopment} = useIsDevelopment();
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -114,7 +114,7 @@ export default function AltsUploader(props: {
                 message="Artwork uploaded!"
             />
             {
-                isLocalHost && <div style={{textAlign: "right"}}><Fab
+                isDevelopment && <div style={{textAlign: "right"}}><Fab
                     color="primary"
                     aria-label="add"
                     onClick={handleClickOpen}

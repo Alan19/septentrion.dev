@@ -32,7 +32,8 @@ function ChronologicalGallery(props: {
                 title={value.title ?? ""}
                 className={"artImage"}
                 setCurrentImage={() => props.setCurrentImage(value)}
-                aspectRatio={value.aspectRatio ?? 1}/>)}
+                aspectRatio={value.aspectRatio ?? 1}
+                hasAlts={(value.alts?.length ?? 0) > 0}/>)}
         </TSJustifiedLayout>
     }
 

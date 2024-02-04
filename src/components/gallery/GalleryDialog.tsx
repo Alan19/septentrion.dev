@@ -1,4 +1,4 @@
-import {Dialog, DialogContent, Divider, Grid, Typography, useMediaQuery} from "@mui/material";
+import {Dialog, DialogContent, Divider, Grid, ImageList, ImageListItem, Typography, useMediaQuery} from "@mui/material";
 import dayjs from "dayjs";
 import React, {useEffect, useState} from "react";
 import {ImageInformation} from "../ImageInformation";
@@ -110,18 +110,21 @@ export function GalleryDialog(props: {
                     {props.currentImage?.alts && <>
                         <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
                         <Typography variant={"h5"}>Alts</Typography>
-                        <Grid container spacing={1}>
-                            <Grid item xs={6} sm={4}><img
-                                onClick={() => handleAltImageClick(-1)}
-                                style={{width: "100%"}}
-                                className={"dialog-image"}
-                                src={props.currentImage.thumbnailUrl ?? props.currentImage.webp ?? props.currentImage.src}/></Grid>
-                            {props.currentImage?.alts?.map((value, index) => <Grid item xs={6} sm={4}><img
+                        <ImageList cols={3}>
+                            <ImageListItem key={0}>
+                                <img
+                                    onClick={() => handleAltImageClick(-1)}
+                                    style={{width: "100%"}}
+                                    className={"dialog-image"}
+                                    src={props.currentImage.thumbnailUrl ?? props.currentImage.webp ?? props.currentImage.src}
+                                    alt={props.currentImage.title}/>
+                            </ImageListItem>
+                            {props.currentImage?.alts?.map((value, index) => <ImageListItem key={index}> <img
                                 onClick={() => handleAltImageClick(index)}
                                 className={"dialog-image"}
                                 style={{width: "100%"}}
-                                src={value.thumbnail ?? value.webp ?? value.src}/></Grid>)}
-                        </Grid>
+                                src={value.thumbnail ?? value.webp ?? value.src}/></ImageListItem>)}
+                        </ImageList>
                     </>}
                     {props.currentImage?.published && (
                         <Typography

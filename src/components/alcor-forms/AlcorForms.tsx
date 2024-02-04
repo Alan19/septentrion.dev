@@ -1,13 +1,9 @@
-import {Avatar, Grid, Stack, Typography, useMediaQuery} from "@mui/material";
+import {Card, CardContent, CardMedia, Fade, Grid, Typography, useMediaQuery} from "@mui/material";
 import React from "react";
-import {Link, Outlet, useLocation} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import './form-page.css'
 import {theme} from "../../App";
-import aquariusIcon from "./form-icons/aquarius-icon.png"
-import aicoreIcon from "./form-icons/aicore-icon.png"
-import triangulumIcon from "./form-icons/triangulum-icon.png"
-import jupiterIcon from "./form-icons/jupiter-icon.png"
-import mIcon from "./form-icons/m-icon.png"
+import alcorForms from "./form-icons/alcor_forms.json"
 
 export function CharacterAttribute(props: { fieldName: String, fieldValue: String }) {
     return <div>
@@ -18,57 +14,70 @@ export function CharacterAttribute(props: { fieldName: String, fieldValue: Strin
 
 export function AlcorForms() {
     const isMediumOrUp = useMediaQuery(theme.breakpoints.up('md'));
-    const formInfo: {name: string, src: string, link: string}[] = [
-        {
-            name: "Aquarius Form",
-            src: aquariusIcon,
-            link: "aquarius"
-        },
-        {
-            name: "Jupiter Form",
-            src: jupiterIcon,
-            link: "jupiter"
-        },
-        {
-            name:"AICore Form",
-            src: aicoreIcon,
-            link: "aicore"
-        },
-        {
-            name: "M⬡ Form",
-            src: mIcon,
-            link: "m"
-        },
-        {
-            name: "Triangulum Form",
-            src: triangulumIcon,
-            link: "triangulum"
-        }
-    ]
+    const formInfo: FormInformation[] = alcorForms;
 
     const selectedForm: string | null = useLocation().pathname.split('/')[2]
     return (
         <>
-                <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Forms</Typography>
-            <Grid container spacing={1} style={{marginTop: "16px"}}>
-                <Grid item lg={1}>
-                    <Stack direction={isMediumOrUp ? "column" : "row"} spacing={2}>
+            <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Forms</Typography>
+            <Fade in>
+                <div style={{marginTop: "16px"}}>
+                    <Grid container direction={"row"} spacing={2}>
                         {
-                            formInfo.map(value => <Grid item md={2}>
-                                <Link to={value.link}>
-                                    <Avatar alt={value.name}
-                                            variant={selectedForm === value.link ? "rounded" : "circular"}
-                                            src={value.src} sx={{width: 80, height: 80}}/>
-                                </Link>
-                            </Grid>)
+                            formInfo.map(value =>
+                                <Grid item md={2} xs={6}>
+                                    <Link to={value.link}>
+                                        <Card>
+                                            <CardMedia image={value.image} sx={{height: "250px"}}/>
+                                            <CardContent>
+                                                <Typography variant={"h5"}>{value.name}</Typography>
+                                                <Typography variant="body2" color="text.secondary">
+                                                    {value.description}
+                                                </Typography>
+                                            </CardContent>
+                                        </Card>
+                                    </Link>
+                                </Grid>)
                         }
                         {/*    TODO Add link to gallery*/}
-                    </Stack>
-                </Grid>
-                <Grid item lg={11}>
-                    <Outlet/>
-                </Grid>
-            </Grid>
+                    </Grid>
+                    {
+                        selectedForm === "" &&
+                        <Typography style={{fontStyle: "italic"}}>Click on an icon to read information about this
+                            form!</Typography>
+                    }
+                </div>
+            </Fade>
+
         </>
     );
 }
+
+export type Affinity =
+    'Fire'
+    | 'Ice'
+    | 'Electric'
+    | 'Wind'
+    | 'Water'
+    | 'Stone'
+    | 'Poison'
+    | 'Burst'
+    | 'Sound'
+    | 'Light'
+    | 'Darkness'
+    | 'Gravity'
+    | 'Kinesis'
+    | 'Time';
+
+export type FormInformation = {
+    name: string,
+    body: string,
+    history?: string,
+    height: string,
+    weapons: string,
+    affinity: string,
+    thumbnail: string,
+    image: string,
+    link: string,
+    description: string
+};

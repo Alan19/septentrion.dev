@@ -6,13 +6,10 @@ import {createHashRouter, RouterProvider} from "react-router-dom";
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs'
 import {LocalizationProvider} from "@mui/x-date-pickers";
 import {AlcorForms} from "./components/alcor-forms/AlcorForms";
-import {AquariusForm} from "./components/alcor-forms/AquariusForm";
-import {MForm} from "./components/alcor-forms/MForm";
-import {AICoreForm} from "./components/alcor-forms/AICoreForm";
-import {JupiterForm} from "./components/alcor-forms/JupiterForm";
-import {TriangulumForm} from "./components/alcor-forms/TriangulumForm";
 import {SiteAppBar} from "./SiteAppBar";
 import {CssVarsProvider, extendTheme} from "@mui/material-next";
+import alcorForms from './components/alcor-forms/form-icons/alcor_forms.json'
+import {FormPage} from "./components/alcor-forms/FormPage";
 
 export const theme = createTheme({
     palette: {
@@ -107,29 +104,13 @@ const router = createHashRouter([
             {
                 path: "alcor_forms",
                 element: <AlcorForms/>,
-                children: [
-                    {
-                        path: "/alcor_forms/aquarius",
-                        element: <AquariusForm/>
-                    },
-                    {
-                        path: "/alcor_forms/m",
-                        element: <MForm/>
-                    },
-                    {
-                        path: "/alcor_forms/aicore",
-                        element: <AICoreForm/>
-                    },
-                    {
-                        path: "/alcor_forms/jupiter",
-                        element: <JupiterForm/>
-                    },
-                    {
-                        path: "/alcor_forms/triangulum",
-                        element: <TriangulumForm/>
-                    }
-                ]
-            }
+            },
+            ...alcorForms.map(value => {
+                return {
+                    path: `alcor_forms/${value.link}`,
+                    element: <FormPage formInformation={value}/>
+                }
+            })
         ]
     }
 ]);

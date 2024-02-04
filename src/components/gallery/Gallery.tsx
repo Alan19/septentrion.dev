@@ -35,6 +35,7 @@ export function Gallery() {
     const [splitByMonth, setSplitByMonth] = useState(false);
     const [pageSize, setPageSize] = useState<number>(12);
     const [page, setPage] = useState<number>(1);
+    const [displayAll, setDisplayAll] = useState(false)
 
 
     let tags: TagState = getTags();
@@ -135,7 +136,7 @@ export function Gallery() {
         setPage(value)
     }
 
-    const imagesOnPage = shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize);
+    const imagesOnPage = !displayAll ? shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize) : shownImages;
 
     function closeModal() {
         setIsDialogOpen(false);
@@ -174,9 +175,23 @@ export function Gallery() {
                                       label="Separate by month"/>
 
                     {(pageSize < shownImages.length) && !splitByMonth &&
-                        <Pagination style={{marginBottom: "8px"}}
-                                    count={splitByMonth ? Math.ceil(getMonthsWhereImagesAreAvailable() / 4) : Math.ceil(shownImages.length / pageSize)}
-                                    page={page} onChange={handlePageChange} showFirstButton showLastButton/>}
+                        <Grid container justifyContent={"space-between"}>
+
+                            <Grid item>
+                                <FormControlLabel style={{marginBottom: "8px"}}
+                                                  control={<Switch value={displayAll}
+                                                                   onChange={(_event, checked) => setDisplayAll(checked)}/>}
+                                                  label="Display all images on one page"/>
+                            </Grid>
+                            {
+                                !displayAll && <Grid item>
+                                    <Pagination style={{marginBottom: "8px"}}
+                                                count={splitByMonth ? Math.ceil(getMonthsWhereImagesAreAvailable() / 4) : Math.ceil(shownImages.length / pageSize)}
+                                                page={page} onChange={handlePageChange} showFirstButton showLastButton/>
+
+                                </Grid>
+                            }
+                        </Grid>}
                     {splitByMonth ?
                         <ChronologicalGallery displayedImages={shownImages} width={bounds.width}
                                               setCurrentImage={handleImageClicked}/> :
@@ -191,7 +206,8 @@ export function Gallery() {
                                 aspectRatio={value.aspectRatio ?? 1}
                                 className={"artImage"}
                                 setCurrentImage={() => handleImageClicked(value)}
-                                title={value.title ?? ""}/>)}
+                                title={value.title ?? ""}
+                                hasAlts={(value.alts?.length ?? 0) > 0}/>)}
                         </TSJustifiedLayout>
                     }
 

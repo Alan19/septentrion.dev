@@ -348,21 +348,7 @@
     ]
   },
   {
-    "title": "PNGTuber Idle",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/pngtuber_art_1.jpg",
-    "href": "https://twitter.com/Cat_Mantis_Art/status/1436487151705726978?s=20",
-    "artist": "@Cat_Mantis_Art",
-    "tags": [
-      "Rastaban Form",
-      "Hoodie"
-    ],
-    "published": "2021-09-10",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/pngtuber_art_1.webp",
-    "aspectRatio": 1,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pngtuber_art_1.webp"
-  },
-  {
-    "title": "PNGTuber Talking",
+    "title": "PNGTuber",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pngtuber_art_2.jpg",
     "href": "https://twitter.com/Cat_Mantis_Art/status/1436487151705726978?s=20",
     "artist": "@Cat_Mantis_Art",
@@ -373,7 +359,22 @@
     "published": "2021-09-10",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/pngtuber_art_2.webp",
     "aspectRatio": 1,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pngtuber_art_2.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pngtuber_art_2.webp",
+    "alts": [
+      {
+        "src": "https://alcorsiteartbucket.s3.amazonaws.com/pngtuber_art_1.jpg",
+        "href": "https://twitter.com/Cat_Mantis_Art/status/1436487151705726978?s=20",
+        "artist": "@Cat_Mantis_Art",
+        "tags": [
+          "Rastaban Form",
+          "Hoodie"
+        ],
+        "published": "2021-09-10",
+        "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/pngtuber_art_1.webp",
+        "aspectRatio": 1,
+        "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pngtuber_art_1.webp"
+      }
+    ]
   },
   {
     "title": "Night",
@@ -1265,35 +1266,6 @@
     "aspectRatio": 0.6997919667146744
   },
   {
-    "title": "NekoTiger Stream Outfit Doodle",
-    "artist": "",
-    "tags": [
-      "Rastaban Form",
-      "Hoodie"
-    ],
-    "href": "https://x.com/nekotiger/status/1563206167580778497?s=20",
-    "published": "2022-05-31",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/neko_tiger_stream_outfit_doodle.webp",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/neko_tiger_stream_outfit_doodle.png",
-    "aspectRatio": 1,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/neko_tiger_stream_outfit_doodle.webp"
-  },
-  {
-    "title": "NekoTiger Raichu Hoodie Sketch",
-    "artist": "@NekoTiger",
-    "tags": [
-      "Knives",
-      "Rastaban Form",
-      "Hoodie"
-    ],
-    "href": "https://x.com/nekotiger/status/1563206167580778497?s=20",
-    "published": "2022-05-31",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/neko_tiger_raichu_hoodie_sketch.webp",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/neko_tiger_raichu_hoodie_sketch.png",
-    "aspectRatio": 1,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/neko_tiger_raichu_hoodie_sketch.webp"
-  },
-  {
     "title": "NekoTiger Alcor Sketch",
     "artist": "@NekoTiger",
     "tags": [
@@ -1304,7 +1276,34 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/neko_tiger_alcor_sketch.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/neko_tiger_alcor_sketch.png",
     "aspectRatio": 1,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/neko_tiger_alcor_sketch.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/neko_tiger_alcor_sketch.webp",
+    "alts": [
+      {
+        "tags": [
+          "Rastaban Form",
+          "Hoodie"
+        ],
+        "href": "https://x.com/nekotiger/status/1563206167580778497?s=20",
+        "published": "2022-05-31",
+        "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/neko_tiger_stream_outfit_doodle.webp",
+        "src": "https://alcorsiteartbucket.s3.amazonaws.com/neko_tiger_stream_outfit_doodle.png",
+        "aspectRatio": 1,
+        "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/neko_tiger_stream_outfit_doodle.webp"
+      },
+      {
+        "tags": [
+          "Knives",
+          "Rastaban Form",
+          "Hoodie"
+        ],
+        "href": "https://x.com/nekotiger/status/1563206167580778497?s=20",
+        "published": "2022-05-31",
+        "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/neko_tiger_raichu_hoodie_sketch.webp",
+        "src": "https://alcorsiteartbucket.s3.amazonaws.com/neko_tiger_raichu_hoodie_sketch.png",
+        "aspectRatio": 1,
+        "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/neko_tiger_raichu_hoodie_sketch.webp"
+      }
+    ]
   },
   {
     "title": "LemonBeagle Mini Set",
@@ -2239,5 +2238,43 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/glimmer_on_the_shore.png",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/glimmer_on_the_shore.png",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/glimmer_on_the_shore.png"
+  },
+  {
+    "title": "Farmer Sketch",
+    "artist": "@KuroPenguinEx",
+    "tags": [
+      "Aquarius Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1751444972904063414?s=20",
+    "published": "2024-01-27",
+    "aspectRatio": 0.7069555302166477,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/farmer_sketch.webp%7D",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/farmer_sketch.webp%7D",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/farmer_sketch.png",
+    "alts": [
+      {
+        "tags": [
+          "Aquarius Form"
+        ],
+        "href": "",
+        "aspectRatio": 0.7069555302166477,
+        "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/farmer_sketch/0.webp",
+        "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/farmer_sketch/0.webp",
+        "src": "https://alcorsiteartbucket.s3.amazonaws.com/farmer_sketch/0.png"
+      }
+    ]
+  },
+  {
+    "title": "My Room",
+    "artist": "@ito_44_3",
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "https://skeb.jp/@ito_44_3/works/125",
+    "published": "2024-02-02",
+    "aspectRatio": 1.4166666666666667,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/my_room.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/my_room.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/my_room.png"
   }
 ]
