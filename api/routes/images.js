@@ -23,7 +23,20 @@ function doesParameterContainTag(image, queryParams) {
 /* GET home page. */
 router.get('/', function (req, res, next) {
   const queryParams = req.query;
-  const images = JSON.parse(fs.readFileSync(path.resolve(__dirname, './images.json'), 'utf-8')).concat(JSON.parse(fs.readFileSync(path.resolve(__dirname, './hidden.json'), 'utf-8')));
+  const hidden = JSON.parse(fs.readFileSync(path.resolve(__dirname, './hidden.json'), 'utf-8'));
+  let images = JSON.parse(fs.readFileSync(path.resolve(__dirname, './images.json'), 'utf-8'));
+  hidden.forEach(hiddenImage => {
+    const find = images.find(mainImage => mainImage.title === hiddenImage.title);
+    console.log(find);
+    if (find) {
+      if (!find.alts) {
+        find.alts = [];
+      }
+      find.alts.push(...hiddenImage.alts);
+    } else {
+      images.push(hiddenImage);
+    }
+  })
   res.send(images.filter(image => doesParameterContainTag(image, queryParams)))
 });
 

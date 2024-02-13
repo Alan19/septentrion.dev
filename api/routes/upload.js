@@ -48,7 +48,7 @@ router.post('/', upload.single('image'), async (req, res) => {
         const compressedParams = {
             Bucket: process.env.BUCKET_NAME,
             Key: `600h/${convertToSnakeCase(title)}.webp`,
-            Body: sharp(file.buffer).resize({width: 600}).webp(),
+            Body: sharp(file.buffer).resize({height: 600}).webp(),
             ContentType: file.mimetype
         }
         jsonOutput['thumbnailUrl'] = (await s3.upload(compressedParams).promise()).Location;
@@ -99,7 +99,7 @@ router.post('/alt', upload.single('image'), async (req, res) => {
         const compressedParams = {
             Bucket: process.env.BUCKET_NAME,
             Key: `600h/${convertToSnakeCase(imageName)}/${numberOfAlts}.webp`,
-            Body: sharp(file.buffer).resize({width: 600}).webp(),
+            Body: sharp(file.buffer).resize({height: 600}).webp(),
             ContentType: file.mimetype
         }
         jsonOutput['thumbnail'] = (await s3.upload(compressedParams).promise()).Location;
@@ -127,25 +127,32 @@ router.post('/alt', upload.single('image'), async (req, res) => {
 });
 
 function addAltToJson(imageName, jsonOutput) {
-    fs.readFile(path.resolve(__dirname, './images.json'), (err, data) => {
+    const fileToWriteTo = jsonOutput.tags.includes('Hidden') ? './hidden.json' : './images.json';
+    fs.readFile(path.resolve(__dirname, fileToWriteTo), (err, data) => {
         let images = JSON.parse(data);
-        const image = images.find((element) => element.title === imageName);
-        if (image["alts"]) {
-            image["alts"].push(jsonOutput)
-        } else {
-            image["alts"] = [jsonOutput]
+        let matchedImage = images.find((element) => element.title === imageName);
+        // Handle hidden alt
+        if (!matchedImage) {
+            matchedImage = {title: imageName};
+            images.push(matchedImage);
         }
-        fs.writeFileSync("./routes/images.json", JSON.stringify(images));
+        if (matchedImage["alts"]) {
+            matchedImage["alts"].push(jsonOutput)
+        } else {
+            matchedImage["alts"] = [jsonOutput]
+        }
+        fs.writeFileSync(path.resolve(__dirname, fileToWriteTo), JSON.stringify(images));
     });
 }
 
 
 function addToJson(jsonOutput) {
-    fs.readFile(path.resolve(__dirname, jsonOutput.tags.includes('Hidden') ? './hidden.json' : './images.json'), (err, data) => {
+    const fileToWriteTo = jsonOutput.tags.includes('Hidden') ? './hidden.json' : './images.json';
+    fs.readFile(path.resolve(__dirname, fileToWriteTo), (err, data) => {
         let json = JSON.parse(data);
         json.push(jsonOutput);
 
-        fs.writeFile(path.resolve(__dirname, './images.json'), JSON.stringify(json, null, 2), (err1) => {
+        fs.writeFile(path.resolve(__dirname, fileToWriteTo), JSON.stringify(json, null, 2), (err1) => {
             console.log(err1)
         });
     })
