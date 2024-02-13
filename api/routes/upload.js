@@ -141,7 +141,7 @@ function addAltToJson(imageName, jsonOutput) {
 
 
 function addToJson(jsonOutput) {
-    fs.readFile(path.resolve(__dirname, './images.json'), (err, data) => {
+    fs.readFile(path.resolve(__dirname, jsonOutput.tags.includes('Hidden') ? './hidden.json' : './images.json'), (err, data) => {
         let json = JSON.parse(data);
         json.push(jsonOutput);
 

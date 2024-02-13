@@ -28,7 +28,8 @@ export enum ArtTag {
     autumnal = 'Autumnal Wavesniper',
     winter = 'Hibernal Assassin',
     aquarius = 'Aquarius Form',
-    auriga = 'Auriga Form'
+    auriga = 'Auriga Form',
+    hidden = 'Hidden'
 }
 
 export type ImageInformation = {
