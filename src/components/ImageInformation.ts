@@ -45,12 +45,22 @@ export type ImageInformation = {
     artistURL?: string;
     tags?: string[];
     published: string;
-    alts?: {
-        webp?: string;
-        src: string;
-        thumbnail?: string;
-        aspectRatio?: number;
-        href?: string;
-        tags?: string[];
-    }[]
 };
+
+export type AltInformation = {
+    webp?: string;
+    src: string;
+    thumbnail?: string;
+    aspectRatio?: number;
+    href?: string;
+    tags?: string[];
+    parent: string;
+}
+
+export function isImageInformation(image: AltInformation | ImageInformation): image is ImageInformation {
+    return (image as AltInformation).parent === undefined;
+}
+
+export function isAltInformation(image: AltInformation | ImageInformation): image is AltInformation {
+    return (image as AltInformation).parent !== undefined;
+}

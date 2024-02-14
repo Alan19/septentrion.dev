@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Chip from '@mui/material-next/Chip';
 import {FormControlLabel, Grid, Pagination, Switch, Typography, useMediaQuery,} from "@mui/material";
-import {ArtTag, ImageInformation} from "../ImageInformation";
+import {AltInformation, ArtTag, ImageInformation, isAltInformation, isImageInformation} from "../ImageInformation";
 import {Remove,} from "@mui/icons-material";
 import "./gallery.css";
 import {theme} from "../../App";
@@ -22,13 +22,17 @@ export type TagState = {
     [tag in ArtTag]: number;
 };
 
+export function hasAlts(title: string, images: (ImageInformation | AltInformation)[]): boolean {
+    return images.filter(isAltInformation).some(value => value.parent === title);
+}
+
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
     // @ts-ignore
     return new Set(images.filter(value => value.published !== undefined).map(value => value.published.substring(0, 7)));
 }
 
 export function Gallery() {
-    const {getTags, setTags, images, loadImageInfo} = useTagHooks();
+    const {getTags, setTags, images, loadImageInfo, altData} = useTagHooks();
     const [currentImage, setCurrentImage] = useState<ImageInformation>();
     const [isDialogOpen, setIsDialogOpen] = useState(false)
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver})
@@ -111,6 +115,7 @@ export function Gallery() {
     }
 
     let shownImages = images
+        .filter(isImageInformation)
         .filter((value) => {
             const hasFilterTag = enabledTags.some(
                 (tag) => value.tags?.includes(tag) ?? false
@@ -136,7 +141,8 @@ export function Gallery() {
         setPage(value)
     }
 
-    const imagesOnPage = !displayAll ? shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize) : shownImages;
+    const mainImages: ImageInformation[] = shownImages.filter(isImageInformation);
+    const imagesOnPage = !displayAll ? mainImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize) : mainImages;
 
     function closeModal() {
         setIsDialogOpen(false);
@@ -148,14 +154,14 @@ export function Gallery() {
     }
 
     function getMonthsWhereImagesAreAvailable() {
-        return getMonthYearPairsInImageSet(shownImages).size;
+        return getMonthYearPairsInImageSet(mainImages).size;
     }
-
 
     return (
         <>
             <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
-            <GalleryDialog isOpen={isDialogOpen} currentImage={currentImage} closeModal={closeModal}/>
+            <GalleryDialog isOpen={isDialogOpen} currentImage={currentImage} closeModal={closeModal}
+                           alts={currentImage?.title !== undefined ? altData.get(currentImage.title) : undefined}/>
             <Grid container spacing={2}>
                 {/*TODO Make this use the same grid attributes as below*/}
                 <Grid item md={3}/>
@@ -194,7 +200,7 @@ export function Gallery() {
                         </Grid>}
                     {splitByMonth ?
                         <ChronologicalGallery displayedImages={shownImages} width={bounds.width}
-                                              setCurrentImage={handleImageClicked}/> :
+                                              setCurrentImage={handleImageClicked} altInfo={altData}/> :
                         <TSJustifiedLayout width={bounds.width}
                                            rowSpacing={8}
                                            itemSpacing={8}
@@ -207,7 +213,7 @@ export function Gallery() {
                                 className={"artImage"}
                                 setCurrentImage={() => handleImageClicked(value)}
                                 title={value.title ?? ""}
-                                hasAlts={(value.alts?.length ?? 0) > 0}/>)}
+                                hasAlts={altData.has(value.title)}/>)}
                         </TSJustifiedLayout>
                     }
 

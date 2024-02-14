@@ -6,9 +6,6 @@ import App from "../App";
 import {LinksPage} from "../components/links/LinksPage";
 import {AquariusForm} from "../components/alcor-forms/AquariusForm";
 import {SiteAppBar} from "../SiteAppBar";
-import {GalleryDialog} from "../components/gallery/GalleryDialog";
-import images from "../components/gallery/images.json"
-import ChronologicalGallery from "../components/gallery/ChronologicalGallery";
 
 const ComponentPreviews = () => {
     return (
@@ -31,14 +28,14 @@ const ComponentPreviews = () => {
             <ComponentPreview path="/SiteAppBar">
                 <SiteAppBar/>
             </ComponentPreview>
-            <ComponentPreview path="/GalleryDialog">
-                <GalleryDialog closeModal={() => {
-                }} isOpen={true} currentImage={images[0]}/>
-            </ComponentPreview>
-            <ComponentPreview path="/ChronologicalGallery">
-                <ChronologicalGallery width={window.outerWidth} setCurrentImage={image => {
-                }} displayedImages={images}/>
-            </ComponentPreview>
+            {/*<ComponentPreview path="/GalleryDialog">*/}
+            {/*    <GalleryDialog closeModal={() => {*/}
+            {/*    }} isOpen={true} currentImage={images[0]}/>*/}
+            {/*</ComponentPreview>*/}
+            {/*<ComponentPreview path="/ChronologicalGallery">*/}
+            {/*    <ChronologicalGallery width={window.outerWidth} setCurrentImage={image => {*/}
+            {/*    }} displayedImages={images}/>*/}
+            {/*</ComponentPreview>*/}
         </Previews>
     );
 };

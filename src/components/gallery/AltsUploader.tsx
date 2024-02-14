@@ -22,7 +22,8 @@ import {Button} from "@mui/material-next";
 
 // TODO Consolidate shared behavior with Uploader.json
 export default function AltsUploader(props: {
-    imageInformation: ImageInformation
+    imageInformation: ImageInformation,
+    altCount: number
 }) {
     const [selectedFile, setSelectedFile] = useState<File>();
     const [tags, setTags] = useState<ArtTag[]>([]);
@@ -87,7 +88,7 @@ export default function AltsUploader(props: {
             formData.append("tags", tags.join(", "));
             formData.append("href", href);
             formData.append("imageName", props.imageInformation.title)
-            formData.append("altCount", (props.imageInformation.alts?.length ?? 0).toString());
+            formData.append("altCount", (props.altCount).toString());
             setUploading(true);
             axios
                 .post(`http://localhost:9000/upload/alt`, formData, {

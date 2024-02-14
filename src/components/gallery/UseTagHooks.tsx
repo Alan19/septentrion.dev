@@ -2,14 +2,15 @@
 
 import axios from "axios";
 import {useSearchParams} from "react-router-dom";
-import {ArtTag, ImageInformation} from "../ImageInformation";
+import {AltInformation, ArtTag, ImageInformation, isAltInformation, isImageInformation} from "../ImageInformation";
 import {TagState} from "./Gallery";
 import {useEffect, useState} from "react";
 import images from './images.json'
 
 export function useTagHooks() {
     const [tagURLParam, setTagURLParams] = useSearchParams();
-    const [imageData, setImageData] = useState<ImageInformation[]>(images);
+    const [imageData, setImageData] = useState<(ImageInformation)[]>([]);
+    const [altData, setAltData] = useState<Map<string, AltInformation[]>>(new Map());
 
     /**
      * Deserializes the tag state from the URL params, basically converts the url a tagstate, with anything that isn't defined in the URL being set to 0
@@ -43,12 +44,17 @@ export function useTagHooks() {
     async function loadImageInfo() {
         const tags = getTags();
         if (process.env.NODE_ENV === "development") {
-            await axios.get<ImageInformation[]>('http://localhost:9000/images/', {params: tags})
-                .then(value => setImageData(value.data));
+            await axios.get<(ImageInformation | AltInformation)[]>('http://localhost:9000/images/', {params: tags})
+                .then(value => {
+                    setImageData(value.data.filter(isImageInformation));
+                    setAltData(value.data.filter(isAltInformation).reduce((map, alt) => map.set(alt.parent, [...(map.get(alt.parent) ?? []), alt]), new Map()));
+                });
         } else {
-            setImageData(images);
+            const jsonImages: (AltInformation | ImageInformation)[] = images;
+            setAltData(jsonImages.filter(isAltInformation).reduce((map, alt) => map.set(alt.parent, [...(map.get(alt.parent) ?? []), alt]), new Map()));
+            setImageData(jsonImages.filter(isImageInformation));
         }
     }
 
-    return {getTags, setTags, images: imageData, loadImageInfo};
+    return {getTags, setTags, images: imageData, loadImageInfo, altData};
 }

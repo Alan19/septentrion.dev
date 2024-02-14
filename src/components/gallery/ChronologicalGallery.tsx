@@ -1,6 +1,6 @@
 import {Typography} from "@mui/material";
 import React, {Fragment} from "react";
-import {ImageInformation} from "../ImageInformation";
+import {AltInformation, ImageInformation} from "../ImageInformation";
 import {GalleryImage} from "./GalleryImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {getMonthYearPairsInImageSet} from "./Gallery";
@@ -10,7 +10,8 @@ function ChronologicalGallery(props: {
     displayedImages: ImageInformation[],
     width: number,
     setCurrentImage: (image: ImageInformation) => void,
-    height?: number
+    height?: number,
+    altInfo: Map<string, AltInformation[]>
 }) {
     function getImagesForMonth(year: number, month: number) {
         return props.displayedImages.filter(value => value.published?.substring(0, 7).split("-").map(Number).toString() === [year, month].toString());
@@ -33,7 +34,7 @@ function ChronologicalGallery(props: {
                 className={"artImage"}
                 setCurrentImage={() => props.setCurrentImage(value)}
                 aspectRatio={value.aspectRatio ?? 1}
-                hasAlts={(value.alts?.length ?? 0) > 0}/>)}
+                hasAlts={props.altInfo.has(value.title)}/>)}
         </TSJustifiedLayout>
     }
 

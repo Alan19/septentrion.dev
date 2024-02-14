@@ -9,7 +9,7 @@ export function GalleryImage(props: {
     title: string,
     setCurrentImage: MouseEventHandler<HTMLImageElement>,
     className?: string,
-    hasAlts?: boolean
+    hasAlts: boolean
 }) {
     const [isReady, setIsReady] = useState(isImageCached());
 

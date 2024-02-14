@@ -1,7 +1,7 @@
 import {Dialog, DialogContent, Divider, Grid, ImageList, ImageListItem, Typography, useMediaQuery} from "@mui/material";
 import dayjs from "dayjs";
 import React, {useEffect, useState} from "react";
-import {ImageInformation} from "../ImageInformation";
+import {AltInformation, ImageInformation} from "../ImageInformation";
 import {ImageWithLoadingSkeleton} from "./ImageWithLoadingSkeleton";
 import "./gallery.css";
 import {Button} from "@mui/material-next";
@@ -11,7 +11,8 @@ import AltsUploader from "./AltsUploader";
 export function GalleryDialog(props: {
     currentImage?: ImageInformation,
     closeModal: () => void,
-    isOpen: boolean
+    isOpen: boolean,
+    alts?: AltInformation[]
 }) {
     const [imageNumber, setImageNumber] = useState(-1);
     const isPortrait = useMediaQuery('(orientation: portrait)');
@@ -42,8 +43,8 @@ export function GalleryDialog(props: {
     function getSrc(currentImage: ImageInformation) {
         if (imageNumber === -1) {
             return currentImage.webp ?? currentImage.src;
-        } else if (currentImage.alts) {
-            return currentImage.alts[imageNumber].webp ?? currentImage.alts[imageNumber].src;
+        } else if (props.alts) {
+            return props.alts[imageNumber].webp ?? props.alts[imageNumber].src;
         }
     }
 
@@ -107,7 +108,7 @@ export function GalleryDialog(props: {
                         </Grid>
                     </div>
 
-                    {props.currentImage?.alts && <>
+                    {props.currentImage && props.alts && <>
                         <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
                         <Typography variant={"h5"}>Alts</Typography>
                         <ImageList cols={3}>
@@ -119,7 +120,7 @@ export function GalleryDialog(props: {
                                     src={props.currentImage.thumbnailUrl ?? props.currentImage.webp ?? props.currentImage.src}
                                     alt={props.currentImage.title}/>
                             </ImageListItem>
-                            {props.currentImage?.alts?.map((value, index) => <ImageListItem key={index}> <img
+                            {props.alts?.map((value, index) => <ImageListItem key={index}> <img
                                 onClick={() => handleAltImageClick(index)}
                                 className={"dialog-image"}
                                 style={{width: "100%"}}
@@ -136,7 +137,8 @@ export function GalleryDialog(props: {
                             {dayjs(props.currentImage?.published).format("MMM DD, YYYY")}
                         </Typography>
                     )}
-                    {props.currentImage && <AltsUploader imageInformation={props.currentImage}/>}
+                    {props.currentImage &&
+                        <AltsUploader imageInformation={props.currentImage} altCount={props.alts?.length ?? 0}/>}
                 </Grid>
             </Grid>
         </DialogContent>
