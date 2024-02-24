@@ -47,6 +47,7 @@ export function useTagHooks() {
             await axios.get<(ImageInformation | AltInformation)[]>('http://localhost:9000/images/', {params: tags})
                 .then(value => {
                     setImageData(value.data.filter(isImageInformation));
+                    // Filter images for alts, then collect them into a map with their keys being the parent name, and the value being all of the alts
                     setAltData(value.data.filter(isAltInformation).reduce((map, alt) => map.set(alt.parent, [...(map.get(alt.parent) ?? []), alt]), new Map()));
                 });
         } else {

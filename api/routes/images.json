@@ -789,7 +789,19 @@
     "published": "2022-07-16",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/lifewonders_beach_outfits.webp",
     "aspectRatio": 1.4067388688327316,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifewonders_beach_outfits.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifewonders_beach_outfits.webp",
+    "alts": [
+      {
+        "tags": [
+          ""
+        ],
+        "href": "",
+        "aspectRatio": 1.4067388688327316,
+        "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/lifewonders_beach_outfits/0.webp",
+        "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifewonders_beach_outfits/0.webp",
+        "src": "https://alcorsiteartbucket.s3.amazonaws.com/lifewonders_beach_outfits/0.png"
+      }
+    ]
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/rogue_ych.png",
@@ -2194,7 +2206,7 @@
     "href": "https://x.com/Dialexus/status/1749415528635244545?s=20",
     "published": "2024-01-22",
     "aspectRatio": 1.7761989342806395,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/dialexus_emote_pack_1.jpg",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/dialexus_emote_pack_1.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/dialexus_emote_pack_1.jpg"
   },
   {
@@ -2274,5 +2286,55 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/my_room.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/my_room.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/my_room.png"
+  },
+  {
+    "title": "Valentine's Day 2024",
+    "artist": "@Lavastan",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/Lavastan/status/1757444038263795761?s=20",
+    "published": "2024-02-13",
+    "aspectRatio": 1.4705882352941178,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/valentine_s_day_2024.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/valentine_s_day_2024.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/valentine_s_day_2024.jpg"
+  },
+  {
+    "title": "Triangulum Combat Suit",
+    "artist": "@neumokun",
+    "tags": [
+      "Triangulum Form"
+    ],
+    "href": "https://bsky.app/profile/neumokun.bsky.social/post/3klncrgkl5z24",
+    "published": "2024-02-17",
+    "aspectRatio": 0.7501875468867217,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/triangulum_combat_suit.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangulum_combat_suit.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangulum_combat_suit.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 1.4067388688327316,
+    "parent": "Lifewonders Beach Outfits",
+    "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/lifewonders_beach_outfits/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifewonders_beach_outfits/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/lifewonders_beach_outfits/0.png"
+  },
+  {
+    "title": "Steampunk Sketch",
+    "artist": "@KuroPenguinEx",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1761240627834974604?s=20",
+    "published": "2024-02-23",
+    "aspectRatio": 0.7069555302166477,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/steampunk_sketch.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/steampunk_sketch.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/steampunk_sketch.png"
   }
 ]

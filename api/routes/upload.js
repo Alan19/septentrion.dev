@@ -92,7 +92,8 @@ router.post('/alt', upload.single('image'), async (req, res) => {
     const jsonOutput = {
         tags: tags.split(',').map(tag => tag.trim()),
         href: href,
-        aspectRatio: metadata.width / metadata.height
+        aspectRatio: metadata.width / metadata.height,
+        parent: imageName
     };
 
     if (metadata.height > 600) {
@@ -122,25 +123,15 @@ router.post('/alt', upload.single('image'), async (req, res) => {
     };
 
     jsonOutput['src'] = (await s3.upload(params).promise()).Location;
-    addAltToJson(imageName, jsonOutput);
+    addAltToJson(jsonOutput);
     res.json(jsonOutput);
 });
 
-function addAltToJson(imageName, jsonOutput) {
+function addAltToJson(jsonOutput) {
     const fileToWriteTo = jsonOutput.tags.includes('Hidden') ? './hidden.json' : './images.json';
     fs.readFile(path.resolve(__dirname, fileToWriteTo), (err, data) => {
         let images = JSON.parse(data);
-        let matchedImage = images.find((element) => element.title === imageName);
-        // Handle hidden alt
-        if (!matchedImage) {
-            matchedImage = {title: imageName};
-            images.push(matchedImage);
-        }
-        if (matchedImage["alts"]) {
-            matchedImage["alts"].push(jsonOutput)
-        } else {
-            matchedImage["alts"] = [jsonOutput]
-        }
+        images.push(jsonOutput)
         fs.writeFileSync(path.resolve(__dirname, fileToWriteTo), JSON.stringify(images));
     });
 }
