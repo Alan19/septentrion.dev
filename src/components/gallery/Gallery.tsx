@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Chip from '@mui/material-next/Chip';
-import {FormControlLabel, Grid, Pagination, Switch, Typography, useMediaQuery,} from "@mui/material";
+import {Container, Fade, FormControlLabel, Grid, IconButton, Pagination, Switch, Typography, useMediaQuery,} from "@mui/material";
 import {AltInformation, ArtTag, ImageInformation, isAltInformation, isImageInformation} from "../ImageInformation";
 import {Remove,} from "@mui/icons-material";
 import "./gallery.css";
@@ -8,15 +8,17 @@ import {theme} from "../../App";
 import {useTagHooks} from "./UseTagHooks";
 import Uploader from "./Uploader";
 import useMeasure from 'react-use-measure';
-
+import MenuIcon from '@mui/icons-material/Menu';
 import {ResizeObserver} from '@juggle/resize-observer'
 import ChronologicalGallery from "./ChronologicalGallery";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {GalleryImage} from "./GalleryImage";
 import {GalleryDialog} from "./GalleryDialog";
-import {FilterPane} from "./FilterPane";
 import {ChipPropsColorOverrides} from "@mui/material-next/Chip/Chip.types";
 import {OverridableStringUnion} from "@mui/types";
+import {NavigationRail} from "./NavigationRail";
+import {FilterPane, FilterPaneContent} from "./FilterPane";
+import {FilterDrawer} from "./FilterDrawer";
 
 export type TagState = {
     [tag in ArtTag]: number;
@@ -39,10 +41,12 @@ export function Gallery() {
     const [splitByMonth, setSplitByMonth] = useState(false);
     const [pageSize, setPageSize] = useState<number>(12);
     const [page, setPage] = useState<number>(1);
-    const [displayAll, setDisplayAll] = useState(false)
+    const [displayAll, setDisplayAll] = useState(false);
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
 
     let tags: TagState = getTags();
+    const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
 
     const enabledTags: ArtTag[] = Object.keys(tags).filter(
         (value) => tags[value as ArtTag] === 1
@@ -135,7 +139,12 @@ export function Gallery() {
         return b.published.localeCompare(a.published);
     }
 
-    const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
+
+    useEffect(() => {
+        if (isMediumOrAbove) {
+            setIsDrawerOpen(false);
+        }
+    }, [isMediumOrAbove]);
 
     function handlePageChange(event: React.ChangeEvent<unknown>, value: number) {
         setPage(value)
@@ -157,69 +166,104 @@ export function Gallery() {
         return getMonthYearPairsInImageSet(mainImages).size;
     }
 
+    let drawerWidth = 400;
+
+    function handleDrawerToggle() {
+        setIsDrawerOpen(true)
+    }
+
+    function handleDrawerClose() {
+        setIsDrawerOpen(false)
+    }
+
     return (
-        <>
-            <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
-            <GalleryDialog isOpen={isDialogOpen} currentImage={currentImage} closeModal={closeModal}
-                           alts={currentImage?.title !== undefined ? altData.get(currentImage.title) : undefined}/>
-            <Grid container spacing={2}>
-                {/*TODO Make this use the same grid attributes as below*/}
-                <Grid item md={3}/>
-                <Grid item md style={{visibility: "hidden", width: "100%"}}>
-                    <div ref={ref}>
-                    </div>
-                </Grid>
-            </Grid>
-            <Grid container spacing={2}>
-                <Grid item md={3}>
-                    <FilterPane isMediumOrAbove={isMediumOrAbove} filterCategories={filterCategories}/>
-                </Grid>
-                <Grid item md style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
-                    <FormControlLabel style={{marginTop: "8px"}}
-                                      control={<Switch value={splitByMonth}
-                                                       onChange={(_event, checked) => setSplitByMonth(checked)}/>}
-                                      label="Separate by month"/>
+        <NavigationRail secondPanel={<FilterPane isMediumOrAbove={isMediumOrAbove} filterCategories={filterCategories}/>}>
+            <>
+                {!isMediumOrAbove &&
+                    <FilterDrawer
+                        open={isDrawerOpen}
+                        onClose={handleDrawerClose}>
+                        <FilterPaneContent filterCategories={filterCategories}/>
+                    </FilterDrawer>}
 
-                    {(pageSize < shownImages.length) && !splitByMonth &&
-                        <Grid container justifyContent={"space-between"}>
-
-                            <Grid item>
-                                <FormControlLabel style={{marginBottom: "8px"}}
-                                                  control={<Switch value={displayAll}
-                                                                   onChange={(_event, checked) => setDisplayAll(checked)}/>}
-                                                  label="Display all images on one page"/>
+                <Fade in>
+                    <div style={{display: "flex", marginTop: '24px'}}>
+                        <Container style={{flexGrow: 1}}>
+                            <IconButton
+                                color="inherit"
+                                aria-label="open drawer"
+                                edge="start"
+                                onClick={handleDrawerToggle}
+                                sx={{mr: 2, display: {md: 'none'}}}
+                            >
+                                <MenuIcon/>
+                            </IconButton>
+                            <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
+                            <GalleryDialog isOpen={isDialogOpen} currentImage={currentImage} closeModal={closeModal}
+                                           alts={currentImage?.title !== undefined ? altData.get(currentImage.title) : undefined}/>
+                            <Grid container direction={"column"} spacing={2}>
+                                {/*TODO Make this use the same grid attributes as below*/}
+                                <Grid item md={3}/>
+                                <Grid item md style={{visibility: "hidden", width: "100%"}}>
+                                    <div ref={ref}>
+                                    </div>
+                                </Grid>
                             </Grid>
-                            {
-                                !displayAll && <Grid item>
-                                    <Pagination style={{marginBottom: "8px"}}
-                                                count={splitByMonth ? Math.ceil(getMonthsWhereImagesAreAvailable() / 4) : Math.ceil(shownImages.length / pageSize)}
-                                                page={page} onChange={handlePageChange} showFirstButton showLastButton/>
+                            <Grid container direction={"column"} spacing={2}>
+                                <Grid item>
+                                </Grid>
+                                <Grid item style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
+                                    <FormControlLabel style={{marginTop: "8px"}}
+                                                      control={<Switch value={splitByMonth}
+                                                                       onChange={(_event, checked) => setSplitByMonth(checked)}/>}
+                                                      label="Separate by month"/>
+
+                                    {(pageSize < shownImages.length) && !splitByMonth &&
+                                        <Grid container justifyContent={"space-between"}>
+
+                                            <Grid item>
+                                                <FormControlLabel style={{marginBottom: "8px"}}
+                                                                  control={<Switch value={displayAll}
+                                                                                   onChange={(_event, checked) => setDisplayAll(checked)}/>}
+                                                                  label="Display all images on one page"/>
+                                            </Grid>
+                                            {
+                                                !displayAll && <Grid item>
+                                                    <Pagination style={{marginBottom: "8px"}}
+                                                                count={splitByMonth ? Math.ceil(getMonthsWhereImagesAreAvailable() / 4) : Math.ceil(shownImages.length / pageSize)}
+                                                                page={page} onChange={handlePageChange} showFirstButton
+                                                                showLastButton/>
+
+                                                </Grid>
+                                            }
+                                        </Grid>}
+                                    {splitByMonth ?
+                                        <ChronologicalGallery displayedImages={shownImages} width={bounds.width}
+                                                              setCurrentImage={handleImageClicked} altInfo={altData}/> :
+                                        <TSJustifiedLayout width={bounds.width}
+                                                           targetRowHeight={350}
+                                                           rowSpacing={8}
+                                                           itemSpacing={8}
+                                                           layoutItems={imagesOnPage.map(value => (
+                                                               value.aspectRatio ?? 1
+                                                           ))}>
+                                            {imagesOnPage.map(value => <GalleryImage
+                                                src={value.thumbnailUrl ?? value.src}
+                                                aspectRatio={value.aspectRatio ?? 1}
+                                                className={"artImage"}
+                                                setCurrentImage={() => handleImageClicked(value)}
+                                                title={value.title ?? ""}
+                                                hasAlts={altData.has(value.title)}/>)}
+                                        </TSJustifiedLayout>
+                                    }
 
                                 </Grid>
-                            }
-                        </Grid>}
-                    {splitByMonth ?
-                        <ChronologicalGallery displayedImages={shownImages} width={bounds.width}
-                                              setCurrentImage={handleImageClicked} altInfo={altData}/> :
-                        <TSJustifiedLayout width={bounds.width}
-                                           rowSpacing={8}
-                                           itemSpacing={8}
-                                           layoutItems={imagesOnPage.map(value => (
-                                               value.aspectRatio ?? 1
-                                           ))}>
-                            {imagesOnPage.map(value => <GalleryImage
-                                src={value.thumbnailUrl ?? value.src}
-                                aspectRatio={value.aspectRatio ?? 1}
-                                className={"artImage"}
-                                setCurrentImage={() => handleImageClicked(value)}
-                                title={value.title ?? ""}
-                                hasAlts={altData.has(value.title)}/>)}
-                        </TSJustifiedLayout>
-                    }
-
-                </Grid>
-            </Grid>
-            <Uploader loadImageInfo={loadImageInfo}/>
-        </>
+                            </Grid>
+                            <Uploader loadImageInfo={loadImageInfo}/>
+                        </Container>
+                    </div>
+                </Fade>
+            </>
+        </NavigationRail>
     );
 }

@@ -1,17 +1,14 @@
-import {Paper, Typography} from "@mui/material";
+import {Typography} from "@mui/material";
 import {CategoryOutlined, DryCleaningOutlined, Filter, PetsOutlined} from "@mui/icons-material";
 import React from "react";
 import {ArtTag} from "../ImageInformation";
 
-export function FilterPane(props: {
-    isMediumOrAbove: boolean, filterCategories: (element: React.JSX.Element,
-                                                 categoryName: string,
-                                                 filterFunction: (value: ArtTag) => boolean) => React.JSX.Element
+export function FilterPaneContent(props: {
+    filterCategories: (element: React.JSX.Element,
+                       categoryName: string,
+                       filterFunction: (value: ArtTag) => boolean) => React.JSX.Element
 }) {
-    return <Paper
-        elevation={3}
-        className={`filters ${props.isMediumOrAbove ? "medium" : ""}`}
-    >
+    return <>
         <Typography variant={"h5"} style={{marginTop: "8px"}}>
             <Filter/> Filter Gallery
         </Typography>
@@ -29,5 +26,16 @@ export function FilterPane(props: {
             (value) =>
                 !["Suit", "Form"].some((keyword) => value.includes(keyword))
         )}
-    </Paper>
+    </>
+}
+
+export function FilterPane(props: {
+    isMediumOrAbove: boolean, filterCategories: (element: React.JSX.Element,
+                                                 categoryName: string,
+                                                 filterFunction: (value: ArtTag) => boolean) => React.JSX.Element
+}) {
+    return <div className={`filters ${props.isMediumOrAbove ? "medium" : ""}`}>
+        <FilterPaneContent filterCategories={props.filterCategories}/>
+    </div>;
+
 }

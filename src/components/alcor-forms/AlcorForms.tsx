@@ -1,9 +1,10 @@
-import {Card, CardContent, CardMedia, Fade, Grid, Typography, useMediaQuery} from "@mui/material";
+import {Card, CardContent, CardMedia, Container, Fade, Grid, Typography, useMediaQuery} from "@mui/material";
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import './form-page.css'
 import {theme} from "../../App";
 import alcorForms from "./form-icons/alcor_forms.json"
+import {NavigationRail} from "../gallery/NavigationRail";
 
 export function CharacterAttribute(props: { fieldName: String, fieldValue: String }) {
     return <div>
@@ -18,38 +19,39 @@ export function AlcorForms() {
 
     const selectedForm: string | null = useLocation().pathname.split('/')[2]
     return (
-        <>
-            <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Forms</Typography>
-            <Fade in>
-                <div style={{marginTop: "16px"}}>
-                    <Grid container direction={"row"} spacing={2}>
+        <NavigationRail>
+            <Container style={{marginTop: '24px'}}>
+                <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Forms</Typography>
+                <Fade in>
+                    <div style={{marginTop: "16px"}}>
+                        <Grid container direction={"row"} spacing={2}>
+                            {
+                                formInfo.map(value =>
+                                    <Grid item md={2} xs={6}>
+                                        <Link to={value.link}>
+                                            <Card>
+                                                <CardMedia image={value.image} sx={{height: "250px"}}/>
+                                                <CardContent>
+                                                    <Typography variant={"h5"}>{value.name}</Typography>
+                                                    <Typography variant="body2" color="text.secondary">
+                                                        {value.description}
+                                                    </Typography>
+                                                </CardContent>
+                                            </Card>
+                                        </Link>
+                                    </Grid>)
+                            }
+                            {/*    TODO Add link to gallery*/}
+                        </Grid>
                         {
-                            formInfo.map(value =>
-                                <Grid item md={2} xs={6}>
-                                    <Link to={value.link}>
-                                        <Card>
-                                            <CardMedia image={value.image} sx={{height: "250px"}}/>
-                                            <CardContent>
-                                                <Typography variant={"h5"}>{value.name}</Typography>
-                                                <Typography variant="body2" color="text.secondary">
-                                                    {value.description}
-                                                </Typography>
-                                            </CardContent>
-                                        </Card>
-                                    </Link>
-                                </Grid>)
+                            selectedForm === "" &&
+                            <Typography style={{fontStyle: "italic"}}>Click on an icon to read information about this
+                                form!</Typography>
                         }
-                        {/*    TODO Add link to gallery*/}
-                    </Grid>
-                    {
-                        selectedForm === "" &&
-                        <Typography style={{fontStyle: "italic"}}>Click on an icon to read information about this
-                            form!</Typography>
-                    }
-                </div>
-            </Fade>
-
-        </>
+                    </div>
+                </Fade>
+            </Container>
+        </NavigationRail>
     );
 }
 
