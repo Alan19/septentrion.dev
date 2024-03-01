@@ -10,7 +10,7 @@ import {SiteAppBar} from "./SiteAppBar";
 import {CssVarsProvider} from "@mui/material-next";
 import alcorForms from './components/alcor-forms/form-icons/alcor_forms.json'
 import {FormPage} from "./components/alcor-forms/FormPage";
-import {castorTheme} from "./Themes";
+import {alcorTheme} from "./Themes";
 
 export const theme = createTheme({
     palette: {
@@ -49,7 +49,7 @@ const router = createHashRouter([
     }
 ]);
 
-export const materialYouTheme = castorTheme;
+export const materialYouTheme = alcorTheme;
 function App() {
 
     return (

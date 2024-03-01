@@ -86,6 +86,7 @@ export const alcorTheme = extendTheme({
     },
 });
 alcorTheme.sys.color.surface = "#F9F9FF"
+alcorTheme.sys.color.surfaceContainerHigh = "#E7E8EE"
 export const castorTheme = extendTheme({
     ref: {
         palette: {
@@ -172,3 +173,4 @@ export const castorTheme = extendTheme({
     }
 })
 castorTheme.sys.color.surface = "#F5FAFB"
+castorTheme.sys.color.surfaceContainerHigh = "#E3E9EA"
