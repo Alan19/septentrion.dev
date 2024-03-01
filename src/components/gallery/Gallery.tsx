@@ -187,8 +187,8 @@ export function Gallery() {
                     </FilterDrawer>}
 
                 <Fade in>
-                    <div style={{display: "flex", marginTop: '24px'}}>
-                        <Container style={{flexGrow: 1}}>
+                    <div style={{display: "flex"}}>
+                        <Container style={{flexGrow: 1, marginTop: '24px'}}>
                             <IconButton
                                 color="inherit"
                                 aria-label="open drawer"

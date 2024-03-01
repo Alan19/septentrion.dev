@@ -20,7 +20,7 @@ export function AlcorForms() {
     const selectedForm: string | null = useLocation().pathname.split('/')[2]
     return (
         <NavigationRail>
-            <Container style={{marginTop: '24px'}}>
+            <Container style={{paddingTop: '24px'}}>
                 <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Forms</Typography>
                 <Fade in>
                     <div style={{marginTop: "16px"}}>
