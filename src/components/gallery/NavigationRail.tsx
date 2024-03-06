@@ -1,8 +1,8 @@
 import React from "react";
 import {BottomNavigation, BottomNavigationAction, Box, Divider, IconButton, Paper, Stack, useMediaQuery} from "@mui/material";
 import {materialYouTheme, theme} from "../../App";
-import {NavigationRailItem} from "./NavigationRailItem";
-import {Home} from "@mui/icons-material";
+import {NavigationRailLink} from "./NavigationRailLink";
+import {CollectionsOutlined, Home, HomeOutlined, PeopleOutline} from "@mui/icons-material";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDragon} from "@fortawesome/free-solid-svg-icons";
@@ -37,11 +37,13 @@ export function NavigationRail(props: {
                 minHeight: "100%",
                 backgroundColor: materialYouTheme.sys.color.surfaceContainerHigh
             }}>
-                <Stack className={"navigation-rail-stack"} spacing={3} style={{position: 'sticky', top: 0, alignSelf: 'start'}}>
-                    <NavigationRailItem button={<Home/>} label={"Home"} path={"/"}/>
-                    <NavigationRailItem button={<CollectionsIcon/>} label={"Gallery"} path={"/gallery"}/>
-                    <NavigationRailItem button={<FontAwesomeIcon icon={faDragon} style={{width: 24, height: 24}}/>} label={"Alcor's Forms"} path={"/alcor_forms"}/>
-                </Stack>
+                <div className={"navigation-rail-stack"} style={{position: 'sticky', top: 0, alignSelf: 'start', padding: '24px 8px 8px', height: '100vh', display: 'flex', flexDirection: 'column'}}>
+                    <Stack spacing={1} style={{flex: 1}}>
+                        <NavigationRailLink button={<HomeOutlined/>} label={"Home"} path={"/"}/>
+                        <NavigationRailLink button={<CollectionsOutlined/>} label={"Gallery"} path={"/gallery"}/>
+                        <NavigationRailLink button={<PeopleOutline/>} label={"Alcor's Forms"} path={"/alcor_forms"}/>
+                    </Stack>
+                </div>
                 {props.secondPanel && <><Divider orientation="vertical" variant="middle" flexItem/>{props.secondPanel}</>}
             </div>
             <div style={{flexGrow: 1}}>

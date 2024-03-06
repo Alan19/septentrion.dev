@@ -2173,8 +2173,7 @@
   {
     "title": "Chill Season / Painbrush",
     "artist": "@rn_mnrn",
-    "tags": [
-    ],
+    "tags": [],
     "href": "https://x.com/FaintAlcor/status/1742250182744637678?s=20",
     "published": "2024-01-02",
     "aspectRatio": 0.853219696969697,
@@ -2335,5 +2334,18 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/steampunk_sketch.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/steampunk_sketch.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/steampunk_sketch.png"
+  },
+  {
+    "title": "Alcor's Logos",
+    "artist": "@Null_Nostredar",
+    "tags": [
+      ""
+    ],
+    "href": "https://skeb.jp/@null_Vt/works/68",
+    "published": "2024-03-06",
+    "aspectRatio": 1,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_s_logos.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_s_logos.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_s_logos.jpg"
   }
 ]

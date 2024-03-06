@@ -9,7 +9,7 @@ export function Header() {
                 FaintAlcor
             </Typography>
             <Typography variant={"subtitle1"}>
-                Coding dragon-cougar hybrid doing his best!
+                Cougar-dragon software engineer doing his best!
             </Typography>
         </>
     );

@@ -28,6 +28,7 @@
     "aws-sdk": "^2.1541.0",
     "axios": "^1.6.5",
     "dayjs": "^1.11.10",
+    "lz-string": "^1.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-justified-layout-ts": "^1.0.6",

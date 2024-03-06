@@ -1,7 +1,9 @@
 import {Divider, Typography} from "@mui/material";
-import {CategoryOutlined, DryCleaningOutlined, Filter, PetsOutlined} from "@mui/icons-material";
+import {CategoryOutlined, Filter, PetsOutlined} from "@mui/icons-material";
 import React from "react";
 import {ArtTag} from "../ImageInformation";
+import {faMask} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export function FilterPaneContent(props: {
     filterCategories: (element: React.JSX.Element,
@@ -17,7 +19,7 @@ export function FilterPaneContent(props: {
             value.includes("Form")
         )}
         {props.filterCategories(
-            <DryCleaningOutlined/>,
+            <FontAwesomeIcon icon={faMask} style={{width: 24, height: 24}}/>,
             "Superhero Suits",
             (value) => value.includes("Suit")
         )}

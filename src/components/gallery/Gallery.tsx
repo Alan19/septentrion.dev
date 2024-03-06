@@ -19,6 +19,7 @@ import {OverridableStringUnion} from "@mui/types";
 import {NavigationRail} from "./NavigationRail";
 import {FilterPane, FilterPaneContent} from "./FilterPane";
 import {FilterDrawer} from "./FilterDrawer";
+import LZString from 'lz-string';
 
 export type TagState = {
     [tag in ArtTag]: number;
@@ -165,9 +166,6 @@ export function Gallery() {
     function getMonthsWhereImagesAreAvailable() {
         return getMonthYearPairsInImageSet(mainImages).size;
     }
-
-    let drawerWidth = 400;
-
     function handleDrawerToggle() {
         setIsDrawerOpen(true)
     }
@@ -176,6 +174,9 @@ export function Gallery() {
         setIsDrawerOpen(false)
     }
 
+    const encodedURL = LZString.compressToEncodedURIComponent(JSON.stringify(imagesOnPage.map(value => value.webp)));
+    console.log(encodedURL)
+    console.log(LZString.decompressFromEncodedURIComponent(encodedURL))
     return (
         <NavigationRail secondPanel={<FilterPane isMediumOrAbove={isMediumOrAbove} filterCategories={filterCategories}/>}>
             <>
@@ -223,8 +224,7 @@ export function Gallery() {
 
                                             <Grid item>
                                                 <FormControlLabel style={{marginBottom: "8px"}}
-                                                                  control={<Switch value={displayAll}
-                                                                                   onChange={(_event, checked) => setDisplayAll(checked)}/>}
+                                                                  control={<Switch value={displayAll} onChange={(_event, checked) => setDisplayAll(checked)}/>}
                                                                   label="Display all images on one page"/>
                                             </Grid>
                                             {
@@ -256,7 +256,6 @@ export function Gallery() {
                                                 hasAlts={altData.has(value.title)}/>)}
                                         </TSJustifiedLayout>
                                     }
-
                                 </Grid>
                             </Grid>
                             <Uploader loadImageInfo={loadImageInfo}/>

@@ -1,6 +1,5 @@
 import {Container, Fade, Grid, useMediaQuery} from "@mui/material";
 import {Summary} from "./Summary";
-import {CharacterImageGrid} from "./CharacterImageGrid";
 import {theme} from "../../App";
 import React from "react";
 import {NavigationRail} from "../gallery/NavigationRail";
@@ -8,7 +7,7 @@ import {NavigationRail} from "../gallery/NavigationRail";
 export function LinksPage() {
     return <NavigationRail>
         <Fade in={true}>
-            <Container maxWidth={"xl"}>
+            <Container>
                 <Grid
                     alignItems={"center"}
                     container
@@ -23,7 +22,7 @@ export function LinksPage() {
                         <Summary/>
                     </Grid>
                     <Grid item sm>
-                        <CharacterImageGrid/>
+                        <img width={'100%'} src={'company-logo-colored.png'} alt={'a blue circular with a stylized bow pointing upward and a knife pointing leftward'}/>
                     </Grid>
                 </Grid>
             </Container>
