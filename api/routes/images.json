@@ -2347,5 +2347,18 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_s_logos.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_s_logos.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_s_logos.jpg"
+  },
+  {
+    "title": "Pokemon Trainer",
+    "artist": "@kelvin_trainerk",
+    "tags": [
+      ""
+    ],
+    "href": "https://x.com/FaintAlcor/status/1768744985711591716?s=20",
+    "published": "2024-03-15",
+    "aspectRatio": 1.7777777777777777,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/pokemon_trainer.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pokemon_trainer.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/pokemon_trainer.jpg"
   }
 ]
