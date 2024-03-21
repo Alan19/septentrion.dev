@@ -21,7 +21,7 @@ export function AlcorForms() {
     return (
         <NavigationRail>
             <Container style={{paddingTop: '24px'}}>
-                <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Forms</Typography>
+                <Typography variant={"h3"} color={'var(--md-sys-color-primary)'} fontFamily={"Origin Tech"}>Alcor's Forms</Typography>
                 <Fade in>
                     <div style={{marginTop: "16px"}}>
                         <Grid container direction={"row"} spacing={2}>

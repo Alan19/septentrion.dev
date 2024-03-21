@@ -1,12 +1,14 @@
-import React from "react";
-import {BottomNavigation, BottomNavigationAction, Box, Divider, IconButton, Paper, Stack, useMediaQuery} from "@mui/material";
-import {materialYouTheme, theme} from "../../App";
+import React, {useContext, useState} from "react";
+import {BottomNavigation, BottomNavigationAction, Box, Dialog, DialogContent, DialogTitle, Divider, Grid, IconButton, Paper, Stack, Typography, useMediaQuery} from "@mui/material";
+import {AppThemeContext, theme} from "../../App";
 import {NavigationRailLink} from "./NavigationRailLink";
-import {CollectionsOutlined, Home, HomeOutlined, PeopleOutline} from "@mui/icons-material";
+import {CollectionsOutlined, Computer, DarkMode, Home, HomeOutlined, LightMode, PeopleOutline, Settings} from "@mui/icons-material";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDragon} from "@fortawesome/free-solid-svg-icons";
 import {Link, useLocation, useNavigate} from "react-router-dom";
+import {Button, useColorScheme} from "@mui/material-next";
+import {websiteThemes} from "../../Themes";
 
 function HomeButton() {
     const location = useLocation().pathname;
@@ -29,20 +31,53 @@ export function NavigationRail(props: {
     const navigateFunction = useNavigate();
     const mediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
     const location = useLocation().pathname;
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+    const handleClickOpen = () => {
+        setIsDialogOpen(true);
+    };
+
+    const handleClose = (value: string) => {
+        setIsDialogOpen(false);
+    };
+
+    const {mode, setMode} = useColorScheme();
+    const [appTheme, setAppTheme] = useContext(AppThemeContext);
+    const settingsDialog = <Dialog open={isDialogOpen} onClose={handleClose}>
+        <DialogTitle>Settings</DialogTitle>
+        <DialogContent>
+            <Typography variant={"h6"}>Palette</Typography>
+            <Grid container spacing={1} direction={"row"}>
+                {websiteThemes.map(value => <Grid item><Button variant={appTheme === value.name ? "filled" : "outlined"} onClick={() => setAppTheme(value.name)} startIcon={value.icon}>{value.name}</Button></Grid>)}
+            </Grid>
+            <Typography variant={"h6"}>Mode</Typography>
+            <Stack direction={"row"} spacing={1}>
+                <Button variant={mode === "light" ? "filled" : "outlined"} onClick={() => setMode('light')} startIcon={<LightMode/>}>Light</Button>
+                <Button variant={mode === "dark" ? "filled" : "outlined"} onClick={() => setMode('dark')} startIcon={<DarkMode/>}>Dark</Button>
+                <Button variant={mode === "system" ? "filled" : "outlined"} startIcon={<Computer/>} onClick={() => setMode('system')}>System</Button>
+            </Stack>
+
+        </DialogContent>
+    </Dialog>;
     if (mediumOrAbove) {
         return <Box style={{display: "flex", minHeight: '100vh'}}>
             <div style={{
                 display: "flex",
                 width: 'min-content',
                 minHeight: "100%",
-                backgroundColor: materialYouTheme.sys.color.surfaceContainerHigh
+                backgroundColor: 'var(--md-sys-color-surfaceVariant)'
             }}>
+                {settingsDialog}
                 <div className={"navigation-rail-stack"} style={{position: 'sticky', top: 0, alignSelf: 'start', padding: '24px 8px 8px', height: '100vh', display: 'flex', flexDirection: 'column'}}>
                     <Stack spacing={1} style={{flex: 1}}>
                         <NavigationRailLink button={<HomeOutlined/>} label={"Home"} path={"/"}/>
                         <NavigationRailLink button={<CollectionsOutlined/>} label={"Gallery"} path={"/gallery"}/>
                         <NavigationRailLink button={<PeopleOutline/>} label={"Alcor's Forms"} path={"/alcor_forms"}/>
                     </Stack>
+
+                    <div className={`navigation-rail-item`} style={{display: 'grid', alignItems: 'center'}}>
+                        <Button variant={"outlined"} onClick={handleClickOpen}><Settings/></Button>
+                    </div>
                 </div>
                 {props.secondPanel && <><Divider orientation="vertical" variant="middle" flexItem/>{props.secondPanel}</>}
             </div>
@@ -52,19 +87,22 @@ export function NavigationRail(props: {
         </Box>;
     } else {
         return <>
+            {settingsDialog}
             {props.children}
             <Paper style={{position: 'sticky', bottom: 0}} elevation={3}>
                 <BottomNavigation
                     showLabels
                     style={{marginTop: '16px'}}
                     value={location}
-                    onChange={(event, newValue) => {
+                    onChange={(_event, newValue) => {
                         navigateFunction(newValue)
                     }}
                 >
+                    {/*TODO Add current page indicator and unify buttons*/}
                     <BottomNavigationAction icon={<Home/>} label={"Home"} value={'/'}/>
-                    <BottomNavigationAction color={materialYouTheme.sys.color.primaryContainer} value={'/gallery'} label="Gallery" icon={<CollectionsIcon/>}/>
+                    <BottomNavigationAction color={'var(--md-sys-color-primaryContainer)'} value={'/gallery'} label="Gallery" icon={<CollectionsIcon/>}/>
                     <BottomNavigationAction label="Alcor's Forms" value={'/alcor_forms'} icon={<FontAwesomeIcon icon={faDragon} style={{width: 24, height: 24}}/>}/>
+                    <BottomNavigationAction label="Settings" icon={<Settings/>} onClick={handleClickOpen}></BottomNavigationAction>
                 </BottomNavigation>
             </Paper>
         </>

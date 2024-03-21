@@ -1,6 +1,6 @@
 import React, {MouseEventHandler, useEffect, useState} from "react";
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibraryOutlined';
-import {Skeleton} from "@mui/material";
+import {IconButton, Skeleton} from "@mui/material";
 
 export function GalleryImage(props: {
     src: string,
@@ -38,15 +38,16 @@ export function GalleryImage(props: {
     return isReady ?
         <div style={{position: "relative"}}>
             {
-                props.hasAlts && <PhotoLibraryIcon style={{
+                props.hasAlts &&
+                <IconButton style={{
                     position: "absolute",
                     right: "8px",
                     top: "8px",
-                    backgroundColor: "rgba(255, 255, 255, 0.5)",
-                    borderRadius: "8px"
-                }}/>
+                    backgroundColor: "color-mix(in srgb, var(--md-sys-color-secondary) 80%, transparent)"
+                }}>
+                    <PhotoLibraryIcon/>
+                </IconButton>
             }
-
             <img
                 src={props.src}
                 alt={props.title}

@@ -1,5 +1,4 @@
 import {Drawer} from "@mui/material";
-import {materialYouTheme} from "../../App";
 import React, {ReactEventHandler} from "react";
 
 export function FilterDrawer(props: {
@@ -23,7 +22,7 @@ export function FilterDrawer(props: {
             display: "flex",
             padding: '24px 16px 16px',
             flexDirection: 'column',
-            backgroundColor: materialYouTheme.sys.color.surfaceContainerHigh
+            backgroundColor: 'var(--md-sys-color-surfaceVariant)'
         }}>
             {props.children}
         </div>

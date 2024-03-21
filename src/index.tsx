@@ -1,22 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import {Website} from './App';
 import reportWebVitals from './reportWebVitals';
-import {CssBaseline} from "@mui/material";
 import {DevSupport} from "@react-buddy/ide-toolbox";
 import {ComponentPreviews, useInitial} from "./dev";
+import {CssBaseline} from "@mui/material";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
+
 root.render(
     <React.StrictMode>
         <CssBaseline/>
-        <DevSupport ComponentPreviews={ComponentPreviews}
-                    useInitialHook={useInitial}
-        >
-            <App/>
+        <DevSupport ComponentPreviews={ComponentPreviews} useInitialHook={useInitial}>
+            <Website/>
         </DevSupport>
     </React.StrictMode>
 );

@@ -2,7 +2,6 @@ import React from "react";
 import {OverridableStringUnion} from "@mui/types";
 import {ButtonPropsVariantOverrides} from "@mui/material/Button/Button";
 import {IconButton} from "@mui/material";
-import {materialYouTheme} from "../../App";
 
 interface SocialMediaProps {
     icon: React.ReactNode;
@@ -16,7 +15,7 @@ export function SocialMediaButton(props: SocialMediaProps) {
 
     return (
         <IconButton
-            style={{color: materialYouTheme.sys.color.primary}}
+            style={{color: 'var(--md-sys-color-primary)'}}
             target={"noreferrer noopener"}
             href={link}
         >

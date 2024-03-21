@@ -199,7 +199,7 @@ export function Gallery() {
                             >
                                 <MenuIcon/>
                             </IconButton>
-                            <Typography variant={"h3"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
+                            <Typography variant={"h3"} color={'var(--md-sys-color-primary)'} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
                             <GalleryDialog isOpen={isDialogOpen} currentImage={currentImage} closeModal={closeModal}
                                            alts={currentImage?.title !== undefined ? altData.get(currentImage.title) : undefined}/>
                             <Grid container direction={"column"} spacing={2}>

@@ -1,6 +1,6 @@
-import React from "react";
+import React, {createContext} from "react";
 import "./App.css";
-import {createTheme, ThemeProvider,} from "@mui/material";
+import {createTheme,} from "@mui/material";
 import {Gallery} from "./components/gallery/Gallery";
 import {createHashRouter, RouterProvider} from "react-router-dom";
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs'
@@ -10,7 +10,8 @@ import {SiteAppBar} from "./SiteAppBar";
 import {CssVarsProvider} from "@mui/material-next";
 import alcorForms from './components/alcor-forms/form-icons/alcor_forms.json'
 import {FormPage} from "./components/alcor-forms/FormPage";
-import {alcorTheme} from "./Themes";
+import {alcorTheme, AppTheme, websiteThemes} from "./Themes";
+import {useLocalStorage} from "./UseLocalStorage";
 
 export const theme = createTheme({
     palette: {
@@ -49,19 +50,25 @@ const router = createHashRouter([
     }
 ]);
 
-export const materialYouTheme = alcorTheme;
-function App() {
+// @ts-ignore
+export const AppThemeContext: React.Context<[AppTheme, (value: (((prevState: (AppTheme)) => (AppTheme)) | AppTheme)) => void]> = createContext(undefined);
 
+export function Website() {
+    const [appTheme, setAppTheme] = useLocalStorage('Alcor', 'appTheme');
+
+    return <CssVarsProvider theme={websiteThemes.find(value => value.name === appTheme)?.theme ?? alcorTheme}>
+        <AppThemeContext.Provider value={[appTheme, setAppTheme]}>
+            <App/>
+        </AppThemeContext.Provider>
+    </CssVarsProvider>;
+}
+
+function App() {
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <CssVarsProvider theme={materialYouTheme}>
-                <ThemeProvider theme={theme}>
-                    <div className="App"
-                         style={{backgroundColor: materialYouTheme.sys.color.surface, minHeight: "100vh"}}>
-                        <RouterProvider router={router}/>
-                    </div>
-                </ThemeProvider>
-            </CssVarsProvider>
+            <div className="App" style={{backgroundColor: 'var(--md-sys-color-surface)', minHeight: "100vh", color: 'var(--md-palette-text-primary)'}}>
+                <RouterProvider router={router}/>
+            </div>
         </LocalizationProvider>
     );
 }

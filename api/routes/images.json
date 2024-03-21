@@ -792,9 +792,7 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifewonders_beach_outfits.webp",
     "alts": [
       {
-        "tags": [
-          ""
-        ],
+        "tags": [],
         "href": "",
         "aspectRatio": 1.4067388688327316,
         "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/lifewonders_beach_outfits/0.webp",
@@ -2312,9 +2310,7 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangulum_combat_suit.png"
   },
   {
-    "tags": [
-      ""
-    ],
+    "tags": [],
     "href": "",
     "aspectRatio": 1.4067388688327316,
     "parent": "Lifewonders Beach Outfits",
@@ -2338,9 +2334,7 @@
   {
     "title": "Alcor's Logos",
     "artist": "@Null_Nostredar",
-    "tags": [
-      ""
-    ],
+    "tags": [],
     "href": "https://skeb.jp/@null_Vt/works/68",
     "published": "2024-03-06",
     "aspectRatio": 1,
@@ -2351,14 +2345,26 @@
   {
     "title": "Pokemon Trainer",
     "artist": "@kelvin_trainerk",
-    "tags": [
-      ""
-    ],
+    "tags": [],
     "href": "https://x.com/FaintAlcor/status/1768744985711591716?s=20",
     "published": "2024-03-15",
     "aspectRatio": 1.7777777777777777,
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/pokemon_trainer.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pokemon_trainer.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pokemon_trainer.jpg"
+  },
+  {
+    "title": "Eclipse Deity v2",
+    "artist": "@braveggg",
+    "tags": [
+      "Eclipse Deity",
+      "Lances"
+    ],
+    "href": "https://skeb.jp/@braveggg/works/5",
+    "published": "2024-03-20",
+    "aspectRatio": 0.8243310619910255,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/eclipse_deity_v2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/eclipse_deity_v2.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/eclipse_deity_v2.png"
   }
 ]
