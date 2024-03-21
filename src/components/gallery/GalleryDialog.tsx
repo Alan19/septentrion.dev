@@ -1,4 +1,4 @@
-import {Dialog, DialogContent, Divider, Grid, ImageList, ImageListItem, Typography, useMediaQuery} from "@mui/material";
+import {Dialog, DialogContent, Divider, Grid, IconButton, ImageList, ImageListItem, Typography, useMediaQuery} from "@mui/material";
 import dayjs from "dayjs";
 import React, {useEffect, useState} from "react";
 import {AltInformation, ImageInformation} from "../ImageInformation";
@@ -7,7 +7,10 @@ import "./gallery.css";
 import {Button} from "@mui/material-next";
 import Chip from "@mui/material-next/Chip";
 import AltsUploader from "./AltsUploader";
+import {theme} from "../../App";
+import {Close} from "@mui/icons-material";
 
+// TODO Refactor this component?
 export function GalleryDialog(props: {
     currentImage?: ImageInformation,
     closeModal: () => void,
@@ -56,9 +59,19 @@ export function GalleryDialog(props: {
         fullWidth={true}
         className={"gallery-dialog"}
         maxWidth={"xl"}
+        fullScreen={!useMediaQuery(theme.breakpoints.up("md"))}
     >
         <DialogContent>
-            <Grid container direction={isPortrait ? 'column' : 'row'} spacing={2}>
+            <IconButton
+                edge="start"
+                color="inherit"
+                onClick={props.closeModal}
+                aria-label="close"
+                style={{position: "absolute", left: '16px', top: '8px', backgroundColor: "color-mix(in srgb, var(--md-sys-color-secondary) 80%, transparent)"}}
+            >
+                <Close/>
+            </IconButton>
+            <Grid container style={{minHeight: '100%'}} direction={isPortrait ? 'column' : 'row'} spacing={2}>
                 {props.currentImage && (
                     <Grid
                         item
@@ -87,6 +100,7 @@ export function GalleryDialog(props: {
                 <Grid item sm xs={"auto"} style={{
                     display: "flex",
                     flexDirection: "column",
+                    flex: 1,
                     ...isPortrait ? portraitPadding : landscapePadding
                 }} className={"dialog-description"}>
                     <div>

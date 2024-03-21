@@ -1,8 +1,7 @@
-import {Card, CardContent, CardMedia, Container, Fade, Grid, Typography, useMediaQuery} from "@mui/material";
+import {Card, CardContent, CardMedia, Container, Fade, Grid, Typography} from "@mui/material";
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import './form-page.css'
-import {theme} from "../../App";
 import alcorForms from "./form-icons/alcor_forms.json"
 import {NavigationRail} from "../gallery/NavigationRail";
 
@@ -14,7 +13,6 @@ export function CharacterAttribute(props: { fieldName: String, fieldValue: Strin
 }
 
 export function AlcorForms() {
-    const isMediumOrUp = useMediaQuery(theme.breakpoints.up('md'));
     const formInfo: FormInformation[] = alcorForms;
 
     const selectedForm: string | null = useLocation().pathname.split('/')[2]

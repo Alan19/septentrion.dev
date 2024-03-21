@@ -13,6 +13,7 @@ import {FormPage} from "./components/alcor-forms/FormPage";
 import {alcorTheme, AppTheme, websiteThemes} from "./Themes";
 import {useLocalStorage} from "./UseLocalStorage";
 
+// TODO get rid of this
 export const theme = createTheme({
     palette: {
         primary: {
