@@ -2284,19 +2284,6 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/my_room.png"
   },
   {
-    "title": "Valentine's Day 2024",
-    "artist": "@Lavastan",
-    "tags": [
-      "Rastaban Form"
-    ],
-    "href": "https://x.com/Lavastan/status/1757444038263795761?s=20",
-    "published": "2024-02-13",
-    "aspectRatio": 1.4705882352941178,
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/valentine_s_day_2024.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/valentine_s_day_2024.webp",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/valentine_s_day_2024.jpg"
-  },
-  {
     "title": "Triangulum Combat Suit",
     "artist": "@neumokun",
     "tags": [
@@ -2366,5 +2353,43 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/eclipse_deity_v2.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/eclipse_deity_v2.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/eclipse_deity_v2.png"
+  },
+  {
+    "title": "High Schooler Sketch",
+    "artist": "@KuroPenguinEx",
+    "tags": [
+      "Rastaban Form",
+      "Hoodie"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1772635696072630361?s=20",
+    "published": "2024-03-26",
+    "aspectRatio": 0.7069555302166477,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/high_schooler_sketch.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/high_schooler_sketch.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/high_schooler_sketch.png"
+  },
+  {
+    "title": "Alcor Singlet",
+    "artist": "@Chirenbo",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://twitter.com/FaintAlcor/status/1773203071377572338",
+    "published": "2024-03-28",
+    "aspectRatio": 0.7587890625,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_singlet.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_singlet.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_singlet.jpg"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Sportswear Sketch",
+    "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/sportswear_sketch/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sportswear_sketch/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/sportswear_sketch/0.png"
   }
 ]
