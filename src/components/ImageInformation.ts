@@ -11,7 +11,7 @@ export enum ArtTag {
     hoodie = 'Hoodie',
     castor = 'Castor',
     aicore = 'AICore Form',
-    awakened = 'M⬡ Form',
+    awakened = 'Gemini Form',
     ultra = 'Triangulum Form',
     thuban = 'Thuban Form',
     rastaban = 'Rastaban Form',

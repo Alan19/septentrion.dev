@@ -5,7 +5,6 @@ import {GalleryImage} from "./GalleryImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {getMonthYearPairsInImageSet} from "./Gallery";
 
-
 function ChronologicalGallery(props: {
     displayedImages: ImageInformation[],
     width: number,
@@ -43,8 +42,7 @@ function ChronologicalGallery(props: {
         return strings.map(value => value.split("-")).map(value => value.map(Number));
     }
 
-    const months = ["January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"];
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     return <>
         {getMonthYearPairs().map((yearMonth) => {

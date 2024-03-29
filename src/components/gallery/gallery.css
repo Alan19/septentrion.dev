@@ -8,6 +8,7 @@ html {
     height: 100vh;
     top: 0;
     overflow-y: scroll;
+    width: min-content;
 }
 
 .navigation-rail-item:hover * {

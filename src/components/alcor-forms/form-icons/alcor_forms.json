@@ -36,7 +36,7 @@
     "body": "Alcor's form when combined with Castor. Its body is made of exotic matter, which infuses its flesh to create a fairly durable symbiote suit while still looking like skin. Faint particles gradually radiate off his body, creating a ghost-like effect, which is the basis for its short range teleportation ability. Its body also contains various tendrils composed of biomechanical mind-machine interfaces that allow him to interface and hack into machinery. These tendrils can be extended and retracted at will, but usually curl around his limbs by default. The form also sports a pair of clawed gauntlets that drastically enhances the force of its punches, while its claws can slice through light armor with ease. It also sports Castor's signature phantasmal butterfly wing augment, allowing for complex midair maneuvers."
   },
   {
-    "name": "M⬡ Form",
+    "name": "Gemini Form",
     "thumbnail": "/static/media/m-icon.08c42f1259b671182ed7.png",
     "link": "m",
     "description": "Alcor after being infused with Castor's exotic matter.",
@@ -51,12 +51,12 @@
     "name": "Triangulum Form",
     "thumbnail": "/static/media/triangulum-icon.c8cef234ff0629f3a536.png",
     "link": "triangulum",
-    "description": "An evolved form of M⬡ that sacrifices mobility for defence.",
+    "description": "An evolved form of Gemini that sacrifices mobility for defence.",
     "affinity": "Light",
     "weapons": "Clawed Energy Gauntlet, Triple Spiked Tails, and Laser Drones",
-    "history": "Alcor developed this form out of a curiosity to discover the limits of his and Castor's potential. This form is often used when there is an emergency, which usually ends up with Alcor shredding his clothes as his body rapidly evolves into this form. The bone and metal plating are influenced by Midnight Lycanroc and various steel type Pokemon, which greatly increases his defense. Alcor has a much wilder personality in this form, and acts slightly uninhibited as a result. Alcor is greatly impressed by how it combines the power of both M⬡ and AICore without having much drawbacks.",
+    "history": "Alcor developed this form out of a curiosity to discover the limits of his and Castor's potential. This form is often used when there is an emergency, which usually ends up with Alcor shredding his clothes as his body rapidly evolves into this form. The bone and metal plating are influenced by Midnight Lycanroc and various steel type Pokemon, which greatly increases his defense. Alcor has a much wilder personality in this form, and acts slightly uninhibited as a result. Alcor is greatly impressed by how it combines the power of both Gemini and AICore without having much drawbacks.",
     "height": "8'1\"",
-    "body": "Alcor's form when his body fully completely absorbs the energy from Castor's exotic matter while siphoning energy from variations of him in alternate universes. It sports a more dragonic snout and horns, as well as bone and metal plating on its body. The energy wings have also changed into a slightly more dragonic shape. The exotic matter circulation has also been changed to be managed through his horns, causing its eyes to glow blue. Its physical strength and size is much higher in this form, due to this form's having higher parameters in managing exotic matter. This form specializes in short and mid range defense. It sports three tails, which are even further enhanced compared to his M⬡ Form, with higher length and much sharper spikes that are designed to impale targets. Each tail also powers three drones each, which can fire lasers are distant targets to make it harder for them to approach. It also uses a pair of exotic matter clawed gauntlets to fight in close range.",
+    "body": "Alcor's form when his body fully completely absorbs the energy from Castor's exotic matter while siphoning energy from variations of him in alternate universes. It sports a more dragonic snout and horns, as well as bone and metal plating on its body. The energy wings have also changed into a slightly more dragonic shape. The exotic matter circulation has also been changed to be managed through his horns, causing its eyes to glow blue. Its physical strength and size is much higher in this form, due to this form's having higher parameters in managing exotic matter. This form specializes in short and mid range defense. It sports three tails, which are even further enhanced compared to his Gemini Form, with higher length and much sharper spikes that are designed to impale targets. Each tail also powers three drones each, which can fire lasers are distant targets to make it harder for them to approach. It also uses a pair of exotic matter clawed gauntlets to fight in close range.",
     "image": "https://alcorsiteartbucket.s3.amazonaws.com/triangulum_form.jpg"
   }
 ]

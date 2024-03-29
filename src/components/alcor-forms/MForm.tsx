@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 export function MForm() {
     return <Grid container spacing={4}>
         <Grid item md={7}>
-            <Typography variant={"h4"}>M⬡ Form</Typography>
+            <Typography variant={"h4"}>Gemini Form</Typography>
             <Typography variant={"body1"}>
                 Alcor's form when his body absorbs Castor's exotic matter using an alternate procedure. It does
                 not take on Castor's standard colors, but its eyes show signs of Castor's influence. While it
@@ -36,7 +36,7 @@ export function MForm() {
         </Grid>
         <Grid item md={5}>
             <img style={{width: "100%"}} src={"https://alcorsiteartbucket.s3.amazonaws.com/m6_form.jpg"}/>
-            <Link to={"/gallery?M⬡+Form=1"}>Click here to see more art!</Link>
+            <Link to={"/gallery?Gemini+Form=1"}>Click here to see more art!</Link>
         </Grid>
     </Grid>;
 }

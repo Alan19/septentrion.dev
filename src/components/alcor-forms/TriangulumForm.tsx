@@ -14,7 +14,7 @@ export function TriangulumForm() {
                 managed through his horns, causing its eyes to glow blue. Its physical strength and size is much
                 higher in this form, due to this form's having higher parameters in managing exotic matter. This
                 form specializes in short and mid range defense. It sports three tails, which are even further
-                enhanced compared to his M⬡ Form, with higher length and much sharper spikes that are designed
+                enhanced compared to his Gemini Form, with higher length and much sharper spikes that are designed
                 to impale targets. Each tail also powers three drones each, which can fire lasers are distant
                 targets to make it harder for them to approach. It also uses a pair of exotic matter clawed
                 gauntlets to fight in close range.
@@ -26,7 +26,7 @@ export function TriangulumForm() {
                 up with Alcor shredding his clothes as his body rapidly evolves into this form. The bone and
                 metal plating are influenced by Midnight Lycanroc and various steel type Pokemon, which greatly
                 increases his defense. Alcor has a much wilder personality in this form, and acts slightly
-                uninhibited as a result. Alcor is greatly impressed by how it combines the power of both M⬡ and
+                uninhibited as a result. Alcor is greatly impressed by how it combines the power of both Gemini and
                 AICore without having much drawbacks.
             </Typography>
             <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
