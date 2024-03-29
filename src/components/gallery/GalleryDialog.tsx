@@ -138,7 +138,7 @@ export function GalleryDialog(props: {
                                 onClick={() => handleAltImageClick(index)}
                                 className={"dialog-image"}
                                 style={{width: "100%"}}
-                                src={value.thumbnail ?? value.webp ?? value.src}/></ImageListItem>)}
+                                src={value.thumbnailUrl ?? value.webp ?? value.src}/></ImageListItem>)}
                         </ImageList>
                     </>}
                     {props.currentImage?.published && (

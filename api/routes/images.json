@@ -795,7 +795,7 @@
         "tags": [],
         "href": "",
         "aspectRatio": 1.4067388688327316,
-        "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/lifewonders_beach_outfits/0.webp",
+        "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/lifewonders_beach_outfits/0.webp",
         "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifewonders_beach_outfits/0.webp",
         "src": "https://alcorsiteartbucket.s3.amazonaws.com/lifewonders_beach_outfits/0.png"
       }
@@ -1183,7 +1183,7 @@
     ],
     "href": "https://twitter.com/FaintAlcor/status/1651429737078697984",
     "aspectRatio": 2.4143518518518516,
-    "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_body_study_sketchpage/0.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_body_study_sketchpage/0.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_body_study_sketchpage/0.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_body_study_sketchpage/0.png"
   },
@@ -1194,7 +1194,7 @@
     ],
     "href": "https://twitter.com/FaintAlcor/status/1651429737078697984",
     "aspectRatio": 0.6283783783783784,
-    "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_body_study_sketchpage/1.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_body_study_sketchpage/1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_body_study_sketchpage/1.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_body_study_sketchpage/1.png"
   },
@@ -1205,7 +1205,7 @@
     ],
     "href": "https://twitter.com/FaintAlcor/status/1651429737078697984",
     "aspectRatio": 0.5124260355029586,
-    "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_body_study_sketchpage/2.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_body_study_sketchpage/2.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_body_study_sketchpage/2.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_body_study_sketchpage/2.png"
   },
@@ -1216,7 +1216,7 @@
     ],
     "href": "https://twitter.com/FaintAlcor/status/1651429737078697984",
     "aspectRatio": 0.7501163331782225,
-    "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_body_study_sketchpage/3.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_body_study_sketchpage/3.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_body_study_sketchpage/3.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_body_study_sketchpage/3.png"
   },
@@ -2150,7 +2150,7 @@
     ],
     "href": "https://x.com/FaintAlcor/status/1740055458570703214?s=20",
     "aspectRatio": 0.7069555302166477,
-    "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/winter_fashion_sketch/0.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/winter_fashion_sketch/0.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/winter_fashion_sketch/0.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/winter_fashion_sketch/0.png"
   },
@@ -2266,7 +2266,7 @@
     ],
     "href": "",
     "aspectRatio": 0.7069555302166477,
-    "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/farmer_sketch/0.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/farmer_sketch/0.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/farmer_sketch/0.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/farmer_sketch/0.png"
   },
@@ -2301,7 +2301,7 @@
     "href": "",
     "aspectRatio": 1.4067388688327316,
     "parent": "Lifewonders Beach Outfits",
-    "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/lifewonders_beach_outfits/0.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/lifewonders_beach_outfits/0.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifewonders_beach_outfits/0.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/lifewonders_beach_outfits/0.png"
   },
@@ -2388,7 +2388,7 @@
     "href": "",
     "aspectRatio": 0.7069555302166477,
     "parent": "Sportswear Sketch",
-    "thumbnail": "https://alcorsiteartbucket.s3.amazonaws.com/600h/sportswear_sketch/0.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/sportswear_sketch/0.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sportswear_sketch/0.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/sportswear_sketch/0.png"
   }

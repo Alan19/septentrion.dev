@@ -50,7 +50,7 @@ export type ImageInformation = {
 export type AltInformation = {
     webp?: string;
     src: string;
-    thumbnail?: string;
+    thumbnailUrl?: string;
     aspectRatio?: number;
     href?: string;
     tags?: string[];

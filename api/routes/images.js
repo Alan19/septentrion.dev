@@ -25,7 +25,9 @@ router.get('/', function (req, res, next) {
   const queryParams = req.query;
   const hidden = JSON.parse(fs.readFileSync(path.resolve(__dirname, './hidden.json'), 'utf-8'));
   let images = JSON.parse(fs.readFileSync(path.resolve(__dirname, './images.json'), 'utf-8'));
-  res.send([...images, ...hidden].filter(image => doesParameterContainTag(image, queryParams)))
+  const combinedImages = [...images, ...hidden];
+  const sentImages = combinedImages.filter(image => !Object.keys(image).includes("parent") && doesParameterContainTag(image, queryParams));
+  res.send(sentImages.concat(combinedImages.filter(image => Object.keys(image).includes("parent") && sentImages.map(sentImage => sentImage.title).includes(image.parent))))
 });
 
 module.exports = router;

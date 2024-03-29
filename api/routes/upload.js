@@ -44,23 +44,26 @@ router.post('/', upload.single('image'), async (req, res) => {
         aspectRatio: metadata.width / metadata.height
     };
 
+    const isGif = file.mimetype === "image/gif";
     if (metadata.height > 600) {
         const compressedParams = {
             Bucket: process.env.BUCKET_NAME,
-            Key: `600h/${convertToSnakeCase(title)}.webp`,
-            Body: sharp(file.buffer).resize({height: 600}).webp(),
+            Key: `600h/${convertToSnakeCase(title)}.${isGif ? 'gif' : 'webp'}`,
+            Body: sharp(file.buffer).resize({height: 600}).toFormat(isGif ? 'gif' : 'webp'),
             ContentType: file.mimetype
         }
         jsonOutput['thumbnailUrl'] = (await s3.upload(compressedParams).promise()).Location;
     }
 
-    const webpParams = {
-        Bucket: process.env.BUCKET_NAME,
-        Key: `webp/${convertToSnakeCase(title)}.webp`,
-        Body: sharp(file.buffer).webp(),
-        ContentType: file.mimetype
+    if (!isGif) {
+        const webpParams = {
+            Bucket: process.env.BUCKET_NAME,
+            Key: `webp/${convertToSnakeCase(title)}.webp`,
+            Body: sharp(file.buffer).webp(),
+            ContentType: file.mimetype
+        }
+        jsonOutput['webp'] = (await s3.upload(webpParams).promise()).Location;
     }
-    jsonOutput['webp'] = (await s3.upload(webpParams).promise()).Location;
 
 
     const params = {
@@ -90,29 +93,34 @@ router.post('/alt', upload.single('image'), async (req, res) => {
     const sharpBuffer = sharp(file.buffer);
     const metadata = await sharpBuffer.metadata();
     const jsonOutput = {
+        // Inherit the original's tags if it's blank
         tags: tags.split(',').map(tag => tag.trim()),
         href: href,
         aspectRatio: metadata.width / metadata.height,
         parent: imageName
     };
 
+    const isGif = file.mimetype === "image/gif";
     if (metadata.height > 600) {
         const compressedParams = {
             Bucket: process.env.BUCKET_NAME,
-            Key: `600h/${convertToSnakeCase(imageName)}/${numberOfAlts}.webp`,
-            Body: sharp(file.buffer).resize({height: 600}).webp(),
+            Key: `600h/${convertToSnakeCase(imageName)}/${numberOfAlts}.${isGif ? 'gif' : 'webp'}`,
+            Body: sharp(file.buffer).resize({height: 600}).toFormat(isGif ? 'gif' : 'webp'),
             ContentType: file.mimetype
         }
-        jsonOutput['thumbnail'] = (await s3.upload(compressedParams).promise()).Location;
+        // TODO Unify names
+        jsonOutput['thumbnailUrl'] = (await s3.upload(compressedParams).promise()).Location;
     }
 
-    const webpParams = {
-        Bucket: process.env.BUCKET_NAME,
-        Key: `webp/${convertToSnakeCase(imageName)}/${numberOfAlts}.webp`,
-        Body: sharp(file.buffer).webp(),
-        ContentType: file.mimetype
+    if (!isGif) {
+        const webpParams = {
+            Bucket: process.env.BUCKET_NAME,
+            Key: `webp/${convertToSnakeCase(imageName)}/${numberOfAlts}.${isGif ? 'gif' : 'webp'}`,
+            Body: sharp(file.buffer).toFormat(isGif ? 'gif' : 'webp'),
+            ContentType: file.mimetype
+        }
+        jsonOutput['webp'] = (await s3.upload(webpParams).promise()).Location;
     }
-    jsonOutput['webp'] = (await s3.upload(webpParams).promise()).Location;
 
 
     const params = {
@@ -132,7 +140,7 @@ function addAltToJson(jsonOutput) {
     fs.readFile(path.resolve(__dirname, fileToWriteTo), (err, data) => {
         let images = JSON.parse(data);
         images.push(jsonOutput)
-        fs.writeFileSync(path.resolve(__dirname, fileToWriteTo), JSON.stringify(images));
+        fs.writeFileSync(path.resolve(__dirname, fileToWriteTo), JSON.stringify(images, null, 2));
     });
 }
 
