@@ -41,6 +41,9 @@ export function AlcorLoreDrawer() {
 
     return <>
         <List style={{width: 'max-content', paddingLeft: 8, paddingRight: 8}}>
+            <ListItem>
+                <ListItemText secondary={"Into the Alcorverse"}/>
+            </ListItem>
             {getListItemButton('', "Alcor's World")}
             {getListItemButton('bio-enhancement', "Bio-Enhancement")}
             <ListItemButton style={{borderRadius}} onClick={handleClick}>
@@ -57,7 +60,7 @@ export function AlcorLoreDrawer() {
             </ListItemButton>
             <Divider color={"--md-sys-color-onSurfaceVariant"} variant={"middle"}/>
             <ListItem>
-                <ListItemText secondary={"Other OCs"}/>
+                <ListItemText secondary={"TTRPG Characters"}/>
             </ListItem>
             <ListItemButton>
                 <ListItemText primary={"Soma"}/>

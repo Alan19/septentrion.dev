@@ -9,7 +9,7 @@ export function AlcorWorldInfo() {
                 <Grid item>
                     <Typography variant={"body1"}>
                         Alcor is a coguar-dragon hybrid with telekinetic powers who lives in [REDACTED] City in the year 2601. In this time period, the world has solved most of its problems, and most settlements effortlessly combine
-                        high-tech amenities with abundant natural landscapes. While this means that most places are peaceful and wonderful places to live [REDACTED] City offers thrilling adventures for risk-takers who want to hone their
+                        high-tech amenities with abundant natural landscapes. While this means that most places are peaceful and wonderful places to live, [REDACTED] City offers thrilling adventures for risk-takers who want to hone their
                         fighting skills. The city experiences sporadic kaiju attacks, has an active underground street brawling culture, and has a highly traversable layout for parkour enthusiasts.
                     </Typography>
                 </Grid>
