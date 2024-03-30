@@ -1,4 +1,4 @@
-import {FormInformation} from "../AlcorForms";
+import {FormInformation} from "../FormPage";
 
 export const alcorForms: FormInformation[] = [
     {

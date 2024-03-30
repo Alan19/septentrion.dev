@@ -7,6 +7,7 @@ import {useLocation, useNavigate} from "react-router-dom";
 import {alcorForms} from "./form-icons/alcorForms";
 
 export function AlcorLoreDrawer() {
+    // TODO Fix height on mobile version
     const [open, setOpen] = React.useState(false);
     const navigate = useNavigate();
     const location = useLocation().pathname;
@@ -26,26 +27,29 @@ export function AlcorLoreDrawer() {
         };
     }
 
+    function getListItemButton(link: string, text: string, indentation = 0, avatarSrc?: string) {
+        const sx = indentation !== 0 ? {pl: indentation} : {};
+        return <ListItemButton style={getLinkButtonStyle(link)} {...{sx}} onClick={() => navigate(link)}>
+            {avatarSrc &&
+                <ListItemAvatar>
+                    <Avatar src={avatarSrc}/>
+                </ListItemAvatar>
+            }
+            <ListItemText primary={text}/>
+        </ListItemButton>;
+    }
+
     return <>
         <List style={{width: 'max-content', paddingLeft: 8, paddingRight: 8}}>
-            <ListItem>
-                <ListItemText secondary={"Alcor's World"}/>
-            </ListItem>
+            {getListItemButton('', "Alcor's World")}
+            {getListItemButton('bio-enhancement', "Bio-Enhancement")}
             <ListItemButton style={{borderRadius}} onClick={handleClick}>
                 <ListItemText primary={"Alternate Formes"}/>
                 {open ? <ExpandLess/> : <ExpandMore/>}
             </ListItemButton>
             <Collapse in={open} timeout="auto">
-                <ListItemButton style={getLinkButtonStyle()} onClick={() => navigate('')}>
-                    <ListItemText primary={"Introduction"}/>
-                </ListItemButton>
                 <List component="div" disablePadding>
-                    {alcorForms.map(value => <ListItemButton style={getLinkButtonStyle(value.link)} sx={{pl: 4}} onClick={() => navigate(value.link)}>
-                        <ListItemAvatar>
-                            <Avatar src={value.thumbnail}/>
-                        </ListItemAvatar>
-                        <ListItemText primary={value.name}/>
-                    </ListItemButton>)}
+                    {alcorForms.map(value => getListItemButton(value.link, value.name, 4, value.thumbnail))}
                 </List>
             </Collapse>
             <ListItemButton>

@@ -1,6 +1,6 @@
 import {Divider, Grid, Stack, Typography} from "@mui/material";
 import React from "react";
-import {CharacterAttribute} from "./AlcorForms";
+import {CharacterAttribute} from "./AboutPage";
 
 export function TriangulumForm() {
     return <Grid container spacing={4}>
@@ -32,8 +32,7 @@ export function TriangulumForm() {
             <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
             <Stack direction={"column"} spacing={1}>
                 <CharacterAttribute fieldName={"Height"} fieldValue={"8'1\""}/>
-                <CharacterAttribute fieldName={"Weapons"}
-                                    fieldValue={"Exotic Energy Gauntlet, Triple Spiked Tails, and Laser Drones"}/>
+                <CharacterAttribute fieldName={"Weapons"} fieldValue={"Exotic Energy Gauntlet, Triple Spiked Tails, and Laser Drones"}/>
                 <CharacterAttribute fieldName={"Affinity"} fieldValue={"Light"}/>
             </Stack>
         </Grid>

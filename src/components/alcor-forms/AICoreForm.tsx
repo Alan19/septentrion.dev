@@ -1,11 +1,10 @@
 import {Divider, Grid, Stack, Typography} from "@mui/material";
 import React from "react";
-import {CharacterAttribute} from "./AlcorForms";
+import {CharacterAttribute} from "./AboutPage";
 
 export function AICoreForm() {
     return <Grid container spacing={4}>
         <Grid item md={7}>
-            <Typography variant={"h4"}>AICore Form</Typography>
             <Typography variant={"body1"}>
                 Alcor's form when combined with Castor. Its body is made of exotic matter, which infuses its
                 flesh to create a fairly durable symbiote suit while still looking like skin. Faint particles

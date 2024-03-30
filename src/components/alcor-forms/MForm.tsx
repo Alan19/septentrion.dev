@@ -1,6 +1,6 @@
 import {Divider, Grid, Stack, Typography} from "@mui/material";
 import React from "react";
-import {CharacterAttribute} from "./AlcorForms";
+import {CharacterAttribute} from "./AboutPage";
 import {Link} from "react-router-dom";
 
 export function MForm() {

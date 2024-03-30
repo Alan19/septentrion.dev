@@ -5,14 +5,15 @@ import {Gallery} from "./components/gallery/Gallery";
 import {createHashRouter, RouterProvider} from "react-router-dom";
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs'
 import {LocalizationProvider} from "@mui/x-date-pickers";
-import {AlcorForms} from "./components/alcor-forms/AlcorForms";
+import {AboutPage} from "./components/alcor-forms/AboutPage";
 import {SiteAppBar} from "./SiteAppBar";
 import {CssVarsProvider} from "@mui/material-next";
 import {FormPage} from "./components/alcor-forms/FormPage";
 import {alcorTheme, AppTheme, websiteThemes} from "./Themes";
 import {useLocalStorage} from "./UseLocalStorage";
-import {AlcorFormIntro} from "./components/alcor-forms/AlcorFormIntro";
+import {BioEnhancementIntro} from "./components/alcor-forms/BioEnhancementIntro";
 import {alcorForms} from "./components/alcor-forms/form-icons/alcorForms";
+import {AlcorWorldInfo} from "./components/alcor-forms/AlcorWorldInfo";
 
 // TODO get rid of this
 export const theme = createTheme({
@@ -40,7 +41,7 @@ const router = createHashRouter([
             },
             {
                 path: "about",
-                element: <AlcorForms/>,
+                element: <AboutPage/>,
                 children: [
                     ...alcorForms.map(value => ({
                         path: `${value.link}`,
@@ -48,7 +49,11 @@ const router = createHashRouter([
                     })),
                     {
                         path: '',
-                        element: <AlcorFormIntro/>
+                        element: <AlcorWorldInfo/>
+                    },
+                    {
+                        path: 'bio-enhancement',
+                        element: <BioEnhancementIntro/>
                     }
                 ]
             },

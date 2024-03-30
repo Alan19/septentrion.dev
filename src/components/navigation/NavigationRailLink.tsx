@@ -7,8 +7,9 @@ export function NavigationRailLink(props: { button: React.ReactNode, label: stri
     const location = useLocation().pathname;
     const navigate = useNavigate();
     const topLevelPath = (location.match(/^\/[^\/]*/) ?? [''])[0];
-    return <div className={`navigation-rail-item ${topLevelPath === props.path && "selected-rail-item"}`} onClick={() => navigate(props.path)} style={{display: 'grid', alignItems: 'center'}}>
-        <Button variant={topLevelPath === props.path ? "filledTonal" : "text"}>{props.button}</Button>
-        <Typography style={{textAlign: "center"}} variant={"subtitle2"} className={'navigation-rail-text'}>{props.label}</Typography>
+    const {path, button, label} = props;
+    return <div className={`navigation-rail-item ${topLevelPath === path && "selected-rail-item"}`} onClick={() => navigate(path)} style={{display: 'grid', alignItems: 'center'}}>
+        <Button variant={topLevelPath === path ? "filledTonal" : "text"}>{button}</Button>
+        <Typography style={{textAlign: "center"}} variant={"subtitle2"} className={'navigation-rail-text'}>{label}</Typography>
     </div>;
 }

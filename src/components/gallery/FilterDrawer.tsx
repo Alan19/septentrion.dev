@@ -22,7 +22,7 @@ export function FilterDrawer(props: {
             display: "flex",
             padding: '24px 16px 16px',
             flexDirection: 'column',
-            backgroundColor: 'var(--md-sys-color-surfaceVariant)'
+            backgroundColor: 'var(--md-sys-color-surfaceVariant)',
         }}>
             {props.children}
         </div>

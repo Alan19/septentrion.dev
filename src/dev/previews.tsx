@@ -1,7 +1,7 @@
 import React from "react";
 import {ComponentPreview, Previews} from "@react-buddy/ide-toolbox";
 import {PaletteTree} from "./palette";
-import {AlcorForms} from "../components/alcor-forms/AlcorForms";
+import {AboutPage} from "../components/alcor-forms/AboutPage";
 import App from "../App";
 import {LinksPage} from "../components/links/LinksPage";
 import {AquariusForm} from "../components/alcor-forms/AquariusForm";
@@ -10,8 +10,8 @@ import {SiteAppBar} from "../SiteAppBar";
 const ComponentPreviews = () => {
     return (
         <Previews palette={<PaletteTree/>}>
-            <ComponentPreview path="/AlcorForms">
-                <AlcorForms/>
+            <ComponentPreview path="/AboutPage">
+                <AboutPage/>
             </ComponentPreview>
             <ComponentPreview path="/App">
                 <App/>
