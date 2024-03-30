@@ -33,8 +33,8 @@ export function SocialsLinks() {
 
             <Stack marginTop={2} spacing={1}>
                 <InternalLinkButton icon={<CollectionsIcon/>} text={"Gallery"} link={'/gallery?Featured=1'}/>
-                <InternalLinkButton icon={<FontAwesomeIcon icon={faDragon}/>} text={"Alcor's Forms"}
-                                    link={'/alcor_forms'}/>
+                <InternalLinkButton icon={<FontAwesomeIcon icon={faDragon}/>} text={"About"}
+                                    link={'/alcorForms'}/>
             </Stack>
         </>
     );

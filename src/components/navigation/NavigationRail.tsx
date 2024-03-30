@@ -1,24 +1,14 @@
 import React, {useContext, useState} from "react";
-import {BottomNavigation, BottomNavigationAction, Box, Dialog, DialogContent, DialogTitle, Divider, Grid, IconButton, Paper, Stack, Typography, useMediaQuery} from "@mui/material";
+import {BottomNavigation, BottomNavigationAction, Box, Dialog, DialogContent, DialogTitle, Divider, Grid, Paper, Stack, Typography, useMediaQuery} from "@mui/material";
 import {AppThemeContext, theme} from "../../App";
 import {NavigationRailLink} from "./NavigationRailLink";
 import {CollectionsOutlined, Computer, DarkMode, Home, HomeOutlined, LightMode, PeopleOutline, Settings} from "@mui/icons-material";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDragon} from "@fortawesome/free-solid-svg-icons";
-import {Link, useLocation, useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import {Button, useColorScheme} from "@mui/material-next";
 import {websiteThemes} from "../../Themes";
-
-function HomeButton() {
-    const location = useLocation().pathname;
-    return location !== '/' &&
-        <Link to={"/"} style={{marginTop: "16px"}}>
-            <IconButton>
-                <Home/>
-            </IconButton>
-        </Link>;
-}
 
 /**
  * Higher order component that injects a navigation rail or bottom navigation into the child component
@@ -63,16 +53,15 @@ export function NavigationRail(props: {
         return <Box style={{display: "flex", minHeight: '100vh'}}>
             <div style={{
                 display: "flex",
-                width: 'min-content',
                 minHeight: "100%",
-                backgroundColor: 'var(--md-sys-color-surfaceVariant)'
+                backgroundColor: 'var(--md-sys-color-surfaceContainerHigh)'
             }}>
                 {settingsDialog}
-                <div className={"navigation-rail-stack"} style={{position: 'sticky', top: 0, alignSelf: 'start', padding: '24px 8px 8px', height: '100vh', display: 'flex', flexDirection: 'column'}}>
+                <div className={"navigation-rail-stack"} style={{position: 'sticky', top: 0, alignSelf: 'start', padding: '24px 8px 8px', height: '100vh', display: 'flex', flexDirection: 'column', width: "min-content"}}>
                     <Stack spacing={1} style={{flex: 1}}>
                         <NavigationRailLink button={<HomeOutlined/>} label={"Home"} path={"/"}/>
                         <NavigationRailLink button={<CollectionsOutlined/>} label={"Gallery"} path={"/gallery"}/>
-                        <NavigationRailLink button={<PeopleOutline/>} label={"Alcor's Forms"} path={"/alcor_forms"}/>
+                        <NavigationRailLink button={<PeopleOutline/>} label={"About"} path={"/about"}/>
                     </Stack>
 
                     <div className={`navigation-rail-item`} style={{display: 'grid', alignItems: 'center'}}>
@@ -101,7 +90,7 @@ export function NavigationRail(props: {
                     {/*TODO Add current page indicator and unify buttons*/}
                     <BottomNavigationAction icon={<Home/>} label={"Home"} value={'/'}/>
                     <BottomNavigationAction color={'var(--md-sys-color-primaryContainer)'} value={'/gallery'} label="Gallery" icon={<CollectionsIcon/>}/>
-                    <BottomNavigationAction label="Alcor's Forms" value={'/alcor_forms'} icon={<FontAwesomeIcon icon={faDragon} style={{width: 24, height: 24}}/>}/>
+                    <BottomNavigationAction label="About" value={'/about'} icon={<FontAwesomeIcon icon={faDragon} style={{width: 24, height: 24}}/>}/>
                     <BottomNavigationAction label="Settings" icon={<Settings/>} onClick={handleClickOpen}></BottomNavigationAction>
                 </BottomNavigation>
             </Paper>

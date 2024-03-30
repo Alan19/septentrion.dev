@@ -2,7 +2,7 @@ import {Container, Fade, Grid, useMediaQuery} from "@mui/material";
 import {Summary} from "./Summary";
 import {theme} from "../../App";
 import React from "react";
-import {NavigationRail} from "../gallery/NavigationRail";
+import {NavigationRail} from "../navigation/NavigationRail";
 
 export function LinksPage() {
     return <NavigationRail>

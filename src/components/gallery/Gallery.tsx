@@ -16,7 +16,7 @@ import {GalleryImage} from "./GalleryImage";
 import {GalleryDialog} from "./GalleryDialog";
 import {ChipPropsColorOverrides} from "@mui/material-next/Chip/Chip.types";
 import {OverridableStringUnion} from "@mui/types";
-import {NavigationRail} from "./NavigationRail";
+import {NavigationRail} from "../navigation/NavigationRail";
 import {FilterPane, FilterPaneContent} from "./FilterPane";
 import {FilterDrawer} from "./FilterDrawer";
 import LZString from 'lz-string';
@@ -175,8 +175,6 @@ export function Gallery() {
     }
 
     const encodedURL = LZString.compressToEncodedURIComponent(JSON.stringify(imagesOnPage.map(value => value.webp)));
-    console.log(encodedURL)
-    console.log(LZString.decompressFromEncodedURIComponent(encodedURL))
     return (
         <NavigationRail secondPanel={<FilterPane isMediumOrAbove={isMediumOrAbove} filterCategories={filterCategories}/>}>
             <>

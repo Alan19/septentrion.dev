@@ -8,10 +8,11 @@ import {LocalizationProvider} from "@mui/x-date-pickers";
 import {AlcorForms} from "./components/alcor-forms/AlcorForms";
 import {SiteAppBar} from "./SiteAppBar";
 import {CssVarsProvider} from "@mui/material-next";
-import alcorForms from './components/alcor-forms/form-icons/alcor_forms.json'
 import {FormPage} from "./components/alcor-forms/FormPage";
 import {alcorTheme, AppTheme, websiteThemes} from "./Themes";
 import {useLocalStorage} from "./UseLocalStorage";
+import {AlcorFormIntro} from "./components/alcor-forms/AlcorFormIntro";
+import {alcorForms} from "./components/alcor-forms/form-icons/alcorForms";
 
 // TODO get rid of this
 export const theme = createTheme({
@@ -38,15 +39,20 @@ const router = createHashRouter([
                 element: <Gallery/>
             },
             {
-                path: "alcor_forms",
+                path: "about",
                 element: <AlcorForms/>,
+                children: [
+                    ...alcorForms.map(value => ({
+                        path: `${value.link}`,
+                        element: <FormPage formInformation={value}/>
+                    })),
+                    {
+                        path: '',
+                        element: <AlcorFormIntro/>
+                    }
+                ]
             },
-            ...alcorForms.map(value => {
-                return {
-                    path: `alcor_forms/${value.link}`,
-                    element: <FormPage formInformation={value}/>
-                }
-            })
+
         ]
     }
 ]);
