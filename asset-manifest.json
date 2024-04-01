@@ -1,26 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd1a003d.css",
-    "main.js": "/static/js/main.6562e292.js",
+    "main.css": "/static/css/main.9c2bccac.css",
+    "main.js": "/static/js/main.e4ea7e8e.js",
     "static/js/488.9598de75.chunk.js": "/static/js/488.9598de75.chunk.js",
-    "static/js/259.07e6025e.chunk.js": "/static/js/259.07e6025e.chunk.js",
+    "static/js/259.a1720cd3.chunk.js": "/static/js/259.a1720cd3.chunk.js",
     "static/js/605.01c3fccf.chunk.js": "/static/js/605.01c3fccf.chunk.js",
+    "static/media/eclipse-deity-transparent.webp": "/static/media/eclipse-deity-transparent.9b282f7470eae481dc13.webp",
+    "static/media/superhero-artwork.png": "/static/media/superhero-artwork.cb8b676c8307979eabc3.png",
+    "static/media/m-icon.png": "/static/media/m-icon.510aa3c45a04526e6de3.png",
     "static/media/aicore-icon.png": "/static/media/aicore-icon.c5898546c9e9deded577.png",
+    "static/media/aquarius-splash-art.png": "/static/media/aquarius-splash-art.dc869b9aafb4e6293c0c.png",
+    "static/media/castor-evolved.png": "/static/media/castor-evolved.53be8485a94a56f310b7.png",
     "static/media/aquarius-icon.png": "/static/media/aquarius-icon.a0b6b682c61adb4f2255.png",
+    "static/media/castor.png": "/static/media/castor.3b2696a2ea37c9257c07.png",
     "static/media/triangulum-icon.png": "/static/media/triangulum-icon.c8cef234ff0629f3a536.png",
-    "static/media/m-icon.png": "/static/media/m-icon.08c42f1259b671182ed7.png",
     "static/media/jupiter-icon.png": "/static/media/jupiter-icon.1b0fdc838877c442e3d1.png",
     "static/media/OriginTech personal use.otf": "/static/media/OriginTech personal use.d5292de74bba42b8d98b.otf",
     "static/media/OriginTech personal use.ttf": "/static/media/OriginTech personal use.91ec04328d7a9da85f53.ttf",
     "index.html": "/index.html",
-    "main.fd1a003d.css.map": "/static/css/main.fd1a003d.css.map",
-    "main.6562e292.js.map": "/static/js/main.6562e292.js.map",
+    "main.9c2bccac.css.map": "/static/css/main.9c2bccac.css.map",
+    "main.e4ea7e8e.js.map": "/static/js/main.e4ea7e8e.js.map",
     "488.9598de75.chunk.js.map": "/static/js/488.9598de75.chunk.js.map",
-    "259.07e6025e.chunk.js.map": "/static/js/259.07e6025e.chunk.js.map",
+    "259.a1720cd3.chunk.js.map": "/static/js/259.a1720cd3.chunk.js.map",
     "605.01c3fccf.chunk.js.map": "/static/js/605.01c3fccf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd1a003d.css",
-    "static/js/main.6562e292.js"
+    "static/css/main.9c2bccac.css",
+    "static/js/main.e4ea7e8e.js"
   ]
 }
