@@ -2391,5 +2391,16 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/sportswear_sketch/0.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sportswear_sketch/0.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/sportswear_sketch/0.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Inventor Sketch",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/inventor_sketch/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/inventor_sketch/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/inventor_sketch/0.png"
   }
 ]

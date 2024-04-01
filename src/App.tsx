@@ -1,6 +1,6 @@
 import React, {createContext} from "react";
 import "./App.css";
-import {createTheme,} from "@mui/material";
+import {createTheme, ThemeProvider,} from "@mui/material";
 import {Gallery} from "./components/gallery/Gallery";
 import {createHashRouter, RouterProvider} from "react-router-dom";
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs'
@@ -17,6 +17,14 @@ import {AlcorWorldInfo} from "./components/alcor-forms/AlcorWorldInfo";
 
 // TODO get rid of this
 export const theme = createTheme({
+    typography: {
+        h5: {
+            color: "var(--md-sys-color-primary)"
+        },
+        h6: {
+            color: "var(--md-sys-color-secondary)"
+        }
+    },
     palette: {
         primary: {
             main: "#38608F",
@@ -69,9 +77,11 @@ export function Website() {
     const [appTheme, setAppTheme] = useLocalStorage('Alcor', 'appTheme');
 
     return <CssVarsProvider theme={websiteThemes.find(value => value.name === appTheme)?.theme ?? alcorTheme}>
-        <AppThemeContext.Provider value={[appTheme, setAppTheme]}>
-            <App/>
-        </AppThemeContext.Provider>
+        <ThemeProvider theme={theme}>
+            <AppThemeContext.Provider value={[appTheme, setAppTheme]}>
+                <App/>
+            </AppThemeContext.Provider>
+        </ThemeProvider>
     </CssVarsProvider>;
 }
 
