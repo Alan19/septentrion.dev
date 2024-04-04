@@ -4,20 +4,12 @@ import ListItemButton from "@mui/material-next/ListItemButton";
 import {Avatar, Collapse} from "@mui/material";
 import {ExpandLess, ExpandMore} from "@mui/icons-material";
 import {useLocation, useNavigate} from "react-router-dom";
-import {alcorForms} from "./form-icons/alcorForms";
+import {alcorForms} from "./about-resources/alcorForms";
 
-export function AlcorLorePane() {
-    // TODO Fix height on mobile version
-    // TODO align text with M3 website
-    const [open, setOpen] = React.useState(false);
-    const navigate = useNavigate();
-    const location = useLocation().pathname;
-
-    const handleClick = () => {
-        setOpen(!open);
-    };
-
+function M3ListButton(props: { avatarSrc?: string, indentation?: number, text: string, link: string }) {
     const borderRadius = 'var(--Button-radius, var(--md-sys-shape-corner-full))';
+    const location = useLocation().pathname;
+    const navigate = useNavigate();
 
     function getLinkButtonStyle(link: string = '') {
         let baseUrl: string;
@@ -28,33 +20,46 @@ export function AlcorLorePane() {
         };
     }
 
-    function getListItemButton(link: string, text: string, indentation = 0, avatarSrc?: string) {
-        const sx = indentation !== 0 ? {pl: indentation} : {};
-        return <ListItemButton style={getLinkButtonStyle(link)} {...{sx}} onClick={() => navigate(`${link}`)}>
-            {avatarSrc &&
-                <ListItemAvatar>
-                    <Avatar src={avatarSrc}/>
-                </ListItemAvatar>
-            }
-            <ListItemText primary={text}/>
-        </ListItemButton>;
-    }
+    return <ListItemButton style={getLinkButtonStyle(props.link)} {...{sx: props.indentation ? {pl: props.indentation} : {}}} onClick={event => navigate(`${props.link}`)}>
+        {props.avatarSrc &&
+            <ListItemAvatar>
+                <Avatar src={props.avatarSrc}/>
+            </ListItemAvatar>
+        }
+        <ListItemText primary={props.text}/>
+    </ListItemButton>;
+}
 
+function CollapsibleListButton(props: { title: string, children: React.JSX.Element[] }) {
+    const [isOpen, setIsOpen] = React.useState(false);
+    const handleClick = () => {
+        setIsOpen(!isOpen);
+    };
+
+    return <>
+        <ListItemButton style={{borderRadius: 'var(--Button-radius, var(--md-sys-shape-corner-full))'}} onClick={handleClick}>
+            <ListItemText primary={props.title}/>
+            {isOpen ? <ExpandLess/> : <ExpandMore/>}
+        </ListItemButton>
+        <Collapse in={isOpen} timeout="auto">
+            <List component="div" disablePadding>
+                {props.children.map((child) => child)}
+            </List>
+        </Collapse>
+    </>;
+}
+
+export function AlcorLorePane() {
+    // TODO Fix height on mobile version
     return <List>
         <ListItem>
             <ListItemText secondary={"Into the Alcorverse"}/>
         </ListItem>
-        {getListItemButton('', "Alcor's World")}
-        {getListItemButton('bio-enhancement', "Bio-Enhancement")}
-        <ListItemButton style={{borderRadius}} onClick={handleClick}>
-            <ListItemText primary={"Alternate Formes"}/>
-            {open ? <ExpandLess/> : <ExpandMore/>}
-        </ListItemButton>
-        <Collapse in={open} timeout="auto">
-            <List component="div" disablePadding>
-                {alcorForms.map(value => getListItemButton(value.link, value.name, 4, value.thumbnail))}
-            </List>
-        </Collapse>
+        <M3ListButton link={''} text={"Alcor's World"}/>
+        <M3ListButton text={'Bio-Enhancement'} link={'bio-enhancement'}/>
+        <CollapsibleListButton title={'Alternate Formes'}>
+            {alcorForms.map(value => <M3ListButton text={value.name} link={value.link} avatarSrc={value.thumbnail} indentation={4}/>)}
+        </CollapsibleListButton>
         <ListItemButton>
             <ListItemText primary={"Outfits"}/>
         </ListItemButton>

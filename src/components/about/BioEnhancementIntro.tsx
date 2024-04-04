@@ -1,8 +1,8 @@
 import {Fade, Grid, Typography, useMediaQuery} from "@mui/material";
 import React from "react";
 import {getPageHeader} from "./AboutPage";
-import aquariusSplashArt from "./form-icons/aquarius-splash-art.png"
-import eclipseDeity from "./form-icons/eclipse-deity-transparent.webp"
+import aquariusSplashArt from "./about-resources/aquarius-splash-art.png"
+import eclipseDeity from "./about-resources/eclipse-deity-transparent.webp"
 
 export function BioEnhancementIntro() {
     const isPortrait = useMediaQuery('(orientation: portrait)');

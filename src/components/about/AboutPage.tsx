@@ -1,9 +1,8 @@
-import {Snackbar, Typography, useMediaQuery} from "@mui/material";
-import React, {createContext, useEffect, useState} from "react";
+import {Snackbar, Typography} from "@mui/material";
+import React, {createContext, useEffect} from "react";
 import {Outlet} from "react-router-dom";
 import './form-page.css'
 import {AlcorLorePane} from "./AlcorLorePane";
-import {theme} from "../../App";
 import {RouteWithSubpanel} from "../navigation/RouteWithSubpanel";
 
 // @ts-ignore
@@ -17,19 +16,12 @@ export function CharacterAttribute(props: { fieldName: string, fieldValue: strin
 }
 
 export function getPageHeader(title: string) {
-    return <Typography variant={"h3"} style={{marginBottom: '8px'}} color={'var(--md-sys-color-primary)'} fontFamily={"Origin Tech"}>{title}</Typography>;
+    return <Typography variant={"h3"} color={'var(--md-sys-color-primary)'} fontFamily={"Origin Tech"}>{title}</Typography>;
 }
 
 export function AboutPage() {
-    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [copiedColor, setCopiedColor] = React.useState('');
     const [isOpen, setIsOpen] = React.useState(false);
-
-    const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
-
-    function handleDrawerClose() {
-        setIsDrawerOpen(false)
-    }
 
     const handleClick = (color: string) => {
         setCopiedColor(color)
@@ -40,10 +32,6 @@ export function AboutPage() {
             setIsOpen(true)
         }
     }, [copiedColor]);
-
-    function handleDrawerToggle() {
-        setIsDrawerOpen(true)
-    }
 
     const handleClose = (_event: React.SyntheticEvent | Event, reason?: string) => {
         if (reason === 'clickaway') {

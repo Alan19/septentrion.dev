@@ -39,25 +39,27 @@ export function FormPage(props: {
     const {name, body, affinity, weapons, height, history, image} = props.formInformation;
     return <>
         <Fade in={true}>
-            <Grid container spacing={4}>
-                <Grid item md={7}>
-                    {getPageHeader(name)}
-                    <Typography variant={"body1"}>{body}</Typography>
-                    <Typography variant={"h5"}>History</Typography>
-                    <Typography>
-                        {history}
-                    </Typography>
-                    <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
-                    <Stack direction={"column"} spacing={1}>
-                        <CharacterAttribute fieldName={"Height"} fieldValue={height}/>
-                        <CharacterAttribute fieldName={"Weapons"} fieldValue={weapons}/>
-                        <CharacterAttribute fieldName={"Affinity"} fieldValue={affinity}/>
-                    </Stack>
+            <div>
+                {getPageHeader(name)}
+                <Grid container spacing={2}>
+                    <Grid item md={6}>
+                        <Typography variant={"body1"}>{body}</Typography>
+                        <Typography variant={"h5"}>History</Typography>
+                        <Typography>
+                            {history}
+                        </Typography>
+                        <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
+                        <Stack direction={"column"} spacing={1}>
+                            <CharacterAttribute fieldName={"Height"} fieldValue={height}/>
+                            <CharacterAttribute fieldName={"Weapons"} fieldValue={weapons}/>
+                            <CharacterAttribute fieldName={"Affinity"} fieldValue={affinity}/>
+                        </Stack>
+                    </Grid>
+                    <Grid item md>
+                        <img style={{width: "100%"}} src={image}/>
+                    </Grid>
                 </Grid>
-                <Grid item md={5}>
-                    <img style={{width: "100%"}} src={image}/>
-                </Grid>
-            </Grid>
+            </div>
         </Fade>
     </>;
 }

@@ -1,9 +1,9 @@
 import {Fade, Grid, Typography} from "@mui/material";
 import {getPageHeader} from "./AboutPage";
 import React from "react";
-import castor from "./form-icons/castor.png"
-import superheroArtwork from './form-icons/superhero-artwork.png'
-import castorEvolution from './form-icons/castor-evolved.png'
+import castor from "./about-resources/castor.png"
+import superheroArtwork from './about-resources/superhero-artwork.png'
+import castorEvolution from './about-resources/castor-evolved.png'
 import {AboutPageParagraph} from "./AboutPageParagraph";
 
 export function AlcorWorldInfo() {

@@ -12,7 +12,7 @@ import {FormPage} from "./components/about/FormPage";
 import {alcorTheme, AppTheme, websiteThemes} from "./Themes";
 import {useLocalStorage} from "./UseLocalStorage";
 import {BioEnhancementIntro} from "./components/about/BioEnhancementIntro";
-import {alcorForms} from "./components/about/form-icons/alcorForms";
+import {alcorForms} from "./components/about/about-resources/alcorForms";
 import {AlcorWorldInfo} from "./components/about/AlcorWorldInfo";
 
 // TODO get rid of this
