@@ -1,5 +1,5 @@
 import React, {useContext, useState} from "react";
-import {BottomNavigation, BottomNavigationAction, Box, Dialog, DialogContent, DialogTitle, Divider, Grid, Paper, Stack, Typography, useMediaQuery} from "@mui/material";
+import {BottomNavigation, BottomNavigationAction, Box, Dialog, DialogContent, DialogTitle, Grid, Paper, Stack, Typography, useMediaQuery} from "@mui/material";
 import {AppThemeContext, theme} from "../../App";
 import {NavigationRailLink} from "./NavigationRailLink";
 import {CollectionsOutlined, Computer, DarkMode, Home, HomeOutlined, LightMode, PeopleOutline, Settings} from "@mui/icons-material";
@@ -15,8 +15,7 @@ import {websiteThemes} from "../../Themes";
  * @param props children: Element to inject into, secondPanel: Optional prop for an extension to the navigation rail
  */
 export function NavigationRail(props: {
-    children: React.JSX.Element,
-    secondPanel?: React.JSX.Element
+    children: React.JSX.Element
 }) {
     const navigateFunction = useNavigate();
     const mediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
@@ -68,7 +67,6 @@ export function NavigationRail(props: {
                         <Button variant={"outlined"} onClick={handleClickOpen}><Settings/></Button>
                     </div>
                 </div>
-                {props.secondPanel && <><Divider orientation="vertical" variant="middle" flexItem/>{props.secondPanel}</>}
             </div>
             <div style={{flexGrow: 1}}>
                 {props.children}

@@ -17,3 +17,8 @@ a {
 .color-square:hover {
     cursor: pointer;
 }
+
+.MuiListItemText-primary {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}

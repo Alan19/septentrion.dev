@@ -2402,5 +2402,18 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/inventor_sketch/0.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/inventor_sketch/0.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/inventor_sketch/0.png"
+  },
+  {
+    "title": "Quick-Draw Stance",
+    "artist": "@RSN_07",
+    "tags": [
+      "Aquarius Form"
+    ],
+    "href": "https://x.com/RSN_07/status/1775664237119217719?s=20",
+    "published": "2024-04-03",
+    "aspectRatio": 0.6328963051251489,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/quick_draw_stance.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/quick_draw_stance.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/quick_draw_stance.PNG"
   }
 ]

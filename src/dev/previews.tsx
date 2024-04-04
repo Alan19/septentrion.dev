@@ -1,11 +1,11 @@
 import React from "react";
 import {ComponentPreview, Previews} from "@react-buddy/ide-toolbox";
 import {PaletteTree} from "./palette";
-import {AboutPage} from "../components/alcor-forms/AboutPage";
+import {AboutPage} from "../components/about/AboutPage";
 import App from "../App";
 import {LinksPage} from "../components/links/LinksPage";
-import {AquariusForm} from "../components/alcor-forms/AquariusForm";
-import {SiteAppBar} from "../SiteAppBar";
+import {AquariusForm} from "../components/about/AquariusForm";
+import {Root} from "../Root";
 
 const ComponentPreviews = () => {
     return (
@@ -26,7 +26,7 @@ const ComponentPreviews = () => {
                 <AquariusForm/>
             </ComponentPreview>
             <ComponentPreview path="/SiteAppBar">
-                <SiteAppBar/>
+                <Root/>
             </ComponentPreview>
             {/*<ComponentPreview path="/GalleryDialog">*/}
             {/*    <GalleryDialog closeModal={() => {*/}

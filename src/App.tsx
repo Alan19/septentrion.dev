@@ -5,15 +5,15 @@ import {Gallery} from "./components/gallery/Gallery";
 import {createHashRouter, RouterProvider} from "react-router-dom";
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs'
 import {LocalizationProvider} from "@mui/x-date-pickers";
-import {AboutPage} from "./components/alcor-forms/AboutPage";
-import {SiteAppBar} from "./SiteAppBar";
+import {AboutPage} from "./components/about/AboutPage";
+import {Root} from "./Root";
 import {CssVarsProvider} from "@mui/material-next";
-import {FormPage} from "./components/alcor-forms/FormPage";
+import {FormPage} from "./components/about/FormPage";
 import {alcorTheme, AppTheme, websiteThemes} from "./Themes";
 import {useLocalStorage} from "./UseLocalStorage";
-import {BioEnhancementIntro} from "./components/alcor-forms/BioEnhancementIntro";
-import {alcorForms} from "./components/alcor-forms/form-icons/alcorForms";
-import {AlcorWorldInfo} from "./components/alcor-forms/AlcorWorldInfo";
+import {BioEnhancementIntro} from "./components/about/BioEnhancementIntro";
+import {alcorForms} from "./components/about/form-icons/alcorForms";
+import {AlcorWorldInfo} from "./components/about/AlcorWorldInfo";
 
 // TODO get rid of this
 export const theme = createTheme({
@@ -41,7 +41,7 @@ export const theme = createTheme({
 const router = createHashRouter([
     {
         path: '/',
-        element: <SiteAppBar/>,
+        element: <Root/>,
         children: [
             {
                 path: "/gallery",

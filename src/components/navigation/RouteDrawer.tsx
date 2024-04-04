@@ -1,7 +1,12 @@
 import {Drawer} from "@mui/material";
 import React, {ReactEventHandler} from "react";
 
-export function FilterDrawer(props: {
+/**
+ * Drawer component for subpanels on mobile pages
+ * @param props
+ * @constructor
+ */
+export function RouteDrawer(props: {
     children: React.JSX.Element, open?: boolean,
     onClose: ReactEventHandler<{}>
 }) {
@@ -20,9 +25,9 @@ export function FilterDrawer(props: {
         variant={"temporary"}>
         <div style={{
             display: "flex",
-            padding: '24px 16px 16px',
+            padding: '24px 8px 24px 8px ',
             flexDirection: 'column',
-            backgroundColor: 'var(--md-sys-color-surfaceVariant)',
+            backgroundColor: 'var(--md-sys-color-surfaceContainerHigh)',
         }}>
             {props.children}
         </div>

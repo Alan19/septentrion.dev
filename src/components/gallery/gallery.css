@@ -3,12 +3,11 @@ html {
 }
 
 .filters {
-    padding: 24px 16px 16px;
     position: sticky;
     height: 100vh;
     top: 0;
     overflow-y: auto;
-    width: min-content;
+    max-width: 15vw;
 }
 
 .navigation-rail-item:hover * {

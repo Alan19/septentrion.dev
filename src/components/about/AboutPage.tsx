@@ -1,12 +1,10 @@
-import {Container, IconButton, Snackbar, Typography, useMediaQuery} from "@mui/material";
+import {Snackbar, Typography, useMediaQuery} from "@mui/material";
 import React, {createContext, useEffect, useState} from "react";
 import {Outlet} from "react-router-dom";
 import './form-page.css'
-import {NavigationRail} from "../navigation/NavigationRail";
 import {AlcorLorePane} from "./AlcorLorePane";
-import {FilterDrawer} from "../gallery/FilterDrawer";
 import {theme} from "../../App";
-import MenuIcon from "@mui/icons-material/Menu";
+import {RouteWithSubpanel} from "../navigation/RouteWithSubpanel";
 
 // @ts-ignore
 export const CopyColorContext: React.Context<[string, (color: string) => void]> = createContext(undefined)
@@ -47,7 +45,7 @@ export function AboutPage() {
         setIsDrawerOpen(true)
     }
 
-    const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
+    const handleClose = (_event: React.SyntheticEvent | Event, reason?: string) => {
         if (reason === 'clickaway') {
             return;
         }
@@ -55,33 +53,16 @@ export function AboutPage() {
         setIsOpen(false);
     };
     return (
-        <NavigationRail secondPanel={<AlcorLorePane/>}>
+        <>
             <CopyColorContext.Provider value={[copiedColor, handleClick]}>
+                <RouteWithSubpanel panel={<AlcorLorePane/>} routeContent={<Outlet/>}/>
                 <Snackbar
                     open={isOpen}
                     autoHideDuration={6000}
                     onClose={handleClose}
                     message={`Copied ${copiedColor} to clipboard`}
                 />
-                {!isMediumOrAbove &&
-                    <FilterDrawer
-                        open={isDrawerOpen}
-                        onClose={handleDrawerClose}>
-                        <AlcorLorePane/>
-                    </FilterDrawer>}
-                <Container style={{paddingTop: '24px'}}>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        edge="start"
-                        onClick={handleDrawerToggle}
-                        sx={{mr: 2, display: {md: 'none'}}}
-                    >
-                        <MenuIcon/>
-                    </IconButton>
-                    <Outlet/>
-                </Container>
             </CopyColorContext.Provider>
-        </NavigationRail>
+        </>
     );
 }

@@ -10,7 +10,7 @@ export function FilterPaneContent(props: {
                        categoryName: string,
                        filterFunction: (value: ArtTag) => boolean) => React.JSX.Element
 }) {
-    return <>
+    return <div>
         <Typography variant={"h5"} style={{marginTop: "8px"}}>
             <Filter/> Filter Gallery
         </Typography>
@@ -29,7 +29,7 @@ export function FilterPaneContent(props: {
             (value) =>
                 !["Suit", "Form"].some((keyword) => value.includes(keyword))
         )}
-    </>
+    </div>
 }
 
 export function FilterPane(props: {
@@ -38,8 +38,6 @@ export function FilterPane(props: {
                        categoryName: string,
                        filterFunction: (value: ArtTag) => boolean) => React.JSX.Element
 }) {
-    return <div className={`filters ${props.isMediumOrAbove ? "medium" : ""}`}>
-        <FilterPaneContent filterCategories={props.filterCategories}/>
-    </div>;
+    return <FilterPaneContent filterCategories={props.filterCategories}/>;
 
 }
