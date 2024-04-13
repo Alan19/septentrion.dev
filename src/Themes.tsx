@@ -64,10 +64,10 @@ function createAlcorTheme() {
                     "60": "#77777A",
                     "70": "#909094",
                     "80": "#ABABAF",
-                    "90": "#C7C6CA",
-                    "92": "#E3E2E6",
+                    "90": "#E2E2E9",
+                    "92": "#E7E8EE",
                     "95": "#F1F0F4",
-                    "96": "#FAF9FD",
+                    "96": "#F3F3FA",
                     "99": "#FDFBFF",
                     "100": "#FFFFFF"
                 },
@@ -92,13 +92,8 @@ function createAlcorTheme() {
 }
 
 export const alcorTheme = createAlcorTheme();
-alcorTheme.sys.color.surface = "#F9F9FF"
-alcorTheme.sys.color.surfaceContainerHigh = "#E7E8EE"
 
 export const alcorDark = createAlcorTheme();
-alcorDark.sys.color.surface = "#111318"
-alcorDark.sys.color.surfaceContainerHigh = "#282A2F"
-alcorDark.sys.color.onSurface = "#E2E2E9"
 
 function createCastorTheme() {
     return extendTheme({
@@ -129,7 +124,7 @@ function createCastorTheme() {
                     "60": "#7E9598",
                     "70": "#98AFB3",
                     "80": "#B3CBCE",
-                    "90": "#CFE7EA",
+                    "90": "#CDE7EB",
                     "95": "#DDF5F8",
                     "99": "#F5FEFF",
                     "100": "#FFFFFF"
@@ -161,11 +156,11 @@ function createCastorTheme() {
                     "60": "#757778",
                     "70": "#8F9191",
                     "80": "#A9ACAC",
-                    "90": "#C5C7C7",
-                    "92": "#E1E3E3",
+                    "90": "#EFF5F5",
+                    "92": "#E3E9EA",
                     "95": "#EFF1F1",
-                    "96": "#F8FAFA",
-                    "99": "#FBFCFC",
+                    "96": "#DEE4E4",
+                    "99": "#F5FAFB",
                     "100": "#FFFFFF"
                 },
                 "neutralVariant": {
@@ -189,8 +184,6 @@ function createCastorTheme() {
 }
 
 export const castorTheme = createCastorTheme()
-
-export const castorDark = createCastorTheme();
 
 export const somaTheme = extendTheme({
     ref: {
@@ -220,7 +213,7 @@ export const somaTheme = extendTheme({
                 "60": "#979082",
                 "70": "#B2AA9B",
                 "80": "#CEC6B6",
-                "90": "#EBE1D1",
+                "90": "#F2E1BB",
                 "95": "#F9F0DF",
                 "99": "#FFFBFF",
                 "100": "#FFFFFF"
@@ -252,10 +245,10 @@ export const somaTheme = extendTheme({
                 "60": "#7A7673",
                 "70": "#94908D",
                 "80": "#AFAAA7",
-                "90": "#CAC6C2",
-                "92": "#E7E2DD",
+                "90": "#FBF3E5",
+                "92": "#F0E7D9",
                 "95": "#F5F0EC",
-                "96": "#FEF8F4",
+                "96": "#EAE1D4",
                 "99": "#FFFBFF",
                 "100": "#FFFFFF"
             },
@@ -306,7 +299,7 @@ const wiltonTheme = extendTheme({
                 "60": "#91918A",
                 "70": "#ABACA5",
                 "80": "#C7C7BF",
-                "90": "#E3E3DB",
+                "90": "#DBE7C8",
                 "95": "#F2F1E9",
                 "99": "#FDFDF4",
                 "100": "#FFFFFF"
@@ -338,10 +331,10 @@ const wiltonTheme = extendTheme({
                 "60": "#787775",
                 "70": "#92908E",
                 "80": "#ADABA9",
-                "90": "#C9C6C4",
-                "92": "#E5E2E0",
+                "90": "#F3F4E9",
+                "92": "#E8E9DE",
                 "95": "#F3F0EE",
-                "96": "#FCF9F6",
+                "96": "#E2E3D8",
                 "99": "#F9FFE9",
                 "100": "#FFFFFF"
             },

@@ -4,6 +4,7 @@ import {Container, Fade, IconButton, useMediaQuery} from "@mui/material";
 import {theme} from "../../App";
 import {RouteDrawer} from "./RouteDrawer";
 import MenuIcon from "@mui/icons-material/Menu";
+import {drawerColor} from "./NavigationRail";
 
 export function RouteWithSubpanel(props: { panel: React.JSX.Element, routeContent: React.JSX.Element }) {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -20,7 +21,7 @@ export function RouteWithSubpanel(props: { panel: React.JSX.Element, routeConten
     if (isMediumOrAbove) {
         return (
             <>
-                <div style={{display: "flex", backgroundColor: "var(--md-sys-color-surfaceContainerHigh)", width: '15em'}}>
+                <div style={{display: "flex", backgroundColor: drawerColor, width: '15em'}}>
                     <Divider orientation={"vertical"} flexItem/>
                     <div style={{
                         padding: '8px 8px 24px 8px',

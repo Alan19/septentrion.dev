@@ -13,7 +13,7 @@
     "@juggle/resize-observer": "^3.4.0",
     "@mui/icons-material": "^5.15.13",
     "@mui/material": "^5.15.14",
-    "@mui/material-next": "latest",
+    "@mui/material-next": "^6.0.0-alpha.126",
     "@mui/styles": "^5.15.13",
     "@mui/types": "^7.2.13",
     "@mui/x-date-pickers": "^6.19.7",

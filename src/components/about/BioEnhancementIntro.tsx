@@ -18,14 +18,15 @@ export function BioEnhancementIntro() {
                     </Typography>
                 </Grid>
                 <Grid item xs={12}>
-                    <Typography variant={"h5"}>Interdimensional Bio-Synthesis</Typography>
+                    <Typography variant={"h5"}>Simulated Transdimensional Replications of Identity Divergence Explorations (S.T.R.I.D.E.)</Typography>
                 </Grid>
                 <Grid item sm={3}>
                     <img style={{width: '100%'}} src={aquariusSplashArt}/>
                 </Grid>
                 <Grid item sm>
                     <Typography variant={"body1"}>
-                        The vessels are inspired by alternate universes where Alcor is of a different species. Since they're not sentient, Alcor can upload his mind into those bodies. Resting in the exotic matter-infused body tank in this
+                        The S.T.R.I.D.E. vessels are inspired by alternate universes where Alcor is of a different species. Since they're not sentient, Alcor can upload his mind into those bodies. Resting in the exotic matter-infused body
+                        tank in this
                         room
                         seems to synchronize his memories with his other selves, and occasionally causes lucid dreams where he can interact with some of his alternate forms in a shared mental space. The bio-enhancement lab also contains a
                         small

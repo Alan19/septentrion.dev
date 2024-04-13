@@ -1,5 +1,6 @@
 import {Drawer} from "@mui/material";
 import React, {ReactEventHandler} from "react";
+import {drawerColor} from "./NavigationRail";
 
 /**
  * Drawer component for subpanels on mobile pages
@@ -27,7 +28,7 @@ export function RouteDrawer(props: {
             display: "flex",
             padding: '24px 8px 24px 8px ',
             flexDirection: 'column',
-            backgroundColor: 'var(--md-sys-color-surfaceContainerHigh)',
+            backgroundColor: drawerColor,
         }}>
             {props.children}
         </div>

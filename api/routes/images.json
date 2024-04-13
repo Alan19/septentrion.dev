@@ -2415,5 +2415,18 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/quick_draw_stance.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/quick_draw_stance.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/quick_draw_stance.PNG"
+  },
+  {
+    "title": "Mini Jupiter Form Sketchpage",
+    "artist": "@nekogyo122",
+    "tags": [
+      "Jupiter Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1777856260093661683",
+    "published": "2024-04-10",
+    "aspectRatio": 0.75,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/mini_jupiter_form_sketchpage.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/mini_jupiter_form_sketchpage.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/mini_jupiter_form_sketchpage.png"
   }
 ]

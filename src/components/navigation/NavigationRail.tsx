@@ -10,6 +10,8 @@ import {useLocation, useNavigate} from "react-router-dom";
 import {Button, useColorScheme} from "@mui/material-next";
 import {websiteThemes} from "../../Themes";
 
+export const drawerColor = 'var(--md-sys-color-surfaceContainerHigh)';
+
 /**
  * Higher order component that injects a navigation rail or bottom navigation into the child component
  * @param props children: Element to inject into, secondPanel: Optional prop for an extension to the navigation rail
@@ -53,7 +55,7 @@ export function NavigationRail(props: {
             <div style={{
                 display: "flex",
                 minHeight: "100%",
-                backgroundColor: 'var(--md-sys-color-surfaceContainerHigh)'
+                backgroundColor: drawerColor
             }}>
                 {settingsDialog}
                 <div className={"navigation-rail-stack"} style={{position: 'sticky', top: 0, alignSelf: 'start', padding: '24px 8px 8px', height: '100vh', display: 'flex', flexDirection: 'column', width: "min-content"}}>
