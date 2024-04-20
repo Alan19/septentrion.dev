@@ -60,9 +60,7 @@ export function AlcorLorePane() {
         <CollapsibleListButton title={'Alternate Formes'}>
             {alcorForms.map(value => <M3ListButton text={value.name} link={value.link} avatarSrc={value.thumbnail} indentation={4}/>)}
         </CollapsibleListButton>
-        <ListItemButton>
-            <ListItemText primary={"Outfits"}/>
-        </ListItemButton>
+        <M3ListButton text={"Alcor's Wardrobe"} link={'outfits'}/>
         <Divider color={"--md-sys-color-onSurfaceVariant"} variant={"middle"}/>
         <ListItem>
             <ListItemText secondary={"TTRPG Characters"}/>

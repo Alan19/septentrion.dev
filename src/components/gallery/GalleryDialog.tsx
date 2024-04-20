@@ -78,8 +78,7 @@ export function GalleryDialog(props: {
                         sm={9}
                         xs
                     >
-                        <ImageWithLoadingSkeleton isPortrait={isPortrait}
-                                                  href={(props.currentImage.href && props.currentImage.href !== '') ? props.currentImage.href : props.currentImage.src}
+                        <ImageWithLoadingSkeleton href={(props.currentImage.href && props.currentImage.href !== '') ? props.currentImage.href : props.currentImage.src}
                                                   aspectRatio={props.currentImage.aspectRatio ?? 1}>
                             <img
                                 src={getSrc(props.currentImage)}

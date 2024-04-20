@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
-import {Skeleton} from "@mui/material";
+import {Skeleton, useMediaQuery} from "@mui/material";
 
 export function ImageWithLoadingSkeleton(props: {
     children: React.JSX.Element,
     aspectRatio: number,
-    href: string,
-    isPortrait: boolean
+    href: string
 }) {
+    const isPortrait = useMediaQuery('(orientation: portrait)');
     const [isReady, setIsReady] = useState(false);
 
     const {src} = props.children.props;
@@ -44,7 +44,7 @@ export function ImageWithLoadingSkeleton(props: {
         // TODO Have it adapt to any height
         return <Skeleton animation={"wave"}
                          style={{aspectRatio: props.aspectRatio}}
-                         height={props.isPortrait ? "inherit" : "90vh"}
+                         height={isPortrait ? "inherit" : "90vh"}
                          width={"100%"}
                          variant={"rounded"}/>;
     }

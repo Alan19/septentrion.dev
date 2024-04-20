@@ -5,12 +5,22 @@ import {ArtTag} from "../ImageInformation";
 import {faMask} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+export function FilterPane(props: {
+    isMediumOrAbove: boolean,
+    filterCategories: (element: React.JSX.Element,
+                       categoryName: string,
+                       filterFunction: (value: ArtTag) => boolean) => React.JSX.Element
+}) {
+    return <FilterPaneContent filterCategories={props.filterCategories}/>;
+
+}
+
 export function FilterPaneContent(props: {
     filterCategories: (element: React.JSX.Element,
                        categoryName: string,
                        filterFunction: (value: ArtTag) => boolean) => React.JSX.Element
 }) {
-    return <div>
+    return <div style={{padding: '0 8px 0 8px'}}>
         <Typography variant={"h5"} style={{marginTop: "8px"}}>
             <Filter/> Filter Gallery
         </Typography>
@@ -30,14 +40,4 @@ export function FilterPaneContent(props: {
                 !["Suit", "Form"].some((keyword) => value.includes(keyword))
         )}
     </div>
-}
-
-export function FilterPane(props: {
-    isMediumOrAbove: boolean,
-    filterCategories: (element: React.JSX.Element,
-                       categoryName: string,
-                       filterFunction: (value: ArtTag) => boolean) => React.JSX.Element
-}) {
-    return <FilterPaneContent filterCategories={props.filterCategories}/>;
-
 }

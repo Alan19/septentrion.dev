@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Chip from '@mui/material-next/Chip';
-import {Fade, FormControlLabel, Grid, Pagination, Switch, Typography, useMediaQuery,} from "@mui/material";
-import {AltInformation, ArtTag, ImageInformation, isAltInformation, isImageInformation} from "../ImageInformation";
+import {Fade, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Typography, useMediaQuery,} from "@mui/material";
+import {ArtTag, ImageInformation, isImageInformation} from "../ImageInformation";
 import {Remove,} from "@mui/icons-material";
 import "./gallery.css";
 import {theme} from "../../App";
@@ -22,24 +22,21 @@ export type TagState = {
     [tag in ArtTag]: number;
 };
 
-export function hasAlts(title: string, images: (ImageInformation | AltInformation)[]): boolean {
-    return images.filter(isAltInformation).some(value => value.parent === title);
-}
-
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
     // @ts-ignore
     return new Set(images.filter(value => value.published !== undefined).map(value => value.published.substring(0, 7)));
 }
+
+type GalleryDisplayModes = 'monthly' | 'all' | 'paginated';
 
 export function Gallery() {
     const {getTags, setTags, images, loadImageInfo, altData} = useTagHooks();
     const [currentImage, setCurrentImage] = useState<ImageInformation>();
     const [isDialogOpen, setIsDialogOpen] = useState(false)
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver})
-    const [splitByMonth, setSplitByMonth] = useState(false);
+    const [displayMode, setDisplayMode] = useState<GalleryDisplayModes>('paginated');
     const [pageSize, setPageSize] = useState<number>(12);
     const [page, setPage] = useState<number>(1);
-    const [displayAll, setDisplayAll] = useState(false);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     let tags: TagState = getTags();
@@ -148,7 +145,7 @@ export function Gallery() {
     }
 
     const mainImages: ImageInformation[] = shownImages.filter(isImageInformation);
-    const imagesOnPage = !displayAll ? mainImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize) : mainImages;
+    const imagesOnPage = !(displayMode == 'all') ? mainImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize) : mainImages;
 
     function closeModal() {
         setIsDialogOpen(false);
@@ -163,20 +160,10 @@ export function Gallery() {
         return getMonthYearPairsInImageSet(mainImages).size;
     }
 
-    function handleDrawerToggle() {
-        setIsDrawerOpen(true)
-    }
-
-    function handleDrawerClose() {
-        setIsDrawerOpen(false)
-    }
-
-
     const content = <Fade in>
         <div>
             <Typography variant={"h3"} color={'var(--md-sys-color-primary)'} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
-            <GalleryDialog isOpen={isDialogOpen} currentImage={currentImage} closeModal={closeModal}
-                           alts={currentImage?.title !== undefined ? altData.get(currentImage.title) : undefined}/>
+            <GalleryDialog isOpen={isDialogOpen} currentImage={currentImage} closeModal={closeModal} alts={currentImage?.title !== undefined ? altData.get(currentImage.title) : undefined}/>
             <Grid container direction={"column"} spacing={2}>
                 {/*TODO Make this use the same grid attributes as below*/}
                 <Grid item md={3}/>
@@ -189,30 +176,30 @@ export function Gallery() {
                 <Grid item>
                 </Grid>
                 <Grid item style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
-                    <FormControlLabel style={{marginTop: "8px"}}
-                                      control={<Switch value={splitByMonth}
-                                                       onChange={(_event, checked) => setSplitByMonth(checked)}/>}
-                                      label="Separate by month"/>
+                    <Grid container justifyContent={'space-between'} alignItems={'flex-end'}>
+                        <RadioGroup value={displayMode}>
+                            <FormControlLabel value={'paginated'} control={<Radio onChange={(_event) => setDisplayMode('paginated')}/>}
+                                              label="Display images in pages"/>
+                            <FormControlLabel value={'all'} control={<Radio onChange={(_event) => setDisplayMode('all')}/>}
+                                              label="Display all images on one page"/>
+                            <FormControlLabel value={'monthly'} control={<Radio onChange={(_event) => setDisplayMode('monthly')}/>}
+                                              label="Separate images by month"/>
+                        </RadioGroup>
+                        {
+                            displayMode === "paginated" && <Grid item>
+                                <Pagination style={{marginBottom: "8px"}}
+                                            count={Math.ceil(shownImages.length / pageSize)}
+                                            page={page}
+                                            onChange={handlePageChange}
+                                            showFirstButton
+                                            showLastButton/>
 
-                    {(pageSize < shownImages.length) && !splitByMonth &&
-                        <Grid container justifyContent={"space-between"}>
-
-                            <Grid item>
-                                <FormControlLabel style={{marginBottom: "8px"}}
-                                                  control={<Switch value={displayAll} onChange={(_event, checked) => setDisplayAll(checked)}/>}
-                                                  label="Display all images on one page"/>
                             </Grid>
-                            {
-                                !displayAll && <Grid item>
-                                    <Pagination style={{marginBottom: "8px"}}
-                                                count={splitByMonth ? Math.ceil(getMonthsWhereImagesAreAvailable() / 4) : Math.ceil(shownImages.length / pageSize)}
-                                                page={page} onChange={handlePageChange} showFirstButton
-                                                showLastButton/>
+                        }
+                    </Grid>
 
-                                </Grid>
-                            }
-                        </Grid>}
-                    {splitByMonth ?
+
+                    {displayMode === 'monthly' ?
                         <ChronologicalGallery displayedImages={shownImages} width={bounds.width}
                                               setCurrentImage={handleImageClicked} altInfo={altData}/> :
                         <TSJustifiedLayout width={bounds.width}

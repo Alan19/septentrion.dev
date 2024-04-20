@@ -5,8 +5,16 @@ import {Variant} from "@mui/material/styles/createTypography";
 import {TypographyPropsVariantOverrides} from "@mui/material/Typography/Typography";
 import {OverridableStringUnion} from "@mui/types";
 
-export function AboutPageParagraph(props: { title: string, text: string, img?: string | React.JSX.Element, alt?: string, colors?: string[], variant?: OverridableStringUnion<Variant | 'inherit', TypographyPropsVariantOverrides> }) {
-    const {text, img, title, alt, colors, variant = 'h5'} = props;
+export function AboutPageParagraph(props: {
+    alt?: string,
+    colors?: string[],
+    img?: string | React.JSX.Element,
+    text: string,
+    title: string,
+    variant?: OverridableStringUnion<Variant | 'inherit', TypographyPropsVariantOverrides>,
+    subsections?: { title: string, text: string }[]
+}) {
+    const {text, img, title, alt, colors, variant = 'h5', subsections = []} = props;
     return <>
         <Grid item xs={12}>
             <Typography fontWeight={"bold"} variant={variant}>{title}</Typography>
@@ -16,6 +24,10 @@ export function AboutPageParagraph(props: { title: string, text: string, img?: s
             <Typography variant={"body1"}>
                 {text}
             </Typography>
+            {subsections.map(value => <>
+                <Typography style={{marginTop: 24}} fontWeight={"bold"} color={"var(--md-sys-color-tertiary)"} variant={'subtitle1'}>{value.title}</Typography>
+                <Typography variant={"body1"}>{value.text}</Typography>
+            </>)}
             {colors &&
                 <>
                     <Typography style={{marginTop: 24, marginBottom: 8}} fontWeight={"bold"} color={"var(--md-sys-color-tertiary)"} variant={'subtitle1'}>Colors</Typography>

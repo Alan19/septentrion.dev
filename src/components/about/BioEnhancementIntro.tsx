@@ -1,14 +1,14 @@
 import {Fade, Grid, Typography, useMediaQuery} from "@mui/material";
 import React from "react";
-import {getPageHeader} from "./AboutPage";
 import aquariusSplashArt from "./about-resources/aquarius-splash-art.png"
 import eclipseDeity from "./about-resources/eclipse-deity-transparent.webp"
+import {PageHeader} from "./PageHeader";
 
 export function BioEnhancementIntro() {
     const isPortrait = useMediaQuery('(orientation: portrait)');
     return <Fade in>
         <div>
-            {getPageHeader("Bio-Enhancement")}
+            <PageHeader title={"Bio-Enhancement"}/>
             <Grid container direction={"row"} spacing={2}>
                 <Grid item>
                     <Typography variant={"body1"}>

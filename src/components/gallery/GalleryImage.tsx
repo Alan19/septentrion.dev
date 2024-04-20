@@ -55,7 +55,8 @@ export function GalleryImage(props: {
                 className={props.className}
                 onClick={props.setCurrentImage}
                 style={props.style}
-            ></img></div> :
+            />
+        </div> :
         <Skeleton variant={"rectangular"}
                   style={{aspectRatio: props.aspectRatio}}
                   height={"100%"}/>

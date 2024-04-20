@@ -48,7 +48,7 @@ function ChronologicalGallery(props: {
         {getMonthYearPairs().map((yearMonth) => {
             const [year, month] = yearMonth;
             return <Fragment key={yearMonth.join(" ")}>
-                <Typography variant={"h4"}>{months[month - 1]} {year}</Typography>
+                <Typography marginTop={1} color={'var(--md-palette-text-secondary)'} variant={"h4"}>{months[month - 1]} {year}</Typography>
                 {renderGalleryForMonth(year, month)}
             </Fragment>;
         })}

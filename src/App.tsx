@@ -14,6 +14,7 @@ import {useLocalStorage} from "./UseLocalStorage";
 import {BioEnhancementIntro} from "./components/about/BioEnhancementIntro";
 import {alcorForms} from "./components/about/about-resources/alcorForms";
 import {AlcorWorldInfo} from "./components/about/AlcorWorldInfo";
+import {AlcorOutfits} from "./components/about/outfits/AlcorOutfits";
 
 // TODO get rid of this
 export const theme = createTheme({
@@ -62,6 +63,10 @@ const router = createHashRouter([
                     {
                         path: 'bio-enhancement',
                         element: <BioEnhancementIntro/>
+                    },
+                    {
+                        path: 'outfits',
+                        element: <AlcorOutfits/>
                     }
                 ]
             },

@@ -15,10 +15,6 @@ export function CharacterAttribute(props: { fieldName: string, fieldValue: strin
     </div>;
 }
 
-export function getPageHeader(title: string) {
-    return <Typography variant={"h3"} color={'var(--md-sys-color-primary)'} fontFamily={"Origin Tech"}>{title}</Typography>;
-}
-
 export function AboutPage() {
     const [copiedColor, setCopiedColor] = React.useState('');
     const [isOpen, setIsOpen] = React.useState(false);

@@ -1,7 +1,8 @@
 import {Divider, Fade, Grid, Stack, Typography} from "@mui/material";
-import {CharacterAttribute, getPageHeader} from "./AboutPage";
+import {CharacterAttribute} from "./AboutPage";
 import React from "react";
 import {useNavigate} from "react-router-dom";
+import {PageHeader} from "./PageHeader";
 
 export type Affinity =
     'Fire'
@@ -40,7 +41,7 @@ export function FormPage(props: {
     return <>
         <Fade in={true}>
             <div>
-                {getPageHeader(name)}
+                <PageHeader title={name}/>
                 <Grid container spacing={2}>
                     <Grid item md={6}>
                         <Typography variant={"body1"}>{body}</Typography>

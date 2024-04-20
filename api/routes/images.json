@@ -5,8 +5,7 @@
     "href": "https://x.com/wolfmalro/status/1477512241247567877?s=20",
     "artist": "@wolfmalro",
     "tags": [
-      "Gemini Form",
-      "Featured"
+      "Gemini Form"
     ],
     "published": "2022-01-02",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/m6_form.webp",
@@ -112,7 +111,6 @@
       "Castor",
       "AICore Form",
       "Aldhibah Form",
-      "Featured",
       "Transformation"
     ],
     "published": "2022-07-03",
@@ -155,8 +153,7 @@
       "Techwear",
       "AICore Form",
       "Castor",
-      "Thuban Form",
-      "Featured"
+      "Thuban Form"
     ],
     "published": "2022-09-09",
     "aspectRatio": 0.6309148264984227
@@ -185,8 +182,8 @@
       "Rastaban Form",
       "Gungrir Suit",
       "Lances",
-      "Featured",
-      "Superhero"
+      "Superhero",
+      "Featured"
     ],
     "published": "2022-05-04",
     "aspectRatio": 0.85107421875
@@ -225,7 +222,6 @@
       "Techwear",
       "Knives",
       "Rastaban Form",
-      "Featured",
       "Hibernal Assassin"
     ],
     "published": "2022-12-29",
@@ -277,8 +273,7 @@
     "href": "https://twitter.com/KnightmareFox/status/1561507766136877057?s=20",
     "artist": "@KnightmareFox",
     "tags": [
-      "Thuban Form",
-      "Featured"
+      "Thuban Form"
     ],
     "published": "2022-08-21",
     "aspectRatio": 1.4819102749638204
@@ -304,8 +299,7 @@
     "href": "https://twitter.com/AkiE_AkikO/status/1581677248163500032",
     "artist": "@AkiE_AkikO",
     "tags": [
-      "Eclipse Deity",
-      "Featured"
+      "Eclipse Deity"
     ],
     "published": "2022-10-16",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/eclipse_deity.webp",
@@ -318,8 +312,7 @@
     "href": "https://twitter.com/Hemuchang/status/1538903529355563008?s=20&t=eKwrDBRmUWuDjCiUR5suyg",
     "artist": "@Hemuchang",
     "tags": [
-      "Thuban Form",
-      "Featured"
+      "Thuban Form"
     ],
     "published": "2022-06-20",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/come_and_find_me.webp",
@@ -605,7 +598,8 @@
     "artist": "@illusummer",
     "tags": [
       "Rastaban Form",
-      "Techwear"
+      "Techwear",
+      "Featured"
     ],
     "href": "https://skeb.jp/@arcielsummer/works/33",
     "published": "2023-05-05",
@@ -1239,8 +1233,7 @@
       "Rastaban Form",
       "Hoodie",
       "Techwear",
-      "Hibernal Assassin",
-      "Featured"
+      "Hibernal Assassin"
     ],
     "href": "https://x.com/FaintAlcor/status/1707575833311731782?s=20",
     "published": "2023-09-29",
@@ -1539,7 +1532,8 @@
     "tags": [
       "Aldhibah Form",
       "Techwear",
-      "Castor"
+      "Castor",
+      "Featured"
     ],
     "href": "https://x.com/DrawingDDoom/status/1715601315492245545?s=20",
     "published": "2023-10-21",
@@ -1916,7 +1910,6 @@
     "title": "Astrologist Monk Rogue",
     "artist": "@DazureSky",
     "tags": [
-      "Featured",
       "Thuban Form",
       "Knives"
     ],
@@ -2090,8 +2083,7 @@
     "title": "Beach Boy",
     "artist": "@KuroPenguinEx",
     "tags": [
-      "Thuban Form",
-      "Featured"
+      "Thuban Form"
     ],
     "href": "https://x.com/FaintAlcor/status/1515132564297732096?s=20",
     "published": "2022-04-15",
@@ -2209,7 +2201,8 @@
     "title": "Castor Evolved",
     "artist": "@TOOMIRO",
     "tags": [
-      "Castor"
+      "Castor",
+      "Featured"
     ],
     "href": "https://x.com/FaintAlcor/status/1749579348045111636?s=20",
     "published": "2024-01-22",
@@ -2237,7 +2230,8 @@
     "title": "Glimmer on the Shore",
     "artist": "@SiN_remyheart",
     "tags": [
-      "Jupiter Form"
+      "Jupiter Form",
+      "Featured"
     ],
     "href": "https://x.com/SiN_remyheart/status/1750043825161244678?s=20",
     "published": "2024-01-24",
@@ -2332,7 +2326,9 @@
   {
     "title": "Pokemon Trainer",
     "artist": "@kelvin_trainerk",
-    "tags": [],
+    "tags": [
+      "Featured"
+    ],
     "href": "https://x.com/FaintAlcor/status/1768744985711591716?s=20",
     "published": "2024-03-15",
     "aspectRatio": 1.7777777777777777,
@@ -2407,7 +2403,8 @@
     "title": "Quick-Draw Stance",
     "artist": "@RSN_07",
     "tags": [
-      "Aquarius Form"
+      "Aquarius Form",
+      "Featured"
     ],
     "href": "https://x.com/RSN_07/status/1775664237119217719?s=20",
     "published": "2024-04-03",
@@ -2428,5 +2425,117 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/mini_jupiter_form_sketchpage.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/mini_jupiter_form_sketchpage.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/mini_jupiter_form_sketchpage.png"
+  },
+  {
+    "title": "Fighting Stance",
+    "artist": "@KingOf_Streets",
+    "tags": [
+      "Rastaban Form",
+      "Hibernal Assassin",
+      "Hoodie",
+      "Knives",
+      "Techwear"
+    ],
+    "href": "https://x.com/KingOf_Streets/status/1780807163427889640",
+    "published": "2024-04-17",
+    "aspectRatio": 1.5015758667266996,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/fighting_stance.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/fighting_stance.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/fighting_stance.jpg"
+  },
+  {
+    "title": "Hello There 👋",
+    "artist": "@wolfbin30",
+    "tags": [
+      "Rastaban Form",
+      "Hibernal Assassin",
+      "Castor",
+      "Techwear"
+    ],
+    "href": "https://x.com/wolfbin30/status/1779175993099550898",
+    "published": "2024-04-13",
+    "aspectRatio": 0.6282327586206896,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/hello_there.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/hello_there.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/hello_there.png"
+  },
+  {
+    "title": "Gemini Form Icon",
+    "artist": "@Hagrang_",
+    "tags": [
+      "Gemini Form"
+    ],
+    "href": "https://x.com/Hagrang_/status/1774725224019440106",
+    "published": "2024-04-01",
+    "aspectRatio": 1.0205479452054795,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/gemini_form_icon.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gemini_form_icon.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/gemini_form_icon.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Ronin Sketch",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/ronin_sketch/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ronin_sketch/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ronin_sketch/0.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "High Schooler Sketch",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/high_schooler_sketch/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/high_schooler_sketch/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/high_schooler_sketch/0.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Gladiator Sketch",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/gladiator_sketch/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gladiator_sketch/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/gladiator_sketch/0.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Casual Cupid",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/casual_cupid/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/casual_cupid/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/casual_cupid/0.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Christmas PJs",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/christmas_p_js/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/christmas_p_js/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/christmas_p_js/0.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Summer Outfit 2023 Sketch",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/summer_outfit_2023_sketch/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/summer_outfit_2023_sketch/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/summer_outfit_2023_sketch/0.png"
   }
 ]

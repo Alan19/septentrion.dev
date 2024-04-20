@@ -1,15 +1,15 @@
 import {Fade, Grid, Typography} from "@mui/material";
-import {getPageHeader} from "./AboutPage";
 import React from "react";
 import castor from "./about-resources/castor.png"
 import superheroArtwork from './about-resources/superhero-artwork.png'
 import castorEvolution from './about-resources/castor-evolved.png'
 import {AboutPageParagraph} from "./AboutPageParagraph";
+import {PageHeader} from "./PageHeader";
 
 export function AlcorWorldInfo() {
     return <Fade in>
         <div>
-            {getPageHeader("Alcor's World")}
+            <PageHeader title={"Alcor's World"}/>
             <Grid container direction={"row"} spacing={2}>
                 <Grid item>
                     <Typography variant={"body1"}>
