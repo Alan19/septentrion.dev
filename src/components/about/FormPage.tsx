@@ -3,6 +3,7 @@ import {CharacterAttribute} from "./AboutPage";
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import {PageHeader} from "./PageHeader";
+import {SkeletonImage} from "../SkeletonImage";
 
 export type Affinity =
     'Fire'
@@ -30,14 +31,15 @@ export type FormInformation = {
     thumbnail: string,
     image: string,
     link: string,
-    description: string
+    description: string,
+    imageAspectRatio: number
 };
 
 export function FormPage(props: {
     formInformation: FormInformation
 }) {
     const navigate = useNavigate();
-    const {name, body, affinity, weapons, height, history, image} = props.formInformation;
+    const {name, body, affinity, weapons, height, history, image, imageAspectRatio} = props.formInformation;
     return <>
         <Fade in={true}>
             <div>
@@ -45,7 +47,7 @@ export function FormPage(props: {
                 <Grid container spacing={2}>
                     <Grid item md={6}>
                         <Typography variant={"body1"}>{body}</Typography>
-                        <Typography variant={"h5"}>History</Typography>
+                        <Typography variant={"h5"} style={{marginTop: '8px'}}>History</Typography>
                         <Typography>
                             {history}
                         </Typography>
@@ -57,7 +59,7 @@ export function FormPage(props: {
                         </Stack>
                     </Grid>
                     <Grid item md>
-                        <img style={{width: "100%"}} src={image}/>
+                        <SkeletonImage src={image} aspectRatio={imageAspectRatio}/>
                     </Grid>
                 </Grid>
             </div>
