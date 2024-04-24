@@ -1,5 +1,5 @@
 import {Divider, List, ListItem, ListItemAvatar, ListItemText} from "@mui/material-next";
-import React from "react";
+import React, {memo} from "react";
 import ListItemButton from "@mui/material-next/ListItemButton";
 import {Avatar, Collapse} from "@mui/material";
 import {ExpandLess, ExpandMore} from "@mui/icons-material";
@@ -49,18 +49,18 @@ function CollapsibleListButton(props: { title: string, children: React.JSX.Eleme
     </>;
 }
 
-export function AlcorLorePane() {
+export const AlcorLorePane = memo(function AlcorLorePane() {
     // TODO Fix height on mobile version
     return <List>
         <ListItem>
             <ListItemText secondary={"Into the Alcorverse"}/>
         </ListItem>
-        <M3ListButton link={''} text={"Alcor's World"}/>
-        <M3ListButton text={'Bio-Enhancement'} link={'bio-enhancement'}/>
-        <CollapsibleListButton title={'Alternate Formes'}>
+        <M3ListButton link={""} text={"Alcor's World"}/>
+        <M3ListButton text={"Bio-Enhancement"} link={"bio-enhancement"}/>
+        <CollapsibleListButton title={"Alternate Formes"}>
             {alcorForms.map(value => <M3ListButton text={value.name} link={value.link} avatarSrc={value.thumbnail} indentation={4}/>)}
         </CollapsibleListButton>
-        <M3ListButton text={"Alcor's Wardrobe"} link={'outfits'}/>
+        <M3ListButton text={"Alcor's Wardrobe"} link={"outfits"}/>
         <Divider color={"--md-sys-color-onSurfaceVariant"} variant={"middle"}/>
         <ListItem>
             <ListItemText secondary={"TTRPG Characters"}/>
@@ -72,4 +72,4 @@ export function AlcorLorePane() {
             <ListItemText primary={"Wilton"}/>
         </ListItemButton>
     </List>;
-}
+});

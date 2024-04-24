@@ -2537,5 +2537,19 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/summer_outfit_2023_sketch/0.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/summer_outfit_2023_sketch/0.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/summer_outfit_2023_sketch/0.png"
+  },
+  {
+    "title": "Aquarius Combat Outfit v2",
+    "artist": "@jing56",
+    "tags": [
+      "Aquarius Form",
+      "Knives"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1782067704397959182",
+    "published": "2024-04-21",
+    "aspectRatio": 0.83,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aquarius_combat_outfit_v2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_combat_outfit_v2.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_combat_outfit_v2.png"
   }
 ]

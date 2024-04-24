@@ -1,5 +1,5 @@
 import {Snackbar, Typography} from "@mui/material";
-import React, {createContext, useEffect} from "react";
+import React, {createContext, memo, useEffect} from "react";
 import {Outlet} from "react-router-dom";
 import './form-page.css'
 import {AlcorLorePane} from "./AlcorLorePane";
@@ -15,22 +15,22 @@ export function CharacterAttribute(props: { fieldName: string, fieldValue: strin
     </div>;
 }
 
-export function AboutPage() {
-    const [copiedColor, setCopiedColor] = React.useState('');
+export const AboutPage = memo(function AboutPage() {
+    const [copiedColor, setCopiedColor] = React.useState("");
     const [isOpen, setIsOpen] = React.useState(false);
 
     const handleClick = (color: string) => {
-        setCopiedColor(color)
+        setCopiedColor(color);
     };
 
     useEffect(() => {
-        if (copiedColor !== '') {
-            setIsOpen(true)
+        if (copiedColor !== "") {
+            setIsOpen(true);
         }
     }, [copiedColor]);
 
     const handleClose = (_event: React.SyntheticEvent | Event, reason?: string) => {
-        if (reason === 'clickaway') {
+        if (reason === "clickaway") {
             return;
         }
 
@@ -49,4 +49,4 @@ export function AboutPage() {
             </CopyColorContext.Provider>
         </>
     );
-}
+});
