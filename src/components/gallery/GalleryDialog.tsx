@@ -1,6 +1,6 @@
 import {Dialog, DialogContent, Divider, Grid, IconButton, ImageList, ImageListItem, Typography, useMediaQuery} from "@mui/material";
 import dayjs from "dayjs";
-import React, {useEffect, useState} from "react";
+import React, {memo, useEffect, useState} from "react";
 import {AltInformation, ImageInformation} from "../ImageInformation";
 import "./gallery.css";
 import {Button} from "@mui/material-next";
@@ -11,17 +11,17 @@ import {Close} from "@mui/icons-material";
 import {SkeletonImage} from "../SkeletonImage";
 
 // TODO Refactor this component?
-export function GalleryDialog(props: {
+export const GalleryDialog = memo(function GalleryDialog(props: {
     currentImage?: ImageInformation,
     closeModal: () => void,
     isOpen: boolean,
     alts?: AltInformation[]
 }) {
     const [imageNumber, setImageNumber] = useState(-1);
-    const isPortrait = useMediaQuery('(orientation: portrait)');
+    const isPortrait = useMediaQuery("(orientation: portrait)");
 
     useEffect(() => {
-        setImageNumber(-1)
+        setImageNumber(-1);
     }, [props.currentImage]);
 
     // Hacky workaround to make padding on borderless dialog look good
@@ -42,6 +42,16 @@ export function GalleryDialog(props: {
     function handleAltImageClick(index: number) {
         setImageNumber(index);
     }
+
+    function getCurrentImageInfo(currentImage: ImageInformation): [string, string, number] {
+        if (imageNumber !== -1 && props.alts) {
+            return [props.alts[imageNumber].webp ?? props.alts[imageNumber].src, props.alts[imageNumber].href ?? "", props.alts[imageNumber].aspectRatio ?? 1];
+        } else {
+            return [currentImage.webp ?? currentImage.src, currentImage.href, currentImage.aspectRatio ?? 1];
+
+        }
+    }
+
     return <Dialog
         open={props.isOpen}
         onClose={props.closeModal}
@@ -58,23 +68,23 @@ export function GalleryDialog(props: {
                 color="inherit"
                 onClick={props.closeModal}
                 aria-label="close"
-                style={{position: "absolute", left: '16px', top: '8px', backgroundColor: "color-mix(in srgb, var(--md-sys-color-secondary) 80%, transparent)"}}
+                style={{position: "absolute", left: "16px", top: "8px", backgroundColor: "color-mix(in srgb, var(--md-sys-color-secondary) 80%, transparent)"}}
             >
                 <Close/>
             </IconButton>
-            <Grid container style={{minHeight: '100%'}} direction={isPortrait ? 'column' : 'row'} spacing={2}>
+            <Grid container style={{minHeight: "100%"}} direction={isPortrait ? "column" : "row"} spacing={2}>
                 {props.currentImage && (
                     <Grid item md={9} sm={8} xs={7}>
-                        <SkeletonImage src={props.currentImage.webp ?? props.currentImage.src}
-                                       aspectRatio={props.currentImage.aspectRatio ?? 1}
-                                       containerStyle={{background: 'black'}}
+                        <SkeletonImage src={getCurrentImageInfo(props.currentImage)[0]}
+                                       aspectRatio={getCurrentImageInfo(props.currentImage)[2]}
+                                       containerStyle={{background: "black"}}
                                        style={{
                                            maxWidth: "100%",
                                            height: isPortrait ? "inherit" : "90vh",
                                            alignSelf: "center",
                                            margin: "auto",
                                            objectFit: "contain",
-                                           verticalAlign: 'middle'
+                                           verticalAlign: "middle"
                                        }}
                                        href={props.currentImage.href}
                         />
@@ -144,5 +154,5 @@ export function GalleryDialog(props: {
                 </Grid>
             </Grid>
         </DialogContent>
-    </Dialog>
-}
+    </Dialog>;
+});
