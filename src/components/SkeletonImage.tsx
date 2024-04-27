@@ -1,8 +1,8 @@
-import React, {MouseEventHandler, useEffect, useState} from "react";
+import React, {memo, MouseEventHandler, useEffect, useState} from "react";
 import {IconButton, Skeleton} from "@mui/material";
 import PhotoLibraryIcon from "@mui/icons-material/PhotoLibraryOutlined";
 
-export function SkeletonImage(props: {
+export const SkeletonImage = memo(function SkeletonImage(props: {
     src: string,
     aspectRatio: number,
     onClick?: MouseEventHandler<HTMLImageElement>,
@@ -59,4 +59,4 @@ export function SkeletonImage(props: {
     } else {
         return <div style={{width: "100%", aspectRatio: aspectRatio, ...style}}><Skeleton width={'100%'} height={'100%'} animation={"wave"} variant={"rounded"}/></div>;
     }
-}
+})

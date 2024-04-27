@@ -31,6 +31,7 @@ function ChronologicalGallery(props: {
                 src={value.thumbnailUrl ?? value.src}
                 alt={value.title}
                 imageClassname={"artImage"}
+                containerStyle={{position: 'relative', height: '100%'}}
                 onClick={() => props.setCurrentImage(value)}
                 aspectRatio={value.aspectRatio ?? 1}
                 hasAlts={props.altInfo.has(value.title)}/>)}

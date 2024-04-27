@@ -200,8 +200,10 @@ export function Gallery() {
 
 
                     {displayMode === 'monthly' ?
-                        <ChronologicalGallery displayedImages={shownImages} width={bounds.width}
-                                              setCurrentImage={handleImageClicked} altInfo={altData}/> :
+                        <ChronologicalGallery displayedImages={shownImages}
+                                              width={bounds.width}
+                                              setCurrentImage={handleImageClicked}
+                                              altInfo={altData}/> :
                         <TSJustifiedLayout width={bounds.width}
                                            targetRowHeight={350}
                                            rowSpacing={8}
