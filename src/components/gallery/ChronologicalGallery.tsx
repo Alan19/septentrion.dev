@@ -1,9 +1,9 @@
 import {Typography} from "@mui/material";
 import React, {Fragment} from "react";
 import {AltInformation, ImageInformation} from "../ImageInformation";
-import {GalleryImage} from "./GalleryImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {getMonthYearPairsInImageSet} from "./Gallery";
+import {SkeletonImage} from "../SkeletonImage";
 
 function ChronologicalGallery(props: {
     displayedImages: ImageInformation[],
@@ -27,11 +27,11 @@ function ChronologicalGallery(props: {
             ))}
             targetRowHeight={props.height}
         >
-            {imagesForMonth.map(value => <GalleryImage
+            {imagesForMonth.map(value => <SkeletonImage
                 src={value.thumbnailUrl ?? value.src}
-                title={value.title ?? ""}
-                className={"artImage"}
-                setCurrentImage={() => props.setCurrentImage(value)}
+                alt={value.title}
+                imageClassname={"artImage"}
+                onClick={() => props.setCurrentImage(value)}
                 aspectRatio={value.aspectRatio ?? 1}
                 hasAlts={props.altInfo.has(value.title)}/>)}
         </TSJustifiedLayout>

@@ -11,12 +11,12 @@ import useMeasure from 'react-use-measure';
 import {ResizeObserver} from '@juggle/resize-observer'
 import ChronologicalGallery from "./ChronologicalGallery";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
-import {GalleryImage} from "./GalleryImage";
 import {GalleryDialog} from "./GalleryDialog";
 import {ChipPropsColorOverrides} from "@mui/material-next/Chip/Chip.types";
 import {OverridableStringUnion} from "@mui/types";
 import {FilterPane} from "./FilterPane";
 import {RouteWithSubpanel} from "../navigation/RouteWithSubpanel";
+import {SkeletonImage} from "../SkeletonImage";
 
 export type TagState = {
     [tag in ArtTag]: number;
@@ -209,13 +209,14 @@ export function Gallery() {
                                            layoutItems={imagesOnPage.map(value => (
                                                value.aspectRatio ?? 1
                                            ))}>
-                            {imagesOnPage.map(value => <GalleryImage
+                            {imagesOnPage.map(value => <SkeletonImage
+                                onClick={() => handleImageClicked(value)}
+                                hasAlts={altData.has(value.title)}
+                                alt={value.title}
+                                containerStyle={{position: 'relative', height: '100%'}}
                                 src={value.thumbnailUrl ?? value.src}
-                                aspectRatio={value.aspectRatio ?? 1}
-                                className={"artImage"}
-                                setCurrentImage={() => handleImageClicked(value)}
-                                title={value.title ?? ""}
-                                hasAlts={altData.has(value.title)}/>)}
+                                imageClassname={'artImage'}
+                                aspectRatio={value.aspectRatio ?? 1}/>)}
                         </TSJustifiedLayout>
                     }
                 </Grid>

@@ -2,13 +2,13 @@ import {Dialog, DialogContent, Divider, Grid, IconButton, ImageList, ImageListIt
 import dayjs from "dayjs";
 import React, {useEffect, useState} from "react";
 import {AltInformation, ImageInformation} from "../ImageInformation";
-import {ImageWithLoadingSkeleton} from "./ImageWithLoadingSkeleton";
 import "./gallery.css";
 import {Button} from "@mui/material-next";
 import Chip from "@mui/material-next/Chip";
 import AltsUploader from "./AltsUploader";
 import {theme} from "../../App";
 import {Close} from "@mui/icons-material";
+import {SkeletonImage} from "../SkeletonImage";
 
 // TODO Refactor this component?
 export function GalleryDialog(props: {
@@ -42,15 +42,6 @@ export function GalleryDialog(props: {
     function handleAltImageClick(index: number) {
         setImageNumber(index);
     }
-
-    function getSrc(currentImage: ImageInformation) {
-        if (imageNumber === -1) {
-            return currentImage.webp ?? currentImage.src;
-        } else if (props.alts) {
-            return props.alts[imageNumber].webp ?? props.alts[imageNumber].src;
-        }
-    }
-
     return <Dialog
         open={props.isOpen}
         onClose={props.closeModal}
@@ -73,35 +64,33 @@ export function GalleryDialog(props: {
             </IconButton>
             <Grid container style={{minHeight: '100%'}} direction={isPortrait ? 'column' : 'row'} spacing={2}>
                 {props.currentImage && (
-                    <Grid
-                        item
-                        sm={9}
-                        xs
-                    >
-                        <ImageWithLoadingSkeleton href={(props.currentImage.href && props.currentImage.href !== '') ? props.currentImage.href : props.currentImage.src}
-                                                  aspectRatio={props.currentImage.aspectRatio ?? 1}>
-                            <img
-                                src={getSrc(props.currentImage)}
-                                alt={props.currentImage.title}
-                                style={{
-                                    maxWidth: "100%",
-                                    height: isPortrait ? "inherit" : "90vh",
-                                    alignSelf: "center",
-                                    margin: "auto",
-                                    objectFit: "contain"
-                                }}
-                                loading={"lazy"}
-                            />
-                        </ImageWithLoadingSkeleton>
-
+                    <Grid item md={9} sm={8} xs={7}>
+                        <SkeletonImage src={props.currentImage.webp ?? props.currentImage.src}
+                                       aspectRatio={props.currentImage.aspectRatio ?? 1}
+                                       containerStyle={{background: 'black'}}
+                                       style={{
+                                           maxWidth: "100%",
+                                           height: isPortrait ? "inherit" : "90vh",
+                                           alignSelf: "center",
+                                           margin: "auto",
+                                           objectFit: "contain",
+                                           verticalAlign: 'middle'
+                                       }}
+                                       href={props.currentImage.href}
+                        />
                     </Grid>
                 )}
-                <Grid item sm xs={"auto"} style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    flex: 1,
-                    ...isPortrait ? portraitPadding : landscapePadding
-                }} className={"dialog-description"}>
+                <Grid item
+                      md
+                      sm
+                      xs
+                      style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          flex: 1,
+                          ...isPortrait ? portraitPadding : landscapePadding
+                      }}
+                      className={"dialog-description"}>
                     <div>
                         <Typography variant={"h4"}>{props.currentImage?.title}</Typography>
                     </div>

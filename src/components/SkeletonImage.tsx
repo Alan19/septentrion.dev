@@ -1,8 +1,21 @@
 import React, {MouseEventHandler, useEffect, useState} from "react";
-import {Skeleton} from "@mui/material";
+import {IconButton, Skeleton} from "@mui/material";
+import PhotoLibraryIcon from "@mui/icons-material/PhotoLibraryOutlined";
 
-export function SkeletonImage({src, aspectRatio, onClick}: { src: string, aspectRatio: number, onClick?: MouseEventHandler<HTMLImageElement> }) {
-    const [isReady, setIsReady] = useState(false);
+export function SkeletonImage(props: {
+    src: string,
+    aspectRatio: number,
+    onClick?: MouseEventHandler<HTMLImageElement>,
+    style?: React.CSSProperties,
+    containerStyle?: React.CSSProperties,
+    hasAlts?: boolean,
+    alt?: string,
+    imageClassname?: string,
+    href?: string
+}) {
+    const {src, aspectRatio, style, onClick, hasAlts = false, alt, imageClassname, containerStyle, href} = props;
+
+    const [isReady, setIsReady] = useState(isImageCached());
 
     function isImageCached() {
         const image = new Image();
@@ -28,11 +41,22 @@ export function SkeletonImage({src, aspectRatio, onClick}: { src: string, aspect
 
 
     if (isReady) {
-        return <img loading={"lazy"} onClick={onClick} style={{width: '100%', height: 'inherit'}} src={src}/>;
+        const img = <img alt={alt} loading={"lazy"} className={imageClassname} onClick={onClick} style={{height: 'inherit', ...style, width: '100%'}} src={src}/>;
+        return <div style={containerStyle}>
+            {
+                props.hasAlts &&
+                <IconButton style={{
+                    position: "absolute",
+                    right: "8px",
+                    top: "8px",
+                    backgroundColor: "color-mix(in srgb, var(--md-sys-color-secondary) 80%, transparent)"
+                }}>
+                    <PhotoLibraryIcon/>
+                </IconButton>
+            }
+            {href ? <a target={'_blank'} href={href}>{img}</a> : img}
+        </div>;
     } else {
-        return <Skeleton animation={"wave"}
-                         variant={"rounded"}
-                         style={{aspectRatio: aspectRatio, width: "100%", height: 'auto'}}>
-        </Skeleton>;
+        return <div style={{width: "100%", aspectRatio: aspectRatio, ...style}}><Skeleton width={'100%'} height={'100%'} animation={"wave"} variant={"rounded"}/></div>;
     }
 }
