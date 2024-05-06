@@ -98,7 +98,8 @@ export const GalleryDialog = memo(function GalleryDialog(props: {
                           display: "flex",
                           flexDirection: "column",
                           flex: 1,
-                          ...isPortrait ? portraitPadding : landscapePadding
+                          ...isPortrait ? portraitPadding : landscapePadding,
+                          background: 'var(--md-sys-color-surface)'
                       }}
                       className={"dialog-description"}>
                     <div>

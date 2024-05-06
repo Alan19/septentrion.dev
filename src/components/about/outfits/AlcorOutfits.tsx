@@ -1,15 +1,17 @@
 import {PageHeader} from "../PageHeader";
 import {Fade, Grid, Typography} from "@mui/material";
 import {AboutPageParagraph} from "../AboutPageParagraph";
+import {SkeletonImage} from "../../SkeletonImage";
 
 export function AlcorOutfits() {
     // TODO Switch themes for different forms and outfits?
     return <Fade in>
         <Grid container spacing={2}>
             <Grid item>
-                <PageHeader title={"Alcor's Outfits"}/>
+                <PageHeader title={"Alcor's Wardrobe"}/>
                 <Typography variant="body1">Alcor's primary outfits are loosely based on the Modern mid-latitude ecological seasons. He prefers fairly tight and high-tech outfits, usually infused with high-tech fabrics and materials.
                     Each outfit is designed to be worn in an athleisure context, but are sometimes also dedicated for other activities.</Typography>
+                <SkeletonImage containerStyle={{marginTop: '8px'}} src={"https://alcorsiteartbucket.s3.amazonaws.com/webp/outfit_sheet.webp"} aspectRatio={2.35}/>
             </Grid>
             <AboutPageParagraph title={'Vernal Outfit'}
                                 text={'Alcor\'s Vernal-themed outfit is primarily for laboratory work. The top comprises of a black sleeveless shirt that transitions into fingerless gloves. Layered on top is a hoodie that is adorned with his lab\'s logo, complimented by a messenger bag that is often used for delivering his products to his clients. This ensemble is completed with high-tech shorts and leggings, which reduces fatigue on busy days. Finally, a pair of custom-made lab safe sneakers round out the attire. Additionally, this outfit comes with a pair of AR goggles that shows helpful heads up displays that keep track of tasks and reminders.'}
