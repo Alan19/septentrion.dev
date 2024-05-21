@@ -2,7 +2,7 @@ import {Snackbar, Typography} from "@mui/material";
 import React, {createContext, memo, useEffect} from "react";
 import {Outlet} from "react-router-dom";
 import './form-page.css'
-import {AlcorLorePane} from "./AlcorLorePane";
+import {AboutPageNavigation} from "./AboutPageNavigation";
 import {RouteWithSubpanel} from "../navigation/RouteWithSubpanel";
 
 // @ts-ignore
@@ -39,7 +39,7 @@ export const AboutPage = memo(function AboutPage() {
     return (
         <>
             <CopyColorContext.Provider value={[copiedColor, handleClick]}>
-                <RouteWithSubpanel panel={<AlcorLorePane/>} routeContent={<Outlet/>}/>
+                <RouteWithSubpanel panel={<AboutPageNavigation/>} routeContent={<Outlet/>}/>
                 <Snackbar
                     open={isOpen}
                     autoHideDuration={6000}

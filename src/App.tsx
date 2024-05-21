@@ -15,6 +15,7 @@ import {BioEnhancementIntro} from "./components/about/BioEnhancementIntro";
 import {alcorForms} from "./components/about/about-resources/alcorForms";
 import {AlcorWorldInfo} from "./components/about/AlcorWorldInfo";
 import {AlcorOutfits} from "./components/about/outfits/AlcorOutfits";
+import {SomaInfo} from "./components/about/characters/SomaInfo";
 
 // TODO get rid of this
 export const theme = createTheme({
@@ -67,6 +68,10 @@ const router = createHashRouter([
                     {
                         path: 'outfits',
                         element: <AlcorOutfits/>
+                    },
+                    {
+                        path: 'soma',
+                        element: <SomaInfo/>
                     }
                 ]
             },

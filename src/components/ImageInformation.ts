@@ -29,7 +29,10 @@ export enum ArtTag {
     winter = 'Hibernal Assassin',
     aquarius = 'Aquarius Form',
     auriga = 'Auriga Form',
-    hidden = 'Hidden'
+    hidden = 'Hidden',
+    soma = 'Soma',
+    wilton = 'Wilton',
+    poslani = 'Poslani'
 }
 
 export type ImageInformation = {
@@ -63,4 +66,9 @@ export function isImageInformation(image: AltInformation | ImageInformation): im
 
 export function isAltInformation(image: AltInformation | ImageInformation): image is AltInformation {
     return (image as AltInformation).parent !== undefined;
+}
+
+export const tagGroup: Record<string, ArtTag[]> = {
+    Clothing: [ArtTag.bodysuit, ArtTag.hoodie, ArtTag.autumnal, ArtTag.serotinal, ArtTag.vernal, ArtTag.estival, ArtTag.winter, ArtTag.standardOutfit, ArtTag.techwear],
+    Class: [ArtTag.thuban, ArtTag.rastaban, ArtTag.eltanin, ArtTag.awakened, ArtTag.ultra, ArtTag.eclipse]
 }

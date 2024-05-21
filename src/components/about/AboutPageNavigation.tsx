@@ -49,7 +49,7 @@ function CollapsibleListButton(props: { title: string, children: React.JSX.Eleme
     </>;
 }
 
-export const AlcorLorePane = memo(function AlcorLorePane() {
+export const AboutPageNavigation = memo(function AlcorLorePane() {
     // TODO Fix height on mobile version
     return <List>
         <ListItem>
@@ -65,9 +65,7 @@ export const AlcorLorePane = memo(function AlcorLorePane() {
         <ListItem>
             <ListItemText secondary={"TTRPG Characters"}/>
         </ListItem>
-        <ListItemButton>
-            <ListItemText primary={"Soma"}/>
-        </ListItemButton>
+        <M3ListButton text={"Soma"} link={"soma"}/>
         <ListItemButton>
             <ListItemText primary={"Wilton"}/>
         </ListItemButton>

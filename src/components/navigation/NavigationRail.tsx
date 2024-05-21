@@ -81,7 +81,7 @@ export function NavigationRail(props: {
             <Paper style={{position: 'sticky', bottom: 0}} elevation={3}>
                 <BottomNavigation
                     showLabels
-                    style={{marginTop: '16px'}}
+                    style={{marginTop: '16px', background: 'var(--md-sys-color-surfaceContainerHigh)'}}
                     value={location}
                     onChange={(_event, newValue) => {
                         navigateFunction(newValue)

@@ -1,6 +1,5 @@
 import React, {useState} from "react";
-import {Divider} from "@mui/material-next";
-import {Container, Fade, IconButton, useMediaQuery} from "@mui/material";
+import {Container, Fade, Grid, IconButton, useMediaQuery} from "@mui/material";
 import {theme} from "../../App";
 import {RouteDrawer} from "./RouteDrawer";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -9,6 +8,7 @@ import {drawerColor} from "./NavigationRail";
 export function RouteWithSubpanel(props: { panel: React.JSX.Element, routeContent: React.JSX.Element }) {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
+    const isSmallOrAbove = useMediaQuery(theme.breakpoints.up("sm"));
 
     function handleDrawerToggle() {
         setIsDrawerOpen(true)
@@ -18,25 +18,39 @@ export function RouteWithSubpanel(props: { panel: React.JSX.Element, routeConten
         setIsDrawerOpen(false)
     }
 
-    if (isMediumOrAbove) {
+    // TODO Figure out workaround for certain width causing rerendering due to scrollbar adjusting width
+    if (isSmallOrAbove) {
         return (
             <>
-                <div style={{display: "flex", backgroundColor: drawerColor, width: '15em'}}>
-                    <Divider orientation={"vertical"} flexItem/>
-                    <div style={{
-                        padding: '8px 8px 24px 8px',
-                        position: 'sticky',
-                        height: '100vh',
-                        flex: 1,
-                        top: 0,
-                        overflowY: 'auto'
-                    }}>
-                        {props.panel}
-                    </div>
-                </div>
                 <Fade in>
-                    <Container style={{flexGrow: 1, marginTop: '24px'}}>
-                        {props.routeContent}
+                    <Container maxWidth={"xl"}>
+                        <Grid container style={{padding: '16px 0px 0 0px'}} spacing={4} direction={isMediumOrAbove ? "row" : "column-reverse"}>
+                            <Grid item md={9}>
+                                <div style={{
+                                    background: drawerColor,
+                                    borderRadius: 24,
+                                    maxHeight: isMediumOrAbove ? 'calc(100vh - 32px)' : 'inherit',
+                                    overflowY: 'scroll',
+                                    padding: 16
+                                }}>
+                                    {props.routeContent}
+                                </div>
+                            </Grid>
+                            <Grid item md={3}>
+                                <div style={{
+                                    borderRadius: 24,
+                                    background: drawerColor,
+                                    position: 'sticky',
+                                    maxHeight: isMediumOrAbove ? 'calc(100vh - 32px)' : 'inherit',
+                                    flex: 1,
+                                    top: 0,
+                                    overflowY: 'auto',
+                                    padding: 16
+                                }}>
+                                    {props.panel}
+                                </div>
+                            </Grid>
+                        </Grid>
                     </Container>
                 </Fade>
             </>
