@@ -70,5 +70,6 @@ export function isAltInformation(image: AltInformation | ImageInformation): imag
 
 export const tagGroup: Record<string, ArtTag[]> = {
     Clothing: [ArtTag.bodysuit, ArtTag.hoodie, ArtTag.autumnal, ArtTag.serotinal, ArtTag.vernal, ArtTag.estival, ArtTag.winter, ArtTag.standardOutfit, ArtTag.techwear],
-    Class: [ArtTag.thuban, ArtTag.rastaban, ArtTag.eltanin, ArtTag.awakened, ArtTag.ultra, ArtTag.eclipse]
+    "Evolution Level": [ArtTag.thuban, ArtTag.rastaban, ArtTag.eltanin, ArtTag.awakened, ArtTag.ultra, ArtTag.eclipse],
+    OCs: [ArtTag.poslani, ArtTag.soma, ArtTag.wilton, ArtTag.castor]
 }

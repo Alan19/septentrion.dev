@@ -5,7 +5,7 @@ import {RouteDrawer} from "./RouteDrawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import {drawerColor} from "./NavigationRail";
 
-export function RouteWithSubpanel(props: { panel: React.JSX.Element, routeContent: React.JSX.Element }) {
+export function RouteWithSubpanel(props: { panel: React.JSX.Element, routeContent: React.JSX.Element, panelCSS?: React.CSSProperties }) {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
     const isSmallOrAbove = useMediaQuery(theme.breakpoints.up("sm"));
@@ -29,9 +29,9 @@ export function RouteWithSubpanel(props: { panel: React.JSX.Element, routeConten
                                 <div style={{
                                     background: drawerColor,
                                     borderRadius: 24,
-                                    maxHeight: isMediumOrAbove ? 'calc(100vh - 32px)' : 'inherit',
-                                    overflowY: 'scroll',
-                                    padding: 16
+                                    padding: 16,
+                                    marginBottom: 16,
+                                    ...props.panelCSS
                                 }}>
                                     {props.routeContent}
                                 </div>
@@ -43,7 +43,7 @@ export function RouteWithSubpanel(props: { panel: React.JSX.Element, routeConten
                                     position: 'sticky',
                                     maxHeight: isMediumOrAbove ? 'calc(100vh - 32px)' : 'inherit',
                                     flex: 1,
-                                    top: 0,
+                                    top: 16,
                                     overflowY: 'auto',
                                     padding: 16
                                 }}>

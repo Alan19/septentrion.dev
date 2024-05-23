@@ -2781,10 +2781,24 @@
       "Techwear"
     ],
     "href": "",
-    "published": "2024-05-19",
+    "published": "2024-05-15",
     "aspectRatio": 1,
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/yuru_alcor.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/yuru_alcor.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/yuru_alcor.jpg"
+  },
+  {
+    "title": "Aquarius Outfit Sheet",
+    "artist": "@soendapuss",
+    "tags": [
+      "Aquarius Form",
+      "Bodysuit"
+    ],
+    "href": "",
+    "published": "2024-05-21",
+    "aspectRatio": 2.3568985176738884,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aquarius_outfit_sheet.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_outfit_sheet.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_outfit_sheet.png"
   }
 ]

@@ -112,8 +112,6 @@ export const Gallery = memo(function Gallery() {
             <GalleryDialog isOpen={isDialogOpen} currentImage={currentImage} closeModal={closeModal} alts={currentImage?.title !== undefined ? altData.get(currentImage.title) : undefined}/>
             <div ref={ref}></div>
             <Grid container direction={"column"} spacing={2}>
-                <Grid item>
-                </Grid>
                 <Grid item style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
                     <Grid container justifyContent={"space-between"} alignItems={"flex-end"}>
                         <RadioGroup value={displayMode}>
