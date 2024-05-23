@@ -1584,7 +1584,7 @@
   },
   {
     "title": "Christmas PJs",
-    "artist": "@KuroPenguinEX",
+    "artist": "@KuroPenguinEx",
     "tags": [
       "AICore Form"
     ],
@@ -1664,7 +1664,7 @@
   },
   {
     "title": "Monster Constume",
-    "artist": "@KuroPenguinEX",
+    "artist": "@KuroPenguinEx",
     "tags": [
       "Thuban Form"
     ],
@@ -1703,7 +1703,7 @@
   },
   {
     "title": "Gladiator Sketch",
-    "artist": "@KuroPenguinEX",
+    "artist": "@KuroPenguinEx",
     "tags": [
       "Thuban Form"
     ],
@@ -1716,7 +1716,7 @@
   },
   {
     "title": "Sportswear Sketch",
-    "artist": "@KuroPenguinEX",
+    "artist": "@KuroPenguinEx",
     "tags": [
       "Thuban Form"
     ],
@@ -1756,7 +1756,7 @@
   },
   {
     "title": "Inventor Sketch",
-    "artist": "@KuroPekoEX",
+    "artist": "@KuroPenguinEx",
     "tags": [
       "Thuban Form"
     ],
@@ -1769,7 +1769,7 @@
   },
   {
     "title": "Summer Outfit 2023 Sketch",
-    "artist": "@KuroPenguinEX",
+    "artist": "@KuroPenguinEx",
     "tags": [
       "Thuban Form"
     ],
@@ -1799,7 +1799,7 @@
   },
   {
     "title": "Ronin Sketch",
-    "artist": "@KuroPenguinEX",
+    "artist": "@KuroPenguinEx",
     "tags": [
       "Thuban Form"
     ],
@@ -1948,7 +1948,7 @@
   },
   {
     "title": "Grim Reaper Costume Sketch",
-    "artist": "@KuroPenguinEX",
+    "artist": "@KuroPenguinEx",
     "tags": [
       "Thuban Form"
     ],
@@ -2800,5 +2800,32 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aquarius_outfit_sheet.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_outfit_sheet.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_outfit_sheet.png"
+  },
+  {
+    "title": "Thai Costume Sketch",
+    "artist": "@KuroPenguinEx",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1793766634513109264",
+    "published": "2024-05-23",
+    "aspectRatio": 0.7069555302166477,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/thai_costume_sketch.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/thai_costume_sketch.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/thai_costume_sketch.png"
+  },
+  {
+    "title": "AICore V2",
+    "artist": "@izayoiramiamia",
+    "tags": [
+      "AICore Form",
+      "Techwear"
+    ],
+    "href": "",
+    "published": "2024-05-23",
+    "aspectRatio": 1.25567136725935,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/ai_core_v_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ai_core_v_2.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ai_core_v_2.jpg"
   }
 ]
