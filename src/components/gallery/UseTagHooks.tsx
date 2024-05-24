@@ -3,9 +3,34 @@
 import axios from "axios";
 import {useSearchParams} from "react-router-dom";
 import {AltInformation, ArtTag, ImageInformation, isAltInformation, isImageInformation} from "../ImageInformation";
-import {TagState} from "./Gallery";
 import {useEffect, useState} from "react";
 import images from './images.json'
+
+export type TagState = { artists: Record<string, number>, tags: Record<ArtTag, number> };
+export const artists = Array.from(new Set(images.filter(value => value.artist !== undefined && value.artist !== '').map<string>(imageData => imageData.artist as string)));
+
+/**
+ * Creates a new instance of a TagState, with all the tags disabled
+ */
+export function getNewTagState(): TagState {
+    return {tags: Object.values(ArtTag).reduce((previousValue, currentValue) => ({...previousValue, [currentValue]: 0}), {}), artists: artists.reduce((previousValue, currentValue) => ({...previousValue, [currentValue]: 0}), {})} as TagState
+}
+
+/**
+ * Flattens the tags in a TagState, making them all be on the same level with the tag or artist name as the key, and the status of the tag as the value
+ * @param tagState
+ */
+export function flattenTags(tagState: TagState): { [tagOrArtist in string]: number } {
+    return {...tagState.tags, ...tagState.artists};
+}
+
+/**
+ * Checks if a tag is an artist
+ * @param optionName The name of the tag (with the '-' in the front removed if there is one)
+ */
+export function isArtist(optionName: string) {
+    return artists.includes(optionName);
+}
 
 export function useTagHooks() {
     const [tagURLParam, setTagURLParams] = useSearchParams();
@@ -16,12 +41,14 @@ export function useTagHooks() {
      * Deserializes the tag state from the URL params, basically converts the url a tagstate, with anything that isn't defined in the URL being set to 0
      */
     function getTags(): TagState {
-        return Object.values(ArtTag).reduce((previousValue, currentValue) => {
-            return {
-                ...previousValue,
-                [currentValue]: Number(tagURLParam.get(currentValue))
-            }
-        }, {}) as TagState;
+        const tagState = getNewTagState();
+        Object.keys(tagState.tags).forEach(value => {
+            tagState.tags[value as ArtTag] = Number(tagURLParam.get(value));
+        })
+        Object.keys(tagState.artists).forEach(value => {
+            tagState.artists[value] = Number(tagURLParam.get(value));
+        })
+        return tagState;
     }
 
     /**
@@ -29,11 +56,13 @@ export function useTagHooks() {
      * @param tags The new tag state
      */
     function setTags(tags: TagState) {
-        setTagURLParams(Object.values(ArtTag)
-            .filter(value => tags[value] !== 0)
+        const allTags = Object.values(ArtTag).map(value => value.toString()).concat(artists);
+        const flattenedTags = flattenTags(tags);
+        setTagURLParams(allTags
+            .filter(value => flattenedTags[value] !== undefined && flattenedTags[value] !== 0)
             .reduce((previousValue, currentValue) => ({
                 ...previousValue,
-                [currentValue]: String(tags[currentValue])
+                [currentValue]: String(flattenedTags[currentValue])
             }), {}));
     }
 

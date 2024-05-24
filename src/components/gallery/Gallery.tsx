@@ -1,9 +1,9 @@
 import React, {memo, useEffect, useState} from "react";
 import {Fade, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Typography, useMediaQuery,} from "@mui/material";
-import {ArtTag, ImageInformation, isImageInformation} from "../ImageInformation";
+import {ImageInformation, isImageInformation} from "../ImageInformation";
 import "./gallery.css";
 import {theme} from "../../App";
-import {useTagHooks} from "./UseTagHooks";
+import {flattenTags, isArtist, TagState, useTagHooks} from "./UseTagHooks";
 import Uploader from "./Uploader";
 import useMeasure from 'react-use-measure';
 import {ResizeObserver} from '@juggle/resize-observer'
@@ -13,14 +13,6 @@ import {GalleryDialog} from "./GalleryDialog";
 import {FilterPane} from "./FilterPane";
 import {RouteWithSubpanel} from "../navigation/RouteWithSubpanel";
 import {SkeletonImage} from "../SkeletonImage";
-
-export type TagState = {
-    [tag in ArtTag]: number;
-};
-
-export function getNewTagState(): TagState {
-    return Object.values(ArtTag).reduce((previousValue, currentValue) => ({...previousValue, [currentValue]: 0}), {}) as TagState
-}
 
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
     // @ts-ignore
@@ -43,12 +35,12 @@ export const Gallery = memo(function Gallery() {
     let tags: TagState = getTags();
     const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
 
-    const enabledTags: ArtTag[] = Object.keys(tags).filter(
-        (value) => tags[value as ArtTag] === 1
-    ) as ArtTag[];
-    const hiddenTags: ArtTag[] = Object.keys(tags).filter(
-        (value) => tags[value as ArtTag] === -1
-    ) as ArtTag[];
+    const enabledTags: string[] = Object.entries(flattenTags(tags)).filter(
+        ([, value]) => value === 1
+    ).map(([tagName]) => tagName);
+    const hiddenTags: string[] = Object.entries(flattenTags(tags)).filter(
+        ([, value]) => value === -1
+    ).map(([tagName]) => tagName);
 
 
     function handleTagChange(tags: TagState) {
@@ -62,15 +54,13 @@ export const Gallery = memo(function Gallery() {
             let hasFilterTag;
             switch (filterMode) {
                 case "and":
-                    hasFilterTag = enabledTags.every((tag) => value.tags?.includes(tag) ?? false);
+                    hasFilterTag = enabledTags.every((tag) => isArtist(tag) ? value.artist === tag : value.tags?.includes(tag) ?? false);
                     break;
                 case "or":
-                    hasFilterTag = enabledTags.some((tag) => value.tags?.includes(tag) ?? false);
+                    hasFilterTag = enabledTags.some((tag) => isArtist(tag) ? value.artist === tag : value.tags?.includes(tag) ?? false);
                     break;
             }
-            const hasHiddenTag = hiddenTags.some(
-                (tag) => value.tags?.includes(tag) ?? false
-            );
+            const hasHiddenTag = hiddenTags.some((tag) => isArtist(tag) ? value.artist === tag : value.tags?.includes(tag) ?? false);
             if (enabledTags.length === 0) {
                 return !hasHiddenTag;
             } else {
