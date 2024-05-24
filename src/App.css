@@ -5,3 +5,8 @@
 .artImage {
     width: 100%;
 }
+
+.css-n49kub-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+    /*noinspection CssUnresolvedCustomProperty*/
+    color: var(--md-sys-color-primary) !important;
+}
