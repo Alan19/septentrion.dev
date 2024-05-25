@@ -2337,7 +2337,7 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pokemon_trainer.jpg"
   },
   {
-    "title": "Eclipse Deity v2",
+    "parent": "Eclipse Deity v3",
     "artist": "@braveggg",
     "tags": [
       "Eclipse Deity",
@@ -2780,7 +2780,7 @@
       "Hoodie",
       "Techwear"
     ],
-    "href": "",
+    "href": "https://x.com/FaintAlcor/status/1794389040139321425",
     "published": "2024-05-15",
     "aspectRatio": 1,
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/yuru_alcor.webp",
@@ -2815,17 +2815,42 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/thai_costume_sketch.png"
   },
   {
-    "title": "AICore V2",
+    "title": "AICore β",
     "artist": "@izayoiramiamia",
     "tags": [
       "AICore Form",
       "Techwear"
     ],
-    "href": "",
-    "published": "2024-05-23",
+    "href": "https://x.com/FaintAlcor/status/1794215533287739861",
+    "published": "2024-05-24",
     "aspectRatio": 1.25567136725935,
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/ai_core_v_2.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ai_core_v_2.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/ai_core_v_2.jpg"
+  },
+  {
+    "title": "Eclipse Deity γ",
+    "artist": "@braveggg",
+    "tags": [
+      "Eclipse Deity",
+      "Lances"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1794393511862612210",
+    "published": "2024-05-25",
+    "aspectRatio": 0.8243310619910255,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/eclipse_deity_v3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/eclipse_deity_v3.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/eclipse_deity_v3.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.8243310619910255,
+    "parent": "Eclipse Deity v3",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/eclipse_deity_v3/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/eclipse_deity_v3/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/eclipse_deity_v3/0.png"
   }
 ]
