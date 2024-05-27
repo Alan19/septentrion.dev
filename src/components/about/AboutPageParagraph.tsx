@@ -14,7 +14,7 @@ export function AboutPageParagraph(props: {
     variant?: OverridableStringUnion<Variant | 'inherit', TypographyPropsVariantOverrides>,
     subsections?: { title: string, text: string }[]
 }) {
-    const {text, img, title, alt, colors, variant = 'h5', subsections = []} = props;
+    const {text, img, title, alt = '', colors, variant = 'h5', subsections = []} = props;
     return <>
         <Grid item xs={12}>
             <Typography fontWeight={"bold"} variant={variant}>{title}</Typography>
