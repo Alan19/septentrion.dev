@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.71ee0b44.css",
-    "main.js": "/static/js/main.5d8c9036.js",
+    "main.js": "/static/js/main.c2307c97.js",
     "static/js/488.9598de75.chunk.js": "/static/js/488.9598de75.chunk.js",
     "static/js/780.abfebc00.chunk.js": "/static/js/780.abfebc00.chunk.js",
-    "static/js/737.6f2023da.chunk.js": "/static/js/737.6f2023da.chunk.js",
+    "static/js/737.971118ec.chunk.js": "/static/js/737.971118ec.chunk.js",
     "static/media/eclipse-deity-transparent.webp": "/static/media/eclipse-deity-transparent.9b282f7470eae481dc13.webp",
     "static/media/superhero-artwork.png": "/static/media/superhero-artwork.cb8b676c8307979eabc3.png",
     "static/media/m-icon.png": "/static/media/m-icon.510aa3c45a04526e6de3.png",
@@ -24,13 +24,13 @@
     "static/media/OriginTech personal use.ttf": "/static/media/OriginTech personal use.91ec04328d7a9da85f53.ttf",
     "index.html": "/index.html",
     "main.71ee0b44.css.map": "/static/css/main.71ee0b44.css.map",
-    "main.5d8c9036.js.map": "/static/js/main.5d8c9036.js.map",
+    "main.c2307c97.js.map": "/static/js/main.c2307c97.js.map",
     "488.9598de75.chunk.js.map": "/static/js/488.9598de75.chunk.js.map",
     "780.abfebc00.chunk.js.map": "/static/js/780.abfebc00.chunk.js.map",
-    "737.6f2023da.chunk.js.map": "/static/js/737.6f2023da.chunk.js.map"
+    "737.971118ec.chunk.js.map": "/static/js/737.971118ec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.71ee0b44.css",
-    "static/js/main.5d8c9036.js"
+    "static/js/main.c2307c97.js"
   ]
 }
