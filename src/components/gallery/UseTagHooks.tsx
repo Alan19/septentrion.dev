@@ -7,7 +7,7 @@ import {useEffect, useState} from "react";
 import images from './images.json'
 
 export type TagState = { artists: Record<string, number>, tags: Record<ArtTag, number> };
-export const artists = Array.from(new Set(images.filter(value => value.artist !== undefined && value.artist !== '').map<string>(imageData => imageData.artist as string)));
+export const artists = Array.from(new Set(images.filter(value => value.artist !== undefined && value.artist !== '').map<string>(imageData => imageData.artist as string))).sort((a, b) => a.localeCompare(b));
 
 /**
  * Creates a new instance of a TagState, with all the tags disabled

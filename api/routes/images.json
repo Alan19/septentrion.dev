@@ -96,7 +96,7 @@
     "tags": [
       "Triangulum Form"
     ],
-    "artist": "DRACOICE08",
+    "artist": "@DRACOICE08",
     "published": "2022-05-29",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/triangulum_form.webp",
     "aspectRatio": 1.8250950570342206,
@@ -2337,7 +2337,7 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pokemon_trainer.jpg"
   },
   {
-    "parent": "Eclipse Deity v3",
+    "parent": "Eclipse Deity γ",
     "artist": "@braveggg",
     "tags": [
       "Eclipse Deity",
@@ -2844,13 +2844,100 @@
   },
   {
     "tags": [
-      ""
+      "Eclipse Deity"
     ],
     "href": "",
     "aspectRatio": 0.8243310619910255,
-    "parent": "Eclipse Deity v3",
+    "parent": "Eclipse Deity γ",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/eclipse_deity_v3/0.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/eclipse_deity_v3/0.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/eclipse_deity_v3/0.png"
+  },
+  {
+    "title": "Biogenesis Suit Design",
+    "artist": "@EmberWickArt",
+    "tags": [
+      "Superhero",
+      "Bodysuit"
+    ],
+    "href": "https://x.com/EmberWickArt/status/1795127025331577256",
+    "published": "2024-05-27",
+    "aspectRatio": 1.0115606936416186,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/biogenesis_suit_design.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/biogenesis_suit_design.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/biogenesis_suit_design.png"
+  },
+  {
+    "title": "Alan and Alcor",
+    "artist": "@kongzorim",
+    "tags": [
+      "Aldhibah Form",
+      "Rastaban Form",
+      "Standard Outfit"
+    ],
+    "href": "https://x.com/kongzorim/status/1795818089080385818",
+    "published": "2024-05-29",
+    "aspectRatio": 0.7056150600454398,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alan_and_alcor.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alan_and_alcor.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alan_and_alcor.png"
+  },
+  {
+    "tags": [
+      "Rastaban Form",
+      "Standard Outfit"
+    ],
+    "href": "",
+    "aspectRatio": 0.6218760142810775,
+    "parent": "Alan and Alcor",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alan_and_alcor/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alan_and_alcor/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alan_and_alcor/0.png"
+  },
+  {
+    "tags": [
+      "Aldhibah Form"
+    ],
+    "href": "",
+    "aspectRatio": 0.38736913204998313,
+    "parent": "Alan and Alcor",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alan_and_alcor/1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alan_and_alcor/1.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alan_and_alcor/1.png"
+  },
+  {
+    "title": "Proud Summer Beach YCH",
+    "artist": "@KogiKogiKogi1",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/KogiKogiKogi1/status/1796753541085921771",
+    "published": "2024-06-01",
+    "aspectRatio": 1.7777777777777777,
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/proud_summer_beach_ych.gif"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 1.7777777777777777,
+    "parent": "Proud Summer Beach YCH",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/proud_summer_beach_ych/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/proud_summer_beach_ych/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/proud_summer_beach_ych/0.png"
+  },
+  {
+    "title": "Soma's Spring Outfit",
+    "artist": "@kaerukbin",
+    "tags": [
+      "Soma"
+    ],
+    "href": "https://skeb.jp/@kaerukbin/works/4",
+    "published": "2024-05-31",
+    "aspectRatio": 0.763189448441247,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/soma_s_spring_outfit.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_s_spring_outfit.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/soma_s_spring_outfit.png"
   }
 ]
