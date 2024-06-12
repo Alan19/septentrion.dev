@@ -131,7 +131,9 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/raf_buff_techwear.webp"
   },
   {
-    "src": "https://cloud.refsheet.net/images/images/001/361/397/large/EM_Wave_Change.png?1660694424",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/indra_suit/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/indra_suit/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/indra_suit/0.png",
     "title": "Indra Suit",
     "href": "https://twitter.com/tg_marlo/status/1554649750200537088",
     "artist": "@tg_marlo",
@@ -294,19 +296,6 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/bec_gift_art.webp"
   },
   {
-    "title": "Eclipse Deity",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/eclipse_deity.jpg",
-    "href": "https://twitter.com/AkiE_AkikO/status/1581677248163500032",
-    "artist": "@AkiE_AkikO",
-    "tags": [
-      "Eclipse Deity"
-    ],
-    "published": "2022-10-16",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/eclipse_deity.webp",
-    "aspectRatio": 1.2272950417280315,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/eclipse_deity.webp"
-  },
-  {
     "title": "Come and Find Me",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/come_and_find_me.jpg",
     "href": "https://twitter.com/Hemuchang/status/1538903529355563008?s=20&t=eKwrDBRmUWuDjCiUR5suyg",
@@ -334,10 +323,6 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_sketchpage.webp",
     "aspectRatio": 0.7008547008547008,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_sketchpage.webp"
-  },
-  {
-    "parent": "Alcor Sketchpage",
-    "src": "https://pbs.twimg.com/media/FusN8ogX0AAdvZf?format=jpg&name=4096x4096"
   },
   {
     "title": "PNGTuber",
@@ -422,7 +407,7 @@
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/autumnal_techwear.png",
-    "title": "autumnal_techwear.png",
+    "title": "Autumnal Techwear",
     "artist": "@yorozumaru",
     "tags": [
       "Techwear",
@@ -463,7 +448,7 @@
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/big_derg.png",
-    "title": "big_derg.png",
+    "title": "Big Derg",
     "artist": "@Felix_Doodles",
     "tags": [
       "Gemini Form"
@@ -907,19 +892,16 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_wow.webp"
   },
   {
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_and_castor_wow.png",
-    "title": "Alcor and Castor Wow",
-    "artist": "@Kuttoyaki",
+    "parent": "Alcor Wow",
     "tags": [
       "Castor",
       "Thuban Form",
       "Hoodie"
     ],
-    "href": "",
-    "published": "2022-09-21",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/alcor_and_castor_wow.webp",
     "aspectRatio": 1,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_and_castor_wow.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500h/alcor_and_castor_wow.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_and_castor_wow.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_and_castor_wow.png"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/monstrous_symbiote.png",
@@ -2931,7 +2913,9 @@
     "title": "Soma's Spring Outfit",
     "artist": "@kaerukbin",
     "tags": [
-      "Soma"
+      "Soma",
+      "Bodysuit",
+      "Hoodie"
     ],
     "href": "https://skeb.jp/@kaerukbin/works/4",
     "published": "2024-05-31",
@@ -2939,5 +2923,213 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/soma_s_spring_outfit.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_s_spring_outfit.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/soma_s_spring_outfit.png"
+  },
+  {
+    "tags": [
+      "AICore Form"
+    ],
+    "href": "",
+    "aspectRatio": 0.625,
+    "parent": "Halloween Daki",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/halloween_daki/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/halloween_daki/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/halloween_daki/0.png"
+  },
+  {
+    "title": "Eclipse Deity α",
+    "artist": "@AkiE_AkikO",
+    "tags": [
+      "Eclipse Deity"
+    ],
+    "href": "https://x.com/AkiE_AkikO/status/1581677248163500032",
+    "published": "2022-10-16",
+    "aspectRatio": 1.2272950417280315,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/eclipse_deity.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/eclipse_deity.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/eclipse_deity.png"
+  },
+  {
+    "title": "Gemini Fighting Game Outfit",
+    "artist": "@sumiwohakuneko",
+    "tags": [
+      "Gemini Form",
+      "Techwear",
+      "Hoodie"
+    ],
+    "href": "https://skeb.jp/@sumiwohakuneko/works/2",
+    "published": "2024-06-10",
+    "aspectRatio": 0.6160849772382397,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/gemini_fighting_game_outfit.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gemini_fighting_game_outfit.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/gemini_fighting_game_outfit.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 1.7207953603976802,
+    "parent": "Big Derg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/big_derg_png/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/big_derg_png/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/big_derg_png/0.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 1.405726872246696,
+    "parent": "Cool Trio",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/cool_trio/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cool_trio/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cool_trio/0.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7391802152507442,
+    "parent": "Cafe Superhero",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/cafe_superhero/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cafe_superhero/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cafe_superhero/0.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7391802152507442,
+    "parent": "Cafe Superhero",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/cafe_superhero/1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cafe_superhero/1.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cafe_superhero/1.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 1,
+    "parent": "Indra Suit",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/indra_suit/1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/indra_suit/1.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/indra_suit/1.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.9716,
+    "parent": "Seasoned Adventurer Outfit",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/seasoned_adventurer_outfit/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/seasoned_adventurer_outfit/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/seasoned_adventurer_outfit/0.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.5692051139521956,
+    "parent": "Aquarius Form",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aquarius_form/2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form/2.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form/2.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.5692051139521956,
+    "parent": "Aquarius Form",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aquarius_form/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form/0.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.5692051139521956,
+    "parent": "Aquarius Form",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aquarius_form/1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form/1.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form/1.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.5671546785486951,
+    "parent": "Aldhibah Form Reference Sheet",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aldhibah_form_reference_sheet/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aldhibah_form_reference_sheet/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aldhibah_form_reference_sheet/0.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.4239602731222843,
+    "parent": "Aldhibah Form Reference Sheet",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aldhibah_form_reference_sheet/1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aldhibah_form_reference_sheet/1.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aldhibah_form_reference_sheet/1.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.8905872888173774,
+    "parent": "Aldhibah Form Reference Sheet",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aldhibah_form_reference_sheet/2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aldhibah_form_reference_sheet/2.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aldhibah_form_reference_sheet/2.png"
+  },
+  {
+    "title": "Jupiter Weightlifting",
+    "artist": "@jw_bash",
+    "tags": [
+      "Jupiter Form"
+    ],
+    "href": "https://x.com/jw_bash/status/1799959705760023032",
+    "published": "2024-06-09",
+    "aspectRatio": 2.2363524841545694,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/jupiter_weightlifting.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_weightlifting.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_weightlifting.png"
+  },
+  {
+    "title": "Post Workout Cooldown",
+    "artist": "@jw_bash",
+    "tags": [
+      "Jupiter Form"
+    ],
+    "href": "https://x.com/jw_bash/status/1799959705760023032",
+    "published": "2024-06-09",
+    "aspectRatio": 1.087686022760432,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/post_workout_cooldown.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/post_workout_cooldown.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/post_workout_cooldown.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7008333333333333,
+    "parent": "Alcor Sketchpage",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_sketchpage/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_sketchpage/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_sketchpage/0.png"
   }
 ]
