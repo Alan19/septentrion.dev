@@ -102,7 +102,7 @@ export const GalleryDialog = memo(function GalleryDialog(props: {
                           background: 'var(--md-sys-color-surface)'
                       }}
                       className={"dialog-description"}>
-                    <div>
+                    <div style={{marginBottom: 8}}>
                         <Typography variant={"h4"}>{props.currentImage?.title}</Typography>
                     </div>
                     <div style={{flex: 1}}>
@@ -112,6 +112,7 @@ export const GalleryDialog = memo(function GalleryDialog(props: {
                                 href={`https://twitter.com/${props.currentImage?.artist?.substring(1)}`}>
                             Artist: {props.currentImage?.artist}
                         </Button>
+                        <Typography style={{marginTop: 24}} variant={"subtitle2"}>Tags</Typography>
                         <Grid style={{marginTop: "0"}} container direction={"row"} spacing={1}>
                             {props.currentImage?.tags?.map((value) => (
                                 <Grid item>

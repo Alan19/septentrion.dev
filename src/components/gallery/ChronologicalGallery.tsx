@@ -1,9 +1,9 @@
 import {Typography} from "@mui/material";
 import React, {Fragment} from "react";
 import {AltInformation, ImageInformation} from "../ImageInformation";
-import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {getMonthYearPairsInImageSet} from "./Gallery";
 import {SkeletonImage} from "../SkeletonImage";
+import {TSJustifiedLayout} from "react-justified-layout-ts";
 
 function ChronologicalGallery(props: {
     displayedImages: ImageInformation[],

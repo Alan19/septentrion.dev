@@ -1,5 +1,5 @@
 import React, {memo, useEffect, useState} from "react";
-import {Fade, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Typography, useMediaQuery,} from "@mui/material";
+import {Fade, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Stack, Typography, useMediaQuery,} from "@mui/material";
 import {ImageInformation, isImageInformation} from "../ImageInformation";
 import "./gallery.css";
 import {theme} from "../../App";
@@ -8,11 +8,11 @@ import Uploader from "./Uploader";
 import useMeasure from 'react-use-measure';
 import {ResizeObserver} from '@juggle/resize-observer'
 import ChronologicalGallery from "./ChronologicalGallery";
-import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {GalleryDialog} from "./GalleryDialog";
 import {FilterPane} from "./FilterPane";
 import {RouteWithSubpanel} from "../navigation/RouteWithSubpanel";
 import {SkeletonImage} from "../SkeletonImage";
+import {TSJustifiedLayout} from "react-justified-layout-ts";
 
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
     // @ts-ignore
@@ -101,8 +101,8 @@ export const Gallery = memo(function Gallery() {
             <Typography variant={"h3"} color={"var(--md-sys-color-primary)"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
             <GalleryDialog isOpen={isDialogOpen} currentImage={currentImage} closeModal={closeModal} alts={currentImage?.title !== undefined ? altData.get(currentImage.title) : undefined}/>
             <div ref={ref}></div>
-            <Grid container direction={"column"} spacing={2}>
-                <Grid item style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
+            <Stack direction={"column"} spacing={2}>
+                <div style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
                     <Grid container justifyContent={"space-between"} alignItems={"flex-end"}>
                         <RadioGroup value={displayMode}>
                             <FormControlLabel value={"paginated"} control={<Radio onChange={(_event) => setDisplayMode("paginated")}/>}
@@ -128,10 +128,11 @@ export const Gallery = memo(function Gallery() {
                     {displayMode === "monthly" ?
                         <ChronologicalGallery displayedImages={shownImages}
                                               width={bounds.width}
+                                              height={300}
                                               setCurrentImage={handleImageClicked}
                                               altInfo={altData}/> :
                         <TSJustifiedLayout width={bounds.width}
-                                           targetRowHeight={350}
+                                           targetRowHeight={300}
                                            rowSpacing={8}
                                            itemSpacing={8}
                                            layoutItems={imagesOnPage.map(value => (
@@ -147,8 +148,8 @@ export const Gallery = memo(function Gallery() {
                                 aspectRatio={value.aspectRatio ?? 1}/>)}
                         </TSJustifiedLayout>
                     }
-                </Grid>
-            </Grid>
+                </div>
+            </Stack>
             <Uploader loadImageInfo={loadImageInfo}/>
         </div>
     </Fade>;

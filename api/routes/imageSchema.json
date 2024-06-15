@@ -14,7 +14,7 @@
         "description": "The link to direct the viewer to upon clicking the image",
         "type": "string"
       },
-      "thumbnailURL": {
+      "thumbnailUrl": {
         "description": "The link to the smaller version of the image to display on the gallery",
         "type": "string"
       },
@@ -34,6 +34,10 @@
         "description": "The date when the artwork was published",
         "type": "string",
         "format": "date"
+      },
+      "webp": {
+        "description": "A link to the webp version of the image, used by image display modal if available",
+        "type": "string"
       },
       "tags": {
         "description": "An array of tags for the art",
