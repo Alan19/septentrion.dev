@@ -3131,5 +3131,92 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/alcor_sketchpage/0.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_sketchpage/0.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_sketchpage/0.png"
+  },
+  {
+    "title": "Aquarius Corrupted ",
+    "artist": "@funnylizerd",
+    "tags": [
+      "Aquarius Form"
+    ],
+    "href": "https://x.com/funnylizerd/status/1801334864873931169",
+    "published": "2024-06-13",
+    "aspectRatio": 0.9509447674418605,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aquarius_corrupted.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_corrupted.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_corrupted.png"
+  },
+  {
+    "title": "Aquarius vs. Jupiter",
+    "artist": "@May0nnaixe",
+    "tags": [
+      "Jupiter Form",
+      "Aquarius Form",
+      "Knives"
+    ],
+    "href": "",
+    "published": "2024-06-20",
+    "aspectRatio": 2,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/aquarius_vs_jupiter.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_vs_jupiter.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_vs_jupiter.png"
+  },
+  {
+    "title": "Mario and Luigi is Real! Sketch",
+    "artist": "@AxyUsagi",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/AxyUsagi/status/1803166679146631351",
+    "published": "2024-06-18",
+    "aspectRatio": 1.0028449502133712,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/mario_and_luigi_is_real_sketch.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/mario_and_luigi_is_real_sketch.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/mario_and_luigi_is_real_sketch.png"
+  },
+  {
+    "title": "Castor Suit Engage! (Part 2)",
+    "artist": "@baogacc",
+    "tags": [
+      "Indra Suit",
+      "Superhero",
+      "Bow",
+      "Bodysuit"
+    ],
+    "href": "https://www.patreon.com/posts/commission-alcor-105964253",
+    "published": "2024-06-10",
+    "aspectRatio": 0.7743933918430562,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/castor_suit_activate_part_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_suit_activate_part_2.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_suit_activate_part_2.png"
+  },
+  {
+    "title": "Castor Suit Engage! (Part 1)",
+    "artist": "@baogacc",
+    "tags": [
+      "Indra Suit",
+      "Superhero",
+      "Techwear",
+      "Eltanin Form",
+      "Castor",
+      "Transformation",
+      "Bodysuit"
+    ],
+    "href": "https://www.patreon.com/posts/commission-alcor-105964253",
+    "published": "2024-06-10",
+    "aspectRatio": 0.593941793704217,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/castor_suit_activate_part_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_suit_activate_part_1.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_suit_activate_part_1.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7743933918430562,
+    "parent": "Castor Suit Engage! (Part 2)",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/castor_suit_engage_part_2/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_suit_engage_part_2/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_suit_engage_part_2/0.png"
   }
 ]
