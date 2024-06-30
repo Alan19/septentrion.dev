@@ -16,7 +16,7 @@ export function AlcorOutfits() {
                 <PageHeader title={"Alcor's Wardrobe"}/>
                 <Typography variant="body1">Alcor's primary outfits are loosely themed after the Modern mid-latitude ecological seasons. He prefers fairly tight and high-tech outfits, usually infused with high-tech fabrics and materials.
                     Each outfit is designed to be worn in an athleisure context, but are sometimes also dedicated for other activities.</Typography>
-                <SkeletonImage containerStyle={{marginTop: '8px'}} src={"https://alcorsiteartbucket.s3.amazonaws.com/webp/outfit_sheet.webp"} aspectRatio={2.35}/>
+                <SkeletonImage containerStyle={{marginTop: '8px'}} style={{width: '100%'}} src={"https://alcorsiteartbucket.s3.amazonaws.com/webp/outfit_sheet.webp"} aspectRatio={2.35}/>
             </Grid>
             <AboutPageParagraph title={'Vernal Outfit'}
                                 text={"Alcor's Vernal themed outfit is primarily used for laboratory work. It consists of a black and teal jacket with neon blue accents, a zip up long-sleeved shirt that transitions into fingerless gloves, gray shorts, black leggigns, and sneakers. All of the clothes are custom designed to be workshop safe, and are designed to be resistant to minor accidents like cuts or chemical spills. The messenger bag in this outfit is for hand-delivering sensitive commissions to clients, which is paired with the compression leggings and energy return shoes to allow him to be active around the lab and around the city without getting tired on busy days. Finally, the outfit is rounded out with an AR visor that output helpful heads up displays, allowing him to keep track of tasks, messages, and reminders."}

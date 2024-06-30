@@ -10,7 +10,7 @@ import {theme} from "../../App";
 import {Close} from "@mui/icons-material";
 import {SkeletonImage} from "../SkeletonImage";
 
-// TODO Refactor this component?
+// TODO Switch to full length dialog
 export const GalleryDialog = memo(function GalleryDialog(props: {
     currentImage?: ImageInformation,
     closeModal: () => void,

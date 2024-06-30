@@ -21,7 +21,7 @@ export function SomaInfo() {
                     </Typography>
                 </Grid>
                 <Grid item md={6}>
-                    <SkeletonImage src={'https://pbs.twimg.com/media/GNK9yJPXwAE-6dG?format=jpg&name=medium'} aspectRatio={1}/>
+                    <SkeletonImage style={{width: '100%'}} src={'https://pbs.twimg.com/media/GNK9yJPXwAE-6dG?format=jpg&name=medium'} aspectRatio={1}/>
                 </Grid>
             </Grid>
         </Fade>

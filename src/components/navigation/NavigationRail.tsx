@@ -70,7 +70,7 @@ export function NavigationRail(props: {
                     </div>
                 </div>
             </div>
-            <div style={{flexGrow: 1}}>
+            <div style={{flexGrow: 1, overflowX: 'hidden'}}>
                 {props.children}
             </div>
         </Box>;

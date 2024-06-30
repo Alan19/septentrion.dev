@@ -59,7 +59,7 @@ export function FormPage(props: {
                         </Stack>
                     </Grid>
                     <Grid item md>
-                        <SkeletonImage src={image} aspectRatio={imageAspectRatio}/>
+                        <SkeletonImage src={image} style={{width: '100%'}} aspectRatio={imageAspectRatio}/>
                     </Grid>
                 </Grid>
             </div>

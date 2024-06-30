@@ -7,7 +7,7 @@ import {flattenTags, isArtist, TagState, useTagHooks} from "./UseTagHooks";
 import Uploader from "./Uploader";
 import useMeasure from 'react-use-measure';
 import {ResizeObserver} from '@juggle/resize-observer'
-import ChronologicalGallery from "./ChronologicalGallery";
+import MonthSeparatedGallery from "./ChronologicalGallery";
 import {GalleryDialog} from "./GalleryDialog";
 import {FilterPane} from "./FilterPane";
 import {RouteWithSubpanel} from "../navigation/RouteWithSubpanel";
@@ -126,15 +126,16 @@ export const Gallery = memo(function Gallery() {
 
 
                     {displayMode === "monthly" ?
-                        <ChronologicalGallery displayedImages={shownImages}
-                                              width={bounds.width}
-                                              height={300}
-                                              setCurrentImage={handleImageClicked}
-                                              altInfo={altData}/> :
+                        <MonthSeparatedGallery displayedImages={shownImages}
+                                               width={bounds.width}
+                                               height={300}
+                                               setCurrentImage={handleImageClicked}
+                                               altInfo={altData}/> :
                         <TSJustifiedLayout width={bounds.width}
                                            targetRowHeight={300}
                                            rowSpacing={8}
                                            itemSpacing={8}
+                                           containerStyle={{position: "relative"}}
                                            layoutItems={imagesOnPage.map(value => (
                                                value.aspectRatio ?? 1
                                            ))}>
@@ -142,7 +143,6 @@ export const Gallery = memo(function Gallery() {
                                 onClick={() => handleImageClicked(value)}
                                 hasAlts={altData.has(value.title)}
                                 alt={value.title}
-                                containerStyle={{position: "relative", height: "100%"}}
                                 src={value.thumbnailUrl ?? value.src}
                                 imageClassname={"artImage"}
                                 aspectRatio={value.aspectRatio ?? 1}/>)}

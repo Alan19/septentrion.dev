@@ -25,16 +25,16 @@ function ChronologicalGallery(props: {
             layoutItems={imagesForMonth.map(value => (
                 value.aspectRatio ?? 1
             ))}
+            containerStyle={{position: "relative"}}
             targetRowHeight={props.height}
         >
             {imagesForMonth.map(value => <SkeletonImage
-                src={value.thumbnailUrl ?? value.src}
-                alt={value.title}
-                imageClassname={"artImage"}
-                containerStyle={{position: 'relative', height: '100%'}}
                 onClick={() => props.setCurrentImage(value)}
-                aspectRatio={value.aspectRatio ?? 1}
-                hasAlts={props.altInfo.has(value.title)}/>)}
+                hasAlts={props.altInfo.has(value.title)}
+                alt={value.title}
+                src={value.thumbnailUrl ?? value.src}
+                imageClassname={"artImage"}
+                aspectRatio={value.aspectRatio ?? 1}/>)}
         </TSJustifiedLayout>
     }
 
