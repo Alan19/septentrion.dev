@@ -1,7 +1,6 @@
 import React, {memo, MouseEventHandler, useEffect, useState} from "react";
-import {IconButton, Skeleton, useMediaQuery} from "@mui/material";
+import {IconButton, Skeleton} from "@mui/material";
 import PhotoLibraryIcon from "@mui/icons-material/PhotoLibraryOutlined";
-import {theme} from "../App";
 
 export const SkeletonImage = memo(function SkeletonImage(props: {
     src: string,
@@ -12,9 +11,10 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
     hasAlts?: boolean,
     alt?: string,
     imageClassname?: string,
-    href?: string
+    href?: string,
+    skeletonStyle?: React.CSSProperties
 }) {
-    const {src, aspectRatio, style, onClick, hasAlts = false, alt, imageClassname, containerStyle, href} = props;
+    const {src, aspectRatio, style, skeletonStyle, onClick, hasAlts = false, alt, imageClassname, containerStyle, href} = props;
 
     const [isReady, setIsReady] = useState(isImageCached());
 
@@ -40,8 +40,6 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
 
     }, [src]);
 
-    const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
-
     if (isReady) {
         const img = <img alt={alt} loading={"lazy"} className={imageClassname} onClick={onClick} style={{...style}} src={src}/>;
         return <>
@@ -59,6 +57,6 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
             {href ? <a target={'_blank'} href={href}>{img}</a> : img}
         </>;
     } else {
-        return <div style={{aspectRatio: props.aspectRatio}}><Skeleton width={'100%'} height={'100%'} animation={"wave"} variant={"rounded"}/></div>;
+        return <div style={{aspectRatio: props.aspectRatio, ...skeletonStyle}}><Skeleton width={'100%'} height={'100%'} animation={"wave"} variant={"rounded"}/></div>;
     }
 })

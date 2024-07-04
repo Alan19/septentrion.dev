@@ -8,11 +8,12 @@ import Uploader from "./Uploader";
 import useMeasure from 'react-use-measure';
 import {ResizeObserver} from '@juggle/resize-observer'
 import MonthSeparatedGallery from "./ChronologicalGallery";
-import {GalleryDialog} from "./GalleryDialog";
 import {FilterPane} from "./FilterPane";
 import {RouteWithSubpanel} from "../navigation/RouteWithSubpanel";
 import {SkeletonImage} from "../SkeletonImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
+import {createSearchParams, useNavigate} from "react-router-dom";
+import {convertToSnakeCase} from "./image/ArtworkPage";
 
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
     // @ts-ignore
@@ -23,14 +24,14 @@ type GalleryDisplayModes = 'monthly' | 'all' | 'paginated';
 
 export const Gallery = memo(function Gallery() {
     const {getTags, setTags, images, loadImageInfo, altData} = useTagHooks();
-    const [currentImage, setCurrentImage] = useState<ImageInformation>();
-    const [isDialogOpen, setIsDialogOpen] = useState(false);
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver});
     const [displayMode, setDisplayMode] = useState<GalleryDisplayModes>("paginated");
     const [pageSize, setPageSize] = useState<number>(12);
     const [page, setPage] = useState<number>(1);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [filterMode, setFilterMode] = useState<"and" | "or">("and");
+
+    const navigation = useNavigate();
 
     let tags: TagState = getTags();
     const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
@@ -86,20 +87,19 @@ export const Gallery = memo(function Gallery() {
 
     const mainImages: ImageInformation[] = shownImages.filter(isImageInformation);
     const imagesOnPage = !(displayMode === "all") ? mainImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize) : mainImages;
-
-    function closeModal() {
-        setIsDialogOpen(false);
-    }
-
     function handleImageClicked(value: ImageInformation) {
-        setCurrentImage(value);
-        setIsDialogOpen(true);
+        navigation({
+            pathname: "/artwork",
+            search: createSearchParams({
+                title: convertToSnakeCase(value.title)
+            }).toString()
+        })
     }
 
+    const height = 350;
     const content = <Fade in>
         <div>
             <Typography variant={"h3"} color={"var(--md-sys-color-primary)"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
-            <GalleryDialog isOpen={isDialogOpen} currentImage={currentImage} closeModal={closeModal} alts={currentImage?.title !== undefined ? altData.get(currentImage.title) : undefined}/>
             <div ref={ref}></div>
             <Stack direction={"column"} spacing={2}>
                 <div style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
@@ -128,11 +128,11 @@ export const Gallery = memo(function Gallery() {
                     {displayMode === "monthly" ?
                         <MonthSeparatedGallery displayedImages={shownImages}
                                                width={bounds.width}
-                                               height={300}
+                                               height={height}
                                                setCurrentImage={handleImageClicked}
                                                altInfo={altData}/> :
                         <TSJustifiedLayout width={bounds.width}
-                                           targetRowHeight={300}
+                                           targetRowHeight={height}
                                            rowSpacing={8}
                                            itemSpacing={8}
                                            containerStyle={{position: "relative"}}

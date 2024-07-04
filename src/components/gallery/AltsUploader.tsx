@@ -1,18 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
-import {
-    Autocomplete,
-    Checkbox,
-    Dialog,
-    DialogActions,
-    DialogContent,
-    DialogContentText,
-    DialogTitle,
-    Fab,
-    Snackbar,
-    TextField,
-    Typography,
-} from "@mui/material";
+import {Autocomplete, Checkbox, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Fab, Snackbar, TextField, Typography,} from "@mui/material";
 import {ArtTag, ImageInformation} from "../ImageInformation";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
@@ -62,13 +50,6 @@ export default function AltsUploader(props: {
         setSnackbarOpen(false);
     };
 
-    function convertToSnakeCase(str: string) {
-        // @ts-ignore
-        return str && str.match(
-            /[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-            .map(s => s.toLowerCase())
-            .join('_');
-    }
 
     function handleUpload(e: any) {
         e.preventDefault();

@@ -16,6 +16,7 @@ import {alcorForms} from "./components/about/about-resources/alcorForms";
 import {AlcorWorldInfo} from "./components/about/AlcorWorldInfo";
 import {AlcorOutfits} from "./components/about/outfits/AlcorOutfits";
 import {SomaInfo} from "./components/about/characters/SomaInfo";
+import {ArtworkPage} from "./components/gallery/image/ArtworkPage";
 
 // TODO get rid of this
 export const theme = createTheme({
@@ -48,6 +49,10 @@ const router = createHashRouter([
             {
                 path: "/gallery",
                 element: <Gallery/>
+            },
+            {
+                path: "/artwork",
+                element: <ArtworkPage/>
             },
             {
                 path: "about",
