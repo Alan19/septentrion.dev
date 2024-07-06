@@ -4,7 +4,7 @@ import ListItemButton from "@mui/material-next/ListItemButton";
 import {Avatar, Collapse} from "@mui/material";
 import {ExpandLess, ExpandMore} from "@mui/icons-material";
 import {useLocation, useNavigate} from "react-router-dom";
-import {alcorForms} from "./about-resources/alcorForms";
+import {alcorForms, superheroSuits} from "./about-resources/alcorForms";
 
 function M3ListButton(props: { avatarSrc?: string, indentation?: number, text: string, link: string }) {
     const borderRadius = 'var(--Button-radius, var(--md-sys-shape-corner-full))';
@@ -59,6 +59,9 @@ export const AboutPageNavigation = memo(function AlcorLorePane() {
         <M3ListButton text={"Bio-Enhancement"} link={"bio-enhancement"}/>
         <CollapsibleListButton title={"Alternate Formes"}>
             {alcorForms.map(value => <M3ListButton text={value.name} link={value.link} avatarSrc={value.thumbnail} indentation={4}/>)}
+        </CollapsibleListButton>
+        <CollapsibleListButton title={"Superhero Suits"}>
+            {superheroSuits.map(value => <M3ListButton text={value.name} link={value.link} avatarSrc={value.thumbnail} indentation={4}/>)}
         </CollapsibleListButton>
         <M3ListButton text={"Alcor's Wardrobe"} link={"outfits"}/>
         <Divider color={"--md-sys-color-onSurfaceVariant"} variant={"middle"}/>

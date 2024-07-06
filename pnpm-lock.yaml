@@ -96,8 +96,8 @@ dependencies:
     specifier: ^18.3.1
     version: 18.3.1(react@18.3.1)
   react-justified-layout-ts:
-    specifier: ^2.0.6
-    version: 2.0.6(react-dom@18.3.1)(react@18.3.1)
+    specifier: ^2.0.7
+    version: 2.0.7(react-dom@18.3.1)(react@18.3.1)
   react-router-dom:
     specifier: ^6.24.0
     version: 6.24.0(react-dom@18.3.1)(react@18.3.1)
@@ -9631,8 +9631,8 @@ packages:
   /react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
 
-  /react-justified-layout-ts@2.0.6(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-IE9GP+dChWoB01lxh3sjj0GkTTSt8rzEK55u/iDA7fX96jhZskQ9og5CL76NgRAHjmKebnYYorqbKUGW9pLliw==}
+  /react-justified-layout-ts@2.0.7(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-xtGZYwca+UHyXB7Kbn4OWGkUHx1D64K58oB8ECrSpHTE3c0CAukOXxV3fJUZrKywa/DMij2U5rJ9V2pvtUQBVA==}
     peerDependencies:
       react: ^18.2.0
     dependencies:

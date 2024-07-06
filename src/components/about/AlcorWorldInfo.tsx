@@ -1,11 +1,11 @@
 import {Fade, Grid, Typography} from "@mui/material";
 import React, {memo} from "react";
 import castor from "./about-resources/castor.png"
-import superheroArtwork from './about-resources/superhero-artwork.png'
 import castorEvolution from './about-resources/castor-evolved.png'
 import {AboutPageParagraph} from "./AboutPageParagraph";
 import {PageHeader} from "./PageHeader";
 import {SkeletonImage} from "../SkeletonImage";
+import {Divider} from "@mui/material-next";
 
 export const AlcorWorldInfo = memo(function AlcorWorldInfo() {
     return <Fade in>
@@ -21,8 +21,9 @@ export const AlcorWorldInfo = memo(function AlcorWorldInfo() {
                 </Grid>
                 <AboutPageParagraph title={"Alcor's Life"}
                                     text={"Alcor plies his trade as an inventor, creating high-tech gadgets and clothing for people who are interested in active activities. He also participates in parkour in his spare time, and also moonlights as a part-time" + " superhero who rescues people caught in the middle of kaiju attacks while sometimes fighting them. Alcor tries his best to look cool and tough to his clients, but his friends and regulars know that he's much more" + " geeky and kind than he looks. However, they worry too much about his self-experimentation in the pursuit of becoming stronger, as he wants to make sure he's always prepared for any fights that break out."}
-                                    img={<SkeletonImage src={superheroArtwork} style={{width: '100%'}} aspectRatio={3782 / 3981}/>}
+                                    img={<SkeletonImage src={'https://alcorsiteartbucket.s3.amazonaws.com/webp/my_room.webp'} style={{width: '100%'}} aspectRatio={1.4166666666666667}/>}
                                     colors={["#6B95C1", "#64CCF2", "#DFD9C3", "#DDE0D1"]}/>
+                <Divider variant={"fullWidth"}/>
                 <AboutPageParagraph title={"Castor - Symbiotic Companion"}
                                     text={"Castor is a symbiote that Alcor made by extracting alien DNA from a meteorite, and then fused with his own organic material to increase the symbiote's compatibility with his own body. While he looks a bit scary and spooky, he's actually really helpful, and helps Alcor destress and unwind from work. Castor's body is made up of exotic matter, which powers a large chunk of Alcor's inventions. This means that while Alcor can fabricate a lot of interesting gadgets, there's a giant waitlist for his commissions. On top of that, Alcor has his own personal projects he is working on, while collaborating he has with other inventors and superheroes in the city, making his waitlist even longer."}
                                     img={<SkeletonImage src={castor} style={{width: '100%'}} aspectRatio={1615 / 2240}/>}

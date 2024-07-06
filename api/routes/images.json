@@ -3219,5 +3219,42 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/castor_suit_engage_part_2/0.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_suit_engage_part_2/0.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_suit_engage_part_2/0.png"
+  },
+  {
+    "title": "Fresh Nerd ~ Post Workout",
+    "artist": "@Bactover",
+    "tags": [
+      "Aquarius Form"
+    ],
+    "href": "https://x.com/Bactover/status/1809099123682939375",
+    "published": "2024-07-05",
+    "aspectRatio": 0.8687058823529412,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/fresh_nerd_post_workout.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/fresh_nerd_post_workout.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/fresh_nerd_post_workout.PNG"
+  },
+  {
+    "title": "Eclipse Deity Malro Ver.",
+    "artist": "@wolfmalro",
+    "tags": [
+      "Eclipse Deity"
+    ],
+    "href": "https://x.com/wolfmalro/status/1809207948209795545",
+    "published": "2024-07-05",
+    "aspectRatio": 0.7972166998011928,
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/eclipse_deity_malro_ver.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/eclipse_deity_malro_ver.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/eclipse_deity_malro_ver.jpg"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7972166998011928,
+    "parent": "Eclipse Deity Malro Ver.",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/eclipse_deity_malro_ver/0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/eclipse_deity_malro_ver/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/eclipse_deity_malro_ver/0.jpg"
   }
 ]

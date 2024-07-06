@@ -1,8 +1,7 @@
 import {Fade, Grid, Typography, useMediaQuery} from "@mui/material";
 import React from "react";
-import aquariusSplashArt from "./about-resources/aquarius-splash-art.png"
-import eclipseDeity from "./about-resources/eclipse-deity-transparent.webp"
 import {PageHeader} from "./PageHeader";
+import {SkeletonImage} from "../SkeletonImage";
 
 export function BioEnhancementIntro() {
     const isPortrait = useMediaQuery('(orientation: portrait)');
@@ -21,7 +20,7 @@ export function BioEnhancementIntro() {
                     <Typography variant={"h5"}>Simulated Transdimensional Replications of Identity Divergence Explorations (S.T.R.I.D.E.)</Typography>
                 </Grid>
                 <Grid item sm={3}>
-                    <img style={{width: '100%'}} src={aquariusSplashArt}/>
+                    <SkeletonImage aspectRatio={2} style={{width: '100%'}} src={"https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_vs_jupiter.webp"}/>
                 </Grid>
                 <Grid item sm>
                     <Typography variant={"body1"}>
@@ -37,7 +36,7 @@ export function BioEnhancementIntro() {
                     <Typography variant={"h5"}>Evolutionary Infusions</Typography>
                 </Grid>
                 <Grid item sm={3}>
-                    <img width={'100%'} src={eclipseDeity}/>
+                    <SkeletonImage style={{width: '100%'}} aspectRatio={0.8243310619910255} src={"https://alcorsiteartbucket.s3.amazonaws.com/webp/eclipse_deity_v3.webp"}/>
 
                 </Grid>
                 <Grid item sm>
