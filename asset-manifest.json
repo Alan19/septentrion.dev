@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.25752de8.css",
-    "main.js": "/static/js/main.f5839a41.js",
+    "main.js": "/static/js/main.47cc452e.js",
     "static/js/488.9598de75.chunk.js": "/static/js/488.9598de75.chunk.js",
     "static/js/780.abfebc00.chunk.js": "/static/js/780.abfebc00.chunk.js",
-    "static/js/737.d24dd0fe.chunk.js": "/static/js/737.d24dd0fe.chunk.js",
+    "static/js/737.5ff663fe.chunk.js": "/static/js/737.5ff663fe.chunk.js",
     "static/media/m-icon.png": "/static/media/m-icon.510aa3c45a04526e6de3.png",
     "static/media/castor-evolved.png": "/static/media/castor-evolved.53be8485a94a56f310b7.png",
     "static/media/autumnal.png": "/static/media/autumnal.b33850ba5bdfca7282fd.png",
@@ -22,13 +22,13 @@
     "static/media/OriginTech personal use.ttf": "/static/media/OriginTech personal use.91ec04328d7a9da85f53.ttf",
     "index.html": "/index.html",
     "main.25752de8.css.map": "/static/css/main.25752de8.css.map",
-    "main.f5839a41.js.map": "/static/js/main.f5839a41.js.map",
+    "main.47cc452e.js.map": "/static/js/main.47cc452e.js.map",
     "488.9598de75.chunk.js.map": "/static/js/488.9598de75.chunk.js.map",
     "780.abfebc00.chunk.js.map": "/static/js/780.abfebc00.chunk.js.map",
-    "737.d24dd0fe.chunk.js.map": "/static/js/737.d24dd0fe.chunk.js.map"
+    "737.5ff663fe.chunk.js.map": "/static/js/737.5ff663fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.25752de8.css",
-    "static/js/main.f5839a41.js"
+    "static/js/main.47cc452e.js"
   ]
 }
