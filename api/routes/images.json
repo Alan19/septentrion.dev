@@ -1413,16 +1413,16 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form.webp"
   },
   {
-    "title": "Alcor Hug",
+    "title": "Alcor Hugging Lava 2023",
     "artist": "@StR_Lite",
     "tags": [
       "Rastaban Form"
     ],
-    "href": "https://x.com/StR_Lite/status/1696031049128759323?s=20",
+    "href": "https://x.com/StR_Lite/status/1696031049128759323",
     "published": "2023-08-28",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_hug.png",
     "aspectRatio": 0.972,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_hug.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_hugging_lava_2023.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_hugging_lava_2023.gif"
   },
   {
     "title": "Aquarius Form by Mixter",
@@ -2041,25 +2041,21 @@
     "tags": [
       "Thuban Form"
     ],
-    "href": "https://x.com/FaintAlcor/status/1734983405102600206?s=20",
+    "href": "https://x.com/FaintAlcor/status/1734983405102600206",
     "published": "2023-12-13",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/alcor_tap.gif",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_tap.gif",
     "aspectRatio": 1.114519427402863,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_tap.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_tap.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_tap.gif"
   },
   {
-    "title": "Castor Tap",
-    "artist": "@Noarustar",
     "tags": [
       "Castor"
     ],
-    "href": "https://x.com/FaintAlcor/status/1734983497767412146?s=20",
-    "published": "2023-12-13",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/500w/castor_tap.gif",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_tap.gif",
+    "href": "",
     "aspectRatio": 1.114519427402863,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_tap.webp"
+    "parent": "Alcor Tap",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_tap/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_tap/0.gif"
   },
   {
     "title": "Beach Boy",
@@ -2897,6 +2893,7 @@
     "href": "https://x.com/KogiKogiKogi1/status/1796753541085921771",
     "published": "2024-06-01",
     "aspectRatio": 1.7777777777777777,
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/proud_summer_beach_ych.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/proud_summer_beach_ych.gif"
   },
   {
