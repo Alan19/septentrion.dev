@@ -26,3 +26,4 @@ yarn-error.log*
 api/.env
 !/api/routes/hidden.json
 !/api/routes/artwork_backup/*
+!/api/routes/local_scripts/

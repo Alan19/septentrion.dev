@@ -3267,5 +3267,35 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/600h/seductive_aquarius.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/seductive_aquarius.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/seductive_aquarius.png"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "https://x.com/kerac_fa/status/1550513500371369984",
+    "aspectRatio": 1.6666666666666667,
+    "parent": "Beach Boy",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/beach_boy/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy/0.gif"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "https://x.com/kerac_fa/status/1692571563416244488",
+    "aspectRatio": 1.546875,
+    "parent": "Special Archery Training!",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/special_archery_training/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/special_archery_training/0.gif"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "https://x.com/kerac_fa/status/1702717661937807445",
+    "aspectRatio": 0.8192771084337349,
+    "parent": "Evening Train",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/evening_train/0.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train/0.gif"
   }
 ]
