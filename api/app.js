@@ -6,7 +6,6 @@ var logger = require('morgan');
 var cors = require("cors")
 var upload = require("./routes/upload").router
 var images = require("./routes/images")
-var compressExisting = require('./routes/local_scripts/compress_existing')
 const bodyParser = require('body-parser')
 
 var indexRouter = require('./routes/index');
