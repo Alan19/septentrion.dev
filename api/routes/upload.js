@@ -20,17 +20,17 @@ const s3 = new AWS.S3();
 const storage = multer.memoryStorage();
 const upload = multer({storage});
 
-// Combine similar lines of code
+function convertToSnakeCase(str) {
+    return str && str.match(
+        /[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+        .map(s => s.toLowerCase())
+        .join('_');
+}
+
 router.post('/', upload.single('image'), async (req, res) => {
     const file = req.file;
-    const {artist, href, tags, title, published} = req.body;
 
-    function convertToSnakeCase(str) {
-        return str && str.match(
-            /[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-            .map(s => s.toLowerCase())
-            .join('_');
-    }
+    const {artist, href, tags, title, published} = req.body;
 
 
     const sharpBuffer = sharp(file.buffer);
@@ -44,26 +44,6 @@ router.post('/', upload.single('image'), async (req, res) => {
         aspectRatio: metadata.width / metadata.height
     };
 
-    const isGif = file.mimetype === "image/gif";
-    if (metadata.height > 600) {
-        const compressedParams = {
-            Bucket: process.env.BUCKET_NAME,
-            Key: `600h/${convertToSnakeCase(title)}.webp`,
-            Body: sharp(file.buffer, {animated: isGif}).resize({height: 600}).toFormat('webp'),
-            ContentType: 'image/webp'
-        }
-        jsonOutput['thumbnailUrl'] = (await s3.upload(compressedParams).promise()).Location;
-    }
-
-    const webpParams = {
-        Bucket: process.env.BUCKET_NAME,
-        Key: `webp/${convertToSnakeCase(title)}.webp`,
-        Body: sharp(file.buffer, {animated: isGif}).webp(),
-        ContentType: 'image/webp'
-    }
-    jsonOutput['webp'] = (await s3.upload(webpParams).promise()).Location;
-
-
     const params = {
         Bucket: process.env.BUCKET_NAME,
         Key: `${convertToSnakeCase(title)}.${file.originalname.split('.').pop()}`,
@@ -72,6 +52,7 @@ router.post('/', upload.single('image'), async (req, res) => {
     };
 
     jsonOutput['src'] = (await s3.upload(params).promise()).Location;
+    await uploadCompressedVersions(file.buffer, convertToSnakeCase(title), jsonOutput, 0)
     addToJson(jsonOutput);
     res.json(jsonOutput);
 });
@@ -79,14 +60,7 @@ router.post('/', upload.single('image'), async (req, res) => {
 router.post('/alt', upload.single('image'), async (req, res) => {
     const file = req.file;
     const {href, tags, imageName, altCount} = req.body;
-    const numberOfAlts = parseInt(altCount);
-
-    function convertToSnakeCase(str) {
-        return str && str.match(
-            /[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-            .map(s => s.toLowerCase())
-            .join('_');
-    }
+    const numberOfAlts = require('images.json').concat(require('hidden.json')).filter(value => value.parent === imageName).length + 1;
 
     const sharpBuffer = sharp(file.buffer);
     const metadata = await sharpBuffer.metadata();
@@ -98,27 +72,6 @@ router.post('/alt', upload.single('image'), async (req, res) => {
         parent: imageName
     };
 
-    const isGif = file.mimetype === "image/gif";
-    if (metadata.height > 600) {
-        const compressedParams = {
-            Bucket: process.env.BUCKET_NAME,
-            Key: `600h/${convertToSnakeCase(imageName)}/${numberOfAlts}.webp`,
-            Body: sharp(file.buffer, {animated: isGif}).resize({height: 600}).toFormat("webp"),
-            ContentType: 'image/webp'
-        }
-        // TODO Unify names
-        jsonOutput['thumbnailUrl'] = (await s3.upload(compressedParams).promise()).Location;
-    }
-
-    const webpParams = {
-        Bucket: process.env.BUCKET_NAME,
-        Key: `webp/${convertToSnakeCase(imageName)}/${numberOfAlts}.webp`,
-        Body: sharp(file.buffer, {animated: isGif}).toFormat('webp'),
-        ContentType: 'image/webp'
-    }
-    jsonOutput['webp'] = (await s3.upload(webpParams).promise()).Location;
-
-
     const params = {
         Bucket: process.env.BUCKET_NAME,
         Key: `${convertToSnakeCase(imageName)}/${numberOfAlts}.${file.originalname.split('.').pop()}`,
@@ -127,6 +80,7 @@ router.post('/alt', upload.single('image'), async (req, res) => {
     };
 
     jsonOutput['src'] = (await s3.upload(params).promise()).Location;
+    await uploadCompressedVersions(file.buffer, convertToSnakeCase(imageName), jsonOutput, numberOfAlts)
     addAltToJson(jsonOutput);
     res.json(jsonOutput);
 });
@@ -153,5 +107,61 @@ function addToJson(jsonOutput) {
     })
 }
 
+async function uploadCompressedVersions(originalImage, imageName, entry, altNumber) {
+    const sharpImage = sharp(originalImage, {animated: true});
+    let webpImageBuffer = await sharpImage
+        .resize({width: 4096, fit: 'outside', withoutEnlargement: true})
+        .webp()
+        .toBuffer();
 
-module.exports = router;
+    // We want a lossless webp, near lossless 4k, and 1mb or less for the thumbnail
+    let compressedImageBuffer = await getCompressedBuffer(sharpImage, imageName);
+    return Promise.all([
+        s3.upload({
+            Bucket: process.env.BUCKET_NAME, Key: entry.parent ? `thumbnail/alts/${imageName}_${altNumber}.webp` : `thumbnail/${imageName}.webp`, Body: compressedImageBuffer, ContentType: 'image/webp'
+        }, (err, data) => {
+            if (err) {
+                return err;
+            } else {
+                console.log(`Successfully uploaded ${imageName} to ${data.Location}`)
+                entry["thumbnailUrl"] = data.Location;
+            }
+        }),
+        s3.upload({
+            Bucket: process.env.BUCKET_NAME, Key: entry.parent ? `webp/alts/${imageName}_${altNumber}.webp` : `webp/${imageName}.webp`, Body: webpImageBuffer, ContentType: 'image/webp'
+        }, (err, data) => {
+            if (err) {
+                return err;
+            } else {
+                console.log(`Successfully uploaded ${imageName} to ${data.Location}`)
+                entry["webp"] = data.Location;
+            }
+        })
+    ]);
+}
+
+async function getCompressedBuffer(sharpImage, imageName) {
+    let fileSize;
+    let compressedImageBuffer;
+    let quality = 80;
+    do {
+        compressedImageBuffer = await sharpImage
+            .resize({width: 4096, fit: 'inside', withoutEnlargement: true})
+            .webp({quality: quality})
+            .toBuffer();
+        fileSize = compressedImageBuffer.length;
+        // Compress to 1mb or less
+        if (fileSize > 1048576) {
+            quality -= 5;
+        } else {
+            break;
+        }
+    } while (quality > 0);
+
+    // noinspection JSUnusedAssignment
+    console.log(`Uploading ${imageName} with Quality: ${quality} and Size: ${Math.floor(fileSize / 1024)} kilobytes`)
+    return compressedImageBuffer;
+}
+
+
+module.exports = {router, uploadCompressedVersions};

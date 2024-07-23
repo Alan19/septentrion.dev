@@ -24,6 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 !/api/.env
 api/.env
-!/api/routes/hidden.json
-!/api/routes/artwork_backup/*
-!/api/routes/local_scripts/
+/api/routes/hidden.json
+/api/routes/*_backups/*
+/api/routes/local_scripts/*
