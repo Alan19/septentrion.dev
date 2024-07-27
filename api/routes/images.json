@@ -3339,5 +3339,48 @@
     "parent": "Evening Train",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/evening_train_1.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train/0.gif"
+  },
+  {
+    "title": "Workin' Vibes",
+    "artist": "@Beckowaffle",
+    "tags": [
+      "Rastaban Form",
+      "Estival Checker"
+    ],
+    "href": "https://x.com/Beckowaffle/status/1816467784764940639",
+    "published": "2024-07-25",
+    "aspectRatio": 1.7777777777777777,
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/workin_vibes.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/workin_vibes.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/workin_vibes.webp"
+  },
+  {
+    "title": "Jupiter Transformation Sequence",
+    "artist": "@AxyUsagi",
+    "tags": [
+      "Jupiter Form",
+      "Transformation"
+    ],
+    "href": "https://x.com/AxyUsagi/status/1816690080083222810",
+    "published": "2024-07-26",
+    "aspectRatio": 1.1452991452991452,
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_transformation_sequence.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_transformation_sequence.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_transformation_sequence.webp"
+  },
+  {
+    "title": "Jupiter Dark Mode",
+    "artist": "@AxyUsagi",
+    "tags": [
+      "Jupiter Form",
+      "Superhero",
+      "Transformation"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1816875727805120561",
+    "published": "2024-07-26",
+    "aspectRatio": 1.0478245235526789,
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_dark_mode.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_dark_mode.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_dark_mode.webp"
   }
 ]

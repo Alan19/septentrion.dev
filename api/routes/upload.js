@@ -83,7 +83,9 @@ router.post('/', upload.single('image'), async (req, res) => {
     };
 
     jsonOutput['src'] = (await s3.upload(params).promise()).Location;
-    await uploadCompressedVersions(file.buffer, fileName, jsonOutput, 0)
+    const [compressedData, webpData] = await uploadCompressedVersions(file.buffer, fileName, jsonOutput, 0)
+    jsonOutput['thumbnailUrl'] = compressedData.Location
+    jsonOutput['webp'] = webpData.Location;
     addToJson(jsonOutput);
     res.json(jsonOutput);
 });
@@ -113,7 +115,9 @@ router.post('/alt', upload.single('image'), async (req, res) => {
     };
 
     jsonOutput['src'] = (await s3.upload(params).promise()).Location;
-    await uploadCompressedVersions(file.buffer, fileName, jsonOutput, numberOfAlts)
+    const [compressedData, webpData] = await uploadCompressedVersions(file.buffer, fileName, jsonOutput, numberOfAlts);
+    jsonOutput['thumbnailUrl'] = compressedData.Location
+    jsonOutput['webp'] = webpData.Location;
     addAltToJson(jsonOutput);
     res.json(jsonOutput);
 });
@@ -152,24 +156,10 @@ async function uploadCompressedVersions(originalImage, imageName, entry, altNumb
     return Promise.all([
         s3.upload({
             Bucket: process.env.BUCKET_NAME, Key: entry.parent ? `thumbnail/alts/${imageName}_${altNumber}.webp` : `thumbnail/${imageName}.webp`, Body: compressedImageBuffer, ContentType: 'image/webp'
-        }, (err, data) => {
-            if (err) {
-                return err;
-            } else {
-                console.log(`Successfully uploaded ${imageName} to ${data.Location}`)
-                entry["thumbnailUrl"] = data.Location;
-            }
-        }),
+        }).promise(),
         s3.upload({
             Bucket: process.env.BUCKET_NAME, Key: entry.parent ? `webp/alts/${imageName}_${altNumber}.webp` : `webp/${imageName}.webp`, Body: webpImageBuffer, ContentType: 'image/webp'
-        }, (err, data) => {
-            if (err) {
-                return err;
-            } else {
-                console.log(`Successfully uploaded ${imageName} to ${data.Location}`)
-                entry["webp"] = data.Location;
-            }
-        })
+        }).promise()
     ]);
 }
 
