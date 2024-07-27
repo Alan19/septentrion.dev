@@ -57,7 +57,7 @@ export function ArtworkPage() {
         return (
             <Fade in>
                 <Container style={{marginTop: 16, minHeight: 'calc(100vh - 56px - 32px)'}} maxWidth={"xl"}>
-                    <IconButton onClick={event => navigate(-1)}>
+                    <IconButton onClick={() => navigate(-1)}>
                         <ArrowBack/>
                     </IconButton>
                     <Grid container spacing={4}>

@@ -1,10 +1,10 @@
 // noinspection JSIgnoredPromiseFromCall
 
 import axios from "axios";
-import {useSearchParams} from "react-router-dom";
 import {AltInformation, ArtTag, ImageInformation, isAltInformation, isImageInformation} from "../ImageInformation";
 import {useEffect, useState} from "react";
 import images from './images.json'
+import {useQueryState} from "react-router-use-location-state";
 
 export type TagState = { artists: Record<string, number>, tags: Record<ArtTag, number> };
 export const artists = Array.from(new Set(images.filter(value => value.artist !== undefined && value.artist !== '').map<string>(imageData => imageData.artist as string))).sort((a, b) => a.localeCompare(b));
@@ -33,7 +33,7 @@ export function isArtist(optionName: string) {
 }
 
 export function useTagHooks() {
-    const [tagURLParam, setTagURLParams] = useSearchParams();
+    const [tagURLParam, setTagURLParams] = useQueryState('filters', JSON.stringify({}));
     const [imageData, setImageData] = useState<(ImageInformation)[]>([]);
     const [altData, setAltData] = useState<Map<string, AltInformation[]>>(new Map());
 
@@ -42,11 +42,12 @@ export function useTagHooks() {
      */
     function getTags(): TagState {
         const tagState = getNewTagState();
+        let parsedURLState = JSON.parse(tagURLParam);
         Object.keys(tagState.tags).forEach(value => {
-            tagState.tags[value as ArtTag] = Number(tagURLParam.get(value));
+            tagState.tags[value as ArtTag] = Number(parsedURLState[value]) || 0;
         })
         Object.keys(tagState.artists).forEach(value => {
-            tagState.artists[value] = Number(tagURLParam.get(value));
+            tagState.artists[value] = Number(parsedURLState[value]) || 0;
         })
         return tagState;
     }
@@ -58,12 +59,12 @@ export function useTagHooks() {
     function setTags(tags: TagState) {
         const allTags = Object.values(ArtTag).map(value => value.toString()).concat(artists);
         const flattenedTags = flattenTags(tags);
-        setTagURLParams(allTags
-            .filter(value => flattenedTags[value] !== undefined && flattenedTags[value] !== 0)
+        let serializedTags = allTags.filter(value => flattenedTags[value] !== undefined && flattenedTags[value] !== 0)
             .reduce((previousValue, currentValue) => ({
                 ...previousValue,
                 [currentValue]: String(flattenedTags[currentValue])
-            }), {}));
+            }), {});
+        setTagURLParams(JSON.stringify(serializedTags));
     }
 
     useEffect(() => {

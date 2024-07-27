@@ -12,8 +12,9 @@ import {FilterPane} from "./FilterPane";
 import {RouteWithSubpanel} from "../navigation/RouteWithSubpanel";
 import {SkeletonImage} from "../SkeletonImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
-import {createSearchParams, useNavigate} from "react-router-dom";
+import {createSearchParams, useLocation, useNavigate} from "react-router-dom";
 import {convertToSnakeCase} from "./image/ArtworkPage";
+import {useQueryState} from "react-router-use-location-state";
 
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
     // @ts-ignore
@@ -25,11 +26,11 @@ type GalleryDisplayModes = 'monthly' | 'all' | 'paginated';
 export const Gallery = memo(function Gallery() {
     const {getTags, setTags, images, loadImageInfo, altData} = useTagHooks();
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver});
-    const [displayMode, setDisplayMode] = useState<GalleryDisplayModes>("paginated");
+    const [displayMode, setDisplayMode] = useQueryState<GalleryDisplayModes>('display-mode', "paginated");
     const [pageSize, setPageSize] = useState<number>(12);
-    const [page, setPage] = useState<number>(1);
+    const [page, setPage] = useQueryState<number>('page', 1);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-    const [filterMode, setFilterMode] = useState<"and" | "or">("and");
+    const [filterMode, setFilterMode] = useQueryState<"and" | "or">("filter-mode", "and");
 
     const navigation = useNavigate();
 
@@ -87,6 +88,7 @@ export const Gallery = memo(function Gallery() {
 
     const mainImages: ImageInformation[] = shownImages.filter(isImageInformation);
     const imagesOnPage = !(displayMode === "all") ? mainImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize) : mainImages;
+
     function handleImageClicked(value: ImageInformation) {
         navigation({
             pathname: "/artwork",
