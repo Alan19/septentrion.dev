@@ -60,12 +60,13 @@ export function ArtworkPage() {
                     <IconButton onClick={() => navigate(-1)}>
                         <ArrowBack/>
                     </IconButton>
-                    <Grid container spacing={4}>
+                    <Grid container spacing={4} style={{height: '100%'}}>
                         <Grid item md={9} xs={12} style={{display: 'flex', justifyContent: 'center'}}>
                             <SkeletonImage href={href}
-                                           style={{maxHeight: imageHeight, maxWidth: '100%'}}
+                                           style={{maxHeight: imageHeight, maxWidth: '100%', display: 'block'}}
                                            skeletonStyle={(aspectRatio ?? 1) < 1 ? {height: imageHeight, maxWidth: '100%'} : {maxHeight: imageHeight, width: '100%'}}
                                            src={getCurrentImageInfo(imageInfo, altsInfo)[0]}
+                                           containerStyle={{height: 'min-content'}}
                                            aspectRatio={getCurrentImageInfo(imageInfo, altsInfo)[2]}/>
                         </Grid>
                         <Grid item md={3} xs={12} style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'column', gap: 8}}>

@@ -3382,5 +3382,31 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_dark_mode.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_dark_mode.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_dark_mode.webp"
+  },
+  {
+    "title": "Soma Hardlight Armor",
+    "artist": "@ogu_aug12",
+    "tags": [
+      "Soma",
+      "Bodysuit",
+      "Superhero"
+    ],
+    "href": "https://skeb.jp/@ogu_aug12/works/9",
+    "published": "2023-10-12",
+    "aspectRatio": 1.4071925754060324,
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/soma_hardlight_armor.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/soma_hardlight_armor.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_hardlight_armor.webp"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 2.816088002750086,
+    "parent": "Soma Hardlight Armor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Soma%20Hardlight%20Armor_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/soma_hardlight_armor_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/soma_hardlight_armor_1.webp"
   }
 ]

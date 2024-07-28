@@ -54,7 +54,7 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
                     <PhotoLibraryIcon/>
                 </IconButton>
             }
-            {href ? <a target={'_blank'} href={href}>{img}</a> : img}
+            {href ? <a target={'_blank'} style={{height: 'min-content'}} href={href}>{img}</a> : img}
         </>;
     } else {
         return <div style={{aspectRatio: props.aspectRatio, ...skeletonStyle}}><Skeleton width={'100%'} height={'100%'} animation={"wave"} variant={"rounded"}/></div>;

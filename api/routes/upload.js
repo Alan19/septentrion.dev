@@ -93,7 +93,7 @@ router.post('/', upload.single('image'), async (req, res) => {
 router.post('/alt', upload.single('image'), async (req, res) => {
     const file = req.file;
     const {href, tags, imageName, altCount} = req.body;
-    const numberOfAlts = require('images.json').concat(require('hidden.json')).filter(value => value.parent === imageName).length + 1;
+    const numberOfAlts = require('./images.json').concat(require('./hidden.json')).filter(value => value.parent === imageName).length + 1;
 
     const sharpBuffer = sharp(file.buffer);
     const metadata = await sharpBuffer.metadata();

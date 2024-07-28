@@ -9,8 +9,8 @@ export function AboutPageParagraph(props: {
     alt?: string,
     colors?: string[],
     img?: string | React.JSX.Element,
-    text: string,
     title: string,
+    text: string,
     variant?: OverridableStringUnion<Variant | 'inherit', TypographyPropsVariantOverrides>,
     subsections?: { title: string, text: string }[]
 }) {
