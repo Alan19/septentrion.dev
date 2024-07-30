@@ -8,6 +8,7 @@ const sharp = require('sharp')
 const path = require('path')
 dotenv.config();
 router.use(express.json());
+const _ = require("lodash");
 
 // Configure AWS SDK
 AWS.config.update({
@@ -20,40 +21,8 @@ const s3 = new AWS.S3();
 const storage = multer.memoryStorage();
 const upload = multer({storage});
 
-function convertToSnakeCase(str) {
-    return str && str.match(
-        /[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-        .map(s => s.toLowerCase())
-        .join('_');
-}
-
-function convertGreekToUnicode(str) {
-    const greekToUnicodeMap = {
-        'Α': 'U+0391', 'Β': 'U+0392', 'Γ': 'U+0393', 'Δ': 'U+0394', 'Ε': 'U+0395',
-        'Ζ': 'U+0396', 'Η': 'U+0397', 'Θ': 'U+0398', 'Ι': 'U+0399', 'Κ': 'U+039A',
-        'Λ': 'U+039B', 'Μ': 'U+039C', 'Ν': 'U+039D', 'Ξ': 'U+039E', 'Ο': 'U+039F',
-        'Π': 'U+03A0', 'Ρ': 'U+03A1', 'Σ': 'U+03A3', 'Τ': 'U+03A4', 'Υ': 'U+03A5',
-        'Φ': 'U+03A6', 'Χ': 'U+03A7', 'Ψ': 'U+03A8', 'Ω': 'U+03A9',
-        'α': 'U+03B1', 'β': 'U+03B2', 'γ': 'U+03B3', 'δ': 'U+03B4', 'ε': 'U+03B5',
-        'ζ': 'U+03B6', 'η': 'U+03B7', 'θ': 'U+03B8', 'ι': 'U+03B9', 'κ': 'U+03BA',
-        'λ': 'U+03BB', 'μ': 'U+03BC', 'ν': 'U+03BD', 'ξ': 'U+03BE', 'ο': 'U+03BF',
-        'π': 'U+03C0', 'ρ': 'U+03C1', 'σ': 'U+03C3', 'τ': 'U+03C4', 'υ': 'U+03C5',
-        'φ': 'U+03C6', 'χ': 'U+03C7', 'ψ': 'U+03C8', 'ω': 'U+03C9'
-    };
-
-    let result = '';
-    for (let char of str) {
-        if (greekToUnicodeMap[char]) {
-            result += greekToUnicodeMap[char];
-        } else {
-            result += char;
-        }
-    }
-    return result;
-}
-
 function prepareFileName(title) {
-    return convertToSnakeCase(convertGreekToUnicode(title));
+    return encodeURIComponent(_.snakeCase(title));
 }
 
 router.post('/', upload.single('image'), async (req, res) => {

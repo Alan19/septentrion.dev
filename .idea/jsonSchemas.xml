@@ -8,7 +8,7 @@
             <SchemaInfo>
               <option name="generatedName" value="New Schema" />
               <option name="name" value="Image Gallery" />
-              <option name="relativePathToSchema" value="api/routes/imageSchema.json" />
+              <option name="relativePathToSchema" value="api/routes/image_list_schema.json" />
               <option name="schemaVersion" value="JSON Schema version 7" />
               <option name="patterns">
                 <list>

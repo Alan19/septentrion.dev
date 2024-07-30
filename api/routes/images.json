@@ -3408,5 +3408,29 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Soma%20Hardlight%20Armor_1.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/soma_hardlight_armor_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/soma_hardlight_armor_1.webp"
+  },
+  {
+    "title": "Hanfu Sketch",
+    "artist": "@KuroPenguinEx",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1818149053839941913",
+    "published": "2024-07-30",
+    "aspectRatio": 0.7069555302166477,
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/hanfu_sketch.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/hanfu_sketch.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/hanfu_sketch.webp"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Hanfu Sketch",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Hanfu%20Sketch_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/hanfu_sketch_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/hanfu_sketch_1.webp"
   }
 ]

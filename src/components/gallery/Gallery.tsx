@@ -12,9 +12,9 @@ import {FilterPane} from "./FilterPane";
 import {RouteWithSubpanel} from "../navigation/RouteWithSubpanel";
 import {SkeletonImage} from "../SkeletonImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
-import {createSearchParams, useLocation, useNavigate} from "react-router-dom";
-import {convertToSnakeCase} from "./image/ArtworkPage";
+import {createSearchParams, useNavigate} from "react-router-dom";
 import {useQueryState} from "react-router-use-location-state";
+import {prepareFileName} from "./Utils";
 
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
     // @ts-ignore
@@ -93,7 +93,7 @@ export const Gallery = memo(function Gallery() {
         navigation({
             pathname: "/artwork",
             search: createSearchParams({
-                title: convertToSnakeCase(value.title)
+                title: prepareFileName(value.title)
             }).toString()
         })
     }

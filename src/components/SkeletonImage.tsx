@@ -41,7 +41,7 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
     }, [src]);
 
     if (isReady) {
-        const img = <img alt={alt} loading={"lazy"} className={imageClassname} onClick={onClick} style={{...style}} src={src}/>;
+        const img = <img alt={alt} loading={"lazy"} className={imageClassname} onClick={onClick} style={{display: 'block', ...style}} src={src}/>;
         return <>
             {
                 props.hasAlts &&

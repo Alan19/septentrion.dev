@@ -10,14 +10,7 @@ import {useNavigate, useSearchParams} from "react-router-dom";
 import {ArrowBack} from "@mui/icons-material";
 import {drawerColor} from "../../navigation/NavigationRail";
 import {useTagHooks} from "../UseTagHooks";
-
-export function convertToSnakeCase(str: string) {
-    // @ts-ignore
-    return str && str.match(
-        /[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-        .map(s => s.toLowerCase())
-        .join('_');
-}
+import {prepareFileName} from "../Utils";
 
 export function ArtworkPage() {
     const [imageTitle, setImageTitle] = useSearchParams();
@@ -37,7 +30,7 @@ export function ArtworkPage() {
         setImageNumber(index);
     }
 
-    const imageInfo = images.find(value => convertToSnakeCase(value.title) === imageTitle.get("title"));
+    const imageInfo = images.find(value => prepareFileName(value.title) === imageTitle.get("title"));
     if (imageInfo) {
         const {
             webp,
@@ -61,7 +54,7 @@ export function ArtworkPage() {
                         <ArrowBack/>
                     </IconButton>
                     <Grid container spacing={4} style={{height: '100%'}}>
-                        <Grid item md={9} xs={12} style={{display: 'flex', justifyContent: 'center'}}>
+                        <Grid item md={9} xs={12} style={{display: 'flex', justifyContent: 'center', height: 'min-content'}}>
                             <SkeletonImage href={href}
                                            style={{maxHeight: imageHeight, maxWidth: '100%', display: 'block'}}
                                            skeletonStyle={(aspectRatio ?? 1) < 1 ? {height: imageHeight, maxWidth: '100%'} : {maxHeight: imageHeight, width: '100%'}}
