@@ -100,8 +100,9 @@ export default function AltsUploader(props: {
                     color="primary"
                     aria-label="add"
                     onClick={handleClickOpen}
+                    variant={"extended"}
                 >
-                    <AddIcon/>
+                    <AddIcon/> Upload
                 </Fab></div>
             }
             <Dialog open={open} onClose={handleClose}>

@@ -35,36 +35,35 @@ export enum ArtTag {
     poslani = 'Poslani'
 }
 
-export type ImageInformation = {
-    webp?: string;
-    thumbnailUrl?: string;
-    src: string;
-    aspectRatio?: number;
-    href: string;
-    title: string;
-    artist?: string;
-    rows?: number;
-    cols?: number;
-    artistURL?: string;
-    tags?: string[];
-    published: string;
-};
+type Rating = 'general' | 'mainstream' | 'sensitive' | 'mature';
 
-export type AltInformation = {
+interface ImageBase {
+    tags: string[];
     webp?: string;
     src: string;
     thumbnailUrl?: string;
-    aspectRatio?: number;
+    rating: Rating;
+    aspectRatio: number;
     href?: string;
-    tags?: string[];
+}
+
+export interface ImageInformation extends ImageBase{
+    title: string;
+    published: string;
+    artist?: string;
+}
+
+export interface AltInformation extends ImageBase{
     parent: string;
 }
 
-export function isImageInformation(image: AltInformation | ImageInformation): image is ImageInformation {
+export type ImageEntry = AltInformation | ImageInformation;
+
+export function isImageInformation(image: ImageEntry): image is ImageInformation {
     return (image as AltInformation).parent === undefined;
 }
 
-export function isAltInformation(image: AltInformation | ImageInformation): image is AltInformation {
+export function isAltInformation(image: ImageEntry): image is AltInformation {
     return (image as AltInformation).parent !== undefined;
 }
 

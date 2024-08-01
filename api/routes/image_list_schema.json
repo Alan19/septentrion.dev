@@ -1,101 +1,102 @@
 {
-  "title": "Image",
-  "description": "An image for my personal website's filterable gallery",
-  "type": "array",
-  "items": {
-    "anyOf": [
-      {
-        "type": "object",
-        "required": [
-          "href",
-          "artist",
-          "tags",
-          "title"
-        ],
-        "properties": {
-          "src": {
-            "description": "The source URL for the image",
+  "definitions": {
+    "Rating": {
+      "type": "string",
+      "enum": [
+        "mainstream",
+        "general",
+        "sensitive",
+        "mature"
+      ]
+    },
+    "ImageBase": {
+      "type": "object",
+      "properties": {
+        "tags": {
+          "type": "array",
+          "items": {
             "type": "string"
-          },
-          "href": {
-            "description": "The link to direct the viewer to upon clicking the image",
-            "type": "string"
-          },
-          "thumbnailUrl": {
-            "description": "The link to the smaller version of the image to display on the gallery",
-            "type": "string"
-          },
-          "title": {
-            "description": "A title for the image for display on the gallery",
-            "type": "string"
-          },
-          "artist": {
-            "description": "The social media handle of the artist, usually prefixed with an @, displayed on the gallery",
-            "type": "string"
-          },
-          "artistURL": {
-            "description": "A link to the artist's social media page",
-            "type": "string"
-          },
-          "published": {
-            "description": "The date when the artwork was published",
-            "type": "string",
-            "format": "date"
-          },
-          "webp": {
-            "description": "A link to the webp version of the image, used by image display modal if available",
-            "type": "string"
-          },
-          "tags": {
-            "description": "An array of tags for the art",
-            "type": "array",
-            "minItems": 1,
-            "uniqueItems": true,
-            "items": {
-              "type": "string"
-            }
           }
+        },
+        "webp": {
+          "type": "string"
+        },
+        "src": {
+          "type": "string"
+        },
+        "thumbnailUrl": {
+          "type": "string"
+        },
+        "rating": {
+          "$ref": "#/definitions/Rating"
+        },
+        "aspectRatio": {
+          "type": "number"
+        },
+        "href": {
+          "type": "string"
         }
       },
-      {
-        "type": "object",
-        "required": [
-          "parent",
-          "href",
-          "tags",
-          "src"
-        ],
-        "properties": {
-          "src": {
-            "description": "The source URL for the image",
-            "type": "string"
-          },
-          "href": {
-            "description": "The link to direct the viewer to upon clicking the image",
-            "type": "string"
-          },
-          "thumbnailUrl": {
-            "description": "The link to the smaller version of the image to display on the gallery",
-            "type": "string"
-          },
-          "parent": {
-            "description": "The name of the parent image that this image is an alt for",
-            "type": "string"
-          },
-          "webp": {
-            "description": "A link to the webp version of the image, used by image display modal if available",
-            "type": "string"
-          },
-          "tags": {
-            "description": "An array of tags for the art",
-            "type": "array",
-            "minItems": 1,
-            "uniqueItems": true,
-            "items": {
+      "required": [
+        "tags",
+        "src",
+        "rating",
+        "aspectRatio"
+      ]
+    },
+    "ImageInformation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ImageBase"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "published": {
+              "type": "string"
+            },
+            "artist": {
               "type": "string"
             }
-          }
+          },
+          "required": [
+            "title",
+            "published",
+            "artist"
+          ]
         }
+      ]
+    },
+    "AltInformation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ImageBase"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "parent": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "parent"
+          ]
+        }
+      ]
+    }
+  },
+  "type": "array",
+  "items": {
+    "oneOf": [
+      {
+        "$ref": "#/definitions/ImageInformation"
+      },
+      {
+        "$ref": "#/definitions/AltInformation"
       }
     ]
   }

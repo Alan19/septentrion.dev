@@ -10,7 +10,8 @@
     "published": "2022-01-02",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/gemini_form.webp",
     "aspectRatio": 1.2111057922450934,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gemini_form.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gemini_form.webp",
+    "rating": "mainstream"
   },
   {
     "src": "https://pbs.twimg.com/media/FS3TACVVsAAQPl1?format=jpg&name=large",
@@ -24,7 +25,8 @@
     "published": "2022-05-16",
     "aspectRatio": 1.7777777777777777,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/kayztor_gift_art.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/kayztor_gift_art.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/kayztor_gift_art.webp",
+    "rating": "mainstream"
   },
   {
     "src": "https://pbs.twimg.com/media/Fj2qZYRVEAAVyRC?format=jpg&name=large",
@@ -39,7 +41,8 @@
     "published": "2022-12-13",
     "aspectRatio": 1.3333333333333333,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ai_core_relaxing.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ai_core_relaxing.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ai_core_relaxing.webp",
+    "rating": "mainstream"
   },
   {
     "src": "https://pbs.twimg.com/media/FTkSbIYaQAALr_G?format=jpg&name=large",

@@ -22,7 +22,7 @@ export function ArtworkPage() {
         if (imageNumber !== -1 && altsInfo) {
             return [altsInfo[imageNumber].webp ?? altsInfo[imageNumber].src, altsInfo[imageNumber].href ?? "", altsInfo[imageNumber].aspectRatio ?? 1];
         } else {
-            return [currentImage.webp ?? currentImage.src, currentImage.href, currentImage.aspectRatio ?? 1];
+            return [currentImage.webp ?? currentImage.src, currentImage.href ?? "", currentImage.aspectRatio ?? 1];
         }
     }
 
@@ -40,7 +40,6 @@ export function ArtworkPage() {
             title,
             href,
             artist,
-            artistURL,
             thumbnailUrl,
             tags
         } = imageInfo;

@@ -1,7 +1,7 @@
 // noinspection JSIgnoredPromiseFromCall
 
 import axios from "axios";
-import {AltInformation, ArtTag, ImageInformation, isAltInformation, isImageInformation} from "../ImageInformation";
+import {AltInformation, ArtTag, ImageEntry, ImageInformation, isAltInformation, isImageInformation} from "../ImageInformation";
 import {useEffect, useState} from "react";
 import images from './images.json'
 import {useQueryState} from "react-router-use-location-state";
@@ -74,14 +74,14 @@ export function useTagHooks() {
     async function loadImageInfo() {
         const tags = getTags();
         if (process.env.NODE_ENV === "development") {
-            await axios.get<(ImageInformation | AltInformation)[]>('http://localhost:9000/images/', {params: tags})
+            await axios.get<ImageEntry[]>('http://localhost:9000/images/', {params: tags})
                 .then(value => {
                     setImageData(value.data.filter(isImageInformation));
                     // Filter images for alts, then collect them into a map with their keys being the parent name, and the value being all the alts
                     setAltData(value.data.filter(isAltInformation).reduce((map, alt) => map.set(alt.parent, [...(map.get(alt.parent) ?? []), alt]), new Map()));
                 });
         } else {
-            const jsonImages: (AltInformation | ImageInformation)[] = images;
+            const jsonImages: ImageEntry[] = images.map<ImageEntry>(value => ({...value, rating: 'general'}));
             setAltData(jsonImages.filter(isAltInformation).reduce((map, alt) => map.set(alt.parent, [...(map.get(alt.parent) ?? []), alt]), new Map()));
             setImageData(jsonImages.filter(isImageInformation));
         }
