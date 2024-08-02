@@ -10,6 +10,7 @@ import {BioEnhancementIntro} from "./components/about/BioEnhancementIntro";
 import {AlcorOutfits} from "./components/about/outfits/AlcorOutfits";
 import {SomaInfo} from "./components/about/characters/SomaInfo";
 import React from "react";
+import {ArtworkOnlyPage} from "./components/gallery/ArtworkOnlyPage";
 
 export const router = createHashRouter([
     {
@@ -49,8 +50,11 @@ export const router = createHashRouter([
                         element: <SomaInfo/>
                     }
                 ]
-            },
-
+            }
         ]
+    },
+    {
+        path: "/reference",
+        element: <ArtworkOnlyPage/>
     }
 ]);
