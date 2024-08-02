@@ -45,6 +45,7 @@ interface ImageBase {
     rating: Rating;
     aspectRatio: number;
     href?: string;
+    characters: string[]
 }
 
 export interface ImageInformation extends ImageBase{

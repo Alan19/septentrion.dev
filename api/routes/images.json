@@ -11,7 +11,10 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/gemini_form.webp",
     "aspectRatio": 1.2111057922450934,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gemini_form.webp",
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ]
   },
   {
     "src": "https://pbs.twimg.com/media/FS3TACVVsAAQPl1?format=jpg&name=large",
@@ -26,7 +29,10 @@
     "aspectRatio": 1.7777777777777777,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/kayztor_gift_art.webp",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/kayztor_gift_art.webp",
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ]
   },
   {
     "src": "https://pbs.twimg.com/media/Fj2qZYRVEAAVyRC?format=jpg&name=large",
@@ -42,7 +48,10 @@
     "aspectRatio": 1.3333333333333333,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ai_core_relaxing.webp",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ai_core_relaxing.webp",
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ]
   },
   {
     "src": "https://pbs.twimg.com/media/FTkSbIYaQAALr_G?format=jpg&name=large",
@@ -56,7 +65,11 @@
     "published": "2022-05-24",
     "aspectRatio": 0.769090909090909,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/awakened_workout.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/awakened_workout.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/awakened_workout.webp",
+    "characters": [
+      "Alcor"
+    ],
+    "rating": "general"
   },
   {
     "src": "https://pbs.twimg.com/media/FOBdASRWYAYYG_b?format=jpg&name=4096x4096",
@@ -71,7 +84,11 @@
     "published": "2022-03-16",
     "aspectRatio": 0.7392578125,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cafe_superhero.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cafe_superhero.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cafe_superhero.webp",
+    "characters": [
+      "Alcor"
+    ],
+    "rating": "mainstream"
   },
   {
     "src": "https://pbs.twimg.com/media/FnHp4nWaUAA-lgD?format=jpg&name=large",
@@ -89,7 +106,11 @@
     "published": "2023-01-22",
     "aspectRatio": 1.5442260442260443,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/special_archery_training.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/special_archery_training.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/special_archery_training.webp",
+    "characters": [
+      "Alcor"
+    ],
+    "rating": "mainstream"
   },
   {
     "src": "https://pbs.twimg.com/media/FdwPgQEaEAA3Unn?format=jpg&name=large",
@@ -102,7 +123,11 @@
     "published": "2022-09-28",
     "aspectRatio": 1,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_form.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_form.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_form.webp",
+    "characters": [
+      "Alcor"
+    ],
+    "rating": "general"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangulum_form.jpg",
@@ -115,7 +140,11 @@
     "published": "2022-05-29",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/triangulum_form.webp",
     "aspectRatio": 1.8250950570342206,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangulum_form.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangulum_form.webp",
+    "characters": [
+      "Alcor"
+    ],
+    "rating": "sensitive"
   },
   {
     "src": "https://pbs.twimg.com/media/FWxBQsZakAAC85Z?format=jpg&name=large",
@@ -131,7 +160,12 @@
     "published": "2022-07-03",
     "aspectRatio": 0.7060773480662983,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/symbiote_fusion.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/symbiote_fusion.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/symbiote_fusion.webp",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "rating": "mainstream"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/raf_buff_techwear.jpeg",
@@ -145,7 +179,12 @@
     "published": "2022-12-14",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/bulk_up_clothing_replacements.webp",
     "aspectRatio": 1.1995172968624297,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/bulk_up_clothing_replacements.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/bulk_up_clothing_replacements.webp",
+    "characters": [
+      "Alcor",
+      "NerdyWoffy"
+    ],
+    "rating": "sensitive"
   },
   {
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/indra_suit.webp",
@@ -161,7 +200,11 @@
       "Eltanin Form"
     ],
     "published": "2022-08-02",
-    "aspectRatio": 1
+    "aspectRatio": 1,
+    "characters": [
+      "Alcor"
+    ],
+    "rating": "mainstream"
   },
   {
     "src": "https://pbs.twimg.com/media/FcNTqa8aUAE4uED?format=jpg&name=4096x4096",
@@ -177,7 +220,12 @@
     "published": "2022-09-09",
     "aspectRatio": 0.6309148264984227,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/symbiote_techwear.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/symbiote_techwear.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/symbiote_techwear.webp",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "rating": "general"
   },
   {
     "title": "AICore Reference Sheet",
@@ -192,7 +240,12 @@
     "published": "2022-04-05",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ai_core_reference_sheet.webp",
     "aspectRatio": 1.2139605462822458,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ai_core_reference_sheet.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ai_core_reference_sheet.webp",
+    "rating": "mainstream",
+    "characters": [
+      "Castor",
+      "Alcor"
+    ]
   },
   {
     "title": "Lance Hero",
@@ -209,7 +262,11 @@
     "published": "2022-05-04",
     "aspectRatio": 0.85107421875,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lance_hero.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/lance_hero.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/lance_hero.webp",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ]
   },
   {
     "title": "Valentine's Day 2022",
@@ -222,7 +279,12 @@
     "published": "2022-02-22",
     "aspectRatio": 1.1531531531531531,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/valentine_s_day_2022.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/valentine_s_day_2022.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/valentine_s_day_2022.webp",
+    "rating": "general",
+    "characters": [
+      "Alcor",
+      "Lava"
+    ]
   },
   {
     "title": "The Beginning",
@@ -238,7 +300,11 @@
     "published": "2021-06-19",
     "aspectRatio": 0.7084745762711865,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/the_beginning.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/the_beginning.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/the_beginning.webp",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ]
   },
   {
     "title": "Arknights Operator",

@@ -35,13 +35,20 @@
         },
         "href": {
           "type": "string"
+        },
+        "characters": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       },
       "required": [
         "tags",
         "src",
         "rating",
-        "aspectRatio"
+        "aspectRatio",
+        "characters"
       ]
     },
     "ImageInformation": {
