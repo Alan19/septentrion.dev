@@ -165,13 +165,18 @@ export const Gallery = memo(function Gallery() {
                     }
                 </div>
             </Stack>
-            <Fab onClick={() => navigation({
-                pathname: "/reference",
-                search: createSearchParams({'reference-name': referenceName, 'filter-mode': filterMode, filters: serializeTags(tags)}).toString()
-            })} style={{position: 'fixed', bottom: 80, right: 16}} color="primary" aria-label="share" size={"small"}>
-                <Share/>
-            </Fab>
-            <Uploader loadImageInfo={loadImageInfo}/>
+            <Stack style={{position: 'fixed', bottom: 16, right: 16, alignItems: 'end'}} spacing={2}>
+                <Fab onClick={() => navigation({
+                    pathname: "/reference",
+                    search: createSearchParams({'reference-name': referenceName, 'filter-mode': filterMode, filters: serializeTags(tags)}).toString()
+                })}
+                     color="primary"
+                     aria-label="share"
+                     size={"small"}>
+                    <Share/>
+                </Fab>
+                <Uploader loadImageInfo={loadImageInfo}/>
+            </Stack>
         </div>
     </Fade>;
     return <RouteWithSubpanel panel={<FilterPane filterMode={filterMode} setFilterMode={setFilterMode} tagState={tags} setTag={handleTagChange}/>} routeContent={content}/>;

@@ -117,12 +117,6 @@ export default function Uploader(props: {
         setTitle(event.target.value);
     }
 
-    const fabStyle = {
-        position: "fixed",
-        bottom: 16,
-        right: 16,
-    };
-
     return (
         <>
             <Snackbar
@@ -135,7 +129,6 @@ export default function Uploader(props: {
                 isDevelopment && <Fab
                     variant={"extended"}
                     name={"Upload"}
-                    sx={fabStyle}
                     color="primary"
                     aria-label="add"
                     onClick={handleClickOpen}
