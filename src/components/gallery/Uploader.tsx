@@ -117,12 +117,6 @@ export default function Uploader(props: {
         setTitle(event.target.value);
     }
 
-    const fabStyle = {
-        position: "fixed",
-        bottom: 16,
-        right: 16,
-    };
-
     return (
         <>
             <Snackbar
@@ -133,14 +127,13 @@ export default function Uploader(props: {
             />
             {
                 isDevelopment && <Fab
-                variant={"extended"}
-                sx={fabStyle}
-                color="primary"
-                aria-label="add"
-                onClick={handleClickOpen}
-              >
-                <AddIcon/> Upload
-              </Fab>
+                    variant={"extended"}
+                    color="primary"
+                    aria-label="add"
+                    onClick={handleClickOpen}
+                >
+                    <AddIcon/> Upload
+                </Fab>
             }
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Upload New Image</DialogTitle>
