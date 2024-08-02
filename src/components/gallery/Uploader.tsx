@@ -133,12 +133,12 @@ export default function Uploader(props: {
             />
             {
                 isDevelopment && <Fab
+                    variant={"extended"}
                     name={"Upload"}
                     sx={fabStyle}
                     color="primary"
                     aria-label="add"
                     onClick={handleClickOpen}
-                    variant={"extended"}
                 >
                     <AddIcon/> Upload
                 </Fab>

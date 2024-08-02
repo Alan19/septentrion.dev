@@ -1,4 +1,4 @@
-import {Autocomplete, FilterOptionsState, FormControlLabel, Radio, RadioGroup, TextField, Typography} from "@mui/material";
+import {Autocomplete, FilterOptionsState, FormControlLabel, Radio, RadioGroup, Stack, TextField, Typography} from "@mui/material";
 import React from "react";
 import {ArtTag, tagGroup} from "../ImageInformation";
 import Chip from "@mui/material-next/Chip";
@@ -66,8 +66,8 @@ export function FilterPane(props: {
         }
     }
 
-    return <>
-        <Typography variant={"h5"} style={{marginBottom: "8px"}}>
+    return <Stack spacing={1}>
+        <Typography variant={"h5"}>
             <Filter style={{verticalAlign: "middle", marginRight: 8}}/>Filter Images
         </Typography>
         <FormControl>
@@ -96,5 +96,5 @@ export function FilterPane(props: {
                       size={"medium"}
                       renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip option={option} tagProps={getTagProps({index})}/>)}
                       options={getSortedOptions().concat(artists).concat(artists.map(value => '-' + value))}/>
-    </>;
+    </Stack>;
 }

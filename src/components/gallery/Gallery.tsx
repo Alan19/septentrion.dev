@@ -1,9 +1,9 @@
 import React, {memo, useEffect, useState} from "react";
-import {Fade, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Stack, Typography, useMediaQuery,} from "@mui/material";
+import {Fab, Fade, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Snackbar, Stack, Typography, useMediaQuery,} from "@mui/material";
 import {ImageInformation, isImageInformation} from "../ImageInformation";
 import "./gallery.css";
 import {theme} from "../../App";
-import {flattenTags, isArtist, TagState, useTagHooks} from "./UseTagHooks";
+import {flattenTags, serializeTags, isArtist, TagState, useTagHooks} from "./UseTagHooks";
 import Uploader from "./Uploader";
 import useMeasure from 'react-use-measure';
 import {ResizeObserver} from '@juggle/resize-observer'
@@ -15,42 +15,20 @@ import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {createSearchParams, useNavigate} from "react-router-dom";
 import {useQueryState} from "react-router-use-location-state";
 import {prepareFileName} from "./Utils";
+import {Share} from "@mui/icons-material";
 
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
     // @ts-ignore
     return new Set(images.filter(value => value.published !== undefined).map(value => value.published.substring(0, 7)));
 }
 
-type GalleryDisplayModes = 'monthly' | 'all' | 'paginated';
-
-export const Gallery = memo(function Gallery() {
-    const {getTags, setTags, images, loadImageInfo, altData} = useTagHooks();
-    const [ref, bounds] = useMeasure({polyfill: ResizeObserver});
-    const [displayMode, setDisplayMode] = useQueryState<GalleryDisplayModes>('display-mode', "paginated");
-    const [pageSize, setPageSize] = useState<number>(12);
-    const [page, setPage] = useQueryState<number>('page', 1);
-    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-    const [filterMode, setFilterMode] = useQueryState<"and" | "or">("filter-mode", "and");
-
-    const navigation = useNavigate();
-
-    let tags: TagState = getTags();
-    const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
-
-    const enabledTags: string[] = Object.entries(flattenTags(tags)).filter(
-        ([, value]) => value === 1
-    ).map(([tagName]) => tagName);
-    const hiddenTags: string[] = Object.entries(flattenTags(tags)).filter(
-        ([, value]) => value === -1
-    ).map(([tagName]) => tagName);
+export function imageSort(a: ImageInformation, b: ImageInformation) {
+    return b.published.localeCompare(a.published);
+}
 
 
-    function handleTagChange(tags: TagState) {
-        setTags(tags);
-        setPage(1);
-    }
-
-    let shownImages = images
+export function getShownImages(images: ImageInformation[], filterMode: "and" | "or", enabledTags: string[], hiddenTags: string[]) {
+    return images
         .filter(isImageInformation)
         .filter((value) => {
             let hasFilterTag;
@@ -70,10 +48,41 @@ export const Gallery = memo(function Gallery() {
             }
         })
         .sort(imageSort);
+}
 
-    function imageSort(a: ImageInformation, b: ImageInformation) {
-        return b.published.localeCompare(a.published);
+export const Gallery = memo(function Gallery() {
+    type GalleryDisplayModes = 'monthly' | 'all' | 'paginated';
+
+    const {getTags, setTags, images, loadImageInfo, altData} = useTagHooks();
+    const [ref, bounds] = useMeasure({polyfill: ResizeObserver});
+    const [displayMode, setDisplayMode] = useQueryState<GalleryDisplayModes>('display-mode', "paginated");
+    const [pageSize, setPageSize] = useState<number>(12);
+    const [page, setPage] = useQueryState<number>('page', 1);
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const [filterMode, setFilterMode] = useQueryState<"and" | "or">("filter-mode", "and");
+
+    // TODO Add method to export name, and also copy URL to clipboard
+    const [referenceName, setReferenceName] = useState("")
+
+    const navigation = useNavigate();
+
+    let tags: TagState = getTags();
+    const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
+
+    const enabledTags: string[] = Object.entries(flattenTags(tags)).filter(
+        ([, value]) => value === 1
+    ).map(([tagName]) => tagName);
+    const hiddenTags: string[] = Object.entries(flattenTags(tags)).filter(
+        ([, value]) => value === -1
+    ).map(([tagName]) => tagName);
+
+
+    function handleTagChange(tags: TagState) {
+        setTags(tags);
+        setPage(1);
     }
+
+    let shownImages = getShownImages(images, filterMode, enabledTags, hiddenTags);
 
 
     useEffect(() => {
@@ -81,6 +90,10 @@ export const Gallery = memo(function Gallery() {
             setIsDrawerOpen(false);
         }
     }, [isMediumOrAbove]);
+
+    function handleNameChange(event: React.ChangeEvent<HTMLInputElement>) {
+        setReferenceName(event.target.value);
+    }
 
     function handlePageChange(_event: React.ChangeEvent<unknown>, value: number) {
         setPage(value);
@@ -152,6 +165,12 @@ export const Gallery = memo(function Gallery() {
                     }
                 </div>
             </Stack>
+            <Fab onClick={() => navigation({
+                pathname: "/reference",
+                search: createSearchParams({'reference-name': referenceName, 'filter-mode': filterMode, filters: serializeTags(tags)}).toString()
+            })} style={{position: 'fixed', bottom: 80, right: 16}} color="primary" aria-label="share" size={"small"}>
+                <Share/>
+            </Fab>
             <Uploader loadImageInfo={loadImageInfo}/>
         </div>
     </Fade>;

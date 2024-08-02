@@ -31,6 +31,20 @@ export function flattenTags(tagState: TagState): { [tagOrArtist in string]: numb
 export function isArtist(optionName: string) {
     return artists.includes(optionName);
 }
+/**
+ * Serializes the changes to the state of tags in the format of {name: -1, 1}. Ignores unselected tags.
+ * @param tags The new tag state
+ */
+export function serializeTags(tags: TagState) {
+    const allTags = Object.values(ArtTag).map(value => value.toString()).concat(artists);
+    const flattenedTags = flattenTags(tags);
+    let serializedTags = allTags.filter(value => flattenedTags[value] !== undefined && flattenedTags[value] !== 0)
+        .reduce((previousValue, currentValue) => ({
+            ...previousValue,
+            [currentValue]: String(flattenedTags[currentValue])
+        }), {});
+    return JSON.stringify(serializedTags);
+}
 
 export function useTagHooks() {
     const [tagURLParam, setTagURLParams] = useQueryState('filters', JSON.stringify({}));
@@ -52,19 +66,8 @@ export function useTagHooks() {
         return tagState;
     }
 
-    /**
-     * Serializes the changes to the state of tags in the format of {name: -1, 1}. Ignores unselected tags.
-     * @param tags The new tag state
-     */
     function setTags(tags: TagState) {
-        const allTags = Object.values(ArtTag).map(value => value.toString()).concat(artists);
-        const flattenedTags = flattenTags(tags);
-        let serializedTags = allTags.filter(value => flattenedTags[value] !== undefined && flattenedTags[value] !== 0)
-            .reduce((previousValue, currentValue) => ({
-                ...previousValue,
-                [currentValue]: String(flattenedTags[currentValue])
-            }), {});
-        setTagURLParams(JSON.stringify(serializedTags));
+        setTagURLParams(serializeTags(tags));
     }
 
     useEffect(() => {
