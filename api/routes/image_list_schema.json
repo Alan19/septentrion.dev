@@ -40,7 +40,10 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "default": [
+            "Alcor"
+          ]
         }
       },
       "required": [
@@ -49,6 +52,24 @@
         "rating",
         "aspectRatio",
         "characters"
+      ]
+    },
+    "AltInformation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ImageBase"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "parent": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "parent"
+          ]
+        }
       ]
     },
     "ImageInformation": {
@@ -73,24 +94,6 @@
             "title",
             "published",
             "artist"
-          ]
-        }
-      ]
-    },
-    "AltInformation": {
-      "allOf": [
-        {
-          "$ref": "#/definitions/ImageBase"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "parent": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "parent"
           ]
         }
       ]
