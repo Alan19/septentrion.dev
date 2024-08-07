@@ -12,7 +12,6 @@ export enum ArtTag {
     standardOutfit = 'Standard Outfit',
     bodysuit = 'Bodysuit',
     hoodie = 'Hoodie',
-    castor = 'Castor',
     aicore = 'AICore Form',
     awakened = 'Gemini Form',
     ultra = 'Triangulum Form',
@@ -32,10 +31,7 @@ export enum ArtTag {
     winter = 'Hibernal Assassin',
     aquarius = 'Aquarius Form',
     auriga = 'Auriga Form',
-    hidden = 'Hidden',
-    soma = 'Soma',
-    wilton = 'Wilton',
-    poslani = 'Poslani'
+    hidden = 'Hidden'
 }
 
 export enum Rating {
@@ -145,6 +141,5 @@ export class SelectedFilters {
 
 export const tagGroup: Record<string, ArtTag[]> = {
     Clothing: [ArtTag.bodysuit, ArtTag.hoodie, ArtTag.autumnal, ArtTag.serotinal, ArtTag.vernal, ArtTag.estival, ArtTag.winter, ArtTag.standardOutfit, ArtTag.techwear],
-    "Evolution Level": [ArtTag.thuban, ArtTag.rastaban, ArtTag.eltanin, ArtTag.awakened, ArtTag.ultra, ArtTag.eclipse],
-    OCs: [ArtTag.poslani, ArtTag.soma, ArtTag.wilton, ArtTag.castor]
+    "Evolution Level": [ArtTag.thuban, ArtTag.rastaban, ArtTag.eltanin, ArtTag.awakened, ArtTag.ultra, ArtTag.eclipse]
 }
