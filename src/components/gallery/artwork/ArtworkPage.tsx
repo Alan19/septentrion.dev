@@ -45,7 +45,8 @@ export function ArtworkPage() {
         } = imageInfo;
         const altsInfo = altData.get(title);
 
-        const imageHeight = 'calc(100vh - 72px)';
+        const imageHeight = 'calc(100vh - 72px - 40px)';
+        // TODO Clean up heights (maybe use 100% height by default and margins?)
         return (
             <Fade in>
                 <Container style={{marginTop: 16, minHeight: 'calc(100vh - 56px - 32px)'}} maxWidth={"xl"}>
@@ -67,6 +68,7 @@ export function ArtworkPage() {
                                 background: drawerColor,
                                 padding: 16
                             }}>
+                                {/*TODO Add rating*/}
                                 <Typography style={{marginBottom: 8}} variant={"h4"}>{title}</Typography>
                                 <Button color="primary"
                                         variant="outlined"

@@ -13,7 +13,7 @@ import {getShownImages} from "./Gallery";
 import {drawerColor} from "../navigation/NavigationRail";
 
 // Page that only displays artworks in a grid, and hides all other elements
-export function ArtworkOnlyPage() {
+export function MinimalGalleryPage() {
     const {filters, images, altData} = useTagHooks();
 
     const [filterMode] = useQueryState<"and" | "or">("filter-mode", "and");
