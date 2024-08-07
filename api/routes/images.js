@@ -22,12 +22,10 @@ function doesParameterContainTag(image, queryParams) {
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  const queryParams = req.query;
   const hidden = JSON.parse(fs.readFileSync(path.resolve(__dirname, './hidden.json'), 'utf-8'));
   let images = JSON.parse(fs.readFileSync(path.resolve(__dirname, './images.json'), 'utf-8'));
   const combinedImages = [...images, ...hidden];
-  const sentImages = combinedImages.filter(image => !Object.keys(image).includes("parent") && doesParameterContainTag(image, queryParams));
-  res.send(sentImages.concat(combinedImages.filter(image => Object.keys(image).includes("parent") && sentImages.map(sentImage => sentImage.title).includes(image.parent))))
+    res.send(combinedImages)
 });
 
 module.exports = router;

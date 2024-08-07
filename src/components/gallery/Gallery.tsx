@@ -1,9 +1,9 @@
 import React, {memo, useEffect, useState} from "react";
-import {Fab, Fade, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Snackbar, Stack, Typography, useMediaQuery,} from "@mui/material";
+import {Fab, Fade, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Stack, Typography, useMediaQuery,} from "@mui/material";
 import {ImageInformation, isImageInformation} from "../ImageInformation";
 import "./gallery.css";
 import {theme} from "../../App";
-import {flattenTags, serializeTags, isArtist, TagState, useTagHooks} from "./UseTagHooks";
+import {useTagHooks} from "./UseTagHooks";
 import Uploader from "./Uploader";
 import useMeasure from 'react-use-measure';
 import {ResizeObserver} from '@juggle/resize-observer'
@@ -16,6 +16,7 @@ import {createSearchParams, useNavigate} from "react-router-dom";
 import {useQueryState} from "react-router-use-location-state";
 import {prepareFileName} from "./Utils";
 import {Share} from "@mui/icons-material";
+import {SelectedFilters} from "./TagUtils";
 
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
     // @ts-ignore
@@ -26,34 +27,14 @@ export function imageSort(a: ImageInformation, b: ImageInformation) {
     return b.published.localeCompare(a.published);
 }
 
-
-export function getShownImages(images: ImageInformation[], filterMode: "and" | "or", enabledTags: string[], hiddenTags: string[]) {
-    return images
-        .filter(isImageInformation)
-        .filter((value) => {
-            let hasFilterTag;
-            switch (filterMode) {
-                case "and":
-                    hasFilterTag = enabledTags.every((tag) => isArtist(tag) ? value.artist === tag : value.tags?.includes(tag) ?? false);
-                    break;
-                case "or":
-                    hasFilterTag = enabledTags.some((tag) => isArtist(tag) ? value.artist === tag : value.tags?.includes(tag) ?? false);
-                    break;
-            }
-            const hasHiddenTag = hiddenTags.some((tag) => isArtist(tag) ? value.artist === tag : value.tags?.includes(tag) ?? false);
-            if (enabledTags.length === 0) {
-                return !hasHiddenTag;
-            } else {
-                return hasFilterTag && !hasHiddenTag;
-            }
-        })
-        .sort(imageSort);
+export function getShownImages(images: ImageInformation[], selectedFilters: SelectedFilters, filterMode: "and" | "or") {
+    return images.filter(value => selectedFilters.doesImageMatch(value, filterMode)).sort(imageSort);
 }
 
 export const Gallery = memo(function Gallery() {
     type GalleryDisplayModes = 'monthly' | 'all' | 'paginated';
 
-    const {getTags, setTags, images, loadImageInfo, altData} = useTagHooks();
+    const {filters, setFilters, images, loadImageInfo, altData} = useTagHooks();
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver});
     const [displayMode, setDisplayMode] = useQueryState<GalleryDisplayModes>('display-mode', "paginated");
     const [pageSize, setPageSize] = useState<number>(12);
@@ -66,25 +47,15 @@ export const Gallery = memo(function Gallery() {
 
     const navigation = useNavigate();
 
-    let tags: TagState = getTags();
     const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
 
-    const enabledTags: string[] = Object.entries(flattenTags(tags)).filter(
-        ([, value]) => value === 1
-    ).map(([tagName]) => tagName);
-    const hiddenTags: string[] = Object.entries(flattenTags(tags)).filter(
-        ([, value]) => value === -1
-    ).map(([tagName]) => tagName);
 
-
-    function handleTagChange(tags: TagState) {
-        setTags(tags);
+    function handleTagChange(tags: string) {
+        setFilters(tags);
         setPage(1);
     }
 
-    let shownImages = getShownImages(images, filterMode, enabledTags, hiddenTags);
-
-
+    let shownImages = getShownImages(images, filters, filterMode);
     useEffect(() => {
         if (isMediumOrAbove) {
             setIsDrawerOpen(false);
@@ -168,7 +139,7 @@ export const Gallery = memo(function Gallery() {
             <Stack style={{position: 'fixed', bottom: 16, right: 16, alignItems: 'end'}} spacing={2}>
                 <Fab onClick={() => navigation({
                     pathname: "/reference",
-                    search: createSearchParams({'reference-name': referenceName, 'filter-mode': filterMode, filters: serializeTags(tags)}).toString()
+                    search: createSearchParams({'reference-name': referenceName, 'filter-mode': filterMode, filters: filters.toString()}).toString()
                 })}
                      color="primary"
                      aria-label="share"
@@ -179,6 +150,6 @@ export const Gallery = memo(function Gallery() {
             </Stack>
         </div>
     </Fade>;
-    return <RouteWithSubpanel panel={<FilterPane filterMode={filterMode} setFilterMode={setFilterMode} tagState={tags} setTag={handleTagChange}/>} routeContent={content}/>;
+    return <RouteWithSubpanel panel={<FilterPane filterMode={filterMode} setFilterMode={setFilterMode} filters={filters} setFilters={handleTagChange}/>} routeContent={content}/>;
 });
 

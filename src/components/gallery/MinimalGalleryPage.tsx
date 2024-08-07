@@ -1,4 +1,4 @@
-import {flattenTags, TagState, useTagHooks} from "./UseTagHooks";
+import {useTagHooks} from "./UseTagHooks";
 import {createSearchParams, useNavigate} from "react-router-dom";
 import {Container, Fade, Typography} from "@mui/material";
 import {ImageInformation} from "../ImageInformation";
@@ -13,8 +13,8 @@ import {getShownImages} from "./Gallery";
 import {drawerColor} from "../navigation/NavigationRail";
 
 // Page that only displays artworks in a grid, and hides all other elements
-export function ArtworkOnlyPage() {
-    const {getTags, images, loadImageInfo, altData} = useTagHooks();
+export function MinimalGalleryPage() {
+    const {filters, images, altData} = useTagHooks();
 
     const [filterMode] = useQueryState<"and" | "or">("filter-mode", "and");
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver});
@@ -22,14 +22,6 @@ export function ArtworkOnlyPage() {
 
     const navigation = useNavigate();
 
-    let tags: TagState = getTags();
-
-    const enabledTags: string[] = Object.entries(flattenTags(tags)).filter(
-        ([, value]) => value === 1
-    ).map(([tagName]) => tagName);
-    const hiddenTags: string[] = Object.entries(flattenTags(tags)).filter(
-        ([, value]) => value === -1
-    ).map(([tagName]) => tagName);
 
     function handleImageClicked(value: ImageInformation) {
         navigation({
@@ -40,7 +32,7 @@ export function ArtworkOnlyPage() {
         })
     }
 
-    let shownImages = getShownImages(images, filterMode, enabledTags, hiddenTags);
+    let shownImages = getShownImages(images, filters, filterMode);
 
     const height = 350;
     return <Fade in>

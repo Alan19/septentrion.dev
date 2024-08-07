@@ -9,6 +9,7 @@ const path = require('path')
 dotenv.config();
 router.use(express.json());
 const _ = require("lodash");
+const {readFileSync} = require("node:fs");
 
 // Configure AWS SDK
 AWS.config.update({
@@ -17,7 +18,7 @@ AWS.config.update({
 });
 const s3 = new AWS.S3();
 
-// Multer setup for image upload
+// Multer setup for artwork upload
 const storage = multer.memoryStorage();
 const upload = multer({storage});
 
@@ -28,7 +29,7 @@ function prepareFileName(title) {
 router.post('/', upload.single('image'), async (req, res) => {
     const file = req.file;
 
-    const {artist, href, tags, title, published} = req.body;
+    const {artist, href, tags, title, published, rating, characters} = req.body;
 
 
     const sharpBuffer = sharp(file.buffer);
@@ -39,7 +40,10 @@ router.post('/', upload.single('image'), async (req, res) => {
         tags: tags.split(',').map(tag => tag.trim()),
         href: href,
         published: published,
-        aspectRatio: metadata.width / metadata.height
+        aspectRatio: metadata.width / metadata.height,
+        rating: rating,
+        characters: characters.split(',').map(char => char.trim()),
+
     };
 
     const fileName = prepareFileName(title);
@@ -61,8 +65,8 @@ router.post('/', upload.single('image'), async (req, res) => {
 
 router.post('/alt', upload.single('image'), async (req, res) => {
     const file = req.file;
-    const {href, tags, imageName, altCount} = req.body;
-    const numberOfAlts = require('./images.json').concat(require('./hidden.json')).filter(value => value.parent === imageName).length + 1;
+    const {href, tags, imageName, rating, characters} = req.body;
+    const numberOfAlts = JSON.parse(readFileSync('./routes/images.json', 'utf-8')).concat(JSON.parse(readFileSync('./routes/hidden.json', 'utf-8'))).filter(value => value.parent === imageName).length + 1;
 
     const sharpBuffer = sharp(file.buffer);
     const metadata = await sharpBuffer.metadata();
@@ -71,7 +75,9 @@ router.post('/alt', upload.single('image'), async (req, res) => {
         tags: tags.split(',').map(tag => tag.trim()),
         href: href,
         aspectRatio: metadata.width / metadata.height,
-        parent: imageName
+        parent: imageName,
+        rating: rating,
+        characters: characters.split(',').map(char => char.trim()),
     };
 
     const fileName = prepareFileName(imageName);
@@ -124,10 +130,10 @@ async function uploadCompressedVersions(originalImage, imageName, entry, altNumb
     let compressedImageBuffer = await getCompressedBuffer(sharpImage, imageName);
     return Promise.all([
         s3.upload({
-            Bucket: process.env.BUCKET_NAME, Key: entry.parent ? `thumbnail/alts/${imageName}_${altNumber}.webp` : `thumbnail/${imageName}.webp`, Body: compressedImageBuffer, ContentType: 'image/webp'
+            Bucket: process.env.BUCKET_NAME, Key: entry.parent ? `thumbnail/alts/${imageName}_${altNumber}.webp` : `thumbnail/${imageName}.webp`, Body: compressedImageBuffer, ContentType: 'artwork/webp'
         }).promise(),
         s3.upload({
-            Bucket: process.env.BUCKET_NAME, Key: entry.parent ? `webp/alts/${imageName}_${altNumber}.webp` : `webp/${imageName}.webp`, Body: webpImageBuffer, ContentType: 'image/webp'
+            Bucket: process.env.BUCKET_NAME, Key: entry.parent ? `webp/alts/${imageName}_${altNumber}.webp` : `webp/${imageName}.webp`, Body: webpImageBuffer, ContentType: 'artwork/webp'
         }).promise()
     ]);
 }

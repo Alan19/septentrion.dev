@@ -1,14 +1,16 @@
 import React, {useState} from "react";
 import axios from "axios";
 import {Autocomplete, Checkbox, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Fab, Snackbar, TextField, Typography,} from "@mui/material";
-import {ArtTag, ImageInformation} from "../ImageInformation";
+import {ImageInformation} from "../ImageInformation";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import AddIcon from "@mui/icons-material/Add";
 import {useIsDevelopment} from "./UseIsDevelopment";
 import {Button} from "@mui/material-next";
+import {ArtTag} from "./TagUtils";
 
 // TODO Consolidate shared behavior with Uploader.json
+// TODO Update this for new JSON structure
 export default function AltsUploader(props: {
     imageInformation: ImageInformation,
     altCount: number
@@ -100,8 +102,9 @@ export default function AltsUploader(props: {
                     color="primary"
                     aria-label="add"
                     onClick={handleClickOpen}
+                    variant={"extended"}
                 >
-                    <AddIcon/>
+                    <AddIcon/> Upload
                 </Fab></div>
             }
             <Dialog open={open} onClose={handleClose}>

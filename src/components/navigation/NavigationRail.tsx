@@ -34,6 +34,7 @@ export function NavigationRail(props: {
 
     const {mode, setMode} = useColorScheme();
     const [appTheme, setAppTheme] = useContext(AppThemeContext);
+    // TODO Add display to hide sensitive images
     const settingsDialog = <Dialog open={isDialogOpen} onClose={handleClose}>
         <DialogTitle>Settings</DialogTitle>
         <DialogContent>

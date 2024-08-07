@@ -1,12 +1,12 @@
 import {Autocomplete, FilterOptionsState, FormControlLabel, Radio, RadioGroup, Stack, TextField, Typography} from "@mui/material";
 import React from "react";
-import {ArtTag, tagGroup} from "../ImageInformation";
 import Chip from "@mui/material-next/Chip";
 import {Filter} from "@mui/icons-material";
 import {FormControl, FormLabel} from "@mui/material-next";
-import {artists, flattenTags, getNewTagState, isArtist, TagState} from "./UseTagHooks";
+import {artists, ArtTag, characters, Rating, SelectedFilters, tagGroup} from "./TagUtils";
+import _ from "lodash";
 
-function AutocompleteFilterChip(props: { option: string, tagProps: { key: number; className: string; disabled: boolean; "data-tag-index": number; tabIndex: -1; onDelete: (event: any) => void } }) {
+export function AutocompleteFilterChip(props: { option: string, tagProps: { key: number; className: string; disabled: boolean; "data-tag-index": number; tabIndex: -1; onDelete: (event: any) => void } }) {
     return <Chip
         color={props.option.charAt(0) === "-" ? "error" : "primary"}
         {...props.tagProps}
@@ -15,8 +15,8 @@ function AutocompleteFilterChip(props: { option: string, tagProps: { key: number
 }
 
 export function FilterPane(props: {
-    tagState: TagState,
-    setTag: (tags: TagState) => void,
+    filters: SelectedFilters,
+    setFilters: (tags: string) => void,
     filterMode: 'and' | 'or',
     setFilterMode: (filterMode: 'and' | 'or') => void,
 }) {
@@ -28,20 +28,9 @@ export function FilterPane(props: {
         }
     }
 
-    const selectedTags = Object.entries(flattenTags(props.tagState)).filter(value => value[1] !== 0).map(value => value[1] === 1 ? value[0] : `-${value[0]}`);
 
     function handleFilterChange(value: string[]) {
-        let newTagState = getNewTagState();
-        value.forEach(tag => {
-            const tagName = tag.startsWith("-") ? tag.substring(1) : tag;
-            const tagValue = tag.startsWith("-") ? -1 : 1;
-            if (isArtist(tagName)) {
-                newTagState.artists[tagName] = tagValue
-            } else {
-                newTagState.tags[tagName as ArtTag] = tagValue
-            }
-        })
-        props.setTag(newTagState)
+        props.setFilters(value.join('+'))
     }
 
     /**
@@ -59,10 +48,11 @@ export function FilterPane(props: {
      */
     function getGroupBy(option: string) {
         const optionName = option.startsWith("-") ? option.substring(1) : option;
-        if (isArtist(optionName)) {
-            return "Artist";
+        let filterType = SelectedFilters.getFilterType(optionName);
+        if (filterType === 'Tag') {
+            return Object.entries(tagGroup).find(value => value[1].includes(optionName as ArtTag))?.[0] ?? "Other"
         } else {
-            return Object.entries(tagGroup).find(value => value[1].includes(optionName as ArtTag))?.[0] ?? "Other";
+            return _.capitalize(filterType);
         }
     }
 
@@ -90,11 +80,11 @@ export function FilterPane(props: {
                           />
                       )}
                       groupBy={getGroupBy}
-                      value={selectedTags}
+                      value={props.filters.toArray()}
                       onChange={(_event, value) => handleFilterChange(value)}
                       filterOptions={(options, state) => filterOptions(options, state)}
                       size={"medium"}
                       renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip option={option} tagProps={getTagProps({index})}/>)}
-                      options={getSortedOptions().concat(artists).concat(artists.map(value => '-' + value))}/>
+                      options={getSortedOptions().concat(artists.flatMap(value => [value, '-' + value])).concat(characters.flatMap(value => [value, '-' + value])).concat(Object.values(Rating).flatMap(value => [value, '-' + value]))}/>
     </Stack>;
 }
