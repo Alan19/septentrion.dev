@@ -130,10 +130,10 @@ async function uploadCompressedVersions(originalImage, imageName, entry, altNumb
     let compressedImageBuffer = await getCompressedBuffer(sharpImage, imageName);
     return Promise.all([
         s3.upload({
-            Bucket: process.env.BUCKET_NAME, Key: entry.parent ? `thumbnail/alts/${imageName}_${altNumber}.webp` : `thumbnail/${imageName}.webp`, Body: compressedImageBuffer, ContentType: 'artwork/webp'
+            Bucket: process.env.BUCKET_NAME, Key: entry.parent ? `thumbnail/alts/${imageName}_${altNumber}.webp` : `thumbnail/${imageName}.webp`, Body: compressedImageBuffer, ContentType: 'image/webp'
         }).promise(),
         s3.upload({
-            Bucket: process.env.BUCKET_NAME, Key: entry.parent ? `webp/alts/${imageName}_${altNumber}.webp` : `webp/${imageName}.webp`, Body: webpImageBuffer, ContentType: 'artwork/webp'
+            Bucket: process.env.BUCKET_NAME, Key: entry.parent ? `webp/alts/${imageName}_${altNumber}.webp` : `webp/${imageName}.webp`, Body: webpImageBuffer, ContentType: 'image/webp'
         }).promise()
     ]);
 }

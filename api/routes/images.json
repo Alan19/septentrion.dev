@@ -41,8 +41,7 @@
     "artist": "@KuroPenguinEx",
     "tags": [
       "AICore Form",
-      "Thuban Form",
-      "Featured"
+      "Thuban Form"
     ],
     "published": "2022-12-13",
     "aspectRatio": 1.3333333333333333,
@@ -3400,9 +3399,7 @@
   {
     "title": "Soma Beach-Themed Casual Wear",
     "artist": "@team_butako",
-    "tags": [
-
-    ],
+    "tags": [],
     "href": "https://x.com/team_butako/status/1788702609093832755",
     "published": "2024-05-09",
     "aspectRatio": 1,
@@ -3504,8 +3501,7 @@
   {
     "title": "Soma Icon",
     "artist": "@digitalgate02.bsky.social",
-    "tags": [
-    ],
+    "tags": [],
     "href": "https://bsky.app/profile/digitalgate02.bsky.social/post/3kdubrayg2s25",
     "published": "2023-11-10",
     "aspectRatio": 1,
@@ -3538,8 +3534,7 @@
   {
     "title": "Poslani Reference Sheet",
     "artist": "@Nacht_art",
-    "tags": [
-    ],
+    "tags": [],
     "href": "https://x.com/Nacht_art/status/1786431092855116044",
     "published": "2024-05-03",
     "aspectRatio": 1.4777651083238312,
@@ -3554,8 +3549,7 @@
   {
     "title": "Wilton Reference Sheet",
     "artist": "@yamagami_sayaka",
-    "tags": [
-    ],
+    "tags": [],
     "href": "https://skeb.jp/@SayakaYmgm/works/113",
     "published": "2022-06-10",
     "aspectRatio": 1.7497847919655667,
@@ -4501,11 +4495,29 @@
     ]
   },
   {
+    "title": "Halloween 2023",
+    "artist": "@_koudro",
+    "tags": [
+      "Eltanin Form"
+    ],
+    "href": "",
+    "published": "2024-08-07",
+    "aspectRatio": 0.73828125,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/halloween_2023.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/halloween_2023.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/halloween_2023.webp"
+  },
+  {
     "title": "Natsu Matsuri 2024",
     "artist": "@earth3128",
     "tags": [
       "Rastaban Form",
-      "Estival Checker"
+      "Estival Checker",
+      "Featured"
     ],
     "href": "https://x.com/earth3128/status/1820852334051901534",
     "published": "2024-08-06",
