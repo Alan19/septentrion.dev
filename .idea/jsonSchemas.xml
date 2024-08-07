@@ -13,6 +13,9 @@
               <option name="patterns">
                 <list>
                   <Item>
+                    <option name="path" value="api/routes/hidden.json" />
+                  </Item>
+                  <Item>
                     <option name="path" value="api/routes/images.json" />
                   </Item>
                   <Item>

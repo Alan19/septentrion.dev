@@ -1,7 +1,7 @@
 import {createHashRouter} from "react-router-dom";
 import {Root} from "./Root";
 import {Gallery} from "./components/gallery/Gallery";
-import {ArtworkPage} from "./components/gallery/image/ArtworkPage";
+import {ArtworkPage} from "./components/gallery/artwork/ArtworkPage";
 import {AboutPage} from "./components/about/AboutPage";
 import {alcorForms, superheroSuits} from "./components/about/about-resources/alcorForms";
 import {FormPage} from "./components/about/FormPage";
