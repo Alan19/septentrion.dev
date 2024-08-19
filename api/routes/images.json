@@ -4547,5 +4547,94 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_deep_sea_%25CE%25B2.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_deep_sea_%25CE%25B2.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_deep_sea_%25CE%25B2.webp"
+  },
+  {
+    "title": "3 Symbiotes, 1 Host",
+    "artist": "@7ai7ang7ai3",
+    "tags": [
+      "Superhero",
+      "Rastaban Form",
+      "Transformation"
+    ],
+    "href": "https://x.com/7ai7ang7ai3/status/1823328741017428144",
+    "published": "2024-08-13",
+    "aspectRatio": 0.6666666666666666,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Castor",
+      "Blitz",
+      "Nacre"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/3_symbiotes_1_host.PNG",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/3_symbiotes_1_host.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/3_symbiotes_1_host.webp"
+  },
+  {
+    "title": "The Hamburger Accident",
+    "artist": "@ziro264",
+    "tags": [
+      "Techwear",
+      "Thuban Form",
+      "Knives"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.bsky.social/post/3kzwkxn4m4i2s",
+    "published": "2024-08-17",
+    "aspectRatio": 0.7186046511627907,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/the_hamburger_accident.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/the_hamburger_accident.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/the_hamburger_accident.webp"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "https://bsky.app/profile/faintalcor.bsky.social/post/3kzwkxn4m4i2s",
+    "aspectRatio": 1.2374100719424461,
+    "parent": "The Hamburger Accident",
+    "characters": [
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/The%20Hamburger%20Accident_1.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/the_hamburger_accident_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/the_hamburger_accident_1.webp"
+  },
+  {
+    "title": "We're not Accepting Visitors",
+    "artist": "@pawcrest",
+    "tags": [
+      "AICore Form"
+    ],
+    "href": "",
+    "published": "2024-08-18",
+    "aspectRatio": 0.7960799095363739,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/were_not_accepting_visitors.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/were_not_accepting_visitors.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/were_not_accepting_visitors.webp"
+  },
+  {
+    "tags": [
+      "AICore Form"
+    ],
+    "href": "",
+    "aspectRatio": 0.7960799095363739,
+    "parent": "We're not Accepting Visitors",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/We%27re+not+Accepting+Visitors_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/were_not_accepting_visitors_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/were_not_accepting_visitors_1.webp"
   }
 ]

@@ -10,6 +10,7 @@ import {BioEnhancementIntro} from "./components/about/BioEnhancementIntro";
 import {AlcorOutfits} from "./components/about/outfits/AlcorOutfits";
 import {SomaInfo} from "./components/about/characters/SomaInfo";
 import React from "react";
+import {AnalyticsPage} from "./components/analytics/AnalyticsPage";
 import {MinimalGalleryPage} from "./components/gallery/MinimalGalleryPage";
 
 export const router = createHashRouter([
@@ -20,6 +21,10 @@ export const router = createHashRouter([
             {
                 path: "/gallery",
                 element: <Gallery/>
+            },
+            {
+                path: '/analytics',
+                element: <AnalyticsPage/>
             },
             {
                 path: "/artwork",

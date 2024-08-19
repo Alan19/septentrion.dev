@@ -188,6 +188,7 @@ export default function Uploader(props: {
                                 <TextField {...params} label="Rating Selection" placeholder="Rating"/>
                             )}
                         />
+                        {/*TODO Extract this into a component*/}
                         <Autocomplete multiple
                                       renderInput={(params) => (
                                           <TextField

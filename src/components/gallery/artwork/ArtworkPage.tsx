@@ -50,11 +50,14 @@ export function ArtworkPage() {
         return (
             <Fade in>
                 <Container style={{marginTop: 16, minHeight: 'calc(100vh - 56px - 32px)'}} maxWidth={"xl"}>
-                    <IconButton onClick={() => navigate(-1)}>
-                        <ArrowBack/>
-                    </IconButton>
+
                     <Grid container spacing={4} style={{height: '100%'}}>
-                        <Grid item md={9} xs={12} style={{display: 'flex', justifyContent: 'center', height: 'min-content'}}>
+                        <Grid item md={1} xs={12}>
+                            <IconButton onClick={() => navigate(-1)}>
+                                <ArrowBack/>
+                            </IconButton>
+                        </Grid>
+                        <Grid item md={8} xs={12} style={{display: 'flex', justifyContent: 'center', height: 'min-content'}}>
                             <SkeletonImage href={href}
                                            style={{maxHeight: imageHeight, maxWidth: '100%', display: 'block'}}
                                            skeletonStyle={(aspectRatio ?? 1) < 1 ? {height: imageHeight, maxWidth: '100%'} : {maxHeight: imageHeight, width: '100%'}}

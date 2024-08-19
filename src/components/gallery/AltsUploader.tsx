@@ -1,13 +1,14 @@
 import React, {useState} from "react";
 import axios from "axios";
-import {Autocomplete, Checkbox, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Fab, Snackbar, TextField, Typography,} from "@mui/material";
+import {Autocomplete, Checkbox, createFilterOptions, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Fab, Snackbar, TextField, Typography,} from "@mui/material";
 import {ImageInformation} from "../ImageInformation";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import AddIcon from "@mui/icons-material/Add";
 import {useIsDevelopment} from "./UseIsDevelopment";
 import {Button} from "@mui/material-next";
-import {ArtTag} from "./TagUtils";
+import {ArtTag, characters} from "./TagUtils";
+import {AutocompleteFilterChip} from "./FilterPane";
 
 // TODO Consolidate shared behavior with Uploader.json
 // TODO Update this for new JSON structure
@@ -21,6 +22,7 @@ export default function AltsUploader(props: {
     const [uploading, setUploading] = useState<boolean>(false);
     const [open, setOpen] = React.useState(false);
     const [snackbarOpen, setSnackbarOpen] = React.useState(false);
+    const [charactersInImage, setCharactersInImage] = useState<string[]>(["Alcor"])
     const {isDevelopment} = useIsDevelopment();
 
     const handleClickOpen = () => {
@@ -72,6 +74,7 @@ export default function AltsUploader(props: {
             formData.append("href", href);
             formData.append("imageName", props.imageInformation.title)
             formData.append("altCount", (props.altCount).toString());
+            formData.append("characters", charactersInImage.join(", "));
             setUploading(true);
             axios
                 .post(`http://localhost:9000/upload/alt`, formData, {
@@ -152,6 +155,35 @@ export default function AltsUploader(props: {
                             <TextField {...params} label="Tag Selection" placeholder="Tags"/>
                         )}
                     />
+                    <Autocomplete multiple
+                                  renderInput={(params) => (
+                                      <TextField
+                                          {...params}
+                                          label="Character List"
+                                          placeholder="Character"
+                                          fullWidth
+                                      />
+                                  )}
+                                  selectOnFocus
+                                  clearOnBlur
+                                  handleHomeEndKeys
+                                  value={charactersInImage}
+                                  onChange={(_event, value) => setCharactersInImage(value)}
+                                  size={"medium"}
+                                  renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip option={option} tagProps={getTagProps({index})}/>)}
+                                  filterOptions={(options, params) => {
+                                      // TODO Make this render as 'add [option]'
+                                      const filtered = createFilterOptions<string>()(options, params)
+                                      const {inputValue} = params;
+                                      // Suggest the creation of a new value
+                                      const isExisting = options.some((option) => inputValue === option);
+                                      if (inputValue !== '' && !isExisting) {
+                                          filtered.push(inputValue);
+                                      }
+
+                                      return filtered;
+                                  }}
+                                  options={characters}/>
                     <TextField
                         autoFocus
                         margin="dense"
