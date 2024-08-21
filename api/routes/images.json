@@ -283,26 +283,6 @@
     ]
   },
   {
-    "title": "The Beginning",
-    "href": "https://twitter.com/Mike202112/status/1406146656660197379?s=20",
-    "src": "https://pbs.twimg.com/media/E4Oi2GKVcAIQKzo?format=png&name=900x900",
-    "artist": "@Mike202112",
-    "tags": [
-      "Rastaban Form",
-      "Knives",
-      "Standard Outfit",
-      "Featured"
-    ],
-    "published": "2021-06-19",
-    "aspectRatio": 0.7084745762711865,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/the_beginning.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/the_beginning.webp",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ]
-  },
-  {
     "title": "Arknights Operator",
     "href": "https://skeb.jp/@mtd_pop/works/34",
     "src": "https://cloud.refsheet.net/images/images/001/499/636/large/1101178-1.output.png?1672553718",
@@ -400,8 +380,8 @@
   {
     "title": "AICore Transformation",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/bec_gift_art.jpeg",
-    "href": "https://twitter.com/Becquerel_uwu/status/1641998060409741312?s=20",
-    "artist": "@Becquerel_uwu",
+    "href": "https://x.com/Beckowaffle/status/1641998060409741312",
+    "artist": "@Beckowaffle",
     "tags": [
       "AICore Form",
       "Rastaban Form",
@@ -3378,25 +3358,6 @@
     ]
   },
   {
-    "title": "Prank Note",
-    "artist": "@QQ5lol",
-    "tags": [
-      "Aldhibah Form",
-      "Castor"
-    ],
-    "href": "",
-    "published": "2024-05-09",
-    "aspectRatio": 0.72265625,
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/prank_note.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/prank_note.webp",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/prank_note.jpg",
-    "rating": "general",
-    "characters": [
-      "Alcor",
-      "Castor"
-    ]
-  },
-  {
     "title": "Soma Beach-Themed Casual Wear",
     "artist": "@team_butako",
     "tags": [],
@@ -4610,8 +4571,8 @@
     "tags": [
       "AICore Form"
     ],
-    "href": "",
-    "published": "2024-08-18",
+    "href": "https://x.com/pawcrest/status/1825619442828718502",
+    "published": "2024-08-19",
     "aspectRatio": 0.7960799095363739,
     "rating": "sensitive",
     "characters": [
@@ -4626,15 +4587,74 @@
     "tags": [
       "AICore Form"
     ],
-    "href": "",
+    "href": "https://x.com/pawcrest/status/1825619445978640452",
     "aspectRatio": 0.7960799095363739,
     "parent": "We're not Accepting Visitors",
     "characters": [
       "Alcor",
       "Castor"
     ],
+    "rating": "sensitive",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/We%27re+not+Accepting+Visitors_1.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/were_not_accepting_visitors_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/were_not_accepting_visitors_1.webp"
+  },
+  {
+    "title": "The Beginning",
+    "artist": "@Mike202112",
+    "tags": [
+      "Featured",
+      "Rastaban Form",
+      "Knives",
+      "Techwear",
+      "Standard Outfit"
+    ],
+    "href": "https://x.com/Mike202112/status/1406146656660197379",
+    "published": "2021-06-19",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/the_beginning.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/the_beginning.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/the_beginning.webp"
+  },
+  {
+    "title": "Alcor Static Tank",
+    "artist": "@soendapuss",
+    "tags": [
+      "Auriga Form",
+      "Transformation"
+    ],
+    "href": "",
+    "published": "2024-08-20",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_static_tank.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_static_tank.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_static_tank.webp"
+  },
+  {
+    "title": "Moodboard",
+    "artist": "@kapalkilayyyy",
+    "tags": [
+      "Techwear",
+      "Vernal"
+    ],
+    "href": "https://x.com/kapalkilayyyy/status/1825919723105640496",
+    "published": "2024-08-20",
+    "aspectRatio": 1,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/moodboard.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/moodboard.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/moodboard.webp"
   }
 ]
