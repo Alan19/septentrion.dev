@@ -4566,13 +4566,11 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/the_hamburger_accident_1.webp"
   },
   {
-    "title": "We're not Accepting Visitors",
-    "artist": "@pawcrest",
+    "parent": "We're not Accepting Visitors",
     "tags": [
       "AICore Form"
     ],
     "href": "https://x.com/pawcrest/status/1825619442828718502",
-    "published": "2024-08-19",
     "aspectRatio": 0.7960799095363739,
     "rating": "sensitive",
     "characters": [
@@ -4584,12 +4582,14 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/were_not_accepting_visitors.webp"
   },
   {
+    "title": "We're not Accepting Visitors",
+    "artist": "@pawcrest",
+    "published": "2024-08-19",
     "tags": [
       "AICore Form"
     ],
     "href": "https://x.com/pawcrest/status/1825619445978640452",
     "aspectRatio": 0.7960799095363739,
-    "parent": "We're not Accepting Visitors",
     "characters": [
       "Alcor",
       "Castor"
@@ -4656,5 +4656,94 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/moodboard.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/moodboard.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/moodboard.webp"
+  },
+  {
+    "title": "Triangle Shot",
+    "artist": "@mochi_skymega",
+    "tags": [
+      "Superhero",
+      "Indra Suit",
+      "Aldhibah Form",
+      "Bow",
+      "Bodysuit"
+    ],
+    "href": "https://x.com/mochi_skymega/status/1827331834491105313",
+    "published": "2024-08-24",
+    "aspectRatio": 0.75,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangle_shot.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/triangle_shot.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangle_shot.webp"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "https://x.com/mochi_skymega/status/1827332842063593726",
+    "aspectRatio": 1.5,
+    "parent": "Triangle Shot",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Triangle%20Shot_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/triangle_shot_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/triangle_shot_1.webp"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "https://x.com/mochi_skymega/status/1827332842063593726",
+    "aspectRatio": 1.5,
+    "parent": "Triangle Shot",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Triangle%20Shot_2.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/triangle_shot_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/triangle_shot_2.webp"
+  },
+  {
+    "title": "Jupiter Armored Phenomenon Ver. (feat. @sutunununu)",
+    "artist": "@sutunununu",
+    "tags": [
+      "Jupiter Form"
+    ],
+    "href": "https://x.com/sutunununu/status/1827280688573542743",
+    "published": "2024-08-24",
+    "aspectRatio": 0.7070608355729294,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_armored_phenomenon_ver_feat_sutunununu.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_armored_phenomenon_ver_feat_sutunununu.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_armored_phenomenon_ver_feat_sutunununu.webp"
+  },
+  {
+    "title": "Soma Exocolonist Styled Chibis",
+    "artist": "@bkomei",
+    "tags": [
+      "Bodysuit",
+      "Techwear"
+    ],
+    "href": "",
+    "published": "2024-08-24",
+    "aspectRatio": 3,
+    "rating": "mainstream",
+    "characters": [
+      "Soma"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/soma_exocolonist_styled_chibis.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/soma_exocolonist_styled_chibis.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_exocolonist_styled_chibis.webp"
   }
 ]

@@ -1,13 +1,13 @@
 import React, {useState} from "react";
 import axios from "axios";
-import {Autocomplete, Checkbox, createFilterOptions, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Fab, Snackbar, TextField, Typography,} from "@mui/material";
+import {Autocomplete, Checkbox, createFilterOptions, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Fab, Snackbar, Stack, TextField, Typography,} from "@mui/material";
 import {ImageInformation} from "../ImageInformation";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import AddIcon from "@mui/icons-material/Add";
 import {useIsDevelopment} from "./UseIsDevelopment";
 import {Button} from "@mui/material-next";
-import {ArtTag, characters} from "./TagUtils";
+import {ArtTag, characters, Rating} from "./TagUtils";
 import {AutocompleteFilterChip} from "./FilterPane";
 
 // TODO Consolidate shared behavior with Uploader.json
@@ -23,6 +23,8 @@ export default function AltsUploader(props: {
     const [open, setOpen] = React.useState(false);
     const [snackbarOpen, setSnackbarOpen] = React.useState(false);
     const [charactersInImage, setCharactersInImage] = useState<string[]>(["Alcor"])
+    const [rating, setRating] = useState<Rating>();
+
     const {isDevelopment} = useIsDevelopment();
 
     const handleClickOpen = () => {
@@ -66,12 +68,13 @@ export default function AltsUploader(props: {
             setSnackbarOpen(true);
         }
 
-        if (selectedFile) {
+        if (selectedFile && rating) {
             setUploading(true);
             const formData = new FormData();
             formData.append("image", selectedFile);
             formData.append("tags", tags.join(", "));
             formData.append("href", href);
+            formData.append("rating", rating)
             formData.append("imageName", props.imageInformation.title)
             formData.append("altCount", (props.altCount).toString());
             formData.append("characters", charactersInImage.join(", "));
@@ -102,6 +105,7 @@ export default function AltsUploader(props: {
             />
             {
                 isDevelopment && <div style={{textAlign: "right"}}><Fab
+                    style={{position: 'fixed', bottom: 16, right: 16}}
                     color="primary"
                     aria-label="add"
                     onClick={handleClickOpen}
@@ -129,72 +133,84 @@ export default function AltsUploader(props: {
                             hidden
                         />
                     </Button>
-                    <Typography style={{marginLeft: "8px"}}
-                                component={"span"}>{selectedFile && selectedFile.name}</Typography>
-                    <Autocomplete
-                        multiple
-                        fullWidth
-                        value={tags}
-                        onChange={(event, value) => handleTagsChange(event, value)}
-                        id="upload-tag-selector"
-                        options={Object.values(ArtTag)}
-                        disableCloseOnSelect
-                        getOptionLabel={(option) => option}
-                        renderOption={(props, option, {selected}) => (
-                            <li {...props}>
-                                <Checkbox
-                                    icon={<CheckBoxOutlineBlankIcon fontSize="small"/>}
-                                    checkedIcon={<CheckBoxIcon fontSize="small"/>}
-                                    style={{marginRight: 8}}
-                                    checked={selected}
-                                />
-                                {option}
-                            </li>
-                        )}
-                        renderInput={(params) => (
-                            <TextField {...params} label="Tag Selection" placeholder="Tags"/>
-                        )}
-                    />
-                    <Autocomplete multiple
-                                  renderInput={(params) => (
-                                      <TextField
-                                          {...params}
-                                          label="Character List"
-                                          placeholder="Character"
-                                          fullWidth
-                                      />
-                                  )}
-                                  selectOnFocus
-                                  clearOnBlur
-                                  handleHomeEndKeys
-                                  value={charactersInImage}
-                                  onChange={(_event, value) => setCharactersInImage(value)}
-                                  size={"medium"}
-                                  renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip option={option} tagProps={getTagProps({index})}/>)}
-                                  filterOptions={(options, params) => {
-                                      // TODO Make this render as 'add [option]'
-                                      const filtered = createFilterOptions<string>()(options, params)
-                                      const {inputValue} = params;
-                                      // Suggest the creation of a new value
-                                      const isExisting = options.some((option) => inputValue === option);
-                                      if (inputValue !== '' && !isExisting) {
-                                          filtered.push(inputValue);
-                                      }
+                    <Typography style={{marginLeft: "8px"}} component={"span"}>{selectedFile && selectedFile.name}</Typography>
+                    <Stack spacing={2}>
+                        <Autocomplete
+                            multiple
+                            fullWidth
+                            value={tags}
+                            onChange={(event, value) => handleTagsChange(event, value)}
+                            id="upload-tag-selector"
+                            options={Object.values(ArtTag)}
+                            disableCloseOnSelect
+                            getOptionLabel={(option) => option}
+                            renderOption={(props, option, {selected}) => (
+                                <li {...props}>
+                                    <Checkbox
+                                        icon={<CheckBoxOutlineBlankIcon fontSize="small"/>}
+                                        checkedIcon={<CheckBoxIcon fontSize="small"/>}
+                                        style={{marginRight: 8}}
+                                        checked={selected}
+                                    />
+                                    {option}
+                                </li>
+                            )}
+                            renderInput={(params) => (
+                                <TextField {...params} label="Tag Selection" placeholder="Tags"/>
+                            )}
+                        />
+                        <Autocomplete
+                            fullWidth
+                            value={rating}
+                            onChange={(event, value) => setRating(value ?? Rating.General)}
+                            id="upload-rating-selector"
+                            options={Object.values(Rating)}
+                            getOptionLabel={(option) => option}
+                            renderInput={(params) => (
+                                <TextField {...params} label="Rating Selection" placeholder="Rating"/>
+                            )}
+                        />
+                        <Autocomplete multiple
+                                      renderInput={(params) => (
+                                          <TextField
+                                              {...params}
+                                              label="Character List"
+                                              placeholder="Character"
+                                              fullWidth
+                                          />
+                                      )}
+                                      selectOnFocus
+                                      clearOnBlur
+                                      handleHomeEndKeys
+                                      value={charactersInImage}
+                                      onChange={(_event, value) => setCharactersInImage(value)}
+                                      size={"medium"}
+                                      renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip option={option} tagProps={getTagProps({index})}/>)}
+                                      filterOptions={(options, params) => {
+                                          // TODO Make this render as 'add [option]'
+                                          const filtered = createFilterOptions<string>()(options, params)
+                                          const {inputValue} = params;
+                                          // Suggest the creation of a new value
+                                          const isExisting = options.some((option) => inputValue === option);
+                                          if (inputValue !== '' && !isExisting) {
+                                              filtered.push(inputValue);
+                                          }
 
-                                      return filtered;
-                                  }}
-                                  options={characters}/>
-                    <TextField
-                        autoFocus
-                        margin="dense"
-                        id="href"
-                        label="Link URL"
-                        type="url"
-                        fullWidth
-                        variant="standard"
-                        value={href}
-                        onChange={handleHrefChange}
-                    />
+                                          return filtered;
+                                      }}
+                                      options={characters}/>
+                        <TextField
+                            autoFocus
+                            margin="dense"
+                            id="href"
+                            label="Link URL"
+                            type="url"
+                            fullWidth
+                            variant="standard"
+                            value={href}
+                            onChange={handleHrefChange}
+                        />
+                    </Stack>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose}>Cancel</Button>

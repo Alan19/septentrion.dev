@@ -45,11 +45,11 @@ export function ArtworkPage() {
         } = imageInfo;
         const altsInfo = altData.get(title);
 
-        const imageHeight = 'calc(100vh - 72px - 40px)';
+        const imageHeight = 'calc(100vh - 32px)';
         // TODO Clean up heights (maybe use 100% height by default and margins?)
         return (
             <Fade in>
-                <Container style={{marginTop: 16, minHeight: 'calc(100vh - 56px - 32px)'}} maxWidth={"xl"}>
+                <Container style={{marginTop: 16, minHeight: 'calc(100vh - 32px)'}} maxWidth={"xl"}>
 
                     <Grid container spacing={4} style={{height: '100%'}}>
                         <Grid item md={1} xs={12}>

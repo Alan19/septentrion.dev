@@ -130,6 +130,7 @@ export default function Uploader(props: {
                     <AddIcon/> Upload
                 </Fab>
             }
+            {/*TODO Add warning if there is an overlap in title*/}
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Upload New Image</DialogTitle>
                 <DialogContent>

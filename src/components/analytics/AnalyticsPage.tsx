@@ -1,9 +1,11 @@
 import {useTagHooks} from "../gallery/UseTagHooks";
 import {PageHeader} from "../about/PageHeader";
 import React from "react";
-import {Container, Fade, Table, TableBody, TableCell, TableHead, TableRow} from "@mui/material";
+import {Container, Fade, Table, TableBody, TableCell, TableHead, TableRow, Typography} from "@mui/material";
 import Chip from "@mui/material-next/Chip";
 import {drawerColor} from "../navigation/NavigationRail";
+import CalendarHeatmap, {ReactCalendarHeatmapValue} from "react-calendar-heatmap";
+import 'react-calendar-heatmap/dist/styles.css';
 
 export function AnalyticsPage() {
     const {images} = useTagHooks();
@@ -21,6 +23,17 @@ export function AnalyticsPage() {
 
     const sortedArtistRanking = Object.entries(artistRanking).sort((a, b) => Number(b[0]) - Number(a[0]));
 
+    const publishedDates = images.reduce<Array<ReactCalendarHeatmapValue<string>>>((previousValue, currentValue) => {
+        let find = previousValue.find(value => value.date === currentValue.published);
+        if (find) {
+            find.count += 1;
+            return previousValue;
+        } else {
+            return [...previousValue, {date: currentValue.published, count: 1}]
+        }
+    }, [])
+
+    console.log(publishedDates)
     return (
         <Fade in>
             <Container style={{padding: '16px 0px 0 0px'}}>
@@ -30,7 +43,8 @@ export function AnalyticsPage() {
                     padding: 16,
                     marginBottom: 16,
                 }}>
-                    <PageHeader title={'Artist Ranking'}/>
+                    <PageHeader title={'Analytics'}/>
+                    <Typography variant={"h5"} color={"var(--md-sys-color-secondary)"}>Artist Commission Counts</Typography>
                     <Table>
                         <TableHead>
                             <TableRow>
@@ -51,6 +65,20 @@ export function AnalyticsPage() {
                             </TableRow>)}
                         </TableBody>
                     </Table>
+
+                    {/*TODO Make dates dynamic, add tooltips, and use theme colors*/}
+                    <Typography variant={"h5"} style={{marginTop: 8}} color={"var(--md-sys-color-secondary)"}>Artwork Publish Date Heatmap</Typography>
+                    <Typography variant={'h6'} color={'var(--md-sys-color-tertiary)"}>'}>2024</Typography>
+                    <CalendarHeatmap showWeekdayLabels startDate={'2024-01-01'} values={publishedDates} endDate={'2024-12-31'}/>
+
+                    <Typography variant={'h6'} color={'var(--md-sys-color-tertiary)"}>'}>2023</Typography>
+                    <CalendarHeatmap showWeekdayLabels startDate={'2023-01-01'} values={publishedDates} endDate={'2023-12-31'}/>
+
+                    <Typography variant={'h6'} color={'var(--md-sys-color-tertiary)"}>'}>2022</Typography>
+                    <CalendarHeatmap showWeekdayLabels startDate={'2022-01-01'} values={publishedDates} endDate={'2022-12-31'}/>
+
+                    <Typography variant={'h6'} color={'var(--md-sys-color-tertiary)"}>'}>2021</Typography>
+                    <CalendarHeatmap showWeekdayLabels startDate={'2021-01-01'} values={publishedDates} endDate={'2021-12-31'}/>
                 </div>
             </Container>
         </Fade>
