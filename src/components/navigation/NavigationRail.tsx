@@ -63,7 +63,7 @@ export function NavigationRail(props: {
                     <Stack spacing={1} style={{flex: 1}}>
                         <NavigationRailLink button={<HomeOutlined/>} label={"Home"} path={"/"}/>
                         <NavigationRailLink button={<CollectionsOutlined/>} label={"Gallery"} path={"/gallery"}/>
-                        <NavigationRailLink button={<PeopleOutline/>} label={"Characters"} path={"/about"}/>
+                        <NavigationRailLink button={<PeopleOutline/>} label={"Characters"} path={"/characters"}/>
                     </Stack>
 
                     <div className={`navigation-rail-item`} style={{display: 'grid', alignItems: 'center'}}>
@@ -91,7 +91,7 @@ export function NavigationRail(props: {
                     {/*TODO Add current page indicator and unify buttons*/}
                     <BottomNavigationAction icon={<Home/>} label={"Home"} value={'/'}/>
                     <BottomNavigationAction color={'var(--md-sys-color-primaryContainer)'} value={'/gallery'} label="Gallery" icon={<CollectionsIcon/>}/>
-                    <BottomNavigationAction label="Characters" value={'/about'} icon={<FontAwesomeIcon icon={faDragon} style={{width: 24, height: 24}}/>}/>
+                    <BottomNavigationAction label="Characters" value={'/characters'} icon={<FontAwesomeIcon icon={faDragon} style={{width: 24, height: 24}}/>}/>
                     <BottomNavigationAction label="Settings" icon={<Settings/>} onClick={handleClickOpen}></BottomNavigationAction>
                 </BottomNavigation>
             </Paper>

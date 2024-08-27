@@ -12,6 +12,7 @@ import {SomaInfo} from "./components/about/characters/SomaInfo";
 import React from "react";
 import {AnalyticsPage} from "./components/analytics/AnalyticsPage";
 import {MinimalGalleryPage} from "./components/gallery/MinimalGalleryPage";
+import {CharactersPage} from "./components/about/characters/CharactersPage";
 
 export const router = createHashRouter([
     {
@@ -20,18 +21,24 @@ export const router = createHashRouter([
         children: [
             {
                 path: "/gallery",
-                element: <Gallery/>
+                children: [
+                    {
+                        index: true,
+                        element: <Gallery/>
+                    },
+                    {
+                        path: "/gallery/:title",
+                        element: <ArtworkPage/>
+                    },
+                ]
             },
             {
                 path: '/analytics',
                 element: <AnalyticsPage/>
             },
+
             {
-                path: "/artwork",
-                element: <ArtworkPage/>
-            },
-            {
-                path: "about",
+                path: "/about",
                 element: <AboutPage/>,
                 children: [
                     ...alcorForms.concat(superheroSuits).map(value => ({
@@ -55,6 +62,10 @@ export const router = createHashRouter([
                         element: <SomaInfo/>
                     }
                 ]
+            },
+            {
+                path: "/characters",
+                element: <CharactersPage/>
             }
         ]
     },

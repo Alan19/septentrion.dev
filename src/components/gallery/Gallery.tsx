@@ -75,10 +75,7 @@ export const Gallery = memo(function Gallery() {
 
     function handleImageClicked(value: ImageInformation) {
         navigation({
-            pathname: "/artwork",
-            search: createSearchParams({
-                title: prepareFileName(value.title)
-            }).toString()
+            pathname: prepareFileName(value.title)
         })
     }
 

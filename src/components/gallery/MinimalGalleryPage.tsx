@@ -1,5 +1,5 @@
 import {useTagHooks} from "./UseTagHooks";
-import {createSearchParams, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {Container, Fade, Typography} from "@mui/material";
 import {ImageInformation} from "../ImageInformation";
 import {useQueryState} from "react-router-use-location-state";
@@ -7,10 +7,10 @@ import useMeasure from "react-use-measure";
 import {ResizeObserver} from "@juggle/resize-observer";
 import {prepareFileName} from "./Utils";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
-import {SkeletonImage} from "../SkeletonImage";
 import React from "react";
 import {getShownImages} from "./Gallery";
 import {drawerColor} from "../navigation/NavigationRail";
+import {SkeletonImage} from "../SkeletonImage";
 
 // Page that only displays artworks in a grid, and hides all other elements
 export function MinimalGalleryPage() {
@@ -25,10 +25,7 @@ export function MinimalGalleryPage() {
 
     function handleImageClicked(value: ImageInformation) {
         navigation({
-            pathname: "/artwork",
-            search: createSearchParams({
-                title: prepareFileName(value.title)
-            }).toString()
+            pathname: `/gallery/${prepareFileName(value.title)}`,
         })
     }
 

@@ -6,14 +6,14 @@ import {Button} from "@mui/material-next";
 import Chip from "@mui/material-next/Chip";
 import dayjs from "dayjs";
 import AltsUploader from "../AltsUploader";
-import {useNavigate, useSearchParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {ArrowBack} from "@mui/icons-material";
 import {drawerColor} from "../../navigation/NavigationRail";
 import {useTagHooks} from "../UseTagHooks";
 import {prepareFileName} from "../Utils";
 
 export function ArtworkPage() {
-    const [imageTitle, setImageTitle] = useSearchParams();
+    const imageTitle = useParams().title ?? "";
     const {images, altData} = useTagHooks();
     const [imageNumber, setImageNumber] = useState(-1);
     const navigate = useNavigate();
@@ -30,7 +30,7 @@ export function ArtworkPage() {
         setImageNumber(index);
     }
 
-    const imageInfo = images.find(value => prepareFileName(value.title) === imageTitle.get("title"));
+    const imageInfo = images.find(value => prepareFileName(value.title) === imageTitle);
     if (imageInfo) {
         const {
             webp,
