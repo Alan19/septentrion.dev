@@ -1,20 +1,30 @@
 {
   "files": {
     "main.css": "/static/css/main.3c1e8b6a.css",
-    "main.js": "/static/js/main.1b4e7042.js",
+    "main.js": "/static/js/main.90bfd8b4.js",
     "static/js/488.9598de75.chunk.js": "/static/js/488.9598de75.chunk.js",
     "static/js/780.b4820428.chunk.js": "/static/js/780.b4820428.chunk.js",
     "static/js/242.709ea685.chunk.js": "/static/js/242.709ea685.chunk.js",
     "static/media/m-icon.png": "/static/media/m-icon.510aa3c45a04526e6de3.png",
+    "static/media/Character_Badge_-page011.png": "/static/media/Character_Badge_-page011.5f278c3610ce014a784f.png",
+    "static/media/Character_Badge_-page009.png": "/static/media/Character_Badge_-page009.f00771b36280d8934bf6.png",
     "static/media/castor-evolved.png": "/static/media/castor-evolved.53be8485a94a56f310b7.png",
+    "static/media/Character_Badge_-page007.png": "/static/media/Character_Badge_-page007.a18d04046bb34e3b56ef.png",
+    "static/media/Character_Badge_-page005.png": "/static/media/Character_Badge_-page005.fbf874ed8f6d838b6ae4.png",
+    "static/media/Character_Badge_-page001.png": "/static/media/Character_Badge_-page001.a554411a9908165b7b2f.png",
+    "static/media/Character_Badge_-page006.png": "/static/media/Character_Badge_-page006.c58bee308249d6f15e00.png",
     "static/media/autumnal.png": "/static/media/autumnal.b33850ba5bdfca7282fd.png",
     "static/media/hibernal.png": "/static/media/hibernal.93a34151f8c3b5bf7fe7.png",
+    "static/media/Character_Badge_-page004.png": "/static/media/Character_Badge_-page004.ab355912d05318f5bfb0.png",
     "static/media/vernal.png": "/static/media/vernal.559a91bb146731675ae6.png",
     "static/media/estival.png": "/static/media/estival.08ab3cda019148a36cf2.png",
     "static/media/serotinal.png": "/static/media/serotinal.b14b253c5bbde90b865b.png",
+    "static/media/Character_Badge_-page008.png": "/static/media/Character_Badge_-page008.19f642dc7e2edb9e8c29.png",
     "static/media/biogenesis-icon.png": "/static/media/biogenesis-icon.2f734ba6851c872555b8.png",
     "static/media/aquarius-icon.png": "/static/media/aquarius-icon.8f5842128d47be3e3159.png",
     "static/media/castor.png": "/static/media/castor.3b2696a2ea37c9257c07.png",
+    "static/media/Character_Badge_-page003.png": "/static/media/Character_Badge_-page003.8afb13bd8c1bb279ea0a.png",
+    "static/media/Character_Badge_-page010.png": "/static/media/Character_Badge_-page010.20e582749e28596e38e6.png",
     "static/media/triangulum-icon.png": "/static/media/triangulum-icon.192da504bf7504736d97.png",
     "static/media/aicore-icon.png": "/static/media/aicore-icon.ebb3a18b04cc416e920f.png",
     "static/media/jupiter-icon.png": "/static/media/jupiter-icon.0d28f2835e59c7c4a077.png",
@@ -22,13 +32,13 @@
     "static/media/OriginTech personal use.ttf": "/static/media/OriginTech personal use.91ec04328d7a9da85f53.ttf",
     "index.html": "/index.html",
     "main.3c1e8b6a.css.map": "/static/css/main.3c1e8b6a.css.map",
-    "main.1b4e7042.js.map": "/static/js/main.1b4e7042.js.map",
+    "main.90bfd8b4.js.map": "/static/js/main.90bfd8b4.js.map",
     "488.9598de75.chunk.js.map": "/static/js/488.9598de75.chunk.js.map",
     "780.b4820428.chunk.js.map": "/static/js/780.b4820428.chunk.js.map",
     "242.709ea685.chunk.js.map": "/static/js/242.709ea685.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c1e8b6a.css",
-    "static/js/main.1b4e7042.js"
+    "static/js/main.90bfd8b4.js"
   ]
 }
