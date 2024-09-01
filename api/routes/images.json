@@ -4730,5 +4730,39 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/soma_exocolonist_styled_chibis.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/soma_exocolonist_styled_chibis.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_exocolonist_styled_chibis.webp"
+  },
+  {
+    "title": "Sweet Couple <3",
+    "artist": "@rofukagazaki",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/rofukagazaki/status/1828752723132772536",
+    "published": "2024-08-28",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Lava"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/sweet_couple_3.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/sweet_couple_3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sweet_couple_3.webp"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Sweet Couple <3",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Lava"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Sweet+Couple+%3C3_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/sweet_couple_3_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/sweet_couple_3_1.webp"
   }
 ]

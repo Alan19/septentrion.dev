@@ -13,7 +13,7 @@ import {useTagHooks} from "../UseTagHooks";
 import {prepareFileName} from "../Utils";
 
 export function ArtworkPage() {
-    const imageTitle = useParams().title ?? "";
+    const imageTitle = encodeURIComponent(useParams().title ?? "");
     const {images, altData} = useTagHooks();
     const [imageNumber, setImageNumber] = useState(-1);
     const navigate = useNavigate();
