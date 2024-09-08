@@ -6,3 +6,8 @@
     /*noinspection CssUnresolvedCustomProperty*/
     color: var(--md-sys-color-primary) !important;
 }
+
+.selected-rail-item::part(indicator) {
+    /*noinspection CssUnresolvedCustomProperty*/
+    background-color: var(--md-sys-color-secondaryContainer) !important;
+}

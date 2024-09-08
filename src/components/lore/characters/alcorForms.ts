@@ -1,9 +1,9 @@
-import {FormInformation} from "../FormPage";
+import {FormInformation} from "./FormPage";
 
 export const alcorForms: FormInformation[] = [
     {
         "name": "Aquarius Form",
-        "thumbnail": require("./aquarius-icon.png"),
+        "thumbnail": require("../icons/aquarius-icon.png"),
         "link": "aquarius",
         "description": "A Samurott-Azumarill hybrid designed for aquatic activities.",
         "affinity": "Water",
@@ -16,7 +16,7 @@ export const alcorForms: FormInformation[] = [
     },
     {
         "name": "Jupiter Form",
-        "thumbnail": require("./jupiter-icon.png"),
+        "thumbnail": require("../icons/jupiter-icon.png"),
         "link": "jupiter",
         "description": "A Zinogre-Zeraora hybrid with powerful electrical abilities.",
         "height": "8'1\"",
@@ -29,7 +29,7 @@ export const alcorForms: FormInformation[] = [
     },
     {
         "name": "AICore Form",
-        "thumbnail": require("./aicore-icon.png"),
+        "thumbnail": require("../icons/aicore-icon.png"),
         "link": "aicore",
         "description": "Alcor and Castor's first attempt at a symbiotic fusion.",
         "affinity": "Light",
@@ -42,7 +42,7 @@ export const alcorForms: FormInformation[] = [
     },
     {
         "name": "Gemini Form",
-        "thumbnail": require("./m-icon.png"),
+        "thumbnail": require("../icons/m-icon.png"),
         "link": "m",
         "description": "Alcor after being infused with Castor's exotic matter.",
         "body": "Alcor's form when his body absorbs Castor's exotic matter using an alternate procedure. It does not take on Castor's standard colors, but its eyes show signs of Castor's influence. While it does not have any of AICore's special features besides its energy wings, it does enhance Alcor's physical prowess to the next level, effectively functioning as his first evolved form. This form features a much stronger tail with two rows of spikes with much higher spike density, along with a muscle system that is optimized for physical strength without losing dexterity. Exotic matter constantly pulses through its stripes, replenishing its body with energy.",
@@ -55,7 +55,7 @@ export const alcorForms: FormInformation[] = [
     },
     {
         "name": "Triangulum Form",
-        "thumbnail": require("./triangulum-icon.png"),
+        "thumbnail": require("../icons/triangulum-icon.png"),
         "link": "triangulum",
         "description": "An evolved form of Gemini that sacrifices mobility for defence.",
         "affinity": "Light",
@@ -71,7 +71,7 @@ export const alcorForms: FormInformation[] = [
 export const superheroSuits: FormInformation[] = [
     {
         name: "Biogenesis",
-        thumbnail: require("./biogenesis-icon.png"),
+        thumbnail: require("../icons/biogenesis-icon.png"),
         link: "biogenesis",
         description: "A new superhero suit that focuses on unorthodox forms of healing and support.",
         image: "https://alcorsiteartbucket.s3.amazonaws.com/webp/biogenesis_suit_design.webp",

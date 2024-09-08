@@ -1,15 +1,15 @@
 import React from "react";
 import {Outlet, useLocation} from "react-router-dom";
-import {NavigationRail} from "./components/navigation/NavigationRail";
+import {Navigation} from "./components/common/Navigation";
 import {LinksPage} from "./components/links/LinksPage";
 
 export function Root() {
-    return <NavigationRail>
+    return <Navigation>
         <div style={{display: 'flex'}}>
             {
                 useLocation().pathname === '/' && <LinksPage/>
             }
             <Outlet/>
         </div>
-    </NavigationRail>;
+    </Navigation>;
 }

@@ -4,7 +4,7 @@ import ListItemButton from "@mui/material-next/ListItemButton";
 import {Avatar, Collapse} from "@mui/material";
 import {ExpandLess, ExpandMore} from "@mui/icons-material";
 import {useLocation, useNavigate} from "react-router-dom";
-import {alcorForms, superheroSuits} from "./about-resources/alcorForms";
+import {alcorForms, superheroSuits} from "./characters/alcorForms";
 
 function M3ListButton(props: { avatarSrc?: string, indentation?: number, text: string, link: string }) {
     const borderRadius = 'var(--Button-radius, var(--md-sys-shape-corner-full))';
@@ -49,13 +49,15 @@ function CollapsibleListButton(props: { title: string, children: React.JSX.Eleme
     </>;
 }
 
-export const AboutPageNavigation = memo(function AlcorLorePane() {
+export const LoreNavigation = memo(function AlcorLorePane() {
     // TODO Fix height on mobile version
+    // TODO Switch to using proper links
+    // TODO Fix highlighting
     return <List>
         <ListItem>
             <ListItemText secondary={"Into the Alcorverse"}/>
         </ListItem>
-        <M3ListButton link={""} text={"Alcor's World"}/>
+        <M3ListButton link={"world"} text={"Alcor's World"}/>
         <M3ListButton text={"Bio-Enhancement"} link={"bio-enhancement"}/>
         <CollapsibleListButton title={"Alternate Formes"}>
             {alcorForms.map(value => <M3ListButton text={value.name} link={value.link} avatarSrc={value.thumbnail} indentation={4}/>)}

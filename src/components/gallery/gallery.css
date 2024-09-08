@@ -10,13 +10,20 @@ html {
     max-width: 15vw;
 }
 
+.navigation-rail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    height: 3.5rem;
+}
+
 .navigation-rail-item:hover * {
     font-weight: bold;
     cursor: pointer;
-}
-
-.selected-rail-item * {
-    font-weight: bold;
 }
 
 .medium {

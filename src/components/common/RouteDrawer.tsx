@@ -1,6 +1,6 @@
 import {Drawer} from "@mui/material";
 import React, {ReactEventHandler} from "react";
-import {drawerColor} from "./NavigationRail";
+import {drawerColor} from "./Navigation";
 
 /**
  * Drawer component for subpanels on mobile pages

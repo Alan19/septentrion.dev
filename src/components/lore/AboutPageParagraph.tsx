@@ -19,7 +19,7 @@ export function AboutPageParagraph(props: {
         <Grid item xs={12}>
             <Typography fontWeight={"bold"} variant={variant}>{title}</Typography>
         </Grid>
-        {img && typeof img === "string" ? <Grid item sm={3}><img width={"100%"} src={img} alt={alt}/></Grid> : <Grid item sm={3}>{img}</Grid>}
+        {img && typeof img === "string" ? <Grid item md={2}><img width={"100%"} src={img} alt={alt}/></Grid> : <Grid item md={2}>{img}</Grid>}
         <Grid item sm>
             <Typography variant={"body1"}>
                 {text}

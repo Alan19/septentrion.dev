@@ -2,17 +2,17 @@ import {createHashRouter} from "react-router-dom";
 import {Root} from "./Root";
 import {Gallery} from "./components/gallery/Gallery";
 import {ArtworkPage} from "./components/gallery/artwork/ArtworkPage";
-import {AboutPage} from "./components/about/AboutPage";
-import {alcorForms, superheroSuits} from "./components/about/about-resources/alcorForms";
-import {FormPage} from "./components/about/FormPage";
-import {AlcorWorldInfo} from "./components/about/AlcorWorldInfo";
-import {BioEnhancementIntro} from "./components/about/BioEnhancementIntro";
-import {AlcorOutfits} from "./components/about/outfits/AlcorOutfits";
-import {SomaInfo} from "./components/about/characters/SomaInfo";
+import {AboutPage} from "./components/lore/world/AboutPage";
+import {BioEnhancementIntro} from "./components/lore/world/BioEnhancementIntro";
+import {AlcorOutfits} from "./components/lore/outfits/AlcorOutfits";
+import {SomaInfo} from "./components/lore/characters/SomaInfo";
 import React from "react";
 import {AnalyticsPage} from "./components/analytics/AnalyticsPage";
 import {MinimalGalleryPage} from "./components/gallery/MinimalGalleryPage";
-import {CharactersPage} from "./components/about/characters/CharactersPage";
+import {CharactersPage} from "./components/lore/characters/CharactersPage";
+import {AboutMePage} from "./components/about/AboutMePage";
+import {FormPage} from "./components/lore/characters/FormPage";
+import {AlcorWorldInfo} from "./components/lore/world/AlcorWorldInfo";
 
 export const router = createHashRouter([
     {
@@ -39,14 +39,22 @@ export const router = createHashRouter([
 
             {
                 path: "/about",
+                element: <AboutMePage/>,
+            },
+            {
+                path: "/lore",
                 element: <AboutPage/>,
                 children: [
-                    ...alcorForms.concat(superheroSuits).map(value => ({
-                        path: `${value.link}`,
-                        element: <FormPage formInformation={value}/>
-                    })),
                     {
-                        path: '',
+                        path: "/lore",
+                        element: <CharactersPage/>,
+                    },
+                    {
+                        path: "/lore/:character",
+                        element: <FormPage/>
+                    },
+                    {
+                        path: "world",
                         element: <AlcorWorldInfo/>
                     },
                     {
@@ -62,10 +70,6 @@ export const router = createHashRouter([
                         element: <SomaInfo/>
                     }
                 ]
-            },
-            {
-                path: "/characters",
-                element: <CharactersPage/>
             }
         ]
     },

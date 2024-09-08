@@ -9,10 +9,10 @@ import useMeasure from 'react-use-measure';
 import {ResizeObserver} from '@juggle/resize-observer'
 import MonthSeparatedGallery from "./ChronologicalGallery";
 import {FilterPane} from "./FilterPane";
-import {RouteWithSubpanel} from "../navigation/RouteWithSubpanel";
+import {RouteWithSubpanel} from "../common/RouteWithSubpanel";
 import {SkeletonImage} from "../SkeletonImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
-import {createSearchParams, useNavigate} from "react-router-dom";
+import {createSearchParams, Link, useNavigate} from "react-router-dom";
 import {useQueryState} from "react-router-use-location-state";
 import {prepareFileName} from "./Utils";
 import {Share} from "@mui/icons-material";
@@ -79,7 +79,7 @@ export const Gallery = memo(function Gallery() {
         })
     }
 
-    const height = 350;
+    const height = 400;
     const content = <Fade in>
         <div>
             <Typography variant={"h3"} color={"var(--md-sys-color-primary)"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
@@ -122,13 +122,12 @@ export const Gallery = memo(function Gallery() {
                                            layoutItems={imagesOnPage.map(value => (
                                                value.aspectRatio ?? 1
                                            ))}>
-                            {imagesOnPage.map(value => <SkeletonImage
-                                onClick={() => handleImageClicked(value)}
+                            {imagesOnPage.map(value => <Link to={prepareFileName(value.title)}><SkeletonImage
                                 hasAlts={altData.has(value.title)}
                                 alt={value.title}
                                 src={value.thumbnailUrl ?? value.src}
                                 imageClassname={"artImage"}
-                                aspectRatio={value.aspectRatio ?? 1}/>)}
+                                aspectRatio={value.aspectRatio ?? 1}/></Link>)}
                         </TSJustifiedLayout>
                     }
                 </div>

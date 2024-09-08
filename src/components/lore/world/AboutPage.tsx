@@ -1,9 +1,9 @@
 import {Snackbar, Typography} from "@mui/material";
 import React, {createContext, memo, useEffect} from "react";
 import {Outlet} from "react-router-dom";
-import './form-page.css'
-import {AboutPageNavigation} from "./AboutPageNavigation";
-import {RouteWithSubpanel} from "../navigation/RouteWithSubpanel";
+import '../form-page.css'
+import {LoreNavigation} from "../LoreNavigation";
+import {RouteWithSubpanel} from "../../common/RouteWithSubpanel";
 
 // @ts-ignore
 export const CopyColorContext: React.Context<[string, (color: string) => void]> = createContext(undefined)
@@ -38,15 +38,13 @@ export const AboutPage = memo(function AboutPage() {
     };
     return (
         <>
-            <CopyColorContext.Provider value={[copiedColor, handleClick]}>
-                <RouteWithSubpanel panel={<AboutPageNavigation/>} routeContent={<Outlet/>}/>
-                <Snackbar
-                    open={isOpen}
-                    autoHideDuration={6000}
-                    onClose={handleClose}
-                    message={`Copied ${copiedColor} to clipboard`}
-                />
-            </CopyColorContext.Provider>
+            <RouteWithSubpanel panel={<LoreNavigation/>} routeContent={<Outlet/>}/>
+            <Snackbar
+                open={isOpen}
+                autoHideDuration={6000}
+                onClose={handleClose}
+                message={`Copied ${copiedColor} to clipboard`}
+            />
         </>
     );
 });

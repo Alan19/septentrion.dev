@@ -11,7 +11,7 @@ export function Header() {
                 Cougar-dragon doing his best! ✨
             </Typography>
             <Typography variant={"subtitle2"}>
-                He/him ◈ Software Engineer ◈ TTRPG Enthusiast ◈ Casual CFVG Player 🎴
+                He/him ◈ Software Engineer 👨‍💻 ◈ TTRPG Enthusiast 🎲 ◈ Casual CFVG Player 🎴
             </Typography>
         </>
     );

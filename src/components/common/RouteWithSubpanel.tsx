@@ -3,7 +3,7 @@ import {Container, Fade, Grid, IconButton, useMediaQuery} from "@mui/material";
 import {theme} from "../../App";
 import {RouteDrawer} from "./RouteDrawer";
 import MenuIcon from "@mui/icons-material/Menu";
-import {drawerColor} from "./NavigationRail";
+import {M3Pane} from "./M3Pane";
 
 export function RouteWithSubpanel(props: { panel: React.JSX.Element, routeContent: React.JSX.Element, panelCSS?: React.CSSProperties }) {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -23,35 +23,18 @@ export function RouteWithSubpanel(props: { panel: React.JSX.Element, routeConten
         return (
             <>
                 <Fade in>
-                    <Container maxWidth={"xl"}>
-                        <Grid container style={{padding: '16px 0px 0 0px'}} spacing={4} direction={isMediumOrAbove ? "row" : "column-reverse"}>
-                            <Grid item md={9}>
-                                <div style={{
-                                    background: drawerColor,
-                                    borderRadius: 24,
-                                    padding: 16,
-                                    marginBottom: 16,
-                                    ...props.panelCSS
-                                }}>
-                                    {props.routeContent}
-                                </div>
-                            </Grid>
-                            <Grid item md={3}>
-                                <div style={{
-                                    borderRadius: 24,
-                                    background: drawerColor,
-                                    position: 'sticky',
-                                    maxHeight: isMediumOrAbove ? 'calc(100vh - 32px)' : 'inherit',
-                                    flex: 1,
-                                    top: 16,
-                                    overflowY: 'auto',
-                                    padding: 16
-                                }}>
-                                    {props.panel}
-                                </div>
-                            </Grid>
+                    <Grid container spacing={2} direction={isMediumOrAbove ? "row" : "column-reverse"}>
+                        <Grid item md={9}>
+                            <M3Pane lastElement={false}>
+                                {props.routeContent}
+                            </M3Pane>
                         </Grid>
-                    </Container>
+                        <Grid item md={3}>
+                            <M3Pane>
+                                {props.panel}
+                            </M3Pane>
+                        </Grid>
+                    </Grid>
                 </Fade>
             </>
         );

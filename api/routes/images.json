@@ -4764,5 +4764,95 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Sweet+Couple+%3C3_1.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/sweet_couple_3_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/sweet_couple_3_1.webp"
+  },
+  {
+    "title": "Egyptian Costume Sketch",
+    "artist": "@KuroPenguinEx",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.bsky.social/post/3l2y5hyqpdq2h",
+    "published": "2024-08-30",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/egyptian_costume_sketch.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/egyptian_costume_sketch.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/egyptian_costume_sketch.webp"
+  },
+  {
+    "title": "Prevernal Sage Outfit",
+    "artist": "@hyper_whoz",
+    "tags": [
+      "Techwear",
+      "Knives",
+      "Rastaban Form",
+      "Hoodie"
+    ],
+    "href": "https://x.com/hyper_whoz/status/1830205089510023272",
+    "published": "2024-09-01",
+    "aspectRatio": 0.8813344594594594,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/prevernal_sage_outfit.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/prevernal_sage_outfit.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/prevernal_sage_outfit.webp"
+  },
+  {
+    "title": "Lifewonders Water Gun Fight!",
+    "artist": "@sumiwohakuneko",
+    "tags": [
+      "Techwear",
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/sumiwohakuneko/status/1830251675996860822",
+    "published": "2024-09-01",
+    "aspectRatio": 1.7777777777777777,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Darwin"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/lifewonders_water_gun_fight.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/lifewonders_water_gun_fight.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifewonders_water_gun_fight.webp"
+  },
+  {
+    "title": "Serotinal Evening at the Pier",
+    "artist": "@phy_sen",
+    "tags": [
+      "Serotinal Circuitboard",
+      "Eltanin Form",
+      "Techwear"
+    ],
+    "href": "https://x.com/phy_sen/status/1832797211790320011",
+    "published": "2024-09-08",
+    "aspectRatio": 1.7776666666666667,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/serotinal_evening_at_the_pier.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/serotinal_evening_at_the_pier.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/serotinal_evening_at_the_pier.webp"
+  },
+  {
+    "tags": [
+      "Eltanin Form"
+    ],
+    "href": "https://x.com/phy_sen/status/1832797211790320011",
+    "aspectRatio": 1.7776666666666667,
+    "parent": "Serotinal Evening at the Pier",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Serotinal+Evening+at+the+Pier_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/serotinal_evening_at_the_pier_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/serotinal_evening_at_the_pier_1.webp"
   }
 ]

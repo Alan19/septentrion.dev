@@ -9,7 +9,7 @@ import {prepareFileName} from "./Utils";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 import React from "react";
 import {getShownImages} from "./Gallery";
-import {drawerColor} from "../navigation/NavigationRail";
+import {drawerColor} from "../common/Navigation";
 import {SkeletonImage} from "../SkeletonImage";
 
 // Page that only displays artworks in a grid, and hides all other elements

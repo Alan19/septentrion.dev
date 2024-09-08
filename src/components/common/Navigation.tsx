@@ -1,14 +1,13 @@
 import React, {useContext, useState} from "react";
 import {BottomNavigation, BottomNavigationAction, Box, Dialog, DialogContent, DialogTitle, Grid, Paper, Stack, Typography, useMediaQuery} from "@mui/material";
 import {AppThemeContext, theme} from "../../App";
-import {NavigationRailLink} from "./NavigationRailLink";
-import {CollectionsOutlined, Computer, DarkMode, Home, HomeOutlined, LightMode, PeopleOutline, Settings} from "@mui/icons-material";
+import {Book, BookOutlined, CollectionsOutlined, Computer, DarkMode, Home, HomeOutlined, LightMode, Person, PersonOutlined, Search, SearchOutlined, Settings} from "@mui/icons-material";
 import CollectionsIcon from "@mui/icons-material/Collections";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faDragon} from "@fortawesome/free-solid-svg-icons";
 import {useLocation, useNavigate} from "react-router-dom";
 import {Button, useColorScheme} from "@mui/material-next";
 import {websiteThemes} from "../../Themes";
+import "../../App.css"
+import {NavigationRailLink} from "./NavigationRailLink";
 
 export const drawerColor = 'var(--md-sys-color-surfaceContainerHigh)';
 
@@ -16,7 +15,7 @@ export const drawerColor = 'var(--md-sys-color-surfaceContainerHigh)';
  * Higher order component that injects a navigation rail or bottom navigation into the child component
  * @param props children: Element to inject into, secondPanel: Optional prop for an extension to the navigation rail
  */
-export function NavigationRail(props: {
+export function Navigation(props: {
     children: React.JSX.Element
 }) {
     const navigateFunction = useNavigate();
@@ -51,27 +50,75 @@ export function NavigationRail(props: {
 
         </DialogContent>
     </Dialog>;
+
+    let castorStampStyle = location !== '/' && {
+        backgroundColor: drawerColor,
+        backgroundImage: 'url(castor_stamp.png)',
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        backgroundPosition: "right 24px bottom 24px",
+        backgroundBlendMode: mode === 'light' ? 'color-burn' : 'darken',
+        backgroundSize: "80vh",
+    };
+
+    const links = [
+        {
+            selectedIcon: <Home/>,
+            icon: <HomeOutlined/>,
+            label: "Home",
+            path: "/"
+        },
+        {
+            selectedIcon: <CollectionsIcon/>,
+            icon: <CollectionsOutlined/>,
+            label: "Gallery",
+            path: "/gallery"
+        },
+        {
+            selectedIcon: <Person/>,
+            icon: <PersonOutlined/>,
+            label: "About",
+            path: "/about"
+        },
+        {
+            selectedIcon: <Book/>,
+            icon: <BookOutlined/>,
+            label: "Lore",
+            path: "/lore"
+        },
+        {
+            selectedIcon: <Search/>,
+            icon: <SearchOutlined/>,
+            label: "Analytics",
+            path: "/analytics"
+        },
+
+    ]
+
     if (mediumOrAbove) {
         return <Box style={{display: "flex", minHeight: '100vh'}}>
-            <div style={{
-                display: "flex",
-                minHeight: "100%",
-                backgroundColor: drawerColor
+            {settingsDialog}
+            <div className={"navigation-rail-stack"} style={{
+                position: 'sticky',
+                top: 0,
+                alignSelf: 'start',
+                height: '100vh',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: "center",
+                width: "5rem",
+                backgroundColor: drawerColor,
+                padding: "24px 16px"
             }}>
-                {settingsDialog}
-                <div className={"navigation-rail-stack"} style={{position: 'sticky', top: 0, alignSelf: 'start', padding: '24px 8px 8px', height: '100vh', display: 'flex', flexDirection: 'column', width: "max-content"}}>
-                    <Stack spacing={1} style={{flex: 1}}>
-                        <NavigationRailLink button={<HomeOutlined/>} label={"Home"} path={"/"}/>
-                        <NavigationRailLink button={<CollectionsOutlined/>} label={"Gallery"} path={"/gallery"}/>
-                        <NavigationRailLink button={<PeopleOutline/>} label={"Characters"} path={"/characters"}/>
-                    </Stack>
+                <Stack spacing={'12px'} style={{flex: 1}}>
+                    {links.map(value => <NavigationRailLink selectedButton={value.selectedIcon} button={value.icon} label={value.label} path={value.path}/>)}
+                </Stack>
 
-                    <div className={`navigation-rail-item`} style={{display: 'grid', alignItems: 'center'}}>
-                        <Button variant={"outlined"} onClick={handleClickOpen}><Settings/></Button>
-                    </div>
+                <div className={`navigation-rail-item`} style={{display: 'grid', alignItems: 'center'}}>
+                    <Button variant={"outlined"} onClick={handleClickOpen}><Settings/></Button>
                 </div>
             </div>
-            <div style={{flexGrow: 1, overflowX: 'hidden'}}>
+            <div style={{flexGrow: 1, overflowX: 'hidden', ...castorStampStyle}}>
                 {props.children}
             </div>
         </Box>;
@@ -89,10 +136,7 @@ export function NavigationRail(props: {
                     }}
                 >
                     {/*TODO Add current page indicator and unify buttons*/}
-                    <BottomNavigationAction icon={<Home/>} label={"Home"} value={'/'}/>
-                    <BottomNavigationAction color={'var(--md-sys-color-primaryContainer)'} value={'/gallery'} label="Gallery" icon={<CollectionsIcon/>}/>
-                    <BottomNavigationAction label="Characters" value={'/characters'} icon={<FontAwesomeIcon icon={faDragon} style={{width: 24, height: 24}}/>}/>
-                    <BottomNavigationAction label="Settings" icon={<Settings/>} onClick={handleClickOpen}></BottomNavigationAction>
+                    {links.map(value => <BottomNavigationAction icon={value.icon} label={value.label} value={value.path}/>)}
                 </BottomNavigation>
             </Paper>
         </>

@@ -8,6 +8,7 @@ import {CssVarsProvider} from "@mui/material-next";
 import {alcorTheme, AppTheme, websiteThemes} from "./Themes";
 import {useLocalStorage} from "./UseLocalStorage";
 import {router} from "./RouterPaths";
+import {drawerColor} from "./components/common/Navigation";
 
 // TODO get rid of this
 export const theme = createTheme({
@@ -28,6 +29,15 @@ export const theme = createTheme({
         secondary: {
             main: "#535F70",
             dark: "#BBC7DB"
+        }
+    },
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 600,
+            md: 900,
+            lg: 1200,
+            xl: 2000
         }
     }
 });
@@ -50,7 +60,11 @@ export function Website() {
 function App() {
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <div className="App" style={{backgroundColor: 'var(--md-sys-color-surface)', minHeight: "100vh", color: 'var(--md-palette-text-primary)'}}>
+            <div className="App" style={{
+                backgroundColor: drawerColor,
+                minHeight: "100vh",
+                color: 'var(--md-palette-text-primary)'
+            }}>
                 <RouterProvider router={router}/>
             </div>
         </LocalizationProvider>

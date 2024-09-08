@@ -1,10 +1,10 @@
 import {Fade, Grid, Typography} from "@mui/material";
 import React, {memo} from "react";
-import castor from "./about-resources/castor.png"
-import castorEvolution from './about-resources/castor-evolved.png'
-import {AboutPageParagraph} from "./AboutPageParagraph";
-import {PageHeader} from "./PageHeader";
-import {SkeletonImage} from "../SkeletonImage";
+import castor from "../icons/castor.png"
+import castorEvolution from '../icons/castor-evolved.png'
+import {AboutPageParagraph} from "../AboutPageParagraph";
+import {PageHeader} from "../PageHeader";
+import {SkeletonImage} from "../../SkeletonImage";
 import {Divider} from "@mui/material-next";
 
 export const AlcorWorldInfo = memo(function AlcorWorldInfo() {
