@@ -398,7 +398,7 @@
     ]
   },
   {
-    "title": "Come and Find Me",
+    "title": "Come Find Me.",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/come_and_find_me.jpg",
     "href": "https://twitter.com/Hemuchang/status/1538903529355563008?s=20&t=eKwrDBRmUWuDjCiUR5suyg",
     "artist": "@Hemuchang",
@@ -4854,5 +4854,54 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Serotinal+Evening+at+the+Pier_1.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/serotinal_evening_at_the_pier_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/serotinal_evening_at_the_pier_1.webp"
+  },
+  {
+    "title": "Jupiter Icon by Roki",
+    "artist": "@art_roki",
+    "tags": [
+      "Jupiter Form"
+    ],
+    "href": "",
+    "published": "2024-09-07",
+    "aspectRatio": 0.9345661450924608,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_icon_by_roki.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_icon_by_roki.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_icon_by_roki.webp"
+  },
+  {
+    "title": "Triangulum Form β",
+    "artist": "@TOOMIRO",
+    "tags": [
+      "Triangulum Form"
+    ],
+    "href": "https://skeb.jp/@TOOMIRO/works/149",
+    "published": "2024-09-13",
+    "aspectRatio": 0.7761194029850746,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangulum_form_%25CE%25B2.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/triangulum_form_%25CE%25B2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangulum_form_%25CE%25B2.webp"
+  },
+  {
+    "tags": [
+      "Triangulum Form"
+    ],
+    "href": "",
+    "aspectRatio": 0.7761194029850746,
+    "parent": "Triangulum Form β",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Triangulum+Form+%CE%B2_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/triangulum_form_%25CE%25B2_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/triangulum_form_%25CE%25B2_1.webp"
   }
 ]

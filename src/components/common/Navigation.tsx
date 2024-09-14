@@ -51,6 +51,7 @@ export function Navigation(props: {
         </DialogContent>
     </Dialog>;
 
+    // TODO Rethink how to style this
     let castorStampStyle = location !== '/' && {
         backgroundColor: drawerColor,
         backgroundImage: 'url(castor_stamp.png)',
@@ -118,7 +119,7 @@ export function Navigation(props: {
                     <Button variant={"outlined"} onClick={handleClickOpen}><Settings/></Button>
                 </div>
             </div>
-            <div style={{flexGrow: 1, overflowX: 'hidden', ...castorStampStyle}}>
+            <div style={{flexGrow: 1, overflowX: 'hidden'}}>
                 {props.children}
             </div>
         </Box>;
@@ -129,7 +130,7 @@ export function Navigation(props: {
             <Paper style={{position: 'sticky', bottom: 0}} elevation={3}>
                 <BottomNavigation
                     showLabels
-                    style={{marginTop: '16px', background: 'var(--md-sys-color-surfaceContainerHigh)'}}
+                    style={{marginTop: '16px', background: drawerColor}}
                     value={location}
                     onChange={(_event, newValue) => {
                         navigateFunction(newValue)
