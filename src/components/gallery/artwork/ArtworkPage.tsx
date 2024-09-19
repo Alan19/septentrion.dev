@@ -59,7 +59,7 @@ export function ArtworkPage() {
         return (
             <Grid container spacing={'1rem'}>
                 <Grid item md={9} xs={12} style={{display: 'flex', justifyContent: 'center', height: 'min-content'}}>
-                    <M3Pane style={{width: '100%', ...(!isMediumOrAbove && {padding: 0})}}>
+                    <M3Pane style={{width: '100%', ...(!isMediumOrAbove && {padding: 0})}} lastElement={false}>
                         <Grid container spacing={3}>
                             <Grid item xs={12} md={'auto'}>
                                 <IconButton onClick={() => navigate(-1)}>

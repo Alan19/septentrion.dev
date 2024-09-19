@@ -25,6 +25,22 @@ export function BioEnhancementIntro() {
                 </Typography>
             </Grid>
             <Grid item sm={4}>
+                <SkeletonImage aspectRatio={2.4140893470790377} style={{width: '100%'}} src={"https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_body_study_sketchpage_1.webp"}/>
+            </Grid>
+            <Grid item sm={8}>
+                <Typography variant={"body1"}>
+                    <Typography variant={"h5"}>Alcor's Power Classes</Typography>
+                    Most of Alcor's forms can be divided into a series of power classes, which measure their power level. Each form can encompass a range of power classes, and he can adjust his current power tier in his current form for the
+                    purposes of self expression for the task at hand. The power tiers in ascending order are Thuban, Rastaban, Eltanin, Altais, Tyl, and Aldhibah. Each of those power classes have certain energy and maintenance requirements.
+                    Alcor's default power class is Rastaban class, so he can maintain Thuban and Rastaban class forms with next to no difficulty. Eltanin class forms are fairly easy to Alcor to maintain, with it's main requirement being a
+                    higher energy intake, which is fairly easy to maintain by just eating. Tyl class forms are harder to use and maintain, with them having an even higher energy cost as maintenance, as well as expensive costs to activate
+                    the form. Most of them are existing upgrades to one of his vessels, which means they cannot be deployed for immediate use. The existence of the Aldhibah class is not revealed to the public, with information about the
+                    class stored in the most secure areas in Alcor's lab. Forms at that power class is created through mythical artifacts, and cannot be safely evolved into, which means that the bodies have to by synthesized and stored to
+                    use it. Forms in that power class are deployed only in emergencies, and as a security measure, is overloaded with features that would require multiple consciousnesses linked to Alcor working in tandem to operate it at a
+                    usable level.
+                </Typography>
+            </Grid>
+            <Grid item sm={4}>
                 <SkeletonImage style={{width: '100%'}} aspectRatio={0.8243310619910255} src={"https://alcorsiteartbucket.s3.amazonaws.com/webp/eclipse_deity_v3.webp"}/>
             </Grid>
             <Grid item sm={8}>

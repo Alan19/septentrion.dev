@@ -303,25 +303,6 @@
     ]
   },
   {
-    "title": "3DS Commission",
-    "href": "https://twitter.com/_capycorn/status/1575820135876595713",
-    "src": "https://pbs.twimg.com/media/Fd5wDjeX0AInhoH?format=jpg&name=medium",
-    "artist": "@_capycorn",
-    "tags": [
-      "Thuban Form",
-      "Techwear",
-      "Hoodie"
-    ],
-    "published": "2022-09-30",
-    "aspectRatio": 0.6430358632193495,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/3_ds_commission.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/3_ds_commission.webp",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ]
-  },
-  {
     "title": "Sci-fi Mode: ON",
     "href": "https://twitter.com/AxyUsagi/status/1543041029674344448?s=20&t=tlXwc5aegdXuQeLhgdUw-Q",
     "artist": "@AxyUsagi",
@@ -438,7 +419,7 @@
     "title": "PNGTuber",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pngtuber_art_2.jpg",
     "href": "https://twitter.com/Cat_Mantis_Art/status/1436487151705726978?s=20",
-    "artist": "@Cat_Mantis_Art",
+    "artist": "@CatMantisArt",
     "tags": [
       "Rastaban Form",
       "Hoodie"
@@ -456,7 +437,7 @@
     "parent": "PNGTuber",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pngtuber_art_1.jpg",
     "href": "https://twitter.com/Cat_Mantis_Art/status/1436487151705726978?s=20",
-    "artist": "@Cat_Mantis_Art",
+    "artist": "@CatMantisArt",
     "tags": [
       "Rastaban Form",
       "Hoodie"
@@ -4903,5 +4884,43 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Triangulum+Form+%CE%B2_1.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/triangulum_form_%25CE%25B2_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/triangulum_form_%25CE%25B2_1.webp"
+  },
+  {
+    "title": "3DS Commission",
+    "artist": "@_capycorn",
+    "tags": [
+      "Thuban Form",
+      "Vernal",
+      "Techwear",
+      "Hoodie"
+    ],
+    "href": "https://x.com/_capycorn/status/1575820135876595713",
+    "published": "2022-09-30",
+    "aspectRatio": 0.6428571428571429,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/3_ds_commission.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/3_ds_commission.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/3_ds_commission.webp"
+  },
+  {
+    "title": "Symbiotic Auriga Form β",
+    "artist": "@outlord_s",
+    "tags": [
+      "Auriga Form"
+    ],
+    "href": "https://x.com/outlord_s/status/1835982234383528158",
+    "published": "2024-09-16",
+    "aspectRatio": 0.96,
+    "rating": "general",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/symbiotic_auriga_form_%25CE%25B2.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/symbiotic_auriga_form_%25CE%25B2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/symbiotic_auriga_form_%25CE%25B2.webp"
   }
 ]

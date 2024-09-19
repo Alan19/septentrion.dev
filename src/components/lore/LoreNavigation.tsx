@@ -3,31 +3,31 @@ import React, {memo} from "react";
 import ListItemButton from "@mui/material-next/ListItemButton";
 import {Avatar, Collapse} from "@mui/material";
 import {ExpandLess, ExpandMore} from "@mui/icons-material";
-import {useLocation, useNavigate} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {alcorForms, superheroSuits} from "./characters/alcorForms";
 
 function M3ListButton(props: { avatarSrc?: string, indentation?: number, text: string, link: string }) {
     const borderRadius = 'var(--Button-radius, var(--md-sys-shape-corner-full))';
     const location = useLocation().pathname;
-    const navigate = useNavigate();
 
     function getLinkButtonStyle(link: string = '') {
         let baseUrl: string;
-        baseUrl = link === '' ? '/about' : "/about/";
+        baseUrl = link === '' ? '/lore' : "/lore/";
         return {
             borderRadius,
             ...(location === `${baseUrl}${link}` ? {backgroundColor: 'var(--md-sys-color-secondaryContainer)'} : {})
         };
     }
 
-    return <ListItemButton style={getLinkButtonStyle(props.link)} {...{sx: props.indentation ? {pl: props.indentation} : {}}} onClick={event => navigate(`${props.link}`)}>
-        {props.avatarSrc &&
-            <ListItemAvatar>
-                <Avatar src={props.avatarSrc}/>
-            </ListItemAvatar>
-        }
-        <ListItemText primary={props.text}/>
-    </ListItemButton>;
+    return <Link to={props.link} style={{display: 'flex', alignItems: 'center', width: '100%', height: '100%', color: 'var(--md-palette-text-primary)'}}>
+        <ListItemButton style={getLinkButtonStyle(props.link)} {...{sx: props.indentation ? {pl: props.indentation} : {}}}>
+            {props.avatarSrc &&
+                <ListItemAvatar>
+                    <Avatar src={props.avatarSrc}/>
+                </ListItemAvatar>
+            }
+            <ListItemText primary={props.text}/>
+        </ListItemButton></Link>;
 }
 
 function CollapsibleListButton(props: { title: string, children: React.JSX.Element[] }) {
@@ -50,10 +50,9 @@ function CollapsibleListButton(props: { title: string, children: React.JSX.Eleme
 }
 
 export const LoreNavigation = memo(function AlcorLorePane() {
-    // TODO Fix height on mobile version
-    // TODO Switch to using proper links
-    // TODO Fix highlighting
     return <List>
+        <M3ListButton link={""} text={"Home"}/>
+        <Divider color={"--md-sys-color-onSurfaceVariant"} variant={"middle"}/>
         <ListItem>
             <ListItemText secondary={"Into the Alcorverse"}/>
         </ListItem>
