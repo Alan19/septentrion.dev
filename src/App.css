@@ -11,3 +11,23 @@
     /*noinspection CssUnresolvedCustomProperty*/
     background-color: var(--md-sys-color-secondaryContainer) !important;
 }
+
+.react-calendar-heatmap .color-empty {
+    /*noinspection CssUnresolvedCustomProperty*/
+    fill: var(--md-sys-color-surfaceContainerHigh) !important
+}
+
+.react-calendar-heatmap .color-scale-1 {
+    /*noinspection CssUnresolvedCustomProperty*/
+    fill: var(--md-sys-color-primary)
+}
+
+.react-calendar-heatmap .color-scale-2 {
+    /*noinspection CssUnresolvedCustomProperty*/
+    fill: var(--md-sys-color-secondary)
+}
+
+.react-calendar-heatmap .color-scale-3 {
+    /*noinspection CssUnresolvedCustomProperty*/
+    fill: var(--md-sys-color-tertiary)
+}

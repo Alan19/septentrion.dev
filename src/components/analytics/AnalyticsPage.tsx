@@ -1,6 +1,6 @@
 import {useTagHooks} from "../gallery/UseTagHooks";
 import React from "react";
-import {Fade, Grid, Table, TableBody, TableCell, TableHead, TableRow, Typography} from "@mui/material";
+import {Fade, Grid, Table, TableBody, TableCell, TableHead, TableRow, Tooltip, Typography} from "@mui/material";
 import Chip from "@mui/material-next/Chip";
 import CalendarHeatmap, {ReactCalendarHeatmapValue} from "react-calendar-heatmap";
 import 'react-calendar-heatmap/dist/styles.css';
@@ -31,6 +31,19 @@ export function AnalyticsPage() {
             return [...previousValue, {date: currentValue.published, count: 1}]
         }
     }, [])
+
+    function getPublishedDateTooltip(value: ReactCalendarHeatmapValue<string> | undefined) {
+        if (!value) {
+            return
+        } else {
+            return `${value?.count} artwork${value?.count > 1 ? 's' : ""} published on ${value?.date}`;
+        }
+    }
+
+    function getClassForHeatmapSquare(value: ReactCalendarHeatmapValue<string> | undefined) {
+        const count = value?.count ?? 0;
+        return !count ? 'color-empty' : `color-scale-${Math.min(Number(count), 3)}`;
+    }
 
     return (
         <Fade in>
@@ -65,19 +78,17 @@ export function AnalyticsPage() {
                 <Grid item md={6}>
                     <M3Pane>
                         <>
-                            {/*TODO Make dates dynamic, add tooltips, and use theme colors*/}
-                            <Typography variant={"h5"} style={{marginTop: 8}} color={"var(--md-sys-color-secondary)"}>Artwork Publish Date Heatmap</Typography>
-                            <Typography variant={'h6'} color={'var(--md-sys-color-tertiary)"}>'}>2024</Typography>
-                            <CalendarHeatmap showWeekdayLabels startDate={'2024-01-01'} values={publishedDates} endDate={'2024-12-31'}/>
+                            <Typography variant={"h5"} style={{marginTop: 8, marginBottom: 8}} color={"var(--md-sys-color-secondary)"}>Artwork Publish Date Heatmap</Typography>
+                            {Array.from(new Set(images.map(value => value.published.substring(0, 4)))).sort((a, b) => b.localeCompare(a)).map(value => <>
+                                <Typography variant={'h6'} color={'var(--md-sys-color-tertiary)"}>'}>{value}</Typography>
+                                <CalendarHeatmap classForValue={getClassForHeatmapSquare}
+                                                 showWeekdayLabels
+                                                 startDate={`${value}-01-01`}
+                                                 values={publishedDates}
+                                                 endDate={`${value}-12-31`}
+                                                 transformDayElement={(element, value) => <Tooltip title={getPublishedDateTooltip(value)} placement="top">{element}</Tooltip>}/>
 
-                            <Typography variant={'h6'} color={'var(--md-sys-color-tertiary)"}>'}>2023</Typography>
-                            <CalendarHeatmap showWeekdayLabels startDate={'2023-01-01'} values={publishedDates} endDate={'2023-12-31'}/>
-
-                            <Typography variant={'h6'} color={'var(--md-sys-color-tertiary)"}>'}>2022</Typography>
-                            <CalendarHeatmap showWeekdayLabels startDate={'2022-01-01'} values={publishedDates} endDate={'2022-12-31'}/>
-
-                            <Typography variant={'h6'} color={'var(--md-sys-color-tertiary)"}>'}>2021</Typography>
-                            <CalendarHeatmap showWeekdayLabels startDate={'2021-01-01'} values={publishedDates} endDate={'2021-12-31'}/>
+                            </>)}
                         </>
                     </M3Pane>
                 </Grid>
