@@ -1,18 +1,18 @@
 import {useTagHooks} from "../gallery/UseTagHooks";
-import React from "react";
+import React, {memo} from "react";
 import {Fade, Grid, Table, TableBody, TableCell, TableHead, TableRow, Tooltip, Typography} from "@mui/material";
 import Chip from "@mui/material-next/Chip";
 import CalendarHeatmap, {ReactCalendarHeatmapValue} from "react-calendar-heatmap";
 import 'react-calendar-heatmap/dist/styles.css';
 import {M3Pane} from "../common/M3Pane";
 
-export function AnalyticsPage() {
+export const AnalyticsPage = memo(function AnalyticsPage() {
     const {images} = useTagHooks();
 
     const artistCount: Record<string, number> = images.reduce<Record<string, number>>((previousValue, currentValue) => {
-        previousValue[currentValue.artist] = (previousValue[currentValue.artist] ?? 0) + 1
+        previousValue[currentValue.artist] = (previousValue[currentValue.artist] ?? 0) + 1;
         return previousValue;
-    }, {})
+    }, {});
 
     // Take the map of artists and the number of artworks I have from them, and collect the ones with the same number into one object
     const artistRanking = Object.entries(artistCount).reduce<Record<number, string[]>>((previousValue, currentValue) => {
@@ -28,21 +28,29 @@ export function AnalyticsPage() {
             find.count += 1;
             return previousValue;
         } else {
-            return [...previousValue, {date: currentValue.published, count: 1}]
+            return [...previousValue, {date: currentValue.published, count: 1}];
         }
-    }, [])
+    }, []);
 
     function getPublishedDateTooltip(value: ReactCalendarHeatmapValue<string> | undefined) {
         if (!value) {
-            return
+            return;
         } else {
-            return `${value?.count} artwork${value?.count > 1 ? 's' : ""} published on ${value?.date}`;
+            return `${value?.count} artwork${value?.count > 1 ? "s" : ""} published on ${value?.date}`;
         }
     }
 
     function getClassForHeatmapSquare(value: ReactCalendarHeatmapValue<string> | undefined) {
         const count = value?.count ?? 0;
-        return !count ? 'color-empty' : `color-scale-${Math.min(Number(count), 3)}`;
+        return !count ? "color-empty" : `color-scale-${Math.min(Number(count), 3)}`;
+    }
+
+    function getSquareElement(element: React.ReactElement<any, string | React.JSXElementConstructor<any>>, value: ReactCalendarHeatmapValue<string> | undefined) {
+        if (value?.count) {
+            return <Tooltip title={getPublishedDateTooltip(value)} placement="top">{element}</Tooltip>;
+        } else {
+            return element;
+        }
     }
 
     return (
@@ -80,14 +88,13 @@ export function AnalyticsPage() {
                         <>
                             <Typography variant={"h5"} style={{marginTop: 8, marginBottom: 8}} color={"var(--md-sys-color-secondary)"}>Artwork Publish Date Heatmap</Typography>
                             {Array.from(new Set(images.map(value => value.published.substring(0, 4)))).sort((a, b) => b.localeCompare(a)).map(value => <>
-                                <Typography variant={'h6'} color={'var(--md-sys-color-tertiary)"}>'}>{value}</Typography>
+                                <Typography variant={"h6"} color={"var(--md-sys-color-tertiary)\"}>"}>{value}</Typography>
                                 <CalendarHeatmap classForValue={getClassForHeatmapSquare}
                                                  showWeekdayLabels
                                                  startDate={`${value}-01-01`}
                                                  values={publishedDates}
                                                  endDate={`${value}-12-31`}
-                                                 transformDayElement={(element, value) => <Tooltip title={getPublishedDateTooltip(value)} placement="top">{element}</Tooltip>}/>
-
+                                                 transformDayElement={getSquareElement}/>
                             </>)}
                         </>
                     </M3Pane>
@@ -95,4 +102,4 @@ export function AnalyticsPage() {
             </Grid>
         </Fade>
     );
-}
+});
