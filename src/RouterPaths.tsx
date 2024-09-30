@@ -11,7 +11,7 @@ import {AnalyticsPage} from "./components/analytics/AnalyticsPage";
 import {MinimalGalleryPage} from "./components/gallery/MinimalGalleryPage";
 import {CharactersPage} from "./components/lore/characters/CharactersPage";
 import {AboutMePage} from "./components/about/AboutMePage";
-import {FormPage} from "./components/lore/characters/FormPage";
+import {TemplatedLorePage} from "./components/lore/characters/TemplatedLorePage";
 import {AlcorWorldInfo} from "./components/lore/world/AlcorWorldInfo";
 
 export const router = createHashRouter([
@@ -51,7 +51,7 @@ export const router = createHashRouter([
                     },
                     {
                         path: "/lore/:character",
-                        element: <FormPage/>
+                        element: <TemplatedLorePage/>
                     },
                     {
                         path: "world",

@@ -1,16 +1,17 @@
 import {PageHeader} from "../PageHeader";
 import React from "react";
 import {Divider, Grid, Stack, Typography} from "@mui/material";
-import aicore from '../icons/Character_Badge_-page008.png'
-import aquarius from '../icons/Character_Badge_-page007.png'
-import castor from '../icons/Character_Badge_-page006.png'
-import soma from '../icons/Character_Badge_-page005.png'
-import jupiter from '../icons/Character_Badge_-page003.png'
-import poslani from '../icons/Character_Badge_-page010.png'
-import eclipse from '../icons/Character_Badge_-page009.png'
-import triangulum from '../icons/Character_Badge_-page011.png'
-import alcor from '../icons/Character_Badge_-page001.png'
-import wilton from '../icons/Character_Badge_-page004.png'
+import aicore from '../assets/badges/Character_Badge_-page008.webp'
+import aquarius from '../assets/badges/Character_Badge_-page007.webp'
+import castor from '../assets/badges/Character_Badge_-page006.webp'
+import soma from '../assets/badges/Character_Badge_-page005.webp'
+import jupiter from '../assets/badges/Character_Badge_-page003.webp'
+import poslani from '../assets/badges/Character_Badge_-page010.webp'
+import eclipse from '../assets/badges/Character_Badge_-page009.webp'
+import triangulum from '../assets/badges/Character_Badge_-page011.webp'
+import alcor from '../assets/badges/Character_Badge_-page001.webp'
+import wilton from '../assets/badges/Character_Badge_-page004.webp'
+import gemini from '../assets/badges/Character_Badge_-page012.webp'
 import {Link} from "react-router-dom";
 
 type CharacterLink = { image: string; linkPath?: string };
@@ -29,6 +30,10 @@ export function CharactersPage() {
         {
             image: aicore,
             linkPath: '/lore/aicore'
+        },
+        {
+            image: gemini,
+            linkPath: '/lore/gemini'
         },
         {
             image: triangulum,

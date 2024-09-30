@@ -1,7 +1,7 @@
 import {Fade, Grid, Typography} from "@mui/material";
 import React, {memo} from "react";
-import castor from "../icons/castor.png"
-import castorEvolution from '../icons/castor-evolved.png'
+import castor from "../assets/castor.webp"
+import castorEvolution from '../assets/castor-evolved.webp'
 import {AboutPageParagraph} from "../AboutPageParagraph";
 import {PageHeader} from "../PageHeader";
 import {SkeletonImage} from "../../SkeletonImage";
