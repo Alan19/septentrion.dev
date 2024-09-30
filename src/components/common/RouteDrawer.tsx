@@ -25,7 +25,6 @@ export function RouteDrawer(props: {
         open={props.open}
         variant={"temporary"}>
         <div style={{
-            display: "flex",
             padding: 16,
             flexDirection: 'column',
             backgroundColor: drawerColor,
