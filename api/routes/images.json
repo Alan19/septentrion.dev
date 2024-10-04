@@ -5012,5 +5012,97 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%20Form%20Icons_3.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/alcor_form_icons_3.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_form_icons_3.webp"
+  },
+  {
+    "title": "Bright Sparks and Sharp Lights",
+    "artist": "@LuxuriaLethe",
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "https://x.com/LuxuriaLethe/status/1841488212537315377",
+    "published": "2024-10-02",
+    "aspectRatio": 0.7366666666666667,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/bright_sparks_and_sharp_lights.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/bright_sparks_and_sharp_lights.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/bright_sparks_and_sharp_lights.webp"
+  },
+  {
+    "title": "Racer Sketch",
+    "artist": "@KuroPenguinEx",
+    "tags": [
+      "Rastaban Form",
+      "Bodysuit"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.bsky.social/post/3l5nkvmtlvn2i",
+    "published": "2024-10-03",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/racer_sketch.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/racer_sketch.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/racer_sketch.webp"
+  },
+  {
+    "title": "Armed Phenomenon Activate!",
+    "artist": "@tg_marlo",
+    "tags": [
+      "Aldhibah Form",
+      "Jupiter Form",
+      "Transformation"
+    ],
+    "href": "https://x.com/tg_marlo/status/1842104662155264017",
+    "published": "2024-10-04",
+    "aspectRatio": 1,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/armed_phenomenon_activate.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/armed_phenomenon_activate.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/armed_phenomenon_activate.webp"
+  },
+  {
+    "title": "3D Printing",
+    "artist": "@rumie_take",
+    "tags": [
+      "Bodysuit",
+      "Techwear",
+      "Hoodie"
+    ],
+    "href": "https://skeb.jp/@rumie_take/works/47",
+    "published": "2024-09-30",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "mainstream",
+    "characters": [
+      "Soma"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/3_d_printing.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/3_d_printing.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/3_d_printing.webp"
+  },
+  {
+    "title": "Franz Chibis",
+    "artist": "@franzkunnn",
+    "tags": [
+      "Bodysuit",
+      "Techwear",
+      "Hoodie"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1842321396921143639",
+    "published": "2024-10-04",
+    "aspectRatio": 2,
+    "rating": "mainstream",
+    "characters": [
+      "Soma"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/franz_chibis.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/franz_chibis.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/franz_chibis.webp"
   }
 ]

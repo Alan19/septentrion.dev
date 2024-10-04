@@ -1,5 +1,5 @@
 import React, {memo, MouseEventHandler, useEffect, useState} from "react";
-import {IconButton, Skeleton} from "@mui/material";
+import {Fade, IconButton, Skeleton} from "@mui/material";
 import PhotoLibraryIcon from "@mui/icons-material/PhotoLibraryOutlined";
 
 export const SkeletonImage = memo(function SkeletonImage(props: {
@@ -42,6 +42,7 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
 
     if (isReady) {
         const img = <img alt={alt} loading={"lazy"} className={imageClassname} onClick={onClick} style={{display: 'block', ...style}} src={src}/>;
+        const renderedImage = href ? <a target={'_blank'} style={{height: 'min-content'}} href={href}>{img}</a> : img
         return <>
             {
                 props.hasAlts &&
@@ -54,7 +55,7 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
                     <PhotoLibraryIcon/>
                 </IconButton>
             }
-            {href ? <a target={'_blank'} style={{height: 'min-content'}} href={href}>{img}</a> : img}
+            <Fade in>{renderedImage}</Fade>
         </>;
     } else {
         return <div style={{aspectRatio: props.aspectRatio, ...skeletonStyle}}><Skeleton width={'100%'} height={'100%'} animation={"wave"} variant={"rounded"}/></div>;
