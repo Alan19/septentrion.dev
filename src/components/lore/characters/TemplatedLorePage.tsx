@@ -3,7 +3,7 @@ import {Divider, Grid, GridSize, Table, TableCell, TableHead, TableRow, Typograp
 import {useParams} from "react-router-dom";
 import {PageHeader} from "../PageHeader";
 import {SkeletonImage} from "../../SkeletonImage";
-import {alcorForms, superheroSuits} from "./alcorForms";
+import {originalCharacters, superheroSuits, templatedLorePageInfo} from "./templated-lore-page-info";
 import {Radar} from 'react-chartjs-2';
 import {Chart as ChartJS, Filler, Legend, LineElement, PointElement, RadialLinearScale, Tooltip} from 'chart.js';
 
@@ -95,16 +95,18 @@ function FormStatRadarChart(props: { attributeScores: AttributeScores, label: st
     return <div style={{...m3BorderStyle, background: 'var(--md-sys-color-surfaceContainerHighest)', display: 'flex', height: '100%', alignItems: 'center'}}><Radar data={data} options={options}/></div>;
 }
 
+export const croppedImageWithCurvedBorder: React.CSSProperties = {objectFit: 'cover', width: '100%', height: '100%', backgroundColor: 'var(--md-sys-color-surfaceContainerHighest)', ...m3BorderStyle};
+
 export function TemplatedLorePage() {
     const formName = encodeURIComponent(useParams().character ?? "");
-    const formObject = alcorForms.concat(superheroSuits).find(value => value.link === formName);
+    const formObject = templatedLorePageInfo.concat(superheroSuits).concat(originalCharacters).find(value => value.link === formName);
     if (formObject) {
         const {name, body, history, image, imageAspectRatio} = formObject;
         return <>
             <PageHeader title={name}/>
             <Grid container spacing={'1rem'} justifyContent={"stretch"}>
                 <Grid item md={3}>
-                    <SkeletonImage src={image} style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: 28, border: '2px var(--md-sys-color-outline) solid'}} aspectRatio={imageAspectRatio}/>
+                    <SkeletonImage src={image} style={croppedImageWithCurvedBorder} aspectRatio={imageAspectRatio}/>
                 </Grid>
                 <Grid item md={9}>
                     <Typography variant={"h5"}>Overview</Typography>
@@ -121,7 +123,7 @@ export function TemplatedLorePage() {
                             const gridSizes = {xs: xs, sm: sm, md: md, lg: lg, xl: xl};
                             if (typeof content === 'string') {
                                 return <Grid item {...gridSizes}>
-                                    <img src={content} style={{objectFit: 'cover', width: '100%', height: '100%', ...m3BorderStyle}}/>
+                                    <img src={content} style={croppedImageWithCurvedBorder}/>
                                 </Grid>
                             } else if (Array.isArray(content)) {
                                 return <Grid item {...gridSizes}><FormStatRadarChart label={name} attributeScores={content}/></Grid>

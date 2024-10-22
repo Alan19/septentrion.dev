@@ -3,7 +3,7 @@ import {BottomNavigation, BottomNavigationAction, Box, Dialog, DialogContent, Di
 import {AppThemeContext, theme} from "../../App";
 import {Book, BookOutlined, CollectionsOutlined, Computer, DarkMode, Home, HomeOutlined, LightMode, Person, PersonOutlined, Search, SearchOutlined, Settings} from "@mui/icons-material";
 import CollectionsIcon from "@mui/icons-material/Collections";
-import {useLocation, useNavigate} from "react-router-dom";
+import {NavigateOptions, To, useLocation, useNavigate} from "react-router-dom";
 import {Button, useColorScheme} from "@mui/material-next";
 import {websiteThemes} from "../../Themes";
 import "../../App.css"
@@ -22,6 +22,7 @@ export function Navigation(props: {
     const mediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
     const location = useLocation().pathname;
     const [isDialogOpen, setIsDialogOpen] = useState(false);
+    const navigate = useNavigate();
 
     const handleClickOpen = () => {
         setIsDialogOpen(true);
@@ -30,6 +31,12 @@ export function Navigation(props: {
     const handleClose = (value: string) => {
         setIsDialogOpen(false);
     };
+
+    function handleNavigate(to: To, options?: NavigateOptions) {
+        setTimeout(() => {
+
+        }, 300)
+    }
 
     const {mode, setMode} = useColorScheme();
     const [appTheme, setAppTheme] = useContext(AppThemeContext);
@@ -119,7 +126,7 @@ export function Navigation(props: {
                     <Button variant={"outlined"} onClick={handleClickOpen}><Settings/></Button>
                 </div>
             </div>
-            <div style={{flexGrow: 1, overflowX: 'hidden'}}>
+            <div style={{flexGrow: 1, overflow: 'hidden'}}>
                 {props.children}
             </div>
         </Box>;

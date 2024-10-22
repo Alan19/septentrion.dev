@@ -10,8 +10,10 @@ import aquariusIcon from "../assets/icons/aquarius-icon.webp"
 import jupiterIcon from "../assets/icons/jupiter-icon.webp"
 import triangulumIcon from "../assets/icons/triangulum-icon.webp"
 import biogenesisIcon from "../assets/icons/biogenesis-icon.webp"
+import alcorIcon from '../assets/icons/alcor_icon.png'
 
-export const alcorForms: FormInformation[] = [
+
+export const templatedLorePageInfo: FormInformation[] = [
     {
         name: "Aquarius Form",
         thumbnail: aquariusIcon,
@@ -392,5 +394,17 @@ export const superheroSuits: FormInformation[] = [
         imageAspectRatio: 1.0115606936416186,
         body: "This hero suit sports a labcoat to give off the vibe of a doctor or scientist. This is contrasted with a pitch black bodysuit with glowing green lines of exotic matter running to it hooked up to tanks of exotic matter to pump more exotic matter into Alcor's body to enhance it at a moment's notice. With his face mostly consumed by his symbiote, it gives him the perfect mad scientist vibe. His primary weapon is his dart gun, which is loaded with programmable symbiote matter, allowing him to use it to inject healing, paralytic, or mutagenic substances into others. Those who are injected with the symbiote mutagen tend to regenerate from their injuries at a rapid rate, while mutating into symbiote monsters that express their personality and fighting styles in 'a new light'. His claws and tail spikes are also tipped with the same symbiote matter, allowing him to administer it in close range as well. As combat intensifies, or when he needs more physical strength, his suit can rapidly pump more exotic matter into his body, augmenting his physical strength and physique, without forcing him to evolve when his body reaches the various thresholds for exotic matter. This minimizes the risk of wardrobe malfunctions, but he can manually override this restriction when he wants to look more intimidating.",
         history: `Alcor developed the Biogenesis suit when he and Castor were thinking of a way to express their identity as AICore while performing superhero duties. Due to ethical concerns, he only administers healing and paralytic substances, and only gives mutagens to people who have already consented to accepting the mutagen, or in life or death situations. His mutagenic abilities sometimes causes him to make a scene by impaling his allies on his claws, and then seeing the expression on onlookers' faces as his allies rapidly recover from their injuries and possibly transform into what looks like a video game boss' second health bar. The transformation is temporary, but people who are interested in their monstrous forms are invited to come to Alcor's lab for checkups and consultations on how to fully customize their symbiote monster forms. Alcor is delighted to help others bring out their 'inner monster' and loves showing his evolved forms to others, but the number of volunteers has stayed in the single digits, mainly limited to his close friends. A lesser known fact is that this suit draws some inspiration from a superhero suit Alcor once designed and modeled in that is reminiscent of a war general from the far east. That suit is now manufactured as standard issue for another city's defense force against Kaiju attacks, but Alcor's original design also came with some extra accessories that was removed as it looks out of place when it is something designed to be worn by large groups of people.`
+    }
+]
+
+export const originalCharacters: FormInformation[] = [
+    {
+        name: "Alcor",
+        thumbnail: alcorIcon,
+        link: "alcor",
+        description: "",
+        image: "https://alcorsiteartbucket.s3.amazonaws.com/webp/the_beginning.webp",
+        imageAspectRatio: 0.6218760142810775,
+        body: ""
     }
 ]
