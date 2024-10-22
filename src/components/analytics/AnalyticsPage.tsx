@@ -2,7 +2,7 @@ import {useTagHooks} from "../gallery/UseTagHooks";
 import React, {memo} from "react";
 import {Grid, Table, TableBody, TableCell, TableHead, TableRow, Tooltip, Typography} from "@mui/material";
 import Chip from "@mui/material-next/Chip";
-import CalendarHeatmap, {ReactCalendarHeatmapValue} from "react-calendar-heatmap";
+import {ReactCalendarHeatmapValue} from "react-calendar-heatmap";
 import 'react-calendar-heatmap/dist/styles.css';
 import {M3Pane} from "../common/M3Pane";
 
@@ -88,12 +88,12 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
                         <Typography variant={"h5"} style={{marginTop: 8, marginBottom: 8}} color={"var(--md-sys-color-secondary)"}>Artwork Publish Date Heatmap</Typography>
                         {Array.from(new Set(images.map(value => value.published.substring(0, 4)))).sort((a, b) => b.localeCompare(a)).map(value => <>
                             <Typography variant={"h6"} color={"var(--md-sys-color-tertiary)\"}>"}>{value}</Typography>
-                            <CalendarHeatmap classForValue={getClassForHeatmapSquare}
-                                             showWeekdayLabels
-                                             startDate={`${value}-01-01`}
-                                             values={publishedDates}
-                                             endDate={`${value}-12-31`}
-                                             transformDayElement={getSquareElement}/>
+                            {/*<CalendarHeatmap classForValue={getClassForHeatmapSquare}*/}
+                            {/*                 showWeekdayLabels*/}
+                            {/*                 startDate={`${value}-01-01`}*/}
+                            {/*                 values={publishedDates}*/}
+                            {/*                 endDate={`${value}-12-31`}*/}
+                            {/*                 transformDayElement={getSquareElement}/>*/}
                         </>)}
                     </>
                 </M3Pane>

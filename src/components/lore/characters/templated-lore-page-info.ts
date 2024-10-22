@@ -405,6 +405,7 @@ export const originalCharacters: FormInformation[] = [
         description: "",
         image: "https://alcorsiteartbucket.s3.amazonaws.com/webp/the_beginning.webp",
         imageAspectRatio: 0.6218760142810775,
-        body: ""
+        body: "Alcor is a cougar-dragon hybrid with telekinetic powers. His works as an inventor as his day job, but also enjoys streaming video games, archery, and coding.",
+        history: "Alcor lives in [REDACTED] City, a "
     }
 ]
