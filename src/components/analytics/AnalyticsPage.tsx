@@ -1,12 +1,11 @@
 import {useTagHooks} from "../gallery/UseTagHooks";
-import React, {memo} from "react";
+import React, {memo, ReactNode} from "react";
 import {Grid, Table, TableBody, TableCell, TableHead, TableRow, Tooltip, Typography} from "@mui/material";
 import Chip from "@mui/material-next/Chip";
 import CalendarHeatmap, {ReactCalendarHeatmapValue} from 'react-calendar-heatmap'
 import 'react-calendar-heatmap/dist/styles.css';
 import {M3Pane} from "../common/M3Pane";
 
-type SimplifiedHeatmapValue = ReactCalendarHeatmapValue<string>;
 export const AnalyticsPage = memo(function AnalyticsPage() {
     const {images} = useTagHooks();
 
@@ -23,7 +22,7 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
 
     const sortedArtistRanking = Object.entries(artistRanking).sort((a, b) => Number(b[0]) - Number(a[0]));
 
-    const publishedDates: SimplifiedHeatmapValue[] = images.reduce<SimplifiedHeatmapValue[]>((previousValue, currentValue) => {
+    const publishedDates: ReactCalendarHeatmapValue<string>[] = images.reduce<ReactCalendarHeatmapValue<string>[]>((previousValue, currentValue) => {
         let find = previousValue.find(value => value.date === currentValue.published);
         if (find) {
             find.count += 1;
@@ -33,7 +32,7 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
         }
     }, []);
 
-    function getPublishedDateTooltip(value: SimplifiedHeatmapValue | undefined) {
+    function getPublishedDateTooltip(value: ReactCalendarHeatmapValue<string> | undefined) {
         if (!value) {
             return;
         } else {
@@ -41,12 +40,12 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
         }
     }
 
-    function getClassForHeatmapSquare(value: SimplifiedHeatmapValue | undefined) {
+    function getClassForHeatmapSquare(value: ReactCalendarHeatmapValue<string> | undefined) {
         const count = value?.count ?? 0;
         return !count ? "color-empty" : `color-scale-${Math.min(Number(count), 3)}`;
     }
 
-    function getSquareElement(element: React.ReactElement<any, string | React.JSXElementConstructor<any>>, value: SimplifiedHeatmapValue | undefined) {
+    function getSquareElement(element: React.ReactElement<SVGRectElement, string | React.JSXElementConstructor<any>>, value: ReactCalendarHeatmapValue<string> | undefined): ReactNode {
         if (value?.count) {
             return <Tooltip title={getPublishedDateTooltip(value)} placement="top">{element}</Tooltip>;
         } else {
@@ -93,6 +92,11 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
                                              showWeekdayLabels
                                              startDate={`${value}-01-01`}
                                              values={publishedDates}
+                                             transformDayElement={(element, value) => {
+                                                 // Something is wrong with the types module, the element should be an element object, not props
+                                                 // @ts-ignore
+                                                 return getSquareElement(element, value);
+                                             }}
                                              endDate={`${value}-12-31`}/>
                         </>)}
                     </>
