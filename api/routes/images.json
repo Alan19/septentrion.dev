@@ -5104,5 +5104,45 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/franz_chibis.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/franz_chibis.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/franz_chibis.webp"
+  },
+  {
+    "title": "Pumpkin Battle",
+    "artist": "@KogiKogiKogi1",
+    "tags": [
+      "Hibernal Assassin",
+      "Techwear",
+      "Hoodie",
+      "Knives"
+    ],
+    "href": "https://x.com/KogiKogiKogi1/status/1846591384796672090",
+    "published": "2024-10-16",
+    "aspectRatio": 1.5,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Rain",
+      "Darwin",
+      "Lava"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/pumpkin_battle.gif",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/pumpkin_battle.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pumpkin_battle.webp"
+  },
+  {
+    "title": "Aquarius (Tyl Class)",
+    "artist": "@wolfmalro",
+    "tags": [
+      "Aquarius Form"
+    ],
+    "href": "https://bsky.app/profile/wolfmarlo.bsky.social/post/3l6znzifhwz2p",
+    "published": "2024-10-21",
+    "aspectRatio": 0.9225,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_tyl_class.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_tyl_class.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_tyl_class.webp"
   }
 ]
