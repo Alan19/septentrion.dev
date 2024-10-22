@@ -1,11 +1,12 @@
 import {useTagHooks} from "../gallery/UseTagHooks";
 import React, {memo} from "react";
-import {Grid, Table, TableBody, TableCell, TableHead, TableRow, Typography} from "@mui/material";
+import {Grid, Table, TableBody, TableCell, TableHead, TableRow, Tooltip, Typography} from "@mui/material";
 import Chip from "@mui/material-next/Chip";
-import CalendarHeatmap from 'react-calendar-heatmap'
+import CalendarHeatmap, {ReactCalendarHeatmapValue} from 'react-calendar-heatmap'
 import 'react-calendar-heatmap/dist/styles.css';
 import {M3Pane} from "../common/M3Pane";
 
+type SimplifiedHeatmapValue = ReactCalendarHeatmapValue<string>;
 export const AnalyticsPage = memo(function AnalyticsPage() {
     const {images} = useTagHooks();
 
@@ -21,6 +22,37 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
     }, {});
 
     const sortedArtistRanking = Object.entries(artistRanking).sort((a, b) => Number(b[0]) - Number(a[0]));
+
+    const publishedDates: SimplifiedHeatmapValue[] = images.reduce<SimplifiedHeatmapValue[]>((previousValue, currentValue) => {
+        let find = previousValue.find(value => value.date === currentValue.published);
+        if (find) {
+            find.count += 1;
+            return previousValue;
+        } else {
+            return [...previousValue, {date: currentValue.published, count: 1}];
+        }
+    }, []);
+
+    function getPublishedDateTooltip(value: SimplifiedHeatmapValue | undefined) {
+        if (!value) {
+            return;
+        } else {
+            return `${value?.count} artwork${value?.count > 1 ? "s" : ""} published on ${value?.date}`;
+        }
+    }
+
+    function getClassForHeatmapSquare(value: SimplifiedHeatmapValue | undefined) {
+        const count = value?.count ?? 0;
+        return !count ? "color-empty" : `color-scale-${Math.min(Number(count), 3)}`;
+    }
+
+    function getSquareElement(element: React.ReactElement<any, string | React.JSXElementConstructor<any>>, value: SimplifiedHeatmapValue | undefined) {
+        if (value?.count) {
+            return <Tooltip title={getPublishedDateTooltip(value)} placement="top">{element}</Tooltip>;
+        } else {
+            return element;
+        }
+    }
 
     return (
         <Grid container spacing={2}>
@@ -57,14 +89,11 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
                         <Typography variant={"h5"} style={{marginTop: 8, marginBottom: 8}} color={"var(--md-sys-color-secondary)"}>Artwork Publish Date Heatmap</Typography>
                         {Array.from(new Set(images.map(value => value.published.substring(0, 4)))).sort((a, b) => b.localeCompare(a)).map(value => <>
                             <Typography variant={"h6"} color={"var(--md-sys-color-tertiary)\"}>"}>{value}</Typography>
-                            <CalendarHeatmap startDate={new Date('2016-01-01')}
-                                             endDate={new Date('2016-04-01')}
-                                             values={[
-                                                 {date: '2016-01-01', count: 12},
-                                                 {date: '2016-01-22', count: 122},
-                                                 {date: '2016-01-30', count: 38}]
-                                             }
-                            />
+                            <CalendarHeatmap classForValue={getClassForHeatmapSquare}
+                                             showWeekdayLabels
+                                             startDate={`${value}-01-01`}
+                                             values={publishedDates}
+                                             endDate={`${value}-12-31`}/>
                         </>)}
                     </>
                 </M3Pane>
