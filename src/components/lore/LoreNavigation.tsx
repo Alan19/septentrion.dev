@@ -4,7 +4,9 @@ import ListItemButton from "@mui/material-next/ListItemButton";
 import {Avatar, Collapse} from "@mui/material";
 import {ExpandLess, ExpandMore} from "@mui/icons-material";
 import {Link, useLocation} from "react-router-dom";
-import {alcorForms, superheroSuits} from "./characters/alcorForms";
+import {superheroSuits, templatedLorePageInfo} from "./characters/templated-lore-page-info";
+import alcorIcon from './assets/icons/alcor_icon.png'
+import castorIcon from './assets/icons/castor_icon.png'
 
 function M3ListButton(props: { avatarSrc?: string, indentation?: number, text: string, link: string }) {
     const borderRadius = 'var(--Button-radius, var(--md-sys-shape-corner-full))';
@@ -30,20 +32,23 @@ function M3ListButton(props: { avatarSrc?: string, indentation?: number, text: s
         </ListItemButton></Link>;
 }
 
-function CollapsibleListButton(props: { title: string, children: React.JSX.Element[] }) {
+function CollapsibleListButton(props: { title: string, children: React.JSX.Element[], forceOpen?: boolean }) {
     const [isOpen, setIsOpen] = React.useState(false);
     const handleClick = () => {
-        setIsOpen(!isOpen);
+        if (!forceOpen) {
+            setIsOpen(!isOpen);
+        }
     };
 
+    const {forceOpen = false, children, title} = props;
     return <>
-        <ListItemButton style={{borderRadius: 'var(--Button-radius, var(--md-sys-shape-corner-full))'}} onClick={handleClick}>
-            <ListItemText primary={props.title}/>
+        <ListItemButton style={{borderRadius: 'var(--Button-radius, var(--md-sys-shape-corner-full))'}} onClick={handleClick} disabled={forceOpen}>
+            <ListItemText primary={title}/>
             {isOpen ? <ExpandLess/> : <ExpandMore/>}
         </ListItemButton>
         <Collapse in={isOpen} timeout="auto">
             <List component="div" disablePadding>
-                {props.children.map((child) => child)}
+                {children.map((child) => child)}
             </List>
         </Collapse>
     </>;
@@ -56,10 +61,14 @@ export const LoreNavigation = memo(function AlcorLorePane() {
         <ListItem>
             <ListItemText secondary={"Into the Alcorverse"}/>
         </ListItem>
+        <CollapsibleListButton title={"Main OCs"}>
+            <M3ListButton text={'Alcor'} link={'alcor'} avatarSrc={alcorIcon} indentation={4}/>
+            <M3ListButton text={'Castor'} link={'castor'} indentation={4} avatarSrc={castorIcon}/>
+        </CollapsibleListButton>
         <M3ListButton link={"world"} text={"Alcor's World"}/>
         <M3ListButton text={"Bio-Enhancement"} link={"bio-enhancement"}/>
         <CollapsibleListButton title={"Alternate Formes"}>
-            {alcorForms.map(value => <M3ListButton text={value.name} link={value.link} avatarSrc={value.thumbnail} indentation={4}/>)}
+            {templatedLorePageInfo.map(value => <M3ListButton text={value.name} link={value.link} avatarSrc={value.thumbnail} indentation={4}/>)}
         </CollapsibleListButton>
         <CollapsibleListButton title={"Superhero Suits"}>
             {superheroSuits.map(value => <M3ListButton text={value.name} link={value.link} avatarSrc={value.thumbnail} indentation={4}/>)}

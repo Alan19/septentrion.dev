@@ -31,3 +31,21 @@
     /*noinspection CssUnresolvedCustomProperty*/
     fill: var(--md-sys-color-tertiary)
 }
+
+@keyframes fadeAndSlideFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(2.5vh);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade {
+    animation: .5s ease .25s 1 fadeAndSlideFromBottom;
+    opacity: 1;
+    transform: translateY(0);
+    animation-fill-mode: backwards;
+}

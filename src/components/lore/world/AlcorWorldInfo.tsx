@@ -1,40 +1,35 @@
-import {Fade, Grid, Typography} from "@mui/material";
+import {Grid, Stack, Typography} from "@mui/material";
 import React, {memo} from "react";
-import castor from "../assets/castor.webp"
-import castorEvolution from '../assets/castor-evolved.webp'
 import {AboutPageParagraph} from "../AboutPageParagraph";
 import {PageHeader} from "../PageHeader";
-import {SkeletonImage} from "../../SkeletonImage";
-import {Divider} from "@mui/material-next";
+import {croppedImageWithCurvedBorder} from "../characters/TemplatedLorePage";
 
 export const AlcorWorldInfo = memo(function AlcorWorldInfo() {
-    return <Fade in>
-        <div>
+    return <div>
             <PageHeader title={"Alcor's World"}/>
-            <Grid container direction={"row"} spacing={2}>
-                <Grid item>
-                    <Typography variant={"body1"}>
-                        Alcor is a coguar-dragon hybrid with telekinetic powers who lives in [REDACTED] City in the year 2601. In this time period, the world has solved most of its problems, and most settlements effortlessly combine
-                        high-tech amenities with abundant natural landscapes. While this means that most places are peaceful and wonderful places to live, [REDACTED] City offers thrilling adventures for risk-takers who want to hone their
-                        fighting skills. The city experiences sporadic kaiju attacks, has an active underground street brawling culture, and has a highly traversable layout for parkour enthusiasts.
-                    </Typography>
+            <Grid container spacing={2}>
+                <Grid item xs={0} md={2}>
+                    <img src={'https://alcorsiteartbucket.s3.amazonaws.com/webp/triangle_shot.webp'} style={croppedImageWithCurvedBorder}/>
                 </Grid>
-                <AboutPageParagraph title={"Alcor's Life"}
-                                    text={"Alcor plies his trade as an inventor, creating high-tech gadgets and clothing for people who are interested in active activities. He also participates in parkour in his spare time, and also moonlights as a part-time superhero who rescues people caught in the middle of kaiju attacks while sometimes fighting them. Alcor tries his best to look cool and tough to his clients, but his friends and regulars know that he's much more geeky and kind than he looks. However, they worry too much about his self-experimentation in the pursuit of becoming stronger, as he wants to make sure he's always prepared for any fights that break out."}
-                                    img={<SkeletonImage src={'https://alcorsiteartbucket.s3.amazonaws.com/webp/my_room.webp'} style={{width: '100%'}} aspectRatio={1.4166666666666667}/>}
-                                    colors={["#6B95C1", "#64CCF2", "#DFD9C3", "#DDE0D1"]}/>
-                <Divider variant={"fullWidth"}/>
-                <AboutPageParagraph title={"Castor - Symbiotic Companion"}
-                                    text={"Castor is a symbiote that Alcor made by extracting alien DNA from a meteorite, and then fused with his own organic material to increase the symbiote's compatibility with his own body. While he looks a bit scary and spooky, he's actually really helpful, and helps Alcor destress and unwind from work. Castor's body is made up of exotic matter, which powers a large chunk of Alcor's inventions. This means that while Alcor can fabricate a lot of interesting gadgets, there's a giant waitlist for his commissions. On top of that, Alcor has his own personal projects he is working on, while collaborating he has with other inventors and superheroes in the city, making his waitlist even longer."}
-                                    img={<SkeletonImage src={castor} style={{width: '100%'}} aspectRatio={1615 / 2240}/>}
-                                    colors={["#40A5B6", "#49FFE9", "#44D8CE", "#2D5C98"]}
-                />
-                <AboutPageParagraph title={"Castor β - Sentinel Mode"}
-                                    text="When Alcor is incapacitated, Castor is able to seamlessly assume control of Alcor's body to defend him from further harm. This increases the percentage of exotic matter in Alcor's body, allowing Castor to mold Alcor's body into an evolved form personalized for Castor, dubbed Sentinel Mode. In Sentinel Mode, Castor is able to fire globs of exotic matter that quickly binds hostile entities on contact. In addition, his sensory abilities are enhanced, allowing for better detection of potential threats. Castor can also assume this form for short periods of time outside of combat, but without any of the defensive capabilities. This limitation leaves Castor disheartened, as he yearns for liberation from his role as the lab's mascot, aspiring instead for him permanently having his imposing physical form."
-                                    img={<SkeletonImage src={castorEvolution} style={{width: '100%'}} aspectRatio={1430 / 2272}/>}
-                                    variant={"h6"}
-                />
+                <Grid item xs={12} md={10}>
+                    <Stack spacing={'1rem'}>
+                        <Typography variant={"body1"}>
+                            Alcor is a coguar-dragon hybrid with telekinetic powers who lives in [REDACTED] City in the year 2601. At the dawn of the 27th century, climate change, geopolitical conflicts, and resource scarcity is no longer a
+                            problem. Most settlements offer high-tech amenities and ample greenspace, allowing everyone to find a place that fits their preferences. Methods of self-expression is readily available, with custom clothing and
+                            body modifications being a quick 3D-print or consultation away. While most places are peaceful and (relatively) uneventful places to live in, [REDACTED] City is filled with 'thrilling' experiences for people
+                            seeking a more exciting and dynamic lifestyle.
+                        </Typography>
+                        <Typography variant={"body1"}>
+                            The city's harbor and surrounding grasslands experience occasional kaiju attacks, making it a tempting destination for people who have talents in combat or engineering. The city is designed for parkour as most
+                            outdoor areas are accessible for the public, with many semi-hidden rooftop plazas being hangout spots for friend groups. A mix of aerial taxi services combined with personal gravity dampeners are used by people
+                            who can't physically reach those areas, allowing them to access those hard to reach spots. There's also plenty of training events, which allows people to stay active to prepare for kaiju attacks and to improve
+                            their overall fitness.
+                        </Typography>
+                        <AboutPageParagraph title={"Alcor's Life"}
+                                            text={"Alcor plies his trade as an inventor, creating high tech gadgets and clothing for people interested in participating in physically active activities like defense, parkour, or brawling. He also participates in parkour in his spare time, and also moonlights as a part-time superhero who rescues people caught in the middle of kaiju attacks. Alcor tries to maintain a cool and powerful image, but his friends know that he's much more geeky and kind than he looks. However, they worry too much about his self-experimentation in the pursuit of becoming stronger, as he wants to make sure he's always prepared for any fights that break out."}/>
+                    </Stack>
+                    {/*TODO Add background images*/}
+                </Grid>
             </Grid>
-        </div>
-    </Fade>;
+    </div>;
 });
