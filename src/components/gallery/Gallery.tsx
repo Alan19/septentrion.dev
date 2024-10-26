@@ -1,5 +1,5 @@
 import React, {memo, useEffect, useState} from "react";
-import {Fab, Fade, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Stack, Typography, useMediaQuery,} from "@mui/material";
+import {Fab, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Stack, Typography, useMediaQuery,} from "@mui/material";
 import {ImageInformation, isImageInformation} from "../ImageInformation";
 import "./gallery.css";
 import {theme} from "../../App";
@@ -80,72 +80,70 @@ export const Gallery = memo(function Gallery() {
     }
 
     const height = 400;
-    const content = <Fade in>
-        <div>
-            <Typography variant={"h3"} color={"var(--md-sys-color-primary)"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
-            <div ref={ref}></div>
-            <Stack direction={"column"} spacing={2}>
-                <div style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
-                    <Grid container justifyContent={"space-between"} alignItems={"flex-end"}>
-                        <RadioGroup value={displayMode}>
-                            <FormControlLabel value={"paginated"} control={<Radio onChange={(_event) => setDisplayMode("paginated")}/>}
-                                              label="Display images in pages"/>
-                            <FormControlLabel value={"all"} control={<Radio onChange={(_event) => setDisplayMode("all")}/>}
-                                              label="Display all images on one page"/>
-                            <FormControlLabel value={"monthly"} control={<Radio onChange={(_event) => setDisplayMode("monthly")}/>}
-                                              label="Separate images by month"/>
-                        </RadioGroup>
-                        {
-                            displayMode === "paginated" && <Grid item>
-                                <Pagination style={{marginBottom: "8px"}}
-                                            count={Math.ceil(shownImages.length / pageSize)}
-                                            page={page}
-                                            onChange={handlePageChange}
-                                            showFirstButton
-                                            showLastButton/>
-                            </Grid>
-                        }
-                    </Grid>
-
-
-                    {displayMode === "monthly" ?
-                        <MonthSeparatedGallery displayedImages={shownImages}
-                                               width={bounds.width}
-                                               height={height}
-                                               setCurrentImage={handleImageClicked}
-                                               altInfo={altData}/> :
-                        <TSJustifiedLayout width={bounds.width}
-                                           targetRowHeight={height}
-                                           rowSpacing={8}
-                                           itemSpacing={8}
-                                           containerStyle={{position: "relative"}}
-                                           layoutItems={imagesOnPage.map(value => (
-                                               value.aspectRatio ?? 1
-                                           ))}>
-                            {imagesOnPage.map(value => <Link to={prepareFileName(value.title)}><SkeletonImage
-                                hasAlts={altData.has(value.title)}
-                                alt={value.title}
-                                src={value.thumbnailUrl ?? value.src}
-                                imageClassname={"artImage"}
-                                aspectRatio={value.aspectRatio ?? 1}/></Link>)}
-                        </TSJustifiedLayout>
+    const content = <>
+        <Typography variant={"h3"} color={"var(--md-sys-color-primary)"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
+        <div ref={ref}></div>
+        <Stack direction={"column"} spacing={2}>
+            <div style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
+                <Grid container justifyContent={"space-between"} alignItems={"flex-end"}>
+                    <RadioGroup value={displayMode}>
+                        <FormControlLabel value={"paginated"} control={<Radio onChange={(_event) => setDisplayMode("paginated")}/>}
+                                          label="Display images in pages"/>
+                        <FormControlLabel value={"all"} control={<Radio onChange={(_event) => setDisplayMode("all")}/>}
+                                          label="Display all images on one page"/>
+                        <FormControlLabel value={"monthly"} control={<Radio onChange={(_event) => setDisplayMode("monthly")}/>}
+                                          label="Separate images by month"/>
+                    </RadioGroup>
+                    {
+                        displayMode === "paginated" && <Grid item>
+                            <Pagination style={{marginBottom: "8px"}}
+                                        count={Math.ceil(shownImages.length / pageSize)}
+                                        page={page}
+                                        onChange={handlePageChange}
+                                        showFirstButton
+                                        showLastButton/>
+                        </Grid>
                     }
-                </div>
-            </Stack>
-            <Stack style={{position: 'fixed', bottom: 16, right: 16, alignItems: 'end'}} spacing={2}>
-                <Fab onClick={() => navigation({
-                    pathname: "/reference",
-                    search: createSearchParams({'reference-name': referenceName, 'filter-mode': filterMode, filters: filters.toString()}).toString()
-                })}
-                     color="primary"
-                     aria-label="share"
-                     size={"small"}>
-                    <Share/>
-                </Fab>
-                <Uploader loadImageInfo={loadImageInfo}/>
-            </Stack>
-        </div>
-    </Fade>;
+                </Grid>
+
+
+                {displayMode === "monthly" ?
+                    <MonthSeparatedGallery displayedImages={shownImages}
+                                           width={bounds.width}
+                                           height={height}
+                                           setCurrentImage={handleImageClicked}
+                                           altInfo={altData}/> :
+                    <TSJustifiedLayout width={bounds.width}
+                                       targetRowHeight={height}
+                                       rowSpacing={8}
+                                       itemSpacing={8}
+                                       containerStyle={{position: "relative"}}
+                                       layoutItems={imagesOnPage.map(value => (
+                                           value.aspectRatio ?? 1
+                                       ))}>
+                        {imagesOnPage.map(value => <Link to={prepareFileName(value.title)}><SkeletonImage
+                            hasAlts={altData.has(value.title)}
+                            alt={value.title}
+                            src={value.thumbnailUrl ?? value.src}
+                            imageClassname={"artImage"}
+                            aspectRatio={value.aspectRatio ?? 1}/></Link>)}
+                    </TSJustifiedLayout>
+                }
+            </div>
+        </Stack>
+        <Stack style={{marginTop: 8, alignItems: 'end'}} spacing={2}>
+            <Fab onClick={() => navigation({
+                pathname: "/reference",
+                search: createSearchParams({'reference-name': referenceName, 'filter-mode': filterMode, filters: filters.toString()}).toString()
+            })}
+                 color="primary"
+                 aria-label="share"
+                 size={"small"}>
+                <Share/>
+            </Fab>
+            <Uploader loadImageInfo={loadImageInfo}/>
+        </Stack>
+    </>;
     return <RouteWithSubpanel panel={<FilterPane filterMode={filterMode} setFilterMode={setFilterMode} filters={filters} setFilters={handleTagChange}/>} routeContent={content}/>;
 });
 

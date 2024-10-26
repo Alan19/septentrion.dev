@@ -4859,8 +4859,8 @@
     "tags": [
       "Triangulum Form"
     ],
-    "href": "https://skeb.jp/@TOOMIRO/works/149",
-    "published": "2024-09-13",
+    "href": "https://x.com/TOOMIRO/status/1837067703896658145",
+    "published": "2024-09-20",
     "aspectRatio": 0.7761194029850746,
     "rating": "mainstream",
     "characters": [
@@ -5075,8 +5075,8 @@
       "Techwear",
       "Hoodie"
     ],
-    "href": "https://skeb.jp/@rumie_take/works/47",
-    "published": "2024-09-30",
+    "href": "https://x.com/rumie_take/status/1844150937138712883",
+    "published": "2024-10-09",
     "aspectRatio": 0.7069555302166477,
     "rating": "mainstream",
     "characters": [
@@ -5104,5 +5104,101 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/franz_chibis.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/franz_chibis.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/franz_chibis.webp"
+  },
+  {
+    "title": "Pumpkin Battle",
+    "artist": "@KogiKogiKogi1",
+    "tags": [
+      "Hibernal Assassin",
+      "Techwear",
+      "Hoodie",
+      "Knives"
+    ],
+    "href": "https://x.com/KogiKogiKogi1/status/1846591384796672090",
+    "published": "2024-10-16",
+    "aspectRatio": 1.5,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Rain",
+      "Darwin",
+      "Lava"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/pumpkin_battle.gif",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/pumpkin_battle.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pumpkin_battle.webp"
+  },
+  {
+    "title": "Aquarius (Tyl Class)",
+    "artist": "@wolfmalro",
+    "tags": [
+      "Aquarius Form"
+    ],
+    "href": "https://bsky.app/profile/wolfmarlo.bsky.social/post/3l6znzifhwz2p",
+    "published": "2024-10-21",
+    "aspectRatio": 0.9225,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_tyl_class.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_tyl_class.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_tyl_class.webp"
+  },
+  {
+    "title": "Supportive Sidekick",
+    "artist": "@sumiwohakuneko",
+    "tags": [
+      "Aldhibah Form",
+      "Techwear",
+      "Hoodie"
+    ],
+    "href": "https://x.com/sumiwohakuneko/status/1849417978837950905",
+    "published": "2024-10-24",
+    "aspectRatio": 0.6379542395693136,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/supportive_sidekick.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/supportive_sidekick.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/supportive_sidekick.webp"
+  },
+  {
+    "title": "Castor Shading Test",
+    "artist": "@paradox_ian",
+    "tags": [
+    ],
+    "href": "",
+    "published": "2024-10-23",
+    "aspectRatio": 1.414516129032258,
+    "rating": "mainstream",
+    "characters": [
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_shading_test.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/castor_shading_test.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_shading_test.webp"
+  },
+  {
+    "title": "Tornatics Chibi",
+    "artist": "@Tornatics",
+    "tags": [
+      "Techwear",
+      "Hibernal Assassin",
+      "Rastaban Form",
+      "Hoodie"
+    ],
+    "href": "https://bsky.app/profile/tornatic.bsky.social/post/3l7e7jozfu425",
+    "published": "2024-10-25",
+    "aspectRatio": 1,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/tornatics_chibi.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/tornatics_chibi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/tornatics_chibi.webp"
   }
 ]

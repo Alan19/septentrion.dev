@@ -7,7 +7,7 @@ export function AboutMePage() {
     return (
         <M3Pane>
             <>
-                <PageHeader title={"About Me"}/>
+                <PageHeader title={"About Me (IRL)"}/>
                 <Divider/>
                 <Grid style={{marginTop: 0}} container spacing={3}>
                     <Grid item md={8}>

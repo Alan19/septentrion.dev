@@ -10,8 +10,13 @@ import aquariusIcon from "../assets/icons/aquarius-icon.webp"
 import jupiterIcon from "../assets/icons/jupiter-icon.webp"
 import triangulumIcon from "../assets/icons/triangulum-icon.webp"
 import biogenesisIcon from "../assets/icons/biogenesis-icon.webp"
+import alcorIcon from '../assets/icons/alcor_icon.png'
+import castorIcon from '../assets/icons/castor_icon.png'
+import castorSplashImage from '../assets/splash/castor-splash.png'
+import castor2SplashImage from '../assets/castor-evolved.webp'
+import alcorSplash from '../assets/splash/alcor-splash.png'
 
-export const alcorForms: FormInformation[] = [
+export const templatedLorePageInfo: FormInformation[] = [
     {
         name: "Aquarius Form",
         thumbnail: aquariusIcon,
@@ -392,5 +397,41 @@ export const superheroSuits: FormInformation[] = [
         imageAspectRatio: 1.0115606936416186,
         body: "This hero suit sports a labcoat to give off the vibe of a doctor or scientist. This is contrasted with a pitch black bodysuit with glowing green lines of exotic matter running to it hooked up to tanks of exotic matter to pump more exotic matter into Alcor's body to enhance it at a moment's notice. With his face mostly consumed by his symbiote, it gives him the perfect mad scientist vibe. His primary weapon is his dart gun, which is loaded with programmable symbiote matter, allowing him to use it to inject healing, paralytic, or mutagenic substances into others. Those who are injected with the symbiote mutagen tend to regenerate from their injuries at a rapid rate, while mutating into symbiote monsters that express their personality and fighting styles in 'a new light'. His claws and tail spikes are also tipped with the same symbiote matter, allowing him to administer it in close range as well. As combat intensifies, or when he needs more physical strength, his suit can rapidly pump more exotic matter into his body, augmenting his physical strength and physique, without forcing him to evolve when his body reaches the various thresholds for exotic matter. This minimizes the risk of wardrobe malfunctions, but he can manually override this restriction when he wants to look more intimidating.",
         history: `Alcor developed the Biogenesis suit when he and Castor were thinking of a way to express their identity as AICore while performing superhero duties. Due to ethical concerns, he only administers healing and paralytic substances, and only gives mutagens to people who have already consented to accepting the mutagen, or in life or death situations. His mutagenic abilities sometimes causes him to make a scene by impaling his allies on his claws, and then seeing the expression on onlookers' faces as his allies rapidly recover from their injuries and possibly transform into what looks like a video game boss' second health bar. The transformation is temporary, but people who are interested in their monstrous forms are invited to come to Alcor's lab for checkups and consultations on how to fully customize their symbiote monster forms. Alcor is delighted to help others bring out their 'inner monster' and loves showing his evolved forms to others, but the number of volunteers has stayed in the single digits, mainly limited to his close friends. A lesser known fact is that this suit draws some inspiration from a superhero suit Alcor once designed and modeled in that is reminiscent of a war general from the far east. That suit is now manufactured as standard issue for another city's defense force against Kaiju attacks, but Alcor's original design also came with some extra accessories that was removed as it looks out of place when it is something designed to be worn by large groups of people.`
+    }
+]
+
+export const originalCharacters: FormInformation[] = [
+    {
+        name: "Alcor",
+        thumbnail: alcorIcon,
+        link: "alcor",
+        description: "",
+        image: alcorSplash,
+        imageAspectRatio: 0.6218760142810775,
+        body: "Alcor is a cougar-dragon hybrid with telekinetic powers. His works as an inventor as his day job, but also enjoys streaming video games, archery, and coding. He prefers daggers as his primary weapon, as he tries to adopt a stealthy and rouge-like fighting style, although he is not actually formally trained in combat. His body is fairly fit, but not overly muscular... at least in his normal form. Almost everything Alcor uses can be claimed to be unique, as he's modified almost everything to fit his preferences. This even includes things like his clothes, computer personalization, and weapons.",
+        history: "Alcor was originally a human, but he eventually had his body modified to become an anthropomorphic cougar-dragon hybrid once he was an adult. His reasons for choosing a cougar-dragon hybrid are that it would be unique, and it was species of the character he played in a role playing game he was playing for a long time. While his transition to his new body went seamlessly, he also liked his human body. However, he cannot revert back to it easily until he created Castor, his symbiote, who can manage some less intensive shapeshifting effects for him.",
+        specs: [
+            {md: 8, xl: 3, content: {tableContents: {Height: `5'5"`, Weapons: "Nanotech Daggers", Armor: "Technical Outerwear", Affinity: "Kinesis"}}},
+            {md: 4, xl: 3, xs: 12, content: [2, 1, 5, 5, 3, 4]},
+            {md: 9, xl: 3, content: {tableContents: {"Favorite Food": "Strawberries", "Zodiac Sign": "Virgo", "Average Bedtime": "2AM"}},},
+            {md: 3, xl: 3, xs: 12, content: 'https://alcorsiteartbucket.s3.amazonaws.com/webp/supportive_sidekick.webp'},
+            {md: 7, xl: 5, content: {tableContents: {Role: "Technical Rogue", Mutable: "Yes", "Average Power Class": "Thuban / Rastaban"}},},
+            {md: 5, xl: 7, xs: 12, content: 'https://alcorsiteartbucket.s3.amazonaws.com/webp/character_movement_studies_but_blue.webp'}
+        ]
+    },
+    {
+        name: "Castor",
+        thumbnail: castorIcon,
+        link: "castor",
+        description: "Alcor's symbiote companion, who helps keep him emotionally stable and also powers him up.",
+        image: castorSplashImage,
+        imageAspectRatio: 1,
+        body: "Castor is a symbiote that Alcor made by extracting alien DNA from a meteorite, which was then fused with his own DNA to increase the symbiote's compatibility with his own body. While he looks a bit scary and spooky, he's actually really helpful, and helps Alcor destress and unwind from work. When Alcor is incapacitated, Castor is able to seamlessly assume control of Alcor's body to defend him from further harm. This increases the percentage of exotic matter in Alcor's body, allowing Castor to mold Alcor's body into an evolved form personalized for Castor, dubbed Sentinel Mode. In Sentinel Mode, Castor tries his best to shield Alcor from further harm and heal his injuries as quickly as possible by focusing on crowd control, speed, and perception. Castor can also assume this form for short periods of time outside of combat, but with severly dimished combat abilites, so it is purely cosmetic.",
+        history: "Castor's body is made up of exotic matter, which powers a large chunk of Alcor's inventions with space warping and interfacing abilities. However, the generation rate of exotic matter is slow, so there is a long waitlist for commissions that use said material. On top of that, Alcor has his own personal projects he is working on, which makes the waitlist even longer.",
+        specs: [
+            {md: 5, content: {tableContents: {Height: `1'6" (Default) / 5'5" (Transformed)`, Weapons: "EM Bullets", Armor: "EM Accessories", Affinity: "Light"}}},
+            {content: castor2SplashImage, md: 3},
+            {content: [1, 3, 4, 5, 4, 3], md: 4}
+        ]
     }
 ]
