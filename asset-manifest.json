@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b6165690.css",
-    "main.js": "/static/js/main.4533dd08.js",
+    "main.js": "/static/js/main.271d2cc0.js",
     "static/js/488.9598de75.chunk.js": "/static/js/488.9598de75.chunk.js",
     "static/js/780.3033484f.chunk.js": "/static/js/780.3033484f.chunk.js",
     "static/js/0.143adada.chunk.js": "/static/js/0.143adada.chunk.js",
@@ -10,12 +10,14 @@
     "static/media/vernal.png": "/static/media/vernal.559a91bb146731675ae6.png",
     "static/media/aicore-splash-1.webp": "/static/media/aicore-splash-1.f81b2e08b877334d0463.webp",
     "static/media/estival.png": "/static/media/estival.08ab3cda019148a36cf2.png",
+    "static/media/alcor-splash.png": "/static/media/alcor-splash.db0afa6ac0629539be4b.png",
     "static/media/serotinal.png": "/static/media/serotinal.b14b253c5bbde90b865b.png",
     "static/media/aquarius-splash.webp": "/static/media/aquarius-splash.eb507ca6b88d4dc61295.webp",
     "static/media/triangulum-splash.webp": "/static/media/triangulum-splash.d7fc39c85bda468547fd.webp",
     "static/media/gemini-icon.webp": "/static/media/gemini-icon.73674cc0bae5eb986bd8.webp",
     "static/media/castor_icon.png": "/static/media/castor_icon.c5542400ceac426164fc.png",
     "static/media/aicore-splash-3.webp": "/static/media/aicore-splash-3.c11065c258ef7ef48a21.webp",
+    "static/media/castor-splash.png": "/static/media/castor-splash.e7fa768ca827552b5f6c.png",
     "static/media/Character_Badge_-page009.webp": "/static/media/Character_Badge_-page009.902c0ca0c16ccbc531c6.webp",
     "static/media/Character_Badge_-page005.webp": "/static/media/Character_Badge_-page005.813df1ec14875995a52d.webp",
     "static/media/Character_Badge_-page012.webp": "/static/media/Character_Badge_-page012.44c0d411a877ee781ce6.webp",
@@ -32,7 +34,6 @@
     "static/media/Character_Badge_-page007.webp": "/static/media/Character_Badge_-page007.49d6fc789bd46d08445f.webp",
     "static/media/Character_Badge_-page003.webp": "/static/media/Character_Badge_-page003.3791d02d2883e6e0e601.webp",
     "static/media/aicore-splash-2.webp": "/static/media/aicore-splash-2.b3408ad8b8261af7120f.webp",
-    "static/media/castor.webp": "/static/media/castor.1aefc8a6603444526ecc.webp",
     "static/media/alcor_icon.png": "/static/media/alcor_icon.142302e573e4f46b86fb.png",
     "static/media/Character_Badge_-page010.webp": "/static/media/Character_Badge_-page010.4621b667df5e020c7f26.webp",
     "static/media/biogenesis-icon.webp": "/static/media/biogenesis-icon.10a9bb0dcab218e02ed1.webp",
@@ -41,13 +42,13 @@
     "static/media/OriginTech personal use.ttf": "/static/media/OriginTech personal use.91ec04328d7a9da85f53.ttf",
     "index.html": "/index.html",
     "main.b6165690.css.map": "/static/css/main.b6165690.css.map",
-    "main.4533dd08.js.map": "/static/js/main.4533dd08.js.map",
+    "main.271d2cc0.js.map": "/static/js/main.271d2cc0.js.map",
     "488.9598de75.chunk.js.map": "/static/js/488.9598de75.chunk.js.map",
     "780.3033484f.chunk.js.map": "/static/js/780.3033484f.chunk.js.map",
     "0.143adada.chunk.js.map": "/static/js/0.143adada.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b6165690.css",
-    "static/js/main.4533dd08.js"
+    "static/js/main.271d2cc0.js"
   ]
 }
