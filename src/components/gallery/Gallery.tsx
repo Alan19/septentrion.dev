@@ -80,7 +80,7 @@ export const Gallery = memo(function Gallery() {
     }
 
     const height = 400;
-    const content = <div>
+    const content = <>
         <Typography variant={"h3"} color={"var(--md-sys-color-primary)"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
         <div ref={ref}></div>
         <Stack direction={"column"} spacing={2}>
@@ -131,7 +131,7 @@ export const Gallery = memo(function Gallery() {
                 }
             </div>
         </Stack>
-        <Stack style={{position: 'fixed', bottom: 16, right: 16, alignItems: 'end'}} spacing={2}>
+        <Stack style={{marginTop: 8, alignItems: 'end'}} spacing={2}>
             <Fab onClick={() => navigation({
                 pathname: "/reference",
                 search: createSearchParams({'reference-name': referenceName, 'filter-mode': filterMode, filters: filters.toString()}).toString()
@@ -143,7 +143,7 @@ export const Gallery = memo(function Gallery() {
             </Fab>
             <Uploader loadImageInfo={loadImageInfo}/>
         </Stack>
-    </div>;
+    </>;
     return <RouteWithSubpanel panel={<FilterPane filterMode={filterMode} setFilterMode={setFilterMode} filters={filters} setFilters={handleTagChange}/>} routeContent={content}/>;
 });
 
