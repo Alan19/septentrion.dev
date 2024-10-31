@@ -723,7 +723,8 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/couple_s_sketchpage_2022.webp",
     "characters": [
       "Alcor",
-      "Lava"
+      "Lava",
+      "Castor"
     ],
     "rating": "general"
   },
@@ -1331,7 +1332,7 @@
     "rating": "mainstream",
     "characters": [
       "Alcor",
-      "Castor"
+      "Lava"
     ]
   },
   {
@@ -4422,23 +4423,6 @@
     ]
   },
   {
-    "title": "Halloween 2023",
-    "artist": "@_koudro",
-    "tags": [
-      "Eltanin Form"
-    ],
-    "href": "",
-    "published": "2024-08-07",
-    "aspectRatio": 0.73828125,
-    "rating": "sensitive",
-    "characters": [
-      "Alcor"
-    ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/halloween_2023.jpg",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/halloween_2023.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/halloween_2023.webp"
-  },
-  {
     "title": "Natsu Matsuri 2024",
     "artist": "@earth3128",
     "tags": [
@@ -5022,7 +5006,7 @@
     "href": "https://x.com/LuxuriaLethe/status/1841488212537315377",
     "published": "2024-10-02",
     "aspectRatio": 0.7366666666666667,
-    "rating": "general",
+    "rating": "sensitive",
     "characters": [
       "Alcor"
     ],
@@ -5168,8 +5152,7 @@
   {
     "title": "Castor Shading Test",
     "artist": "@paradox_ian",
-    "tags": [
-    ],
+    "tags": [],
     "href": "",
     "published": "2024-10-23",
     "aspectRatio": 1.414516129032258,
@@ -5200,5 +5183,57 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/tornatics_chibi.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/tornatics_chibi.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/tornatics_chibi.webp"
+  },
+  {
+    "title": "Alcor Artwork by Kurava",
+    "artist": "@kurava1000",
+    "tags": [
+      "Thuban Form",
+      "Techwear"
+    ],
+    "href": "https://x.com/kurava1000/status/1851294660930798020",
+    "published": "2024-10-29",
+    "aspectRatio": 0.7111111111111111,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_artwork_by_kurava.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_artwork_by_kurava.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_artwork_by_kurava.webp"
+  },
+  {
+    "title": "Pumpkin YCH",
+    "artist": "@_koudro",
+    "tags": [
+      "Eltanin Form"
+    ],
+    "href": "",
+    "published": "2024-10-30",
+    "aspectRatio": 0.7381284916201117,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/pumpkin_ych.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/pumpkin_ych.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pumpkin_ych.webp"
+  },
+  {
+    "title": "Halloween Fashion Sketch",
+    "artist": "@KuroPenguinEx",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.bsky.social/post/3l7t2k5edor2a",
+    "published": "2024-10-31",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/halloween_fashion_sketch.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/halloween_fashion_sketch.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/halloween_fashion_sketch.webp"
   }
 ]
