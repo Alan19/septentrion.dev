@@ -17,6 +17,7 @@ import {useQueryState} from "react-router-use-location-state";
 import {prepareFileName} from "./Utils";
 import {Share} from "@mui/icons-material";
 import {SelectedFilters} from "./TagUtils";
+import {croppedImageWithCurvedBorder} from "../lore/characters/TemplatedLorePage";
 
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
     // @ts-ignore
@@ -126,6 +127,7 @@ export const Gallery = memo(function Gallery() {
                             alt={value.title}
                             src={value.thumbnailUrl ?? value.src}
                             imageClassname={"artImage"}
+                            style={croppedImageWithCurvedBorder}
                             aspectRatio={value.aspectRatio ?? 1}/></Link>)}
                     </TSJustifiedLayout>
                 }

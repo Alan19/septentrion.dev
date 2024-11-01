@@ -4,6 +4,7 @@ import {AltInformation, ImageInformation} from "../ImageInformation";
 import {getMonthYearPairsInImageSet} from "./Gallery";
 import {SkeletonImage} from "../SkeletonImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
+import {croppedImageWithCurvedBorder} from "../lore/characters/TemplatedLorePage";
 
 function ChronologicalGallery(props: {
     displayedImages: ImageInformation[],
@@ -30,6 +31,7 @@ function ChronologicalGallery(props: {
         >
             {imagesForMonth.map(value => <SkeletonImage
                 onClick={() => props.setCurrentImage(value)}
+                style={croppedImageWithCurvedBorder}
                 hasAlts={props.altInfo.has(value.title)}
                 alt={value.title}
                 src={value.thumbnailUrl ?? value.src}

@@ -4,9 +4,10 @@ import ListItemButton from "@mui/material-next/ListItemButton";
 import {Avatar, Collapse} from "@mui/material";
 import {ExpandLess, ExpandMore} from "@mui/icons-material";
 import {Link, useLocation} from "react-router-dom";
-import {superheroSuits, templatedLorePageInfo} from "./characters/templated-lore-page-info";
 import alcorIcon from './assets/icons/alcor_icon.png'
 import castorIcon from './assets/icons/castor_icon.png'
+import {templatedLorePageInfo} from "./characters/template-info/alcor-forms";
+import {superheroSuits} from "./characters/template-info/superhero-suits";
 
 function M3ListButton(props: { avatarSrc?: string, indentation?: number, text: string, link: string }) {
     const borderRadius = 'var(--Button-radius, var(--md-sys-shape-corner-full))';

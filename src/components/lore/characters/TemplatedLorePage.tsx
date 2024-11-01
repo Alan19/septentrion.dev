@@ -1,11 +1,13 @@
 import React from "react";
-import {Divider, Grid, GridSize, Table, TableCell, TableHead, TableRow, Typography} from "@mui/material";
+import {Divider, Grid, GridSize, ImageList, ImageListItem, Table, TableCell, TableHead, TableRow, Typography} from "@mui/material";
 import {useParams} from "react-router-dom";
 import {PageHeader} from "../PageHeader";
 import {SkeletonImage} from "../../SkeletonImage";
-import {originalCharacters, superheroSuits, templatedLorePageInfo} from "./templated-lore-page-info";
 import {Radar} from 'react-chartjs-2';
 import {Chart as ChartJS, Filler, Legend, LineElement, PointElement, RadialLinearScale, Tooltip} from 'chart.js';
+import {templatedLorePageInfo} from "./template-info/alcor-forms";
+import {superheroSuits} from "./template-info/superhero-suits";
+import {originalCharacters} from "./template-info/original-characters";
 
 // Register the components needed for the radar chart
 ChartJS.register(
@@ -51,7 +53,8 @@ export type FormInformation = {
         lg?: GridSize,
         xl?: GridSize,
         content: (InfoTable | string | AttributeScores)
-    }[]
+    }[],
+    gallery?: (string | React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>)[]
 };
 
 export const m3BorderStyle = {borderRadius: 28, border: 'var(--md-sys-color-outlineVariant) 2px solid'};
@@ -101,7 +104,7 @@ export function TemplatedLorePage() {
     const formName = encodeURIComponent(useParams().character ?? "");
     const formObject = templatedLorePageInfo.concat(superheroSuits).concat(originalCharacters).find(value => value.link === formName);
     if (formObject) {
-        const {name, body, history, image, imageAspectRatio} = formObject;
+        const {name, body, history, image, imageAspectRatio, specs, gallery} = formObject;
         return <>
             <PageHeader title={name}/>
             <Grid container spacing={'1rem'} justifyContent={"stretch"}>
@@ -115,42 +118,71 @@ export function TemplatedLorePage() {
                     <Typography>
                         {history}
                     </Typography>
-                    <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
-                    <Typography variant={"h5"} style={{marginBottom: 8}}>Specs</Typography>
-                    <Grid container spacing={'1rem'} alignContent={'stretch'}>
-                        {formObject.specs?.map(value => {
-                            const {xl, md, lg, xs, sm, content} = value;
-                            const gridSizes = {xs: xs, sm: sm, md: md, lg: lg, xl: xl};
-                            if (typeof content === 'string') {
-                                return <Grid item {...gridSizes}>
-                                    <img src={content} style={croppedImageWithCurvedBorder}/>
-                                </Grid>
-                            } else if (Array.isArray(content)) {
-                                return <Grid item {...gridSizes}><FormStatRadarChart label={name} attributeScores={content}/></Grid>
-                            } else {
-                                return <Grid item {...gridSizes}>
-                                    <div style={{...m3BorderStyle, padding: 8, height: '100%'}}>
-                                        <Table size="small">
-                                            {content.tableHeader && <TableHead>
-                                                <TableRow>
-                                                    <TableCell>{content.tableHeader.header1}</TableCell>
-                                                    <TableCell>{content.tableHeader.header2}</TableCell>
-                                                </TableRow>
-                                            </TableHead>}
+                    {
+                        specs && <>
+                            <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
+                            <Typography variant={"h5"} style={{marginBottom: 8}}>Specs</Typography>
+                            <Grid container spacing={'1rem'} alignContent={'stretch'}>
+                                {specs?.map(value => {
+                                    const {xl, md, lg, xs, sm, content} = value;
+                                    const gridSizes = {xs: xs, sm: sm, md: md, lg: lg, xl: xl};
+                                    if (typeof content === 'string') {
+                                        return <Grid item {...gridSizes}>
+                                            <img src={content} style={croppedImageWithCurvedBorder}/>
+                                        </Grid>
+                                    } else if (Array.isArray(content)) {
+                                        return <Grid item {...gridSizes}><FormStatRadarChart label={name} attributeScores={content}/></Grid>
+                                    } else {
+                                        return <Grid item {...gridSizes}>
+                                            <div style={{...m3BorderStyle, padding: 8, height: '100%'}}>
+                                                <Table size="small">
+                                                    {content.tableHeader && <TableHead>
+                                                        <TableRow>
+                                                            <TableCell>{content.tableHeader.header1}</TableCell>
+                                                            <TableCell>{content.tableHeader.header2}</TableCell>
+                                                        </TableRow>
+                                                    </TableHead>}
+                                                    {
+                                                        Object.entries(content.tableContents).map(entry => <TableRow>
+                                                            <TableCell>{entry[0]}</TableCell>
+                                                            <TableCell>{entry[1]}</TableCell>
+                                                        </TableRow>)
+                                                    }
+                                                </Table>
+                                            </div>
+                                        </Grid>
+                                    }
+                                })}
+                            </Grid>
+                        </>
+                    }
+                </Grid>
+                <Grid item md={12}>
+                    {
+                        gallery && <>
+                            <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
+                            <Typography variant={"h5"} style={{marginBottom: 8}}>Gallery</Typography>
+                            <ImageList variant="masonry" cols={4} gap={16}>
+                                {gallery.map((item) => {
+                                    const src = typeof item === 'string' ? item : item.src;
+                                    return (
+                                        <ImageListItem key={src} cols={2}>
                                             {
-                                                Object.entries(content.tableContents).map(entry => <TableRow>
-                                                    <TableCell>{entry[0]}</TableCell>
-                                                    <TableCell>{entry[1]}</TableCell>
-                                                </TableRow>)
+                                                typeof item === 'string' ? <img
+                                                    src={src}
+                                                    loading="lazy"
+                                                    style={croppedImageWithCurvedBorder}
+                                                /> : <img {...item} />
                                             }
-                                        </Table>
-                                    </div>
-                                </Grid>
-                            }
-                        })}
-                    </Grid>
+                                        </ImageListItem>
+                                    );
+                                })}
+                            </ImageList>
+                        </>
+                    }
                 </Grid>
             </Grid>
+
         </>
     } else {
         // TODO Add error boundary
