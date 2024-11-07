@@ -4,7 +4,7 @@
 }
 
 .artImage {
-    transition: border-radius .2s ease .1s, opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition: border-radius .2s ease, opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .css-n49kub-MuiButtonBase-root-MuiRadio-root.Mui-checked {

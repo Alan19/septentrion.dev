@@ -81,6 +81,7 @@ export const Gallery = memo(function Gallery() {
     }
 
     const height = 400;
+    const tolerance = .2;
     const content = <>
         <Typography variant={"h3"} color={"var(--md-sys-color-primary)"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
         <div ref={ref}></div>
@@ -113,9 +114,11 @@ export const Gallery = memo(function Gallery() {
                                            width={bounds.width}
                                            height={height}
                                            setCurrentImage={handleImageClicked}
+                                           tolerance={tolerance}
                                            altInfo={altData}/> :
                     <TSJustifiedLayout width={bounds.width}
                                        targetRowHeight={height}
+                                       targetRowHeightTolerance={tolerance}
                                        rowSpacing={8}
                                        itemSpacing={8}
                                        containerStyle={{position: "relative"}}

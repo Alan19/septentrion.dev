@@ -5235,5 +5235,24 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/halloween_fashion_sketch.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/halloween_fashion_sketch.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/halloween_fashion_sketch.webp"
+  },
+  {
+    "title": "Trying out Lava's Visor",
+    "artist": "@Lavastan",
+    "tags": [
+      "Vernal",
+      "Hoodie"
+    ],
+    "href": "https://bsky.app/profile/lavaalter.bsky.social/post/3la3kewuzy323",
+    "published": "2024-11-03",
+    "aspectRatio": 0.75,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/trying_out_lavas_visor.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/trying_out_lavas_visor.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/trying_out_lavas_visor.webp"
   }
 ]

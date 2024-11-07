@@ -5,13 +5,16 @@ import {getMonthYearPairsInImageSet} from "./Gallery";
 import {SkeletonImage} from "../SkeletonImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {croppedImageWithCurvedBorder} from "../lore/characters/TemplatedLorePage";
+import {prepareFileName} from "./Utils";
+import {Link} from "react-router-dom";
 
 function ChronologicalGallery(props: {
     displayedImages: ImageInformation[],
     width: number,
     setCurrentImage: (image: ImageInformation) => void,
     height?: number,
-    altInfo: Map<string, AltInformation[]>
+    altInfo: Map<string, AltInformation[]>,
+    tolerance?: number
 }) {
     function getImagesForMonth(year: number, month: number) {
         return props.displayedImages.filter(value => value.published?.substring(0, 7).split("-").map(Number).toString() === [year, month].toString());
@@ -26,17 +29,17 @@ function ChronologicalGallery(props: {
             layoutItems={imagesForMonth.map(value => (
                 value.aspectRatio ?? 1
             ))}
+            targetRowHeightTolerance={props.tolerance}
             containerStyle={{position: "relative"}}
             targetRowHeight={props.height}
         >
-            {imagesForMonth.map(value => <SkeletonImage
-                onClick={() => props.setCurrentImage(value)}
-                style={croppedImageWithCurvedBorder}
+            {imagesForMonth.map(value => <Link to={prepareFileName(value.title)}><SkeletonImage
                 hasAlts={props.altInfo.has(value.title)}
                 alt={value.title}
                 src={value.thumbnailUrl ?? value.src}
                 imageClassname={"artImage"}
-                aspectRatio={value.aspectRatio ?? 1}/>)}
+                style={croppedImageWithCurvedBorder}
+                aspectRatio={value.aspectRatio ?? 1}/></Link>)}
         </TSJustifiedLayout>
     }
 
