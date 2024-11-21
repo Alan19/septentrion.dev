@@ -31,7 +31,17 @@ export enum ArtTag {
     winter = 'Hibernal Assassin',
     aquarius = 'Aquarius Form',
     auriga = 'Auriga Form',
-    hidden = 'Hidden'
+    hidden = 'Hidden',
+    illustration = 'Illustration',
+    reference = 'Character Reference',
+    chibi = 'Chibi',
+    icon = 'Icon',
+    halfBody = 'Half Body',
+    fullBody = 'Full Body',
+    sequence = 'Sequence',
+    sketchpage = 'Sketchpage',
+    sketch = 'Sketch'
+
 }
 
 export enum Rating {

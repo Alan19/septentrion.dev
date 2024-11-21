@@ -31,3 +31,14 @@ export function isAltInformation(image: ImageEntry): image is AltInformation {
     return (image as AltInformation).parent !== undefined;
 }
 
+export function getHref(artist: string) {
+    if (artist.startsWith('@')) {
+        if (artist.includes('.')) {
+            return `https://bsky.app/profile/${artist.substring(1)}`;
+        } else {
+            return `https://twitter.com/${artist?.substring(1)}`;
+        }
+    } else {
+        return artist;
+    }
+}

@@ -1,5 +1,5 @@
 import React, {memo, useEffect, useState} from "react";
-import {Fab, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Stack, Typography, useMediaQuery,} from "@mui/material";
+import {Autocomplete, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Stack, TextField, Typography, useMediaQuery,} from "@mui/material";
 import {ImageInformation, isImageInformation} from "../ImageInformation";
 import "./gallery.css";
 import {theme} from "../../App";
@@ -8,16 +8,18 @@ import Uploader from "./Uploader";
 import useMeasure from 'react-use-measure';
 import {ResizeObserver} from '@juggle/resize-observer'
 import MonthSeparatedGallery from "./ChronologicalGallery";
-import {FilterPane} from "./FilterPane";
+import {AutocompleteFilterChip, FilterPane} from "./FilterPane";
 import {RouteWithSubpanel} from "../common/RouteWithSubpanel";
 import {SkeletonImage} from "../SkeletonImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {createSearchParams, Link, useNavigate} from "react-router-dom";
 import {useQueryState} from "react-router-use-location-state";
 import {prepareFileName} from "./Utils";
-import {Share} from "@mui/icons-material";
-import {SelectedFilters} from "./TagUtils";
+import {Bookmark, BookmarkAdd, BookmarkRemove, Cancel, Share} from "@mui/icons-material";
+import {ArtTag, SelectedFilters} from "./TagUtils";
 import {croppedImageWithCurvedBorder} from "../lore/characters/TemplatedLorePage";
+import {Button} from "@mui/material-next";
+import axios from "axios";
 
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
     // @ts-ignore
@@ -32,6 +34,16 @@ export function getShownImages(images: ImageInformation[], selectedFilters: Sele
     return images.filter(value => selectedFilters.doesImageMatch(value, filterMode)).sort(imageSort);
 }
 
+function updateTags(tags: ArtTag[], selectedImages: string[], add = true) {
+    axios.post("http://localhost:9000/tag", {images: selectedImages, tags: tags, add: add})
+        .then((value) => console.log("Finished uploading: ", value))
+        .catch((reason) => console.log(reason))
+    // .finally(() => {
+    //     setUploading(false);
+    // });
+
+}
+
 export const Gallery = memo(function Gallery() {
     type GalleryDisplayModes = 'monthly' | 'all' | 'paginated';
 
@@ -42,6 +54,9 @@ export const Gallery = memo(function Gallery() {
     const [page, setPage] = useQueryState<number>('page', 1);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [filterMode, setFilterMode] = useQueryState<"and" | "or">("filter-mode", "and");
+    const [batchTagging, setBatchTagging] = useState<ArtTag[]>([])
+    const [batchTagEnabled, setBatchTagEnabled] = useState(false)
+    const [selectedImages, setSelectedImages] = useState<string[]>([])
 
     // TODO Add method to export name, and also copy URL to clipboard
     const [referenceName, setReferenceName] = useState("")
@@ -125,28 +140,69 @@ export const Gallery = memo(function Gallery() {
                                        layoutItems={imagesOnPage.map(value => (
                                            value.aspectRatio ?? 1
                                        ))}>
-                        {imagesOnPage.map(value => <Link to={prepareFileName(value.title)}><SkeletonImage
-                            hasAlts={altData.has(value.title)}
-                            alt={value.title}
-                            src={value.thumbnailUrl ?? value.src}
-                            imageClassname={"artImage"}
-                            style={croppedImageWithCurvedBorder}
-                            aspectRatio={value.aspectRatio ?? 1}/></Link>)}
+                        {imagesOnPage.map(value => {
+                            const {src, aspectRatio, thumbnailUrl, title} = value;
+                            const content = <SkeletonImage
+                                hasAlts={altData.has(title)}
+                                alt={title}
+                                src={thumbnailUrl ?? src}
+                                imageClassname={"artImage"}
+                                style={croppedImageWithCurvedBorder}
+                                aspectRatio={aspectRatio ?? 1}/>;
+                            if (batchTagEnabled) {
+                                return <div onClick={() => setSelectedImages(prevState => prevState.includes(title) ? prevState.filter(value => value !== title) : [...prevState, title])}
+                                            style={{
+                                                backgroundColor: selectedImages.includes(title) ? "var(--md-sys-color-primaryContainer)" : 'initial',
+                                                borderRadius: 8,
+                                                overflow: "hidden",
+                                                padding: selectedImages.includes(title) ? 16 : 0,
+                                                transition: "padding .2s ease",
+                                                aspectRatio: aspectRatio ?? 1
+                                            }}>
+                                    {content}
+                                </div>
+                            } else {
+                                return <Link to={prepareFileName(title)}>{content}</Link>;
+                            }
+                        })}
                     </TSJustifiedLayout>
                 }
             </div>
         </Stack>
         <Stack style={{marginTop: 8, alignItems: 'end'}} spacing={2}>
-            <Fab onClick={() => navigation({
+            <Button onClick={() => navigation({
                 pathname: "/reference",
                 search: createSearchParams({'reference-name': referenceName, 'filter-mode': filterMode, filters: filters.toString()}).toString()
             })}
-                 color="primary"
-                 aria-label="share"
-                 size={"small"}>
+                    color="primary"
+                    variant={"filledTonal"}
+                    aria-label="share"
+                    size={"small"}>
                 <Share/>
-            </Fab>
+            </Button>
             <Uploader loadImageInfo={loadImageInfo}/>
+            {/*TODO Extract this into it's own component*/}
+            {batchTagEnabled ? <div style={{display: 'flex', gap: 8, width: '100%'}}>
+                <Autocomplete multiple
+                              style={{flex: 1}}
+                              renderInput={(params) => (
+                                  <TextField
+                                      {...params}
+                                      variant="filled"
+                                      label="Tags"
+                                      size={"small"}
+                                  />
+                              )}
+                              value={batchTagging}
+                              onChange={(_event, value) => setBatchTagging(value as ArtTag[])}
+                              size={"medium"}
+                              renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip option={option} tagProps={getTagProps({index})}/>)}
+                              options={Object.values(ArtTag)}/>
+                <Button variant={"filled"} color={"primary"} onClick={event => updateTags(batchTagging, selectedImages)}><BookmarkAdd/></Button>
+                <Button variant={"filled"} color={"primary"} onClick={event => updateTags(batchTagging, selectedImages, false)}><BookmarkRemove/></Button>
+                <Button variant={"filled"} color={"secondary"} onClick={() => setBatchTagEnabled(false)}><Cancel/></Button>
+            </div> : <Button startIcon={<Bookmark/>} variant={"filled"} size={"small"} color={"primary"} onClick={() => setBatchTagEnabled(true)}>Batch Tag</Button>}
+
         </Stack>
     </>;
     return <RouteWithSubpanel panel={<FilterPane filterMode={filterMode} setFilterMode={setFilterMode} filters={filters} setFilters={handleTagChange}/>} routeContent={content}/>;

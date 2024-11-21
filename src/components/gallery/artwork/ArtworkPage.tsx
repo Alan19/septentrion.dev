@@ -1,4 +1,4 @@
-import {AltInformation, ImageInformation} from "../../ImageInformation";
+import {AltInformation, getHref, ImageInformation} from "../../ImageInformation";
 import {SkeletonImage} from "../../SkeletonImage";
 import {Divider, Grid, IconButton, ImageList, ImageListItem, Typography, useMediaQuery} from "@mui/material";
 import React, {useState} from "react";
@@ -85,7 +85,7 @@ export function ArtworkPage() {
                             <Button color="primary"
                                     variant="outlined"
                                     target={"noreferrer noopener"}
-                                    href={`https://twitter.com/${artist?.substring(1)}`}>
+                                    href={getHref(artist)}>
                                 Artist: {artist}
                             </Button>
                             <Typography style={{marginTop: 24}} variant={"subtitle2"}>Tags</Typography>

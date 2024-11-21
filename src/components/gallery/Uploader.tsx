@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
-import {Autocomplete, Checkbox, createFilterOptions, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Fab, Snackbar, Stack, TextField, Typography,} from "@mui/material";
+import {Autocomplete, Checkbox, createFilterOptions, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Snackbar, Stack, TextField, Typography,} from "@mui/material";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import AddIcon from "@mui/icons-material/Add";
@@ -10,17 +10,19 @@ import {useIsDevelopment} from "./UseIsDevelopment";
 import {Button} from "@mui/material-next";
 import {ArtTag, characters, Rating} from "./TagUtils";
 import {AutocompleteFilterChip} from "./FilterPane";
+import {useTagHooks} from "./UseTagHooks";
 
 const filter = createFilterOptions<string>();
 export default function Uploader(props: {
     loadImageInfo: () => Promise<void>;
 }) {
     const [selectedFile, setSelectedFile] = useState<File>();
+    const {images} = useTagHooks();
     const [tags, setTags] = useState<ArtTag[]>([]);
     const [rating, setRating] = useState<Rating>();
     const [charactersInImage, setCharactersInImage] = useState<string[]>(["Alcor"])
     const [href, setHref] = useState("");
-    const [title, setTitle] = useState<string>();
+    const [title, setTitle] = useState<string>("");
     const [artist, setArtist] = useState<string>();
     const [uploading, setUploading] = useState<boolean>(false);
     const [open, setOpen] = React.useState(false);
@@ -120,15 +122,16 @@ export default function Uploader(props: {
                 message="Artwork uploaded!"
             />
             {
-                isDevelopment && <Fab
-                    variant={"extended"}
+                isDevelopment && <Button
+                    variant={"filled"}
                     name={"Upload"}
                     color="primary"
                     aria-label="add"
+                    size={"small"}
                     onClick={handleClickOpen}
                 >
                     <AddIcon/> Upload
-                </Fab>
+                </Button>
             }
             {/*TODO Add warning if there is an overlap in title*/}
             <Dialog open={open} onClose={handleClose}>
@@ -181,7 +184,7 @@ export default function Uploader(props: {
                         <Autocomplete
                             fullWidth
                             value={rating}
-                            onChange={(event, value) => setRating(value ?? Rating.General)}
+                            onChange={(_event, value) => setRating(value ?? Rating.General)}
                             id="upload-rating-selector"
                             options={Object.values(Rating)}
                             getOptionLabel={(option) => option}
@@ -250,6 +253,8 @@ export default function Uploader(props: {
                             fullWidth
                             variant="standard"
                             value={title}
+                            aria-errormessage={"The title already exists! This may overwrite that artwork entry!"}
+                            error={images.map(value => value.title).includes(title)}
                             onChange={handleTitleChange}
                             required
                         />
