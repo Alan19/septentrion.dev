@@ -51,6 +51,21 @@
 .fade {
     animation: .5s ease .25s 1 fadeAndSlideFromBottom;
     opacity: 1;
-    transform: translateY(0);
     animation-fill-mode: backwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.appear-after-animation-end {
+    animation: .5s ease .75s 1 fade-in;
+    visibility: hidden;
+    animation-fill-mode: forwards;
 }

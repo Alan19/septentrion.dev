@@ -20,9 +20,9 @@ import {ArtTag, SelectedFilters} from "./TagUtils";
 import {croppedImageWithCurvedBorder} from "../lore/characters/TemplatedLorePage";
 import {Button} from "@mui/material-next";
 import axios from "axios";
+import {useIsDevelopment} from "./UseIsDevelopment";
 
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
-    // @ts-ignore
     return new Set(images.filter(value => value.published !== undefined).map(value => value.published.substring(0, 7)));
 }
 
@@ -36,12 +36,8 @@ export function getShownImages(images: ImageInformation[], selectedFilters: Sele
 
 function updateTags(tags: ArtTag[], selectedImages: string[], add = true) {
     axios.post("http://localhost:9000/tag", {images: selectedImages, tags: tags, add: add})
-        .then((value) => console.log("Finished uploading: ", value))
+        .then((value) => console.log("Finished updating tags on the following artworks: ", value))
         .catch((reason) => console.log(reason))
-    // .finally(() => {
-    //     setUploading(false);
-    // });
-
 }
 
 export const Gallery = memo(function Gallery() {
@@ -97,6 +93,7 @@ export const Gallery = memo(function Gallery() {
 
     const height = 400;
     const tolerance = .2;
+    const isDevelopment = useIsDevelopment();
     const content = <>
         <Typography variant={"h3"} color={"var(--md-sys-color-primary)"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
         <div ref={ref}></div>
@@ -169,7 +166,7 @@ export const Gallery = memo(function Gallery() {
                 }
             </div>
         </Stack>
-        <Stack style={{marginTop: 8, alignItems: 'end'}} spacing={2}>
+        <Stack style={{alignItems: 'end', position: 'fixed', bottom: 16, right: 16}} className={'appear-after-animation-end'} spacing={2}>
             <Button onClick={() => navigation({
                 pathname: "/reference",
                 search: createSearchParams({'reference-name': referenceName, 'filter-mode': filterMode, filters: filters.toString()}).toString()
@@ -182,26 +179,24 @@ export const Gallery = memo(function Gallery() {
             </Button>
             <Uploader loadImageInfo={loadImageInfo}/>
             {/*TODO Extract this into it's own component*/}
-            {batchTagEnabled ? <div style={{display: 'flex', gap: 8, width: '100%'}}>
+            {batchTagEnabled && isDevelopment ? <div style={{display: 'flex', gap: 8, width: '100%'}}>
                 <Autocomplete multiple
                               style={{flex: 1}}
-                              renderInput={(params) => (
-                                  <TextField
+                              renderInput={(params) => <TextField
                                       {...params}
                                       variant="filled"
                                       label="Tags"
                                       size={"small"}
-                                  />
-                              )}
+                              />}
                               value={batchTagging}
                               onChange={(_event, value) => setBatchTagging(value as ArtTag[])}
                               size={"medium"}
                               renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip option={option} tagProps={getTagProps({index})}/>)}
                               options={Object.values(ArtTag)}/>
-                <Button variant={"filled"} color={"primary"} onClick={event => updateTags(batchTagging, selectedImages)}><BookmarkAdd/></Button>
-                <Button variant={"filled"} color={"primary"} onClick={event => updateTags(batchTagging, selectedImages, false)}><BookmarkRemove/></Button>
+                <Button variant={"filled"} color={"primary"} onClick={() => updateTags(batchTagging, selectedImages)}><BookmarkAdd/></Button>
+                <Button variant={"filled"} color={"primary"} onClick={() => updateTags(batchTagging, selectedImages, false)}><BookmarkRemove/></Button>
                 <Button variant={"filled"} color={"secondary"} onClick={() => setBatchTagEnabled(false)}><Cancel/></Button>
-            </div> : <Button startIcon={<Bookmark/>} variant={"filled"} size={"small"} color={"primary"} onClick={() => setBatchTagEnabled(true)}>Batch Tag</Button>}
+            </div> : <Button startIcon={<Bookmark/>} variant={"filled"} color={"primary"} onClick={() => setBatchTagEnabled(true)}>Batch Tag</Button>}
 
         </Stack>
     </>;

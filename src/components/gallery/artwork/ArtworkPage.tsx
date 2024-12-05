@@ -7,7 +7,7 @@ import Chip from "@mui/material-next/Chip";
 import dayjs from "dayjs";
 import AltsUploader from "../AltsUploader";
 import {useNavigate, useParams} from "react-router-dom";
-import {ArrowBack} from "@mui/icons-material";
+import {ArrowBack, ArrowOutward} from "@mui/icons-material";
 import {useTagHooks} from "../UseTagHooks";
 import {prepareFileName} from "../Utils";
 import {M3Pane} from "../../common/M3Pane";
@@ -85,6 +85,7 @@ export function ArtworkPage() {
                             <Button color="primary"
                                     variant="outlined"
                                     target={"noreferrer noopener"}
+                                    endIcon={<ArrowOutward/>}
                                     href={getHref(artist)}>
                                 Artist: {artist}
                             </Button>
@@ -123,16 +124,15 @@ export function ArtworkPage() {
                                         src={value.thumbnailUrl ?? value.webp ?? value.src}/></ImageListItem>)}
                                 </ImageList>
                             </>}
-                            {published && (
-                                <Typography
-                                    variant={"subtitle1"}
-                                    style={{
-                                        textAlign: "right"
-                                    }}
-                                >
-                                    {dayjs(published).format("MMM DD, YYYY")}
-                                </Typography>
-                            )}
+                            <Typography
+                                variant={"subtitle1"}
+                                style={{
+                                    textAlign: "right",
+                                    marginTop: 8
+                                }}
+                            >
+                                {dayjs(published).format("MMM DD, YYYY")}
+                            </Typography>
                         </>
                     </M3Pane>
                     <AltsUploader imageInformation={imageInfo} altCount={altsInfo?.length ?? 0}/>

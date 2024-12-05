@@ -306,7 +306,7 @@
   {
     "title": "Sci-fi Mode: ON",
     "href": "https://twitter.com/AxyUsagi/status/1543041029674344448?s=20&t=tlXwc5aegdXuQeLhgdUw-Q",
-    "artist": "@AxyUsagi",
+    "artist": "@axyusagi.bsky.social",
     "src": "https://pbs.twimg.com/media/FWn7dJ9XkAIHM5j?format=jpg&name=medium",
     "tags": [
       "Thuban Form",
@@ -4108,7 +4108,7 @@
   },
   {
     "title": "Mario and Luigi is Real! Sketch",
-    "artist": "@AxyUsagi",
+    "artist": "@axyusagi.bsky.social",
     "tags": [
       "Rastaban Form",
       "Sketch"
@@ -4319,7 +4319,7 @@
   },
   {
     "title": "Jupiter Transformation Sequence",
-    "artist": "@AxyUsagi",
+    "artist": "@axyusagi.bsky.social",
     "tags": [
       "Jupiter Form",
       "Transformation"
@@ -4337,7 +4337,7 @@
   },
   {
     "title": "Jupiter Dark Mode",
-    "artist": "@AxyUsagi",
+    "artist": "@axyusagi.bsky.social",
     "tags": [
       "Jupiter Form",
       "Superhero",
@@ -5357,25 +5357,6 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_reference_sheet_2023_part_2.webp"
   },
   {
-    "title": "Gardening",
-    "artist": "@aark0art.bsky.social",
-    "tags": [
-      "Aldhibah Form",
-      "Techwear",
-      "Hoodie"
-    ],
-    "href": "",
-    "published": "2024-11-19",
-    "aspectRatio": 0.7803547066848567,
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/gardening.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/gardening.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gardening.webp"
-  },
-  {
     "title": "Jupiter Robotified",
     "artist": "@lordyanyu.bsky.social",
     "tags": [
@@ -5391,5 +5372,103 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_robotified.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_robotified.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_robotified.webp"
+  },
+  {
+    "title": "Autumnal Outfit 2.0 + Henshin",
+    "artist": "@hyper_whoz",
+    "tags": [
+      "Autumnal Wavesniper",
+      "Hoodie",
+      "Aldhibah Form",
+      "Techwear",
+      "Bodysuit"
+    ],
+    "href": "https://x.com/hyper_whoz/status/1859934203837858084",
+    "published": "2024-11-22",
+    "aspectRatio": 1.5127882599580713,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/autumnal_outfit_2_0_henshin.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/autumnal_outfit_2_0_henshin.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/autumnal_outfit_2_0_henshin.webp"
+  },
+  {
+    "title": "Gardening",
+    "artist": "@aark0art.bsky.social",
+    "tags": [
+      "Aldhibah Form",
+      "Techwear",
+      "Hoodie",
+      "Full Body"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.bsky.social/post/3lbq6osuxcs2z",
+    "published": "2024-11-24",
+    "aspectRatio": 0.7803547066848567,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/gardening_2_0.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/gardening_2_0.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gardening_2_0.webp"
+  },
+  {
+    "title": "Pool Party! (2024)",
+    "artist": "@axyusagi.bsky.social",
+    "tags": [
+      "Techwear",
+      "Thuban Form",
+      "Illustration"
+    ],
+    "href": "https://bsky.app/profile/axyusagi.bsky.social/post/3lbxr7zdwm22h",
+    "published": "2024-11-27",
+    "aspectRatio": 1.2,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Lava",
+      "Axy",
+      "Illustration"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/pool_party.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/pool_party.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pool_party.webp"
+  },
+  {
+    "title": "Techlife Furry 10",
+    "artist": "@flflzkzh",
+    "tags": [
+      "Techwear",
+      "AICore Form"
+    ],
+    "href": "",
+    "published": "2024-12-03",
+    "aspectRatio": 0.6533203125,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/techlife_furry_10.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/techlife_furry_10.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/techlife_furry_10.webp"
+  },
+  {
+    "title": "School Gym Uniform Sketch",
+    "artist": "@KuroPenguinEx",
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lcdnmebitc23",
+    "published": "2024-12-02",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/school_gym_uniform_sketch.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/school_gym_uniform_sketch.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/school_gym_uniform_sketch.webp"
   }
 ]
