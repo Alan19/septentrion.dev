@@ -5403,7 +5403,7 @@
       "Hoodie",
       "Full Body"
     ],
-    "href": "https://bsky.app/profile/faintalcor.bsky.social/post/3lbq6osuxcs2z",
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lbq6osuxcs2z",
     "published": "2024-11-24",
     "aspectRatio": 0.7803547066848567,
     "rating": "mainstream",
@@ -5470,5 +5470,43 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/school_gym_uniform_sketch.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/school_gym_uniform_sketch.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/school_gym_uniform_sketch.webp"
+  },
+  {
+    "title": "Jupiter Form γ",
+    "artist": "@wendao.bsky.social",
+    "tags": [
+      "Jupiter Form",
+      "Character Reference"
+    ],
+    "href": "https://bsky.app/profile/wendao.bsky.social/post/3lcwb6ivf722x",
+    "published": "2024-12-09",
+    "aspectRatio": 3.521926053310404,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_form_%25CE%25B3.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_form_%25CE%25B3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_form_%25CE%25B3.webp"
+  },
+  {
+    "title": "Aquarius Buzzwole/Symbiote Hero Suit",
+    "artist": "@waddledurrr.bsky.social",
+    "tags": [
+      "Aquarius Form",
+      "Superhero",
+      "Bodysuit"
+    ],
+    "href": "https://bsky.app/profile/waddledurrr.bsky.social/post/3ld77ebpqcs2t",
+    "published": "2024-12-13",
+    "aspectRatio": 1.4,
+    "rating": "general",
+    "characters": [
+      "Alcor",
+      "Ryle"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_buzzwole_symbiote_hero_suit.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_buzzwole_symbiote_hero_suit.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_buzzwole_symbiote_hero_suit.webp"
   }
 ]
