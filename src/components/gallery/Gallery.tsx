@@ -179,7 +179,7 @@ export const Gallery = memo(function Gallery() {
             </Button>
             <Uploader loadImageInfo={loadImageInfo}/>
             {/*TODO Extract this into it's own component*/}
-            {batchTagEnabled && isDevelopment ? <div style={{display: 'flex', gap: 8, width: '100%'}}>
+            {isDevelopment && (batchTagEnabled ? <div style={{display: 'flex', gap: 8, width: '100%'}}>
                 <Autocomplete multiple
                               style={{flex: 1}}
                               renderInput={(params) => <TextField
@@ -196,8 +196,7 @@ export const Gallery = memo(function Gallery() {
                 <Button variant={"filled"} color={"primary"} onClick={() => updateTags(batchTagging, selectedImages)}><BookmarkAdd/></Button>
                 <Button variant={"filled"} color={"primary"} onClick={() => updateTags(batchTagging, selectedImages, false)}><BookmarkRemove/></Button>
                 <Button variant={"filled"} color={"secondary"} onClick={() => setBatchTagEnabled(false)}><Cancel/></Button>
-            </div> : <Button startIcon={<Bookmark/>} variant={"filled"} color={"primary"} onClick={() => setBatchTagEnabled(true)}>Batch Tag</Button>}
-
+            </div> : <Button startIcon={<Bookmark/>} variant={"filled"} color={"primary"} onClick={() => setBatchTagEnabled(true)}>Batch Tag</Button>)}
         </Stack>
     </>;
     return <RouteWithSubpanel panel={<FilterPane filterMode={filterMode} setFilterMode={setFilterMode} filters={filters} setFilters={handleTagChange}/>} routeContent={content}/>;

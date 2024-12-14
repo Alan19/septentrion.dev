@@ -31,7 +31,7 @@ export function Navigation(props: {
         setIsDialogOpen(true);
     };
 
-    const handleClose = (value: string) => {
+    const handleClose = () => {
         setIsDialogOpen(false);
     };
 
@@ -43,7 +43,8 @@ export function Navigation(props: {
             navigator.geolocation.getCurrentPosition((position) => {
                 const now = new Date();
                 const sunset = SunCalc.getTimes(now, position.coords.latitude, position.coords.longitude).sunset;
-                if (now > sunset) {
+                const sunrise = SunCalc.getTimes(now, position.coords.latitude, position.coords.longitude).sunrise;
+                if (now > sunset || now < sunrise) {
                     setMode('dark')
                 } else {
                     setMode('light')
