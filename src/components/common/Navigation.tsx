@@ -1,13 +1,15 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {BottomNavigation, BottomNavigationAction, Box, Dialog, DialogContent, DialogTitle, Grid, Paper, Stack, Typography, useMediaQuery} from "@mui/material";
 import {AppThemeContext, theme} from "../../App";
-import {Book, BookOutlined, CollectionsOutlined, Computer, DarkMode, Home, HomeOutlined, LightMode, Person, PersonOutlined, Search, SearchOutlined, Settings} from "@mui/icons-material";
+import {Book, BookOutlined, CollectionsOutlined, Computer, DarkMode, Home, HomeOutlined, LightMode, Pending, Person, PersonOutlined, Schedule, Search, SearchOutlined, Settings} from "@mui/icons-material";
 import CollectionsIcon from "@mui/icons-material/Collections";
-import {NavigateOptions, To, useLocation, useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import {Button, useColorScheme} from "@mui/material-next";
 import {websiteThemes} from "../../Themes";
 import "../../App.css"
 import {NavigationRailLink} from "./NavigationRailLink";
+import SunCalc from 'suncalc';
+import {useLocalStorage} from "../../UseLocalStorage";
 
 export const drawerColor = 'var(--md-sys-color-surfaceContainerHigh)';
 
@@ -22,7 +24,8 @@ export function Navigation(props: {
     const mediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
     const location = useLocation().pathname;
     const [isDialogOpen, setIsDialogOpen] = useState(false);
-    const navigate = useNavigate();
+    const [internalMode, setInternalMode] = useLocalStorage('light', 'mode')
+    const [loadingCoordinates, setLoadingCoordinates] = useState<boolean>(false)
 
     const handleClickOpen = () => {
         setIsDialogOpen(true);
@@ -32,11 +35,26 @@ export function Navigation(props: {
         setIsDialogOpen(false);
     };
 
-    function handleNavigate(to: To, options?: NavigateOptions) {
-        setTimeout(() => {
-
-        }, 300)
-    }
+    useEffect(() => {
+        if (internalMode !== 'clock') {
+            setMode(internalMode);
+        } else {
+            setLoadingCoordinates(true);
+            navigator.geolocation.getCurrentPosition((position) => {
+                const now = new Date();
+                const sunset = SunCalc.getTimes(now, position.coords.latitude, position.coords.longitude).sunset;
+                if (now > sunset) {
+                    setMode('dark')
+                } else {
+                    setMode('light')
+                }
+                setLoadingCoordinates(false);
+            }, positionError => {
+                // TODO add error toast
+                setLoadingCoordinates(false);
+            });
+        }
+    }, [internalMode])
 
     const {mode, setMode} = useColorScheme();
     const [appTheme, setAppTheme] = useContext(AppThemeContext);
@@ -50,9 +68,11 @@ export function Navigation(props: {
             </Grid>
             <Typography variant={"h6"}>Mode</Typography>
             <Stack direction={"row"} spacing={1}>
-                <Button variant={mode === "light" ? "filled" : "outlined"} onClick={() => setMode('light')} startIcon={<LightMode/>}>Light</Button>
-                <Button variant={mode === "dark" ? "filled" : "outlined"} onClick={() => setMode('dark')} startIcon={<DarkMode/>}>Dark</Button>
-                <Button variant={mode === "system" ? "filled" : "outlined"} startIcon={<Computer/>} onClick={() => setMode('system')}>System</Button>
+                <Button variant={internalMode === "light" ? "filled" : "outlined"} disabled={loadingCoordinates} onClick={() => setInternalMode('light')} startIcon={<LightMode/>}>Light</Button>
+                <Button variant={internalMode === "dark" ? "filled" : "outlined"} disabled={loadingCoordinates} onClick={() => setInternalMode('dark')} startIcon={<DarkMode/>}>Dark</Button>
+                <Button variant={internalMode === "system" ? "filled" : "outlined"} disabled={loadingCoordinates} startIcon={<Computer/>} onClick={() => setInternalMode('system')}>System</Button>
+                {/*TODO Add better animations*/}
+                <Button variant={internalMode === "clock" ? "filled" : "outlined"} startIcon={<Schedule/>} endIcon={loadingCoordinates ? <Pending/> : <></>} onClick={() => setInternalMode('clock')}>Time Based</Button>
             </Stack>
 
         </DialogContent>
