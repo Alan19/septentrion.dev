@@ -11,6 +11,7 @@ import {Button} from "@mui/material-next";
 import {ArtTag, characters, Rating} from "./TagUtils";
 import {AutocompleteFilterChip} from "./FilterPane";
 import {useTagHooks} from "./UseTagHooks";
+import {prepareFileName} from "./Utils";
 
 const filter = createFilterOptions<string>();
 export default function Uploader(props: { loadImageInfo: () => Promise<void>; }) {
@@ -48,7 +49,7 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
     };
 
     const handleSnackbarClose = (
-        event: React.SyntheticEvent | Event,
+        _event: React.SyntheticEvent | Event,
         reason?: string
     ) => {
         if (reason === "clickaway") {
@@ -111,6 +112,7 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
         setTitle(event.target.value);
     }
 
+    const isCollision = images.map(value => prepareFileName(value.title)).includes(prepareFileName(title));
     return (
         <>
             <Snackbar
@@ -131,7 +133,6 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
                     <AddIcon/> Upload
                 </Button>
             }
-            {/*TODO Add warning if there is an overlap in title*/}
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Upload New Image</DialogTitle>
                 <DialogContent>
@@ -208,7 +209,6 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
                                       size={"medium"}
                                       renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip option={option} tagProps={getTagProps({index})}/>)}
                                       filterOptions={(options, params) => {
-                                          // TODO Make this render as 'add [option]'
                                           const filtered = filter(options, params)
                                           const {inputValue} = params;
                                           // Suggest the creation of a new value
@@ -251,8 +251,8 @@ export default function Uploader(props: { loadImageInfo: () => Promise<void>; })
                             fullWidth
                             variant="standard"
                             value={title}
-                            aria-errormessage={"The title already exists! This may overwrite that artwork entry!"}
-                            error={images.map(value => value.title).includes(title)}
+                            helperText={isCollision ? "The title already exists! This may overwrite that artwork entry!" : ""}
+                            error={isCollision}
                             onChange={handleTitleChange}
                             required
                         />
