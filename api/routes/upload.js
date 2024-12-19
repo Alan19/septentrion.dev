@@ -37,7 +37,7 @@ router.post('/', upload.single('image'), async (req, res) => {
     const jsonOutput = {
         title: title,
         artist: artist,
-        tags: tags.split(',').map(tag => tag.trim()),
+        tags: tags !== '' ? tags.split(',').map(tag => tag.trim()) : [],
         href: href,
         published: published,
         aspectRatio: metadata.width / metadata.height,
