@@ -9,8 +9,8 @@ export function AboutMePage() {
             <>
                 <PageHeader title={"About Me (IRL)"}/>
                 <Divider/>
-                <Grid style={{marginTop: 0}} container spacing={3}>
-                    <Grid item md={8}>
+                <Grid style={{marginTop: 0}} container spacing={2}>
+                    <Grid item md={'auto'}>
                         <img src={"https://alcorsiteartbucket.s3.amazonaws.com/webp/moodboard.webp"} style={{width: '100%', objectFit: 'contain', maxHeight: '80vh'}}/>
                     </Grid>
                     <Grid item md>

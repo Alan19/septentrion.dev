@@ -93,7 +93,7 @@ export const Gallery = memo(function Gallery() {
 
     const height = 400;
     const tolerance = .2;
-    const isDevelopment = useIsDevelopment();
+    const {isDevelopment} = useIsDevelopment();
     const content = <>
         <Typography variant={"h3"} color={"var(--md-sys-color-primary)"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
         <div ref={ref}></div>
