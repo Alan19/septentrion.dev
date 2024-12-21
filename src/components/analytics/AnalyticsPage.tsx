@@ -5,6 +5,7 @@ import Chip from "@mui/material-next/Chip";
 import CalendarHeatmap, {ReactCalendarHeatmapValue} from 'react-calendar-heatmap'
 import 'react-calendar-heatmap/dist/styles.css';
 import {M3Pane} from "../common/M3Pane";
+import {getHref} from "../ImageInformation";
 
 export const AnalyticsPage = memo(function AnalyticsPage() {
     const {images} = useTagHooks();
@@ -72,7 +73,7 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
                                     <TableCell>{index + 1}</TableCell>
                                     <TableCell>{value[0]}</TableCell>
                                     <TableCell>
-                                        <div style={{display: "flex", gap: 8, flexWrap: "wrap"}}>{value[1].map(artistHandle => <a target={"noreferrer noopener"} href={`https://x.com/${artistHandle.substring(1)}`}>
+                                        <div style={{display: "flex", gap: 8, flexWrap: "wrap"}}>{value[1].map(artistHandle => <a target={"noreferrer noopener"} href={getHref(artistHandle)}>
                                             <Chip size={"small"} label={artistHandle}/></a>)}
                                         </div>
                                     </TableCell>

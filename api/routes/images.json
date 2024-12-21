@@ -101,7 +101,7 @@
       "Thuban Form",
       "Featured"
     ],
-    "artist": "@Yamainu_ken",
+    "artist": "@yamainuken.bsky.social",
     "published": "2023-01-22",
     "aspectRatio": 1.5442260442260443,
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/special_archery_training.webp",
@@ -2740,7 +2740,7 @@
   },
   {
     "title": "Warp Strike",
-    "artist": "@Yamainu_ken",
+    "artist": "@yamainuken.bsky.social",
     "tags": [
       "AICore Form",
       "Techwear",
@@ -5529,8 +5529,7 @@
   {
     "title": "Soma Disembodied Elemental Form",
     "artist": "@poweredbygif.bsky.social",
-    "tags": [
-    ],
+    "tags": [],
     "href": "",
     "published": "2024-12-18",
     "aspectRatio": 0.808837890625,
@@ -5541,5 +5540,48 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/soma_disembodied_elemental_form.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/soma_disembodied_elemental_form.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_disembodied_elemental_form.webp"
+  },
+  {
+    "title": "Ninja Parkour in Autumn",
+    "artist": "@yamainuken.bsky.social",
+    "tags": [
+      "Thuban Form",
+      "Knives",
+      "Bodysuit",
+      "Full Body",
+      "Standard Outfit",
+      "Techwear",
+      "Illustration"
+    ],
+    "href": "https://bsky.app/profile/yamainuken.bsky.social/post/3ldpkcdifpc2l",
+    "published": "2024-12-19",
+    "aspectRatio": 0.707,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ninja_parkour_in_autumn.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ninja_parkour_in_autumn.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ninja_parkour_in_autumn.webp"
+  },
+  {
+    "tags": [
+      "Thuban Form",
+      "Knives",
+      "Bodysuit",
+      "Standard Outfit",
+      "Techwear",
+      "Half Body"
+    ],
+    "href": "",
+    "aspectRatio": 0.9222306525037937,
+    "parent": "Ninja Parkour in Autumn",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Ninja+Parkour+in+Autumn_2.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/ninja_parkour_in_autumn_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/ninja_parkour_in_autumn_2.webp"
   }
 ]
