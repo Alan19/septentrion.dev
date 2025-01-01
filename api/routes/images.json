@@ -5565,23 +5565,81 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ninja_parkour_in_autumn.webp"
   },
   {
+    "title": "Alcor's Domain (Expansion): Knowledge Exfiltrator",
+    "artist": "@jing56",
     "tags": [
-      "Thuban Form",
-      "Knives",
-      "Bodysuit",
-      "Standard Outfit",
       "Techwear",
-      "Half Body"
+      "Bodysuit",
+      "Rastaban Form",
+      "Illustration"
     ],
-    "href": "",
-    "aspectRatio": 0.9222306525037937,
-    "parent": "Ninja Parkour in Autumn",
+    "href": "https://x.com/jing56/status/1873298986649755937",
+    "published": "2024-12-29",
+    "aspectRatio": 0.8033240997229917,
     "rating": "mainstream",
     "characters": [
       "Alcor"
     ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Ninja+Parkour+in+Autumn_2.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/ninja_parkour_in_autumn_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/ninja_parkour_in_autumn_2.webp"
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_domain_expansion_knowledge_exfiltrator.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcors_domain_expansion_knowledge_exfiltrator.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_domain_expansion_knowledge_exfiltrator.webp"
+  },
+  {
+    "title": "Estival Outfit δ",
+    "artist": "@Mino_llm",
+    "tags": [
+      "Aldhibah Form",
+      "Estival Checker",
+      "Hoodie",
+      "Techwear",
+      "Full Body"
+    ],
+    "href": "https://x.com/Mino_llm/status/1874124999088648442",
+    "published": "2024-12-31",
+    "aspectRatio": 0.4270286047869235,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/estival_outfit_traditional_techwear_version.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/estival_outfit_traditional_techwear_version.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/estival_outfit_traditional_techwear_version.webp"
+  },
+  {
+    "tags": [
+      "Estival Checker",
+      "Aldhibah Form",
+      "Techwear",
+      "Character Reference",
+      "Hoodie"
+    ],
+    "href": "",
+    "aspectRatio": 1.4056492742251863,
+    "parent": "Estival Outfit δ",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Estival%20Outfit%20%CE%B4_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/estival_outfit_%25CE%25B4_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/estival_outfit_%25CE%25B4_1.webp"
+  },
+  {
+    "title": "Smol Knife",
+    "artist": "@melonbobafox.bsky.social",
+    "tags": [
+      "Chibi",
+      "Knives"
+    ],
+    "href": "",
+    "published": "2024-12-19",
+    "aspectRatio": 1,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/smol_knife.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/smol_knife.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/smol_knife.webp"
   }
 ]
