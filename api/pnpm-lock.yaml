@@ -32,6 +32,9 @@ importers:
       jade:
         specifier: ~1.11.0
         version: 1.11.0
+      js-sha3:
+        specifier: ^0.9.3
+        version: 0.9.3
       morgan:
         specifier: ~1.9.1
         version: 1.9.1
@@ -476,6 +479,9 @@ packages:
     resolution: {integrity: sha512-J76sbGKeLtu7uwW97Ntzb1UvGnpKTDplYa9ROr2gNRhM+SxvlBSG0Ees3TQ8+7ya2UVkzMEeFxhRhEpN68s7Tg==}
     deprecated: Jade has been renamed to pug, please install the latest version of pug instead of jade
     hasBin: true
+
+  js-sha3@0.9.3:
+    resolution: {integrity: sha512-BcJPCQeLg6WjEx3FE591wVAevlli8lxsxm9/FzV4HXkV49TmBH38Yvrpce6fjbADGMKFrBMGTqrVz3qPIZ88Gg==}
 
   jsonfile@6.1.0:
     resolution: {integrity: sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==}
@@ -1189,6 +1195,8 @@ snapshots:
       uglify-js: 2.8.29
       void-elements: 2.0.1
       with: 4.0.3
+
+  js-sha3@0.9.3: {}
 
   jsonfile@6.1.0:
     dependencies:

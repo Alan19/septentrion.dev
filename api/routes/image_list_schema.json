@@ -9,6 +9,31 @@
         "mature"
       ]
     },
+    "AltAndPage": {
+      "type": "object",
+      "anyOf": [
+        {
+          "properties": {
+            "altNumber": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "altNumber"
+          ]
+        },
+        {
+          "properties": {
+            "pageNumber": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "pageNumber"
+          ]
+        }
+      ]
+    },
     "ImageBase": {
       "type": "object",
       "properties": {
@@ -36,22 +61,25 @@
         "href": {
           "type": "string"
         },
+        "id": {
+          "type": "string"
+        },
         "characters": {
           "type": "array",
           "items": {
             "type": "string"
-          },
-          "default": [
-            "Alcor"
-          ]
+          }
         }
       },
       "required": [
         "tags",
         "src",
+        "webp",
+        "thumbnailUrl",
         "rating",
         "aspectRatio",
-        "characters"
+        "characters",
+        "id"
       ]
     },
     "AltInformation": {
@@ -64,10 +92,28 @@
           "properties": {
             "parent": {
               "type": "string"
+            },
+            "altType": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/AltAndPage"
+                },
+                {
+                  "type": "string",
+                  "enum": [
+                    "extra",
+                    "cropped",
+                    "recolor"
+                  ]
+                }
+              ],
+              "default": "extra",
+              "description": "The type of alt it is, extra for things like cropped versions or additional files attached to the commission, alts for slightly modified versions of the artwork, and numbers for the position of an alt in a sequence (starting from 1, as the parent will be 0)."
             }
           },
           "required": [
-            "parent"
+            "parent",
+            "altType"
           ]
         }
       ]

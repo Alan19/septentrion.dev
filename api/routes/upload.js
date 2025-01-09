@@ -10,6 +10,7 @@ dotenv.config();
 router.use(express.json());
 const _ = require("lodash");
 const {readFileSync} = require("node:fs");
+const {sha3_224} = require("js-sha3");
 
 // Configure AWS SDK
 AWS.config.update({
@@ -56,9 +57,10 @@ router.post('/', upload.single('image'), async (req, res) => {
     };
 
     jsonOutput['src'] = (await s3.upload(params).promise()).Location;
-    const [compressedData, webpData] = await uploadCompressedVersions(file.buffer, fileName, jsonOutput, 0)
+    const [compressedData, webpData, id] = await uploadCompressedVersions(file.buffer, fileName, jsonOutput, 0)
     jsonOutput['thumbnailUrl'] = compressedData.Location
     jsonOutput['webp'] = webpData.Location;
+    jsonOutput['id'] = id
     addToJson(jsonOutput);
     res.json(jsonOutput);
 });
@@ -134,7 +136,8 @@ async function uploadCompressedVersions(originalImage, imageName, entry, altNumb
         }).promise(),
         s3.upload({
             Bucket: process.env.BUCKET_NAME, Key: entry.parent ? `webp/alts/${imageName}_${altNumber}.webp` : `webp/${imageName}.webp`, Body: webpImageBuffer, ContentType: 'image/webp'
-        }).promise()
+        }).promise(),
+        sha3_224(webpImageBuffer)
     ]);
 }
 

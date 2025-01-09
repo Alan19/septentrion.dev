@@ -1,7 +1,7 @@
-import {AltInformation, getHref, ImageInformation} from "../../ImageInformation";
+import {AltInformation, getAltAndPageNumber, getHref, getParentImage, isAltTypeComplex} from "../../ImageInformation";
 import {SkeletonImage} from "../../SkeletonImage";
 import {Divider, Grid, IconButton, ImageList, ImageListItem, Typography, useMediaQuery} from "@mui/material";
-import React, {useState} from "react";
+import React from "react";
 import {Button} from "@mui/material-next";
 import Chip from "@mui/material-next/Chip";
 import dayjs from "dayjs";
@@ -9,49 +9,37 @@ import AltsUploader from "../AltsUploader";
 import {useNavigate, useParams} from "react-router-dom";
 import {ArrowBack, ArrowOutward} from "@mui/icons-material";
 import {useTagHooks} from "../UseTagHooks";
-import {prepareFileName} from "../Utils";
 import {M3Pane} from "../../common/M3Pane";
 import {theme} from "../../../App";
 
+
 export function ArtworkPage() {
-    const imageTitle = encodeURIComponent(useParams().title ?? "");
-    const {images, altData} = useTagHooks();
-    const [imageNumber, setImageNumber] = useState(-1);
+    const imageId = encodeURIComponent(useParams().id ?? "");
+    const {altData, imageEntries} = useTagHooks();
     const navigate = useNavigate();
 
-    function getCurrentImageInfo(currentImage: ImageInformation, altsInfo?: AltInformation[]): [string, string, number] {
-        if (imageNumber !== -1 && altsInfo) {
-            return [altsInfo[imageNumber].webp ?? altsInfo[imageNumber].src, altsInfo[imageNumber].href ?? "", altsInfo[imageNumber].aspectRatio ?? 1];
-        } else {
-            return [currentImage.webp ?? currentImage.src, currentImage.href ?? "", currentImage.aspectRatio ?? 1];
-        }
-    }
+    const parentImageInfo = getParentImage(imageId, imageEntries);
+    const currentImageInfo = imageEntries.find(value => value.id === imageId);
 
-    function handleAltImageClick(index: number) {
-        setImageNumber(index);
-    }
-
-    const imageInfo = images.find(value => prepareFileName(value.title) === imageTitle);
     const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
 
     function capitalizeFirstLetter(input: string) {
         return input.charAt(0).toUpperCase() + input.slice(1);
     }
 
-    if (imageInfo) {
-        const {
-            webp,
-            published,
-            src,
-            aspectRatio,
-            title,
-            href,
-            artist,
-            thumbnailUrl,
-            tags,
-            rating,
-            characters
-        } = imageInfo;
+    function sortAlts(a: AltInformation, b: AltInformation) {
+        const {altNumber: altNumberA = 0, pageNumber: pageNumberA = 0} = getAltAndPageNumber(a);
+        const {altNumber: altNumberB = 0, pageNumber: pageNumberB = 0} = getAltAndPageNumber(b);
+        if (pageNumberA - pageNumberB !== 0) {
+            return pageNumberA - pageNumberB;
+        } else {
+            return altNumberA - altNumberB;
+        }
+    }
+
+    if (parentImageInfo && currentImageInfo) {
+        const {webp, aspectRatio, href, thumbnailUrl, tags, rating, characters} = currentImageInfo;
+        const {artist, title, published, id, webp: parentWebp} = parentImageInfo;
         const altsInfo = altData.get(title);
 
         const imageHeight = isMediumOrAbove ? 'calc(100vh - 80px)' : 'fit-content';
@@ -62,17 +50,18 @@ export function ArtworkPage() {
                     <M3Pane style={{width: '100%', ...(!isMediumOrAbove && {padding: 0})}} lastElement={false}>
                         <Grid container spacing={3}>
                             <Grid item xs={12} md={'auto'}>
-                                <IconButton onClick={() => navigate(-1)}>
+                                {/*TODO Fix back button*/}
+                                <IconButton onClick={() => navigate('..')}>
                                     <ArrowBack/>
                                 </IconButton>
                             </Grid>
                             <Grid item xs md style={{display: 'flex', justifyContent: 'center'}}>
-                                <SkeletonImage href={href}
+                                <SkeletonImage href={href || parentImageInfo.href}
                                                style={{maxHeight: imageHeight, maxWidth: '100%', display: 'block'}}
                                                skeletonStyle={(aspectRatio ?? 1) < 1 ? {height: imageHeight, maxWidth: '100%'} : {maxHeight: imageHeight, width: '100%'}}
-                                               src={getCurrentImageInfo(imageInfo, altsInfo)[0]}
+                                               src={webp}
                                                containerStyle={{height: 'min-content'}}
-                                               aspectRatio={getCurrentImageInfo(imageInfo, altsInfo)[2]}/>
+                                               aspectRatio={aspectRatio}/>
 
                             </Grid>
                         </Grid>
@@ -91,7 +80,7 @@ export function ArtworkPage() {
                             </Button>
                             <Typography style={{marginTop: 24}} variant={"subtitle2"}>Tags</Typography>
                             <Grid style={{marginTop: "0"}} container direction={"row"} spacing={1}>
-                                {tags?.map((value) => (
+                                {tags?.sort((a, b) => a.localeCompare(b)).map((value) => (
                                     <Grid item>
                                         <Chip label={value} color={"primary"}/>
                                     </Grid>
@@ -107,22 +96,43 @@ export function ArtworkPage() {
                             </Grid>
                             {altsInfo && <>
                                 <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
-                                <Typography variant={"h5"}>Alts</Typography>
+                                <Typography variant={"h5"}>Original</Typography>
                                 <ImageList cols={3}>
                                     <ImageListItem key={0}>
                                         <img
-                                            onClick={() => handleAltImageClick(-1)}
                                             style={{width: "100%"}}
+                                            onClick={() => navigate(`/gallery/${id}`)}
                                             className={"dialog-image"}
-                                            src={thumbnailUrl ?? webp ?? src}
+                                            src={parentWebp}
                                             alt={title}/>
                                     </ImageListItem>
-                                    {altsInfo?.map((value, index) => <ImageListItem key={index}> <img
-                                        onClick={() => handleAltImageClick(index)}
-                                        className={"dialog-image"}
-                                        style={{width: "100%"}}
-                                        src={value.thumbnailUrl ?? value.webp ?? value.src}/></ImageListItem>)}
                                 </ImageList>
+                                {!!altsInfo?.filter(value => isAltTypeComplex(value.altType)).length && <>
+                                    <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
+                                    <Typography variant={"h5"}>Alts</Typography>
+                                    <ImageList cols={3}>
+                                        {altsInfo?.filter(value => isAltTypeComplex(value.altType)).sort((a, b) => sortAlts(a, b)).map((value, index) =>
+                                            <ImageListItem key={index}>
+                                                <img className={"dialog-image"}
+                                                     onClick={() => navigate(`/gallery/${value.id}`)}
+                                                     style={{width: "100%"}}
+                                                     src={value.thumbnailUrl ?? value.webp ?? value.src}/>
+                                            </ImageListItem>)}
+                                    </ImageList>
+                                </>}
+                                {!!altsInfo?.filter(value => !isAltTypeComplex(value.altType)).length && <>
+                                    <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
+                                    <Typography variant={"h5"}>Extras</Typography>
+                                    <ImageList cols={3}>
+                                        {altsInfo?.filter(value => !isAltTypeComplex(value.altType)).map((value, index) => <ImageListItem key={index}>
+                                            <img
+                                                className={"dialog-image"}
+                                                onClick={() => navigate(`/gallery/${value.id}`)}
+                                                style={{width: "100%"}}
+                                                src={value.thumbnailUrl ?? value.webp ?? value.src}/>
+                                        </ImageListItem>)}
+                                    </ImageList>
+                                </>}
                             </>}
                             <Typography
                                 variant={"subtitle1"}
@@ -135,7 +145,7 @@ export function ArtworkPage() {
                             </Typography>
                         </>
                     </M3Pane>
-                    <AltsUploader imageInformation={imageInfo} altCount={altsInfo?.length ?? 0}/>
+                    <AltsUploader imageInformation={parentImageInfo} altCount={altsInfo?.length ?? 0}/>
                 </Grid>
             </Grid>
         );

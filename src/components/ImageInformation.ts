@@ -1,15 +1,26 @@
 import {Rating} from "./gallery/TagUtils";
 
-interface ImageBase {
+export interface ImageBase {
     tags: string[];
-    webp?: string;
+    webp: string;
     src: string;
-    thumbnailUrl?: string;
+    thumbnailUrl: string;
     rating: Rating;
     aspectRatio: number;
     href?: string;
-    characters: string[]
+    characters: string[];
+    id: string;
 }
+
+export function getParentImage(id: string, imageEntries: ImageEntry[]): ImageInformation | undefined {
+    const entry = imageEntries.find(value => value.id === id);
+    if (entry && isImageInformation(entry)) {
+        return entry;
+    } else {
+        return imageEntries.filter(value => isImageInformation(value)).find(value => isImageInformation(value) && value.title === entry?.parent);
+    }
+}
+
 
 export interface ImageInformation extends ImageBase {
     title: string;
@@ -17,8 +28,19 @@ export interface ImageInformation extends ImageBase {
     artist: string;
 }
 
+type AltType = 'extra' | 'cropped' | 'recolor' | { altNumber?: number, pageNumber?: number };
+
 export interface AltInformation extends ImageBase {
     parent: string;
+    altType: AltType;
+}
+
+export function isAltTypeComplex(altType: AltType | undefined): altType is { altNumber?: number, pageNumber?: number } {
+    return typeof altType === 'object';
+}
+
+export function getAltAndPageNumber(a: AltInformation) {
+    return isAltTypeComplex(a.altType) ? a.altType : {pageNumber: 0, altNumber: 0};
 }
 
 export type ImageEntry = AltInformation | ImageInformation;

@@ -1,10 +1,12 @@
-import {Autocomplete, FilterOptionsState, FormControlLabel, Radio, RadioGroup, Stack, TextField, Typography} from "@mui/material";
+import {Autocomplete, FilterOptionsState, FormControlLabel, FormGroup, Radio, RadioGroup, Stack, TextField, Typography} from "@mui/material";
 import React from "react";
 import Chip from "@mui/material-next/Chip";
 import {Filter} from "@mui/icons-material";
 import {FormControl, FormLabel} from "@mui/material-next";
 import {artists, ArtTag, characters, Rating, SelectedFilters, tagGroup} from "./TagUtils";
 import _ from "lodash";
+import Switch from "@mui/material-next/Switch";
+import {AltSettings} from "./useAltDisplaySettings";
 
 export function AutocompleteFilterChip(props: { option: string, tagProps: { key: number; className: string; disabled: boolean; "data-tag-index": number; tabIndex: -1; onDelete: (event: any) => void } }) {
     return <Chip
@@ -19,6 +21,7 @@ export function FilterPane(props: {
     setFilters: (tags: string) => void,
     filterMode: 'and' | 'or',
     setFilterMode: (filterMode: 'and' | 'or') => void,
+    altDisplaySettings: AltSettings,
 }) {
     function filterOptions(options: string[], state: FilterOptionsState<string>) {
         if (state.inputValue === '') {
@@ -69,6 +72,14 @@ export function FilterPane(props: {
                                   label="And"/>
             </RadioGroup>
         </FormControl>
+        <FormGroup>
+            <FormLabel>Alt Display Settings</FormLabel>
+            <FormControlLabel control={<Switch checked={props.altDisplaySettings.displayAlts} onClick={() => props.altDisplaySettings.setDisplayAlts(!props.altDisplaySettings.displayAlts)}/>} label="Alts"/>
+            <FormControlLabel control={<Switch checked={props.altDisplaySettings.displaySequences} onClick={() => props.altDisplaySettings.setDisplaySequences(!props.altDisplaySettings.displaySequences)}/>} label="Sequences"/>
+            <FormControlLabel control={<Switch checked={props.altDisplaySettings.displayExtras} onClick={() => props.altDisplaySettings.setDisplayExtras(!props.altDisplaySettings.displayExtras)}/>} label="Extras"/>
+            <FormControlLabel control={<Switch checked={props.altDisplaySettings.displayCrops} onClick={() => props.altDisplaySettings.setDisplayCrops(!props.altDisplaySettings.displayCrops)}/>} label="Cropped Versions"/>
+            <FormControlLabel control={<Switch checked={props.altDisplaySettings.displayRecolors} onClick={() => props.altDisplaySettings.setDisplayRecolors(!props.altDisplaySettings.displayRecolors)}/>} label="Recolors"/>
+        </FormGroup>
         <Autocomplete multiple
                       limitTags={1}
                       renderInput={(params) => (

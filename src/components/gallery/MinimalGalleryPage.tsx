@@ -1,16 +1,16 @@
 import {useTagHooks} from "./UseTagHooks";
 import {useNavigate} from "react-router-dom";
 import {Container, Fade, Typography} from "@mui/material";
-import {ImageInformation} from "../ImageInformation";
+import {isImageInformation} from "../ImageInformation";
 import {useQueryState} from "react-router-use-location-state";
 import useMeasure from "react-use-measure";
 import {ResizeObserver} from "@juggle/resize-observer";
-import {prepareFileName} from "./Utils";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 import React from "react";
-import {getShownImages} from "./Gallery";
+import {getShownImages, imageSort} from "./Gallery";
 import {drawerColor} from "../common/Navigation";
 import {SkeletonImage} from "../SkeletonImage";
+import {useAltDisplaySettings} from "./useAltDisplaySettings";
 
 // Page that only displays artworks in a grid, and hides all other elements
 export function MinimalGalleryPage() {
@@ -19,17 +19,11 @@ export function MinimalGalleryPage() {
     const [filterMode] = useQueryState<"and" | "or">("filter-mode", "and");
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver});
     const [referenceName] = useQueryState("reference-name", "Character Reference");
+    const altDisplaySettings = useAltDisplaySettings();
+
 
     const navigation = useNavigate();
-
-
-    function handleImageClicked(value: ImageInformation) {
-        navigation({
-            pathname: `/gallery/${prepareFileName(value.title)}`,
-        })
-    }
-
-    let shownImages = getShownImages(images, filters, filterMode);
+    let shownImages = getShownImages(images, filters, filterMode, altDisplaySettings).sort((a, b) => imageSort(a, b, images));
 
     const height = 350;
     return <Fade in>
@@ -52,13 +46,16 @@ export function MinimalGalleryPage() {
                                        layoutItems={shownImages.map(value => (
                                            value.aspectRatio ?? 1
                                        ))}>
-                        {shownImages.map(value => <SkeletonImage
-                            onClick={() => handleImageClicked(value)}
-                            hasAlts={altData.has(value.title)}
-                            alt={value.title}
-                            src={value.thumbnailUrl ?? value.src}
-                            imageClassname={"artImage"}
-                            aspectRatio={value.aspectRatio ?? 1}/>)}
+                        {shownImages.map(value => {
+                            const title = isImageInformation(value) ? value.title : value.parent;
+                            return <SkeletonImage
+                                onClick={() => navigation(`/gallery/${value.id}`)}
+                                hasAlts={altData.has(title)}
+                                alt={title}
+                                src={value.thumbnailUrl ?? value.src}
+                                imageClassname={"artImage"}
+                                aspectRatio={value.aspectRatio ?? 1}/>;
+                        })}
                     </TSJustifiedLayout>
                 </div>
             </div>

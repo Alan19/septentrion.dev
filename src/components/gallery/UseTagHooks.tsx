@@ -9,6 +9,7 @@ export function useTagHooks() {
     const [filterString, setFilterString] = useQueryState('filters', '');
     const [imageData, setImageData] = useState<(ImageInformation)[]>([]);
     const [altData, setAltData] = useState<Map<string, AltInformation[]>>(new Map());
+    const [imageEntries, setImageEntries] = useState<ImageEntry[]>([]);
 
     useEffect(() => {
         loadImageInfo().then(() => 'Successfully loaded images!');
@@ -21,6 +22,7 @@ export function useTagHooks() {
                     setImageData(value.data.filter(isImageInformation));
                     // Filter images for alts, then collect them into a map with their keys being the parent name, and the value being all the alts
                     setAltData(value.data.filter(isAltInformation).reduce((map, alt) => map.set(alt.parent, [...(map.get(alt.parent) ?? []), alt]), new Map()));
+                    setImageEntries(value.data);
                 });
         } else {
             const jsonImages: ImageEntry[] = images as ImageEntry[];
@@ -29,5 +31,5 @@ export function useTagHooks() {
         }
     }
 
-    return {filters: new SelectedFilters(filterString), setFilters: setFilterString, images: imageData, loadImageInfo, altData};
+    return {filters: new SelectedFilters(filterString), setFilters: setFilterString, images: imageData, loadImageInfo, altData, imageEntries};
 }

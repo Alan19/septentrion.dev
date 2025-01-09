@@ -1,11 +1,12 @@
 import {useTagHooks} from "../gallery/UseTagHooks";
 import React, {memo, ReactNode} from "react";
-import {Grid, Table, TableBody, TableCell, TableHead, TableRow, Tooltip, Typography} from "@mui/material";
+import {Grid, Stack, Table, TableBody, TableCell, TableHead, TableRow, Tooltip, Typography} from "@mui/material";
 import Chip from "@mui/material-next/Chip";
 import CalendarHeatmap, {ReactCalendarHeatmapValue} from 'react-calendar-heatmap'
 import 'react-calendar-heatmap/dist/styles.css';
 import {M3Pane} from "../common/M3Pane";
 import {getHref} from "../ImageInformation";
+import {m3BorderStyle} from "../lore/characters/TemplatedLorePage";
 
 export const AnalyticsPage = memo(function AnalyticsPage() {
     const {images} = useTagHooks();
@@ -87,19 +88,22 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
                 <M3Pane>
                     <>
                         <Typography variant={"h5"} style={{marginTop: 8, marginBottom: 8}} color={"var(--md-sys-color-secondary)"}>Artwork Publish Date Heatmap</Typography>
-                        {Array.from(new Set(images.map(value => value.published.substring(0, 4)))).sort((a, b) => b.localeCompare(a)).map(value => <>
-                            <Typography variant={"h6"} color={"var(--md-sys-color-tertiary)\"}>"}>{value}</Typography>
-                            <CalendarHeatmap classForValue={getClassForHeatmapSquare}
-                                             showWeekdayLabels
-                                             startDate={`${value}-01-01`}
-                                             values={publishedDates}
-                                             transformDayElement={(element, value) => {
-                                                 // Something is wrong with the types module, the element should be an element object, not props
-                                                 // @ts-ignore
-                                                 return getSquareElement(element, value);
-                                             }}
-                                             endDate={`${value}-12-31`}/>
-                        </>)}
+                        <Stack spacing={1}>
+                            {Array.from(new Set(images.map(value => value.published.substring(0, 4)))).sort((a, b) => b.localeCompare(a)).map(value => <div style={{...m3BorderStyle, padding: 8}}>
+                                <Typography variant={"h6"} color={"var(--md-sys-color-tertiary)\"}>"}>{value}</Typography>
+                                {/*We have to use a hacky workaround to make the first date work*/}
+                                <CalendarHeatmap classForValue={getClassForHeatmapSquare}
+                                                 showWeekdayLabels
+                                                 startDate={`${Number.parseInt(value) - 1}-12-31`}
+                                                 values={publishedDates}
+                                                 transformDayElement={(element, value) => {
+                                                     // Something is wrong with the types module, the element should be an element object, not props
+                                                     // @ts-ignore
+                                                     return getSquareElement(element, value);
+                                                 }}
+                                                 endDate={`${value}-12-31`}/>
+                            </div>)}
+                        </Stack>
                     </>
                 </M3Pane>
             </Grid>

@@ -27,8 +27,8 @@ export const router = createHashRouter([
                         element: <Gallery/>
                     },
                     {
-                        path: "/gallery/:title",
-                        element: <ArtworkPage/>
+                        path: "/gallery/:id",
+                        element: <ArtworkPage/>,
                     },
                 ]
             },

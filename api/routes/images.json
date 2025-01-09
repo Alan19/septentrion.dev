@@ -14,7 +14,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "a982559753cf94e32d58b0cfaaf682b62b1856533e11a315c34b4dd0"
   },
   {
     "src": "https://pbs.twimg.com/media/FS3TACVVsAAQPl1?format=jpg&name=large",
@@ -32,7 +33,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "3530b395d2c3819e6ddea5c117930606b84cd1f31835f685e3796e92"
   },
   {
     "src": "https://pbs.twimg.com/media/Fj2qZYRVEAAVyRC?format=jpg&name=large",
@@ -50,7 +52,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "292f31ef5de8520f1183fdd7f17adfb0c9fd21c2799e61db00b009e5"
   },
   {
     "src": "https://pbs.twimg.com/media/FTkSbIYaQAALr_G?format=jpg&name=large",
@@ -68,7 +71,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "bd72c8691f890c9dcd869ec34335b6eacb2cee270b6fec7571b4fabb"
   },
   {
     "src": "https://pbs.twimg.com/media/FOBdASRWYAYYG_b?format=jpg&name=4096x4096",
@@ -87,7 +91,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "id": "c72b6027336833d2ec1b3a1a2ac8d3503a2d7b1f14d79fe75d64775d"
   },
   {
     "src": "https://pbs.twimg.com/media/FnHp4nWaUAA-lgD?format=jpg&name=large",
@@ -109,7 +114,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "id": "670cbd92685cacb0f1b9edb0d18edb1c1376ca492551b6c0abda658b"
   },
   {
     "src": "https://pbs.twimg.com/media/FdwPgQEaEAA3Unn?format=jpg&name=large",
@@ -126,7 +132,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "82e6114a3ef661576508823185d33d78e6ec8fac0b0b7f8d8991eb5a"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangulum_form.jpg",
@@ -143,7 +150,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "sensitive"
+    "rating": "sensitive",
+    "id": "9ed5e8a116c161b7711693227bd81870f21079d19137d24b6b0314f1"
   },
   {
     "src": "https://pbs.twimg.com/media/FWxBQsZakAAC85Z?format=jpg&name=large",
@@ -163,7 +171,8 @@
       "Alcor",
       "Castor"
     ],
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "id": "67bdb45e0c4f97add65e77faaef7c68de041c9f65a58c39a6b35e9c9"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/raf_buff_techwear.jpeg",
@@ -182,7 +191,8 @@
       "Alcor",
       "NerdyWoffy"
     ],
-    "rating": "sensitive"
+    "rating": "sensitive",
+    "id": "dbbe9c315b1109f249d467d64e23b8e309679287c9ee9a0aa009a887"
   },
   {
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/indra_suit.webp",
@@ -202,7 +212,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "id": "9c2ce5e259256055acd3526362d1362e4f85e34fd33bf42fc5d9d0f1"
   },
   {
     "src": "https://pbs.twimg.com/media/FcNTqa8aUAE4uED?format=jpg&name=4096x4096",
@@ -222,7 +233,8 @@
       "Alcor",
       "Castor"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "3b7e84d495f372a5dc730b84fc47b22725f9d221d7972a4cb200a231"
   },
   {
     "title": "AICore Reference Sheet",
@@ -242,7 +254,8 @@
     "characters": [
       "Castor",
       "Alcor"
-    ]
+    ],
+    "id": "0c4742a662c2ff3e759dbfce3fead073ff252d61db70a7c918397701"
   },
   {
     "title": "Lance Hero",
@@ -263,7 +276,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "6bc82d3986aeb51038070c1844002506f1b4fef7185bcbee13e5fabf"
   },
   {
     "title": "Valentine's Day 2022",
@@ -281,7 +295,8 @@
     "characters": [
       "Alcor",
       "Lava"
-    ]
+    ],
+    "id": "4c53d3577bdbb6d8a915305e23fa46192850c832001f297155458e1f"
   },
   {
     "title": "Arknights Operator",
@@ -301,7 +316,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "6b90dc2bfdf7d0f95aa8f77de39d9d3e3200e3afd9701e9d176ec2ce"
   },
   {
     "title": "Sci-fi Mode: ON",
@@ -323,7 +339,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "48b3d268d8566e01c0b15e007f7bea0d867d103675b8cdc3b4189929"
   },
   {
     "title": "Aldhibah Form Reference Sheet",
@@ -341,7 +358,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "ff881e95395fc3ab03aa713c03c037010578613ab5393d4421e7e9a0"
   },
   {
     "title": "Kemomecha",
@@ -358,7 +376,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "c1c137be4e4f1f2de11727532a3442af8427d2affb59771ebf1f7091"
   },
   {
     "title": "AICore Transformation",
@@ -378,7 +397,8 @@
     "characters": [
       "Alcor",
       "Castor"
-    ]
+    ],
+    "id": "98a621a13ad5780003f67e7066ae427345d183f244689e021707988c"
   },
   {
     "title": "Come Find Me.",
@@ -395,7 +415,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "0df2699f149e64ed327f87de5aa8dba67eaf84b72a33b4cacd88a157"
   },
   {
     "title": "Alcor Sketchpage",
@@ -417,7 +438,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "14e7f8c6e56a7b5c30b355637eda21dc30c7aece9bc4d4c73069056c"
   },
   {
     "title": "PNGTuber",
@@ -435,7 +457,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "1d701ad7ef030453f30b396eebf61a76489f4ead33ad221e6a0f2f80"
   },
   {
     "parent": "PNGTuber",
@@ -449,7 +472,14 @@
     "published": "2021-09-10",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/png_tuber_1.webp",
     "aspectRatio": 1,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/png_tuber_1.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/png_tuber_1.webp",
+    "altType": {
+      "altNumber": 1
+    },
+    "id": "17b51659d62fa618881f2cbd7d05b927446623c4094f9be55c42a694",
+    "characters": [
+      "Alcor"
+    ]
   },
   {
     "title": "Night",
@@ -468,7 +498,8 @@
       "Roku",
       "Alcor"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "46b7671f875cca66816f398cd5fb344a71eea0fc9eb2d34615e1a85c"
   },
   {
     "title": "Cool Trio",
@@ -489,7 +520,8 @@
       "Francie",
       "Silva",
       "Roku"
-    ]
+    ],
+    "id": "64ddd01d32293e51e5d310c109d1fe70be9a9cc4c39f908445c9469b"
   },
   {
     "title": "Gemini Raid Icon",
@@ -506,7 +538,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "id": "0ff7facaf58647d4ffa8547ed8ebd3548cff55a5cd535cecad966aa8"
   },
   {
     "title": "Raichu Stream Gift Art",
@@ -525,7 +558,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "6763eaff25bd5ba9d05cb725123983137f4c90bac20e8a902343d44a"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/autumnal_techwear.png",
@@ -543,7 +577,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "e2cea28f53208c1c185a85436be290500d1ac4bb880e311c520b3915"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/outdoors_hot_springs.png",
@@ -560,7 +595,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "f2df5cfdfb5224952a165abf555af97dbe52ea2221a60b85a0001d77"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/rsn_sketch.jpg",
@@ -578,7 +614,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "id": "5a36ace3333954b1d68f0c0c1ecb7351c3792cf04e8a2ac8dc57cf14"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/big_derg.png",
@@ -595,7 +632,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "999deb2c6ad69b9b8b58dfa71a634adf1f500d68274a5b6156cb44cc"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/chibi_alcor_and_lava.png",
@@ -615,7 +653,8 @@
       "Alcor",
       "Lava"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "82a0f3d01bf354de668e93916b7e2e8e2b7930e7d29f969af9cd1f44"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/twewy_team.png",
@@ -636,7 +675,8 @@
       "Gabe",
       "Lava",
       "Alcor"
-    ]
+    ],
+    "id": "4792d5fab4e9f0a52e80fbf1612d71aa87276dac8f8b8c47ae7265be"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_techsuit.jpeg",
@@ -657,7 +697,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "5cab75748eed26a6a4a17eeb8ad3373b93b0d91ddb8bb8e818f6d5e7"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/scarlet_flame_x_galactic_b_hero_suit.png",
@@ -675,7 +716,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "956d0419663a7f16cd326eb66aead234f00dee4800aac72c0a34d7cd"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/solarpunk_city_heroes.jpg",
@@ -694,7 +736,8 @@
       "Alcor",
       "Gabe"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "c81f2a2e64f8bd9fc14658a33e36f4a8c37aace89b9f5e36049d2a99"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/tamcin_buff_sketch.jpg",
@@ -712,7 +755,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "f0f2b98ee68ce3328f64c1ddda10a850bdf5870207282716e50a9453"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/couple_s_sketchpage_2022.jpg",
@@ -734,7 +778,8 @@
       "Lava",
       "Castor"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "bf6dc3ef5c94d8a2bf14f2493f801a335b52effc3e88a7bff6eb643b"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/power_up.png",
@@ -753,7 +798,8 @@
       "Alcor",
       "Midnight"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "57ba15f860e771cc3dfadddb513014119b9f01b528a3fcaa45a441bf"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/combat_ready_duo.png",
@@ -773,11 +819,12 @@
     "characters": [
       "Alcor",
       "Owen"
-    ]
+    ],
+    "id": "dbb21083451111c84ab0d456d58460c7d31a421334596517f4f2d90e"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/self_experimentation_part_1.png",
-    "title": "Self Experimentation (Part 1)",
+    "title": "Self Experimentation",
     "artist": "@CheezyChezu",
     "tags": [
       "Vernal",
@@ -793,7 +840,8 @@
     "characters": [
       "Alcor",
       "Castor"
-    ]
+    ],
+    "id": "6dbd89081e6607310cc737ad7cf58d32b6461900f1d44f2ad8a21298"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/black_cat_blades.png",
@@ -810,7 +858,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "f7f873a07b153c058ef3ce9a5be423d2aad0284387df24e0cafb0798"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/ralsei_themed_trick_or_treat.png",
@@ -829,7 +878,8 @@
       "Gabe",
       "Alcor",
       "Sleepy"
-    ]
+    ],
+    "id": "e5c2823f836254ca4777c010d71f32fcc37bb380d686a15b470782b5"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/black_mage.png",
@@ -846,7 +896,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "78d58c57f2bfb688e0da95347cf1f0dbfcaab5552f9eef02bf2e42fd"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/monk_rouge_draft.png",
@@ -866,7 +917,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "78ab36739ea864b295f180414d35c3df00eae76a6a8d63862d086b3b"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/monk_rogue_draft_2.png",
@@ -886,7 +938,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "1665a600f864e5fa4075db6a6e5fa6a8e3425bb6af792a1953fa629a"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/sitting_on_a_couch.png",
@@ -905,7 +958,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "42b4818cf09182e34de5eac5d9723b3f7e06bffb373de258626d97dc"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alan_and_lava_hug.png",
@@ -924,7 +978,8 @@
       "Alcor",
       "Lava"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "5ce4ef98a3fc7c8ae0c079d38426ddda2a35cc6ad30ab0184581bdc1"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/stay_gold.png",
@@ -941,12 +996,13 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "9a7c8650063d4a172cb55d7f389c4aa6e2e879aff2023b0eddcfa614"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/power_trio_attack.png",
     "title": "Power Trio Attack",
-    "artist": "@MelonFoxBoba",
+    "artist": "@melonbobafox.bsky.social",
     "tags": [
       "Rastaban Form",
       "Knives"
@@ -961,7 +1017,8 @@
       "Gabe",
       "Lava"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "199aa7e13c88c36b2cb4409419710bd0b61ce555cf016af93aa0856b"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_and_gabe_session_attack.png",
@@ -979,7 +1036,8 @@
     "characters": [
       "Alcor",
       "Gabe"
-    ]
+    ],
+    "id": "f33a5d1dbbd8e0f3ef13764e890ca7c90b45cb7551d407c946c488d0"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pride_2022.jpg",
@@ -997,7 +1055,8 @@
     "characters": [
       "Alcor",
       "Lava"
-    ]
+    ],
+    "id": "5000161818f718bd1fe5c6a1318619567bc84968d755d31839ab102c"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/lifewonders_beach_outfits.jpg",
@@ -1017,7 +1076,8 @@
       "Alcor",
       "Francie",
       "Roku"
-    ]
+    ],
+    "id": "360a74bb655649ff51a01b8391658a2af3f991764262190ccf5ee54f"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/rogue_ych.png",
@@ -1035,7 +1095,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "id": "f3d4c3b1fe37b020e727bb76edf2359cf590480a465072c1d236b855"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/shrine_sketch.jpeg",
@@ -1053,12 +1114,13 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "12b6aa2ebc3ddb03271769cce41276ee8ababe6e00074ba55af97a14"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/strawberry_boba_stream_anniversary.png",
     "title": "Strawberry Boba Stream Anniversary",
-    "artist": "@MelonFoxBoba",
+    "artist": "@melonbobafox.bsky.social",
     "tags": [
       "Rastaban Form",
       "Standard Outfit"
@@ -1076,7 +1138,8 @@
       "Shiro",
       "Lava",
       "Gabe"
-    ]
+    ],
+    "id": "5c46030806f505145aff8a0c98eff81bcd1df8b017bf2a2fa2d9b230"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/balle_soleil_kigu.png",
@@ -1093,7 +1156,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "bf97bd0ca575e14f013d211c5c036372ac9ffc3973b60646ad2fb241"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/monocolor_alcor_and_castor.png",
@@ -1111,7 +1175,8 @@
     "characters": [
       "Alcor",
       "Castor"
-    ]
+    ],
+    "id": "3e64fbc52a1a48d950db1783ec75a561a03d9d40ae21bdbe6d2ba53b"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/autumn_sundae.png",
@@ -1128,7 +1193,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "d9e727c50f8fff853280d0955f26ea280d4c3c4a96e4f2f1061b4e3a"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/neon_blue_techwear_rogue.png",
@@ -1147,7 +1213,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "7d7a8b58fb68587ce0ab4b581e69d72f568e1d635c3916d7760e81b4"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_wow.png",
@@ -1165,7 +1232,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "cefad59059e680fa1b5f54e482ac56cc0101bfb99cac72853e8a8a55"
   },
   {
     "parent": "Alcor Wow",
@@ -1176,7 +1244,15 @@
     "aspectRatio": 1,
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/alcor_wow_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_wow_1.webp",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_and_castor_wow.png"
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_and_castor_wow.png",
+    "altType": {
+      "altNumber": 1
+    },
+    "id": "29446929df7fc011b8f390980c16aee63521285df357dae5257260d7",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ]
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/monstrous_symbiote.png",
@@ -1193,7 +1269,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "c3c96944b3f5efc81802689649218e0e221643430752413666332a80"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alan_with_lava.png",
@@ -1212,12 +1289,13 @@
     "characters": [
       "Alcor",
       "Lava"
-    ]
+    ],
+    "id": "62cedbf93e383d8221d96ad5636a72a42c753db83e870323b568d3c9"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_chef.png",
     "title": "Alcor Chef",
-    "artist": "@MelonFoxBoba",
+    "artist": "@melonbobafox.bsky.social",
     "tags": [
       "Rastaban Form"
     ],
@@ -1230,7 +1308,8 @@
     "characters": [
       "Alcor",
       "Shiro"
-    ]
+    ],
+    "id": "907b0635cfaf88dbc33283e7b9dcb35344761881c2ac6894be8837a0"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/snuggling_with_lava_plushie.PNG",
@@ -1248,7 +1327,8 @@
     "characters": [
       "Alcor",
       "Lava"
-    ]
+    ],
+    "id": "f4f37813b1822aa6098ce79373ac3b891b8d9440b7c6ecf7fcfadf0d"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_in_lava_s_clothes.jpg",
@@ -1265,11 +1345,12 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "8d7a788e1e3b5c715c01f770f389f62150b0edadfebad06d8bbddc5f"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/self_experimentation_part_2.png",
-    "title": "Self Experimentation (Part 2)",
+    "parent": "Self Experimentation",
     "artist": "@CheezyChezu",
     "tags": [
       "Eltanin Form",
@@ -1283,7 +1364,11 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": {
+      "pageNumber": 1
+    },
+    "id": "f2ac580b7a3ffa78e051614b95ee85aa0c13c442c1acc3f9381ed74d"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/icarus_suit.png",
@@ -1303,7 +1388,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "671a87e9db4b53e1d4843837cefd0952a8e9ec2d046d135797091565"
   },
   {
     "title": "Starforce Protagonist Alcor",
@@ -1325,7 +1411,8 @@
     "characters": [
       "Alcor",
       "Castor"
-    ]
+    ],
+    "id": "2d32c4ce9536ef7b317fc6157a557a91030ecc922c9862bc7e685ab8"
   },
   {
     "title": "Evening Train",
@@ -1346,7 +1433,8 @@
     "characters": [
       "Alcor",
       "Lava"
-    ]
+    ],
+    "id": "bbc602e2b497e33a9af88bd1612096d5307d05894531ce69eb6ead97"
   },
   {
     "title": "Lava's Patreon Gift",
@@ -1365,7 +1453,8 @@
     "characters": [
       "Alcor",
       "Castor"
-    ]
+    ],
+    "id": "f14d802caeda54925b0ae0d49a84efc4243df1955d5b6fedaabd0f03"
   },
   {
     "title": "Testing Ryle's Symbiote Form",
@@ -1384,11 +1473,12 @@
       "Alcor",
       "Ryle"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "db5252d9c8ef39593bbae490b9a5a948b9a97dd6ec7c261b7b74e0fa"
   },
   {
     "title": "Shiro December Sketch",
-    "artist": "@MelonFoxBoba",
+    "artist": "@melonbobafox.bsky.social",
     "tags": [
       "Rastaban Form",
       "Standard Outfit"
@@ -1402,7 +1492,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "fe4e0ae8d67958795ca9acc96253ad8e506595fc5e88a9b8b3cd7cd8"
   },
   {
     "title": "Midnight Pec Grab",
@@ -1421,7 +1512,8 @@
     "characters": [
       "Alcor",
       "Midnight"
-    ]
+    ],
+    "id": "2eb281da55aee243290b5da68c2f960d3dd2a3a97862501411c43e0d"
   },
   {
     "title": "Deer Alcor",
@@ -1439,7 +1531,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "330c322edea434041ac4420c30c5ff60fc74abd0e47f8172650ac70b"
   },
   {
     "title": "Meditating with a Lemiolu on top",
@@ -1457,7 +1550,8 @@
     "characters": [
       "Alcor",
       "Valor"
-    ]
+    ],
+    "id": "ae802687cc6940a25daadbc26ec02f8a08306e99fbe792361677bc09"
   },
   {
     "title": "AICore Bridal Carry",
@@ -1475,7 +1569,8 @@
     "characters": [
       "Alcor",
       "Lava"
-    ]
+    ],
+    "id": "491fe40984235977636a0ca22911ae96f00275722fbc2674d4e0e93c"
   },
   {
     "title": "Alcor Body Study Sketchpage",
@@ -1501,7 +1596,8 @@
       "Alcor",
       "Castor",
       "Roku"
-    ]
+    ],
+    "id": "d835b8eed8444dec28de64e6ad23cc189a052314d6ada3691ad0ce4f"
   },
   {
     "parent": "Alcor Body Study Sketchpage",
@@ -1523,7 +1619,9 @@
       "Alcor",
       "Castor",
       "Roku"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "4367545728ba6966557952b4095cf5e014e458380f6037c280a499b6"
   },
   {
     "tags": [
@@ -1538,7 +1636,9 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "general"
+    "rating": "general",
+    "altType": "cropped",
+    "id": "f0ec65c04361c7e0febf31b01696ee0f2b715d792d52dbd705a49f54"
   },
   {
     "parent": "Alcor Body Study Sketchpage",
@@ -1553,7 +1653,9 @@
     "characters": [
       "Castor"
     ],
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "altType": "cropped",
+    "id": "82d96fd93a2ef4f15a36b01c1fdadda35981ab35585025bb8bb48f87"
   },
   {
     "parent": "Alcor Body Study Sketchpage",
@@ -1568,7 +1670,9 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "general"
+    "rating": "general",
+    "altType": "cropped",
+    "id": "f534b7b17c07dd70212bee07f407eb9a2a74618a12ef6fecc78e821a"
   },
   {
     "title": "Outfit Bois",
@@ -1587,7 +1691,8 @@
       "Alcor",
       "Silva"
     ],
-    "rating": "general"
+    "rating": "general",
+    "id": "dbdc740586787a226dcd4e50aaa3d0ad09037a3e0fd7f92f665de07d"
   },
   {
     "title": "Mintea Icon",
@@ -1607,7 +1712,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "9999b7cb2abfc5d0f39b8eca9f7342b9523ad7ad942edc88d4fbf484"
   },
   {
     "title": "Aerospray RG",
@@ -1625,7 +1731,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "id": "b86220aca42129ea49c97cd43f1292243be6c56ad9f62c7f13ada51b"
   },
   {
     "title": "Cougar Cantus",
@@ -1643,7 +1750,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "aecf0b88b61ed0133b99c5a94f567ddb4ed0db41ce6f2c1a0f991773"
   },
   {
     "title": "NekoTiger Alcor Sketch",
@@ -1660,7 +1768,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "aef580bcc47aa43ee5dbed92ac50f6edd8e91837fde5a1ffb303dba3"
   },
   {
     "parent": "NekoTiger Alcor Sketch",
@@ -1677,7 +1786,11 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": {
+      "altNumber": 1
+    },
+    "id": "151cfbdf8dcdf15c39f6accf67247d8dcd6a60e9f6f31923a9b6c10f"
   },
   {
     "parent": "NekoTiger Alcor Sketch",
@@ -1695,7 +1808,11 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": {
+      "altNumber": 2
+    },
+    "id": "c7d076bcde0edb94240a4a8ee5545ac6e28fe28fc5fb166673999291"
   },
   {
     "title": "LemonBeagle Mini Set",
@@ -1714,7 +1831,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "id": "b9e9c7a1ef411544762824b751ed9bbbbb9bb2f220aaf1f1cbc1edb5"
   },
   {
     "title": "Prototype Alcor Icon",
@@ -1731,7 +1849,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "dfe24fadf28cec43ebccf0322bbbf6e5d22c0b55cdd3f23a4802e2a6"
   },
   {
     "title": "Pin Icon from Lava",
@@ -1749,7 +1868,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "0eedcbcb2d052a1e4591fbbd5d15571424bce99ced1c9d87fae6a221"
   },
   {
     "title": "Icon Gift from Midnight",
@@ -1768,7 +1888,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "0c6e9b1f7dd70d80360f5b3125a9243e0237a39a99524a1906f11a5c"
   },
   {
     "title": "Gift Icon from MidnightAus 2",
@@ -1785,7 +1906,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "4a2021ec29ce7566ab636a7c0b4b95bb3ec655c38809dc5f582d5f90"
   },
   {
     "title": "Cosmic Style Icon",
@@ -1804,7 +1926,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "4676e4913cd30cf3dd086f686da4fe34f302d62e68e50c00918467f7"
   },
   {
     "title": "Christmas Doodle",
@@ -1822,7 +1945,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "5d927a34249c17b2140483478a59f77704edb9948e876b63a6cd059b"
   },
   {
     "title": "Enjoying the View huh?",
@@ -1840,7 +1964,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "d42011b5dfde97c60b4ba75cf9955ea8743d0b79c72ed97c20f75812"
   },
   {
     "title": "Aquarius Form",
@@ -1857,7 +1982,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "75d1b2d4c10dc69c4838ca723b355c0b79285d3e44af0b0809496d52"
   },
   {
     "title": "Alcor Hugging Lava 2023",
@@ -1874,7 +2000,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "f4cd510361f080862bdced211183c683d743f3f493cd2c2ffe1c15ad"
   },
   {
     "title": "Aquarius Form by Mixter",
@@ -1891,7 +2018,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "061fa22e52e8c853e1756615e5b70c7db1dd8ac5381dacce17264e83"
   },
   {
     "title": "We're ready to fight, no need to back down!",
@@ -1913,7 +2041,8 @@
       "Alcor",
       "Lava",
       "Castor"
-    ]
+    ],
+    "id": "cf469a93f1f24665d62d3fe4e271437a968d487ad8e93bf2a8f8d247"
   },
   {
     "title": "City Neighborhood in Autumn",
@@ -1931,7 +2060,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "bc075cabe247e67c0e4de6f0d08c52a50f6151bfc11ce72997c64fc3"
   },
   {
     "title": "Chibi Cougar-Dragon with a Visor and Knife!",
@@ -1950,7 +2080,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "7238e40a219167b9275ceb754b21400cafbd0024b3ec40b06c4c5148"
   },
   {
     "title": "Flexing YCH",
@@ -1967,7 +2098,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "66753491f6afeb3c2e8a82fddf1280955524cbe395b0cabb1f305c26"
   },
   {
     "title": "Halloween Daki",
@@ -1984,7 +2116,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "44ea1d0837fd5b1646ff506c2a95089cf208308af75fd7be83cffb2a"
   },
   {
     "title": "Happy 24th Birthday!",
@@ -2005,7 +2138,8 @@
     "characters": [
       "Alcor",
       "Castor"
-    ]
+    ],
+    "id": "408a543ccaaee207db68a875de24e459a9cde3de34b60fcc38d4f5b9"
   },
   {
     "title": "Loincloth",
@@ -2022,7 +2156,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "0927aeaa48492ab705b4a50a8f4aefb702dc74c4d53a504663034e5b"
   },
   {
     "title": "Lava Pinning Alcor",
@@ -2041,7 +2176,8 @@
     "characters": [
       "Alcor",
       "Lava"
-    ]
+    ],
+    "id": "633a8d587fd835187e7f349980e13a21400d72479a22e45a2ffaa499"
   },
   {
     "title": "Casual Cupid",
@@ -2059,7 +2195,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "d6456ac0f05c380bf6c6a4d56cc695d781bb57ca3a22233a479caa83"
   },
   {
     "title": "Christmas PJs",
@@ -2077,7 +2214,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "d3625dab1dc62fff55fec65a08ed2ed8beda6a2b73f7c40d387064ab"
   },
   {
     "title": "Chibi AICore",
@@ -2094,7 +2232,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "85814eef4403976d76d2177605935a15e836bd3def79a6a5ae8da962"
   },
   {
     "title": "Valentine's Day 2023",
@@ -2112,11 +2251,12 @@
     "characters": [
       "Alcor",
       "Lava"
-    ]
+    ],
+    "id": "ed767ab15abfe600c406bc93879c4e7e7dd9680c7b9129df9d544a0b"
   },
   {
     "title": "Confused Alcor",
-    "artist": "@MelonFoxBoba",
+    "artist": "@melonbobafox.bsky.social",
     "tags": [
       "Rastaban Form",
       "Castor",
@@ -2132,7 +2272,8 @@
     "characters": [
       "Alcor",
       "Castor"
-    ]
+    ],
+    "id": "34f13633b80d39712bb1fcc7a2966246229ca7d1e4c1716eae411ad0"
   },
   {
     "title": "Pride Month YCH 2023",
@@ -2149,7 +2290,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "67d621f7cf17b6fdfd492f608c9de3fd8d0cb2ddb328d6d6fbe89bf8"
   },
   {
     "title": "Inkling Alcor and Octoling Lava",
@@ -2167,7 +2309,8 @@
     "characters": [
       "Alcor",
       "Lava"
-    ]
+    ],
+    "id": "58eada98ac7d62a46c979dabb3a7fc07d3531674d7efe2c835d6f988"
   },
   {
     "title": "Monster Constume",
@@ -2185,7 +2328,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "8c2e569695f44d7ed3445f24e57f44d9737e1b6295e6a9e8966f725f"
   },
   {
     "title": "Ice Cream",
@@ -2202,7 +2346,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "927445e4e4e577e3fbbf1a1e07f830f2eea0b5824469d6321a54e39d"
   },
   {
     "title": "Resting Gladiator",
@@ -2219,7 +2364,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "a3361f2ac18a5c1955549a4ba46c3f84896feb591a9a939dcfdfe3c1"
   },
   {
     "title": "Gladiator Sketch",
@@ -2236,7 +2382,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "b74e774905f479ceeca607ceba7d308d0762fa73a44acb8d3d90330e"
   },
   {
     "title": "Sportswear Sketch",
@@ -2254,7 +2401,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "4aa3d440c5f464c0775491629a268fec7168e4f66eb48d839a35bcae"
   },
   {
     "title": "Zaaru Doodle",
@@ -2271,7 +2419,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "9fc4ea6c9f0211c3f76d93d762fe2a0dc60431b02c781175d769ed62"
   },
   {
     "title": "Alcor Icon from Ryze",
@@ -2289,7 +2438,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "8103a40a43c79daaec519026f4193b7637e4c758d76d3c2a6eb4bc05"
   },
   {
     "title": "Inventor Sketch",
@@ -2307,7 +2457,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "909a7a0704abc250d159e9c97c336bda8620fa72f7c3993ba6ad63db"
   },
   {
     "title": "Summer Outfit 2023 Sketch",
@@ -2325,7 +2476,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "60fc8ea66cf83ce7b7fff581c9f803390ac164ea25a58868874e426b"
   },
   {
     "title": "Terri Illustration 348",
@@ -2346,7 +2498,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "bfcc199066ae564bb22e015c65bbe949814394bfdd80ca287d51b061"
   },
   {
     "title": "Ronin Sketch",
@@ -2363,7 +2516,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "ae1623ffaf03f0a1a54ef93c08fc7de0850f66d42148ff7755aa64ea"
   },
   {
     "title": "Project Jupiter",
@@ -2383,7 +2537,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "c17fb5a4d4d21c70b7888a8c5dc8dbd9015364cfb19fbe9fff69435e"
   },
   {
     "title": "Mech suit update 2023",
@@ -2402,7 +2557,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "81f75a4693d465aeaa7d4a118b457c5fecc62ed66852d9bdac3b22b5"
   },
   {
     "title": "Symbiote Experiment",
@@ -2421,7 +2577,8 @@
     "characters": [
       "Alcor",
       "Castor"
-    ]
+    ],
+    "id": "d01bf778dc136cd3c2d652888b2ad73979cb0cceb722a7e34cb42560"
   },
   {
     "title": "Alcor Daki",
@@ -2438,7 +2595,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "25cc11a063b569386cd19262445d92c0eecc3005efcf2eac30b89176"
   },
   {
     "title": "Castor Colored Undies",
@@ -2455,7 +2613,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "35cc997c89d7fe2a9c7a3c8866a0e40ef868d630f15398099100ed5f"
   },
   {
     "title": "Zinogre and Roy",
@@ -2475,7 +2634,8 @@
     "characters": [
       "Alcor",
       "Roy"
-    ]
+    ],
+    "id": "c97da64a300587fb2f31aa3c2fe2d80fbafb2339bdb93ca80805a974"
   },
   {
     "title": "Diving",
@@ -2492,7 +2652,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "c52ce2d850cdf3ee8a609b2c4cc567d6ee1e4dbe39f2aa0e009e2cec"
   },
   {
     "title": "Astrologist Monk Rogue",
@@ -2510,7 +2671,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "2268b41e2723352b0e5ae28c5219256322905d36badad03b66bcedd6"
   },
   {
     "title": "Prototype Eclipse Deity Armor",
@@ -2527,7 +2689,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "b21602e3e27688f9d250d0cae666b8a008006ac864fa158a6447ac8e"
   },
   {
     "title": "Arknights Cosplay",
@@ -2545,7 +2708,8 @@
     "characters": [
       "Alcor",
       "Lava"
-    ]
+    ],
+    "id": "2fef34bcff6fa325794f14188474b26707ded86a0367915931a7d7ed"
   },
   {
     "title": "Grim Reaper Costume Sketch",
@@ -2563,7 +2727,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "b1f46143eb92bfb54c91e6601c955d8e2e99c2d0bf2536ba2af0877e"
   },
   {
     "title": "Growth Serum Test",
@@ -2580,7 +2745,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "601e8930150291def502833a2000666674a3b116488621c557fd18a6"
   },
   {
     "title": "AICore Raffle Sketch",
@@ -2597,7 +2763,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "c249b0be2e6c91793917d89c1e0ec44764a2b0053fab8ed1f71f6a09"
   },
   {
     "title": "Future Spark",
@@ -2616,7 +2783,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "a114e48dfe9235f6cb131d355bee68c8ab7c6c99b15182b6e5ccdf89"
   },
   {
     "title": "Swim Team Outfit",
@@ -2633,7 +2801,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "53158ec0e9d672f2b3284cc404cce2a2640eed4fd9f61a3f7b969395"
   },
   {
     "title": "Aquarius Form Combat Outfit",
@@ -2651,7 +2820,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "46e751c413ed8bb93a69c8c01a7950b8b22348df22280492e261e0ba"
   },
   {
     "title": "Auriga Form Reference",
@@ -2668,7 +2838,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "5d87f240da13bb35a83377746e86019d9bef26a3bd7b245b828861f8"
   },
   {
     "title": "Goth Sketch",
@@ -2686,7 +2857,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "624c5864757b8b6c59143d0e787bef9fa20304625889ac3a059f2631"
   },
   {
     "title": "Alcor Tap",
@@ -2703,7 +2875,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "d5e2881a4cfc3f93391ee77930669fb387ae5275533ef9c8ae6800f7"
   },
   {
     "tags": [
@@ -2719,7 +2892,11 @@
     "characters": [
       "Alcor",
       "Castor"
-    ]
+    ],
+    "altType": {
+      "pageNumber": 1
+    },
+    "id": "96ff43be70610a8234105a3ee30f3edd329c8c277fdd97993182481c"
   },
   {
     "title": "Beach Boy",
@@ -2736,7 +2913,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "b20cd3de0ba266149ef3462ee58201a5ec28e5518f17f9bedea57a1d"
   },
   {
     "title": "Warp Strike",
@@ -2755,7 +2933,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "6e1a4d0d08be4d772044f36cbabfc192b44534707546685cafff2380"
   },
   {
     "title": "Here's a Present",
@@ -2773,7 +2952,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "9ba70b7710b816911d2bbcf457bad55970c67daa95139ca0eb743556"
   },
   {
     "title": "Winter Fashion Sketch",
@@ -2792,7 +2972,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "48a20e47415a77d803f8ac17d1e05eac071b90bf90e1e10e8f477ce0"
   },
   {
     "parent": "Winter Fashion Sketch",
@@ -2807,7 +2988,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "c9919108c9b33b4d86d7471f6056f86dfcf36ddaafc3ac59f0643bef"
   },
   {
     "title": "New Year 2024",
@@ -2825,7 +3008,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "9dd1de938a997360d810072c6b8b566631dea11a7c55e7fb7317ae57"
   },
   {
     "title": "Chill Season / Painbrush",
@@ -2840,7 +3024,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "7d6e282906e888a91c4aa52314c4bad121df129e2c9bf754211e9f3d"
   },
   {
     "title": "Pec Inspection",
@@ -2858,7 +3043,8 @@
     "characters": [
       "Alcor",
       "Midnight"
-    ]
+    ],
+    "id": "b7bc30c5ebe032e484a46b576bcce82a669efb4dfe452103c89a7fc5"
   },
   {
     "title": "Dialexus Emote Pack 1",
@@ -2876,7 +3062,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "4d20595d91d5db77507bfd0c17d3f67903b3ba7a22bf8c01e8f73bec"
   },
   {
     "title": "Castor Evolved",
@@ -2895,7 +3082,8 @@
     "rating": "mainstream",
     "characters": [
       "Castor"
-    ]
+    ],
+    "id": "007d1a34bd8939d5537c992565f0974e4888d7abb1d4b45342743d7f"
   },
   {
     "title": "Techwear Ninja v2",
@@ -2914,7 +3102,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "1041823c535c0f4df78c645808c8931b6d66f28676610ec3cfa82b70"
   },
   {
     "title": "Glimmer on the Shore",
@@ -2932,7 +3121,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "c52263137351ecad103a262c65b26100eee9797573fef524106410de"
   },
   {
     "title": "Farmer Sketch",
@@ -2950,7 +3140,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "ff52bccdccb1e91b5fd064c6e154f91057caff8d8549d42643c50aac"
   },
   {
     "parent": "Farmer Sketch",
@@ -2965,7 +3156,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "3b6c60c614649926f3f599eb8278109f6ed5dd757f1b271a1f2fce63"
   },
   {
     "title": "My Room",
@@ -2982,7 +3175,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "2a6f9687c0d3857caf7081a06017534fadbd43d056c90c625ef1a64d"
   },
   {
     "title": "Triangulum Combat Suit",
@@ -2999,7 +3193,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "e6c9f68adc98be9da458899ffeb2177095f7ee0512b8d4daa53666f0"
   },
   {
     "tags": [],
@@ -3014,7 +3209,9 @@
       "Alcor",
       "Roku",
       "Francie"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "dccb3f518e5534e81a1919d487e4906ec2cd939dd8ceb8f826bbeb9a"
   },
   {
     "title": "Steampunk Sketch",
@@ -3032,7 +3229,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "b5326bb1793382de4bef5fcc8b2d4a204d4e3e22f14aa902f3797658"
   },
   {
     "title": "Alcor's Logos",
@@ -3045,7 +3243,8 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_s_logos.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_s_logos.jpg",
     "rating": "mainstream",
-    "characters": []
+    "characters": [],
+    "id": "eb3baf9f1528b1373cb1b34a3f848a22a89c0cd5845c14cfd16ced7d"
   },
   {
     "title": "Pokemon Trainer",
@@ -3062,7 +3261,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "6209f037b021a6edfebb3b29846382560bd88615f07497062f376999"
   },
   {
     "parent": "Eclipse Deity γ",
@@ -3080,7 +3280,11 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": {
+      "altNumber": 1
+    },
+    "id": "92c716a69aa14c905e7ece55d4a4fcf79321c0328b7b60ec1b14163f"
   },
   {
     "title": "High Schooler Sketch",
@@ -3099,7 +3303,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "0259324215928f9beaf6c56fffb7bd312bd25fed76d9f18b9c342118"
   },
   {
     "title": "Alcor Singlet",
@@ -3116,7 +3321,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "4b0b4dd743bad9c244871391ee25d83c75d944d7a77d4dae18947fc9"
   },
   {
     "tags": [
@@ -3131,7 +3337,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "d2b725f3658a0a1fb833d973db53e3c5ae324fe95562a600f8685ec1"
   },
   {
     "tags": [
@@ -3146,7 +3354,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "1d4152630cbc7f70c187a2ef498404d20ab6ad2349fd0b9570805a65"
   },
   {
     "title": "Quick-Draw Stance",
@@ -3164,7 +3374,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "3734a4e473a6dc4bced9d43cf83598fb252e67994b8fc3e70e0a4d06"
   },
   {
     "title": "Mini Jupiter Form Sketchpage",
@@ -3182,7 +3393,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "741c47353bda5964882e6634f62e72127da83f3cd819b60818dac697"
   },
   {
     "title": "Fighting Stance",
@@ -3203,7 +3415,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "id": "80cf3ffdc23f6689f10755af98e2049037c515dfe198ac0635d31dfa"
   },
   {
     "title": "Hello There 👋",
@@ -3224,7 +3437,8 @@
     "characters": [
       "Alcor",
       "Castor"
-    ]
+    ],
+    "id": "29f4e098a0a23de92a3733bc535ef2812df63fd4bac33ad63fa8508b"
   },
   {
     "title": "Gemini Form Icon",
@@ -3241,7 +3455,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "id": "bbabae42b0587499478df637eb7ff317331c2c31c96f642bd36995d8"
   },
   {
     "tags": [
@@ -3256,7 +3471,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "749469b94f5119ce5639186d82828bcd92f0467649eb62ede63f66c0"
   },
   {
     "tags": [
@@ -3271,7 +3488,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "4735b6a51510780518927804209082b97ace49fe7862a2c95743e927"
   },
   {
     "tags": [
@@ -3286,7 +3505,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "dc258f6941047aa2287666fe4654b0dbda29974a6c1cf5bd85282da5"
   },
   {
     "tags": [
@@ -3301,7 +3522,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "f66cd7bcaa013b177d4ba3cebba991dcd40ccf13c67f47cc1c11ad33"
   },
   {
     "tags": [
@@ -3316,7 +3539,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "bff261ff8a8732c76ec14bb6906ba0f934fb10e8cb926b7b718772bf"
   },
   {
     "tags": [
@@ -3331,7 +3556,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "7e704ffadf90ad1fd516490ec923e53c86c56107f610888fc13054f7"
   },
   {
     "title": "Aquarius Combat Outfit v2",
@@ -3349,7 +3576,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "2dafe3cf8fe6bb23e7e8fd538e9001c451422a6f5c4d9d216f2f5566"
   },
   {
     "title": "Outfit Sheet",
@@ -3377,7 +3605,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "6cf8a2facd4c7c860077d2133da32d35e01043b5b8c736297dc31b39"
   },
   {
     "title": "Soma Beach-Themed Casual Wear",
@@ -3392,7 +3621,8 @@
     "rating": "mainstream",
     "characters": [
       "Soma"
-    ]
+    ],
+    "id": "d652857b4d3c4972770cd6676c64bbba2b8f2007c1d5e1b64779b6d2"
   },
   {
     "title": "Soma v3",
@@ -3409,7 +3639,8 @@
     "characters": [
       "Soma"
     ],
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "id": "ddcf6a1bd744fc80be1f13403f74ad2898dca7a88a5ee896d3bbb76c"
   },
   {
     "title": "Soma v1",
@@ -3427,7 +3658,8 @@
     "rating": "mainstream",
     "characters": [
       "Soma"
-    ]
+    ],
+    "id": "3580eb3c4db603739f748d9ead875d4fea93c064584edd91d9528b64"
   },
   {
     "title": "Waterbending and Halo",
@@ -3444,7 +3676,8 @@
     "rating": "general",
     "characters": [
       "Soma"
-    ]
+    ],
+    "id": "2baef2dd8f31b63665a7566e6a087fda2fda7717203c1ff75d03a5ba"
   },
   {
     "title": "Seasoned Adventurer Outfit",
@@ -3463,7 +3696,8 @@
     "rating": "mainstream",
     "characters": [
       "Soma"
-    ]
+    ],
+    "id": "f81023920d31de0ee8a4a568b0492efa0666b80e5b42320ff8a092e6"
   },
   {
     "title": "Soma Prototype Beachwear",
@@ -3480,7 +3714,8 @@
     "rating": "mainstream",
     "characters": [
       "Soma"
-    ]
+    ],
+    "id": "92197340b095bf70871bc07dd25d90d0e5f2e59a09b264a2535d9fca"
   },
   {
     "title": "Soma Icon",
@@ -3495,7 +3730,8 @@
     "rating": "mainstream",
     "characters": [
       "Soma"
-    ]
+    ],
+    "id": "e48c7108302def896cc3cb15918e6dab30160bf2ceeffd6075902943"
   },
   {
     "title": "Soma Microbot Cowl",
@@ -3514,7 +3750,8 @@
     "rating": "mainstream",
     "characters": [
       "Soma"
-    ]
+    ],
+    "id": "5b405be5d0657150c59652410c80e79849dd8c61c260baf5de2488e6"
   },
   {
     "title": "Poslani Reference Sheet",
@@ -3531,7 +3768,8 @@
     "rating": "mainstream",
     "characters": [
       "Poslani"
-    ]
+    ],
+    "id": "0360618bc5f88b184d3a094f4d0aa20156c73500c47923c6f6e4a2e4"
   },
   {
     "title": "Wilton Reference Sheet",
@@ -3548,7 +3786,8 @@
     "rating": "mainstream",
     "characters": [
       "Wilton"
-    ]
+    ],
+    "id": "5b1219a88b6ca61b9179387354d9620f930eb586d084774bb82d24dd"
   },
   {
     "title": "Wilton v2",
@@ -3566,7 +3805,8 @@
     "rating": "mainstream",
     "characters": [
       "Wilton"
-    ]
+    ],
+    "id": "805323a191b58694eff8473eee6c516fd8f1c52a26cba03abe622c2d"
   },
   {
     "title": "Keyword - Fire",
@@ -3583,7 +3823,8 @@
     "rating": "mainstream",
     "characters": [
       "Wilton"
-    ]
+    ],
+    "id": "be95adf826deeda933e998eeecd2df5038e501770b372ac78938cbd9"
   },
   {
     "title": "Streetwear x Traditional Clothing",
@@ -3603,7 +3844,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "bcc8b222c4892365971f4d1cc3be6a7c5b99dc41f9c48accca987a97"
   },
   {
     "title": "Yuru Alcor",
@@ -3622,7 +3864,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "d24e8160c9f05e282bbc01a181e973b9b883db1920dd8d2c95c4ff56"
   },
   {
     "title": "Aquarius Outfit Sheet",
@@ -3641,7 +3884,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "8439508dc467c886dbf7bda57fba2a8210868e393f49fbc45b5baa8c"
   },
   {
     "title": "Thai Costume Sketch",
@@ -3659,7 +3903,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "228ff0449655384cb2524696f7fd10112be8472e96fe3ba6d3d686cb"
   },
   {
     "title": "AICore β",
@@ -3678,7 +3923,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "2ea6f1608f42b9bf94840ea54c94606abe4376860d06cf872933e076"
   },
   {
     "title": "Eclipse Deity γ",
@@ -3696,7 +3942,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "8d2ee4f0910f9bd14393c442a228f8d6c419511b0956e68a73c1bab3"
   },
   {
     "title": "Biogenesis Suit Design",
@@ -3715,7 +3962,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "6d54aad553cfaba47e66284d45756001b7f7fb4ec4a7a095f018b5f0"
   },
   {
     "title": "Alan and Alcor",
@@ -3734,7 +3982,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "c7ff6b061fa984d2d2fc65568ef7bb3caaef1dff27def21797865f10"
   },
   {
     "tags": [
@@ -3750,7 +3999,9 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "cropped",
+    "id": "bcd5feb6f07dfc49feadd655d3a7b87b0acfa572536b1bbd9f09b952"
   },
   {
     "tags": [
@@ -3765,7 +4016,9 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "cropped",
+    "id": "6faaaacc8cc2ccba2820b4c48b367cf52cc56cf0d0a5810f7adddb6c"
   },
   {
     "title": "Proud Summer Beach YCH",
@@ -3783,7 +4036,8 @@
     "characters": [
       "Alcor",
       "Lava"
-    ]
+    ],
+    "id": "a14e15a66606ecee14ce709020efb86dcf840a26128ba05525c52fcd"
   },
   {
     "tags": [
@@ -3799,7 +4053,9 @@
     "characters": [
       "Alcor",
       "Lava"
-    ]
+    ],
+    "altType": "extra",
+    "id": "a491b915159e924d0c233603ba3bd943dc0f29bb6d5fe085dd6e5892"
   },
   {
     "title": "Soma's Spring Outfit",
@@ -3817,7 +4073,8 @@
     "rating": "mainstream",
     "characters": [
       "Soma"
-    ]
+    ],
+    "id": "746724d194ba21c8768547fefb0ad7750ee9e8ba7e3bdec839c81af3"
   },
   {
     "tags": [
@@ -3832,7 +4089,11 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "sensitive"
+    "rating": "sensitive",
+    "altType": {
+      "altNumber": 1
+    },
+    "id": "1414a9a5fbd0514a2a0ff4b57e0c87346cf17bdd5d3f2c6fbf7d7e23"
   },
   {
     "title": "Eclipse Deity α",
@@ -3849,7 +4110,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "5c18111ca0abdf7c638dca8d5889a6d369ae80ef4c42e6291aed8e5c"
   },
   {
     "title": "Gemini Fighting Game Outfit",
@@ -3868,7 +4130,8 @@
     "characters": [
       "Alcor"
     ],
-    "rating": "mainstream"
+    "rating": "mainstream",
+    "id": "cb904e06b55ebdc7fad588a18acb18bbd593a3af6f52b4b43670dcb3"
   },
   {
     "tags": [
@@ -3883,7 +4146,9 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "e39cf68d2252b95cd6818fbc369a9610182dbe7ed05eee72fe7037cb"
   },
   {
     "tags": [
@@ -3901,7 +4166,9 @@
       "Francie",
       "Silva"
     ],
-    "rating": "sensitive"
+    "rating": "sensitive",
+    "altType": "recolor",
+    "id": "b7450fffe21cb18f6b8ae3df02a4c45c1e1ad61bf77d151a7f40f073"
   },
   {
     "tags": [
@@ -3912,7 +4179,14 @@
     "parent": "Cafe Superhero",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/cafe_superhero_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/cafe_superhero_1.webp",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cafe_superhero/0.png"
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cafe_superhero/0.png",
+    "altType": {
+      "altNumber": 1
+    },
+    "id": "e596882705be48823cd65aa6b7650697478957f697f340dbc75f58cd",
+    "characters": [
+      "Alcor"
+    ]
   },
   {
     "tags": [
@@ -3927,7 +4201,11 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": {
+      "altNumber": 2
+    },
+    "id": "19bd62207f1443d1745a309eae7cfde5b5beae7e26271908655976ad"
   },
   {
     "tags": [
@@ -3942,7 +4220,11 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": {
+      "altNumber": 1
+    },
+    "id": "afba2c33ead224eff68e5e47b544c5007b32d302bb49bc4a4a521bff"
   },
   {
     "tags": [
@@ -3957,7 +4239,11 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": {
+      "altNumber": 2
+    },
+    "id": "ce3648fb54615df53a6e893caa782fdb7356f2395fcfed3d5b34086d"
   },
   {
     "tags": [
@@ -3972,7 +4258,11 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": {
+      "altNumber": 3
+    },
+    "id": "f6183725495bcf8431998d3307cd24e1bed791d4f2602fdad40b7145"
   },
   {
     "tags": [
@@ -3987,7 +4277,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "cropped",
+    "id": "5af3e7607a056f0bf2366b4900196ee85e7b74d3817c2cc92c7f8b74"
   },
   {
     "tags": [
@@ -4002,7 +4294,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "cropped",
+    "id": "b3bb49f336fb8c0a30d5f174a376604b9b636c35063e457c7bc2aa1a"
   },
   {
     "tags": [
@@ -4017,7 +4311,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "cropped",
+    "id": "c84e069109b1ec391267aa838f12cb2b4c032104e7965b823350ef82"
   },
   {
     "title": "Jupiter Weightlifting",
@@ -4034,10 +4330,11 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "7280022276bf607977863613dc93e4d0babb3f35c2dc53689a0eb94f"
   },
   {
-    "title": "Post Workout Cooldown",
+    "parent": "Jupiter Weightlifting",
     "artist": "@jw_bash",
     "tags": [
       "Jupiter Form",
@@ -4053,7 +4350,11 @@
     "characters": [
       "Alcor",
       "Kyoto"
-    ]
+    ],
+    "id": "32b90f766232e5ce0b250f3c989ac2c96d0092122f6628ef1036c3ef",
+    "altType": {
+      "pageNumber": 1
+    }
   },
   {
     "tags": [
@@ -4068,7 +4369,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "73275f4927c82b8f9a1fdcf163455767fbdd7b99234370fd2dbe7497"
   },
   {
     "title": "Aquarius Deep Sea Ver. α",
@@ -4085,7 +4388,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "12dcd8bcf272c8b2d62fe892c0c0c8a22a799496e86ecbd4fc4cfaee"
   },
   {
     "title": "Aquarius vs. Jupiter",
@@ -4104,7 +4408,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "65206ee406650ad2696527bc19b1cb5e27d724e78c1df4213788efd9"
   },
   {
     "title": "Mario and Luigi is Real! Sketch",
@@ -4122,10 +4427,11 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "e356d8062406f0a012dfac473c3bc20e3a102c3aecf4635079efdbb9"
   },
   {
-    "title": "Castor Suit Engage! (Part 2)",
+    "parent": "Castor Suit Engage!",
     "artist": "@baogacc",
     "tags": [
       "Indra Suit",
@@ -4144,10 +4450,14 @@
       "Alcor",
       "Joel",
       "Castor"
-    ]
+    ],
+    "altType": {
+      "pageNumber": 1
+    },
+    "id": "905c4308e39ad56d209c9a24185e4692c1b0e08b4328689c927f01a9"
   },
   {
-    "title": "Castor Suit Engage! (Part 1)",
+    "title": "Castor Suit Engage!",
     "artist": "@baogacc",
     "tags": [
       "Indra Suit",
@@ -4169,7 +4479,8 @@
       "Alcor",
       "Joel",
       "Castor"
-    ]
+    ],
+    "id": "8ce1204cd90dc7c2622651b0c8f931d91329906546f68a097a3d1584"
   },
   {
     "tags": [
@@ -4177,7 +4488,7 @@
     ],
     "href": "",
     "aspectRatio": 0.7743933918430562,
-    "parent": "Castor Suit Engage! (Part 2)",
+    "parent": "Castor Suit Engage!",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/castor_suit_engage_part_2_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/castor_suit_engage_part_2_1.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_suit_engage_part_2/0.png",
@@ -4185,7 +4496,12 @@
     "characters": [
       "Alcor",
       "Castor"
-    ]
+    ],
+    "altType": {
+      "pageNumber": 1,
+      "altNumber": 1
+    },
+    "id": "1ca2af463f4153a87a1e7d1ff7f5fec2c8ba50cba3be966cd7b740bd"
   },
   {
     "title": "Fresh Nerd ~ Post Workout",
@@ -4202,7 +4518,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "ddb60728bdc32798b9c70310cf646f29fa260a911dc2229b197dde20"
   },
   {
     "title": "Eclipse Deity Malro Ver.",
@@ -4219,7 +4536,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "06c64e6ae5986c7858734b758969eb9bc0e9ec48cd96626fee578b61"
   },
   {
     "tags": [
@@ -4234,7 +4552,11 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": {
+      "altNumber": 1
+    },
+    "id": "e5794235224a2f2a124776c1a9f21e0dcea5b165615b52e2999a1a09"
   },
   {
     "title": "Seductive Aquarius",
@@ -4252,7 +4574,8 @@
     "rating": "sensitive",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "2678a99035e0d09fa80d5bfad800477d1206e39223defa3f1aeac88a"
   },
   {
     "tags": [
@@ -4267,7 +4590,9 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "extra",
+    "id": "5c2135792e4ade1bafdb26e5e656ab4266f8060501f8a154a83a1cf5"
   },
   {
     "tags": [
@@ -4282,7 +4607,9 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "extra",
+    "id": "8fd445288856334761d2f1e41b52fda535ec37ce7ab624fbba6fc9b3"
   },
   {
     "tags": [
@@ -4297,7 +4624,9 @@
     "characters": [
       "Alcor",
       "Lava"
-    ]
+    ],
+    "altType": "extra",
+    "id": "8430391ea82df7b6bb88e09351cf9b29831940e25c81cc07a38d3239"
   },
   {
     "title": "Workin' Vibes",
@@ -4315,7 +4644,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "d4d9eda541608f21354f370b3f38758d7ee34d5562c0e06eb929e1b2"
   },
   {
     "title": "Jupiter Transformation Sequence",
@@ -4333,7 +4663,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "00b79a88e74b093245d497f8b7a320611f90990dd5cfec1406340ed7"
   },
   {
     "title": "Jupiter Dark Mode",
@@ -4352,7 +4683,8 @@
     "rating": "mainstream",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "471da9a45818a7811e4bfda891b084f3df1e55eec70d6fd0998f8c8f"
   },
   {
     "title": "Soma Hardlight Armor",
@@ -4370,7 +4702,8 @@
     "rating": "mainstream",
     "characters": [
       "Soma"
-    ]
+    ],
+    "id": "eff4d63bdd5a9c2d453621a292afdf86742f5c8dae9d8a5ae0ec6a1f"
   },
   {
     "tags": [
@@ -4385,7 +4718,9 @@
     "rating": "mainstream",
     "characters": [
       "Soma"
-    ]
+    ],
+    "altType": "extra",
+    "id": "49975f85046d8088e13f4237bfd9c3f41d8ffdd07c76ab35177663e9"
   },
   {
     "title": "Hanfu Sketch",
@@ -4403,7 +4738,8 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "id": "abe219ef5f1801ac4a81ba50597be8096bcbd81a9d72eea9963db989"
   },
   {
     "tags": [
@@ -4418,7 +4754,9 @@
     "rating": "general",
     "characters": [
       "Alcor"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "50f7d14175cc9b36b574b7a76a296af452473ef47ad3ed97582f84c8"
   },
   {
     "title": "BIG HUG!",
@@ -4438,7 +4776,8 @@
       "Alcor",
       "Lava",
       "Gabe"
-    ]
+    ],
+    "id": "224d9a1fd03c1f91e7e7a34006a18efb2a4b21dc8a1ddfefae189a2f"
   },
   {
     "tags": [
@@ -4455,7 +4794,9 @@
       "Alcor",
       "Lava",
       "Gabe"
-    ]
+    ],
+    "altType": "recolor",
+    "id": "ff4a66f96ce7603fa4fbd824d5b28432a89b1489743b7c5edccaa1a6"
   },
   {
     "title": "SWORD!!!",
@@ -4474,7 +4815,8 @@
     "characters": [
       "Alcor",
       "Shiro"
-    ]
+    ],
+    "id": "2918951d6864697fd118e1b973b7300c243f92ce382924692ee562c9"
   },
   {
     "title": "Natsu Matsuri 2024",
@@ -4493,7 +4835,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/natsu_matsuri_2024.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/natsu_matsuri_2024.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/natsu_matsuri_2024.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/natsu_matsuri_2024.webp",
+    "id": "b9cc660b6086d8d60c8257675027f1f28c07ef3f98e1dee05232ba60"
   },
   {
     "title": "Aquarius Deep Sea Ver. β",
@@ -4511,7 +4854,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_deep_sea_%25CE%25B2.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_deep_sea_%25CE%25B2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_deep_sea_%25CE%25B2.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_deep_sea_%25CE%25B2.webp",
+    "id": "b235e773112261b537a8285503f40518db4466a0fdf35fb582cae247"
   },
   {
     "title": "3 Symbiotes, 1 Host",
@@ -4533,7 +4877,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/3_symbiotes_1_host.PNG",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/3_symbiotes_1_host.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/3_symbiotes_1_host.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/3_symbiotes_1_host.webp",
+    "id": "5434ef001b0f5f715092b2359432f7f29362abe508483c2750202f06"
   },
   {
     "title": "The Hamburger Accident",
@@ -4553,7 +4898,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/the_hamburger_accident.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/the_hamburger_accident.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/the_hamburger_accident.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/the_hamburger_accident.webp",
+    "id": "7827820dd06981d41131daced6da5b7cddf215a3f2e6525937602d61"
   },
   {
     "tags": [
@@ -4567,7 +4913,9 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/The%20Hamburger%20Accident_1.jpg",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/the_hamburger_accident_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/the_hamburger_accident_1.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/the_hamburger_accident_1.webp",
+    "altType": "extra",
+    "id": "20f8f073101c53d81bfa6955a5d042f122c7e2b13dfff16e7efec002"
   },
   {
     "parent": "We're not Accepting Visitors",
@@ -4583,7 +4931,9 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/were_not_accepting_visitors.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/were_not_accepting_visitors.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/were_not_accepting_visitors.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/were_not_accepting_visitors.webp",
+    "altType": "extra",
+    "id": "5f371101f61369063bcb4a650f56e39533dd8a795855a0e14fec9b68"
   },
   {
     "title": "We're not Accepting Visitors",
@@ -4601,7 +4951,8 @@
     "rating": "sensitive",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/We%27re+not+Accepting+Visitors_1.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/were_not_accepting_visitors_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/were_not_accepting_visitors_1.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/were_not_accepting_visitors_1.webp",
+    "id": "ee1c0576705b57d4529b6f835b44ccbae3e25b6afc767d10f9f5e769"
   },
   {
     "title": "The Beginning",
@@ -4622,7 +4973,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/the_beginning.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/the_beginning.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/the_beginning.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/the_beginning.webp",
+    "id": "818980f21bb05aa133b36266120e315e2ef6eee035bd9fbf1c497fba"
   },
   {
     "title": "Alcor Static Tank",
@@ -4641,7 +4993,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_static_tank.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_static_tank.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_static_tank.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_static_tank.webp",
+    "id": "636117d7c65e7b22543daf063e11349b26b1b78c27b5f4fddb2ddc59"
   },
   {
     "title": "Moodboard",
@@ -4659,7 +5012,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/moodboard.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/moodboard.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/moodboard.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/moodboard.webp",
+    "id": "f6b024a360c3e1eb465bc8fb279bdfd56f43f56a18a4995ea84b2d34"
   },
   {
     "title": "Triangle Shot",
@@ -4681,7 +5035,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangle_shot.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/triangle_shot.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangle_shot.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangle_shot.webp",
+    "id": "1d8e87a1555a1864551b9d0e9df0ab2438a3a4c428a70a20ac3575c0"
   },
   {
     "tags": [
@@ -4697,7 +5052,11 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Triangle%20Shot_1.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/triangle_shot_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/triangle_shot_1.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/triangle_shot_1.webp",
+    "altType": {
+      "pageNumber": 1
+    },
+    "id": "c23f6877807a85ca2125903ea1f6d24467cec7c08b1787834166414f"
   },
   {
     "tags": [
@@ -4713,7 +5072,11 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Triangle%20Shot_2.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/triangle_shot_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/triangle_shot_2.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/triangle_shot_2.webp",
+    "altType": {
+      "pageNumber": 2
+    },
+    "id": "b0c5b24062b27bf3c7dbc4f7a67b6448416dda65a57c37d7c984f152"
   },
   {
     "title": "Jupiter Armored Phenomenon Ver. (feat. @sutunununu)",
@@ -4730,7 +5093,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_armored_phenomenon_ver_feat_sutunununu.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_armored_phenomenon_ver_feat_sutunununu.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_armored_phenomenon_ver_feat_sutunununu.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_armored_phenomenon_ver_feat_sutunununu.webp",
+    "id": "3b990f29049b1fcee969f3d119d94d14bd79c06af634b56b0e111a0c"
   },
   {
     "title": "Soma Exocolonist Styled Chibis",
@@ -4748,7 +5112,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/soma_exocolonist_styled_chibis.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/soma_exocolonist_styled_chibis.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_exocolonist_styled_chibis.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_exocolonist_styled_chibis.webp",
+    "id": "a10934e7e337c43e5507e138ed74e73845a2f961255d16c9035e2396"
   },
   {
     "title": "Sweet Couple <3",
@@ -4766,7 +5131,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/sweet_couple_3.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/sweet_couple_3.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sweet_couple_3.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sweet_couple_3.webp",
+    "id": "7776047037d83e7186829059ff8530b70754a1e6ec07896d8e0a0b4c"
   },
   {
     "tags": [
@@ -4782,7 +5148,11 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Sweet+Couple+%3C3_1.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/sweet_couple_3_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/sweet_couple_3_1.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/sweet_couple_3_1.webp",
+    "altType": {
+      "altNumber": 1
+    },
+    "id": "615c5ac347f079ee806cebfcdaa87e93c69cdc455b30f49cebcd0bf6"
   },
   {
     "title": "Egyptian Costume Sketch",
@@ -4800,7 +5170,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/egyptian_costume_sketch.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/egyptian_costume_sketch.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/egyptian_costume_sketch.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/egyptian_costume_sketch.webp",
+    "id": "506a776019e84af8e332b8a349d89b7d69bb2b73b10724aaeb84637c"
   },
   {
     "title": "Prevernal Sage Outfit",
@@ -4820,7 +5191,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/prevernal_sage_outfit.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/prevernal_sage_outfit.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/prevernal_sage_outfit.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/prevernal_sage_outfit.webp",
+    "id": "e329f9faaa5896e04675d111cf506c75f89a6f18e6328c482bd8f38d"
   },
   {
     "title": "Lifewonders Water Gun Fight!",
@@ -4839,7 +5211,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/lifewonders_water_gun_fight.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/lifewonders_water_gun_fight.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifewonders_water_gun_fight.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifewonders_water_gun_fight.webp",
+    "id": "757bfa3baf36ee7007aad688e70a2f15bc5370495011e6c3f278a9ac"
   },
   {
     "title": "Serotinal Evening at the Pier",
@@ -4858,7 +5231,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/serotinal_evening_at_the_pier.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/serotinal_evening_at_the_pier.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/serotinal_evening_at_the_pier.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/serotinal_evening_at_the_pier.webp",
+    "id": "90230ea13227b9cf4213195a616f7a6b9239971476fbbdecbde29db3"
   },
   {
     "tags": [
@@ -4873,7 +5247,11 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Serotinal+Evening+at+the+Pier_1.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/serotinal_evening_at_the_pier_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/serotinal_evening_at_the_pier_1.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/serotinal_evening_at_the_pier_1.webp",
+    "altType": {
+      "altNumber": 1
+    },
+    "id": "e2f70e26ec32b0699fb747ba42f5f6ebe6b19d44926577118cd2c498"
   },
   {
     "title": "Jupiter Icon by Roki",
@@ -4890,7 +5268,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_icon_by_roki.jpg",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_icon_by_roki.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_icon_by_roki.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_icon_by_roki.webp",
+    "id": "d99a87130a994a3015621f3cca015651ec7874c52db03f792212e83a"
   },
   {
     "title": "Triangulum Form β",
@@ -4908,7 +5287,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangulum_form_%25CE%25B2.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/triangulum_form_%25CE%25B2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangulum_form_%25CE%25B2.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangulum_form_%25CE%25B2.webp",
+    "id": "442563e7c04e8ced914f61c3476b9def63faaccd069e9a4991c81f51"
   },
   {
     "tags": [
@@ -4923,7 +5303,11 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Triangulum+Form+%CE%B2_1.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/triangulum_form_%25CE%25B2_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/triangulum_form_%25CE%25B2_1.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/triangulum_form_%25CE%25B2_1.webp",
+    "altType": {
+      "altNumber": 1
+    },
+    "id": "4b03dd765e71bfc897308c6496c566f4fc5565a84003a1701c59776e"
   },
   {
     "title": "3DS Commission",
@@ -4943,7 +5327,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/3_ds_commission.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/3_ds_commission.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/3_ds_commission.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/3_ds_commission.webp",
+    "id": "33e3435fe80a16d2bf962d12f833ac14257e017ec5155ff1fb8b3291"
   },
   {
     "title": "Symbiotic Auriga Form β",
@@ -4961,7 +5346,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/symbiotic_auriga_form_%25CE%25B2.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/symbiotic_auriga_form_%25CE%25B2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/symbiotic_auriga_form_%25CE%25B2.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/symbiotic_auriga_form_%25CE%25B2.webp",
+    "id": "7fff558dc0be937d4153a585f8ca14c25cba21a723dd5a1a7f45810f"
   },
   {
     "title": "Character Movement Studies but BLUE",
@@ -4984,7 +5370,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/character_movement_studies_but_blue.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/character_movement_studies_but_blue.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/character_movement_studies_but_blue.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/character_movement_studies_but_blue.webp",
+    "id": "c437f2007ab530233e0b187459e3db62c050278ab37644f5792600c0"
   },
   {
     "title": "Move it up Boys!",
@@ -5001,7 +5388,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/move_it_up_boys.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/move_it_up_boys.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/move_it_up_boys.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/move_it_up_boys.webp",
+    "id": "631f8ca3b75ba7ecbd1bb0ce9c659207a17e33e7c9aa6467b8f6191d"
   },
   {
     "artist": "@Hagrang_",
@@ -5018,7 +5406,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%20Form%20Icons_1.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/alcor_form_icons_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_form_icons_1.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_form_icons_1.webp",
+    "id": "a66fe01c22b5412e2fe36105a70545f6eb3a7731dc86ef632649cbb1"
   },
   {
     "artist": "@Hagrang_",
@@ -5035,7 +5424,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%20Form%20Icons_2.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/alcor_form_icons_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_form_icons_2.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_form_icons_2.webp",
+    "id": "750867042345e5eba34b69b7fc750f0b591210af2a92670953676664"
   },
   {
     "artist": "@Hagrang_",
@@ -5052,7 +5442,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%20Form%20Icons_3.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/alcor_form_icons_3.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_form_icons_3.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_form_icons_3.webp",
+    "id": "4f2dff9ab4afda2d30ad6624080897cc8e4ccb9dc42166c9f91eaedd"
   },
   {
     "title": "Bright Sparks and Sharp Lights",
@@ -5069,7 +5460,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/bright_sparks_and_sharp_lights.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/bright_sparks_and_sharp_lights.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/bright_sparks_and_sharp_lights.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/bright_sparks_and_sharp_lights.webp",
+    "id": "17c9ea61c8439c2237262287ded818f1d6e49996cec200574058c780"
   },
   {
     "title": "Racer Sketch",
@@ -5088,7 +5480,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/racer_sketch.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/racer_sketch.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/racer_sketch.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/racer_sketch.webp",
+    "id": "5e2e13e2e47610c8649fef5af9b6784923e5f09ef25a7475173c9b77"
   },
   {
     "title": "Armed Phenomenon Activate!",
@@ -5107,7 +5500,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/armed_phenomenon_activate.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/armed_phenomenon_activate.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/armed_phenomenon_activate.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/armed_phenomenon_activate.webp",
+    "id": "3cef2f15c39f264bd391973cfdad2d847dc411214001fe7846518334"
   },
   {
     "title": "3D Printing",
@@ -5127,7 +5521,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/3_d_printing.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/3_d_printing.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/3_d_printing.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/3_d_printing.webp",
+    "id": "67cef3eb7d6c714b4de32a595da6ec12535a9ff93c022782f5a2ed4f"
   },
   {
     "title": "Franz Chibis",
@@ -5146,7 +5541,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/franz_chibis.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/franz_chibis.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/franz_chibis.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/franz_chibis.webp",
+    "id": "1e0f328b6055ccaac6a2c2230da33260301b9fa40b0848c324f03cec"
   },
   {
     "title": "Pumpkin Battle",
@@ -5170,7 +5566,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pumpkin_battle.gif",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/pumpkin_battle.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pumpkin_battle.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pumpkin_battle.webp",
+    "id": "08a8eb1181657df264e06f58ac7885f875e776064d4260b0a197b8c7"
   },
   {
     "title": "Aquarius (Tyl Class)",
@@ -5187,7 +5584,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_tyl_class.jpg",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_tyl_class.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_tyl_class.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_tyl_class.webp",
+    "id": "ca9501a3a2444df453d027702be595604b5c532f06b41a940245dd14"
   },
   {
     "title": "Supportive Sidekick",
@@ -5208,7 +5606,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/supportive_sidekick.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/supportive_sidekick.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/supportive_sidekick.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/supportive_sidekick.webp",
+    "id": "3d1d3e8f5ae3312e42855849b496ef043c29e116f8e29c32f8b72263"
   },
   {
     "title": "Castor Shading Test",
@@ -5223,7 +5622,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_shading_test.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/castor_shading_test.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_shading_test.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_shading_test.webp",
+    "id": "e0d573994811197f0babffb7aca6c57e795274bdb7c9ff792710a4f7"
   },
   {
     "title": "Tornatics Chibi",
@@ -5243,7 +5643,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/tornatics_chibi.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/tornatics_chibi.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/tornatics_chibi.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/tornatics_chibi.webp",
+    "id": "0f458a08748be3912f1a140fe2ba19f7aa185a29567b0928433b7c61"
   },
   {
     "title": "Alcor Artwork by Kurava",
@@ -5261,7 +5662,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_artwork_by_kurava.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_artwork_by_kurava.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_artwork_by_kurava.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_artwork_by_kurava.webp",
+    "id": "6f0f1574fa0dd32080d64d7c7c574a2359fd0c5120762c3fd2a93a0d"
   },
   {
     "title": "Pumpkin YCH",
@@ -5278,7 +5680,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pumpkin_ych.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/pumpkin_ych.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pumpkin_ych.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pumpkin_ych.webp",
+    "id": "9a6066d4c6513f4fb56bff4ff630a7884e68a5bfa77d66c90afe17bd"
   },
   {
     "title": "Halloween Fashion Sketch",
@@ -5296,7 +5699,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/halloween_fashion_sketch.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/halloween_fashion_sketch.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/halloween_fashion_sketch.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/halloween_fashion_sketch.webp",
+    "id": "f5d6f9152c864e2216e1e0e4f2e2af269ca98deb2914785c2c72b244"
   },
   {
     "title": "Trying out Lava's Visor",
@@ -5315,7 +5719,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/trying_out_lavas_visor.jpg",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/trying_out_lavas_visor.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/trying_out_lavas_visor.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/trying_out_lavas_visor.webp",
+    "id": "d5c734a18564fe0b81c25ef5cecddbf1fe4978d6ba5d3e0fef8de5b7"
   },
   {
     "title": "Alcor Reference 2023 Part 1",
@@ -5336,7 +5741,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_reference_2023.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_reference_2023.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_reference_2023.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_reference_2023.webp",
+    "id": "0f3caed2e6481f490bcd6f31d14c1aa014c8093f52c39f8bae5d3890"
   },
   {
     "title": "Alcor Reference 2023 Part 2",
@@ -5354,7 +5760,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_reference_sheet_2023_part_2.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_reference_sheet_2023_part_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_reference_sheet_2023_part_2.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_reference_sheet_2023_part_2.webp",
+    "id": "5ebd1eb7f54adab9779cd8a4efcb24db9bb2c7782ca9b0c040fe112f"
   },
   {
     "title": "Jupiter Robotified",
@@ -5371,7 +5778,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_robotified.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_robotified.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_robotified.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_robotified.webp",
+    "id": "c24693534289bc3e9b247c4cc2ceb5c3e96c1ba2b7d3d6863e584c54"
   },
   {
     "title": "Autumnal Outfit 2.0 + Henshin",
@@ -5392,7 +5800,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/autumnal_outfit_2_0_henshin.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/autumnal_outfit_2_0_henshin.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/autumnal_outfit_2_0_henshin.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/autumnal_outfit_2_0_henshin.webp",
+    "id": "b3584c74df5063cfbe93ab50299d5417f24d91a03c55f5cef21a7bb9"
   },
   {
     "title": "Gardening",
@@ -5412,7 +5821,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/gardening_2_0.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/gardening_2_0.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gardening_2_0.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gardening_2_0.webp",
+    "id": "369625d0d06c9ef390bf4727665e38bf186d8c447393b4ece759daac"
   },
   {
     "title": "Pool Party! (2024)",
@@ -5433,7 +5843,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pool_party.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/pool_party.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pool_party.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pool_party.webp",
+    "id": "493f89dfb41c4a9d42296a7e28deb1221bc8dd96d2b1aa8f1f81c2cf"
   },
   {
     "title": "Techlife Furry 10",
@@ -5451,7 +5862,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/techlife_furry_10.jpg",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/techlife_furry_10.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/techlife_furry_10.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/techlife_furry_10.webp",
+    "id": "f998574ac98976a502fdfccdcd1a762d77498dcf07647ff6d1441330"
   },
   {
     "title": "School Gym Uniform Sketch",
@@ -5468,7 +5880,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/school_gym_uniform_sketch.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/school_gym_uniform_sketch.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/school_gym_uniform_sketch.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/school_gym_uniform_sketch.webp",
+    "id": "1c26d4be5448c65d6660a8fdc0f80121c1de6308590ff40365b8ab16"
   },
   {
     "title": "Jupiter Form γ",
@@ -5486,7 +5899,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_form_%25CE%25B3.jpg",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_form_%25CE%25B3.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_form_%25CE%25B3.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_form_%25CE%25B3.webp",
+    "id": "08124d4fba6f6277dce3f16c312551178784ef0f1a2c50dc882a497d"
   },
   {
     "title": "Aquarius Buzzwole/Symbiote Hero Suit",
@@ -5506,7 +5920,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_buzzwole_symbiote_hero_suit.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_buzzwole_symbiote_hero_suit.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_buzzwole_symbiote_hero_suit.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_buzzwole_symbiote_hero_suit.webp",
+    "id": "e304bfce771eed93e18bd69ad5a521948d62b0a72b210733b6ffb68b"
   },
   {
     "title": "Barista YCH",
@@ -5524,7 +5939,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/barista_ych.jpg",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/barista_ych.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/barista_ych.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/barista_ych.webp",
+    "id": "d76cee6013eee705fc34f4785bb9dbbf8076cd776af753305ff0e074"
   },
   {
     "title": "Soma Disembodied Elemental Form",
@@ -5539,7 +5955,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/soma_disembodied_elemental_form.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/soma_disembodied_elemental_form.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_disembodied_elemental_form.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_disembodied_elemental_form.webp",
+    "id": "687a26f2eeb397476573032e1b09f3ac4d1c4d21382b64520c465013"
   },
   {
     "title": "Ninja Parkour in Autumn",
@@ -5562,7 +5979,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/ninja_parkour_in_autumn.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ninja_parkour_in_autumn.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ninja_parkour_in_autumn.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ninja_parkour_in_autumn.webp",
+    "id": "148580148efcd1ae22c0a911a1ec4f1e2185135dbec5c1cba11a344e"
   },
   {
     "title": "Alcor's Domain (Expansion): Knowledge Exfiltrator",
@@ -5582,7 +6000,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_domain_expansion_knowledge_exfiltrator.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcors_domain_expansion_knowledge_exfiltrator.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_domain_expansion_knowledge_exfiltrator.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_domain_expansion_knowledge_exfiltrator.webp",
+    "id": "abab13c098984a4c55259988aa971ecee0cc1496efe52af65202570b"
   },
   {
     "title": "Estival Outfit δ",
@@ -5594,8 +6013,8 @@
       "Techwear",
       "Full Body"
     ],
-    "href": "https://x.com/Mino_llm/status/1874124999088648442",
-    "published": "2024-12-31",
+    "href": "https://x.com/Mino_llm/status/1874484453629948011",
+    "published": "2025-01-01",
     "aspectRatio": 0.4270286047869235,
     "rating": "mainstream",
     "characters": [
@@ -5603,7 +6022,8 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/estival_outfit_traditional_techwear_version.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/estival_outfit_traditional_techwear_version.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/estival_outfit_traditional_techwear_version.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/estival_outfit_traditional_techwear_version.webp",
+    "id": "0984ebb932a1c5734b23f76059953c599737124f503e6adb49a65d05"
   },
   {
     "tags": [
@@ -5622,7 +6042,9 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Estival%20Outfit%20%CE%B4_1.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/estival_outfit_%25CE%25B4_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/estival_outfit_%25CE%25B4_1.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/estival_outfit_%25CE%25B4_1.webp",
+    "altType": "extra",
+    "id": "8e1786fb81a26d2acf5d77d3cf18663787c9eb4a68041d059e00cb3f"
   },
   {
     "title": "Smol Knife",
@@ -5640,6 +6062,49 @@
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/smol_knife.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/smol_knife.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/smol_knife.webp"
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/smol_knife.webp",
+    "id": "e1444b3f413c621facfe140b1a774507772f634bce9c9c180e8e42b3"
+  },
+  {
+    "title": "Spark Talisman",
+    "artist": "@kabe_dbn",
+    "tags": [
+      "Jupiter Form"
+    ],
+    "href": "",
+    "published": "2025-01-03",
+    "aspectRatio": 1,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/spark_talisman.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/spark_talisman.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/spark_talisman.webp",
+    "id": "2edaef3c3586bdb9b543ae58987bcd5e684ece2d57a678995e7efa84"
+  },
+  {
+    "title": "Flux Destiny Cat Boy",
+    "artist": "@fluxdestiny.bsky.social",
+    "tags": [
+      "Superhero",
+      "Bow",
+      "Aldhibah Form",
+      "Bodysuit",
+      "Full Body",
+      "Sketch",
+      "Indra Suit"
+    ],
+    "href": "https://bsky.app/profile/fluxdestiny.bsky.social/post/3lfdgv75hek2d",
+    "published": "2025-01-09",
+    "aspectRatio": 0.7726741922927209,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/flux_destiny_cat_boy.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/flux_destiny_cat_boy.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flux_destiny_cat_boy.webp",
+    "id": "b666fd96dafe43dd38ce951887c0c0a07d19b65a0b62c493d216146c"
   }
 ]

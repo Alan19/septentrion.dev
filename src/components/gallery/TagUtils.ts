@@ -1,5 +1,5 @@
 import images from "./images.json";
-import {ImageInformation} from "../ImageInformation";
+import {ImageEntry} from "../ImageInformation";
 
 export enum ArtTag {
     featured = 'Featured',
@@ -124,7 +124,10 @@ export class SelectedFilters {
         return [this.serializeTagType(this._artists), this.serializeTagType(this._tags), this.serializeTagType(this._ratings), this.serializeTagType(this._characters)].filter(value => value).join('+');
     }
 
-    doesImageMatch(image: ImageInformation, mode: 'and' | 'or') {
+    doesImageMatch(image: ImageEntry & { artist: string }, mode: 'and' | 'or') {
+        if (image.artist === undefined) {
+            console.log(image.thumbnailUrl)
+        }
         const imageFilterableInfo = [...image.tags, image.artist, ...image.characters, image.rating];
         const filters = this.toArray();
         const enabledFilters = filters.filter(value => value.charAt(0) !== '-')

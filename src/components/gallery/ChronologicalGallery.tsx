@@ -1,15 +1,14 @@
 import {Typography} from "@mui/material";
 import React, {Fragment} from "react";
-import {AltInformation, ImageInformation} from "../ImageInformation";
+import {AltInformation, ImageEntry, ImageInformation, isAltInformation, isImageInformation} from "../ImageInformation";
 import {getMonthYearPairsInImageSet} from "./Gallery";
 import {SkeletonImage} from "../SkeletonImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {croppedImageWithCurvedBorder} from "../lore/characters/TemplatedLorePage";
-import {prepareFileName} from "./Utils";
 import {Link} from "react-router-dom";
 
 function ChronologicalGallery(props: {
-    displayedImages: ImageInformation[],
+    displayedImages: (ImageEntry & { published: string })[],
     width: number,
     setCurrentImage: (image: ImageInformation) => void,
     height?: number,
@@ -33,9 +32,9 @@ function ChronologicalGallery(props: {
             containerStyle={{position: "relative"}}
             targetRowHeight={props.height}
         >
-            {imagesForMonth.map(value => <Link to={prepareFileName(value.title)}><SkeletonImage
-                hasAlts={props.altInfo.has(value.title)}
-                alt={value.title}
+            {imagesForMonth.map(value => <Link to={value.id}><SkeletonImage
+                hasAlts={isAltInformation(value) || props.altInfo.has(value.title)}
+                alt={isAltInformation(value) ? value.parent : value.title}
                 src={value.thumbnailUrl ?? value.src}
                 imageClassname={"artImage"}
                 style={croppedImageWithCurvedBorder}
@@ -44,7 +43,7 @@ function ChronologicalGallery(props: {
     }
 
     function getMonthYearPairs() {
-        const strings = Array.from(getMonthYearPairsInImageSet(props.displayedImages)).sort((a, b) => b.localeCompare(a));
+        const strings = Array.from(getMonthYearPairsInImageSet(props.displayedImages.filter(value => isImageInformation(value)))).sort((a, b) => b.localeCompare(a));
         return strings.map(value => value.split("-")).map(value => value.map(Number));
     }
 
