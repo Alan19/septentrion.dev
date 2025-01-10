@@ -28,6 +28,7 @@ export function useTagHooks() {
             const jsonImages: ImageEntry[] = images as ImageEntry[];
             setAltData(jsonImages.filter(isAltInformation).reduce((map, alt) => map.set(alt.parent, [...(map.get(alt.parent) ?? []), alt]), new Map()));
             setImageData(jsonImages.filter(isImageInformation));
+            setImageEntries(jsonImages);
         }
     }
 
