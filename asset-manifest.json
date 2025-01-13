@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.0a06b4d3.css",
-    "main.js": "/static/js/main.81c20669.js",
+    "main.js": "/static/js/main.3ad680b0.js",
     "static/js/488.9598de75.chunk.js": "/static/js/488.9598de75.chunk.js",
-    "static/js/780.3033484f.chunk.js": "/static/js/780.3033484f.chunk.js",
-    "static/js/0.c1fb3871.chunk.js": "/static/js/0.c1fb3871.chunk.js",
+    "static/js/780.007347b2.chunk.js": "/static/js/780.007347b2.chunk.js",
+    "static/js/261.be4f9bd2.chunk.js": "/static/js/261.be4f9bd2.chunk.js",
     "static/media/autumnal.png": "/static/media/autumnal.b33850ba5bdfca7282fd.png",
     "static/media/hibernal.png": "/static/media/hibernal.93a34151f8c3b5bf7fe7.png",
     "static/media/vernal.png": "/static/media/vernal.559a91bb146731675ae6.png",
@@ -42,13 +42,13 @@
     "static/media/OriginTech personal use.ttf": "/static/media/OriginTech personal use.91ec04328d7a9da85f53.ttf",
     "index.html": "/index.html",
     "main.0a06b4d3.css.map": "/static/css/main.0a06b4d3.css.map",
-    "main.81c20669.js.map": "/static/js/main.81c20669.js.map",
+    "main.3ad680b0.js.map": "/static/js/main.3ad680b0.js.map",
     "488.9598de75.chunk.js.map": "/static/js/488.9598de75.chunk.js.map",
-    "780.3033484f.chunk.js.map": "/static/js/780.3033484f.chunk.js.map",
-    "0.c1fb3871.chunk.js.map": "/static/js/0.c1fb3871.chunk.js.map"
+    "780.007347b2.chunk.js.map": "/static/js/780.007347b2.chunk.js.map",
+    "261.be4f9bd2.chunk.js.map": "/static/js/261.be4f9bd2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0a06b4d3.css",
-    "static/js/main.81c20669.js"
+    "static/js/main.3ad680b0.js"
   ]
 }
