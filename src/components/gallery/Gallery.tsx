@@ -11,7 +11,7 @@ import {AutocompleteFilterChip, FilterPane} from "./FilterPane";
 import {RouteWithSubpanel} from "../common/RouteWithSubpanel";
 import {SkeletonImage} from "../SkeletonImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
-import {createSearchParams, Link, useNavigate} from "react-router-dom";
+import {createSearchParams, Link, useNavigate, useSearchParams} from "react-router-dom";
 import {useQueryState} from "react-router-use-location-state";
 import {prepareFileName} from "./Utils";
 import {Bookmark, BookmarkAdd, BookmarkRemove, Cancel, Share} from "@mui/icons-material";
@@ -89,6 +89,7 @@ export const Gallery = memo(function Gallery() {
     const [batchTagEnabled, setBatchTagEnabled] = useState(false)
     const [selectedImages, setSelectedImages] = useState<string[]>([])
     const altDisplaySettings = useAltDisplaySettings();
+    const [searchParams] = useSearchParams();
 
     // TODO Add method to export name, and also copy URL to clipboard
     const [referenceName, setReferenceName] = useState("")
@@ -117,13 +118,14 @@ export const Gallery = memo(function Gallery() {
 
     function handleImageClicked(value: ImageInformation) {
         navigation({
-            pathname: prepareFileName(value.title)
+            pathname: prepareFileName(value.title),
         })
     }
 
     const height = 320;
     const tolerance = .2;
     const {isDevelopment} = useIsDevelopment();
+
     const content = <>
         <Typography variant={"h3"} color={"var(--md-sys-color-primary)"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
         <div ref={ref}></div>
@@ -191,7 +193,7 @@ export const Gallery = memo(function Gallery() {
                                         {content}
                                     </div>
                                 } else {
-                                    return <Link to={{pathname: id}}>{content}</Link>;
+                                    return <Link to={{pathname: id, search: searchParams.toString()}}>{content}</Link>;
                                 }
                             })}
                         </TSJustifiedLayout>

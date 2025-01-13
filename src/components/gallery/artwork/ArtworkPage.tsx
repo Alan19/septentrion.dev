@@ -6,7 +6,7 @@ import {Button} from "@mui/material-next";
 import Chip from "@mui/material-next/Chip";
 import dayjs from "dayjs";
 import AltsUploader from "../AltsUploader";
-import {useNavigate, useParams} from "react-router-dom";
+import {useNavigate, useParams, useSearchParams} from "react-router-dom";
 import {ArrowBack, ArrowOutward} from "@mui/icons-material";
 import {useTagHooks} from "../UseTagHooks";
 import {M3Pane} from "../../common/M3Pane";
@@ -17,7 +17,8 @@ export function ArtworkPage() {
     const imageId = encodeURIComponent(useParams().id ?? "");
     const {altData, imageEntries} = useTagHooks();
     const navigate = useNavigate();
-
+    const [searchParams] = useSearchParams()
+    const searchParamString = searchParams.toString()
     const parentImageInfo = getParentImage(imageId, imageEntries);
     const currentImageInfo = imageEntries.find(value => value.id === imageId);
 
@@ -37,9 +38,17 @@ export function ArtworkPage() {
         }
     }
 
+    /**
+     * Navigate back to the gallery page, and reuse the search param string
+     * TODO Add share button to share link to page without search params
+     */
+    function goToPreviousPage() {
+        navigate({pathname: '/gallery', search: searchParamString});
+    }
+
     if (parentImageInfo && currentImageInfo) {
-        const {webp, aspectRatio, href, thumbnailUrl, tags, rating, characters} = currentImageInfo;
-        const {artist, title, published, id, webp: parentWebp} = parentImageInfo;
+        const {webp, aspectRatio, href, tags, rating, characters} = currentImageInfo;
+        const {artist, title, published, id, thumbnailUrl: parentThumbnail} = parentImageInfo;
         const altsInfo = altData.get(title);
 
         const imageHeight = isMediumOrAbove ? 'calc(100vh - 80px)' : 'fit-content';
@@ -50,8 +59,7 @@ export function ArtworkPage() {
                     <M3Pane style={{width: '100%', ...(!isMediumOrAbove && {padding: 0})}} lastElement={false}>
                         <Grid container spacing={3}>
                             <Grid item xs={12} md={'auto'}>
-                                {/*TODO Fix back button*/}
-                                <IconButton onClick={() => navigate('..')}>
+                                <IconButton onClick={() => goToPreviousPage()}>
                                     <ArrowBack/>
                                 </IconButton>
                             </Grid>
@@ -101,9 +109,9 @@ export function ArtworkPage() {
                                     <ImageListItem key={0}>
                                         <img
                                             style={{width: "100%"}}
-                                            onClick={() => navigate(`/gallery/${id}`)}
+                                            onClick={() => navigate({pathname: `/gallery/${id}`, search: searchParamString})}
                                             className={"dialog-image"}
-                                            src={parentWebp}
+                                            src={parentThumbnail}
                                             alt={title}/>
                                     </ImageListItem>
                                 </ImageList>
@@ -114,9 +122,9 @@ export function ArtworkPage() {
                                         {altsInfo?.filter(value => isAltTypeComplex(value.altType)).sort((a, b) => sortAlts(a, b)).map((value, index) =>
                                             <ImageListItem key={index}>
                                                 <img className={"dialog-image"}
-                                                     onClick={() => navigate(`/gallery/${value.id}`)}
+                                                     onClick={() => navigate({pathname: `/gallery/${value.id}`, search: searchParamString})}
                                                      style={{width: "100%"}}
-                                                     src={value.thumbnailUrl ?? value.webp ?? value.src}/>
+                                                     src={value.thumbnailUrl}/>
                                             </ImageListItem>)}
                                     </ImageList>
                                 </>}
@@ -127,9 +135,9 @@ export function ArtworkPage() {
                                         {altsInfo?.filter(value => !isAltTypeComplex(value.altType)).map((value, index) => <ImageListItem key={index}>
                                             <img
                                                 className={"dialog-image"}
-                                                onClick={() => navigate(`/gallery/${value.id}`)}
+                                                onClick={() => navigate({pathname: `/gallery/${value.id}`, search: searchParamString})}
                                                 style={{width: "100%"}}
-                                                src={value.thumbnailUrl ?? value.webp ?? value.src}/>
+                                                src={value.thumbnailUrl}/>
                                         </ImageListItem>)}
                                     </ImageList>
                                 </>}

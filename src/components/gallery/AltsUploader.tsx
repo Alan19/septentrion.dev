@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import axios from "axios";
-import {Autocomplete, Checkbox, createFilterOptions, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Fab, Snackbar, Stack, TextField, Typography,} from "@mui/material";
-import {ImageInformation} from "../ImageInformation";
+import {Autocomplete, Checkbox, createFilterOptions, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormControlLabel, Radio, RadioGroup, Snackbar, Stack, TextField, Typography,} from "@mui/material";
+import {AltType, ImageInformation, isAltTypeComplex} from "../ImageInformation";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import AddIcon from "@mui/icons-material/Add";
 import {useIsDevelopment} from "./UseIsDevelopment";
-import {Button} from "@mui/material-next";
+import {Button, FormLabel} from "@mui/material-next";
 import {ArtTag, characters, Rating} from "./TagUtils";
 import {AutocompleteFilterChip} from "./FilterPane";
 
@@ -24,6 +24,7 @@ export default function AltsUploader(props: {
     const [snackbarOpen, setSnackbarOpen] = React.useState(false);
     const [charactersInImage, setCharactersInImage] = useState<string[]>(["Alcor"])
     const [rating, setRating] = useState<Rating>();
+    const [altType, setAltType] = useState<AltType>("extra")
 
     const {isDevelopment} = useIsDevelopment();
 
@@ -78,6 +79,7 @@ export default function AltsUploader(props: {
             formData.append("imageName", props.imageInformation.title)
             formData.append("altCount", (props.altCount).toString());
             formData.append("characters", charactersInImage.join(", "));
+            formData.append("altType", isAltTypeComplex(altType) ? JSON.stringify(altType) : altType);
             setUploading(true);
             axios
                 .post(`http://localhost:9000/upload/alt`, formData, {
@@ -104,15 +106,15 @@ export default function AltsUploader(props: {
                 message="Artwork uploaded!"
             />
             {
-                isDevelopment && <div style={{textAlign: "right"}}><Fab
+                isDevelopment && <div style={{textAlign: "right"}}><Button
                     style={{position: 'fixed', bottom: 16, right: 16}}
                     color="primary"
                     aria-label="add"
                     onClick={handleClickOpen}
-                    variant={"extended"}
+                    variant="filled"
                 >
                     <AddIcon/> Upload
-                </Fab></div>
+                </Button></div>
             }
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>Upload New Image</DialogTitle>
@@ -199,6 +201,23 @@ export default function AltsUploader(props: {
                                           return filtered;
                                       }}
                                       options={characters}/>
+                        <RadioGroup value={typeof altType === 'string' ? altType : "complex"}>
+                            <FormLabel>Alt Type</FormLabel>
+                            <FormControlLabel value={"extra"} control={<Radio onChange={(_event) => setAltType("extra")}/>} label="Extra"/>
+                            <FormControlLabel value={"recolor"} control={<Radio onChange={(_event) => setAltType("recolor")}/>} label="Recolor"/>
+                            <FormControlLabel value={"cropped"} control={<Radio onChange={(_event) => setAltType("cropped")}/>} label="Cropped"/>
+                            <FormControlLabel value={"complex"} control={<Radio onChange={(_event) => setAltType({pageNumber: 1, altNumber: 1})}/>} label="Complex"/>
+                        </RadioGroup>
+                        <TextField disabled={!isAltTypeComplex(altType)} value={isAltTypeComplex(altType) ? altType.pageNumber : 0} label={"Page Number"} onChange={event => {
+                            if (isAltTypeComplex(altType)) {
+                                setAltType({...altType, pageNumber: Number.parseInt(event.target.value)});
+                            }
+                        }}/>
+                        <TextField disabled={!isAltTypeComplex(altType)} value={isAltTypeComplex(altType) ? altType.altNumber : 0} label={"Alt Number"} onChange={event => {
+                            if (isAltTypeComplex(altType)) {
+                                setAltType({...altType, altNumber: Number.parseInt(event.target.value)});
+                            }
+                        }}/>
                         <TextField
                             autoFocus
                             margin="dense"

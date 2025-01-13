@@ -67,19 +67,20 @@ router.post('/', upload.single('image'), async (req, res) => {
 
 router.post('/alt', upload.single('image'), async (req, res) => {
     const file = req.file;
-    const {href, tags, imageName, rating, characters} = req.body;
+    const {href, tags, imageName, rating, characters, altType} = req.body;
     const numberOfAlts = JSON.parse(readFileSync('./routes/images.json', 'utf-8')).concat(JSON.parse(readFileSync('./routes/hidden.json', 'utf-8'))).filter(value => value.parent === imageName).length + 1;
 
     const sharpBuffer = sharp(file.buffer);
     const metadata = await sharpBuffer.metadata();
     const jsonOutput = {
-        // Inherit the original's tags if it's blank
+        // TODO Inherit the original's tags if it's blank
         tags: tags.split(',').map(tag => tag.trim()),
         href: href,
         aspectRatio: metadata.width / metadata.height,
         parent: imageName,
         rating: rating,
         characters: characters.split(',').map(char => char.trim()),
+        altType: ["cropped", "extra", "recolor"].includes(altType) ? altType : JSON.parse(altType)
     };
 
     const fileName = prepareFileName(imageName);
@@ -92,9 +93,10 @@ router.post('/alt', upload.single('image'), async (req, res) => {
     };
 
     jsonOutput['src'] = (await s3.upload(params).promise()).Location;
-    const [compressedData, webpData] = await uploadCompressedVersions(file.buffer, fileName, jsonOutput, numberOfAlts);
+    const [compressedData, webpData, id] = await uploadCompressedVersions(file.buffer, fileName, jsonOutput, numberOfAlts);
     jsonOutput['thumbnailUrl'] = compressedData.Location
     jsonOutput['webp'] = webpData.Location;
+    jsonOutput['id'] = id
     addAltToJson(jsonOutput);
     res.json(jsonOutput);
 });

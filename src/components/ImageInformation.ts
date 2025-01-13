@@ -28,7 +28,7 @@ export interface ImageInformation extends ImageBase {
     artist: string;
 }
 
-type AltType = 'extra' | 'cropped' | 'recolor' | { altNumber?: number, pageNumber?: number };
+export type AltType = 'extra' | 'cropped' | 'recolor' | { altNumber?: number, pageNumber?: number };
 
 export interface AltInformation extends ImageBase {
     parent: string;
