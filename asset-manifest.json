@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0a06b4d3.css",
-    "main.js": "/static/js/main.3ad680b0.js",
+    "main.css": "/static/css/main.22e9b0a7.css",
+    "main.js": "/static/js/main.d6132294.js",
     "static/js/488.9598de75.chunk.js": "/static/js/488.9598de75.chunk.js",
     "static/js/780.007347b2.chunk.js": "/static/js/780.007347b2.chunk.js",
     "static/js/261.be4f9bd2.chunk.js": "/static/js/261.be4f9bd2.chunk.js",
@@ -38,17 +38,15 @@
     "static/media/Character_Badge_-page010.webp": "/static/media/Character_Badge_-page010.4621b667df5e020c7f26.webp",
     "static/media/biogenesis-icon.webp": "/static/media/biogenesis-icon.10a9bb0dcab218e02ed1.webp",
     "static/media/triangulum-icon.webp": "/static/media/triangulum-icon.29bc2d2914dee968ae7b.webp",
-    "static/media/OriginTech personal use.otf": "/static/media/OriginTech personal use.d5292de74bba42b8d98b.otf",
-    "static/media/OriginTech personal use.ttf": "/static/media/OriginTech personal use.91ec04328d7a9da85f53.ttf",
     "index.html": "/index.html",
-    "main.0a06b4d3.css.map": "/static/css/main.0a06b4d3.css.map",
-    "main.3ad680b0.js.map": "/static/js/main.3ad680b0.js.map",
+    "main.22e9b0a7.css.map": "/static/css/main.22e9b0a7.css.map",
+    "main.d6132294.js.map": "/static/js/main.d6132294.js.map",
     "488.9598de75.chunk.js.map": "/static/js/488.9598de75.chunk.js.map",
     "780.007347b2.chunk.js.map": "/static/js/780.007347b2.chunk.js.map",
     "261.be4f9bd2.chunk.js.map": "/static/js/261.be4f9bd2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a06b4d3.css",
-    "static/js/main.3ad680b0.js"
+    "static/css/main.22e9b0a7.css",
+    "static/js/main.d6132294.js"
   ]
 }
