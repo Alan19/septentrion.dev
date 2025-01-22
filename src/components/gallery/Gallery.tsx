@@ -127,7 +127,7 @@ export const Gallery = memo(function Gallery() {
     const {isDevelopment} = useIsDevelopment();
 
     const content = <>
-        <Typography variant={"h3"} color={"var(--md-sys-color-primary)"} fontFamily={"Origin Tech"}>Alcor's Gallery</Typography>
+        <Typography variant={"h3"} color={"var(--md-sys-color-primary)"}>Alcor's Gallery</Typography>
         <div ref={ref}></div>
         <Stack direction={"column"} spacing={2}>
             <div style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>

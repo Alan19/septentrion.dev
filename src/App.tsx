@@ -20,6 +20,26 @@ export const theme = createTheme({
             color: "var(--md-sys-color-secondary)"
         }
     },
+    components: {
+        MuiSwitch: {
+            styleOverrides: {
+                root: {
+                    '& .MuiSwitch-switchBase.Mui-checked.MuiSwitch-colorPrimary ': {
+                        color: 'var(--md-sys-color-primary)',
+                    },
+                    '& .MuiSwitch-switchBase.Mui-checked.MuiSwitch-colorPrimary + .MuiSwitch-track': {
+                        backgroundColor: 'var(--md-sys-color-primary)',
+                    },
+                    '& .MuiSwitch-switchBase.Mui-checked.MuiSwitch-colorSecondary ': {
+                        color: 'var(--md-sys-color-secondary)',
+                    },
+                    '& .MuiSwitch-switchBase.Mui-checked.MuiSwitch-colorSecondary + .MuiSwitch-track': {
+                        backgroundColor: 'var(--md-sys-color-secondary)',
+                    }
+                }
+            }
+        }
+    },
     palette: {
         primary: {
             main: "#38608F",

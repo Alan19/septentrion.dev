@@ -6106,5 +6106,43 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/flux_destiny_cat_boy.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flux_destiny_cat_boy.webp",
     "id": "b666fd96dafe43dd38ce951887c0c0a07d19b65a0b62c493d216146c"
+  },
+  {
+    "title": "Triangulum Form Kemono Fantasy Outfit",
+    "artist": "@_ATGYU_",
+    "tags": [
+      "Triangulum Form"
+    ],
+    "href": "",
+    "published": "2025-01-13",
+    "aspectRatio": 1,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangulum_form_kemono_fantasy_outfit.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/triangulum_form_kemono_fantasy_outfit.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangulum_form_kemono_fantasy_outfit.webp",
+    "id": "8e88f84bf48c6c92c75d6da4ebd505e476df736d91887b963b951006"
+  },
+  {
+    "title": "Gungrir Suit α Mashup",
+    "artist": "@TOOMIRO",
+    "tags": [
+      "Superhero",
+      "Rastaban Form",
+      "Gungrir Suit"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lgbkoasu2c2e",
+    "published": "2025-01-21",
+    "aspectRatio": 0.7555555555555555,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/gungrir_suit_%25CE%25B1_mashup.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/gungrir_suit_%25CE%25B1_mashup.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gungrir_suit_%25CE%25B1_mashup.webp",
+    "id": "7bf2f6058e0ca146684569bc2810d6df79af9b3ef81162c673066242"
   }
 ]
