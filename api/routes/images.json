@@ -6144,5 +6144,115 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/gungrir_suit_%25CE%25B1_mashup.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gungrir_suit_%25CE%25B1_mashup.webp",
     "id": "7bf2f6058e0ca146684569bc2810d6df79af9b3ef81162c673066242"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 1.3153586904188734,
+    "parent": "Alcor's Logos",
+    "rating": "general",
+    "characters": [
+      ""
+    ],
+    "altType": "cropped",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%27s%20Logos_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/alcors_logos_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcors_logos_1.webp",
+    "id": "c3e789569708ef73d0356b08dd02aa2aca5f4f237d4e59362d622b84"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 1.333984375,
+    "parent": "Alcor's Logos",
+    "rating": "general",
+    "characters": [
+      ""
+    ],
+    "altType": "cropped",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%27s%20Logos_2.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/alcors_logos_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcors_logos_2.webp",
+    "id": "c985d6081ea1afaaa54be4de91d23cc285e3505f39f403073dc97f32"
+  },
+  {
+    "title": "Alcor Silly",
+    "artist": "@aestheticden.com",
+    "tags": [
+      "Standard Outfit",
+      "Thuban Form"
+    ],
+    "href": "",
+    "published": "2025-01-21",
+    "aspectRatio": 1,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_silly.gif",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_silly.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_silly.webp",
+    "id": "c4d4b80ecfccb6a9723754010c3c6e9ed904a8b0d3487e59f85f1fe1"
+  },
+  {
+    "title": "Triangulum Form Illustration by FSD",
+    "artist": "@FSD_and_GF4656",
+    "tags": [
+      "Triangulum Form"
+    ],
+    "href": "https://x.com/FSD_and_GF4656/status/1883369280726831605",
+    "published": "2025-01-25",
+    "aspectRatio": 0.75,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangulum_form_illustration_by_fsd.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/triangulum_form_illustration_by_fsd.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangulum_form_illustration_by_fsd.webp",
+    "id": "4bc3018c4a1f18a4ab7a99db942d9a82c403736b3f6b1c103f36145a"
+  },
+  {
+    "tags": [
+      "Triangulum Form"
+    ],
+    "href": "",
+    "aspectRatio": 0.75,
+    "parent": "Triangulum Form Illustration by FSD",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 1,
+      "altNumber": 0
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Triangulum%20Form%20Illustration%20by%20FSD_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/triangulum_form_illustration_by_fsd_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/triangulum_form_illustration_by_fsd_1.webp",
+    "id": "bc5bcd950e2936872db46a8a2a3ba863360cb91acdfc667394217e1f"
+  },
+  {
+    "title": "AyashiV Icon",
+    "artist": "@jinnoayashi.bsky.social",
+    "tags": [
+      "Rastaban Form",
+      "Icon"
+    ],
+    "href": "",
+    "published": "2024-12-26",
+    "aspectRatio": 0.8546365914786967,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ayashi_v_icon.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ayashi_v_icon.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ayashi_v_icon.webp",
+    "id": "bda1c83cbdf7509c82dfa08e0d68ae98657466335c4b3de69a393623"
   }
 ]
