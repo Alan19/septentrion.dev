@@ -6254,5 +6254,23 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ayashi_v_icon.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ayashi_v_icon.webp",
     "id": "bda1c83cbdf7509c82dfa08e0d68ae98657466335c4b3de69a393623"
+  },
+  {
+    "title": "Outer Space Chibi",
+    "artist": "@kurope.bsky.social",
+    "tags": [
+      "Chibi"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lh2yh5ky4c24",
+    "published": "2025-01-31",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/outer_space_chibi.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/outer_space_chibi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/outer_space_chibi.webp",
+    "id": "acd4b791f98381df097ef3e915d0f4c0e159895404513ba081364698"
   }
 ]
