@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.22e9b0a7.css",
-    "main.js": "/static/js/main.8e717495.js",
+    "main.js": "/static/js/main.5ce321c9.js",
     "static/js/488.9598de75.chunk.js": "/static/js/488.9598de75.chunk.js",
     "static/js/780.007347b2.chunk.js": "/static/js/780.007347b2.chunk.js",
     "static/js/261.be4f9bd2.chunk.js": "/static/js/261.be4f9bd2.chunk.js",
@@ -40,13 +40,13 @@
     "static/media/triangulum-icon.webp": "/static/media/triangulum-icon.29bc2d2914dee968ae7b.webp",
     "index.html": "/index.html",
     "main.22e9b0a7.css.map": "/static/css/main.22e9b0a7.css.map",
-    "main.8e717495.js.map": "/static/js/main.8e717495.js.map",
+    "main.5ce321c9.js.map": "/static/js/main.5ce321c9.js.map",
     "488.9598de75.chunk.js.map": "/static/js/488.9598de75.chunk.js.map",
     "780.007347b2.chunk.js.map": "/static/js/780.007347b2.chunk.js.map",
     "261.be4f9bd2.chunk.js.map": "/static/js/261.be4f9bd2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.22e9b0a7.css",
-    "static/js/main.8e717495.js"
+    "static/js/main.5ce321c9.js"
   ]
 }
