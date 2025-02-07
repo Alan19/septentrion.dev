@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.22e9b0a7.css",
-    "main.js": "/static/js/main.5ce321c9.js",
+    "main.css": "/static/css/main.ca6568d4.css",
+    "main.js": "/static/js/main.faf67332.js",
     "static/js/488.9598de75.chunk.js": "/static/js/488.9598de75.chunk.js",
     "static/js/780.007347b2.chunk.js": "/static/js/780.007347b2.chunk.js",
-    "static/js/261.be4f9bd2.chunk.js": "/static/js/261.be4f9bd2.chunk.js",
+    "static/js/261.1e797ad6.chunk.js": "/static/js/261.1e797ad6.chunk.js",
     "static/media/autumnal.png": "/static/media/autumnal.b33850ba5bdfca7282fd.png",
     "static/media/hibernal.png": "/static/media/hibernal.93a34151f8c3b5bf7fe7.png",
     "static/media/vernal.png": "/static/media/vernal.559a91bb146731675ae6.png",
@@ -39,14 +39,14 @@
     "static/media/biogenesis-icon.webp": "/static/media/biogenesis-icon.10a9bb0dcab218e02ed1.webp",
     "static/media/triangulum-icon.webp": "/static/media/triangulum-icon.29bc2d2914dee968ae7b.webp",
     "index.html": "/index.html",
-    "main.22e9b0a7.css.map": "/static/css/main.22e9b0a7.css.map",
-    "main.5ce321c9.js.map": "/static/js/main.5ce321c9.js.map",
+    "main.ca6568d4.css.map": "/static/css/main.ca6568d4.css.map",
+    "main.faf67332.js.map": "/static/js/main.faf67332.js.map",
     "488.9598de75.chunk.js.map": "/static/js/488.9598de75.chunk.js.map",
     "780.007347b2.chunk.js.map": "/static/js/780.007347b2.chunk.js.map",
-    "261.be4f9bd2.chunk.js.map": "/static/js/261.be4f9bd2.chunk.js.map"
+    "261.1e797ad6.chunk.js.map": "/static/js/261.1e797ad6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.22e9b0a7.css",
-    "static/js/main.5ce321c9.js"
+    "static/css/main.ca6568d4.css",
+    "static/js/main.faf67332.js"
   ]
 }
