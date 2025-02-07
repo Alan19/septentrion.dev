@@ -6272,5 +6272,149 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/outer_space_chibi.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/outer_space_chibi.webp",
     "id": "acd4b791f98381df097ef3e915d0f4c0e159895404513ba081364698"
+  },
+  {
+    "title": "Alcor Mech Suit γ",
+    "artist": "@kaxak8",
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Lances"
+    ],
+    "href": "https://skeb.jp/@kaxak8/works/92",
+    "published": "2025-02-06",
+    "aspectRatio": 1.2340600575894694,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_mech_suit_%25CE%25B3.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_mech_suit_%25CE%25B3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_mech_suit_%25CE%25B3.webp",
+    "id": "58af3915cd8a4487ee1004572db5f78291d66d4f488ccb2680c4832e"
+  },
+  {
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Lances"
+    ],
+    "href": "",
+    "aspectRatio": 1.2340600575894694,
+    "parent": "Alcor Mech Suit γ",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%20Mech%20Suit%20%CE%B3_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/alcor_mech_suit_%25CE%25B3_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_mech_suit_%25CE%25B3_1.webp",
+    "id": "96ec531307a89145b24e6db5e156cacf045e85d791e94b47ec529eac"
+  },
+  {
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Lances"
+    ],
+    "href": "",
+    "aspectRatio": 1.2340600575894694,
+    "parent": "Alcor Mech Suit γ",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 3
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%20Mech%20Suit%20%CE%B3_2.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/alcor_mech_suit_%25CE%25B3_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_mech_suit_%25CE%25B3_2.webp",
+    "id": "802443d656fef063537028e94ffacdfed95f800b984e01b78111216e"
+  },
+  {
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Lances"
+    ],
+    "href": "",
+    "aspectRatio": 1.2340600575894694,
+    "parent": "Alcor Mech Suit γ",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%20Mech%20Suit%20%CE%B3_3.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/alcor_mech_suit_%25CE%25B3_3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_mech_suit_%25CE%25B3_3.webp",
+    "id": "b568cac69312fb66831694ece6c86a4324a4cd2efa0a9cfdc45a23d5"
+  },
+  {
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Lances"
+    ],
+    "href": "",
+    "aspectRatio": 1.2340600575894694,
+    "parent": "Alcor Mech Suit γ",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%20Mech%20Suit%20%CE%B3_4.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/alcor_mech_suit_%25CE%25B3_4.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_mech_suit_%25CE%25B3_4.webp",
+    "id": "f295410e75aeebd700d734ccef50807e5c5b9f6a73bce453eba224b0"
+  },
+  {
+    "title": "Mobile Wallpaper",
+    "artist": "@sakanesansan",
+    "tags": [
+      "Aldhibah Form",
+      "Techwear"
+    ],
+    "href": "https://skeb.jp/@sakanesansan/works/299",
+    "published": "2025-02-06",
+    "aspectRatio": 1,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/mobile_wallpaper.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/mobile_wallpaper.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/mobile_wallpaper.webp",
+    "id": "277b33167109eb7df3476e141d96b1404618bb065ad185dc5c4c0f2b"
+  },
+  {
+    "tags": [
+      "Rastaban Form",
+      "Hibernal Assassin",
+      "Techwear",
+      "Hoodie"
+    ],
+    "href": "",
+    "aspectRatio": 0.9993337774816788,
+    "parent": "Mobile Wallpaper",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 1,
+      "altNumber": 0
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Mobile%20Wallpaper_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/mobile_wallpaper_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/mobile_wallpaper_1.webp",
+    "id": "d6113dac4787e6d69d239105f8d236c4a294aaf62df136534a5cec58"
   }
 ]
