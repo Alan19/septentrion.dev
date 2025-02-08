@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ca6568d4.css",
-    "main.js": "/static/js/main.faf67332.js",
+    "main.css": "/static/css/main.a60eea0a.css",
+    "main.js": "/static/js/main.d1aa80e4.js",
     "static/js/488.9598de75.chunk.js": "/static/js/488.9598de75.chunk.js",
     "static/js/780.007347b2.chunk.js": "/static/js/780.007347b2.chunk.js",
     "static/js/261.1e797ad6.chunk.js": "/static/js/261.1e797ad6.chunk.js",
@@ -36,17 +36,18 @@
     "static/media/aicore-splash-2.webp": "/static/media/aicore-splash-2.b3408ad8b8261af7120f.webp",
     "static/media/alcor_icon.png": "/static/media/alcor_icon.142302e573e4f46b86fb.png",
     "static/media/Character_Badge_-page010.webp": "/static/media/Character_Badge_-page010.4621b667df5e020c7f26.webp",
+    "static/media/Potra.ttf": "/static/media/Potra.61e9c60b5a2a71053b0a.ttf",
     "static/media/biogenesis-icon.webp": "/static/media/biogenesis-icon.10a9bb0dcab218e02ed1.webp",
     "static/media/triangulum-icon.webp": "/static/media/triangulum-icon.29bc2d2914dee968ae7b.webp",
     "index.html": "/index.html",
-    "main.ca6568d4.css.map": "/static/css/main.ca6568d4.css.map",
-    "main.faf67332.js.map": "/static/js/main.faf67332.js.map",
+    "main.a60eea0a.css.map": "/static/css/main.a60eea0a.css.map",
+    "main.d1aa80e4.js.map": "/static/js/main.d1aa80e4.js.map",
     "488.9598de75.chunk.js.map": "/static/js/488.9598de75.chunk.js.map",
     "780.007347b2.chunk.js.map": "/static/js/780.007347b2.chunk.js.map",
     "261.1e797ad6.chunk.js.map": "/static/js/261.1e797ad6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca6568d4.css",
-    "static/js/main.faf67332.js"
+    "static/css/main.a60eea0a.css",
+    "static/js/main.d1aa80e4.js"
   ]
 }
