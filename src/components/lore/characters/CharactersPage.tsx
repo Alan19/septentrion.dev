@@ -21,9 +21,11 @@ export function CharactersPage() {
     const alcorverseCharacters: CharacterLink[] = [
         {
             image: alcor,
+            linkPath: '/lore/alcor'
         },
         {
             image: castor,
+            linkPath: '/lore/castor'
         }
     ]
     const alcorForms: CharacterLink[] = [
@@ -70,12 +72,16 @@ export function CharactersPage() {
             if (value.linkPath) {
                 return <Grid item md={3} xs={6}>
                     <Link to={value.linkPath}>
-                        <img src={value.image} style={{display: "block", width: '100%', borderRadius: 8}}/>
+                        <div className={"character-badge"} style={{padding: 8}}>
+                            <img src={value.image} style={{display: "block", width: '100%', borderRadius: 8}}/>
+                        </div>
                     </Link>
                 </Grid>;
             } else {
                 return <Grid item md={3} xs={6}>
-                    <img src={value.image} style={{display: "block", width: '100%', borderRadius: 8}}/>
+                    <div style={{padding: 8}}>
+                        <img src={value.image} style={{display: "block", width: '100%', borderRadius: 8}}/>
+                    </div>
                 </Grid>;
             }
         })

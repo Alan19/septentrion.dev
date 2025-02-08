@@ -69,3 +69,12 @@
     visibility: hidden;
     animation-fill-mode: forwards;
 }
+
+.character-badge:hover {
+    border: var(--md-sys-color-outlineVariant) 2px solid;
+}
+
+.character-badge {
+    border-radius: 28px;
+    border: 2px solid transparent;
+}

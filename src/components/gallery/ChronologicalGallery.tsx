@@ -5,16 +5,18 @@ import {getMonthYearPairsInImageSet} from "./Gallery";
 import {SkeletonImage} from "../SkeletonImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {croppedImageWithCurvedBorder} from "../lore/characters/TemplatedLorePage";
-import {Link} from "react-router-dom";
+import {Link, useSearchParams} from "react-router-dom";
 
-function ChronologicalGallery(props: {
+function ChronologicalGallery(props: Readonly<{
     displayedImages: (ImageEntry & { published: string })[],
     width: number,
     setCurrentImage: (image: ImageInformation) => void,
     height?: number,
     altInfo: Map<string, AltInformation[]>,
     tolerance?: number
-}) {
+}>) {
+    const [searchParams] = useSearchParams();
+
     function getImagesForMonth(year: number, month: number) {
         return props.displayedImages.filter(value => value.published?.substring(0, 7).split("-").map(Number).toString() === [year, month].toString());
     }
@@ -32,7 +34,7 @@ function ChronologicalGallery(props: {
             containerStyle={{position: "relative"}}
             targetRowHeight={props.height}
         >
-            {imagesForMonth.map(value => <Link to={value.id}><SkeletonImage
+            {imagesForMonth.map(value => <Link to={{pathname: value.id, search: searchParams.toString()}}><SkeletonImage
                 hasAlts={isAltInformation(value) || props.altInfo.has(value.title)}
                 alt={isAltInformation(value) ? value.parent : value.title}
                 src={value.thumbnailUrl ?? value.src}

@@ -35,7 +35,7 @@ export function MinimalGalleryPage() {
                 marginBottom: 16,
                 marginTop: 16
             }}>
-                <Typography variant={"h3"} color={"var(--md-sys-color-primary)"}>{referenceName}</Typography>
+                <Typography variant={"h3"} fontFamily={"Potra"} color={"var(--md-sys-color-primary)"}>{referenceName}</Typography>
                 <div ref={ref}></div>
                 <div style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
                     <TSJustifiedLayout width={bounds.width}

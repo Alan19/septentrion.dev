@@ -4,7 +4,7 @@ import React from "react";
 export function Header() {
     return (
         <>
-            <Typography color={'var(--md-sys-color-primary)'} variant={"h2"}>
+            <Typography fontFamily={"Potra"} color={'var(--md-sys-color-primary)'} variant={"h2"}>
                 Alcor
             </Typography>
             <Typography variant={"subtitle1"} color={'var(--md-sys-color-secondary)'}>
