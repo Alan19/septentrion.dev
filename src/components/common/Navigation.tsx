@@ -1,6 +1,5 @@
 import React, {useContext, useEffect, useState} from "react";
 import {BottomNavigation, BottomNavigationAction, Box, Dialog, DialogContent, DialogTitle, Grid, Paper, Stack, Typography, useMediaQuery} from "@mui/material";
-import {AppThemeContext, theme} from "../../App";
 import {Book, BookOutlined, CollectionsOutlined, Computer, DarkMode, Home, HomeOutlined, LightMode, Pending, Person, PersonOutlined, Schedule, Search, SearchOutlined, Settings} from "@mui/icons-material";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import {useLocation, useNavigate} from "react-router-dom";
@@ -10,6 +9,7 @@ import "../../App.css"
 import {NavigationRailLink} from "./NavigationRailLink";
 import SunCalc from 'suncalc';
 import {useLocalStorage} from "../../UseLocalStorage";
+import {AppThemeContext, theme} from "../../App.tsx";
 
 export const drawerColor = 'var(--md-sys-color-surfaceContainerHigh)';
 
@@ -17,9 +17,7 @@ export const drawerColor = 'var(--md-sys-color-surfaceContainerHigh)';
  * Higher order component that injects a navigation rail or bottom navigation into the child component
  * @param props children: Element to inject into, secondPanel: Optional prop for an extension to the navigation rail
  */
-export function Navigation(props: {
-    children: React.JSX.Element
-}) {
+export function Navigation(props: Readonly<{ children: React.JSX.Element }>) {
     const navigateFunction = useNavigate();
     const mediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
     const location = useLocation().pathname;

@@ -1,5 +1,4 @@
 import {Autocomplete, FilterOptionsState, FormControlLabel, FormGroup, Radio, RadioGroup, Stack, TextField, Typography} from "@mui/material";
-import React from "react";
 import Chip from "@mui/material-next/Chip";
 import {Filter} from "@mui/icons-material";
 import {FormControl, FormLabel} from "@mui/material-next";
