@@ -6416,5 +6416,25 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/mobile_wallpaper_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/mobile_wallpaper_1.webp",
     "id": "d6113dac4787e6d69d239105f8d236c4a294aaf62df136534a5cec58"
+  },
+  {
+    "title": "Aquarius Symbiote Suit Training",
+    "artist": "@sumiwohakuneko",
+    "tags": [
+      "Bodysuit",
+      "Aquarius Form",
+      "Superhero"
+    ],
+    "href": "https://skeb.jp/@sumiwohakuneko/works/7",
+    "published": "2025-02-09",
+    "aspectRatio": 0.6252520161290323,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_symbiote_suit_training.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_symbiote_suit_training.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_symbiote_suit_training.webp",
+    "id": "5e3c4b8dc72fac1f9914208a8a1741897bc298698842509712a64608"
   }
 ]

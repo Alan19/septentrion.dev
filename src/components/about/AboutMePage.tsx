@@ -3,7 +3,7 @@ import {PageHeader} from "../lore/PageHeader";
 import {M3Pane} from "../common/M3Pane";
 
 export function AboutMePage() {
-
+    // TODO Add more text
     return (
         <M3Pane>
             <>

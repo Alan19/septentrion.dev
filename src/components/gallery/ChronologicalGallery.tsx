@@ -17,6 +17,7 @@ function ChronologicalGallery(props: Readonly<{
 }>) {
     const [searchParams] = useSearchParams();
 
+    // TODO Fix batch tagging
     function getImagesForMonth(year: number, month: number) {
         return props.displayedImages.filter(value => value.published?.substring(0, 7).split("-").map(Number).toString() === [year, month].toString());
     }
