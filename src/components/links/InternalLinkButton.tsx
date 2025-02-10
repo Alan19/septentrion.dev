@@ -1,4 +1,3 @@
-import React from "react";
 import {OverridableStringUnion} from "@mui/types";
 import {ButtonPropsVariantOverrides} from "@mui/material/Button/Button";
 import {Button} from "@mui/material-next";
@@ -13,7 +12,7 @@ interface SocialMediaProps {
 
 export default function InternalLinkButton(props: SocialMediaProps) {
     const {icon, text, variant = "contained", link} = props;
-    let leftButton: any = {
+    const leftButton: any = {
         width: "100%",
         textAlign: "left",
     };

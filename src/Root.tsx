@@ -1,4 +1,3 @@
-import React from "react";
 import {Outlet, useLocation} from "react-router-dom";
 import {Navigation} from "./components/common/Navigation";
 import {LinksPage} from "./components/links/LinksPage";

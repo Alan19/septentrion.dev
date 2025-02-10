@@ -1,7 +1,7 @@
 import {AltInformation, getAltAndPageNumber, getHref, getParentImage, isAltTypeComplex} from "../../ImageInformation";
 import {SkeletonImage} from "../../SkeletonImage";
 import {Divider, Grid, IconButton, ImageList, ImageListItem, Typography, useMediaQuery} from "@mui/material";
-import React from "react";
+
 import {Button} from "@mui/material-next";
 import Chip from "@mui/material-next/Chip";
 import dayjs from "dayjs";

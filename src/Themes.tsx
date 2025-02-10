@@ -1,5 +1,5 @@
 import {extendTheme, Theme} from "@mui/material-next";
-import React from "react";
+
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCat, faGhost, faGuitar, faHandFist} from "@fortawesome/free-solid-svg-icons";
 

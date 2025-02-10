@@ -1,5 +1,5 @@
 import {Grid, Stack, Typography} from "@mui/material";
-import React from "react";
+
 import {PageHeader} from "../PageHeader";
 import {AboutPageParagraph} from "../AboutPageParagraph";
 import {croppedImageWithCurvedBorder} from "../characters/TemplatedLorePage";

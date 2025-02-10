@@ -1,5 +1,5 @@
 import {PageHeader} from "../PageHeader";
-import React from "react";
+
 import {Divider, Grid, Stack, Typography} from "@mui/material";
 import aicore from '../assets/badges/Character_Badge_-page008.webp'
 import aquarius from '../assets/badges/Character_Badge_-page007.webp'

@@ -1,6 +1,6 @@
 import {Grid} from "@mui/material";
 import {SocialsLinks} from "./SocialsLinks";
-import React from "react";
+
 import {Header} from "../Header";
 
 export function Summary() {

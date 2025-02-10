@@ -127,12 +127,15 @@ export function TemplatedLorePage() {
                                     const {xl, md, lg, xs, sm, content} = value;
                                     const gridSizes = {xs: xs, sm: sm, md: md, lg: lg, xl: xl};
                                     if (typeof content === 'string') {
+                                        // @ts-ignore
                                         return <Grid item {...gridSizes}>
                                             <img src={content} style={croppedImageWithCurvedBorder}/>
                                         </Grid>
                                     } else if (Array.isArray(content)) {
+                                        // @ts-ignore
                                         return <Grid item {...gridSizes}><FormStatRadarChart label={name} attributeScores={content}/></Grid>
                                     } else {
+                                        // @ts-ignore
                                         return <Grid item {...gridSizes}>
                                             <div style={{...m3BorderStyle, padding: 8, height: '100%'}}>
                                                 <Table size="small">

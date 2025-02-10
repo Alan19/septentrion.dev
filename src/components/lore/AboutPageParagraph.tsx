@@ -1,4 +1,3 @@
-import React from "react";
 import {Grid, Typography} from "@mui/material";
 import {ColorSquare} from "./ColorSquare";
 import {Variant} from "@mui/material/styles/createTypography";

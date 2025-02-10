@@ -6436,5 +6436,22 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_symbiote_suit_training.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_symbiote_suit_training.webp",
     "id": "5e3c4b8dc72fac1f9914208a8a1741897bc298698842509712a64608"
+  },
+  {
+    "tags": [
+      ""
+    ],
+    "href": "",
+    "aspectRatio": 0.7687878787878788,
+    "parent": "Awakened Workout",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Awakened+Workout_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/awakened_workout_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/awakened_workout_1.webp",
+    "id": "fa09a9ba494fd5364dd370f6eb697c9c6192293d28f1ba787e6d96e2"
   }
 ]

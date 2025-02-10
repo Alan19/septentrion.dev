@@ -1,6 +1,6 @@
 import {PageHeader} from "../PageHeader";
 import {Fade, Grid} from "@mui/material";
-import React from "react";
+
 import {AboutPageParagraph} from "../AboutPageParagraph";
 
 export function SomaInfo() {

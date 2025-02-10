@@ -1,6 +1,6 @@
 import {Button} from "@mui/material-next";
 import {Typography} from "@mui/material";
-import React from "react";
+
 import {useLocation, useNavigate} from "react-router-dom";
 
 export function NavigationRailLink(props: { button: React.ReactNode, selectedButton: React.ReactNode, label: string, path: string }) {

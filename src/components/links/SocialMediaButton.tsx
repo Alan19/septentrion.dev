@@ -1,4 +1,3 @@
-import React from "react";
 import {OverridableStringUnion} from "@mui/types";
 import {ButtonPropsVariantOverrides} from "@mui/material/Button/Button";
 import {IconButton} from "@mui/material";

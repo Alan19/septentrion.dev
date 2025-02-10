@@ -17,7 +17,7 @@ export function getParentImage(id: string, imageEntries: ImageEntry[]): ImageInf
     if (entry && isImageInformation(entry)) {
         return entry;
     } else {
-        return imageEntries.filter(value => isImageInformation(value)).find(value => isImageInformation(value) && value.title === entry?.parent);
+        return imageEntries.filter(value => isImageInformation(value)).find(value => isImageInformation(value) && entry && isAltInformation(entry) && value.title === entry?.parent);
     }
 }
 

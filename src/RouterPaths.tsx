@@ -6,7 +6,6 @@ import {AboutPage} from "./components/lore/world/AboutPage";
 import {BioEnhancementIntro} from "./components/lore/world/BioEnhancementIntro";
 import {AlcorOutfits} from "./components/lore/outfits/AlcorOutfits";
 import {SomaInfo} from "./components/lore/characters/SomaInfo";
-import React from "react";
 import {AnalyticsPage} from "./components/analytics/AnalyticsPage";
 import {MinimalGalleryPage} from "./components/gallery/MinimalGalleryPage";
 import {CharactersPage} from "./components/lore/characters/CharactersPage";

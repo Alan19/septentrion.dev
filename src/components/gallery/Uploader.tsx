@@ -14,7 +14,7 @@ import {useTagHooks} from "./UseTagHooks";
 import {prepareFileName} from "./Utils";
 
 const filter = createFilterOptions<string>();
-export default function Uploader(props: { loadImageInfo: () => Promise<void>; }) {
+export default function Uploader(props: Readonly<{ loadImageInfo: () => Promise<void>; }>) {
     const [selectedFile, setSelectedFile] = useState<File>();
     const {images} = useTagHooks();
     const [tags, setTags] = useState<ArtTag[]>([]);

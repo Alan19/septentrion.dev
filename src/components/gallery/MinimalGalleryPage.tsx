@@ -6,7 +6,6 @@ import {useQueryState} from "react-router-use-location-state";
 import useMeasure from "react-use-measure";
 import {ResizeObserver} from "@juggle/resize-observer";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
-import React from "react";
 import {getShownImages, imageSort} from "./Gallery";
 import {drawerColor} from "../common/Navigation";
 import {SkeletonImage} from "../SkeletonImage";
