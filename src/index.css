@@ -14,6 +14,7 @@ code {
 
 @font-face {
   font-family: 'Potra';
+  /*noinspection CssInvalidPropertyValue*/
   src: local('Potra'),
   url("./fonts/Potra.ttf") format('truetype'),
 }

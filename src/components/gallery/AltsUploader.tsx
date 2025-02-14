@@ -233,7 +233,7 @@ export default function AltsUploader(props: {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose}>Cancel</Button>
-                    <Button variant={"filled"} disabled={uploading} onClick={handleUpload}>
+                    <Button variant={"filled"} disabled={uploading || !rating} onClick={handleUpload}>
                         {uploading ? "Uploading..." : "Upload"}
                     </Button>
                 </DialogActions>

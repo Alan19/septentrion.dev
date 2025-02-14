@@ -56,7 +56,6 @@
     "id": "292f31ef5de8520f1183fdd7f17adfb0c9fd21c2799e61db00b009e5"
   },
   {
-    "src": "https://pbs.twimg.com/media/FTkSbIYaQAALr_G?format=jpg&name=large",
     "title": "Awakened Workout",
     "href": "https://twitter.com/purpledragonrei/status/1529275140957437954?s=20&t=IQ_4HE6QZFQn8s7KgKDGqQ",
     "artist": "@PurpleDragonRei",
@@ -66,13 +65,14 @@
     ],
     "published": "2022-05-24",
     "aspectRatio": 0.769090909090909,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/awakened_workout.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/awakened_workout.webp",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Awakened+Workout_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/awakened_workout_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/awakened_workout_1.webp",
+    "id": "fa09a9ba494fd5364dd370f6eb697c9c6192293d28f1ba787e6d96e2",
     "characters": [
       "Alcor"
     ],
-    "rating": "general",
-    "id": "bd72c8691f890c9dcd869ec34335b6eacb2cee270b6fec7571b4fabb"
+    "rating": "general"
   },
   {
     "src": "https://pbs.twimg.com/media/FOBdASRWYAYYG_b?format=jpg&name=4096x4096",
@@ -6281,17 +6281,17 @@
       "Bodysuit",
       "Lances"
     ],
-    "href": "https://skeb.jp/@kaxak8/works/92",
-    "published": "2025-02-06",
+    "href": "https://x.com/kaxak8/status/1888890664961892506",
+    "published": "2025-02-10",
     "aspectRatio": 1.2340600575894694,
     "rating": "mainstream",
     "characters": [
       "Alcor"
     ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_mech_suit_%25CE%25B3.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_mech_suit_%25CE%25B3.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_mech_suit_%25CE%25B3.webp",
-    "id": "58af3915cd8a4487ee1004572db5f78291d66d4f488ccb2680c4832e"
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%20Mech%20Suit%20%CE%B3_2.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/alcor_mech_suit_%25CE%25B3_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_mech_suit_%25CE%25B3_2.webp",
+    "id": "802443d656fef063537028e94ffacdfed95f800b984e01b78111216e"
   },
   {
     "tags": [
@@ -6332,10 +6332,10 @@
       "pageNumber": 0,
       "altNumber": 3
     },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%20Mech%20Suit%20%CE%B3_2.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/alcor_mech_suit_%25CE%25B3_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_mech_suit_%25CE%25B3_2.webp",
-    "id": "802443d656fef063537028e94ffacdfed95f800b984e01b78111216e"
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_mech_suit_%25CE%25B3.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_mech_suit_%25CE%25B3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_mech_suit_%25CE%25B3.webp",
+    "id": "58af3915cd8a4487ee1004572db5f78291d66d4f488ccb2680c4832e"
   },
   {
     "tags": [
@@ -6438,20 +6438,108 @@
     "id": "5e3c4b8dc72fac1f9914208a8a1741897bc298698842509712a64608"
   },
   {
+    "title": "Jupiter Battle Sprite",
+    "artist": "@kogikogikogi.bsky.social",
     "tags": [
-      ""
+      "Jupiter Form",
+      "Chibi",
+      "Lances"
+    ],
+    "href": "https://bsky.app/profile/kogikogikogi.bsky.social/post/3lhylyvtpvk2d",
+    "published": "2025-02-12",
+    "aspectRatio": 1.25,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_battle_sprite.gif",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_battle_sprite.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_battle_sprite.webp",
+    "id": "77fe6e6c2f9e7cc90531a5f74b4a1cc9a4db7c6179cfc971b6efa899"
+  },
+  {
+    "tags": [
+      "Jupiter Form",
+      "Lances",
+      "Chibi"
     ],
     "href": "",
-    "aspectRatio": 0.7687878787878788,
-    "parent": "Awakened Workout",
+    "aspectRatio": 1.25,
+    "parent": "Jupiter Battle Sprite",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Jupiter%20Battle%20Sprite_1.gif",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/jupiter_battle_sprite_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/jupiter_battle_sprite_1.webp",
+    "id": "4dcf927b9fdecd1013d04bd25db1ac59f984f0c8ef678204f9c55728"
+  },
+  {
+    "title": "Cyberpunk Loadout Illustration",
+    "artist": "@Salted_Fishking",
+    "tags": [
+      "Aldhibah Form",
+      "Techwear",
+      "Bodysuit",
+      "Full Body",
+      "Illustration",
+      "Featured"
+    ],
+    "href": "https://www.pixiv.net/en/artworks/127228736",
+    "published": "2025-02-14",
+    "aspectRatio": 2,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cyberpunk_loadout_illustration.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cyberpunk_loadout_illustration.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cyberpunk_loadout_illustration.webp",
+    "id": "70dc2cdd0110010786871dc3a364c4640dbbf6c7a04c5da9031d4fa5"
+  },
+  {
+    "tags": [
+      "Techwear",
+      "Aldhibah Form",
+      "Bodysuit"
+    ],
+    "href": "",
+    "aspectRatio": 1.3685624720107479,
+    "parent": "Cyberpunk Loadout Illustration",
     "rating": "general",
     "characters": [
       "Alcor"
     ],
     "altType": "extra",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Awakened+Workout_1.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/awakened_workout_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/awakened_workout_1.webp",
-    "id": "fa09a9ba494fd5364dd370f6eb697c9c6192293d28f1ba787e6d96e2"
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Cyberpunk%20Loadout%20Illustration_1.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/cyberpunk_loadout_illustration_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/cyberpunk_loadout_illustration_1.webp",
+    "id": "c75f0a15361d0b75568900c29c08ee872bbcb0f4a21eaab58101ba14"
+  },
+  {
+    "title": "Alcor Battle Artwork",
+    "artist": "@_if8_",
+    "tags": [
+      "Bodysuit",
+      "Techwear",
+      "Autumnal Wavesniper",
+      "Featured",
+      "Aldhibah Form",
+      "Rastaban Form",
+      "Knives"
+    ],
+    "href": "https://skeb.jp/@_if8_/works/19",
+    "published": "2025-02-14",
+    "aspectRatio": 1.1965601965601966,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_battle_artwork.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_battle_artwork.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_battle_artwork.webp",
+    "id": "98228fcd645c41fbbaa900849baf2eabd78052472bfd4970234a54ae"
   }
 ]
