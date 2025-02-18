@@ -6,10 +6,11 @@ import {artists, ArtTag, characters, Rating, SelectedFilters, tagGroup} from "./
 import _ from "lodash";
 import Switch from "@mui/material-next/Switch";
 import {AltSettings} from "./useAltDisplaySettings";
+import {FilterMode} from "./Gallery.tsx";
 
-export function AutocompleteFilterChip(props: { option: string, tagProps: { key: number; className: string; disabled: boolean; "data-tag-index": number; tabIndex: -1; onDelete: (event: any) => void } }) {
+export function AutocompleteFilterChip(props: Readonly<{ option: string, tagProps: { key: number; className: string; disabled: boolean; "data-tag-index": number; tabIndex: -1; onDelete: (event: any) => void } }>) {
     return <Chip
-        color={props.option.charAt(0) === "-" ? "error" : "primary"}
+        color={props.option.startsWith("-") ? "error" : "primary"}
         {...props.tagProps}
         size={"small"}
         label={props.option} {...props.tagProps} />;
@@ -18,8 +19,8 @@ export function AutocompleteFilterChip(props: { option: string, tagProps: { key:
 export function FilterPane(props: {
     filters: SelectedFilters,
     setFilters: (tags: string) => void,
-    filterMode: 'and' | 'or',
-    setFilterMode: (filterMode: 'and' | 'or') => void,
+    filterMode: FilterMode,
+    setFilterMode: (filterMode: FilterMode) => void,
     altDisplaySettings: AltSettings,
 }) {
     function filterOptions(options: string[], state: FilterOptionsState<string>) {
@@ -65,9 +66,9 @@ export function FilterPane(props: {
         <FormControl>
             <FormLabel>Filter Mode</FormLabel>
             <RadioGroup value={props.filterMode}>
-                <FormControlLabel value={'or'} control={<Radio onChange={(_event) => props.setFilterMode('or')}/>}
+                <FormControlLabel value={'or'} control={<Radio onChange={(_event) => props.setFilterMode(FilterMode.or)}/>}
                                   label="Or"/>
-                <FormControlLabel value={'and'} control={<Radio onChange={(_event) => props.setFilterMode('and')}/>}
+                <FormControlLabel value={'and'} control={<Radio onChange={(_event) => props.setFilterMode(FilterMode.and)}/>}
                                   label="And"/>
             </RadioGroup>
         </FormControl>

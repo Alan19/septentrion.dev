@@ -2,7 +2,6 @@ import React, {memo, useEffect, useState} from "react";
 import {Autocomplete, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Stack, TextField, Typography, useMediaQuery,} from "@mui/material";
 import {AltInformation, getAltAndPageNumber, getParentImage, ImageEntry, ImageInformation, isAltInformation, isAltTypeComplex, isImageInformation} from "../ImageInformation";
 import "./gallery.css";
-import {theme} from "../../App";
 import {useTagHooks} from "./UseTagHooks";
 import Uploader from "./Uploader";
 import useMeasure from 'react-use-measure';
@@ -12,7 +11,6 @@ import {RouteWithSubpanel} from "../common/RouteWithSubpanel";
 import {SkeletonImage} from "../SkeletonImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {createSearchParams, Link, useNavigate, useSearchParams} from "react-router-dom";
-import {useQueryState} from "react-router-use-location-state";
 import {prepareFileName} from "./Utils";
 import {Bookmark, BookmarkAdd, BookmarkRemove, Cancel, Share} from "@mui/icons-material";
 import {ArtTag, SelectedFilters} from "./TagUtils";
@@ -22,14 +20,16 @@ import axios from "axios";
 import {useIsDevelopment} from "./UseIsDevelopment";
 import ChronologicalGallery from "./ChronologicalGallery";
 import {AltSettings, useAltDisplaySettings} from "./useAltDisplaySettings";
+import {theme} from "../../Theme.tsx";
+import {parseAsInteger, parseAsStringEnum, useQueryState} from "nuqs";
 
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
     return new Set(images.filter(value => value.published !== undefined).map(value => value.published.substring(0, 7)));
 }
 
 export function imageSort(a: ImageEntry, b: ImageEntry, mainImages: ImageInformation[]): number {
-    let aPublished = isImageInformation(a) ? a.published : mainImages.find(value => value.title === a.parent)?.published as string;
-    let bPublished = isImageInformation(b) ? b.published : mainImages.find(value => value.title === b.parent)?.published as string;
+    const aPublished = isImageInformation(a) ? a.published : mainImages.find(value => value.title === a.parent)?.published as string;
+    const bPublished = isImageInformation(b) ? b.published : mainImages.find(value => value.title === b.parent)?.published as string;
     const aTitle = isImageInformation(a) ? a.title : a.parent;
     const bTitle = isImageInformation(b) ? b.title : b.parent;
     const dateComparison = bPublished.localeCompare(aPublished);
@@ -75,16 +75,17 @@ function updateTags(tags: ArtTag[], selectedImages: string[], add = true) {
         .catch((reason) => console.log(reason))
 }
 
+export enum FilterMode {and = "and", or = "or"}
 export const Gallery = memo(function Gallery() {
-    type GalleryDisplayModes = 'monthly' | 'all' | 'paginated';
+    enum GalleryDisplayModes {monthly = 'monthly', all = 'all', paginated = 'paginated'}
 
     const {filters, setFilters, images, loadImageInfo, altData, imageEntries} = useTagHooks();
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver});
-    const [displayMode, setDisplayMode] = useQueryState<GalleryDisplayModes>('display-mode', "paginated");
+    const [displayMode, setDisplayMode] = useQueryState<GalleryDisplayModes>('display-mode', parseAsStringEnum<GalleryDisplayModes>(Object.values(GalleryDisplayModes)).withDefault(GalleryDisplayModes.paginated).withOptions({history: "replace"}));
     const [pageSize, setPageSize] = useState<number>(12);
-    const [page, setPage] = useQueryState<number>('page', 1);
+    const [page, setPage] = useQueryState<number>('page', parseAsInteger.withDefault(1));
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-    const [filterMode, setFilterMode] = useQueryState<"and" | "or">("filter-mode", "and");
+    const [filterMode, setFilterMode] = useQueryState<FilterMode>("filter-mode", parseAsStringEnum<FilterMode>(Object.values(FilterMode)).withDefault(FilterMode.and).withOptions({history: "replace"}));
     const [batchTagging, setBatchTagging] = useState<ArtTag[]>([])
     const [batchTagEnabled, setBatchTagEnabled] = useState(false)
     const [selectedImages, setSelectedImages] = useState<string[]>([])
@@ -101,7 +102,7 @@ export const Gallery = memo(function Gallery() {
         setPage(1);
     }
 
-    let shownImages: ImageEntry[] = getShownImages(imageEntries, filters, filterMode, altDisplaySettings).sort((a, b) => imageSort(a, b, images))
+    const shownImages: ImageEntry[] = getShownImages(imageEntries, filters, filterMode, altDisplaySettings).sort((a, b) => imageSort(a, b, images))
 
 
     useEffect(() => {
@@ -133,11 +134,11 @@ export const Gallery = memo(function Gallery() {
             <div style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
                 <Grid container justifyContent={"space-between"} alignItems={"flex-end"}>
                     <RadioGroup value={displayMode}>
-                        <FormControlLabel value={"paginated"} control={<Radio onChange={(_event) => setDisplayMode("paginated")}/>}
+                        <FormControlLabel value={"paginated"} control={<Radio onChange={(_event) => setDisplayMode(GalleryDisplayModes.paginated)}/>}
                                           label="Display images in pages"/>
-                        <FormControlLabel value={"all"} control={<Radio onChange={(_event) => setDisplayMode("all")}/>}
+                        <FormControlLabel value={"all"} control={<Radio onChange={(_event) => setDisplayMode(GalleryDisplayModes.all)}/>}
                                           label="Display all images on one page"/>
-                        <FormControlLabel value={"monthly"} control={<Radio onChange={(_event) => setDisplayMode("monthly")}/>}
+                        <FormControlLabel value={"monthly"} control={<Radio onChange={(_event) => setDisplayMode(GalleryDisplayModes.monthly)}/>}
                                           label="Separate images by month"/>
                     </RadioGroup>
                     {

@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import {Container, Fade, Grid, IconButton, useMediaQuery} from "@mui/material";
-import {theme} from "../../App";
 import {RouteDrawer} from "./RouteDrawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import {M3Pane} from "./M3Pane";
+import {theme} from "../../Theme.tsx";
 
 export function RouteWithSubpanel(props: { panel: React.JSX.Element, routeContent: React.JSX.Element, panelCSS?: React.CSSProperties }) {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);

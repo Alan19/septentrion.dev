@@ -1,8 +1,8 @@
 import {Grid, useMediaQuery} from "@mui/material";
 import {Summary} from "./Summary";
-import {theme} from "../../App";
 
 import {M3Pane} from "../common/M3Pane";
+import {theme} from "../../Theme.tsx";
 
 export function LinksPage() {
     return <M3Pane>

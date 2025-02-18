@@ -1,5 +1,6 @@
 import {useMediaQuery} from "@mui/material";
-import {theme} from "../../App";
+
+import {theme} from "../../Theme.tsx";
 
 export function M3Pane(props: { children: React.JSX.Element, lastElement?: boolean, style?: React.CSSProperties }) {
     const {children, lastElement = true, style} = props;

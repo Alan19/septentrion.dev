@@ -10,7 +10,7 @@ import {useNavigate, useParams, useSearchParams} from "react-router-dom";
 import {ArrowBack, ArrowOutward} from "@mui/icons-material";
 import {useTagHooks} from "../UseTagHooks";
 import {M3Pane} from "../../common/M3Pane";
-import {theme} from "../../../App";
+import {theme} from "../../../Theme.tsx";
 
 
 export function ArtworkPage() {

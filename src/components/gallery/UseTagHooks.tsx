@@ -2,11 +2,12 @@ import axios from "axios";
 import {AltInformation, ImageEntry, ImageInformation, isAltInformation, isImageInformation} from "../ImageInformation";
 import {useEffect, useState} from "react";
 import images from './images.json'
-import {useQueryState} from "react-router-use-location-state";
 import {SelectedFilters} from "./TagUtils";
+import {parseAsString, useQueryState} from "nuqs";
 
 export function useTagHooks() {
-    const [filterString, setFilterString] = useQueryState('filters', '');
+    // TODO Make this serialize an object instead
+    const [filterString, setFilterString] = useQueryState('filters', parseAsString.withDefault('').withOptions({history: "replace"}));
     const [imageData, setImageData] = useState<(ImageInformation)[]>([]);
     const [altData, setAltData] = useState<Map<string, AltInformation[]>>(new Map());
     const [imageEntries, setImageEntries] = useState<ImageEntry[]>([]);

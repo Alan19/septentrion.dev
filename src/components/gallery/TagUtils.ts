@@ -51,15 +51,15 @@ export enum Rating {
     Mature = 'mature'
 }
 
-export type FilterMode = -1 | 0 | 1;
+export type FilterSetting = -1 | 0 | 1;
 export const artists = Array.from(new Set(images.filter(value => value.artist !== undefined && value.artist !== '').map<string>(imageData => imageData.artist as string))).sort((a, b) => a.localeCompare(b));
 export const characters = Array.from(new Set(images.filter(value => value.characters !== undefined).flatMap<string>(imageData => imageData.characters))).sort((a, b) => a.localeCompare(b));
 
 export class SelectedFilters {
-    readonly _artists: Record<string, FilterMode>;
-    readonly _tags: Record<string, FilterMode>;
-    readonly _ratings: Record<string, FilterMode>;
-    readonly _characters: Record<string, FilterMode>;
+    readonly _artists: Record<string, FilterSetting>;
+    readonly _tags: Record<string, FilterSetting>;
+    readonly _ratings: Record<string, FilterSetting>;
+    readonly _characters: Record<string, FilterSetting>;
 
     constructor(filters?: string) {
         this._artists = artists.reduce((previousValue, currentValue) => ({...previousValue, [currentValue]: 0}), {});
@@ -70,7 +70,7 @@ export class SelectedFilters {
             const filterArray = filters.split('+');
             filterArray.forEach(value => {
                 let filterName = value.charAt(0) === '-' ? value.substring(1) : value;
-                let filterValue: FilterMode = value.charAt(0) === '-' ? -1 : 1;
+                let filterValue: FilterSetting = value.charAt(0) === '-' ? -1 : 1;
                 if (Object.keys(this._artists).includes(filterName)) {
                     this._artists[filterName] = filterValue;
                 } else if (Object.keys(this._tags).includes(filterName)) {
@@ -86,19 +86,19 @@ export class SelectedFilters {
         }
     }
 
-    get artists(): Record<string, FilterMode> {
+    get artists(): Record<string, FilterSetting> {
         return this._artists;
     }
 
-    get tags(): Record<string, FilterMode> {
+    get tags(): Record<string, FilterSetting> {
         return this._tags;
     }
 
-    get ratings(): Record<string, FilterMode> {
+    get ratings(): Record<string, FilterSetting> {
         return this._ratings;
     }
 
-    get characters(): Record<string, FilterMode> {
+    get characters(): Record<string, FilterSetting> {
         return this._characters;
     }
 
@@ -145,7 +145,7 @@ export class SelectedFilters {
         }
     }
 
-    private serializeTagType(filters: Record<string, FilterMode>) {
+    private serializeTagType(filters: Record<string, FilterSetting>) {
         return Object.entries(filters)
             .filter(value => value[1] !== 0)
             .map(value => value[1] === -1 ? `-${value[0]}` : value[0]).join('+');

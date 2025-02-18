@@ -2,27 +2,27 @@ import {useTagHooks} from "./UseTagHooks";
 import {useNavigate} from "react-router-dom";
 import {Container, Fade, Typography} from "@mui/material";
 import {isImageInformation} from "../ImageInformation";
-import {useQueryState} from "react-router-use-location-state";
 import useMeasure from "react-use-measure";
 import {ResizeObserver} from "@juggle/resize-observer";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
-import {getShownImages, imageSort} from "./Gallery";
+import {FilterMode, getShownImages, imageSort} from "./Gallery";
 import {drawerColor} from "../common/Navigation";
 import {SkeletonImage} from "../SkeletonImage";
 import {useAltDisplaySettings} from "./useAltDisplaySettings";
+import {parseAsString, parseAsStringEnum, useQueryState} from "nuqs";
 
 // Page that only displays artworks in a grid, and hides all other elements
 export function MinimalGalleryPage() {
     const {filters, images, altData} = useTagHooks();
 
-    const [filterMode] = useQueryState<"and" | "or">("filter-mode", "and");
+    const [filterMode] = useQueryState<FilterMode>("filter-mode", parseAsStringEnum<FilterMode>(Object.values(FilterMode)).withDefault(FilterMode.and).withOptions({history: "replace"}));
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver});
-    const [referenceName] = useQueryState("reference-name", "Character Reference");
+    const [referenceName] = useQueryState("reference-name", parseAsString.withDefault("Character Reference"));
     const altDisplaySettings = useAltDisplaySettings();
 
 
     const navigation = useNavigate();
-    let shownImages = getShownImages(images, filters, filterMode, altDisplaySettings).sort((a, b) => imageSort(a, b, images));
+    const shownImages = getShownImages(images, filters, filterMode, altDisplaySettings).sort((a, b) => imageSort(a, b, images));
 
     const height = 350;
     return <Fade in>

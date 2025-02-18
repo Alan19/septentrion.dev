@@ -3,6 +3,10 @@ import {extendTheme, Theme} from "@mui/material-next";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCat, faGhost, faGuitar, faHandFist} from "@fortawesome/free-solid-svg-icons";
 
+export enum AppMode {light = "light", dark = "dark", system = "system", clock = "clock"}
+
+export enum AppTheme {alcor = 'Alcor', castor = 'Castor', soma = 'Soma', wilton = 'Wilton'}
+
 function createAlcorTheme() {
     return extendTheme({
         ref: {
@@ -357,25 +361,23 @@ const wiltonTheme = extendTheme({
 
 export const websiteThemes: { name: AppTheme, icon: React.JSX.Element, theme: Theme }[] = [
     {
-        name: "Alcor",
+        name: AppTheme.alcor,
         icon: <FontAwesomeIcon icon={faCat} style={{width: 20, height: 20}}/>,
         theme: alcorTheme
     },
     {
-        name: "Castor",
+        name: AppTheme.castor,
         icon: <FontAwesomeIcon icon={faGhost} style={{width: 20, height: 20}}/>,
         theme: castorTheme
     },
     {
-        name: "Soma",
+        name: AppTheme.soma,
         icon: <FontAwesomeIcon icon={faGuitar} style={{width: 20, height: 20}}/>,
         theme: somaTheme
     },
     {
-        name: "Wilton",
+        name: AppTheme.wilton,
         icon: <FontAwesomeIcon icon={faHandFist} style={{width: 24, height: 24}}/>,
         theme: wiltonTheme
     },
 ]
-
-export type AppTheme = 'Alcor' | 'Castor' | 'Soma' | 'Wilton'
