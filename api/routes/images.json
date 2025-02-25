@@ -6541,5 +6541,23 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_battle_artwork.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_battle_artwork.webp",
     "id": "98228fcd645c41fbbaa900849baf2eabd78052472bfd4970234a54ae"
+  },
+  {
+    "title": "Special Agent Tinker Alcor",
+    "artist": "@fluxdestiny.bsky.social",
+    "tags": [
+      "Aldhibah Form"
+    ],
+    "href": "https://bsky.app/profile/fluxdestiny.bsky.social/post/3lirwrr74rs2e",
+    "published": "2025-02-22",
+    "aspectRatio": 0.7727789138832084,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/special_agent_tinker_alcor.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/special_agent_tinker_alcor.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/special_agent_tinker_alcor.webp",
+    "id": "817d2a4bf525f525f4677286520d8655fe654cf4e23205b4da65b394"
   }
 ]
