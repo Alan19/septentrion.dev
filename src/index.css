@@ -18,3 +18,7 @@ code {
   src: local('Potra'),
   url("./fonts/Potra.ttf") format('truetype'),
 }
+
+:root {
+  color-scheme: light dark;
+}
