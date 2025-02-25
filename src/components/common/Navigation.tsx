@@ -36,7 +36,7 @@ export function Navigation(props: Readonly<{ children: React.JSX.Element }>) {
 
     useEffect(() => {
         if (appMode !== AppMode.clock) {
-            setAppMode(appMode);
+            setMode(appMode);
         } else {
             setLoadingCoordinates(true);
             navigator.geolocation.getCurrentPosition((position) => {
