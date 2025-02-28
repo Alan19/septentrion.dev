@@ -68,7 +68,6 @@ function filterAlts(altInformation: AltInformation, altFilters: AltSettings) {
     return extrasMatch || recolorsMatch || cropsMatch || sequenceMatch || altMatch || altAndSequenceMatch;
 }
 
-
 function updateTags(tags: ArtTag[], selectedImages: string[], add = true) {
     axios.post("http://localhost:9000/tag", {images: selectedImages, tags: tags, add: add})
         .then((value) => console.log("Finished updating tags on the following artworks: ", value))

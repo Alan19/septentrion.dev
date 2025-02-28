@@ -203,10 +203,10 @@ export default function AltsUploader(props: {
                                       options={characters}/>
                         <RadioGroup value={typeof altType === 'string' ? altType : "complex"}>
                             <FormLabel>Alt Type</FormLabel>
-                            <FormControlLabel value={"extra"} control={<Radio onChange={(_event) => setAltType("extra")}/>} label="Extra"/>
-                            <FormControlLabel value={"recolor"} control={<Radio onChange={(_event) => setAltType("recolor")}/>} label="Recolor"/>
-                            <FormControlLabel value={"cropped"} control={<Radio onChange={(_event) => setAltType("cropped")}/>} label="Cropped"/>
-                            <FormControlLabel value={"complex"} control={<Radio onChange={(_event) => setAltType({pageNumber: 1, altNumber: 1})}/>} label="Complex"/>
+                            <FormControlLabel value={"extra"} control={<Radio onChange={() => setAltType("extra")}/>} label="Extra"/>
+                            <FormControlLabel value={"recolor"} control={<Radio onChange={() => setAltType("recolor")}/>} label="Recolor"/>
+                            <FormControlLabel value={"cropped"} control={<Radio onChange={() => setAltType("cropped")}/>} label="Cropped"/>
+                            <FormControlLabel value={"complex"} control={<Radio onChange={() => setAltType({pageNumber: 1, altNumber: 1})}/>} label="Complex"/>
                         </RadioGroup>
                         <TextField disabled={!isAltTypeComplex(altType)} value={isAltTypeComplex(altType) ? altType.pageNumber : 0} label={"Page Number"} onChange={event => {
                             if (isAltTypeComplex(altType)) {

@@ -24,7 +24,7 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
     const sortedArtistRanking = Object.entries(artistRanking).sort((a, b) => Number(b[0]) - Number(a[0]));
 
     const publishedDates: ReactCalendarHeatmapValue<string>[] = images.reduce<ReactCalendarHeatmapValue<string>[]>((previousValue, currentValue) => {
-        let find = previousValue.find(value => value.date === currentValue.published);
+        const find = previousValue.find(value => value.date === currentValue.published);
         if (find) {
             find.count += 1;
             return previousValue;
@@ -96,8 +96,7 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
                                                  startDate={`${Number.parseInt(value) - 1}-12-31`}
                                                  values={publishedDates}
                                                  transformDayElement={(element, value) => {
-                                                     // Something is wrong with the types module, the element should be an element object, not props
-                                                     // @ts-ignore
+                                                     // @ts-expect-error Something is wrong with the types module, the element should be an element object, not props, so we put an element here and suppress the error
                                                      return getSquareElement(element, value);
                                                  }}
                                                  endDate={`${value}-12-31`}/>

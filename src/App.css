@@ -71,6 +71,7 @@
 }
 
 .character-badge:hover {
+    /*noinspection CssUnresolvedCustomProperty*/
     border: var(--md-sys-color-outlineVariant) 2px solid;
 }
 
