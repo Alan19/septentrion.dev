@@ -1,7 +1,7 @@
 // TODO get rid of this
 import {createTheme} from "@mui/material";
 
-export const theme = createTheme({
+export const materialDesign2Theme = createTheme({
     typography: {
         h5: {
             color: "var(--md-sys-color-primary)"

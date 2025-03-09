@@ -15,7 +15,7 @@ export function AlcorOutfits() {
             <PageHeader title={"Alcor's Wardrobe"}/>
             <Typography variant="body1">Alcor's primary outfits are loosely themed after the Modern mid-latitude ecological seasons. He prefers fairly tight and high-tech outfits, usually infused with high-tech fabrics and materials.
                 Each outfit is designed to be worn in an athleisure context, but are sometimes also dedicated for other activities.</Typography>
-            <SkeletonImage containerStyle={{marginTop: '8px'}} style={{width: '100%', display: 'block'}} src={"https://alcorsiteartbucket.s3.amazonaws.com/webp/outfit_sheet.webp"} aspectRatio={2.35}/>
+            <SkeletonImage style={{width: '100%', display: 'block'}} src={"https://alcorsiteartbucket.s3.amazonaws.com/webp/outfit_sheet.webp"}/>
         </Grid>
         <Grid item>
             <AboutPageParagraph title={'Vernal Outfit'}

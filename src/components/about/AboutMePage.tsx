@@ -1,7 +1,8 @@
 import {Container, Divider, Grid2 as Grid, Typography} from "@mui/material";
 import {PageHeader} from "../lore/PageHeader";
 import {M3Pane} from "../common/M3Pane";
-import {croppedImageWithCurvedBorder} from "../lore/characters/TemplatedLorePage.tsx";
+
+import {m3BorderStyle} from "../common/BorderStyling.ts";
 
 export function AboutMePage() {
     // TODO Add more text
@@ -11,10 +12,10 @@ export function AboutMePage() {
                 <PageHeader title={"About Me (IRL)"}/>
                 <Divider/>
                 <Grid style={{marginTop: 16}} container spacing={3}>
-                    <Grid size={{md: 'auto'}}>
+                    <Grid size={{md: 9}}>
                         <img src={"https://alcorsiteartbucket.s3.amazonaws.com/webp/moodboard.webp"} style={{width: '100%', objectFit: 'contain', maxHeight: '80vh'}}/>
                     </Grid>
-                    <Grid size={{md: 'grow'}} style={{...croppedImageWithCurvedBorder, padding: 16}}>
+                    <Grid size={{md: 3}} style={{...m3BorderStyle, backgroundColor: 'var(--md-sys-color-surfaceContainerHighest)', padding: 16}}>
                         <Typography><b>Name:</b> Alan</Typography>
                         <Typography><b>Country:</b> USA</Typography>
                         <Typography><b>Hobbies:</b> Gardening, Tabletop Roleplaying Games, TCGs, Video Games</Typography>

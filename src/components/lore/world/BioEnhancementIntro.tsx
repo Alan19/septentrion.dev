@@ -2,8 +2,8 @@ import {Grid, Stack, Typography} from "@mui/material";
 
 import {PageHeader} from "../PageHeader";
 import {AboutPageParagraph} from "../AboutPageParagraph";
-import {croppedImageWithCurvedBorder} from "../characters/TemplatedLorePage";
 import aquariusSplashImage from "../assets/splash/aquarius-splash.webp"
+import {croppedImageWithCurvedBorder} from "../../common/BorderStyling.ts";
 
 export function BioEnhancementIntro() {
     return <>

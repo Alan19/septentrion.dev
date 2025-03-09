@@ -3,12 +3,12 @@ import {Container, Fade, Grid, IconButton, useMediaQuery} from "@mui/material";
 import {RouteDrawer} from "./RouteDrawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import {M3Pane} from "./M3Pane";
-import {theme} from "../../Theme.tsx";
+import {materialDesign2Theme} from "../../MaterialDesign2Theme.tsx";
 
 export function RouteWithSubpanel(props: { panel: React.JSX.Element, routeContent: React.JSX.Element, panelCSS?: React.CSSProperties }) {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-    const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
-    const isSmallOrAbove = useMediaQuery(theme.breakpoints.up("sm"));
+    const isMediumOrAbove = useMediaQuery(materialDesign2Theme.breakpoints.up("md"));
+    const isSmallOrAbove = useMediaQuery(materialDesign2Theme.breakpoints.up("sm"));
 
     function handleDrawerToggle() {
         setIsDrawerOpen(true)

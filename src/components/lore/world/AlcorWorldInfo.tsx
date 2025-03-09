@@ -2,7 +2,8 @@ import {Grid, Stack, Typography} from "@mui/material";
 import React, {memo} from "react";
 import {AboutPageParagraph} from "../AboutPageParagraph";
 import {PageHeader} from "../PageHeader";
-import {croppedImageWithCurvedBorder} from "../characters/TemplatedLorePage";
+
+import {croppedImageWithCurvedBorder} from "../../common/BorderStyling.ts";
 
 export const AlcorWorldInfo = memo(function AlcorWorldInfo() {
     return <div>

@@ -4,8 +4,8 @@ import {AltInformation, ImageEntry, ImageInformation, isAltInformation, isImageI
 import {getMonthYearPairsInImageSet} from "./Gallery";
 import {SkeletonImage} from "../SkeletonImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
-import {croppedImageWithCurvedBorder} from "../lore/characters/TemplatedLorePage";
 import {Link, useSearchParams} from "react-router-dom";
+import {croppedImageWithCurvedBorder} from "../common/BorderStyling.ts";
 
 function ChronologicalGallery(props: Readonly<{
     displayedImages: (ImageEntry & { published: string })[],
@@ -16,6 +16,7 @@ function ChronologicalGallery(props: Readonly<{
     tolerance?: number
 }>) {
     const [searchParams] = useSearchParams();
+
     // TODO Fix batch tagging
     function getImagesForMonth(year: number, month: number) {
         return props.displayedImages.filter(value => value.published?.substring(0, 7).split("-").map(Number).toString() === [year, month].toString());
@@ -34,13 +35,14 @@ function ChronologicalGallery(props: Readonly<{
             containerStyle={{position: "relative"}}
             targetRowHeight={props.height}
         >
-            {imagesForMonth.map(value => <Link to={{pathname: value.id, search: searchParams.toString()}}><SkeletonImage
-                hasAlts={isAltInformation(value) || props.altInfo.has(value.title)}
-                alt={isAltInformation(value) ? value.parent : value.title}
-                src={value.thumbnailUrl ?? value.src}
-                imageClassname={"artImage"}
-                style={croppedImageWithCurvedBorder}
-                aspectRatio={value.aspectRatio ?? 1}/></Link>)}
+            {imagesForMonth.map(value => <Link to={{pathname: value.id, search: searchParams.toString()}}>
+                <SkeletonImage
+                    hasAlts={isAltInformation(value) || props.altInfo.has(value.title)}
+                    alt={isAltInformation(value) ? value.parent : value.title}
+                    src={value.thumbnailUrl ?? value.src}
+                    imageClassname={"artImage"}
+                    style={croppedImageWithCurvedBorder}/>
+            </Link>)}
         </TSJustifiedLayout>
     }
 

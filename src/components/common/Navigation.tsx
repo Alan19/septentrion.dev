@@ -4,11 +4,11 @@ import {Book, BookOutlined, CollectionsOutlined, Computer, DarkMode, Home, HomeO
 import CollectionsIcon from "@mui/icons-material/Collections";
 import {useLocation, useNavigate} from "react-router-dom";
 import {Button, useColorScheme} from "@mui/material-next";
-import {AppMode, websiteThemes} from "../../Themes";
+import {AppMode, websiteThemes} from "../../MaterialYouThemes.tsx";
 import "../../App.css"
 import {NavigationRailLink} from "./NavigationRailLink";
 import SunCalc from 'suncalc';
-import {theme} from "../../Theme.tsx";
+import {materialDesign2Theme} from "../../MaterialDesign2Theme.tsx";
 import {useSettings} from "../../UseSettings.ts";
 
 export const drawerColor = 'var(--md-sys-color-surfaceContainerHigh)';
@@ -19,7 +19,7 @@ export const drawerColor = 'var(--md-sys-color-surfaceContainerHigh)';
  */
 export function Navigation(props: Readonly<{ children: React.JSX.Element }>) {
     const navigateFunction = useNavigate();
-    const mediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
+    const mediumOrAbove = useMediaQuery(materialDesign2Theme.breakpoints.up("md"));
     const location = useLocation().pathname;
     const [isDialogOpen, setIsDialogOpen] = useState(false);
     const {appMode, setAppMode, appTheme, setAppTheme} = useSettings()

@@ -79,3 +79,8 @@
     border-radius: 28px;
     border: 2px solid transparent;
 }
+
+.disabled:hover {
+    cursor: not-allowed;
+    filter: blur(2px);
+}

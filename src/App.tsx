@@ -4,9 +4,9 @@ import {ThemeProvider,} from "@mui/material";
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs'
 import {LocalizationProvider} from "@mui/x-date-pickers";
 import {CssVarsProvider} from "@mui/material-next";
-import {alcorTheme, websiteThemes} from "./Themes";
+import {alcorTheme, websiteThemes} from "./MaterialYouThemes.tsx";
 import {drawerColor, Navigation} from "./components/common/Navigation";
-import {theme} from "./Theme.tsx";
+import {materialDesign2Theme} from "./MaterialDesign2Theme.tsx";
 import {useSettings} from "./UseSettings.ts";
 import {AppRouter} from "./AppRouter.tsx";
 import {NuqsAdapter} from "nuqs/adapters/react-router/v7";
@@ -15,7 +15,7 @@ export function App() {
     const {appTheme} = useSettings();
 
     return <CssVarsProvider theme={websiteThemes.find(value => value.name === appTheme)?.theme ?? alcorTheme}>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={materialDesign2Theme}>
             <NuqsAdapter>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <div className="App" style={{

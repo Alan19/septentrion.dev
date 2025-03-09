@@ -1,20 +1,19 @@
 import React, {memo, MouseEventHandler, useEffect, useState} from "react";
-import {Fade, IconButton, Skeleton} from "@mui/material";
+import {Fade, IconButton} from "@mui/material";
 import PhotoLibraryIcon from "@mui/icons-material/PhotoLibraryOutlined";
+import Skeleton from "react-loading-skeleton";
 
 export const SkeletonImage = memo(function SkeletonImage(props: {
     src: string,
-    aspectRatio: number,
     onClick?: MouseEventHandler<HTMLImageElement>,
     style?: React.CSSProperties,
-    containerStyle?: React.CSSProperties,
     hasAlts?: boolean,
     alt?: string,
     imageClassname?: string,
     href?: string,
     skeletonStyle?: React.CSSProperties
 }) {
-    const {src, aspectRatio, style, skeletonStyle, onClick, hasAlts = false, alt, imageClassname, containerStyle, href} = props;
+    const {src, style, onClick, alt, skeletonStyle, imageClassname, href} = props;
 
     const [isReady, setIsReady] = useState(isImageCached());
 
@@ -58,6 +57,6 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
             <Fade in>{renderedImage}</Fade>
         </>;
     } else {
-        return <div style={{aspectRatio: props.aspectRatio, ...skeletonStyle}}><Skeleton width={'100%'} height={'100%'} animation={"wave"} variant={"rounded"}/></div>;
+        return <Skeleton width={'100%'} height={'100%'} style={skeletonStyle}/>;
     }
 })

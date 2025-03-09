@@ -25,7 +25,7 @@ export function AppRouter() {
         <Route path="/analytics" element={<AnalyticsPage/>}/>
         <Route path="/about" element={<AboutMePage/>}/>
 
-        <Route path="/lore" element={<AboutPage/>}>
+        <Route path="/lore">
             <Route index element={<CharactersPage/>}/>
             <Route path=":character" element={<TemplatedLorePage/>}/>
             <Route path="world" element={<AlcorWorldInfo/>}/>

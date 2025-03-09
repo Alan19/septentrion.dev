@@ -3596,7 +3596,7 @@
       "Featured",
       "Character Reference"
     ],
-    "href": "https://x.com/FaintAlcor/status/1785179761309839456",
+    "href": "https://bsky.app/profile/godbirdart.bsky.social/post/3kre3zl4gq223",
     "published": "2024-04-30",
     "aspectRatio": 2.35,
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/outfit_sheet.webp",
@@ -6559,5 +6559,148 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/special_agent_tinker_alcor.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/special_agent_tinker_alcor.webp",
     "id": "817d2a4bf525f525f4677286520d8655fe654cf4e23205b4da65b394"
+  },
+  {
+    "title": "A Barbaric Warrior",
+    "artist": "@_ATGYU_",
+    "tags": [
+      "Jupiter Form"
+    ],
+    "href": "https://x.com/_ATGYU_/status/1895484710740271376",
+    "published": "2025-02-28",
+    "aspectRatio": 0.857421875,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_kemo_fantasy.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_kemo_fantasy.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_kemo_fantasy.webp",
+    "id": "9041c20da1dde4ce64499c4884743d61e0ffbcbe6668701a1993dafe"
+  },
+  {
+    "title": "Cafe Chibi",
+    "artist": "@kurope.bsky.social",
+    "tags": [
+      "Chibi",
+      "Thuban Form"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3ljbbm475gs25",
+    "published": "2025-02-28",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cafe_chibi.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cafe_chibi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cafe_chibi.webp",
+    "id": "c34ea1a717a825c85447a03edff93cb34244182fd96a7bacc67d8aa8"
+  },
+  {
+    "title": "Flux Destiny Tinker Outfit by タツ",
+    "artist": "@tatsupokopon.bsky.social",
+    "tags": [
+      "Aldhibah Form",
+      "Techwear",
+      "Bodysuit",
+      "Knives",
+      "Chibi"
+    ],
+    "href": "https://bsky.app/profile/tatsupokopon.bsky.social/post/3ljfcsn66is2r",
+    "published": "2025-03-02",
+    "aspectRatio": 0.7331812998859749,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/flux_destiny_tinker_outfit_by_%25E3%2582%25BF%25E3%2583%2584.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/flux_destiny_tinker_outfit_by_%25E3%2582%25BF%25E3%2583%2584.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flux_destiny_tinker_outfit_by_%25E3%2582%25BF%25E3%2583%2584.webp",
+    "id": "5612186b1a4d1c6ef054d878116af29b82c88b2a2f50e96cab117b1a"
+  },
+  {
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Knives",
+      "Techwear"
+    ],
+    "href": "",
+    "aspectRatio": 0.7331812998859749,
+    "parent": "Flux Destiny Tinker Outfit by タツ",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "cropped",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Flux%20Destiny%20Tinker%20Outfit%20by%20%E3%82%BF%E3%83%84_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/flux_destiny_tinker_outfit_by_%25E3%2582%25BF%25E3%2583%2584_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/flux_destiny_tinker_outfit_by_%25E3%2582%25BF%25E3%2583%2584_1.webp",
+    "id": "4d335846e47af87047143a22dc60d4d8cdeca00f9be48c45e85240a1"
+  },
+  {
+    "tags": [
+      "Aldhibah Form",
+      "Autumnal Wavesniper",
+      "Bodysuit",
+      "Featured",
+      "Knives",
+      "Rastaban Form",
+      "Techwear"
+    ],
+    "href": "https://bsky.app/profile/if0.bsky.social/post/3li57cmpius2s",
+    "aspectRatio": 1.1955882352941176,
+    "parent": "Alcor Battle Artwork",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor+Battle+Artwork_1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/alcor_battle_artwork_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/alcor_battle_artwork_1.webp",
+    "id": "38c03241d93e89f41e0a2f285caecd0d7bc48e38b993bdfaaff372b5"
+  },
+  {
+    "title": "Silly Confident Sticker",
+    "artist": "@kuttoyaki.bsky.social",
+    "tags": [
+      "Vernal",
+      "Thuban Form",
+      "Chibi",
+      "Techwear",
+      "Hoodie"
+    ],
+    "href": "",
+    "published": "2025-03-06",
+    "aspectRatio": 1,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/silly_confident_sticker.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/silly_confident_sticker.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/silly_confident_sticker.webp",
+    "id": "9632370048269ebf216dac6a822de4fa97a1aa83fe8273015566cba5"
+  },
+  {
+    "title": "Matrixdragonn Sticker Pack",
+    "artist": "@zoricus.bsky.social",
+    "tags": [
+      "Thuban Form",
+      "Chibi"
+    ],
+    "href": "https://bsky.app/profile/zoricus.bsky.social/post/3ljk6eqjvbs2f",
+    "published": "2025-03-04",
+    "aspectRatio": 1,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/matrixdragonn_sticker_pack.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/matrixdragonn_sticker_pack.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/matrixdragonn_sticker_pack.webp",
+    "id": "b81a41f106d5a361502744c4d69a8ebc226132680946964d10baab8f"
   }
 ]

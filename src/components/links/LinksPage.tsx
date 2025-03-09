@@ -2,7 +2,7 @@ import {Grid, useMediaQuery} from "@mui/material";
 import {Summary} from "./Summary";
 
 import {M3Pane} from "../common/M3Pane";
-import {theme} from "../../Theme.tsx";
+import {materialDesign2Theme} from "../../MaterialDesign2Theme.tsx";
 
 export function LinksPage() {
     return <M3Pane>
@@ -12,7 +12,7 @@ export function LinksPage() {
             spacing={5}
             style={{minHeight: "calc(100vh - 40px)"}}
             direction={
-                useMediaQuery(theme.breakpoints.up("sm")) ? "row" : "column-reverse"
+                useMediaQuery(materialDesign2Theme.breakpoints.up("sm")) ? "row" : "column-reverse"
             }
             justifyContent={"center"}
         >

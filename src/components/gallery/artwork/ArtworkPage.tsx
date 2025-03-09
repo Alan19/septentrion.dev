@@ -10,7 +10,7 @@ import {useNavigate, useParams, useSearchParams} from "react-router-dom";
 import {ArrowBack, ArrowOutward} from "@mui/icons-material";
 import {useTagHooks} from "../UseTagHooks";
 import {M3Pane} from "../../common/M3Pane";
-import {theme} from "../../../Theme.tsx";
+import {materialDesign2Theme} from "../../../MaterialDesign2Theme.tsx";
 
 
 export function ArtworkPage() {
@@ -22,7 +22,7 @@ export function ArtworkPage() {
     const parentImageInfo = getParentImage(imageId, imageEntries);
     const currentImageInfo = imageEntries.find(value => value.id === imageId);
 
-    const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
+    const isMediumOrAbove = useMediaQuery(materialDesign2Theme.breakpoints.up("md"));
 
     function capitalizeFirstLetter(input: string) {
         return input.charAt(0).toUpperCase() + input.slice(1);
@@ -64,12 +64,10 @@ export function ArtworkPage() {
                                 </IconButton>
                             </Grid>
                             <Grid item xs md style={{display: 'flex', justifyContent: 'center'}}>
-                                <SkeletonImage href={href || parentImageInfo.href}
+                                <SkeletonImage href={href ?? parentImageInfo.href}
                                                style={{maxHeight: imageHeight, maxWidth: '100%', display: 'block'}}
                                                skeletonStyle={(aspectRatio ?? 1) < 1 ? {height: imageHeight, maxWidth: '100%'} : {maxHeight: imageHeight, width: '100%'}}
-                                               src={webp}
-                                               containerStyle={{height: 'min-content'}}
-                                               aspectRatio={aspectRatio}/>
+                                               src={webp}/>
 
                             </Grid>
                         </Grid>

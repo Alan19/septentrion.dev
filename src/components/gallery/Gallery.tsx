@@ -14,14 +14,14 @@ import {createSearchParams, Link, useNavigate, useSearchParams} from "react-rout
 import {prepareFileName} from "./Utils";
 import {Bookmark, BookmarkAdd, BookmarkRemove, Cancel, Share} from "@mui/icons-material";
 import {ArtTag, SelectedFilters} from "./TagUtils";
-import {croppedImageWithCurvedBorder} from "../lore/characters/TemplatedLorePage";
 import {Button} from "@mui/material-next";
 import axios from "axios";
 import {useIsDevelopment} from "./UseIsDevelopment";
 import ChronologicalGallery from "./ChronologicalGallery";
 import {AltSettings, useAltDisplaySettings} from "./useAltDisplaySettings";
-import {theme} from "../../Theme.tsx";
+import {materialDesign2Theme} from "../../MaterialDesign2Theme.tsx";
 import {parseAsInteger, parseAsStringEnum, useQueryState} from "nuqs";
+import {croppedImageWithCurvedBorder} from "../common/BorderStyling.ts";
 
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
     return new Set(images.filter(value => value.published !== undefined).map(value => value.published.substring(0, 7)));
@@ -94,7 +94,7 @@ export const Gallery = memo(function Gallery() {
     // TODO Add method to export name, and also copy URL to clipboard
     const [referenceName, setReferenceName] = useState("")
     const navigation = useNavigate();
-    const isMediumOrAbove = useMediaQuery(theme.breakpoints.up("md"));
+    const isMediumOrAbove = useMediaQuery(materialDesign2Theme.breakpoints.up("md"));
 
     function handleTagChange(tags: string) {
         setFilters(tags);
@@ -179,7 +179,7 @@ export const Gallery = memo(function Gallery() {
                                     src={thumbnailUrl ?? src}
                                     imageClassname={"artImage"}
                                     style={croppedImageWithCurvedBorder}
-                                    aspectRatio={aspectRatio ?? 1}/>;
+                                />;
                                 if (batchTagEnabled) {
                                     return <div onClick={() => setSelectedImages(prevState => prevState.includes(title) ? prevState.filter(value => value !== title) : [...prevState, title])}
                                                 style={{

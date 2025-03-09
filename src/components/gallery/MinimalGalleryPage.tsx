@@ -52,8 +52,7 @@ export function MinimalGalleryPage() {
                                 hasAlts={altData.has(title)}
                                 alt={title}
                                 src={value.thumbnailUrl ?? value.src}
-                                imageClassname={"artImage"}
-                                aspectRatio={value.aspectRatio ?? 1}/>;
+                                imageClassname={"artImage"}/>;
                         })}
                     </TSJustifiedLayout>
                 </div>

@@ -9,13 +9,12 @@ import castorIcon from './assets/icons/castor_icon.png'
 import {templatedLorePageInfo} from "./characters/template-info/alcor-forms";
 import {superheroSuits} from "./characters/template-info/superhero-suits";
 
-function M3ListButton(props: { avatarSrc?: string, indentation?: number, text: string, link: string }) {
+function M3ListButton(props: Readonly<{ avatarSrc?: string, indentation?: number, text: string, link: string }>) {
     const borderRadius = 'var(--Button-radius, var(--md-sys-shape-corner-full))';
     const location = useLocation().pathname;
 
     function getLinkButtonStyle(link: string = '') {
-        let baseUrl: string;
-        baseUrl = link === '' ? '/lore' : "/lore/";
+        const baseUrl: string = link === '' ? '/lore' : "/lore/";
         return {
             borderRadius,
             ...(location === `${baseUrl}${link}` ? {backgroundColor: 'var(--md-sys-color-secondaryContainer)'} : {})
@@ -33,7 +32,7 @@ function M3ListButton(props: { avatarSrc?: string, indentation?: number, text: s
         </ListItemButton></Link>;
 }
 
-function CollapsibleListButton(props: { title: string, children: React.JSX.Element[], forceOpen?: boolean }) {
+function CollapsibleListButton(props: Readonly<{ title: string, children: React.JSX.Element[], forceOpen?: boolean }>) {
     const [isOpen, setIsOpen] = React.useState(false);
     const handleClick = () => {
         if (!forceOpen) {
