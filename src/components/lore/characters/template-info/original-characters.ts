@@ -1,11 +1,10 @@
-import {FormInformation} from "../TemplatedLorePage";
+import {TemplatedPageObject} from "../TemplatedLorePage";
 import alcorIcon from "../../assets/icons/alcor_icon.png";
 import alcorSplash from "../../assets/splash/alcor-splash.png";
 import castorIcon from "../../assets/icons/castor_icon.png";
-import castorSplashImage from "../../assets/splash/castor-splash.png";
 import castor2SplashImage from "../../assets/castor-evolved.webp";
 
-export const originalCharacters: FormInformation[] = [
+export const originalCharacters: TemplatedPageObject[] = [
     {
         name: "Alcor",
         thumbnail: alcorIcon,
@@ -38,13 +37,12 @@ export const originalCharacters: FormInformation[] = [
         thumbnail: castorIcon,
         link: "castor",
         description: "Alcor's symbiote companion, who helps keep him emotionally stable and also powers him up.",
-        image: castorSplashImage,
+        image: castor2SplashImage,
         imageAspectRatio: 1,
         body: "Castor is a symbiote that Alcor made by extracting alien DNA from a meteorite, which was then fused with his own DNA to increase the symbiote's compatibility with his own body. While he looks a bit scary and spooky, he's actually really helpful, and helps Alcor destress and unwind from work. When Alcor is incapacitated, Castor is able to assume control of Alcor's body to defend him from further harm and extract him from the current conflict. This increases the percentage of exotic matter in Alcor's body, allowing Castor to mold Alcor's body into an evolved form personalized for Castor, and also increases Alcor's recovery rate. Castor can also assume this form for short periods of time outside of combat, but with severly dimished combat abilites, so it is purely cosmetic.",
-        history: "Castor's body is made up of exotic matter, which powers a large chunk of Alcor's inventions with space warping and electronic interfacing abilities. However, the generation rate of exotic matter is slow, so there is a long waitlist for commissioned gadgets that harness it. On top of that, Alcor has his own personal projects he is working on, which makes the waitlist even longer.",
+        history: "Castor's body is made up of exotic matter, which powers a large chunk of Alcor's inventions with space warping and electronic interfacing abilities. However, due to licensing requirements and required infrastructure on producing exotic matter, Alcor is one of the few people who is authorized to produce it. This means there is a long waitlist on the commissions for gadgets that use exotic matter, as Alcor is already using a good amount of the exotic matter he produces for himself.",
         specs: [
             {md: 5, content: {tableContents: {Height: `1'6" (Default) / 5'5" (Transformed)`, Weapons: "EM Bullets", Armor: "EM Accessories", Affinity: "Light"}}},
-            {content: castor2SplashImage, md: 3},
             {content: [1, 3, 4, 5, 4, 3], md: 4}
         ],
         gallery: [

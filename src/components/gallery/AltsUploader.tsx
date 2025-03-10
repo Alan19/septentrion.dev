@@ -165,7 +165,7 @@ export default function AltsUploader(props: Readonly<{
                         fullWidth
                         value={rating}
                         aria-required
-                        onChange={(event, value) => setRating(value)}
+                        onChange={(_event, value) => setRating(value)}
                         id="upload-rating-selector"
                         options={Object.values(Rating)}
                         getOptionLabel={(option) => option}

@@ -1,7 +1,7 @@
-import {FormInformation} from "../TemplatedLorePage";
+import {TemplatedPageObject} from "../TemplatedLorePage";
 import biogenesisIcon from "../../assets/icons/biogenesis-icon.webp";
 
-export const superheroSuits: FormInformation[] = [
+export const superheroSuits: TemplatedPageObject[] = [
     {
         name: "Biogenesis",
         thumbnail: biogenesisIcon,

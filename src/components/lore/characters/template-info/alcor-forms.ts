@@ -1,4 +1,4 @@
-import {FormInformation} from "../TemplatedLorePage";
+import {TemplatedPageObject} from "../TemplatedLorePage";
 import aquariusIcon from "../../assets/icons/aquarius-icon.webp";
 import aquariusSplashImage from "../../assets/splash/aquarius-splash.webp";
 import jupiterIcon from "../../assets/icons/jupiter-icon.webp";
@@ -11,7 +11,7 @@ import triangulumIcon from "../../assets/icons/triangulum-icon.webp";
 import triangulumSplashImage from "../../assets/splash/triangulum-splash.webp";
 import gemeniIcon from "../../assets/icons/gemini-icon.webp"
 
-export const templatedLorePageInfo: FormInformation[] = [
+export const templatedLorePageInfo: TemplatedPageObject[] = [
     {
         name: "Aquarius Form",
         thumbnail: aquariusIcon,
@@ -185,9 +185,9 @@ export const templatedLorePageInfo: FormInformation[] = [
         thumbnail: aicoreIcon,
         link: "aicore",
         description: "Alcor and Castor's first attempt at a symbiotic fusion.",
-        history: "Castor is a symbiote Alcor resurrected from a meteor he bought from an exotic market. Castor appears to be made out of a special form of matter that responds to imagination, causing changes in himself and it's host based on people they hang out with. However, he is looking into possible enhancements to this form to make it more battle ready instead. He is slightly nervous about using this form during the daytime, often opting to use it at night for parkour or patrolling. Castor's assistance allows Alcor to easily swap between all of his forms in the field and bypassing the need for immobile infrastructure.",
+        history: "Exotic matter is a special form of matter that responds to imagination, which causing changes in himself and it's host based on people they hang out with. This form is theoretically all-purpose, and is cleared for casual use. However, he is still shy about using this form when it is light out because it doesn't blend in well. He prefers transforming into AICore at night to use in parkour or patrolling as the tendrils help with hanging off surfaces that would normally be hard to hang onto. Alcor is looking into possible enhancements to this form to make it more battle ready, but research and requests into militarizing exotic matter ethically is taking time. In the meantime, Alcor is using this form as a handy intermediary to transform into his other morphological forms without needing a bio-tank.",
         image: aicore3SplashImage,
-        body: "Alcor's form when combined with Castor. Its body is made of exotic matter, which infuses its flesh to create a fairly durable symbiote suit while still looking like skin. Faint particles gradually radiate off his body, creating a ghost-like effect, which is the basis for its short range teleportation ability. Its body also contains various tendrils composed of biomechanical mind-machine interfaces that allow him to interface and hack into machinery. These tendrils can be extended and retracted at will, but usually curl around his limbs by default. The form also sports a pair of clawed gauntlets that drastically enhances the force of its punches, while its claws can slice through light armor with ease. It also sports Castor's signature phantasmal butterfly wing augment, allowing for complex midair maneuvers.",
+        body: "Alcor's form when combined with Castor. Its body is made of exotic matter, which infuses its flesh to create a durable symbiote suit. Alcor's body is reformed into a ghost-like state that is made up of sentient particles that can phase through objects which allows for short distance teleportation. Its body also sports tendrils composed of biomechanical mind-machine interfaces that allow him to interface and hack into electronics. The tendrils can be extended at will, but are usually wrapped around his limbs by default. This form is armed with a pair of clawed gauntlets, augmenting the force of his blows, as well as effortlessly slicing though lightly armored targets. The form also comes with a pair of ethereal butterfly-dragon hybrid shaped wings, allowing for fast yet precise flight.",
         imageAspectRatio: 3340 / 2300,
         specs: [
             {
@@ -331,8 +331,8 @@ export const templatedLorePageInfo: FormInformation[] = [
         thumbnail: triangulumIcon,
         link: "triangulum",
         description: "An evolved form of Gemini that sacrifices mobility for defence.",
-        history: "Alcor developed this form to use in an emergency, which usually means big kaiju attacks. His body structure incorporates various elements from various mythological monsters. Alcor has a much wilder personality in this form, and acts slightly uninhibited as a result.",
-        body: "Alcor's second evolution. He's fully embraced his demonic space dragon powers, sprouting a pair of demon wings and dragon heads on his shoulders. His physical strength and size is much higher in this form, due to this form's having higher parameters in managing exotic matter. This form specializes in short and mid range defense with three tails, which are even further enhanced compared to his Gemini Form. Each tail is much longer, with sharp spikes designed to impale targets. Each tail can also power three armed drones, which can provide suppression fire.",
+        history: "Alcor developed this form to use in an emergency, which usually means big kaiju attacks. His body structure incorporates various elements from mythological monsters. Alcor has a much wilder personality in this form due to the extra sensory information coming from his other head, and having to manage more energy in his body, and acts slightly uninhibited as a result.",
+        body: "Alcor's second evolution. He's fully embraced his demonic space dragon powers, sprouting a pair of demon wings and dragon heads on his shoulders. His physical strength and size is much higher in this form, due to this form's having higher parameters in managing exotic matter. This form specializes in short and mid range defense with three tails, which are even further enhanced compared to his Gemini Form. Each tail is much longer, with sharp spikes designed to impale targets. The extra heads provide extra sensory and computing power. Each tail can also power three armed drones, which can provide suppression fire.",
         image: triangulumSplashImage,
         imageAspectRatio: 0.7761194029850746,
         specs: [

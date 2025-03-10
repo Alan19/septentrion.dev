@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Divider, Grid, GridSize, IconButton, ImageList, ImageListItem, Table, TableCell, TableHead, TableRow, Typography} from "@mui/material";
+import {Container, Divider, Grid2 as Grid, GridSize, IconButton, ImageList, ImageListItem, Table, TableCell, TableHead, TableRow, Typography} from "@mui/material";
 import {useNavigate, useParams} from "react-router-dom";
 import {PageHeader} from "../PageHeader";
 import {SkeletonImage} from "../../SkeletonImage";
@@ -11,6 +11,7 @@ import {originalCharacters} from "./template-info/original-characters";
 import {M3Pane} from "../../common/M3Pane.tsx";
 import {ArrowBack} from "@mui/icons-material";
 import {croppedImageWithCurvedBorder, m3BorderStyle} from "../../common/BorderStyling.ts";
+import {otherOCs} from "./template-info/other-ocs.ts";
 
 // Register the components needed for the radar chart
 ChartJS.register(
@@ -39,8 +40,8 @@ export type Affinity =
     | 'Time';
 
 type AttributeScores = [number, number, number, number, number, number];
-type InfoTable = { tableHeader?: { header1: string, header2: string }, tableContents: Record<any, any> & { "Affinity"?: Affinity } };
-export type FormInformation = {
+type InfoTable = { tableHeader?: { header1: string, header2: string }, tableContents: Record<string, string> & { "Affinity"?: Affinity } };
+export type TemplatedPageObject = {
     name: string,
     body: string,
     history?: string,
@@ -104,7 +105,7 @@ function FormStatRadarChart(props: Readonly<{ attributeScores: AttributeScores, 
 
 export function TemplatedLorePage() {
     const formName = encodeURIComponent(useParams().character ?? "");
-    const formObject = templatedLorePageInfo.concat(superheroSuits).concat(originalCharacters).find(value => value.link === formName);
+    const formObject = templatedLorePageInfo.concat(superheroSuits).concat(originalCharacters).concat(otherOCs).find(value => value.link === formName);
 
     const navigate = useNavigate();
 
@@ -113,7 +114,7 @@ export function TemplatedLorePage() {
     }
 
     if (formObject) {
-        const {name, body, history, image, imageAspectRatio, specs, gallery} = formObject;
+        const {name, body, history, image, specs, gallery} = formObject;
         return <M3Pane style={{display: "flex"}}>
             <IconButton onClick={backToLorePage} style={{alignSelf: 'flex-start'}}>
                 <ArrowBack/>
@@ -121,10 +122,10 @@ export function TemplatedLorePage() {
             <Container>
                 <PageHeader title={name}/>
                 <Grid container spacing={'1rem'} justifyContent={"stretch"}>
-                    <Grid item md={3}>
+                    <Grid size={{md: 3}}>
                         <SkeletonImage src={image} style={{...croppedImageWithCurvedBorder, height: '100%'}}/>
                     </Grid>
-                    <Grid item md={9}>
+                    <Grid size={{md: 9}}>
                         <Typography variant={"h5"}>Overview</Typography>
                         <Typography variant={"body1"}>{body}</Typography>
                         <Typography variant={"h5"}>History</Typography>
@@ -140,16 +141,13 @@ export function TemplatedLorePage() {
                                         const {xl, md, lg, xs, sm, content} = value;
                                         const gridSizes = {xs: xs, sm: sm, md: md, lg: lg, xl: xl};
                                         if (typeof content === 'string') {
-                                            // @ts-ignore
-                                            return <Grid item {...gridSizes}>
+                                            return <Grid size={gridSizes}>
                                                 <img src={content} style={croppedImageWithCurvedBorder}/>
                                             </Grid>
                                         } else if (Array.isArray(content)) {
-                                            // @ts-ignore
-                                            return <Grid item {...gridSizes}><FormStatRadarChart label={name} attributeScores={content}/></Grid>
+                                            return <Grid size={gridSizes}><FormStatRadarChart label={name} attributeScores={content}/></Grid>
                                         } else {
-                                            // @ts-ignore
-                                            return <Grid item {...gridSizes}>
+                                            return <Grid size={gridSizes}>
                                                 <div style={{...m3BorderStyle, padding: 8, height: '100%'}}>
                                                     <Table size="small">
                                                         {content.tableHeader && <TableHead>
@@ -173,7 +171,7 @@ export function TemplatedLorePage() {
                             </>
                         }
                     </Grid>
-                    <Grid item md={12}>
+                    <Grid size={{md: 12}}>
                         {
                             gallery && <>
                                 <Divider style={{marginTop: "8px", marginBottom: "8px"}}/>
