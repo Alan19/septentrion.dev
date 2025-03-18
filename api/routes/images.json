@@ -3810,7 +3810,7 @@
   },
   {
     "title": "Keyword - Fire",
-    "artist": "@Emit_Main",
+    "artist": "@emit-azure.bsky.social",
     "tags": [
       "Bow"
     ],
@@ -6702,5 +6702,46 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/matrixdragonn_sticker_pack.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/matrixdragonn_sticker_pack.webp",
     "id": "b81a41f106d5a361502744c4d69a8ebc226132680946964d10baab8f"
+  },
+  {
+    "title": "👍 Sticker",
+    "artist": "@emit-azure.bsky.social",
+    "tags": [
+      "Aldhibah Form",
+      "Autumnal Wavesniper"
+    ],
+    "href": "https://bsky.app/profile/emit-azure.bsky.social/post/3lkkebwayak2n",
+    "published": "2025-03-17",
+    "aspectRatio": 1,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/%25F0%259F%2591%258D_sticker.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/%25F0%259F%2591%258D_sticker.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/%25F0%259F%2591%258D_sticker.webp",
+    "id": "acfcd859b11d683f545a97093c96b303a5cab7f520965dec57871403"
+  },
+  {
+    "title": "Nuki Hero Commission",
+    "artist": "@imdanuki.bsky.social",
+    "tags": [
+      "Indra Suit",
+      "Thuban Form",
+      "Bodysuit",
+      "Superhero",
+      "Full Body"
+    ],
+    "href": "",
+    "published": "2025-03-16",
+    "aspectRatio": 0.8333333333333334,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/nuki_hero_commission.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/nuki_hero_commission.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/nuki_hero_commission.webp",
+    "id": "0f4896393a559d25f1e2729f80927e634984a4db4c31663023e0b7af"
   }
 ]
