@@ -6743,5 +6743,68 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/nuki_hero_commission.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/nuki_hero_commission.webp",
     "id": "0f4896393a559d25f1e2729f80927e634984a4db4c31663023e0b7af"
+  },
+  {
+    "title": "🧋 YCH",
+    "artist": "@kurava2000.bsky.social",
+    "tags": [
+      "Serotinal Circuitboard",
+      "Thuban Form",
+      "Techwear"
+    ],
+    "href": "",
+    "published": "2025-03-23",
+    "aspectRatio": 0.7333333333333333,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/%25F0%259F%25A7%258B_ych.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/%25F0%259F%25A7%258B_ych.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/%25F0%259F%25A7%258B_ych.webp",
+    "id": "06fbb865604b363074d86489f3409eb726ce009370fc486109d9e1ef"
+  },
+  {
+    "title": "Alcor and Alan by Patmai",
+    "artist": "@patmai",
+    "tags": [
+      "Rastaban Form",
+      "Vernal",
+      "Estival Checker",
+      "Techwear",
+      "Hoodie"
+    ],
+    "href": "",
+    "published": "2024-12-08",
+    "aspectRatio": 0.7029784886927745,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_and_alan_by_patmai.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_and_alan_by_patmai.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_and_alan_by_patmai.webp",
+    "id": "3c1637cae6b8288bd7069f1bf2e4ff1ac45af89d4104e85c466d3760"
+  },
+  {
+    "title": "Largeonions Tora-Con Sketch",
+    "artist": "@largeonions.bsky.social",
+    "tags": [
+      "Aldhibah Form",
+      "Techwear",
+      "Bodysuit",
+      "Knives"
+    ],
+    "href": "",
+    "published": "2025-03-23",
+    "aspectRatio": 0.8960055096418733,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/largeonions_tora_con_sketch.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/largeonions_tora_con_sketch.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/largeonions_tora_con_sketch.webp",
+    "id": "e4823371963b4dfb5366bdcb4fb2a553eee9332a3035c45f3f9ac7f4"
   }
 ]
