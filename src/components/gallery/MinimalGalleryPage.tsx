@@ -10,9 +10,11 @@ import {drawerColor} from "../common/Navigation";
 import {SkeletonImage} from "../SkeletonImage";
 import {useAltDisplaySettings} from "./useAltDisplaySettings";
 import {parseAsString, parseAsStringEnum, useQueryState} from "nuqs";
+import {useDocumentTitle} from "usehooks-ts";
 
 // Page that only displays artworks in a grid, and hides all other elements
 export function MinimalGalleryPage() {
+    useDocumentTitle("Reference Gallery");
     const {filters, images, altData} = useTagHooks();
 
     const [filterMode] = useQueryState<FilterMode>("filter-mode", parseAsStringEnum<FilterMode>(Object.values(FilterMode)).withDefault(FilterMode.and).withOptions({history: "replace"}));

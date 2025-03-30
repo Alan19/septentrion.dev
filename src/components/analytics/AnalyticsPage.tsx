@@ -6,9 +6,11 @@ import CalendarHeatmap, {ReactCalendarHeatmapValue} from 'react-calendar-heatmap
 import 'react-calendar-heatmap/dist/styles.css';
 import {M3Pane} from "../common/M3Pane";
 import {getHref} from "../ImageInformation";
+import {useDocumentTitle} from "usehooks-ts";
 
 export const AnalyticsPage = memo(function AnalyticsPage() {
     const {images} = useTagHooks();
+    useDocumentTitle("Commission Analytics");
 
     const artistCount: Record<string, number> = images.reduce<Record<string, number>>((previousValue, currentValue) => {
         previousValue[currentValue.artist] = (previousValue[currentValue.artist] ?? 0) + 1;

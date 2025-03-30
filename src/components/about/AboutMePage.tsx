@@ -3,8 +3,12 @@ import {PageHeader} from "../lore/PageHeader";
 import {M3Pane} from "../common/M3Pane";
 
 import {m3BorderStyle} from "../common/BorderStyling.ts";
+import {useDocumentTitle} from "usehooks-ts";
 
 export function AboutMePage() {
+    useDocumentTitle("About Me");
+
+
     // TODO Add more text
     return (
         <M3Pane>

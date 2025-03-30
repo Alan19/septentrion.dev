@@ -15,10 +15,13 @@ import gemini from '../assets/badges/Character_Badge_-page012.webp'
 import {Link} from "react-router-dom";
 import {M3Pane} from "../../common/M3Pane.tsx";
 import {SkeletonImage} from "../../SkeletonImage.tsx";
+import {useDocumentTitle} from "usehooks-ts";
 
 type CharacterLink = { image: string; linkPath?: string };
 
 export function CharactersPage() {
+    useDocumentTitle("Alcor Lore");
+
     // TODO Add links to all of the images
     const alcorverseCharacters: CharacterLink[] = [
         {

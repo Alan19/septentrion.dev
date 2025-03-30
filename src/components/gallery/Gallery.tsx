@@ -22,6 +22,7 @@ import {AltSettings, useAltDisplaySettings} from "./useAltDisplaySettings";
 import {materialDesign2Theme} from "../../MaterialDesign2Theme.tsx";
 import {parseAsInteger, parseAsStringEnum, useQueryState} from "nuqs";
 import {croppedImageWithCurvedBorder} from "../common/BorderStyling.ts";
+import {useDocumentTitle} from "usehooks-ts";
 
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
     return new Set(images.filter(value => value.published !== undefined).map(value => value.published.substring(0, 7)));
@@ -125,6 +126,9 @@ export const Gallery = memo(function Gallery() {
     const height = 320;
     const tolerance = .2;
     const {isDevelopment} = useIsDevelopment();
+
+    useDocumentTitle("Gallery");
+
 
     const content = <>
         <Typography variant={"h3"} fontFamily={"Potra"} color={"var(--md-sys-color-primary)"}>Alcor's Gallery</Typography>

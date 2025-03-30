@@ -3,8 +3,11 @@ import {Summary} from "./Summary";
 
 import {M3Pane} from "../common/M3Pane";
 import {materialDesign2Theme} from "../../MaterialDesign2Theme.tsx";
+import {useDocumentTitle} from "usehooks-ts";
 
 export function LinksPage() {
+    useDocumentTitle("septentrion.dev");
+
     return <M3Pane>
         <Grid
             alignItems={"center"}
