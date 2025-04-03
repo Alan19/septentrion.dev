@@ -27,5 +27,4 @@ build
 # Environment files
 !/api/.env
 api/.env
-/api/routes/hidden.json
 /api/routes/local_scripts/*

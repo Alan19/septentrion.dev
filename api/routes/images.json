@@ -6806,5 +6806,42 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/largeonions_tora_con_sketch.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/largeonions_tora_con_sketch.webp",
     "id": "e4823371963b4dfb5366bdcb4fb2a553eee9332a3035c45f3f9ac7f4"
+  },
+  {
+    "title": "Carnival Chibi",
+    "artist": "@kurope.bsky.social",
+    "tags": [
+      "Thuban Form",
+      "Chibi"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3llpy4pqjfs2x",
+    "published": "2025-03-31",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/carnival_chibi.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/carnival_chibi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/carnival_chibi.webp",
+    "id": "c7f7254d5fb416681737084a4c97590ecb623e30e1d3fdf6ec3b9f9a"
+  },
+  {
+    "title": "Jupiter by Riscomofu",
+    "artist": "@Riscomofu",
+    "tags": [
+      "Jupiter Form"
+    ],
+    "href": "https://skeb.jp/@Riscomofu/works/4",
+    "published": "2025-04-01",
+    "aspectRatio": 0.7082744987291726,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_by_riscomofu.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_by_riscomofu.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_by_riscomofu.webp",
+    "id": "aa3dd346a7c370affeb50527e9cffcc96049c5f74f89ebc5b65cb798"
   }
 ]

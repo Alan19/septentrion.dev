@@ -127,7 +127,7 @@ async function uploadCompressedVersions(originalImage, imageName, entry, altNumb
     const sharpImage = sharp(originalImage, {animated: true});
     let webpImageBuffer = await sharpImage
         .resize({width: 4096, height: 4096, fit: 'inside', withoutEnlargement: true})
-        .webp({effort: 6, quality: 90})
+        .webp({effort: 6, quality: 50, nearLossless: true})
         .toBuffer();
 
     // We want a lossless webp, near lossless 4k, and 1mb or less for the thumbnail
@@ -149,7 +149,7 @@ async function getCompressedBuffer(sharpImage, imageName) {
     let quality = 80;
     do {
         compressedImageBuffer = await sharpImage
-            .resize({width: 4096, height: 2160, fit: 'inside', withoutEnlargement: true})
+            .resize({width: 4096, height: 4096, fit: 'inside', withoutEnlargement: true})
             .webp({quality: quality})
             .toBuffer();
         fileSize = compressedImageBuffer.length;

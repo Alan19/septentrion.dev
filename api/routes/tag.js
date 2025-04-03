@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const imageJson = require('./images.json')
-const hidden = require("./hidden.json");
+const hidden = require("./local_scripts/hidden.json");
 const fs = require("fs");
 const path = require("path");
 
