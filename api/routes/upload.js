@@ -130,10 +130,9 @@ async function getNearLosslessBuffer(sharpImage) {
 }
 
 async function uploadCompressedVersions(originalImage, imageName, entry, altNumber) {
-    const sharpImage = sharp(originalImage, {animated: true});
-    let webpImageBuffer = await getNearLosslessBuffer(sharpImage);
+    let webpImageBuffer = await getNearLosslessBuffer(sharp(originalImage, {animated: true}));
     // We want a lossless webp, near lossless 4k, and 1mb or less for the thumbnail
-    let compressedImageBuffer = await getCompressedBuffer(sharpImage, imageName);
+    let compressedImageBuffer = await getCompressedBuffer(sharp(originalImage, {animated: true}));
     console.log(`Uploaded ${entry.parent ?? entry.title} near lossless image with a size of ${(webpImageBuffer.length / 1048576).toPrecision(3)} megabytes, and a lossy thumbnail with a size of ${Math.floor(compressedImageBuffer.length / 1024)} kilobytes`);
     return Promise.all([
         s3.upload({
@@ -146,7 +145,7 @@ async function uploadCompressedVersions(originalImage, imageName, entry, altNumb
     ]);
 }
 
-async function getCompressedBuffer(sharpImage, imageName) {
+async function getCompressedBuffer(sharpImage) {
     let fileSize;
     let compressedImageBuffer;
     let quality = 80;
