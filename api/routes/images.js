@@ -22,7 +22,7 @@ function doesParameterContainTag(image, queryParams) {
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  const hidden = JSON.parse(fs.readFileSync(path.resolve(__dirname, './hidden.json'), 'utf-8'));
+  const hidden = JSON.parse(fs.readFileSync(path.resolve(__dirname, './local_scripts/hidden.json'), 'utf-8'));
   let images = JSON.parse(fs.readFileSync(path.resolve(__dirname, './images.json'), 'utf-8'));
   const combinedImages = [...images, ...hidden];
     res.send(combinedImages)

@@ -23,15 +23,9 @@ const s3 = new AWS.S3();
 const storage = multer.memoryStorage();
 const upload = multer({storage});
 
-function prepareFileName(title) {
-    return encodeURIComponent(_.snakeCase(title));
-}
-
 router.post('/', upload.single('image'), async (req, res) => {
     const file = req.file;
-
     const {artist, href, tags, title, published, rating, characters} = req.body;
-
 
     const sharpBuffer = sharp(file.buffer);
     const metadata = await sharpBuffer.metadata();
@@ -64,6 +58,11 @@ router.post('/', upload.single('image'), async (req, res) => {
     addToJson(jsonOutput);
     res.json(jsonOutput);
 });
+
+function prepareFileName(title) {
+    return encodeURIComponent(_.snakeCase(title));
+
+}
 
 router.post('/alt', upload.single('image'), async (req, res) => {
     const file = req.file;
@@ -102,7 +101,7 @@ router.post('/alt', upload.single('image'), async (req, res) => {
 });
 
 function addAltToJson(jsonOutput) {
-    const fileToWriteTo = jsonOutput.tags.includes('Hidden') ? './hidden.json' : './images.json';
+    const fileToWriteTo = jsonOutput.tags.includes('Hidden') ? '../hidden.json' : './images.json';
     fs.readFile(path.resolve(__dirname, fileToWriteTo), (err, data) => {
         let images = JSON.parse(data);
         images.push(jsonOutput)
@@ -112,7 +111,7 @@ function addAltToJson(jsonOutput) {
 
 
 function addToJson(jsonOutput) {
-    const fileToWriteTo = jsonOutput.tags.includes('Hidden') ? './hidden.json' : './images.json';
+    const fileToWriteTo = jsonOutput.tags.includes('Hidden') ? '../hidden.json' : './images.json';
     fs.readFile(path.resolve(__dirname, fileToWriteTo), (err, data) => {
         let json = JSON.parse(data);
         json.push(jsonOutput);
@@ -123,15 +122,19 @@ function addToJson(jsonOutput) {
     })
 }
 
+async function getNearLosslessBuffer(sharpImage) {
+    return sharpImage
+        .resize({width: 4096, height: 4096, fit: 'inside', withoutEnlargement: true})
+        .webp({quality: 50, nearLossless: true})
+        .toBuffer();
+}
+
 async function uploadCompressedVersions(originalImage, imageName, entry, altNumber) {
     const sharpImage = sharp(originalImage, {animated: true});
-    let webpImageBuffer = await sharpImage
-        .resize({width: 4096, height: 4096, fit: 'inside', withoutEnlargement: true})
-        .webp({effort: 6, quality: 50, nearLossless: true})
-        .toBuffer();
-
+    let webpImageBuffer = await getNearLosslessBuffer(sharpImage);
     // We want a lossless webp, near lossless 4k, and 1mb or less for the thumbnail
     let compressedImageBuffer = await getCompressedBuffer(sharpImage, imageName);
+    console.log(`Uploaded ${entry.parent ?? entry.title} near lossless image with a size of ${(webpImageBuffer.length / 1048576).toPrecision(3)} megabytes, and a lossy thumbnail with a size of ${Math.floor(compressedImageBuffer.length / 1024)} kilobytes`);
     return Promise.all([
         s3.upload({
             Bucket: process.env.BUCKET_NAME, Key: entry.parent ? `thumbnail/alts/${imageName}_${altNumber}.webp` : `thumbnail/${imageName}.webp`, Body: compressedImageBuffer, ContentType: 'image/webp'
@@ -160,9 +163,6 @@ async function getCompressedBuffer(sharpImage, imageName) {
             break;
         }
     } while (quality > 0);
-
-    // noinspection JSUnusedAssignment
-    console.log(`Uploading ${imageName} with Quality: ${quality} and Size: ${Math.floor(fileSize / 1024)} kilobytes`)
     return compressedImageBuffer;
 }
 
