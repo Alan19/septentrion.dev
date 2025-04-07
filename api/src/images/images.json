@@ -19,22 +19,23 @@
   },
   {
     "title": "Awakened Workout",
-    "href": "https://twitter.com/purpledragonrei/status/1529275140957437954?s=20&t=IQ_4HE6QZFQn8s7KgKDGqQ",
     "artist": "@PurpleDragonRei",
     "tags": [
       "Gemini Form",
       "Bodysuit"
     ],
+    "href": "https://x.com/purpledragonrei/status/1529275140957437954",
     "published": "2022-05-24",
-    "aspectRatio": 0.769090909090909,
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Awakened+Workout_1.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/awakened_workout.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/awakened_workout.webp",
-    "id": "fa09a9ba494fd5364dd370f6eb697c9c6192293d28f1ba787e6d96e2",
+    "aspectRatio": 0.7687878787878788,
+    "rating": "general",
     "characters": [
       "Alcor"
     ],
-    "rating": "general"
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/awakened_workout.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/awakened_workout.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/awakened_workout.webp",
+    "id": "6d29a570ac46bc0b8ceb1be908462b43162a7de7bd97bfd041cf2b2c",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/awakened_workout.webp"
   },
   {
     "src": "https://pbs.twimg.com/media/FnHp4nWaUAA-lgD?format=jpg&name=large",
@@ -96,27 +97,6 @@
     ],
     "rating": "sensitive",
     "id": "dbbe9c315b1109f249d467d64e23b8e309679287c9ee9a0aa009a887"
-  },
-  {
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/indra_suit.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/indra_suit.webp",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/indra_suit/0.png",
-    "title": "Indra Suit",
-    "href": "https://twitter.com/tg_marlo/status/1554649750200537088",
-    "artist": "@tg_marlo",
-    "tags": [
-      "Indra Suit",
-      "Superhero",
-      "Bow",
-      "Eltanin Form"
-    ],
-    "published": "2022-08-02",
-    "aspectRatio": 1,
-    "characters": [
-      "Alcor"
-    ],
-    "rating": "mainstream",
-    "id": "9c2ce5e259256055acd3526362d1362e4f85e34fd33bf42fc5d9d0f1"
   },
   {
     "src": "https://pbs.twimg.com/media/FcNTqa8aUAE4uED?format=jpg&name=4096x4096",
@@ -4823,21 +4803,22 @@
   {
     "title": "We're not Accepting Visitors",
     "artist": "@pawcrest",
-    "published": "2024-08-19",
     "tags": [
       "AICore Form"
     ],
     "href": "https://x.com/pawcrest/status/1825619442828718502",
+    "published": "2024-08-19",
     "aspectRatio": 0.7960799095363739,
+    "rating": "sensitive",
     "characters": [
       "Alcor",
       "Castor"
     ],
-    "rating": "sensitive",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/We%27re+not+Accepting+Visitors_1.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/were_not_accepting_visitors.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/were_not_accepting_visitors.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/were_not_accepting_visitors.webp",
-    "id": "ee1c0576705b57d4529b6f835b44ccbae3e25b6afc767d10f9f5e769"
+    "id": "9b407b8ebb20b5b3a5913eafd8399c2e972f829658251877a515d677",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/were_not_accepting_visitors.webp"
   },
   {
     "title": "The Beginning",
@@ -5277,58 +5258,62 @@
     "id": "631f8ca3b75ba7ecbd1bb0ce9c659207a17e33e7c9aa6467b8f6191d"
   },
   {
+    "title": "Aquarius Form Icon by Hagrang",
     "artist": "@Hagrang_",
     "tags": [
-      "Aquarius Form"
+      "Aquarius Form",
+      "Bodysuit"
     ],
     "href": "https://x.com/Hagrang_/status/1840390208619159861",
-    "aspectRatio": 1,
-    "title": "Aquarius Form Icon by Hagrang",
-    "rating": "mainstream",
     "published": "2024-09-29",
+    "aspectRatio": 1,
+    "rating": "mainstream",
     "characters": [
       "Alcor"
     ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%20Form%20Icons_1.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form_icon_by_hagrang.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_form_icon_by_hagrang.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form_icon_by_hagrang.webp",
-    "id": "a66fe01c22b5412e2fe36105a70545f6eb3a7731dc86ef632649cbb1"
+    "id": "67f0a5f8b68e0593ff1461032eaa3d5d0a6c31ef07906e4afc227c97",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_form_icon_by_hagrang.webp"
   },
   {
+    "title": "Jupiter Form Icon by Hagrang",
     "artist": "@Hagrang_",
     "tags": [
       "Jupiter Form"
     ],
     "href": "https://x.com/Hagrang_/status/1840390208619159861",
-    "aspectRatio": 1,
     "published": "2024-09-29",
-    "title": "Jupiter Form Icon by Hagrang",
-    "rating": "mainstream",
+    "aspectRatio": 1,
+    "rating": "general",
     "characters": [
       "Alcor"
     ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%20Form%20Icons_2.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_form_icon_by_hagrang.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_form_icon_by_hagrang.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_form_icon_by_hagrang.webp",
-    "id": "750867042345e5eba34b69b7fc750f0b591210af2a92670953676664"
+    "id": "200dd5f9f7e18610cab5185a732f71e7f28240954f883739e4dd9843",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_form_icon_by_hagrang.webp"
   },
   {
+    "title": "AICore Form Icon by Hagrang",
     "artist": "@Hagrang_",
     "tags": [
       "AICore Form"
     ],
     "href": "https://x.com/Hagrang_/status/1840390208619159861",
-    "aspectRatio": 1,
     "published": "2024-09-29",
-    "title": "AICore Form Icon by Hagrang",
+    "aspectRatio": 1,
     "rating": "general",
     "characters": [
       "Alcor"
     ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Alcor%20Form%20Icons_3.png",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ai_core_form_icon_by_hagrang.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ai_core_form_icon_by_hagrang.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ai_core_form_icon_by_hagrang.webp",
-    "id": "4f2dff9ab4afda2d30ad6624080897cc8e4ccb9dc42166c9f91eaedd"
+    "id": "b9c7415d59087a715bb77c9f672f80fffef17d507404552506fb9a35",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/ai_core_form_icon_by_hagrang.webp"
   },
   {
     "title": "Bright Sparks and Sharp Lights",
@@ -6843,5 +6828,48 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/valentines_day_2022.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/valentines_day_2022.webp",
     "id": "f1b89199a1353ed4a90906eeebd985662688691f9aea58976c18c35c"
+  },
+  {
+    "title": "Alcor Mech Suit γ",
+    "artist": "@kaxak8",
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Lances"
+    ],
+    "href": "https://x.com/kaxak8/status/1888890664961892506",
+    "published": "2025-02-10",
+    "aspectRatio": 1.2340600575894694,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_mech_suit_%25CE%25B3.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_mech_suit_%25CE%25B3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_mech_suit_%25CE%25B3.webp",
+    "id": "d9f05c983b823d52243a293df2cd244ba8af5b1d0adde403a0a1a680",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_mech_suit_%25CE%25B3.webp"
+  },
+  {
+    "title": "EM Wave Change!",
+    "artist": "@tg_marlo",
+    "tags": [
+      "Indra Suit",
+      "Superhero",
+      "Bow",
+      "Eltanin Form"
+    ],
+    "href": "https://x.com/tg_marlo/status/1554649750200537088",
+    "published": "2022-08-01",
+    "aspectRatio": 1,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/em_wave_change.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/em_wave_change.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/em_wave_change.webp",
+    "id": "911d6c070a76fe75df0dd09975b39cf2b5e66435a7127cf1b3050d2c",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/em_wave_change.webp"
   }
 ]

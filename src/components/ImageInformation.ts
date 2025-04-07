@@ -5,6 +5,7 @@ export interface ImageBase {
     webp: string;
     src: string;
     thumbnailUrl: string;
+    nearLossless: string;
     rating: Rating;
     aspectRatio: number;
     href?: string;

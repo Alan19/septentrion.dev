@@ -9,6 +9,7 @@ export interface ImageBase {
     tags: string[];
     webp: string;
     src: string;
+    nearLossless: string;
     thumbnailUrl: string;
     rating: Rating;
     aspectRatio: number;
