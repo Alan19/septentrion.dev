@@ -11,11 +11,14 @@ async function getMainImageEntryFields(file: Express.Multer.File, title: string,
     const sharpBuffer = sharp(file.buffer);
     const metadata = await sharpBuffer.metadata();
     const {height = 1, width = 1} = metadata;
-    const snakeCaseFileName = prepareFileName(title);
-    const [webpUrl, id] = await uploadFullscreenVersion(bucket, snakeCaseFileName, file.buffer);
-    const src = await uploadOriginalVersion(bucket, `${snakeCaseFileName}.${file.originalname.split('.').pop()}`, file.buffer, file.mimetype);
-    const thumbnailUrl = await uploadThumbnailVersion(bucket, snakeCaseFileName, file.buffer);
-    const nearLosslessUrl = await uploadNearLosslessVersion(bucket, snakeCaseFileName, file.buffer);
+    let snakeCaseFileName = prepareFileName(title);
+    if (altNumber) {
+        snakeCaseFileName += `_${altNumber}`;
+    }
+    const [src, thumbnailUrl, [webpUrl, id], nearLosslessUrl] = await Promise.all([uploadOriginalVersion(bucket, `${snakeCaseFileName}.${file.originalname.split('.').pop()}`, file.buffer, file.mimetype),
+        uploadThumbnailVersion(bucket, snakeCaseFileName, file.buffer),
+        uploadFullscreenVersion(bucket, snakeCaseFileName, file.buffer),
+        uploadNearLosslessVersion(bucket, snakeCaseFileName, file.buffer)]);
     const aspectRatio = width / height;
     const characterArray = characters.split(',').map((char: string) => char.trim());
     const tagArray = tags !== '' ? tags.split(',').map((tag: string) => tag.trim()) : [];

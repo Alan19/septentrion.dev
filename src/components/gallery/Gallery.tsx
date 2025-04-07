@@ -48,9 +48,7 @@ export function getShownImages(images: ImageEntry[], selectedFilters: SelectedFi
         if (isImageInformation(value)) {
             return selectedFilters.doesImageMatch(value, filterMode);
         } else {
-            if ((getParentImage(value.id, images) as ImageInformation) === undefined) {
-                console.log(value)
-            }
+            console.log(value)
             return selectedFilters.doesImageMatch({...value, artist: (getParentImage(value.id, images) as ImageInformation).artist}, filterMode) && filterAlts(value, altDisplaySettings);
         }
     });

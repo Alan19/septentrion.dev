@@ -132,7 +132,7 @@ export class SelectedFilters {
         const filters = this.toArray();
         const enabledFilters = filters.filter(value => value.charAt(0) !== '-')
         const blacklistedFilters = filters.filter(value => value.charAt(0) === '-').map(value => value.substring(1))
-        let hasNoBlacklistedFilters = !blacklistedFilters.some(value => imageFilterableInfo.includes(value));
+        const hasNoBlacklistedFilters = !blacklistedFilters.some(value => imageFilterableInfo.includes(value));
         if (enabledFilters.length > 0) {
             if (mode === 'and') {
                 return enabledFilters.every(value => imageFilterableInfo.includes(value)) && hasNoBlacklistedFilters
