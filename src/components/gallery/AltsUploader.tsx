@@ -87,7 +87,7 @@ export default function AltsUploader(props: Readonly<{
             formData.append("characters", charactersInImage.join(", "));
             formData.append("altType", isAltTypeComplex(altType) ? JSON.stringify(altType) : altType);
             setUploading(true);
-            axios.post(`http://localhost:9000/upload/alt`, formData, {
+            axios.post(`http://localhost:9000/upload-alt`, formData, {
                 headers: {"Content-Type": "multipart/form-data"},
             })
                 .then(() => handleSuccessfulUpload())
