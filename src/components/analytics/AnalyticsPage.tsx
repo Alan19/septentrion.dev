@@ -5,7 +5,7 @@ import Chip from "@mui/material-next/Chip";
 import CalendarHeatmap, {ReactCalendarHeatmapValue} from 'react-calendar-heatmap'
 import 'react-calendar-heatmap/dist/styles.css';
 import {M3Pane} from "../common/M3Pane";
-import {getHref} from "../ImageInformation";
+import {getHref} from "../../../api/src/images/ImageInformation.ts";
 import {useDocumentTitle} from "usehooks-ts";
 
 export const AnalyticsPage = memo(function AnalyticsPage() {

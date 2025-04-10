@@ -1,4 +1,4 @@
-import {Rating} from "./gallery/TagUtils";
+import {Rating} from "./TagUtils";
 
 export interface ImageBase {
     tags: string[];

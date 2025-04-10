@@ -1,5 +1,5 @@
-import images from "../../../api/src/images/images.json";
-import {ImageEntry} from "../ImageInformation";
+import images from "./images.json";
+import {ImageEntry} from "./ImageInformation";
 
 export enum ArtTag {
     featured = 'Featured',

@@ -1,6 +1,6 @@
 import React, {memo, useEffect, useState} from "react";
 import {Autocomplete, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Stack, TextField, Typography, useMediaQuery,} from "@mui/material";
-import {AltInformation, getAltAndPageNumber, getParentImage, ImageEntry, ImageInformation, isAltInformation, isAltTypeComplex, isImageInformation} from "../ImageInformation";
+import {AltInformation, getAltAndPageNumber, getParentImage, ImageEntry, ImageInformation, isAltInformation, isAltTypeComplex, isImageInformation} from "../../../api/src/images/ImageInformation.ts";
 import "./gallery.css";
 import {useTagHooks} from "./UseTagHooks";
 import Uploader from "./Uploader";
@@ -13,7 +13,7 @@ import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {createSearchParams, Link, useNavigate, useSearchParams} from "react-router-dom";
 import {prepareFileName} from "./Utils";
 import {Bookmark, BookmarkAdd, BookmarkRemove, Cancel, Share} from "@mui/icons-material";
-import {ArtTag, SelectedFilters} from "./TagUtils";
+import {ArtTag, SelectedFilters} from "../../../api/src/images/TagUtils.ts";
 import {Button} from "@mui/material-next";
 import axios from "axios";
 import {useIsDevelopment} from "./UseIsDevelopment";

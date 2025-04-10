@@ -2,7 +2,7 @@ import {Autocomplete, FilterOptionsState, FormControlLabel, FormGroup, Radio, Ra
 import Chip from "@mui/material-next/Chip";
 import {Filter} from "@mui/icons-material";
 import {FormControl, FormLabel} from "@mui/material-next";
-import {artists, ArtTag, characters, Rating, SelectedFilters, tagGroup} from "./TagUtils";
+import {artists, ArtTag, characters, Rating, SelectedFilters, tagGroup} from "../../../api/src/images/TagUtils.ts";
 import _ from "lodash";
 import Switch from "@mui/material-next/Switch";
 import {AltSettings} from "./useAltDisplaySettings";

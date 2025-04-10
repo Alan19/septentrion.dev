@@ -1,6 +1,6 @@
 import {Typography} from "@mui/material";
 import React, {Fragment} from "react";
-import {AltInformation, ImageEntry, ImageInformation, isAltInformation, isImageInformation} from "../ImageInformation";
+import {AltInformation, ImageEntry, ImageInformation, isAltInformation, isImageInformation} from "../../../api/src/images/ImageInformation.ts";
 import {getMonthYearPairsInImageSet} from "./Gallery";
 import {SkeletonImage} from "../SkeletonImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";

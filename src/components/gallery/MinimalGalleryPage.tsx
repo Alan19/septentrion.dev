@@ -1,7 +1,7 @@
 import {useTagHooks} from "./UseTagHooks";
 import {useNavigate} from "react-router-dom";
 import {Container, Fade, Typography} from "@mui/material";
-import {isImageInformation} from "../ImageInformation";
+import {isImageInformation} from "../../../api/src/images/ImageInformation.ts";
 import useMeasure from "react-use-measure";
 import {ResizeObserver} from "@juggle/resize-observer";
 import {TSJustifiedLayout} from "react-justified-layout-ts";

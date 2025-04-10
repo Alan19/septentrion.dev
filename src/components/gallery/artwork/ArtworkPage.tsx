@@ -1,4 +1,4 @@
-import {AltInformation, getAltAndPageNumber, getHref, getParentImage, isAltTypeComplex} from "../../ImageInformation";
+import {AltInformation, getAltAndPageNumber, getHref, getParentImage, isAltTypeComplex} from "../../../../api/src/images/ImageInformation.ts";
 import {SkeletonImage} from "../../SkeletonImage";
 import {Divider, Grid, IconButton, ImageList, ImageListItem, Typography, useMediaQuery} from "@mui/material";
 

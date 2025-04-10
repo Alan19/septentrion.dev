@@ -8,7 +8,7 @@ import {DatePicker} from "@mui/x-date-pickers";
 import dayjs, {Dayjs} from "dayjs";
 import {useIsDevelopment} from "./UseIsDevelopment";
 import {Button} from "@mui/material-next";
-import {ArtTag, characters, Rating} from "./TagUtils";
+import {ArtTag, characters, Rating} from "../../../api/src/images/TagUtils.ts";
 import {AutocompleteFilterChip} from "./FilterPane";
 import {useTagHooks} from "./UseTagHooks";
 import {prepareFileName} from "./Utils";

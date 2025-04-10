@@ -1,8 +1,8 @@
 import axios from "axios";
-import {AltInformation, ImageEntry, ImageInformation, isAltInformation, isImageInformation} from "../ImageInformation";
+import {AltInformation, ImageEntry, ImageInformation, isAltInformation, isImageInformation} from "../../../api/src/images/ImageInformation.ts";
 import {useEffect, useState} from "react";
 import images from '../../../api/src/images/images.json'
-import {SelectedFilters} from "./TagUtils";
+import {SelectedFilters} from "../../../api/src/images/TagUtils.ts";
 import {parseAsString, useQueryState} from "nuqs";
 
 export function useTagHooks() {

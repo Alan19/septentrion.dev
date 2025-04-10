@@ -1,13 +1,13 @@
 import React, {useState} from "react";
 import axios from "axios";
 import {Autocomplete, Checkbox, createFilterOptions, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormControlLabel, Radio, RadioGroup, Snackbar, Stack, TextField, Typography,} from "@mui/material";
-import {AltType, ImageInformation, isAltTypeComplex} from "../ImageInformation";
+import {AltType, ImageInformation, isAltTypeComplex} from "../../../api/src/images/ImageInformation.ts";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import AddIcon from "@mui/icons-material/Add";
 import {useIsDevelopment} from "./UseIsDevelopment";
 import {Button, FormLabel} from "@mui/material-next";
-import {ArtTag, characters, Rating} from "./TagUtils";
+import {ArtTag, characters, Rating} from "../../../api/src/images/TagUtils.ts";
 import {AutocompleteFilterChip} from "./FilterPane";
 
 // TODO Consolidate shared behavior with Uploader.json

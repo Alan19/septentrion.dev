@@ -1,7 +1,7 @@
 import {Request, Response} from "express";
 import fs from "fs";
 import path from "path";
-import {AltInformation, ImageInformation, isImageInformation} from "../image-information";
+import {AltInformation, ImageInformation, isImageInformation} from "../images/ImageInformation";
 
 export function batchTag(req: Request<object, object, { imagesToUpdate: string[], tags: string[], add: boolean }>, res: Response) {
     const {imagesToUpdate, tags, add} = req.body;

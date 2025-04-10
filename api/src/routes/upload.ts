@@ -5,7 +5,7 @@ import AWS from "aws-sdk";
 import {sha3_224} from "js-sha3";
 import fs from "fs";
 import path from "path";
-import {AltInformation, ImageInformation} from "../image-information";
+import {AltInformation, ImageInformation} from '../images/ImageInformation';
 
 async function getMainImageEntryFields(file: Express.Multer.File, title: string, bucket: string, characters: string, tags: string, altNumber?: number) {
     const sharpBuffer = sharp(file.buffer);
