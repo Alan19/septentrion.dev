@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.3.0",
   "type": "module",
-  "homepage": "https://www.septentrion.dev/",
+  "homepage": "https://about.septentrion.dev/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && cp build/index.html build/404.html",
