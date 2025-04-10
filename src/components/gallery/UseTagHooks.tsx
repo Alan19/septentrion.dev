@@ -1,7 +1,7 @@
 import axios from "axios";
 import {AltInformation, ImageEntry, ImageInformation, isAltInformation, isImageInformation} from "../ImageInformation";
 import {useEffect, useState} from "react";
-import images from './images.json'
+import images from '../../../api/src/images/images.json'
 import {SelectedFilters} from "./TagUtils";
 import {parseAsString, useQueryState} from "nuqs";
 

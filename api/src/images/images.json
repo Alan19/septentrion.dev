@@ -5555,25 +5555,6 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cyberpunk_loadout_illustration.webp"
   },
   {
-    "tags": [
-      "Techwear",
-      "Aldhibah Form",
-      "Bodysuit"
-    ],
-    "href": "",
-    "aspectRatio": 1.3685624720107479,
-    "parent": "Cyberpunk Loadout Illustration",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "extra",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alts/Cyberpunk%20Loadout%20Illustration_1.jpg",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alts/cyberpunk_loadout_illustration_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alts/cyberpunk_loadout_illustration_1.webp",
-    "id": "c75f0a15361d0b75568900c29c08ee872bbcb0f4a21eaab58101ba14"
-  },
-  {
     "title": "Alcor Battle Artwork",
     "artist": "@_if8_",
     "tags": [
@@ -7194,5 +7175,29 @@
     "id": "d227efe9404106bfc16593e236c4d738d0527c36afbab47685e567e3",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_wow_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_wow_1.webp"
+  },
+  {
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Featured",
+      "Full Body",
+      "Illustration",
+      "Techwear",
+      "Character Reference"
+    ],
+    "href": "https://www.pixiv.net/en/artworks/127228736",
+    "aspectRatio": 1.3685624720107479,
+    "parent": "Cyberpunk Loadout Illustration",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cyberpunk_loadout_illustration_1.jpg",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cyberpunk_loadout_illustration_1.webp",
+    "id": "1130bd81c771903a43abf6b018316831577bef077c071413c79ff7b9",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cyberpunk_loadout_illustration_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cyberpunk_loadout_illustration_1.webp"
   }
 ]

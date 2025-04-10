@@ -1,4 +1,4 @@
-import images from "./images.json";
+import images from "../../../api/src/images/images.json";
 import {ImageEntry} from "../ImageInformation";
 
 export enum ArtTag {
