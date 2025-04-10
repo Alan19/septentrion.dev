@@ -76,7 +76,7 @@ export async function uploadImageAlt(req: Request, res: Response) {
             webp: webpUrl,
         };
 
-        addToJson(jsonOutput);
+        addToJson(jsonOutput, tagArray.includes("Hidden"));
         res.json(jsonOutput);
     } else {
         res.status(422).send('No file attached!');
@@ -145,7 +145,7 @@ function getUploadMessage(uploadType: string, imageName: string, result: Buffer<
 }
 
 export async function uploadThumbnailVersion(bucket: string, imageName: string, buffer: Buffer) {
-    const [result, quality] = await compressImageBuffer(sharp(buffer, {animated: true}), {width: 2160, height: 3840, withoutEnlargement: true, fit: 'inside'}, 307200);
+    const [result, quality] = await compressImageBuffer(sharp(buffer), {width: 2160, height: 3840, withoutEnlargement: true, fit: 'inside'}, 307200);
     console.log(getUploadMessage('thumbnail', imageName, result, quality));
     const value = await uploadFile(bucket, `thumbnail/${imageName}.webp`, result, 'image/webp');
     return value.Location;
