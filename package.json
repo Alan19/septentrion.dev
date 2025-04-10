@@ -6,7 +6,7 @@
   "homepage": "https://www.septentrion.dev/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && cp build/index.html build/404.html",
     "lint": "eslint .",
     "preview": "vite preview"
   },
