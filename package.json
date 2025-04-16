@@ -3,10 +3,10 @@
   "private": true,
   "version": "1.3.0",
   "type": "module",
-  "homepage": "https://about.septentrion.dev/",
+  "homepage": "https://www.septentrion.dev/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && cp build/index.html build/404.html",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

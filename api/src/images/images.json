@@ -7199,5 +7199,84 @@
     "id": "1130bd81c771903a43abf6b018316831577bef077c071413c79ff7b9",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cyberpunk_loadout_illustration_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cyberpunk_loadout_illustration_1.webp"
+  },
+  {
+    "title": "Cat Gun(?)",
+    "artist": "@zibao.bsky.social",
+    "tags": [],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lmj3l2sa222b",
+    "published": "2025-04-11",
+    "aspectRatio": 0.58837890625,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Lava"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cat_gun.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cat_gun.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cat_gun.webp",
+    "id": "4c8622f0bfe36322cb918e3367e5c790e2d51f4e632367a169fbb5db",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cat_gun.webp"
+  },
+  {
+    "title": "Summer Outfit 2025",
+    "artist": "@kurope.bsky.social",
+    "tags": [
+      "Chibi",
+      "Thuban Form"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lmvsseakhk26",
+    "published": "2025-04-16",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/summer_outfit_2025.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/summer_outfit_2025.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/summer_outfit_2025.webp",
+    "id": "19201d35c9894759aeb0bd1f22b84f064e703f433f091e9813d0556e",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/summer_outfit_2025.webp"
+  },
+  {
+    "title": "Soma Sketchy Live Sketch by RC",
+    "artist": "@fluxdestiny.bsky.social",
+    "tags": [
+      "Bodysuit",
+      "Hoodie",
+      "Sketch"
+    ],
+    "href": "",
+    "published": "2025-04-10",
+    "aspectRatio": 0.48486122792262404,
+    "rating": "general",
+    "characters": [
+      "Soma"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/soma_sketchy_live_sketch_by_rc.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/soma_sketchy_live_sketch_by_rc.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_sketchy_live_sketch_by_rc.webp",
+    "id": "d9421fa923f9c9bdb91ee85ea4a65b83db7faed9a959013433bc7d00",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/soma_sketchy_live_sketch_by_rc.webp"
+  },
+  {
+    "title": "Alcor Bubble Tea Gift",
+    "artist": "@fluxdestiny.bsky.social",
+    "tags": [
+      "Bodysuit",
+      "Aldhibah Form"
+    ],
+    "href": "",
+    "published": "2025-04-14",
+    "aspectRatio": 0.8430366760707874,
+    "rating": "general",
+    "characters": [
+      ""
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_bubble_tea_gift.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_bubble_tea_gift.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_bubble_tea_gift.webp",
+    "id": "0be4f6b1528b1aa7fb8f846f3b1f7b0079b9178f8aa612fe92935c29",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_bubble_tea_gift.webp"
   }
 ]
