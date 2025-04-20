@@ -5,21 +5,21 @@ import {isImageInformation} from "../../../api/src/images/ImageInformation.ts";
 import useMeasure from "react-use-measure";
 import {ResizeObserver} from "@juggle/resize-observer";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
-import {FilterMode, getShownImages, imageSort} from "./Gallery";
 import {drawerColor} from "../common/Navigation";
 import {SkeletonImage} from "../SkeletonImage";
 import {useAltDisplaySettings} from "./useAltDisplaySettings";
-import {parseAsString, parseAsStringEnum, useQueryState} from "nuqs";
 import {useDocumentTitle} from "usehooks-ts";
+import {useQueryState} from "../../UseQueryState.tsx";
+import {FilterMode, getShownImages, imageSort} from "./GalleryUtils.ts";
 
 // Page that only displays artworks in a grid, and hides all other elements
 export function MinimalGalleryPage() {
     useDocumentTitle("Reference Gallery");
     const {filters, images, altData} = useTagHooks();
 
-    const [filterMode] = useQueryState<FilterMode>("filter-mode", parseAsStringEnum<FilterMode>(Object.values(FilterMode)).withDefault(FilterMode.and).withOptions({history: "replace"}));
+    const [filterMode] = useQueryState<FilterMode>("filter-mode", FilterMode.and);
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver});
-    const [referenceName] = useQueryState("reference-name", parseAsString.withDefault("Character Reference"));
+    const [referenceName] = useQueryState("reference-name", "Character Reference");
     const altDisplaySettings = useAltDisplaySettings();
 
 

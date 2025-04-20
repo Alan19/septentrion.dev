@@ -1,28 +1,22 @@
 import {Autocomplete, FilterOptionsState, FormControlLabel, FormGroup, Radio, RadioGroup, Stack, TextField, Typography} from "@mui/material";
-import Chip from "@mui/material-next/Chip";
 import {Filter} from "@mui/icons-material";
 import {FormControl, FormLabel} from "@mui/material-next";
 import {artists, ArtTag, characters, Rating, SelectedFilters, tagGroup} from "../../../api/src/images/TagUtils.ts";
 import _ from "lodash";
 import Switch from "@mui/material-next/Switch";
 import {AltSettings} from "./useAltDisplaySettings";
-import {FilterMode} from "./Gallery.tsx";
+import {FilterMode} from "./GalleryUtils.ts";
+import {AutocompleteFilterChip} from "./filters/AutocompleteFilterChip.tsx";
 
-export function AutocompleteFilterChip(props: Readonly<{ option: string, tagProps: { key: number; className: string; disabled: boolean; "data-tag-index": number; tabIndex: -1; onDelete: (event: any) => void } }>) {
-    return <Chip
-        color={props.option.startsWith("-") ? "error" : "primary"}
-        {...props.tagProps}
-        size={"small"}
-        label={props.option} {...props.tagProps} />;
+interface FilterPaneProps {
+    filters: SelectedFilters;
+    setFilters: (tags: string) => void;
+    filterMode: FilterMode;
+    setFilterMode: (filterMode: FilterMode) => void;
+    altDisplaySettings: AltSettings;
 }
 
-export function FilterPane(props: {
-    filters: SelectedFilters,
-    setFilters: (tags: string) => void,
-    filterMode: FilterMode,
-    setFilterMode: (filterMode: FilterMode) => void,
-    altDisplaySettings: AltSettings,
-}) {
+export function FilterPane(props: Readonly<FilterPaneProps>) {
     function filterOptions(options: string[], state: FilterOptionsState<string>) {
         if (state.inputValue === '') {
             return options.filter(option => !option.startsWith('-'));
@@ -30,7 +24,6 @@ export function FilterPane(props: {
             return options.filter(option => option.toLowerCase().startsWith(state.inputValue.toLowerCase()));
         }
     }
-
 
     function handleFilterChange(value: string[]) {
         props.setFilters(value.join('+'))
@@ -51,7 +44,7 @@ export function FilterPane(props: {
      */
     function getGroupBy(option: string) {
         const optionName = option.startsWith("-") ? option.substring(1) : option;
-        let filterType = SelectedFilters.getFilterType(optionName);
+        const filterType = SelectedFilters.getFilterType(optionName);
         if (filterType === 'Tag') {
             return Object.entries(tagGroup).find(value => value[1].includes(optionName as ArtTag))?.[0] ?? "Other"
         } else {
@@ -66,9 +59,9 @@ export function FilterPane(props: {
         <FormControl>
             <FormLabel>Filter Mode</FormLabel>
             <RadioGroup value={props.filterMode}>
-                <FormControlLabel value={'or'} control={<Radio onChange={(_event) => props.setFilterMode(FilterMode.or)}/>}
+                <FormControlLabel value={'or'} control={<Radio onChange={() => props.setFilterMode(FilterMode.or)}/>}
                                   label="Or"/>
-                <FormControlLabel value={'and'} control={<Radio onChange={(_event) => props.setFilterMode(FilterMode.and)}/>}
+                <FormControlLabel value={'and'} control={<Radio onChange={() => props.setFilterMode(FilterMode.and)}/>}
                                   label="And"/>
             </RadioGroup>
         </FormControl>
@@ -95,7 +88,7 @@ export function FilterPane(props: {
                       onChange={(_event, value) => handleFilterChange(value)}
                       filterOptions={(options, state) => filterOptions(options, state)}
                       size={"medium"}
-                      renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip option={option} tagProps={getTagProps({index})}/>)}
+                      renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip option={option} key={option} tagProps={getTagProps({index})}/>)}
                       options={getSortedOptions().concat(artists.flatMap(value => [value, '-' + value])).concat(characters.flatMap(value => [value, '-' + value])).concat(Object.values(Rating).flatMap(value => [value, '-' + value]))}/>
     </Stack>;
 }

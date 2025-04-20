@@ -1,11 +1,11 @@
 import {Typography} from "@mui/material";
 import React, {Fragment} from "react";
-import {AltInformation, ImageEntry, ImageInformation, isAltInformation, isImageInformation} from "../../../api/src/images/ImageInformation.ts";
-import {getMonthYearPairsInImageSet} from "./Gallery";
-import {SkeletonImage} from "../SkeletonImage";
+import {AltInformation, ImageEntry, ImageInformation, isAltInformation, isImageInformation} from "../../../../api/src/images/ImageInformation.ts";
+import {SkeletonImage} from "../../SkeletonImage.tsx";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {Link, useSearchParams} from "react-router-dom";
-import {croppedImageWithCurvedBorder} from "../common/BorderStyling.ts";
+import {croppedImageWithCurvedBorder} from "../../common/BorderStyling.ts";
+import {getMonthYearPairsInImageSet} from "../GalleryUtils.ts";
 
 function ChronologicalGallery(props: Readonly<{
     displayedImages: (ImageEntry & { published: string })[],

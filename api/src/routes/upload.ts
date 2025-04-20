@@ -115,7 +115,7 @@ async function uploadOriginalVersion(bucket: string, fileName: string, buffer: B
 async function compressImageBuffer(sharpImage: Sharp, resizeSettings: ResizeOptions, maxFileSize: number): Promise<[Buffer, number]> {
     let fileSize;
     let compressedImageBuffer;
-    let quality = 100;
+    let quality = 95;
     do {
         compressedImageBuffer = await sharpImage
             .resize(resizeSettings)
@@ -152,7 +152,7 @@ export async function uploadThumbnailVersion(bucket: string, imageName: string, 
 }
 
 export async function uploadFullscreenVersion(bucket: string, imageName: string, buffer: Buffer): Promise<[string, string]> {
-    const [result, quality] = await compressImageBuffer(sharp(buffer, {animated: true}), {width: 4096, height: 4096, fit: 'inside', withoutEnlargement: true}, 1048576);
+    const [result, quality] = await compressImageBuffer(sharp(buffer, {animated: true}), {width: 4096, height: 4096, fit: 'inside', withoutEnlargement: true}, 1000000);
     console.log(getUploadMessage('lossy', imageName, result, quality));
     const value = await uploadFile(bucket, `webp/${imageName}.webp`, result, 'image/webp');
 

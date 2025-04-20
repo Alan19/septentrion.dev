@@ -9,9 +9,9 @@ import dayjs, {Dayjs} from "dayjs";
 import {useIsDevelopment} from "./UseIsDevelopment";
 import {Button} from "@mui/material-next";
 import {ArtTag, characters, Rating} from "../../../api/src/images/TagUtils.ts";
-import {AutocompleteFilterChip} from "./FilterPane";
 import {useTagHooks} from "./UseTagHooks";
 import {prepareFileName} from "./Utils";
+import {AutocompleteFilterChip} from "./filters/AutocompleteFilterChip.tsx";
 
 const filter = createFilterOptions<string>();
 export default function Uploader(props: Readonly<{ loadImageInfo: () => Promise<void>; }>) {

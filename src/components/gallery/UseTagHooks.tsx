@@ -3,11 +3,11 @@ import {AltInformation, ImageEntry, ImageInformation, isAltInformation, isImageI
 import {useEffect, useState} from "react";
 import images from '../../../api/src/images/images.json'
 import {SelectedFilters} from "../../../api/src/images/TagUtils.ts";
-import {parseAsString, useQueryState} from "nuqs";
+import {useQueryState} from "../../UseQueryState.tsx";
 
 export function useTagHooks() {
     // TODO Make this serialize an object instead
-    const [filterString, setFilterString] = useQueryState('filters', parseAsString.withDefault('').withOptions({history: "replace"}));
+    const [filterString, setFilterString] = useQueryState('filters', '');
     const [imageData, setImageData] = useState<(ImageInformation)[]>([]);
     const [altData, setAltData] = useState<Map<string, AltInformation[]>>(new Map());
     const [imageEntries, setImageEntries] = useState<ImageEntry[]>([]);

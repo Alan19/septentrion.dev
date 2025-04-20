@@ -8,7 +8,7 @@ import AddIcon from "@mui/icons-material/Add";
 import {useIsDevelopment} from "./UseIsDevelopment";
 import {Button, FormLabel} from "@mui/material-next";
 import {ArtTag, characters, Rating} from "../../../api/src/images/TagUtils.ts";
-import {AutocompleteFilterChip} from "./FilterPane";
+import {AutocompleteFilterChip} from "./filters/AutocompleteFilterChip.tsx";
 
 // TODO Consolidate shared behavior with Uploader.json
 // TODO Update this for new JSON structure

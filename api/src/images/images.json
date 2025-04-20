@@ -6295,48 +6295,6 @@
   },
   {
     "tags": [
-      "Thuban Form"
-    ],
-    "href": "",
-    "aspectRatio": 0.6833333333333333,
-    "parent": "Castor Colored Undies",
-    "rating": "mature",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_colored_undies_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/castor_colored_undies_1.webp",
-    "id": "752a50a2b676e8e544f2dadcb1733690898eda374563b4e49bd7bb9f",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/castor_colored_undies_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_colored_undies_1.webp"
-  },
-  {
-    "tags": [
-      "Thuban Form"
-    ],
-    "href": "",
-    "aspectRatio": 0.6833333333333333,
-    "parent": "Castor Colored Undies",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 2
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_colored_undies_2.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/castor_colored_undies_2.webp",
-    "id": "afed52324b4950397607cde598ab61cceb4b59ff214a39e298429317",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/castor_colored_undies_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_colored_undies_2.webp"
-  },
-  {
-    "tags": [
       "Rastaban Form",
       "Sketch"
     ],
@@ -6438,28 +6396,6 @@
     "id": "a7c4ea2bbe12e805b2105dd79a6114df316d94c17a7a85c7acf62291",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/arknights_operator_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/arknights_operator_1.webp"
-  },
-  {
-    "tags": [
-      "Auriga Form",
-      "Castor"
-    ],
-    "href": "",
-    "aspectRatio": 0.7069555302166477,
-    "parent": "Symbiote Experiment",
-    "rating": "mature",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 2
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/symbiote_experiment_2.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/symbiote_experiment_2.webp",
-    "id": "1d766d55948e5f357dece8b9de81478eeecc47467f526c8fcd7f4706",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/symbiote_experiment_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/symbiote_experiment_2.webp"
   },
   {
     "tags": [
@@ -7271,7 +7207,7 @@
     "aspectRatio": 0.8430366760707874,
     "rating": "general",
     "characters": [
-      ""
+      "Alcor"
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_bubble_tea_gift.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_bubble_tea_gift.webp",

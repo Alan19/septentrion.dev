@@ -1,107 +1,67 @@
 import React, {memo, useEffect, useState} from "react";
-import {Autocomplete, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Stack, TextField, Typography, useMediaQuery,} from "@mui/material";
-import {AltInformation, getAltAndPageNumber, getParentImage, ImageEntry, ImageInformation, isAltInformation, isAltTypeComplex, isImageInformation} from "../../../api/src/images/ImageInformation.ts";
+import {Autocomplete, Container, FormControlLabel, Grid, Pagination, Radio, RadioGroup, Stack, TextField, Typography, useMediaQuery,} from "@mui/material";
+import {getParentImage, ImageEntry, ImageInformation, isAltInformation, isImageInformation} from "../../../api/src/images/ImageInformation.ts";
 import "./gallery.css";
 import {useTagHooks} from "./UseTagHooks";
 import Uploader from "./Uploader";
 import useMeasure from 'react-use-measure';
 import {ResizeObserver} from '@juggle/resize-observer'
-import {AutocompleteFilterChip, FilterPane} from "./FilterPane";
+import {FilterPane} from "./FilterPane";
 import {RouteWithSubpanel} from "../common/RouteWithSubpanel";
 import {SkeletonImage} from "../SkeletonImage";
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {createSearchParams, Link, useNavigate, useSearchParams} from "react-router-dom";
 import {prepareFileName} from "./Utils";
 import {Bookmark, BookmarkAdd, BookmarkRemove, Cancel, Share} from "@mui/icons-material";
-import {ArtTag, SelectedFilters} from "../../../api/src/images/TagUtils.ts";
+import {ArtTag} from "../../../api/src/images/TagUtils.ts";
 import {Button} from "@mui/material-next";
-import axios from "axios";
 import {useIsDevelopment} from "./UseIsDevelopment";
-import ChronologicalGallery from "./ChronologicalGallery";
-import {AltSettings, useAltDisplaySettings} from "./useAltDisplaySettings";
+import ChronologicalGallery from "./filters/ChronologicalGallery.tsx";
+import {useAltDisplaySettings} from "./useAltDisplaySettings";
 import {materialDesign2Theme} from "../../MaterialDesign2Theme.tsx";
-import {parseAsInteger, parseAsStringEnum, useQueryState} from "nuqs";
 import {croppedImageWithCurvedBorder} from "../common/BorderStyling.ts";
 import {useDocumentTitle} from "usehooks-ts";
+import {useQueryState} from "../../UseQueryState.tsx";
+import {FilterMode, getShownImages, imageSort, updateTags} from "./GalleryUtils.ts";
+import {AutocompleteFilterChip} from "./filters/AutocompleteFilterChip.tsx";
 
-export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
-    return new Set(images.filter(value => value.published !== undefined).map(value => value.published.substring(0, 7)));
-}
-
-export function imageSort(a: ImageEntry, b: ImageEntry, mainImages: ImageInformation[]): number {
-    const aPublished = isImageInformation(a) ? a.published : mainImages.find(value => value.title === a.parent)?.published as string;
-    const bPublished = isImageInformation(b) ? b.published : mainImages.find(value => value.title === b.parent)?.published as string;
-    const aTitle = isImageInformation(a) ? a.title : a.parent;
-    const bTitle = isImageInformation(b) ? b.title : b.parent;
-    const dateComparison = bPublished.localeCompare(aPublished);
-    const titleComparison = bTitle.localeCompare(aTitle);
-    const altVsParentComparison = (isAltInformation(b) ? 1 : 0) - (isAltInformation(a) ? 1 : 0);
-    const complexAltTypeComparison = (isAltTypeComplex((b as AltInformation).altType) ? 1 : 0) - (isAltTypeComplex((a as AltInformation).altType) ? 1 : 0)
-    const sequenceNumberComparison = (getAltAndPageNumber(b as AltInformation).pageNumber ?? 0) - (getAltAndPageNumber(a as AltInformation).pageNumber ?? 0);
-    const altNumberComparion = (getAltAndPageNumber(b as AltInformation).altNumber ?? 0) - (getAltAndPageNumber(a as AltInformation).altNumber ?? 0);
-
-    return dateComparison || titleComparison || altVsParentComparison || complexAltTypeComparison || sequenceNumberComparison || altNumberComparion;
-}
-
-export function getShownImages(images: ImageEntry[], selectedFilters: SelectedFilters, filterMode: "and" | "or", altDisplaySettings: AltSettings) {
-    return images.filter(value => {
-        if (isImageInformation(value)) {
-            return selectedFilters.doesImageMatch(value, filterMode);
-        } else {
-            console.log(value)
-            return selectedFilters.doesImageMatch({...value, artist: (getParentImage(value.id, images) as ImageInformation).artist}, filterMode) && filterAlts(value, altDisplaySettings);
-        }
-    });
-}
-
-function filterAlts(altInformation: AltInformation, altFilters: AltSettings) {
-    const {altType} = altInformation;
-    const {displayAlts: alts, displayExtras: extras, displaySequences: sequences, displayCrops: crops, displayRecolors: recolors} = altFilters;
-    const cropsMatch = (altType === 'cropped') && crops;
-    const recolorsMatch = (altType === 'recolor') && recolors;
-    const extrasMatch = (altType === "extra") && extras;
-    const sequenceMatch = isAltTypeComplex(altType) && ((altType.pageNumber ?? 0) > 0) && !altType.altNumber && sequences;
-    const altMatch = isAltTypeComplex(altType) && ((altType.altNumber ?? 0) > 0) && !altType.pageNumber && alts;
-    const altAndSequenceMatch = alts && sequences && isAltTypeComplex(altType);
-
-    return extrasMatch || recolorsMatch || cropsMatch || sequenceMatch || altMatch || altAndSequenceMatch;
-}
-
-function updateTags(tags: ArtTag[], selectedImages: string[], add = true) {
-    axios.post("http://localhost:9000/tag", {images: selectedImages, tags: tags, add: add})
-        .then((value) => console.log("Finished updating tags on the following artworks: ", value))
-        .catch((reason) => console.log(reason))
-}
-
-export enum FilterMode {and = "and", or = "or"}
 export const Gallery = memo(function Gallery() {
     enum GalleryDisplayModes {monthly = 'monthly', all = 'all', paginated = 'paginated'}
 
-    const {filters, setFilters, images, loadImageInfo, altData, imageEntries} = useTagHooks();
+    const {filters, images, loadImageInfo, altData, imageEntries} = useTagHooks();
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver});
-    const [displayMode, setDisplayMode] = useQueryState<GalleryDisplayModes>('display-mode', parseAsStringEnum<GalleryDisplayModes>(Object.values(GalleryDisplayModes)).withDefault(GalleryDisplayModes.paginated).withOptions({history: "replace"}));
+    const [displayMode, setDisplayMode] = useQueryState<GalleryDisplayModes>('display-mode', GalleryDisplayModes.paginated);
     const [pageSize, setPageSize] = useState<number>(12);
-    const [page, setPage] = useQueryState<number>('page', parseAsInteger.withDefault(1));
+    const [page, setPage] = useQueryState<number>('page', 1);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-    const [filterMode, setFilterMode] = useQueryState<FilterMode>("filter-mode", parseAsStringEnum<FilterMode>(Object.values(FilterMode)).withDefault(FilterMode.and).withOptions({history: "replace"}));
+    const [filterMode, setFilterMode] = useQueryState<FilterMode>("filter-mode", FilterMode.and);
     const [batchTagging, setBatchTagging] = useState<ArtTag[]>([])
     const [batchTagEnabled, setBatchTagEnabled] = useState(false)
     const [selectedImages, setSelectedImages] = useState<string[]>([])
     const altDisplaySettings = useAltDisplaySettings();
-    const [searchParams] = useSearchParams();
+    const [searchParams, setSearchParams] = useSearchParams();
 
     // TODO Add method to export name, and also copy URL to clipboard
     const [referenceName, setReferenceName] = useState("")
     const navigation = useNavigate();
     const isMediumOrAbove = useMediaQuery(materialDesign2Theme.breakpoints.up("md"));
 
+    /**
+     * Function to manually update 2 query strings since we can't chain them or else it causes performance issues
+     * @param tags The string for the tags to filter by
+     */
     function handleTagChange(tags: string) {
-        setFilters(tags);
-        setPage(1);
+        const newParams = new URLSearchParams(searchParams)
+        if (tags == "") {
+            newParams.delete("filters")
+        } else {
+            newParams.set("filters", JSON.stringify(tags));
+        }
+        newParams.delete("page");
+        setSearchParams(newParams)
     }
 
     const shownImages: ImageEntry[] = getShownImages(imageEntries, filters, filterMode, altDisplaySettings).sort((a, b) => imageSort(a, b, images))
-
 
     useEffect(() => {
         if (isMediumOrAbove) {
@@ -113,7 +73,7 @@ export const Gallery = memo(function Gallery() {
         setPage(value);
     }
 
-    const imagesOnPage = (!(displayMode === "all") ? shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize) : shownImages);
+    const imagesOnPage = displayMode !== "all" ? shownImages.slice(pageSize * (page - 1), pageSize * (page - 1) + pageSize) : shownImages;
 
     function handleImageClicked(value: ImageInformation) {
         navigation({
@@ -128,7 +88,7 @@ export const Gallery = memo(function Gallery() {
     useDocumentTitle("Gallery");
 
 
-    const content = <>
+    const content = <Container>
         <Typography variant={"h3"} fontFamily={"Potra"} color={"var(--md-sys-color-primary)"}>Alcor's Gallery</Typography>
         <div ref={ref}></div>
         <Stack direction={"column"} spacing={2}>
@@ -191,11 +151,12 @@ export const Gallery = memo(function Gallery() {
                                                     padding: selectedImages.includes(title) ? 16 : 0,
                                                     transition: "padding .2s ease",
                                                     aspectRatio: aspectRatio ?? 1
-                                                }}>
+                                                }}
+                                                key={title}>
                                         {content}
                                     </div>
                                 } else {
-                                    return <Link to={{pathname: id, search: searchParams.toString()}}>{content}</Link>;
+                                    return <Link key={title} to={{pathname: id, search: searchParams.toString()}}>{content}</Link>;
                                 }
                             })}
                         </TSJustifiedLayout>
@@ -227,14 +188,14 @@ export const Gallery = memo(function Gallery() {
                               value={batchTagging}
                               onChange={(_event, value) => setBatchTagging(value as ArtTag[])}
                               size={"medium"}
-                              renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip option={option} tagProps={getTagProps({index})}/>)}
+                              renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip key={option} option={option} tagProps={getTagProps({index})}/>)}
                               options={Object.values(ArtTag)}/>
                 <Button variant={"filled"} color={"primary"} onClick={() => updateTags(batchTagging, selectedImages)}><BookmarkAdd/></Button>
                 <Button variant={"filled"} color={"primary"} onClick={() => updateTags(batchTagging, selectedImages, false)}><BookmarkRemove/></Button>
                 <Button variant={"filled"} color={"secondary"} onClick={() => setBatchTagEnabled(false)}><Cancel/></Button>
             </div> : <Button startIcon={<Bookmark/>} variant={"filled"} color={"primary"} onClick={() => setBatchTagEnabled(true)}>Batch Tag</Button>)}
         </Stack>
-    </>;
+    </Container>;
     return <RouteWithSubpanel panel={<FilterPane filterMode={filterMode} setFilterMode={setFilterMode} filters={filters} setFilters={handleTagChange} altDisplaySettings={altDisplaySettings}/>} routeContent={content}/>;
 });
 
