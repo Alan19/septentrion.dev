@@ -102,6 +102,28 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/png_tuber.webp"
   },
   {
+    "tags": [
+      "Hoodie",
+      "Rastaban Form"
+    ],
+    "href": "https://twitter.com/Cat_Mantis_Art/status/1436487151705726978?s=20",
+    "aspectRatio": 1.414516129032258,
+    "parent": "PNGTuber",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 1,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/png_tuber_1.jpg",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/png_tuber_1.webp",
+    "id": "2c342dc73981961b2316335aa802f0cb971782e7177e67a3e9a6534e",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/png_tuber_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/png_tuber_1.webp"
+  },
+  {
     "title": "Alcor Sketchpage",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_sketchpage.jpg",
     "href": "https://x.com/jw_bash/status/1442957289627930630",
@@ -124,6 +146,29 @@
     "rating": "general",
     "id": "14e7f8c6e56a7b5c30b355637eda21dc30c7aece9bc4d4c73069056c",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_sketchpage.webp"
+  },
+  {
+    "tags": [
+      "Eltanin Form",
+      "Knives",
+      "Rastaban Form",
+      "Sketch",
+      "Sketchpage",
+      "Standard Outfit"
+    ],
+    "href": "",
+    "aspectRatio": 0.7008333333333333,
+    "parent": "Alcor Sketchpage",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_sketchpage_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_sketchpage_2.webp",
+    "id": "0ac96cd6c713e80a330a53570015ab16619c051838e680621b2f0b6f",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_sketchpage_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_sketchpage_2.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/ralsei_themed_trick_or_treat.png",
@@ -310,6 +355,27 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cool_trio.webp"
   },
   {
+    "tags": [
+      "Rastaban Form",
+      "Sketch"
+    ],
+    "href": "https://x.com/jw_bash/status/1472189910597648385",
+    "aspectRatio": 1.405726872246696,
+    "parent": "Cool Trio",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Francie",
+      "Silva"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cool_trio_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cool_trio_2.webp",
+    "id": "cafd8d497bb76a06a2216475867f7adb45af4b73bf5d07ccd26858b4",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cool_trio_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cool_trio_2.webp"
+  },
+  {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/monk_rouge_draft.png",
     "title": "Monk-Rouge Draft",
     "artist": "@charlie_nax",
@@ -494,6 +560,28 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/night.webp"
   },
   {
+    "tags": [
+      "Gemini Form",
+      "Sketch"
+    ],
+    "href": "https://x.com/jw_bash/status/1493782186981421056",
+    "aspectRatio": 0.7119386637458927,
+    "parent": "Night",
+    "rating": "general",
+    "characters": [
+      "Alcor",
+      "Roku"
+    ],
+    "altType": {
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/night_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/night_1.webp",
+    "id": "f79138effa1784e180011663080d6294b44841e550fdf6c8b735f662",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/night_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/night_1.webp"
+  },
+  {
     "title": "Valentine's Day 2022",
     "artist": "@CatMantisArt",
     "tags": [
@@ -533,6 +621,52 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cafe_superhero.webp",
     "id": "9f33955259c583e94aa16dd2c8c005da28b92ac8839a3c828868847f",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cafe_superhero.webp"
+  },
+  {
+    "tags": [
+      "Eltanin Form",
+      "Gungrir Suit",
+      "Superhero"
+    ],
+    "href": "",
+    "aspectRatio": 0.7391802152507442,
+    "parent": "Cafe Superhero",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cafe_superhero_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cafe_superhero_1.webp",
+    "id": "add812b4517d7d10c6264a26db690be7f5f5d5f7468e30fdd24a4a62",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cafe_superhero_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cafe_superhero_1.webp"
+  },
+  {
+    "tags": [
+      "Eltanin Form",
+      "Gungrir Suit",
+      "Superhero"
+    ],
+    "href": "",
+    "aspectRatio": 0.7391802152507442,
+    "parent": "Cafe Superhero",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 2
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cafe_superhero_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cafe_superhero_2.webp",
+    "id": "0ec1863dd68e6dd02fb0bd36d4d36926f5118e3df70be3dfaeb9813e",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cafe_superhero_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cafe_superhero_2.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/power_up.png",
@@ -680,6 +814,24 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/beach_boy.webp"
   },
   {
+    "tags": [
+      "Thuban Form"
+    ],
+    "href": "https://x.com/kerac_fa/status/1550513500371369984",
+    "aspectRatio": 1.6666666666666667,
+    "parent": "Beach Boy",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "cropped",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy_1.gif",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy_1.gif",
+    "id": "43b04ba3224fcf28a4c59d1812145f0b1986c4539362b5b6a86af4bf",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy_1.gif",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy_1.gif"
+  },
+  {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/couple_s_sketchpage_2022.jpg",
     "title": "Couple's Sketchpage 2022",
     "artist": "@sketchtablet",
@@ -765,6 +917,26 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/kayztor_gift_art.webp",
     "id": "dda09f42b2f685e3cc872edba28c7bd123a1e6a9c73786dc22247485",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/kayztor_gift_art.webp"
+  },
+  {
+    "title": "Aldhibah Form α",
+    "artist": "@osanpogakari",
+    "tags": [
+      "Aldhibah Form",
+      "Character Reference"
+    ],
+    "href": "https://skeb.jp/@osanpogakari/works/9",
+    "published": "2022-05-17",
+    "aspectRatio": 1.815,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aldhibah_form_%25CE%25B1.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aldhibah_form_%25CE%25B1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aldhibah_form_%25CE%25B1.webp",
+    "id": "7af5217bf57e37b9f46b1b6b904cd646b2afae12a690fab86f99b0ad",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aldhibah_form_%25CE%25B1.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/stay_gold.png",
@@ -986,6 +1158,27 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/big_hug.webp"
   },
   {
+    "tags": [
+      "Gemini Form",
+      "Sketch"
+    ],
+    "href": "https://x.com/jw_bash/status/1540123235391504387",
+    "aspectRatio": 0.7793313069908815,
+    "parent": "BIG HUG!",
+    "rating": "general",
+    "characters": [
+      "Alcor",
+      "Gabe",
+      "Lava"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/big_hug_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/big_hug_1.webp",
+    "id": "2434ad6661fb48a57efc17ba3dd78ae5111fbacf08ec7381e4cdb17b",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/big_hug_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/big_hug_1.webp"
+  },
+  {
     "title": "Sci-fi Mode: ON",
     "href": "https://twitter.com/AxyUsagi/status/1543041029674344448?s=20&t=tlXwc5aegdXuQeLhgdUw-Q",
     "artist": "@axyusagi.bsky.social",
@@ -1051,6 +1244,27 @@
     ],
     "id": "360a74bb655649ff51a01b8391658a2af3f991764262190ccf5ee54f",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/lifewonders_beach_outfits.webp"
+  },
+  {
+    "tags": [
+      "Rastaban Form",
+      "Sketch"
+    ],
+    "href": "",
+    "aspectRatio": 1.4067388688327316,
+    "parent": "Lifewonders Beach Outfits",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Roku",
+      "Francie"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/lifewonders_beach_outfits_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/lifewonders_beach_outfits_1.webp",
+    "id": "c94040a245f7b38de6897b587850a5bd8202bec6ae534ea5ef60dfe8",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/lifewonders_beach_outfits_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifewonders_beach_outfits_1.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/outdoors_hot_springs.png",
@@ -1156,6 +1370,29 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/self_experimentation.webp"
   },
   {
+    "tags": [
+      "Bodysuit",
+      "Vernal",
+      "Eltanin Form"
+    ],
+    "href": "https://x.com/CheezyChezu/status/1554869095450849280?s=20",
+    "aspectRatio": 0.8266666666666667,
+    "parent": "Self Experimentation",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 1,
+      "altNumber": 0
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/self_experimentation_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/self_experimentation_1.webp",
+    "id": "7313c1986a8b9bd10f390c8511ed25ef3a4f7924292e8d41a7789f37",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/self_experimentation_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/self_experimentation_1.webp"
+  },
+  {
     "title": "Meditating with a Lemiolu on top",
     "artist": "@laywithfull",
     "tags": [
@@ -1237,6 +1474,70 @@
     ],
     "id": "5c46030806f505145aff8a0c98eff81bcd1df8b017bf2a2fa2d9b230",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/strawberry_boba_stream_anniversary.webp"
+  },
+  {
+    "title": "Nekotiger Alcor Chibi",
+    "artist": "@nekotiger",
+    "tags": [
+      "Rastaban Form",
+      "Hoodie"
+    ],
+    "href": "https://x.com/nekotiger/status/1563206167580778497",
+    "published": "2022-08-26",
+    "aspectRatio": 1,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/nekotiger_alcor_chibi.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/nekotiger_alcor_chibi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/nekotiger_alcor_chibi.webp",
+    "id": "a7e6383db691159ff0d296d86319f593af2923cf62e4b03e4e016c8b",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/nekotiger_alcor_chibi.webp"
+  },
+  {
+    "tags": [
+      "Hoodie",
+      "Rastaban Form",
+      "Knives"
+    ],
+    "href": "https://x.com/nekotiger/status/1563206167580778497",
+    "aspectRatio": 1,
+    "parent": "Nekotiger Alcor Chibi",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/nekotiger_alcor_chibi_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/nekotiger_alcor_chibi_1.webp",
+    "id": "aa06e05cfd5eca36fab6f1195d4d35f2ea22c9275337f323814050d0",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/nekotiger_alcor_chibi_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/nekotiger_alcor_chibi_1.webp"
+  },
+  {
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/nekotiger/status/1563206167580778497",
+    "aspectRatio": 1,
+    "parent": "Nekotiger Alcor Chibi",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 2
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/nekotiger_alcor_chibi_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/nekotiger_alcor_chibi_2.webp",
+    "id": "596348e57e3b5a66f1a5a387cd7ae3a71d5b5c0e046dd379edfc93fa",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/nekotiger_alcor_chibi_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/nekotiger_alcor_chibi_2.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/autumnal_techwear.png",
@@ -1349,6 +1650,31 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_body_study_sketchpage.webp"
   },
   {
+    "tags": [
+      "AICore Form",
+      "Character Reference",
+      "Eltanin Form",
+      "Rastaban Form",
+      "Sketch",
+      "Sketchpage",
+      "Thuban Form",
+      "Triangulum Form"
+    ],
+    "href": "https://x.com/jw_bash/status/1571302995920269312",
+    "aspectRatio": 2.4143518518518516,
+    "parent": "Alcor Body Study Sketchpage",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_body_study_sketchpage_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_body_study_sketchpage_1.webp",
+    "id": "7700aa01e12f9a3048388aedb158fb5d12ece5dec313a3cf6e4e23d5",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_body_study_sketchpage_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_body_study_sketchpage_1.webp"
+  },
+  {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_wow.png",
     "title": "Alcor Wow",
     "artist": "@Kuttoyaki",
@@ -1410,6 +1736,28 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_chef.webp"
   },
   {
+    "tags": [
+      "Hoodie",
+      "Thuban Form"
+    ],
+    "href": "",
+    "aspectRatio": 1,
+    "parent": "Alcor Wow",
+    "rating": "general",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "altType": {
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_wow_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_wow_1.webp",
+    "id": "d227efe9404106bfc16593e236c4d738d0527c36afbab47685e567e3",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_wow_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_wow_1.webp"
+  },
+  {
     "title": "Jupiter Form α",
     "artist": "@Vamp_Arts",
     "tags": [
@@ -1427,6 +1775,48 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_form_%25CE%25B1.webp",
     "id": "61f25df183b42b41a3bb0a20790fb14d0fbbeed3a936fb20ad5e1724",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_form_%25CE%25B1.webp"
+  },
+  {
+    "tags": [
+      "Jupiter Form"
+    ],
+    "href": "",
+    "aspectRatio": 1,
+    "parent": "Jupiter Form α",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_form_%25CE%25B1_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_form_%25CE%25B1_1.webp",
+    "id": "b70a2013a8e0a60e051cc5e1283fc0a384f76f792f9edbcab680cc1c",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_form_%25CE%25B1_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_form_%25CE%25B1_1.webp"
+  },
+  {
+    "tags": [
+      "Jupiter Form"
+    ],
+    "href": "",
+    "aspectRatio": 1,
+    "parent": "Jupiter Form α",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 2
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_form_%25CE%25B1_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_form_%25CE%25B1_2.webp",
+    "id": "053908cd1e23ce13ed446c74a7f2a9d4a5275a0b629e9e03b9341495",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_form_%25CE%25B1_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_form_%25CE%25B1_2.webp"
   },
   {
     "title": "3DS Commission",
@@ -1816,6 +2206,25 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/christmas_p_js.webp"
   },
   {
+    "tags": [
+      "AICore Form",
+      "Sketch"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1606745191687376896?s=20",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Christmas PJs",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/christmas_p_js_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/christmas_p_js_1.webp",
+    "id": "1c472fdea17cd277486b38df903c35c6400b2152020d9e6156a7aa1c",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/christmas_p_js_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/christmas_p_js_1.webp"
+  },
+  {
     "title": "AICore Bridal Carry",
     "artist": "@HareWolf126",
     "tags": [
@@ -1877,6 +2286,30 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/arknights_operator.webp"
   },
   {
+    "tags": [
+      "Hibernal Assassin",
+      "Knives",
+      "Rastaban Form",
+      "Techwear"
+    ],
+    "href": "https://skeb.jp/@mtd_pop/works/34",
+    "aspectRatio": 0.8572,
+    "parent": "Arknights Operator",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/arknights_operator_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/arknights_operator_1.webp",
+    "id": "a7c4ea2bbe12e805b2105dd79a6114df316d94c17a7a85c7acf62291",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/arknights_operator_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/arknights_operator_1.webp"
+  },
+  {
     "title": "Evening Train",
     "artist": "@greyy_arts",
     "tags": [
@@ -1920,6 +2353,28 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aerospray_rg.webp"
   },
   {
+    "tags": [
+      "Estival Checker",
+      "Featured",
+      "Hoodie",
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/kerac_fa/status/1702717661937807445",
+    "aspectRatio": 0.8192771084337349,
+    "parent": "Evening Train",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Lava"
+    ],
+    "altType": "cropped",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train_2.gif",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train_2.gif",
+    "id": "f31ef10507db0a007f0c7141f4a058ee0409bf80e26ec4155350fcd4",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train_2.gif",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train_2.gif"
+  },
+  {
     "src": "https://pbs.twimg.com/media/FnHp4nWaUAA-lgD?format=jpg&name=large",
     "title": "Special Archery Training! 🏹",
     "href": "https://twitter.com/Yamainu_ken/status/1617331411761115138?s=20",
@@ -1934,14 +2389,37 @@
     "artist": "@yamainuken.bsky.social",
     "published": "2023-01-22",
     "aspectRatio": 1.5442260442260443,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/special_archery_training.webp",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/special_archery_training.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/special_archery_training_%25F0%259F%258F%25B9.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/special_archery_training_%25F0%259F%258F%25B9.webp",
     "characters": [
       "Alcor"
     ],
     "rating": "mainstream",
     "id": "670cbd92685cacb0f1b9edb0d18edb1c1376ca492551b6c0abda658b",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/special_archery_training.webp"
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/special_archery_training_%25F0%259F%258F%25B9.webp"
+  },
+  {
+    "tags": [
+      "Bodysuit",
+      "Bow",
+      "Featured",
+      "Indra Suit",
+      "Superhero",
+      "Thuban Form"
+    ],
+    "href": "https://x.com/kerac_fa/status/1692571563416244488",
+    "aspectRatio": 1.546875,
+    "parent": "Special Archery Training! 🏹",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "cropped",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/special_archery_training_%25F0%259F%258F%25B9_1.gif",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/special_archery_training_%25F0%259F%258F%25B9_1.webp",
+    "id": "a8af902b232b2d0e19d4b0044e338ec9c17773768f36d4b461fe349a",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/special_archery_training_%25F0%259F%258F%25B9_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/special_archery_training_%25F0%259F%258F%25B9_1.webp"
   },
   {
     "title": "Alcor Reference 2023",
@@ -1964,10 +2442,10 @@
       "pageNumber": 1
     },
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_reference_2023.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_reference_2023_part_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_reference_2023_part_1.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_reference_2023.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_reference_2023.webp",
     "id": "0f3caed2e6481f490bcd6f31d14c1aa014c8093f52c39f8bae5d3890",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_reference_2023_part_1.webp"
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_reference_2023.webp"
   },
   {
     "parent": "Alcor Reference 2023",
@@ -2072,6 +2550,25 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/casual_cupid.webp"
   },
   {
+    "tags": [
+      "Rastaban Form",
+      "Sketch"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1630026310759186442?s=20",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Casual Cupid",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/casual_cupid_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/casual_cupid_1.webp",
+    "id": "1c020812dff21106b1021b87b0a610a08004c6b1d43dc052e53c9a96",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/casual_cupid_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/casual_cupid_1.webp"
+  },
+  {
     "title": "Chibi AICore",
     "artist": "@KemoMaty",
     "tags": [
@@ -2140,16 +2637,79 @@
     ],
     "href": "",
     "published": "2023-04-06",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_form.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_form_%25CE%25B1.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form.png",
     "aspectRatio": 0.5692051139521956,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form_%25CE%25B1.webp",
     "rating": "general",
     "characters": [
       "Alcor"
     ],
     "id": "75d1b2d4c10dc69c4838ca723b355c0b79285d3e44af0b0809496d52",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_form.webp"
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_form_%25CE%25B1.webp"
+  },
+  {
+    "tags": [
+      "Aquarius Form"
+    ],
+    "href": "",
+    "aspectRatio": 0.5692051139521956,
+    "parent": "Aquarius Form α",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form_%25CE%25B1_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_form_%25CE%25B1_1.webp",
+    "id": "0eb668a09bfb599f51fc98815952f1efcbd72a1fecaffd4e85711e36",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_form_%25CE%25B1_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form_%25CE%25B1_1.webp"
+  },
+  {
+    "tags": [
+      "Aquarius Form"
+    ],
+    "href": "",
+    "aspectRatio": 0.5692051139521956,
+    "parent": "Aquarius Form α",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 2
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form_%25CE%25B1_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_form_%25CE%25B1_2.webp",
+    "id": "48d1c0b45d33373fb7c89841eb1198ced23b1f9f1b766eb38fe70b20",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_form_%25CE%25B1_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form_%25CE%25B1_2.webp"
+  },
+  {
+    "tags": [
+      "Aquarius Form"
+    ],
+    "href": "",
+    "aspectRatio": 0.5692051139521956,
+    "parent": "Aquarius Form α",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 3
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form_%25CE%25B1_3.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_form_%25CE%25B1_3.webp",
+    "id": "ce482d29bc0904211f875b26a435c34d351911cbe21e86a62005ae82",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_form_%25CE%25B1_3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form_%25CE%25B1_3.webp"
   },
   {
     "title": "Ice Cream",
@@ -2208,6 +2768,25 @@
     ],
     "id": "4aa3d440c5f464c0775491629a268fec7168e4f66eb48d839a35bcae",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/sportswear_sketch.webp"
+  },
+  {
+    "tags": [
+      "Sketch",
+      "Thuban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1647431925106081792",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Sportswear Sketch",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/sportswear_sketch_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/sportswear_sketch_1.webp",
+    "id": "5f84367e35efd97a8ad68c551dd23836b3f264ab0c4a5cbe84347925",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/sportswear_sketch_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sportswear_sketch_1.webp"
   },
   {
     "title": "Alcor Icon from Ryze",
@@ -2368,6 +2947,44 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/inventor_sketch.webp"
   },
   {
+    "tags": [
+      "Sketch",
+      "Thuban Form"
+    ],
+    "href": "",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Inventor Sketch",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/inventor_sketch_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/inventor_sketch_1.webp",
+    "id": "eb43b6b4ffd209559818ec5db098341d438a63c60275b40cb3350f45",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/inventor_sketch_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/inventor_sketch_1.webp"
+  },
+  {
+    "tags": [
+      "Rastaban Form",
+      "Superhero"
+    ],
+    "href": "https://skeb.jp/@harukaze110/works/34",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Scarlet Flame x Galactic B-Hero Suit",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/scarlet_flame_x_galactic_b_hero_suit_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/scarlet_flame_x_galactic_b_hero_suit_1.webp",
+    "id": "0a0a0bd5d47a7a2c81cda973fe1816304b5c9e609eb623042a75dc2f",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/scarlet_flame_x_galactic_b_hero_suit_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/scarlet_flame_x_galactic_b_hero_suit_1.webp"
+  },
+  {
     "title": "Gladiator Sketch",
     "artist": "@KuroPenguinEx",
     "tags": [
@@ -2385,6 +3002,25 @@
     ],
     "id": "b74e774905f479ceeca607ceba7d308d0762fa73a44acb8d3d90330e",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/gladiator_sketch.webp"
+  },
+  {
+    "tags": [
+      "Thuban Form",
+      "Sketch"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1640748522071814146",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Gladiator Sketch",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/gladiator_sketch_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/gladiator_sketch_1.webp",
+    "id": "f31eb727b02f4201f50110afd2427de9467f8f08dac0c3474a83e5b6",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/gladiator_sketch_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gladiator_sketch_1.webp"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/solarpunk_city_heroes.jpg",
@@ -2594,6 +3230,25 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/summer_outfit_2023_sketch.webp"
   },
   {
+    "tags": [
+      "Sketch",
+      "Thuban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1684228825369006080?s=20",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Summer Outfit 2023 Sketch",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/summer_outfit_2023_sketch_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/summer_outfit_2023_sketch_1.webp",
+    "id": "e528238f2eeb4ee243fdddd40b3d9fe0ec4a5ef47141ca4851e26263",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/summer_outfit_2023_sketch_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/summer_outfit_2023_sketch_1.webp"
+  },
+  {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/twewy_team.png",
     "title": "TWEWY Team",
     "artist": "@DumbDogDoodles",
@@ -2658,6 +3313,25 @@
     ],
     "id": "ae1623ffaf03f0a1a54ef93c08fc7de0850f66d42148ff7755aa64ea",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/ronin_sketch.webp"
+  },
+  {
+    "tags": [
+      "Thuban Form",
+      "Sketch"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1695880435853627504?s=20",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Ronin Sketch",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ronin_sketch_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/ronin_sketch_1.webp",
+    "id": "206fc8651eb2da36820ee66c8cd12eab202ddf7b486b2d986eb6b72c",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ronin_sketch_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ronin_sketch_1.webp"
   },
   {
     "title": "Alcor Hugging Lava 2023",
@@ -2846,6 +3520,27 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/halloween_daki.webp"
   },
   {
+    "tags": [
+      "AICore Form"
+    ],
+    "href": "",
+    "aspectRatio": 0.625,
+    "parent": "Halloween Daki",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/halloween_daki_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/halloween_daki_1.webp",
+    "id": "21bbb7621e437083cff31b3ed4a4fa442f564fe2ea9e35d63ca03d23",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/halloween_daki_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/halloween_daki_1.webp"
+  },
+  {
     "title": "Project Jupiter",
     "artist": "@SolarD0GG0",
     "tags": [
@@ -2887,6 +3582,26 @@
     ],
     "id": "eff4d63bdd5a9c2d453621a292afdf86742f5c8dae9d8a5ae0ec6a1f",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/soma_hardlight_armor.webp"
+  },
+  {
+    "tags": [
+      "Bodysuit",
+      "Superhero",
+      "Character Reference"
+    ],
+    "href": "https://skeb.jp/@ogu_aug12/works/9",
+    "aspectRatio": 2.816088002750086,
+    "parent": "Soma Hardlight Armor",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/soma_hardlight_armor_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/soma_hardlight_armor_1.webp",
+    "id": "0beba2434e00ce46f0e93f5085a5ea5d71de36f8f53c8494af418672",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/soma_hardlight_armor_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_hardlight_armor_1.webp"
   },
   {
     "title": "Mech suit update 2023",
@@ -3146,6 +3861,22 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_tap.webp"
   },
   {
+    "tags": [],
+    "href": "https://x.com/FaintAlcor/status/1734983405102600206",
+    "aspectRatio": 1.114519427402863,
+    "parent": "Alcor Tap",
+    "rating": "mainstream",
+    "characters": [
+      "Castor"
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_tap_1.gif",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_tap_1.webp",
+    "id": "0a6496f5cacc67c633690703d8bb8110fd5f1f64caf0dbca9a0415b4",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_tap_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_tap_1.webp"
+  },
+  {
     "title": "Here's a Present",
     "artist": "@_Hatohui",
     "tags": [
@@ -3206,6 +3937,26 @@
     ],
     "id": "48a20e47415a77d803f8ac17d1e05eac071b90bf90e1e10e8f477ce0",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/winter_fashion_sketch.webp"
+  },
+  {
+    "tags": [
+      "Hoodie",
+      "Sketch",
+      "Thuban Form"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1739687938533752924?s=20",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Winter Fashion Sketch",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/winter_fashion_sketch_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/winter_fashion_sketch_1.webp",
+    "id": "2571972f31d0ee57969f027945b48dcf18b026d83294bea15bd694fb",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/winter_fashion_sketch_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/winter_fashion_sketch_1.webp"
   },
   {
     "title": "New Year 2024",
@@ -3367,6 +4118,25 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/farmer_sketch.webp"
   },
   {
+    "tags": [
+      "Aquarius Form",
+      "Sketch"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1751444972904063414?s=20",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Farmer Sketch",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/farmer_sketch_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/farmer_sketch_1.webp",
+    "id": "ea25d223e620351a7b0a55dd8444ad9435b8f4332f9b5b5bf0dee4f0",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/farmer_sketch_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/farmer_sketch_1.webp"
+  },
+  {
     "title": "My Room",
     "artist": "@ito_44_3",
     "tags": [
@@ -3459,6 +4229,38 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_logos.webp"
   },
   {
+    "tags": [],
+    "href": "https://skeb.jp/@null_Vt/works/68",
+    "aspectRatio": 1.3153586904188734,
+    "parent": "Alcor's Logos",
+    "rating": "mainstream",
+    "characters": [
+      ""
+    ],
+    "altType": "cropped",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_logos_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_logos_1.webp",
+    "id": "5c098a556730ebea39ee5f071b9881348143a44f0fd2a83d5da32eb2",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcors_logos_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_logos_1.webp"
+  },
+  {
+    "tags": [],
+    "href": "https://skeb.jp/@null_Vt/works/68",
+    "aspectRatio": 1.333984375,
+    "parent": "Alcor's Logos",
+    "rating": "mainstream",
+    "characters": [
+      ""
+    ],
+    "altType": "cropped",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_logos_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_logos_2.webp",
+    "id": "76311afe2e6a2bb5967f54456ba1ba32a36ad6ee860347e363a0ad20",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcors_logos_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_logos_2.webp"
+  },
+  {
     "title": "Pokemon Trainer",
     "artist": "@kelvin_trainerk",
     "tags": [
@@ -3499,6 +4301,26 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/high_schooler_sketch.webp"
   },
   {
+    "tags": [
+      "Hoodie",
+      "Rastaban Form",
+      "Sketch"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1772635696072630361?s=20",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "High Schooler Sketch",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/high_schooler_sketch_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/high_schooler_sketch_1.webp",
+    "id": "e1d7e283d620322245a266dc068cb6a7854ca15544fb25036e816a87",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/high_schooler_sketch_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/high_schooler_sketch_1.webp"
+  },
+  {
     "title": "Alcor Singlet",
     "artist": "@Chirenbo",
     "tags": [
@@ -3516,6 +4338,48 @@
     ],
     "id": "4b0b4dd743bad9c244871391ee25d83c75d944d7a77d4dae18947fc9",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_singlet.webp"
+  },
+  {
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "",
+    "aspectRatio": 0.7587890625,
+    "parent": "Alcor Singlet",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_singlet_1.jpg",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_singlet_1.webp",
+    "id": "09daaacd009a4ab622bdeb0e940ebee9c160adbfde9e61a0761aeb3d",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_singlet_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_singlet_1.webp"
+  },
+  {
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://twitter.com/FaintAlcor/status/1773203071377572338",
+    "aspectRatio": 0.7587890625,
+    "parent": "Alcor Singlet",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 2
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_singlet_2.jpg",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_singlet_2.webp",
+    "id": "68b48ce977dfe5a28281c6f30373702872c059679d364fe4ca63be40",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_singlet_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_singlet_2.webp"
   },
   {
     "title": "Gemini Form Icon",
@@ -3853,6 +4717,28 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/eclipse_deity_%25CE%25B3.webp"
   },
   {
+    "tags": [
+      "Eclipse Deity",
+      "Lances"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1794393511862612210",
+    "aspectRatio": 0.8243310619910255,
+    "parent": "Eclipse Deity γ",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/eclipse_deity_%25CE%25B3_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/eclipse_deity_%25CE%25B3_1.webp",
+    "id": "9488a0a25437969d6308cfb88fd37833c826e1854e463c991490364a",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/eclipse_deity_%25CE%25B3_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/eclipse_deity_%25CE%25B3_1.webp"
+  },
+  {
     "title": "Biogenesis Suit Design",
     "artist": "@EmberWickArt",
     "tags": [
@@ -3943,15 +4829,37 @@
     "href": "https://x.com/jw_bash/status/1799959705760023032",
     "published": "2024-06-09",
     "aspectRatio": 2.2363524841545694,
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_weightlifting.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_weightlifting.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/lifting_with_kyoto.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifting_with_kyoto.webp",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_weightlifting.png",
     "rating": "general",
     "characters": [
       "Alcor"
     ],
     "id": "7280022276bf607977863613dc93e4d0babb3f35c2dc53689a0eb94f",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_weightlifting.webp"
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/lifting_with_kyoto.webp"
+  },
+  {
+    "tags": [
+      "Jupiter Form"
+    ],
+    "href": "https://x.com/jw_bash/status/1799959705760023032",
+    "aspectRatio": 1.087686022760432,
+    "parent": "Lifting With Kyoto",
+    "rating": "general",
+    "characters": [
+      "Alcor",
+      "Kyoto"
+    ],
+    "altType": {
+      "pageNumber": 2,
+      "altNumber": 0
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/lifting_with_kyoto_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/lifting_with_kyoto_1.webp",
+    "id": "78c6b954498e4de53e6e063468246719b48d219053d4c9dd7049d64d",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/lifting_with_kyoto_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifting_with_kyoto_1.webp"
   },
   {
     "title": "Gemini Fighting Game Outfit",
@@ -4120,6 +5028,32 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/seductive_aquarius.webp"
   },
   {
+    "tags": [
+      "Bodysuit",
+      "Castor",
+      "Eltanin Form",
+      "Indra Suit",
+      "Superhero"
+    ],
+    "href": "https://x.com/baogacc/status/1811509817779134671",
+    "aspectRatio": 0.7743933918430562,
+    "parent": "Castor Suit Engage!",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Joel"
+    ],
+    "altType": {
+      "pageNumber": 2,
+      "altNumber": 0
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_suit_engage_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/castor_suit_engage_1.webp",
+    "id": "368f403a14146f61bd2b2418370ea8499e2c4c34c6047ffc9f805b95",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/castor_suit_engage_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_suit_engage_1.webp"
+  },
+  {
     "title": "Workin' Vibes",
     "artist": "@Beckowaffle",
     "tags": [
@@ -4199,6 +5133,25 @@
     ],
     "id": "abe219ef5f1801ac4a81ba50597be8096bcbd81a9d72eea9963db989",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/hanfu_sketch.webp"
+  },
+  {
+    "tags": [
+      "Rastaban Form",
+      "Sketch"
+    ],
+    "href": "https://x.com/FaintAlcor/status/1818149053839941913",
+    "aspectRatio": 0.7069555302166477,
+    "parent": "Hanfu Sketch",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/hanfu_sketch_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/hanfu_sketch_1.webp",
+    "id": "91d87b25339353a5f2d3d84325795eeeb5add38d530956593e484e7e",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/hanfu_sketch_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/hanfu_sketch_1.webp"
   },
   {
     "title": "Natsu Matsuri 2024",
@@ -4288,6 +5241,22 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/the_hamburger_accident.webp"
   },
   {
+    "tags": [],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3kzwkxn4m4i2s",
+    "aspectRatio": 1.2374100719424461,
+    "parent": "The Hamburger Accident",
+    "rating": "mainstream",
+    "characters": [
+      "Castor"
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/the_hamburger_accident_1.jpg",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/the_hamburger_accident_1.webp",
+    "id": "746a43054bc52129a843e3c30154c6a561ef28ccc08963a21b0c10f1",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/the_hamburger_accident_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/the_hamburger_accident_1.webp"
+  },
+  {
     "title": "We're not Accepting Visitors",
     "artist": "@pawcrest",
     "tags": [
@@ -4306,6 +5275,28 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/were_not_accepting_visitors.webp",
     "id": "9b407b8ebb20b5b3a5913eafd8399c2e972f829658251877a515d677",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/were_not_accepting_visitors.webp"
+  },
+  {
+    "tags": [
+      "AICore Form"
+    ],
+    "href": "https://x.com/pawcrest/status/1825619442828718502",
+    "aspectRatio": 0.7960799095363739,
+    "parent": "We're not Accepting Visitors",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/were_not_accepting_visitors_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/were_not_accepting_visitors_1.webp",
+    "id": "a3224e3c97db12b1245a8bb44ded1f2c1180895d3b1a05304aa3559e",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/were_not_accepting_visitors_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/were_not_accepting_visitors_1.webp"
   },
   {
     "title": "Alcor Static Tank",
@@ -4392,6 +5383,56 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_armored_phenomenon_ver_feat_sutunununu.webp"
   },
   {
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Bow",
+      "Indra Suit",
+      "Superhero",
+      "Character Reference",
+      "Techwear"
+    ],
+    "href": "https://x.com/mochi_skymega/status/1827331834491105313",
+    "aspectRatio": 1.5,
+    "parent": "Triangle Shot",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangle_shot_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/triangle_shot_1.webp",
+    "id": "55d2c9ffae322710503e5b35c7e5b50a9364a03291817fcb9d9d71b8",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/triangle_shot_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangle_shot_1.webp"
+  },
+  {
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Bow",
+      "Indra Suit",
+      "Superhero",
+      "Character Reference",
+      "Techwear"
+    ],
+    "href": "https://x.com/mochi_skymega/status/1827331834491105313",
+    "aspectRatio": 1.5,
+    "parent": "Triangle Shot",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangle_shot_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/triangle_shot_2.webp",
+    "id": "afa72e184bfd20a1ab2e0caee039216e3a7e09b51a4a629e187786ef",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/triangle_shot_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangle_shot_2.webp"
+  },
+  {
     "title": "Soma Exocolonist Styled Chibis",
     "artist": "@bkomei",
     "tags": [
@@ -4430,6 +5471,28 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sweet_couple_3.webp",
     "id": "7776047037d83e7186829059ff8530b70754a1e6ec07896d8e0a0b4c",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/sweet_couple_3.webp"
+  },
+  {
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/rofukagazaki/status/1828752723132772536",
+    "aspectRatio": 0.70703125,
+    "parent": "Sweet Couple <3",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Lava"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/sweet_couple_3_1.jpg",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/sweet_couple_3_1.webp",
+    "id": "aa5993c655e7a9cbbd2d76ccd0421d07b2de3071bd3538c5c28b36ad",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/sweet_couple_3_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sweet_couple_3_1.webp"
   },
   {
     "title": "Egyptian Costume Sketch",
@@ -4529,10 +5592,31 @@
       "Alcor"
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/serotinal_evening_at_the_pier.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/serotinal_evening_at_the_pier.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/serotinal_evening_at_the_pier.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/late_summer_evening_at_the_pier.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/late_summer_evening_at_the_pier.webp",
     "id": "90230ea13227b9cf4213195a616f7a6b9239971476fbbdecbde29db3",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/serotinal_evening_at_the_pier.webp"
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/late_summer_evening_at_the_pier.webp"
+  },
+  {
+    "tags": [
+      "Eltanin Form"
+    ],
+    "href": "https://x.com/phy_sen/status/1832797211790320011",
+    "aspectRatio": 1.7776666666666667,
+    "parent": "Late Summer Evening at the Pier",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/late_summer_evening_at_the_pier_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/late_summer_evening_at_the_pier_1.webp",
+    "id": "068a88d9a88eeaed2e3ddc20d398eebbf401f76b89514a85a5a4a334",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/late_summer_evening_at_the_pier_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/late_summer_evening_at_the_pier_1.webp"
   },
   {
     "title": "Symbiotic Auriga Form β",
@@ -4947,6 +6031,27 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/halloween_fashion_sketch.webp"
   },
   {
+    "tags": [
+      "Eltanin Form"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3l7tysrcnds2h",
+    "aspectRatio": 0.7381284916201117,
+    "parent": "Pumpkin YCH",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 2
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/pumpkin_ych_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/pumpkin_ych_2.webp",
+    "id": "9064e65363ec58217d9d67f5bcaf3cf7a811d28528a56f790aca51e6",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/pumpkin_ych_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pumpkin_ych_2.webp"
+  },
+  {
     "title": "Trying out Lava's Visor",
     "artist": "@Lavastan",
     "tags": [
@@ -5289,6 +6394,29 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/estival_outfit_%25CE%25B4.webp"
   },
   {
+    "tags": [
+      "Aldhibah Form",
+      "Estival Checker",
+      "Full Body",
+      "Hoodie",
+      "Techwear",
+      "Character Reference"
+    ],
+    "href": "https://x.com/Mino_llm/status/1874484453629948011",
+    "aspectRatio": 1.4056492742251863,
+    "parent": "Estival Outfit δ",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/estival_outfit_%25CE%25B4_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/estival_outfit_%25CE%25B4_1.webp",
+    "id": "3fd54ceab5f57343b5fd58f0370c52e21c24ca2bcd5ffde4dcafdf88",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/estival_outfit_%25CE%25B4_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/estival_outfit_%25CE%25B4_1.webp"
+  },
+  {
     "title": "Spark Talisman",
     "artist": "@kabe_dbn",
     "tags": [
@@ -5429,6 +6557,27 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/triangulum_form_illustration_by_fsd.webp"
   },
   {
+    "tags": [
+      "Triangulum Form"
+    ],
+    "href": "https://x.com/FSD_and_GF4656/status/1883369280726831605",
+    "aspectRatio": 0.75,
+    "parent": "Triangulum Form Illustration by FSD",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 2,
+      "altNumber": 0
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangulum_form_illustration_by_fsd_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/triangulum_form_illustration_by_fsd_2.webp",
+    "id": "b0b0fcdf7075e5b9e2d950d8795f35fb22f4780aa8d41d8efbc98c36",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/triangulum_form_illustration_by_fsd_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangulum_form_illustration_by_fsd_2.webp"
+  },
+  {
     "title": "Outer Space Chibi",
     "artist": "@kurope.bsky.social",
     "tags": [
@@ -5466,6 +6615,30 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/mobile_wallpaper.webp",
     "id": "277b33167109eb7df3476e141d96b1404618bb065ad185dc5c4c0f2b",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/mobile_wallpaper.webp"
+  },
+  {
+    "tags": [
+      "Techwear",
+      "Thuban Form",
+      "Hibernal Assassin",
+      "Chibi"
+    ],
+    "href": "https://skeb.jp/@sakanesansan/works/299",
+    "aspectRatio": 0.9993337774816788,
+    "parent": "Mobile Wallpaper",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 2,
+      "altNumber": 0
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/mobile_wallpaper_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/mobile_wallpaper_1.webp",
+    "id": "42a67fca38bfed3123e0d42b44e4ff45e7841eea85057baea05746d3",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/mobile_wallpaper_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/mobile_wallpaper_1.webp"
   },
   {
     "title": "Aquarius Symbiote Suit Training",
@@ -5508,6 +6681,90 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_mech_suit_%25CE%25B3.webp",
     "id": "d9f05c983b823d52243a293df2cd244ba8af5b1d0adde403a0a1a680",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_mech_suit_%25CE%25B3.webp"
+  },
+  {
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Lances"
+    ],
+    "href": "https://x.com/kaxak8/status/1888890664961892506",
+    "aspectRatio": 1.2340600575894694,
+    "parent": "Alcor Mech Suit γ",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_mech_suit_%25CE%25B3_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_mech_suit_%25CE%25B3_1.webp",
+    "id": "dadbda184824f4ed77a1df82b41c302f6f6edb7231436d90020819d9",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_mech_suit_%25CE%25B3_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_mech_suit_%25CE%25B3_1.webp"
+  },
+  {
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Lances"
+    ],
+    "href": "https://x.com/kaxak8/status/1888890664961892506",
+    "aspectRatio": 1.2340600575894694,
+    "parent": "Alcor Mech Suit γ",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "altNumber": 2
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_mech_suit_%25CE%25B3_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_mech_suit_%25CE%25B3_2.webp",
+    "id": "109e9fdff4723f4f61ceacda04e9d81d08a9399f2203af9cb529ffe7",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_mech_suit_%25CE%25B3_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_mech_suit_%25CE%25B3_2.webp"
+  },
+  {
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Lances"
+    ],
+    "href": "https://x.com/kaxak8/status/1888890664961892506",
+    "aspectRatio": 1.2340600575894694,
+    "parent": "Alcor Mech Suit γ",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_mech_suit_%25CE%25B3_3.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_mech_suit_%25CE%25B3_3.webp",
+    "id": "ad95a544d99e6a9b4563dc4202c6181e780228293c65e6ab6992042d",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_mech_suit_%25CE%25B3_3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_mech_suit_%25CE%25B3_3.webp"
+  },
+  {
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Lances"
+    ],
+    "href": "https://x.com/kaxak8/status/1888890664961892506",
+    "aspectRatio": 1.2340600575894694,
+    "parent": "Alcor Mech Suit γ",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_mech_suit_%25CE%25B3_4.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_mech_suit_%25CE%25B3_4.webp",
+    "id": "eb4b061d5f25dadbefd9ad4f02ccf9c2294eeae611525a418f37f9bd",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_mech_suit_%25CE%25B3_4.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_mech_suit_%25CE%25B3_4.webp"
   },
   {
     "title": "Jupiter Battle Sprite",
@@ -5578,6 +6835,57 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_battle_artwork.webp",
     "id": "98228fcd645c41fbbaa900849baf2eabd78052472bfd4970234a54ae",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_battle_artwork.webp"
+  },
+  {
+    "tags": [
+      "Aldhibah Form",
+      "Autumnal Wavesniper",
+      "Bodysuit",
+      "Featured",
+      "Knives",
+      "Rastaban Form",
+      "Techwear"
+    ],
+    "href": "https://bsky.app/profile/if0.bsky.social/post/3li57cmpius2s",
+    "aspectRatio": 1.1955882352941176,
+    "parent": "Alcor Battle Artwork",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_battle_artwork_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_battle_artwork_1.webp",
+    "id": "de227a71ae8206ff40b660a90c0fbdb7d1bdd303ddeeae92a79a9e49",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_battle_artwork_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_battle_artwork_1.webp"
+  },
+  {
+    "tags": [
+      "Aldhibah Form",
+      "Bodysuit",
+      "Featured",
+      "Full Body",
+      "Illustration",
+      "Techwear",
+      "Character Reference"
+    ],
+    "href": "https://www.pixiv.net/en/artworks/127228736",
+    "aspectRatio": 1.3685624720107479,
+    "parent": "Cyberpunk Loadout Illustration",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cyberpunk_loadout_illustration_1.jpg",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cyberpunk_loadout_illustration_1.webp",
+    "id": "1130bd81c771903a43abf6b018316831577bef077c071413c79ff7b9",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cyberpunk_loadout_illustration_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cyberpunk_loadout_illustration_1.webp"
   },
   {
     "title": "Special Agent Tinker Alcor",
@@ -5829,1352 +7137,6 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_by_riscomofu.webp"
   },
   {
-    "tags": [
-      "Eltanin Form",
-      "Knives",
-      "Rastaban Form",
-      "Sketch",
-      "Sketchpage",
-      "Standard Outfit"
-    ],
-    "href": "",
-    "aspectRatio": 0.7008333333333333,
-    "parent": "Alcor Sketchpage",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_sketchpage_2.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_sketchpage_2.webp",
-    "id": "0ac96cd6c713e80a330a53570015ab16619c051838e680621b2f0b6f",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_sketchpage_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_sketchpage_2.webp"
-  },
-  {
-    "tags": [
-      "Rastaban Form",
-      "Sketch"
-    ],
-    "href": "https://x.com/jw_bash/status/1472189910597648385",
-    "aspectRatio": 1.405726872246696,
-    "parent": "Cool Trio",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor",
-      "Francie",
-      "Silva"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cool_trio_2.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cool_trio_2.webp",
-    "id": "cafd8d497bb76a06a2216475867f7adb45af4b73bf5d07ccd26858b4",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cool_trio_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cool_trio_2.webp"
-  },
-  {
-    "tags": [
-      "Gemini Form",
-      "Sketch"
-    ],
-    "href": "https://x.com/jw_bash/status/1493782186981421056",
-    "aspectRatio": 0.7119386637458927,
-    "parent": "Night",
-    "rating": "general",
-    "characters": [
-      "Alcor",
-      "Roku"
-    ],
-    "altType": {
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/night_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/night_1.webp",
-    "id": "f79138effa1784e180011663080d6294b44841e550fdf6c8b735f662",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/night_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/night_1.webp"
-  },
-  {
-    "title": "Aldhibah Form α",
-    "artist": "@osanpogakari",
-    "tags": [
-      "Aldhibah Form",
-      "Character Reference"
-    ],
-    "href": "https://skeb.jp/@osanpogakari/works/9",
-    "published": "2022-05-17",
-    "aspectRatio": 1.815,
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aldhibah_form_%25CE%25B1.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aldhibah_form_%25CE%25B1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aldhibah_form_%25CE%25B1.webp",
-    "id": "7af5217bf57e37b9f46b1b6b904cd646b2afae12a690fab86f99b0ad",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aldhibah_form_%25CE%25B1.webp"
-  },
-  {
-    "tags": [
-      "Eltanin Form",
-      "Gungrir Suit",
-      "Superhero"
-    ],
-    "href": "",
-    "aspectRatio": 0.7391802152507442,
-    "parent": "Cafe Superhero",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cafe_superhero_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cafe_superhero_1.webp",
-    "id": "add812b4517d7d10c6264a26db690be7f5f5d5f7468e30fdd24a4a62",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cafe_superhero_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cafe_superhero_1.webp"
-  },
-  {
-    "tags": [
-      "Eltanin Form",
-      "Gungrir Suit",
-      "Superhero"
-    ],
-    "href": "",
-    "aspectRatio": 0.7391802152507442,
-    "parent": "Cafe Superhero",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 2
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cafe_superhero_2.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cafe_superhero_2.webp",
-    "id": "0ec1863dd68e6dd02fb0bd36d4d36926f5118e3df70be3dfaeb9813e",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cafe_superhero_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cafe_superhero_2.webp"
-  },
-  {
-    "title": "Nekotiger Alcor Chibi",
-    "artist": "@nekotiger",
-    "tags": [
-      "Rastaban Form",
-      "Hoodie"
-    ],
-    "href": "https://x.com/nekotiger/status/1563206167580778497",
-    "published": "2022-08-26",
-    "aspectRatio": 1,
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/nekotiger_alcor_chibi.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/nekotiger_alcor_chibi.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/nekotiger_alcor_chibi.webp",
-    "id": "a7e6383db691159ff0d296d86319f593af2923cf62e4b03e4e016c8b",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/nekotiger_alcor_chibi.webp"
-  },
-  {
-    "tags": [
-      "Hoodie",
-      "Rastaban Form",
-      "Knives"
-    ],
-    "href": "https://x.com/nekotiger/status/1563206167580778497",
-    "aspectRatio": 1,
-    "parent": "Nekotiger Alcor Chibi",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/nekotiger_alcor_chibi_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/nekotiger_alcor_chibi_1.webp",
-    "id": "aa06e05cfd5eca36fab6f1195d4d35f2ea22c9275337f323814050d0",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/nekotiger_alcor_chibi_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/nekotiger_alcor_chibi_1.webp"
-  },
-  {
-    "tags": [
-      "Rastaban Form"
-    ],
-    "href": "https://x.com/nekotiger/status/1563206167580778497",
-    "aspectRatio": 1,
-    "parent": "Nekotiger Alcor Chibi",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 2
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/nekotiger_alcor_chibi_2.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/nekotiger_alcor_chibi_2.webp",
-    "id": "596348e57e3b5a66f1a5a387cd7ae3a71d5b5c0e046dd379edfc93fa",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/nekotiger_alcor_chibi_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/nekotiger_alcor_chibi_2.webp"
-  },
-  {
-    "tags": [
-      "Thuban Form"
-    ],
-    "href": "https://x.com/kerac_fa/status/1550513500371369984",
-    "aspectRatio": 1.6666666666666667,
-    "parent": "Beach Boy",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "cropped",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy_1.gif",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy_1.gif",
-    "id": "43b04ba3224fcf28a4c59d1812145f0b1986c4539362b5b6a86af4bf",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy_1.gif",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy_1.gif"
-  },
-  {
-    "tags": [
-      "Gemini Form",
-      "Sketch"
-    ],
-    "href": "https://x.com/jw_bash/status/1540123235391504387",
-    "aspectRatio": 0.7793313069908815,
-    "parent": "BIG HUG!",
-    "rating": "general",
-    "characters": [
-      "Alcor",
-      "Gabe",
-      "Lava"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/big_hug_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/big_hug_1.webp",
-    "id": "2434ad6661fb48a57efc17ba3dd78ae5111fbacf08ec7381e4cdb17b",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/big_hug_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/big_hug_1.webp"
-  },
-  {
-    "tags": [
-      "Rastaban Form",
-      "Sketch"
-    ],
-    "href": "",
-    "aspectRatio": 1.4067388688327316,
-    "parent": "Lifewonders Beach Outfits",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor",
-      "Roku",
-      "Francie"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/lifewonders_beach_outfits_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/lifewonders_beach_outfits_1.webp",
-    "id": "c94040a245f7b38de6897b587850a5bd8202bec6ae534ea5ef60dfe8",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/lifewonders_beach_outfits_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifewonders_beach_outfits_1.webp"
-  },
-  {
-    "tags": [
-      "AICore Form",
-      "Character Reference",
-      "Eltanin Form",
-      "Rastaban Form",
-      "Sketch",
-      "Sketchpage",
-      "Thuban Form",
-      "Triangulum Form"
-    ],
-    "href": "https://x.com/jw_bash/status/1571302995920269312",
-    "aspectRatio": 2.4143518518518516,
-    "parent": "Alcor Body Study Sketchpage",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_body_study_sketchpage_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_body_study_sketchpage_1.webp",
-    "id": "7700aa01e12f9a3048388aedb158fb5d12ece5dec313a3cf6e4e23d5",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_body_study_sketchpage_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_body_study_sketchpage_1.webp"
-  },
-  {
-    "tags": [
-      "AICore Form",
-      "Sketch"
-    ],
-    "href": "https://x.com/FaintAlcor/status/1606745191687376896?s=20",
-    "aspectRatio": 0.7069555302166477,
-    "parent": "Christmas PJs",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/christmas_p_js_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/christmas_p_js_1.webp",
-    "id": "1c472fdea17cd277486b38df903c35c6400b2152020d9e6156a7aa1c",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/christmas_p_js_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/christmas_p_js_1.webp"
-  },
-  {
-    "tags": [
-      "Estival Checker",
-      "Featured",
-      "Hoodie",
-      "Rastaban Form"
-    ],
-    "href": "https://x.com/kerac_fa/status/1702717661937807445",
-    "aspectRatio": 0.8192771084337349,
-    "parent": "Evening Train",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor",
-      "Lava"
-    ],
-    "altType": "cropped",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train_2.gif",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train_2.gif",
-    "id": "f31ef10507db0a007f0c7141f4a058ee0409bf80e26ec4155350fcd4",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train_2.gif",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train_2.gif"
-  },
-  {
-    "tags": [
-      "Bodysuit",
-      "Bow",
-      "Featured",
-      "Indra Suit",
-      "Superhero",
-      "Thuban Form"
-    ],
-    "href": "https://x.com/kerac_fa/status/1692571563416244488",
-    "aspectRatio": 1.546875,
-    "parent": "Special Archery Training! 🏹",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "cropped",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/special_archery_training_%25F0%259F%258F%25B9_1.gif",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/special_archery_training_%25F0%259F%258F%25B9_1.webp",
-    "id": "a8af902b232b2d0e19d4b0044e338ec9c17773768f36d4b461fe349a",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/special_archery_training_%25F0%259F%258F%25B9_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/special_archery_training_%25F0%259F%258F%25B9_1.webp"
-  },
-  {
-    "tags": [
-      "Aquarius Form"
-    ],
-    "href": "",
-    "aspectRatio": 0.5692051139521956,
-    "parent": "Aquarius Form α",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form_%25CE%25B1_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_form_%25CE%25B1_1.webp",
-    "id": "0eb668a09bfb599f51fc98815952f1efcbd72a1fecaffd4e85711e36",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_form_%25CE%25B1_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form_%25CE%25B1_1.webp"
-  },
-  {
-    "tags": [
-      "Aquarius Form"
-    ],
-    "href": "",
-    "aspectRatio": 0.5692051139521956,
-    "parent": "Aquarius Form α",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 2
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form_%25CE%25B1_2.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_form_%25CE%25B1_2.webp",
-    "id": "48d1c0b45d33373fb7c89841eb1198ced23b1f9f1b766eb38fe70b20",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_form_%25CE%25B1_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form_%25CE%25B1_2.webp"
-  },
-  {
-    "tags": [
-      "Aquarius Form"
-    ],
-    "href": "",
-    "aspectRatio": 0.5692051139521956,
-    "parent": "Aquarius Form α",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 3
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_form_%25CE%25B1_3.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_form_%25CE%25B1_3.webp",
-    "id": "ce482d29bc0904211f875b26a435c34d351911cbe21e86a62005ae82",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_form_%25CE%25B1_3.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form_%25CE%25B1_3.webp"
-  },
-  {
-    "tags": [
-      "Sketch",
-      "Thuban Form"
-    ],
-    "href": "https://x.com/FaintAlcor/status/1647431925106081792",
-    "aspectRatio": 0.7069555302166477,
-    "parent": "Sportswear Sketch",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/sportswear_sketch_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/sportswear_sketch_1.webp",
-    "id": "5f84367e35efd97a8ad68c551dd23836b3f264ab0c4a5cbe84347925",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/sportswear_sketch_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sportswear_sketch_1.webp"
-  },
-  {
-    "tags": [
-      "Sketch",
-      "Thuban Form"
-    ],
-    "href": "",
-    "aspectRatio": 0.7069555302166477,
-    "parent": "Inventor Sketch",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/inventor_sketch_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/inventor_sketch_1.webp",
-    "id": "eb43b6b4ffd209559818ec5db098341d438a63c60275b40cb3350f45",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/inventor_sketch_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/inventor_sketch_1.webp"
-  },
-  {
-    "tags": [
-      "Thuban Form",
-      "Sketch"
-    ],
-    "href": "https://x.com/FaintAlcor/status/1640748522071814146",
-    "aspectRatio": 0.7069555302166477,
-    "parent": "Gladiator Sketch",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/gladiator_sketch_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/gladiator_sketch_1.webp",
-    "id": "f31eb727b02f4201f50110afd2427de9467f8f08dac0c3474a83e5b6",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/gladiator_sketch_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/gladiator_sketch_1.webp"
-  },
-  {
-    "tags": [
-      "Rastaban Form",
-      "Sketch"
-    ],
-    "href": "https://x.com/FaintAlcor/status/1630026310759186442?s=20",
-    "aspectRatio": 0.7069555302166477,
-    "parent": "Casual Cupid",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/casual_cupid_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/casual_cupid_1.webp",
-    "id": "1c020812dff21106b1021b87b0a610a08004c6b1d43dc052e53c9a96",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/casual_cupid_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/casual_cupid_1.webp"
-  },
-  {
-    "tags": [
-      "Rastaban Form",
-      "Superhero"
-    ],
-    "href": "https://skeb.jp/@harukaze110/works/34",
-    "aspectRatio": 0.7069555302166477,
-    "parent": "Scarlet Flame x Galactic B-Hero Suit",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "extra",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/scarlet_flame_x_galactic_b_hero_suit_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/scarlet_flame_x_galactic_b_hero_suit_1.webp",
-    "id": "0a0a0bd5d47a7a2c81cda973fe1816304b5c9e609eb623042a75dc2f",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/scarlet_flame_x_galactic_b_hero_suit_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/scarlet_flame_x_galactic_b_hero_suit_1.webp"
-  },
-  {
-    "tags": [
-      "Jupiter Form"
-    ],
-    "href": "",
-    "aspectRatio": 1,
-    "parent": "Jupiter Form α",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_form_%25CE%25B1_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_form_%25CE%25B1_1.webp",
-    "id": "b70a2013a8e0a60e051cc5e1283fc0a384f76f792f9edbcab680cc1c",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_form_%25CE%25B1_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_form_%25CE%25B1_1.webp"
-  },
-  {
-    "tags": [
-      "Jupiter Form"
-    ],
-    "href": "",
-    "aspectRatio": 1,
-    "parent": "Jupiter Form α",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 2
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_form_%25CE%25B1_2.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_form_%25CE%25B1_2.webp",
-    "id": "053908cd1e23ce13ed446c74a7f2a9d4a5275a0b629e9e03b9341495",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_form_%25CE%25B1_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_form_%25CE%25B1_2.webp"
-  },
-  {
-    "tags": [
-      "Hibernal Assassin",
-      "Knives",
-      "Rastaban Form",
-      "Techwear"
-    ],
-    "href": "https://skeb.jp/@mtd_pop/works/34",
-    "aspectRatio": 0.8572,
-    "parent": "Arknights Operator",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/arknights_operator_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/arknights_operator_1.webp",
-    "id": "a7c4ea2bbe12e805b2105dd79a6114df316d94c17a7a85c7acf62291",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/arknights_operator_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/arknights_operator_1.webp"
-  },
-  {
-    "tags": [
-      "Sketch",
-      "Thuban Form"
-    ],
-    "href": "https://x.com/FaintAlcor/status/1684228825369006080?s=20",
-    "aspectRatio": 0.7069555302166477,
-    "parent": "Summer Outfit 2023 Sketch",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/summer_outfit_2023_sketch_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/summer_outfit_2023_sketch_1.webp",
-    "id": "e528238f2eeb4ee243fdddd40b3d9fe0ec4a5ef47141ca4851e26263",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/summer_outfit_2023_sketch_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/summer_outfit_2023_sketch_1.webp"
-  },
-  {
-    "tags": [
-      "Thuban Form",
-      "Sketch"
-    ],
-    "href": "https://x.com/FaintAlcor/status/1695880435853627504?s=20",
-    "aspectRatio": 0.7069555302166477,
-    "parent": "Ronin Sketch",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ronin_sketch_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/ronin_sketch_1.webp",
-    "id": "206fc8651eb2da36820ee66c8cd12eab202ddf7b486b2d986eb6b72c",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ronin_sketch_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ronin_sketch_1.webp"
-  },
-  {
-    "tags": [
-      "AICore Form"
-    ],
-    "href": "",
-    "aspectRatio": 0.625,
-    "parent": "Halloween Daki",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/halloween_daki_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/halloween_daki_1.webp",
-    "id": "21bbb7621e437083cff31b3ed4a4fa442f564fe2ea9e35d63ca03d23",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/halloween_daki_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/halloween_daki_1.webp"
-  },
-  {
-    "tags": [
-      "Bodysuit",
-      "Superhero",
-      "Character Reference"
-    ],
-    "href": "https://skeb.jp/@ogu_aug12/works/9",
-    "aspectRatio": 2.816088002750086,
-    "parent": "Soma Hardlight Armor",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "extra",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/soma_hardlight_armor_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/soma_hardlight_armor_1.webp",
-    "id": "0beba2434e00ce46f0e93f5085a5ea5d71de36f8f53c8494af418672",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/soma_hardlight_armor_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_hardlight_armor_1.webp"
-  },
-  {
-    "tags": [],
-    "href": "https://x.com/FaintAlcor/status/1734983405102600206",
-    "aspectRatio": 1.114519427402863,
-    "parent": "Alcor Tap",
-    "rating": "mainstream",
-    "characters": [
-      "Castor"
-    ],
-    "altType": "extra",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_tap_1.gif",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_tap_1.webp",
-    "id": "0a6496f5cacc67c633690703d8bb8110fd5f1f64caf0dbca9a0415b4",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_tap_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_tap_1.webp"
-  },
-  {
-    "tags": [
-      "Aquarius Form",
-      "Sketch"
-    ],
-    "href": "https://x.com/FaintAlcor/status/1751444972904063414?s=20",
-    "aspectRatio": 0.7069555302166477,
-    "parent": "Farmer Sketch",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/farmer_sketch_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/farmer_sketch_1.webp",
-    "id": "ea25d223e620351a7b0a55dd8444ad9435b8f4332f9b5b5bf0dee4f0",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/farmer_sketch_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/farmer_sketch_1.webp"
-  },
-  {
-    "tags": [],
-    "href": "https://skeb.jp/@null_Vt/works/68",
-    "aspectRatio": 1.3153586904188734,
-    "parent": "Alcor's Logos",
-    "rating": "mainstream",
-    "characters": [
-      ""
-    ],
-    "altType": "cropped",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_logos_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_logos_1.webp",
-    "id": "5c098a556730ebea39ee5f071b9881348143a44f0fd2a83d5da32eb2",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcors_logos_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_logos_1.webp"
-  },
-  {
-    "tags": [],
-    "href": "https://skeb.jp/@null_Vt/works/68",
-    "aspectRatio": 1.333984375,
-    "parent": "Alcor's Logos",
-    "rating": "mainstream",
-    "characters": [
-      ""
-    ],
-    "altType": "cropped",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_logos_2.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_logos_2.webp",
-    "id": "76311afe2e6a2bb5967f54456ba1ba32a36ad6ee860347e363a0ad20",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcors_logos_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_logos_2.webp"
-  },
-  {
-    "tags": [
-      "Rastaban Form"
-    ],
-    "href": "",
-    "aspectRatio": 0.7587890625,
-    "parent": "Alcor Singlet",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_singlet_1.jpg",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_singlet_1.webp",
-    "id": "09daaacd009a4ab622bdeb0e940ebee9c160adbfde9e61a0761aeb3d",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_singlet_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_singlet_1.webp"
-  },
-  {
-    "tags": [
-      "Rastaban Form"
-    ],
-    "href": "https://twitter.com/FaintAlcor/status/1773203071377572338",
-    "aspectRatio": 0.7587890625,
-    "parent": "Alcor Singlet",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 2
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_singlet_2.jpg",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_singlet_2.webp",
-    "id": "68b48ce977dfe5a28281c6f30373702872c059679d364fe4ca63be40",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_singlet_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_singlet_2.webp"
-  },
-  {
-    "tags": [
-      "Eclipse Deity",
-      "Lances"
-    ],
-    "href": "https://x.com/FaintAlcor/status/1794393511862612210",
-    "aspectRatio": 0.8243310619910255,
-    "parent": "Eclipse Deity γ",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/eclipse_deity_%25CE%25B3_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/eclipse_deity_%25CE%25B3_1.webp",
-    "id": "9488a0a25437969d6308cfb88fd37833c826e1854e463c991490364a",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/eclipse_deity_%25CE%25B3_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/eclipse_deity_%25CE%25B3_1.webp"
-  },
-  {
-    "tags": [
-      "Jupiter Form"
-    ],
-    "href": "https://x.com/jw_bash/status/1799959705760023032",
-    "aspectRatio": 1.087686022760432,
-    "parent": "Lifting With Kyoto",
-    "rating": "general",
-    "characters": [
-      "Alcor",
-      "Kyoto"
-    ],
-    "altType": {
-      "pageNumber": 2,
-      "altNumber": 0
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/lifting_with_kyoto_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/lifting_with_kyoto_1.webp",
-    "id": "78c6b954498e4de53e6e063468246719b48d219053d4c9dd7049d64d",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/lifting_with_kyoto_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/lifting_with_kyoto_1.webp"
-  },
-  {
-    "tags": [
-      "Bodysuit",
-      "Castor",
-      "Eltanin Form",
-      "Indra Suit",
-      "Superhero"
-    ],
-    "href": "https://x.com/baogacc/status/1811509817779134671",
-    "aspectRatio": 0.7743933918430562,
-    "parent": "Castor Suit Engage!",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor",
-      "Joel"
-    ],
-    "altType": {
-      "pageNumber": 2,
-      "altNumber": 0
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_suit_engage_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/castor_suit_engage_1.webp",
-    "id": "368f403a14146f61bd2b2418370ea8499e2c4c34c6047ffc9f805b95",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/castor_suit_engage_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_suit_engage_1.webp"
-  },
-  {
-    "tags": [],
-    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3kzwkxn4m4i2s",
-    "aspectRatio": 1.2374100719424461,
-    "parent": "The Hamburger Accident",
-    "rating": "mainstream",
-    "characters": [
-      "Castor"
-    ],
-    "altType": "extra",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/the_hamburger_accident_1.jpg",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/the_hamburger_accident_1.webp",
-    "id": "746a43054bc52129a843e3c30154c6a561ef28ccc08963a21b0c10f1",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/the_hamburger_accident_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/the_hamburger_accident_1.webp"
-  },
-  {
-    "tags": [
-      "AICore Form"
-    ],
-    "href": "https://x.com/pawcrest/status/1825619442828718502",
-    "aspectRatio": 0.7960799095363739,
-    "parent": "We're not Accepting Visitors",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor",
-      "Castor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/were_not_accepting_visitors_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/were_not_accepting_visitors_1.webp",
-    "id": "a3224e3c97db12b1245a8bb44ded1f2c1180895d3b1a05304aa3559e",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/were_not_accepting_visitors_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/were_not_accepting_visitors_1.webp"
-  },
-  {
-    "tags": [
-      "Aldhibah Form",
-      "Bodysuit",
-      "Bow",
-      "Indra Suit",
-      "Superhero",
-      "Character Reference",
-      "Techwear"
-    ],
-    "href": "https://x.com/mochi_skymega/status/1827331834491105313",
-    "aspectRatio": 1.5,
-    "parent": "Triangle Shot",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor",
-      "Castor"
-    ],
-    "altType": "extra",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangle_shot_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/triangle_shot_1.webp",
-    "id": "55d2c9ffae322710503e5b35c7e5b50a9364a03291817fcb9d9d71b8",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/triangle_shot_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangle_shot_1.webp"
-  },
-  {
-    "tags": [
-      "Aldhibah Form",
-      "Bodysuit",
-      "Bow",
-      "Indra Suit",
-      "Superhero",
-      "Character Reference",
-      "Techwear"
-    ],
-    "href": "https://x.com/mochi_skymega/status/1827331834491105313",
-    "aspectRatio": 1.5,
-    "parent": "Triangle Shot",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor",
-      "Castor"
-    ],
-    "altType": "extra",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangle_shot_2.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/triangle_shot_2.webp",
-    "id": "afa72e184bfd20a1ab2e0caee039216e3a7e09b51a4a629e187786ef",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/triangle_shot_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangle_shot_2.webp"
-  },
-  {
-    "tags": [
-      "Rastaban Form",
-      "Sketch"
-    ],
-    "href": "https://x.com/FaintAlcor/status/1818149053839941913",
-    "aspectRatio": 0.7069555302166477,
-    "parent": "Hanfu Sketch",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/hanfu_sketch_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/hanfu_sketch_1.webp",
-    "id": "91d87b25339353a5f2d3d84325795eeeb5add38d530956593e484e7e",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/hanfu_sketch_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/hanfu_sketch_1.webp"
-  },
-  {
-    "tags": [
-      "Rastaban Form"
-    ],
-    "href": "https://x.com/rofukagazaki/status/1828752723132772536",
-    "aspectRatio": 0.70703125,
-    "parent": "Sweet Couple <3",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor",
-      "Lava"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/sweet_couple_3_1.jpg",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/sweet_couple_3_1.webp",
-    "id": "aa5993c655e7a9cbbd2d76ccd0421d07b2de3071bd3538c5c28b36ad",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/sweet_couple_3_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sweet_couple_3_1.webp"
-  },
-  {
-    "tags": [
-      "Eltanin Form"
-    ],
-    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3l7tysrcnds2h",
-    "aspectRatio": 0.7381284916201117,
-    "parent": "Pumpkin YCH",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 2
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/pumpkin_ych_2.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/pumpkin_ych_2.webp",
-    "id": "9064e65363ec58217d9d67f5bcaf3cf7a811d28528a56f790aca51e6",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/pumpkin_ych_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pumpkin_ych_2.webp"
-  },
-  {
-    "tags": [
-      "Eltanin Form"
-    ],
-    "href": "https://x.com/phy_sen/status/1832797211790320011",
-    "aspectRatio": 1.7776666666666667,
-    "parent": "Late Summer Evening at the Pier",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/late_summer_evening_at_the_pier_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/late_summer_evening_at_the_pier_1.webp",
-    "id": "068a88d9a88eeaed2e3ddc20d398eebbf401f76b89514a85a5a4a334",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/late_summer_evening_at_the_pier_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/late_summer_evening_at_the_pier_1.webp"
-  },
-  {
-    "tags": [
-      "Aldhibah Form",
-      "Estival Checker",
-      "Full Body",
-      "Hoodie",
-      "Techwear",
-      "Character Reference"
-    ],
-    "href": "https://x.com/Mino_llm/status/1874484453629948011",
-    "aspectRatio": 1.4056492742251863,
-    "parent": "Estival Outfit δ",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "extra",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/estival_outfit_%25CE%25B4_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/estival_outfit_%25CE%25B4_1.webp",
-    "id": "3fd54ceab5f57343b5fd58f0370c52e21c24ca2bcd5ffde4dcafdf88",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/estival_outfit_%25CE%25B4_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/estival_outfit_%25CE%25B4_1.webp"
-  },
-  {
-    "tags": [
-      "Triangulum Form"
-    ],
-    "href": "https://x.com/FSD_and_GF4656/status/1883369280726831605",
-    "aspectRatio": 0.75,
-    "parent": "Triangulum Form Illustration by FSD",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 2,
-      "altNumber": 0
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/triangulum_form_illustration_by_fsd_2.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/triangulum_form_illustration_by_fsd_2.webp",
-    "id": "b0b0fcdf7075e5b9e2d950d8795f35fb22f4780aa8d41d8efbc98c36",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/triangulum_form_illustration_by_fsd_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/triangulum_form_illustration_by_fsd_2.webp"
-  },
-  {
-    "tags": [
-      "Techwear",
-      "Thuban Form",
-      "Hibernal Assassin",
-      "Chibi"
-    ],
-    "href": "https://skeb.jp/@sakanesansan/works/299",
-    "aspectRatio": 0.9993337774816788,
-    "parent": "Mobile Wallpaper",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 2,
-      "altNumber": 0
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/mobile_wallpaper_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/mobile_wallpaper_1.webp",
-    "id": "42a67fca38bfed3123e0d42b44e4ff45e7841eea85057baea05746d3",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/mobile_wallpaper_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/mobile_wallpaper_1.webp"
-  },
-  {
-    "tags": [
-      "Aldhibah Form",
-      "Bodysuit",
-      "Lances"
-    ],
-    "href": "https://x.com/kaxak8/status/1888890664961892506",
-    "aspectRatio": 1.2340600575894694,
-    "parent": "Alcor Mech Suit γ",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_mech_suit_%25CE%25B3_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_mech_suit_%25CE%25B3_1.webp",
-    "id": "dadbda184824f4ed77a1df82b41c302f6f6edb7231436d90020819d9",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_mech_suit_%25CE%25B3_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_mech_suit_%25CE%25B3_1.webp"
-  },
-  {
-    "tags": [
-      "Aldhibah Form",
-      "Bodysuit",
-      "Lances"
-    ],
-    "href": "https://x.com/kaxak8/status/1888890664961892506",
-    "aspectRatio": 1.2340600575894694,
-    "parent": "Alcor Mech Suit γ",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "altNumber": 2
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_mech_suit_%25CE%25B3_2.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_mech_suit_%25CE%25B3_2.webp",
-    "id": "109e9fdff4723f4f61ceacda04e9d81d08a9399f2203af9cb529ffe7",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_mech_suit_%25CE%25B3_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_mech_suit_%25CE%25B3_2.webp"
-  },
-  {
-    "tags": [
-      "Aldhibah Form",
-      "Bodysuit",
-      "Lances"
-    ],
-    "href": "https://x.com/kaxak8/status/1888890664961892506",
-    "aspectRatio": 1.2340600575894694,
-    "parent": "Alcor Mech Suit γ",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_mech_suit_%25CE%25B3_3.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_mech_suit_%25CE%25B3_3.webp",
-    "id": "ad95a544d99e6a9b4563dc4202c6181e780228293c65e6ab6992042d",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_mech_suit_%25CE%25B3_3.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_mech_suit_%25CE%25B3_3.webp"
-  },
-  {
-    "tags": [
-      "Aldhibah Form",
-      "Bodysuit",
-      "Lances"
-    ],
-    "href": "https://x.com/kaxak8/status/1888890664961892506",
-    "aspectRatio": 1.2340600575894694,
-    "parent": "Alcor Mech Suit γ",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_mech_suit_%25CE%25B3_4.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_mech_suit_%25CE%25B3_4.webp",
-    "id": "eb4b061d5f25dadbefd9ad4f02ccf9c2294eeae611525a418f37f9bd",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_mech_suit_%25CE%25B3_4.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_mech_suit_%25CE%25B3_4.webp"
-  },
-  {
-    "tags": [
-      "Aldhibah Form",
-      "Autumnal Wavesniper",
-      "Bodysuit",
-      "Featured",
-      "Knives",
-      "Rastaban Form",
-      "Techwear"
-    ],
-    "href": "https://bsky.app/profile/if0.bsky.social/post/3li57cmpius2s",
-    "aspectRatio": 1.1955882352941176,
-    "parent": "Alcor Battle Artwork",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 0,
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_battle_artwork_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_battle_artwork_1.webp",
-    "id": "de227a71ae8206ff40b660a90c0fbdb7d1bdd303ddeeae92a79a9e49",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_battle_artwork_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_battle_artwork_1.webp"
-  },
-  {
-    "tags": [
-      "Hoodie",
-      "Rastaban Form"
-    ],
-    "href": "https://twitter.com/Cat_Mantis_Art/status/1436487151705726978?s=20",
-    "aspectRatio": 1.414516129032258,
-    "parent": "PNGTuber",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 1,
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/png_tuber_1.jpg",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/png_tuber_1.webp",
-    "id": "2c342dc73981961b2316335aa802f0cb971782e7177e67a3e9a6534e",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/png_tuber_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/png_tuber_1.webp"
-  },
-  {
-    "tags": [
-      "Hoodie",
-      "Rastaban Form",
-      "Sketch"
-    ],
-    "href": "https://x.com/FaintAlcor/status/1772635696072630361?s=20",
-    "aspectRatio": 0.7069555302166477,
-    "parent": "High Schooler Sketch",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/high_schooler_sketch_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/high_schooler_sketch_1.webp",
-    "id": "e1d7e283d620322245a266dc068cb6a7854ca15544fb25036e816a87",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/high_schooler_sketch_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/high_schooler_sketch_1.webp"
-  },
-  {
-    "tags": [
-      "Hoodie",
-      "Sketch",
-      "Thuban Form"
-    ],
-    "href": "https://x.com/FaintAlcor/status/1739687938533752924?s=20",
-    "aspectRatio": 0.7069555302166477,
-    "parent": "Winter Fashion Sketch",
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "recolor",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/winter_fashion_sketch_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/winter_fashion_sketch_1.webp",
-    "id": "2571972f31d0ee57969f027945b48dcf18b026d83294bea15bd694fb",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/winter_fashion_sketch_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/winter_fashion_sketch_1.webp"
-  },
-  {
-    "tags": [
-      "Bodysuit",
-      "Vernal",
-      "Eltanin Form"
-    ],
-    "href": "https://x.com/CheezyChezu/status/1554869095450849280?s=20",
-    "aspectRatio": 0.8266666666666667,
-    "parent": "Self Experimentation",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": {
-      "pageNumber": 1,
-      "altNumber": 0
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/self_experimentation_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/self_experimentation_1.webp",
-    "id": "7313c1986a8b9bd10f390c8511ed25ef3a4f7924292e8d41a7789f37",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/self_experimentation_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/self_experimentation_1.webp"
-  },
-  {
-    "tags": [
-      "Hoodie",
-      "Thuban Form"
-    ],
-    "href": "",
-    "aspectRatio": 1,
-    "parent": "Alcor Wow",
-    "rating": "general",
-    "characters": [
-      "Alcor",
-      "Castor"
-    ],
-    "altType": {
-      "altNumber": 1
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_wow_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_wow_1.webp",
-    "id": "d227efe9404106bfc16593e236c4d738d0527c36afbab47685e567e3",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_wow_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_wow_1.webp"
-  },
-  {
-    "tags": [
-      "Aldhibah Form",
-      "Bodysuit",
-      "Featured",
-      "Full Body",
-      "Illustration",
-      "Techwear",
-      "Character Reference"
-    ],
-    "href": "https://www.pixiv.net/en/artworks/127228736",
-    "aspectRatio": 1.3685624720107479,
-    "parent": "Cyberpunk Loadout Illustration",
-    "rating": "mainstream",
-    "characters": [
-      "Alcor"
-    ],
-    "altType": "extra",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cyberpunk_loadout_illustration_1.jpg",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cyberpunk_loadout_illustration_1.webp",
-    "id": "1130bd81c771903a43abf6b018316831577bef077c071413c79ff7b9",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cyberpunk_loadout_illustration_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cyberpunk_loadout_illustration_1.webp"
-  },
-  {
-    "title": "Cat Gun(?)",
-    "artist": "@zibao.bsky.social",
-    "tags": [],
-    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lmj3l2sa222b",
-    "published": "2025-04-11",
-    "aspectRatio": 0.58837890625,
-    "rating": "mainstream",
-    "characters": [
-      "Alcor",
-      "Lava"
-    ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cat_gun.jpg",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cat_gun.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cat_gun.webp",
-    "id": "4c8622f0bfe36322cb918e3367e5c790e2d51f4e632367a169fbb5db",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cat_gun.webp"
-  },
-  {
-    "title": "Summer Outfit 2025",
-    "artist": "@kurope.bsky.social",
-    "tags": [
-      "Chibi",
-      "Thuban Form"
-    ],
-    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lmvsseakhk26",
-    "published": "2025-04-16",
-    "aspectRatio": 0.7069555302166477,
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/summer_outfit_2025.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/summer_outfit_2025.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/summer_outfit_2025.webp",
-    "id": "19201d35c9894759aeb0bd1f22b84f064e703f433f091e9813d0556e",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/summer_outfit_2025.webp"
-  },
-  {
     "title": "Soma Sketchy Live Sketch by RC",
     "artist": "@fluxdestiny.bsky.social",
     "tags": [
@@ -7196,6 +7158,24 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/soma_sketchy_live_sketch_by_rc.webp"
   },
   {
+    "title": "Cat Gun(?)",
+    "artist": "@zibao.bsky.social",
+    "tags": [],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lmj3l2sa222b",
+    "published": "2025-04-11",
+    "aspectRatio": 0.58837890625,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Lava"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cat_gun.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cat_gun.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cat_gun.webp",
+    "id": "4c8622f0bfe36322cb918e3367e5c790e2d51f4e632367a169fbb5db",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cat_gun.webp"
+  },
+  {
     "title": "Alcor Bubble Tea Gift",
     "artist": "@fluxdestiny.bsky.social",
     "tags": [
@@ -7214,5 +7194,25 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_bubble_tea_gift.webp",
     "id": "0be4f6b1528b1aa7fb8f846f3b1f7b0079b9178f8aa612fe92935c29",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_bubble_tea_gift.webp"
+  },
+  {
+    "title": "Summer Outfit 2025",
+    "artist": "@kurope.bsky.social",
+    "tags": [
+      "Chibi",
+      "Thuban Form"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lmvsseakhk26",
+    "published": "2025-04-16",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/summer_outfit_2025.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/summer_outfit_2025.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/summer_outfit_2025.webp",
+    "id": "19201d35c9894759aeb0bd1f22b84f064e703f433f091e9813d0556e",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/summer_outfit_2025.webp"
   }
 ]
