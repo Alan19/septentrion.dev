@@ -7214,5 +7214,26 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/summer_outfit_2025.webp",
     "id": "19201d35c9894759aeb0bd1f22b84f064e703f433f091e9813d0556e",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/summer_outfit_2025.webp"
+  },
+  {
+    "title": "Fighting Game Outfit (Human Version)",
+    "artist": "@punipunishido.bsky.social",
+    "tags": [
+      "Aldhibah Form",
+      "Hoodie"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lne4nopvok2i",
+    "published": "2025-04-21",
+    "aspectRatio": 0.7666666666666667,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/fighting_game_outfit_human_version.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/fighting_game_outfit_human_version.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/fighting_game_outfit_human_version.webp",
+    "id": "7c7f8f86b3f90faae0b2d7af0bc227e744bc58617eab4c79a2c29f30",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/fighting_game_outfit_human_version.webp"
   }
 ]
