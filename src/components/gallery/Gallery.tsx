@@ -25,6 +25,7 @@ import {useQueryState} from "../../UseQueryState.tsx";
 import {FilterMode, getShownImages, imageSort, updateTags} from "./GalleryUtils.ts";
 import {AutocompleteFilterChip} from "./filters/AutocompleteFilterChip.tsx";
 
+// TODO Make paginated monthly mode the default (1 month increments?)
 export const Gallery = memo(function Gallery() {
     enum GalleryDisplayModes {monthly = 'monthly', all = 'all', paginated = 'paginated'}
 

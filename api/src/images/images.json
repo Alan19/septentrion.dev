@@ -7235,5 +7235,27 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/fighting_game_outfit_human_version.webp",
     "id": "7c7f8f86b3f90faae0b2d7af0bc227e744bc58617eab4c79a2c29f30",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/fighting_game_outfit_human_version.webp"
+  },
+  {
+    "title": "Blue Tiger",
+    "artist": "@greyy_arts",
+    "tags": [
+      "Rastaban Form",
+      "Hoodie",
+      "Vernal",
+      "Techwear"
+    ],
+    "href": "https://x.com/greyy_arts/status/1917217315017420832",
+    "published": "2025-04-29",
+    "aspectRatio": 1.4240156199153922,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/blue_tiger.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/blue_tiger.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/blue_tiger.webp",
+    "id": "821a4377dfb6ed73a847eb1574377c826a8c7929754ceda4019d5092",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/blue_tiger.webp"
   }
 ]
