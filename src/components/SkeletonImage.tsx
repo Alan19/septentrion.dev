@@ -14,7 +14,7 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
     skeletonStyle?: React.CSSProperties
 }) {
     const {src, style, onClick, alt, skeletonStyle, imageClassname, href} = props;
-    const debugSkeleton = true;
+    const debugSkeleton = false;
 
     const [isReady, setIsReady] = useState(isImageCached());
 
