@@ -7137,27 +7137,6 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_by_riscomofu.webp"
   },
   {
-    "title": "Soma Sketchy Live Sketch by RC",
-    "artist": "@fluxdestiny.bsky.social",
-    "tags": [
-      "Bodysuit",
-      "Hoodie",
-      "Sketch"
-    ],
-    "href": "",
-    "published": "2025-04-10",
-    "aspectRatio": 0.48486122792262404,
-    "rating": "general",
-    "characters": [
-      "Soma"
-    ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/soma_sketchy_live_sketch_by_rc.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/soma_sketchy_live_sketch_by_rc.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_sketchy_live_sketch_by_rc.webp",
-    "id": "d9421fa923f9c9bdb91ee85ea4a65b83db7faed9a959013433bc7d00",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/soma_sketchy_live_sketch_by_rc.webp"
-  },
-  {
     "title": "Cat Gun(?)",
     "artist": "@zibao.bsky.social",
     "tags": [],
@@ -7174,26 +7153,6 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cat_gun.webp",
     "id": "4c8622f0bfe36322cb918e3367e5c790e2d51f4e632367a169fbb5db",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cat_gun.webp"
-  },
-  {
-    "title": "Alcor Bubble Tea Gift",
-    "artist": "@fluxdestiny.bsky.social",
-    "tags": [
-      "Bodysuit",
-      "Aldhibah Form"
-    ],
-    "href": "",
-    "published": "2025-04-14",
-    "aspectRatio": 0.8430366760707874,
-    "rating": "general",
-    "characters": [
-      "Alcor"
-    ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_bubble_tea_gift.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_bubble_tea_gift.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_bubble_tea_gift.webp",
-    "id": "0be4f6b1528b1aa7fb8f846f3b1f7b0079b9178f8aa612fe92935c29",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_bubble_tea_gift.webp"
   },
   {
     "title": "Summer Outfit 2025",
@@ -7257,5 +7216,50 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/blue_tiger.webp",
     "id": "821a4377dfb6ed73a847eb1574377c826a8c7929754ceda4019d5092",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/blue_tiger.webp"
+  },
+  {
+    "title": "Become One!",
+    "artist": "@TaroTyger",
+    "tags": [
+      "Superhero",
+      "AICore Form",
+      "Eltanin Form"
+    ],
+    "href": "https://x.com/TaroTyger/status/1918659832208597045",
+    "published": "2025-05-03",
+    "aspectRatio": 0.8333333333333334,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/become_one.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/become_one.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/become_one.webp",
+    "id": "971aaea0ca4b214ef7c3a587494003dbb22e760fa40d8335663d5596",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/become_one.webp"
+  },
+  {
+    "title": "Sketches from RC's Sketchy Lives - April 2025",
+    "artist": "@fluxdestiny.bsky.social",
+    "tags": [
+      "Bodysuit",
+      "Aldhibah Form",
+      "Sketchpage",
+      "Sketch"
+    ],
+    "href": "",
+    "published": "2025-04-29",
+    "aspectRatio": 0.6590544871794872,
+    "rating": "general",
+    "characters": [
+      "Alcor",
+      "Wheeler",
+      "Soma"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/sketches_from_r_cs_sketchy_live_april_2025.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/sketches_from_r_cs_sketchy_live_april_2025.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sketches_from_r_cs_sketchy_live_april_2025.webp",
+    "id": "d9b22aa6c0786f424198cadd15b1a02e8fe63eeadd914b851f3b4f74",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/sketches_from_r_cs_sketchy_live_april_2025.webp"
   }
 ]

@@ -14,6 +14,7 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
     skeletonStyle?: React.CSSProperties
 }) {
     const {src, style, onClick, alt, skeletonStyle, imageClassname, href} = props;
+    const debugSkeleton = true;
 
     const [isReady, setIsReady] = useState(isImageCached());
 
@@ -39,7 +40,7 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
 
     }, [src]);
 
-    if (isReady) {
+    if (isReady && !debugSkeleton) {
         const img = <img alt={alt} loading={"lazy"} className={imageClassname} onClick={onClick} style={{display: 'block', ...style}} src={src}/>;
         const renderedImage = href ? <a target={'_blank'} style={{height: 'min-content'}} href={href}>{img}</a> : img
         return <>

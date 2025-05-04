@@ -75,7 +75,7 @@ export function CharactersPage() {
     function renderCharacterBadgeRow(characters: CharacterLink[]) {
         return characters.map(value => {
             if (value.linkPath) {
-                return <Grid item md={3} xs={6} key={value.linkPath}>
+                return <Grid item md={3} xs={6} key={value.linkPath} style={{aspectRatio: 1}}>
                     <Link to={value.linkPath}>
                         <div className={"character-badge"} style={{padding: 8}}>
                             <SkeletonImage src={value.image} style={{display: "block", width: '100%', borderRadius: 8}}/>
@@ -83,7 +83,7 @@ export function CharactersPage() {
                     </Link>
                 </Grid>;
             } else {
-                return <Grid item md={3} xs={6} key={value.linkPath}>
+                return <Grid item md={3} xs={6} key={value.linkPath} style={{aspectRatio: 1}}>
                     <div style={{padding: 8}} className={"character-badge disabled"}>
                         <SkeletonImage src={value.image} style={{display: "block", width: '100%', borderRadius: 8}}/>
                     </div>
