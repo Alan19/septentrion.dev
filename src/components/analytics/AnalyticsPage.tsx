@@ -71,11 +71,11 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {sortedArtistRanking.filter(value => Number(value[0]) !== 1).map((value, index) => <TableRow>
+                                {sortedArtistRanking.filter(value => Number(value[0]) > 2).map((value, index) => <TableRow key={index}>
                                     <TableCell>{index + 1}</TableCell>
                                     <TableCell>{value[0]}</TableCell>
                                     <TableCell>
-                                        <div style={{display: "flex", gap: 8, flexWrap: "wrap"}}>{value[1].map(artistHandle => <a target={"noreferrer noopener"} href={getHref(artistHandle)}>
+                                        <div style={{display: "flex", gap: 8, flexWrap: "wrap"}}>{value[1].map(artistHandle => <a key={artistHandle} target={"noreferrer noopener"} href={getHref(artistHandle)}>
                                             <Chip size={"small"} label={artistHandle}/></a>)}
                                         </div>
                                     </TableCell>
@@ -90,7 +90,7 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
                     <>
                         <Typography variant={"h5"} style={{marginTop: 8, marginBottom: 8}} color={"var(--md-sys-color-secondary)"}>Artwork Publish Date Heatmap</Typography>
                         <Stack spacing={2}>
-                            {Array.from(new Set(images.map(value => value.published.substring(0, 4)))).sort((a, b) => b.localeCompare(a)).map(value => <Paper style={{padding: 8}}>
+                            {Array.from(new Set(images.map(value => value.published.substring(0, 4)))).sort((a, b) => b.localeCompare(a)).map(value => <Paper key={value} style={{padding: 8}}>
                                 <Typography variant={"h6"} color={"var(--md-sys-color-tertiary)\"}>"}>{value}</Typography>
                                 {/*We have to use a hacky workaround to make the first date work*/}
                                 <CalendarHeatmap classForValue={getClassForHeatmapSquare}

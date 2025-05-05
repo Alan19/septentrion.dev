@@ -31,7 +31,7 @@ export function SocialsLinks() {
             />
 
             <Stack marginTop={2} spacing={1}>
-                <InternalLinkButton icon={<CollectionsIcon/>} text={"Gallery"} link={'/gallery?filters=Featured'}/>
+                <InternalLinkButton icon={<CollectionsIcon/>} text={"Gallery"} link={'/gallery'}/>
                 <InternalLinkButton icon={<FontAwesomeIcon icon={faDragon}/>} text={"Characters"} link={'/about'}/>
             </Stack>
         </>

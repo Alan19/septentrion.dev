@@ -80,17 +80,6 @@ export function Navigation(props: Readonly<{ children: React.JSX.Element }>) {
         </DialogContent>
     </Dialog>;
 
-    // TODO Rethink how to style this
-    let castorStampStyle = location !== '/' && {
-        backgroundColor: drawerColor,
-        backgroundImage: 'url(castor_stamp.png)',
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
-        backgroundPosition: "right 24px bottom 24px",
-        backgroundBlendMode: appMode === 'light' ? 'color-burn' : 'darken',
-        backgroundSize: "80vh",
-    };
-
     const links = [
         {
             selectedIcon: <Home/>,
@@ -115,15 +104,17 @@ export function Navigation(props: Readonly<{ children: React.JSX.Element }>) {
             icon: <BookOutlined/>,
             label: "Lore",
             path: "/lore"
-        },
-        {
+        }
+    ]
+
+    if (process.env.NODE_ENV === "development") {
+        links.push({
             selectedIcon: <Search/>,
             icon: <SearchOutlined/>,
             label: "Analytics",
             path: "/analytics"
-        },
-
-    ]
+        })
+    }
 
     if (mediumOrAbove) {
         return <Box style={{display: "flex", minHeight: '100vh'}}>
@@ -141,7 +132,7 @@ export function Navigation(props: Readonly<{ children: React.JSX.Element }>) {
                 padding: "24px 16px"
             }}>
                 <Stack spacing={'12px'} style={{flex: 1}}>
-                    {links.map(value => <NavigationRailLink selectedButton={value.selectedIcon} button={value.icon} label={value.label} path={value.path}/>)}
+                    {links.map(value => <NavigationRailLink key={value.label} selectedButton={value.selectedIcon} button={value.icon} label={value.label} path={value.path}/>)}
                 </Stack>
 
                 <div className={`navigation-rail-item`} style={{display: 'grid', alignItems: 'center'}}>
