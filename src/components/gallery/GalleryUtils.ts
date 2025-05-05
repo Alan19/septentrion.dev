@@ -19,7 +19,7 @@ export function imageSort(a: ImageEntry, b: ImageEntry, mainImages: ImageInforma
 }
 
 export function getMonthYearPairsInImageSet(images: ImageInformation[]): Set<string> {
-    return new Set(images.filter(value => value.published !== undefined).map(value => value.published.substring(0, 7)));
+    return new Set(images.map(value => value.published.substring(0, 7)));
 }
 
 export function getShownImages(images: ImageEntry[], selectedFilters: SelectedFilters, filterMode: "and" | "or", altDisplaySettings: AltSettings) {
@@ -50,5 +50,6 @@ export function updateTags(tags: ArtTag[], selectedImages: string[], add = true)
         .then((value) => console.log("Finished updating tags on the following artworks: ", value))
         .catch((reason) => console.log(reason))
 }
+
 
 export enum FilterMode {and = "and", or = "or"}

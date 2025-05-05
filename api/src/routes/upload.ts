@@ -1,11 +1,11 @@
 import {Request, Response} from 'express';
 import sharp, {ResizeOptions, Sharp} from "sharp";
-import _ from "lodash";
 import AWS from "aws-sdk";
 import {sha3_224} from "js-sha3";
 import fs from "fs";
 import path from "path";
 import {AltInformation, ImageInformation} from '../images/ImageInformation';
+import {prepareFileName} from "../utils/utils";
 
 async function getMainImageEntryFields(file: Express.Multer.File, title: string, bucket: string, characters: string, tags: string, altNumber?: number) {
     const sharpBuffer = sharp(file.buffer);
@@ -81,11 +81,6 @@ export async function uploadImageAlt(req: Request, res: Response) {
     } else {
         res.status(422).send('No file attached!');
     }
-}
-
-
-export function prepareFileName(title: string) {
-    return encodeURIComponent(_.snakeCase(title));
 }
 
 function uploadFile(bucket: string, fileName: string, buffer: Buffer, contentType: string) {
