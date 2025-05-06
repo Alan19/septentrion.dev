@@ -122,7 +122,7 @@ export default function Uploader(props: Readonly<{ loadImageInfo: () => Promise<
                 message="Artwork uploaded!"
             />
             {
-                isDevelopment && <Button
+                <Button
                     variant={"filled"}
                     name={"Upload"}
                     color="primary"

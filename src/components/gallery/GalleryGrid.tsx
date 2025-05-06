@@ -55,7 +55,6 @@ function getMonthlyGalleries(displayedImages: (ImageInformation | AltInformation
         .map(value => value.split("-"))
         .map(value => value.map(Number));
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    console.log(monthsAndYearsWithImages)
     return monthsAndYearsWithImages.map((yearMonth) => {
         const [year, month] = yearMonth;
         return <Fragment key={yearMonth.join(" ")}>

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Autocomplete, Container, FormControlLabel, Grid2 as Grid, Pagination, Radio, RadioGroup, Stack, TextField, Typography, useMediaQuery,} from "@mui/material";
+import {Container, FormControlLabel, Grid2 as Grid, Pagination, Radio, RadioGroup, Stack, Typography, useMediaQuery,} from "@mui/material";
 import {ImageEntry, isImageInformation} from "../../../api/src/images/ImageInformation.ts";
 import "./gallery.css";
 import {useTagHooks} from "./UseTagHooks";
@@ -9,7 +9,7 @@ import {ResizeObserver} from '@juggle/resize-observer'
 import {FilterPane} from "./FilterPane";
 import {RouteWithSubpanel} from "../common/RouteWithSubpanel";
 import {createSearchParams, useNavigate, useSearchParams} from "react-router-dom";
-import {Bookmark, BookmarkAdd, BookmarkRemove, Cancel, Share} from "@mui/icons-material";
+import {Share} from "@mui/icons-material";
 import {ArtTag} from "../../../api/src/images/TagUtils.ts";
 import {Button} from "@mui/material-next";
 import {useIsDevelopment} from "./UseIsDevelopment";
@@ -17,10 +17,10 @@ import {useAltDisplaySettings} from "./useAltDisplaySettings";
 import {materialDesign2Theme} from "../../MaterialDesign2Theme.tsx";
 import {useDocumentTitle} from "usehooks-ts";
 import {useQueryState} from "../../UseQueryState.tsx";
-import {FilterMode, getMonthYearPairsInImageSet, getShownImages, imageSort, updateTags} from "./GalleryUtils.ts";
-import {AutocompleteFilterChip} from "./filters/AutocompleteFilterChip.tsx";
+import {FilterMode, getMonthYearPairsInImageSet, getShownImages, imageSort} from "./GalleryUtils.ts";
 import {GalleryDisplayModes} from "./GalleryDisplayModes.tsx";
 import {GalleryGrid} from "./GalleryGrid.tsx";
+import {BatchTagging} from "../BatchTagging.tsx";
 
 export function Gallery() {
     const {filters, images, loadImageInfo, imageEntries} = useTagHooks();
@@ -72,7 +72,6 @@ export function Gallery() {
 
     useDocumentTitle("Gallery");
 
-    console.log(getMonthYearPairsInImageSet(shownImages.filter(value => isImageInformation(value))))
     const content = <Container>
         <Typography variant={"h3"} fontFamily={"Potra"} color={"var(--md-sys-color-primary)"}>Alcor's Gallery</Typography>
         <div ref={ref}></div>
@@ -117,26 +116,10 @@ export function Gallery() {
                     size={"small"}>
                 <Share/>
             </Button>
-            <Uploader loadImageInfo={loadImageInfo}/>
-            {/*TODO Extract this into it's own component*/}
-            {isDevelopment && (batchTagEnabled ? <div style={{display: 'flex', gap: 8, width: '100%'}}>
-                <Autocomplete multiple
-                              style={{flex: 1}}
-                              renderInput={(params) => <TextField
-                                  {...params}
-                                  variant="filled"
-                                  label="Tags"
-                                  size={"small"}
-                              />}
-                              value={batchTagging}
-                              onChange={(_event, value) => setBatchTagging(value as ArtTag[])}
-                              size={"medium"}
-                              renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip key={option} option={option} tagProps={getTagProps({index})}/>)}
-                              options={Object.values(ArtTag)}/>
-                <Button variant={"filled"} color={"primary"} onClick={() => updateTags(batchTagging, selectedImages)}><BookmarkAdd/></Button>
-                <Button variant={"filled"} color={"primary"} onClick={() => updateTags(batchTagging, selectedImages, false)}><BookmarkRemove/></Button>
-                <Button variant={"filled"} color={"secondary"} onClick={() => setBatchTagEnabled(false)}><Cancel/></Button>
-            </div> : <Button startIcon={<Bookmark/>} variant={"filled"} color={"primary"} onClick={() => setBatchTagEnabled(true)}>Batch Tag</Button>)}
+            {isDevelopment && <>
+                <Uploader loadImageInfo={loadImageInfo}/>
+                <BatchTagging isTagging={batchTagEnabled} setIsTagging={setBatchTagEnabled} tags={batchTagging} setTags={setBatchTagging} selectedImages={selectedImages}/>
+            </>}
         </Stack>
     </Container>;
     return <RouteWithSubpanel panel={<FilterPane filterMode={filterMode} setFilterMode={setFilterMode} filters={filters} setFilters={handleTagChange} altDisplaySettings={altDisplaySettings}/>} routeContent={content}/>;
