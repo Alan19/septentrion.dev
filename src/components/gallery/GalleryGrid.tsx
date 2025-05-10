@@ -44,7 +44,7 @@ function getImageInJustifiedGrid(value: AltInformation | ImageInformation, hasAl
                          isSelected={isSelected}
                          onClickWhenTagging={() => context.setSelectedImages(prevState => _.xor(prevState, [value.id]))}
                          searchParams={context.searchParams}
-                         src={value.webp}
+                         src={value.thumbnailUrl}
                          key={imageName}
                          isTagging={context.isTagging}/>;
 }

@@ -11,6 +11,7 @@ import {ArrowBack, ArrowOutward} from "@mui/icons-material";
 import {useTagHooks} from "../UseTagHooks";
 import {M3Pane} from "../../common/M3Pane";
 import {materialDesign2Theme} from "../../../MaterialDesign2Theme.tsx";
+import {useDocumentTitle} from "usehooks-ts";
 
 
 export function ArtworkPage() {
@@ -21,7 +22,6 @@ export function ArtworkPage() {
     const searchParamString = searchParams.toString()
     const parentImageInfo = getParentImage(imageId, imageEntries);
     const currentImageInfo = imageEntries.find(value => value.id === imageId);
-
     const isMediumOrAbove = useMediaQuery(materialDesign2Theme.breakpoints.up("md"));
 
     function capitalizeFirstLetter(input: string) {
@@ -45,6 +45,10 @@ export function ArtworkPage() {
     function goToPreviousPage() {
         navigate({pathname: '/gallery', search: searchParamString});
     }
+
+    const title = parentImageInfo ? `"${parentImageInfo.title}" - Alcor's Gallery` : "Alcor's Gallery"
+
+    useDocumentTitle(title, {preserveTitleOnUnmount: false})
 
     if (parentImageInfo && currentImageInfo) {
         const {webp, aspectRatio, href, tags, rating, characters} = currentImageInfo;

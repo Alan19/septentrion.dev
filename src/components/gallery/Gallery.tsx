@@ -70,7 +70,7 @@ export function Gallery() {
 
     const {isDevelopment} = useIsDevelopment();
 
-    useDocumentTitle("Gallery");
+    useDocumentTitle("Alcor's Gallery");
 
     const content = <Container>
         <Typography variant={"h3"} fontFamily={"Potra"} color={"var(--md-sys-color-primary)"}>Alcor's Gallery</Typography>

@@ -7261,5 +7261,28 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sketches_from_r_cs_sketchy_live_april_2025.webp",
     "id": "d9b22aa6c0786f424198cadd15b1a02e8fe63eeadd914b851f3b4f74",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/sketches_from_r_cs_sketchy_live_april_2025.webp"
+  },
+  {
+    "title": "Sora Illustration Commission",
+    "artist": "@sora00925",
+    "tags": [
+      "Techwear",
+      "Aldhibah Form",
+      "Bodysuit",
+      "Knives"
+    ],
+    "href": "https://x.com/sora00925/status/1920828732995981626",
+    "published": "2025-05-09",
+    "aspectRatio": 0.7872,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/sora_illustration_commission.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/sora_illustration_commission.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sora_illustration_commission.webp",
+    "id": "5d0d2b147876ae1bc2479070ad6d6e294bdbb15b46d550e2ebd1193b",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/sora_illustration_commission.webp"
   }
 ]
