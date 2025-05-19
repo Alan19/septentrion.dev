@@ -11,10 +11,10 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
     alt?: string,
     imageClassname?: string,
     href?: string,
-    skeletonStyle?: React.CSSProperties
+    skeletonStyle?: React.CSSProperties,
+    debugSkeleton?: boolean
 }) {
-    const {src, style, onClick, alt, skeletonStyle, imageClassname, href} = props;
-    const debugSkeleton = false;
+    const {src, style, onClick, alt, skeletonStyle, imageClassname, href, debugSkeleton = false} = props;
 
     const [isReady, setIsReady] = useState(isImageCached());
 
@@ -37,7 +37,7 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
         loadImg().then(() => {
             setIsReady(true);
         });
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [src]);
 
     if (isReady && !debugSkeleton) {
@@ -58,6 +58,6 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
             <Fade in>{renderedImage}</Fade>
         </>;
     } else {
-        return <Skeleton width={'100%'} height={'100%'} style={skeletonStyle}/>;
+        return <Skeleton style={skeletonStyle}/>;
     }
 })

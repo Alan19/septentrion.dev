@@ -21,6 +21,7 @@ export function GalleryImage(props: Readonly<{
         src={src}
         imageClassname={"artImage"}
         style={croppedImageWithCurvedBorder}
+        debugSkeleton={false}
     />
     const taggingImage = <div onClick={onClickWhenTagging}
                               role={"button"}

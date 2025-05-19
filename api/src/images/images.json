@@ -7306,5 +7306,49 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/saving_the_day.webp",
     "id": "a727f00b50d81c707cf89b33c5f4c863a03a7ee8d4d21bfc24c0f8ef",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/saving_the_day.webp"
+  },
+  {
+    "title": "A Commission to Draw Together – Alcor",
+    "artist": "@SiN_remyheart",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/SiN_remyheart/status/1923477578993762745",
+    "published": "2025-05-16",
+    "aspectRatio": 1.3060522696011003,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/a_commission_to_draw_together_alcor.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/a_commission_to_draw_together_alcor.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/a_commission_to_draw_together_alcor.webp",
+    "id": "5499a322cdb2632a318933ecaf344df029d1b266c826c9c6f1217f14",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/a_commission_to_draw_together_alcor.webp"
+  },
+  {
+    "tags": [
+      "Character Reference",
+      "Eltanin Form",
+      "Standard Outfit",
+      "Techwear",
+      "Bodysuit"
+    ],
+    "href": "https://x.com/Nokkuroku/status/1921981254825636336",
+    "aspectRatio": 2.6774193548387095,
+    "parent": "Saving the Day!",
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/saving_the_day_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/saving_the_day_1.webp",
+    "id": "80a75d835bc3bf96ccf572de4ea7aa5bc2081ffb5e47018a441158ad",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/saving_the_day_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/saving_the_day_1.webp"
   }
 ]
