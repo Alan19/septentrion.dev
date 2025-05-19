@@ -58,6 +58,6 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
             <Fade in>{renderedImage}</Fade>
         </>;
     } else {
-        return <Skeleton style={skeletonStyle}/>;
+        return <Skeleton width={'100%'} height={'100%'} style={skeletonStyle}/>;
     }
 })
