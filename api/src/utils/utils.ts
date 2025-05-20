@@ -1,5 +1,6 @@
 import {AltInformation, ImageInformation, isImageInformation} from "../images/ImageInformation";
 import {snakeCase} from "lodash";
+import filenamify from "filenamify";
 
 export function getPublishedDate(item: ImageInformation | AltInformation, allImages: (ImageInformation | AltInformation)[]) {
     return isImageInformation(item) ? item.published : allImages
@@ -8,5 +9,5 @@ export function getPublishedDate(item: ImageInformation | AltInformation, allIma
 }
 
 export function prepareFileName(title: string) {
-    return encodeURIComponent(snakeCase(title));
+    return filenamify(snakeCase(title));
 }

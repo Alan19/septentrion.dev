@@ -122,7 +122,7 @@ export function ArtworkPage() {
                                     <Typography variant={"h5"}>Alts</Typography>
                                     <ImageList cols={3}>
                                         {altsInfo?.filter(value => isAltTypeComplex(value.altType)).sort((a, b) => sortAlts(a, b)).map((value, index) =>
-                                            <ImageListItem key={index}>
+                                            <ImageListItem key={`${value.parent}_${index}`}>
                                                 <img className={"dialog-image"}
                                                      onClick={() => navigate({pathname: `/gallery/${value.id}`, search: searchParamString})}
                                                      style={{width: "100%"}}
@@ -135,8 +135,7 @@ export function ArtworkPage() {
                                     <Typography variant={"h5"}>Extras</Typography>
                                     <ImageList cols={3}>
                                         {altsInfo?.filter(value => !isAltTypeComplex(value.altType)).map((value, index) => <ImageListItem key={index}>
-                                            <img
-                                                className={"dialog-image"}
+                                            <img className={"dialog-image"}
                                                 onClick={() => navigate({pathname: `/gallery/${value.id}`, search: searchParamString})}
                                                 style={{width: "100%"}}
                                                 src={value.thumbnailUrl}/>
