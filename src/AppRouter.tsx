@@ -20,7 +20,7 @@ export function AppRouter() {
             <Route path=":id" element={<ArtworkPage/>}/>
         </Route>
 
-        {process.env.NODE_ENV === "development" && <Route path="/analytics" element={<AnalyticsPage/>}/>}
+        <Route path="/analytics" element={<AnalyticsPage/>}/>
         <Route path="/about" element={<AboutMePage/>}/>
 
         <Route path="/lore">

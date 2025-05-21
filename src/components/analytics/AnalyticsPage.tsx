@@ -1,29 +1,15 @@
 import {useTagHooks} from "../gallery/UseTagHooks";
 import React, {memo, ReactNode} from "react";
-import {Grid, Paper, Stack, Table, TableBody, TableCell, TableHead, TableRow, Tooltip, Typography} from "@mui/material";
-import Chip from "@mui/material-next/Chip";
+import {Container, Paper, Stack, Tooltip, Typography} from "@mui/material";
 import CalendarHeatmap, {ReactCalendarHeatmapValue} from 'react-calendar-heatmap'
 import 'react-calendar-heatmap/dist/styles.css';
 import {M3Pane} from "../common/M3Pane";
-import {getHref} from "../../../api/src/images/ImageInformation.ts";
 import {useDocumentTitle} from "usehooks-ts";
+import {PageHeader} from "../lore/PageHeader.tsx";
 
 export const AnalyticsPage = memo(function AnalyticsPage() {
     const {images} = useTagHooks();
     useDocumentTitle("Commission Analytics");
-
-    const artistCount: Record<string, number> = images.reduce<Record<string, number>>((previousValue, currentValue) => {
-        previousValue[currentValue.artist] = (previousValue[currentValue.artist] ?? 0) + 1;
-        return previousValue;
-    }, {});
-
-    // Take the map of artists and the number of artworks I have from them, and collect the ones with the same number into one object
-    const artistRanking = Object.entries(artistCount).reduce<Record<number, string[]>>((previousValue, currentValue) => {
-        const [artistHandle, artworksFromArtist] = currentValue;
-        return ({...previousValue, [artworksFromArtist]: (previousValue[artworksFromArtist] ?? []).concat(artistHandle)});
-    }, {});
-
-    const sortedArtistRanking = Object.entries(artistRanking).sort((a, b) => Number(b[0]) - Number(a[0]));
 
     const publishedDates: ReactCalendarHeatmapValue<string>[] = images.reduce<ReactCalendarHeatmapValue<string>[]>((previousValue, currentValue) => {
         const find = previousValue.find(value => value.date === currentValue.published);
@@ -56,57 +42,24 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
         }
     }
 
-    return (
-        <Grid container spacing={2}>
-            <Grid item md={6}>
-                <M3Pane lastElement={false}>
-                    <>
-                        <Typography variant={"h5"} color={"var(--md-sys-color-secondary)"}>Artist Commission Counts</Typography>
-                        <Table>
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>Ranking</TableCell>
-                                    <TableCell>Artwork Count</TableCell>
-                                    <TableCell>Artist(s)</TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {sortedArtistRanking.filter(value => Number(value[0]) > 2).map((value, index) => <TableRow key={index}>
-                                    <TableCell>{index + 1}</TableCell>
-                                    <TableCell>{value[0]}</TableCell>
-                                    <TableCell>
-                                        <div style={{display: "flex", gap: 8, flexWrap: "wrap"}}>{value[1].map(artistHandle => <a key={artistHandle} target={"noreferrer noopener"} href={getHref(artistHandle)}>
-                                            <Chip size={"small"} label={artistHandle}/></a>)}
-                                        </div>
-                                    </TableCell>
-                                </TableRow>)}
-                            </TableBody>
-                        </Table>
-                    </>
-                </M3Pane>
-            </Grid>
-            <Grid item md={6}>
-                <M3Pane>
-                    <>
-                        <Typography variant={"h5"} style={{marginTop: 8, marginBottom: 8}} color={"var(--md-sys-color-secondary)"}>Artwork Publish Date Heatmap</Typography>
-                        <Stack spacing={2}>
-                            {Array.from(new Set(images.map(value => value.published.substring(0, 4)))).sort((a, b) => b.localeCompare(a)).map(value => <Paper key={value} style={{padding: 8}}>
-                                <Typography variant={"h6"} color={"var(--md-sys-color-tertiary)\"}>"}>{value}</Typography>
-                                {/*We have to use a hacky workaround to make the first date work*/}
-                                <CalendarHeatmap classForValue={getClassForHeatmapSquare}
-                                                 showWeekdayLabels
-                                                 startDate={`${Number.parseInt(value) - 1}-12-31`}
-                                                 values={publishedDates}
-                                                 transformDayElement={(element, value) => {
-                                                     // @ts-expect-error Something is wrong with the types module, the element should be an element object, not props, so we put an element here and suppress the error
-                                                     return getSquareElement(element, value);
-                                                 }}
-                                                 endDate={`${value}-12-31`}/>
-                            </Paper>)}
-                        </Stack>
-                    </>
-                </M3Pane>
-            </Grid>
-        </Grid>
-    );
+    return <M3Pane>
+        <Container>
+            <PageHeader title={"Commission Heatmap"}/>
+            <Stack spacing={2}>
+                {Array.from(new Set(images.map(value => value.published.substring(0, 4)))).sort((a, b) => b.localeCompare(a)).map(value => <Paper key={value} style={{padding: 8}}>
+                    <Typography variant={"h6"} color={"var(--md-sys-color-tertiary)\"}>"}>{value}</Typography>
+                    {/*We have to use a hacky workaround to make the first date work*/}
+                    <CalendarHeatmap classForValue={getClassForHeatmapSquare}
+                                     showWeekdayLabels
+                                     startDate={`${Number.parseInt(value) - 1}-12-31`}
+                                     values={publishedDates}
+                                     transformDayElement={(element, value) => {
+                                         // @ts-expect-error Something is wrong with the types module, the element should be an element object, not props, so we put an element here and suppress the error
+                                         return getSquareElement(element, value);
+                                     }}
+                                     endDate={`${value}-12-31`}/>
+                </Paper>)}
+            </Stack>
+        </Container>
+    </M3Pane>
 });

@@ -20,7 +20,7 @@ interface GalleryContext {
 
 function createJustifiedGrid(images: (ImageInformation | AltInformation)[], context: GalleryContext) {
     return <TSJustifiedLayout width={context.width}
-                              targetRowHeight={320}
+                              targetRowHeight={350}
                               targetRowHeightTolerance={0.2}
                               rowSpacing={8}
                               itemSpacing={8}

@@ -104,17 +104,14 @@ export function Navigation(props: Readonly<{ children: React.JSX.Element }>) {
             icon: <BookOutlined/>,
             label: "Lore",
             path: "/lore"
-        }
-    ]
-
-    if (process.env.NODE_ENV === "development") {
-        links.push({
+        },
+        {
             selectedIcon: <Search/>,
             icon: <SearchOutlined/>,
             label: "Analytics",
             path: "/analytics"
-        })
-    }
+        }
+    ]
 
     if (mediumOrAbove) {
         return <Box style={{display: "flex", minHeight: '100vh'}}>
