@@ -826,10 +826,10 @@
     ],
     "altType": "cropped",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy_1.gif",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/beach_boy_1.webp",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy_1.gif",
     "id": "43b04ba3224fcf28a4c59d1812145f0b1986c4539362b5b6a86af4bf",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/beach_boy_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/beach_boy_1.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy_1.gif",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/beach_boy_1.gif"
   },
   {
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/couple_s_sketchpage_2022.jpg",
@@ -2369,10 +2369,10 @@
     ],
     "altType": "cropped",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train_2.gif",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/evening_train_1.webp",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train_2.gif",
     "id": "f31ef10507db0a007f0c7141f4a058ee0409bf80e26ec4155350fcd4",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/evening_train_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/evening_train_1.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train_2.gif",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/evening_train_2.gif"
   },
   {
     "src": "https://pbs.twimg.com/media/FnHp4nWaUAA-lgD?format=jpg&name=large",
@@ -2416,10 +2416,10 @@
     ],
     "altType": "cropped",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/special_archery_training_%25F0%259F%258F%25B9_1.gif",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/special_archery_training_%F0%9F%8F%B9_1.webp",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/special_archery_training_%25F0%259F%258F%25B9_1.gif",
     "id": "a8af902b232b2d0e19d4b0044e338ec9c17773768f36d4b461fe349a",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/special_archery_training_%F0%9F%8F%B9_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/special_archery_training_%F0%9F%8F%B9_1.webp"
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/special_archery_training_%25F0%259F%258F%25B9_1.gif",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/special_archery_training_%25F0%259F%258F%25B9_1.gif"
   },
   {
     "title": "Alcor Reference 2023",
@@ -3342,15 +3342,15 @@
     "href": "https://x.com/StR_Lite/status/1696031049128759323",
     "published": "2023-08-28",
     "aspectRatio": 0.972,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_hugging_lava_2023.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_hugging_lava_2023.gif",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_hugging_lava_2023.gif",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_hugging_lava_2023.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_hugging_lava_2023.gif",
     "rating": "mainstream",
     "characters": [
       "Alcor"
     ],
     "id": "f4cd510361f080862bdced211183c683d743f3f493cd2c2ffe1c15ad",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_hugging_lava_2023.webp"
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_hugging_lava_2023.gif"
   },
   {
     "title": "Aquarius Form by Mixter",
@@ -3850,15 +3850,15 @@
     "href": "https://x.com/FaintAlcor/status/1734983405102600206",
     "published": "2023-12-13",
     "aspectRatio": 1.114519427402863,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_tap.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_tap.gif",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_tap.gif",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_tap.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_tap.gif",
     "rating": "mainstream",
     "characters": [
       "Alcor"
     ],
     "id": "d5e2881a4cfc3f93391ee77930669fb387ae5275533ef9c8ae6800f7",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_tap.webp"
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_tap.gif"
   },
   {
     "tags": [],
@@ -4809,16 +4809,16 @@
     "href": "https://x.com/KogiKogiKogi1/status/1796753541085921771",
     "published": "2024-06-01",
     "aspectRatio": 1.7777777777777777,
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/proud_summer_beach_ych.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/proud_summer_beach_ych.gif",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/proud_summer_beach_ych.gif",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/proud_summer_beach_ych.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/proud_summer_beach_ych.gif",
     "rating": "mainstream",
     "characters": [
       "Alcor",
       "Lava"
     ],
     "id": "a14e15a66606ecee14ce709020efb86dcf840a26128ba05525c52fcd",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/proud_summer_beach_ych.webp"
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/proud_summer_beach_ych.gif"
   },
   {
     "title": "Lifting With Kyoto",
@@ -5885,10 +5885,10 @@
       "Lava"
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/pumpkin_battle.gif",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/pumpkin_battle.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/pumpkin_battle.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/pumpkin_battle.gif",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/pumpkin_battle.gif",
     "id": "08a8eb1181657df264e06f58ac7885f875e776064d4260b0a197b8c7",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/pumpkin_battle.webp"
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/pumpkin_battle.gif"
   },
   {
     "title": "Aquarius (Tyl Class)",
@@ -6532,10 +6532,10 @@
       "Alcor"
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_silly.gif",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_silly.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_silly.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_silly.gif",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_silly.gif",
     "id": "c4d4b80ecfccb6a9723754010c3c6e9ed904a8b0d3487e59f85f1fe1",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_silly.webp"
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_silly.gif"
   },
   {
     "title": "Triangulum Form Illustration by FSD",
@@ -6782,10 +6782,10 @@
       "Alcor"
     ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_battle_sprite.gif",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_battle_sprite.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_battle_sprite.webp",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_battle_sprite.gif",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_battle_sprite.gif",
     "id": "77fe6e6c2f9e7cc90531a5f74b4a1cc9a4db7c6179cfc971b6efa899",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_battle_sprite.webp"
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_battle_sprite.gif"
   },
   {
     "title": "Cyberpunk Loadout Illustration",
@@ -7372,5 +7372,25 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_form_%CE%B2.webp",
     "id": "e81bc57988bff7e5c2dc37c5f1a1fe5eb7adf05fcef47d4c052f36c9",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_form_%CE%B2.webp"
+  },
+  {
+    "title": "Office Chibi",
+    "artist": "@kurope.bsky.social",
+    "tags": [
+      "Chibi",
+      "Thuban Form"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lqfo7j7sh22r",
+    "published": "2025-05-30",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/office_chibi.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/office_chibi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/office_chibi.webp",
+    "id": "bf58f2a173e8daf30e15634096b70b5a59cbc7ea34d3cbb995b47b63",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/office_chibi.webp"
   }
 ]
