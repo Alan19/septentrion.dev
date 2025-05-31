@@ -25,6 +25,7 @@ export default function AltsUploader(props: Readonly<{
     const [charactersInImage, setCharactersInImage] = useState<string[]>(["Alcor"])
     const [rating, setRating] = useState<Rating | null>();
     const [altType, setAltType] = useState<AltType>("extra")
+    const [isHidden, setIsHidden] = useState(false);
 
     const {isDevelopment} = useIsDevelopment();
 
@@ -86,6 +87,7 @@ export default function AltsUploader(props: Readonly<{
             formData.append("altCount", (props.altCount).toString());
             formData.append("characters", charactersInImage.join(", "));
             formData.append("altType", isAltTypeComplex(altType) ? JSON.stringify(altType) : altType);
+            formData.append("isHidden", JSON.stringify(isHidden));
             setUploading(true);
             axios.post(`http://localhost:9000/upload-alt`, formData, {
                 headers: {"Content-Type": "multipart/form-data"},
@@ -102,6 +104,9 @@ export default function AltsUploader(props: Readonly<{
         setHref(event.target.value);
     }
 
+    function handleHidden() {
+        setIsHidden(!isHidden);
+    }
 
     return <>
         <Snackbar
@@ -141,26 +146,34 @@ export default function AltsUploader(props: Readonly<{
                 </Button>
                 <Typography style={{marginLeft: "8px"}} component={"span"}>{selectedFile?.name}</Typography>
                 <Stack spacing={2}>
-                    <Autocomplete
-                        multiple
-                        fullWidth
-                        value={tags}
-                        onChange={(event, value) => handleTagsChange(event, value)}
-                        id="upload-tag-selector"
-                        options={Object.values(ArtTag)}
-                        disableCloseOnSelect
-                        getOptionLabel={(option) => option}
-                        renderOption={(props, option, {selected}) => <li {...props}>
-                            <Checkbox
-                                icon={<CheckBoxOutlineBlankIcon fontSize="small"/>}
-                                checkedIcon={<CheckBoxIcon fontSize="small"/>}
-                                style={{marginRight: 8}}
-                                checked={selected}
-                            />
-                            {option}
-                        </li>}
-                        renderInput={(params) => <TextField {...params} label="Tag Selection" placeholder="Tags"/>}
-                    />
+                    <Stack direction={"row"} spacing={2}>
+                        <Autocomplete
+                            multiple
+                            fullWidth
+                            value={tags}
+                            onChange={(event, value) => handleTagsChange(event, value)}
+                            id="upload-tag-selector"
+                            options={Object.values(ArtTag)}
+                            disableCloseOnSelect
+                            getOptionLabel={(option) => option}
+                            renderOption={(props, option, {selected}) => <li {...props}>
+                                <Checkbox
+                                    icon={<CheckBoxOutlineBlankIcon fontSize="small"/>}
+                                    checkedIcon={<CheckBoxIcon fontSize="small"/>}
+                                    style={{marginRight: 8}}
+                                    checked={selected}
+                                />
+                                {option}
+                            </li>}
+                            renderInput={(params) => <TextField {...params} label="Tag Selection" placeholder="Tags"/>}
+                        />
+                        <FormControlLabel
+                            control={<Checkbox/>}
+                            label="Hidden?"
+                            value={isHidden}
+                            onChange={() => handleHidden()}
+                        />
+                    </Stack>
                     <Autocomplete
                         fullWidth
                         value={rating}

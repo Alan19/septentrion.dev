@@ -1,12 +1,11 @@
 import React, {useState} from "react";
 import axios from "axios";
-import {Autocomplete, Checkbox, createFilterOptions, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Snackbar, Stack, TextField, Typography,} from "@mui/material";
+import {Autocomplete, Checkbox, createFilterOptions, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormControlLabel, Snackbar, Stack, TextField, Typography,} from "@mui/material";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import AddIcon from "@mui/icons-material/Add";
 import {DatePicker} from "@mui/x-date-pickers";
 import dayjs, {Dayjs} from "dayjs";
-import {useIsDevelopment} from "./UseIsDevelopment";
 import {Button} from "@mui/material-next";
 import {ArtTag, characters, Rating} from "../../../api/src/images/TagUtils.ts";
 import {useTagHooks} from "./UseTagHooks";
@@ -24,10 +23,10 @@ export default function Uploader(props: Readonly<{ loadImageInfo: () => Promise<
     const [title, setTitle] = useState<string>("");
     const [artist, setArtist] = useState<string>();
     const [uploading, setUploading] = useState<boolean>(false);
-    const [open, setOpen] = React.useState(false);
-    const [snackbarOpen, setSnackbarOpen] = React.useState(false);
-    const [publishedDate, setPublishedDate] = React.useState<Dayjs | null>(dayjs());
-    const {isDevelopment} = useIsDevelopment();
+    const [open, setOpen] = useState(false);
+    const [snackbarOpen, setSnackbarOpen] = useState(false);
+    const [publishedDate, setPublishedDate] = useState<Dayjs | null>(dayjs());
+    const [isHidden, setIsHidden] = useState(false);
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -36,6 +35,10 @@ export default function Uploader(props: Readonly<{ loadImageInfo: () => Promise<
     const handleClose = () => {
         setOpen(false);
     };
+
+    function handleHidden() {
+        setIsHidden(!isHidden);
+    }
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.files) {
@@ -59,7 +62,7 @@ export default function Uploader(props: Readonly<{ loadImageInfo: () => Promise<
         setSnackbarOpen(false);
     };
 
-    function handleUpload(e: any) {
+    function handleUpload(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         e.preventDefault();
 
         function handleSuccessfulUpload() {
@@ -83,10 +86,9 @@ export default function Uploader(props: Readonly<{ loadImageInfo: () => Promise<
             formData.append("href", href);
             formData.append("characters", charactersInImage.join(", "));
             formData.append("rating", rating)
-            formData.append(
-                "published",
-                publishedDate?.format("YYYY-MM-DD") ?? dayjs().format("YYYY-MM-DD")
-            );
+            formData.append("published", publishedDate?.format("YYYY-MM-DD") ?? dayjs().format("YYYY-MM-DD"));
+            formData.append("isHidden", JSON.stringify(isHidden));
+
             setUploading(true);
             axios
                 .post("http://localhost:9000/upload", formData, {
@@ -113,49 +115,48 @@ export default function Uploader(props: Readonly<{ loadImageInfo: () => Promise<
     }
 
     const isCollision = images.map(value => prepareFileName(value.title)).includes(prepareFileName(title));
-    return (
-        <>
-            <Snackbar
-                open={snackbarOpen}
-                autoHideDuration={6000}
-                onClose={handleSnackbarClose}
-                message="Artwork uploaded!"
-            />
-            {
-                <Button
-                    variant={"filled"}
-                    name={"Upload"}
-                    color="primary"
-                    aria-label="add"
-                    size={"small"}
-                    onClick={handleClickOpen}
-                >
-                    <AddIcon/> Upload
-                </Button>
-            }
-            <Dialog open={open} onClose={handleClose}>
-                <DialogTitle>Upload New Image</DialogTitle>
-                <DialogContent>
-                    <DialogContentText>
-                        Enter a list of tags, the handle of the artist, and the file name to
-                        automatically compress and upload this file!
-                    </DialogContentText>
-                    <Stack spacing={2} style={{marginTop: 16}}>
-                        <div>
-                            <Button
-                                variant={"outlined"}
-                                component="label"
-                            >
-                                Upload File
-                                <input
-                                    type="file"
-                                    name={"image"}
-                                    onChange={handleFileChange}
-                                    hidden
-                                />
-                            </Button>
-                            <Typography style={{marginLeft: "8px"}} component={"span"}>{selectedFile && selectedFile.name}</Typography>
-                        </div>
+    return <>
+        <Snackbar
+            open={snackbarOpen}
+            autoHideDuration={6000}
+            onClose={handleSnackbarClose}
+            message="Artwork uploaded!"
+        />
+        {
+            <Button
+                variant={"filled"}
+                name={"Upload"}
+                color="primary"
+                aria-label="add"
+                size={"small"}
+                onClick={handleClickOpen}
+            >
+                <AddIcon/> Upload
+            </Button>
+        }
+        <Dialog open={open} onClose={handleClose}>
+            <DialogTitle>Upload New Image</DialogTitle>
+            <DialogContent>
+                <DialogContentText>
+                    Enter a list of tags, the handle of the artist, and the file name to
+                    automatically compress and upload this file!
+                </DialogContentText>
+                <Stack spacing={2} style={{marginTop: 16}}>
+                    <div>
+                        <Button
+                            variant={"outlined"}
+                            component="label"
+                        >
+                            Upload File{" "}
+                            <input type="file"
+                                   name={"image"}
+                                   onChange={handleFileChange}
+                                   hidden
+                            />
+                        </Button>
+                        <Typography style={{marginLeft: "8px"}} component={"span"}>{selectedFile?.name}</Typography>
+                    </div>
+                    <Stack direction={"row"} spacing={2}>
                         <Autocomplete
                             multiple
                             fullWidth
@@ -165,8 +166,7 @@ export default function Uploader(props: Readonly<{ loadImageInfo: () => Promise<
                             options={Object.values(ArtTag)}
                             disableCloseOnSelect
                             getOptionLabel={(option) => option}
-                            renderOption={(props, option, {selected}) => (
-                                <li {...props}>
+                            renderOption={(props, option, {selected}) => <li {...props}>
                                     <Checkbox
                                         icon={<CheckBoxOutlineBlankIcon fontSize="small"/>}
                                         checkedIcon={<CheckBoxIcon fontSize="small"/>}
@@ -174,103 +174,103 @@ export default function Uploader(props: Readonly<{ loadImageInfo: () => Promise<
                                         checked={selected}
                                     />
                                     {option}
-                                </li>
-                            )}
-                            renderInput={(params) => (
-                                <TextField {...params} label="Tag Selection" placeholder="Tags"/>
-                            )}
+                            </li>}
+                            renderInput={(params) => <TextField {...params} label="Tag Selection" placeholder="Tags"/>}
                         />
-                        <Autocomplete
-                            fullWidth
-                            value={rating}
-                            onChange={(_event, value) => setRating(value ?? Rating.General)}
-                            id="upload-rating-selector"
-                            options={Object.values(Rating)}
-                            getOptionLabel={(option) => option}
-                            renderInput={(params) => (
-                                <TextField {...params} label="Rating Selection" placeholder="Rating"/>
-                            )}
-                        />
-                        {/*TODO Extract this into a component*/}
-                        <Autocomplete multiple
-                                      renderInput={(params) => (
-                                          <TextField
-                                              {...params}
-                                              label="Character List"
-                                              placeholder="Character"
-                                              fullWidth
-                                          />
-                                      )}
-                                      selectOnFocus
-                                      clearOnBlur
-                                      handleHomeEndKeys
-                                      value={charactersInImage}
-                                      onChange={(_event, value) => setCharactersInImage(value)}
-                                      size={"medium"}
-                                      renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip option={option} tagProps={getTagProps({index})}/>)}
-                                      filterOptions={(options, params) => {
-                                          const filtered = filter(options, params)
-                                          const {inputValue} = params;
-                                          // Suggest the creation of a new value
-                                          const isExisting = options.some((option) => inputValue === option);
-                                          if (inputValue !== '' && !isExisting) {
-                                              filtered.push(inputValue);
-                                          }
-
-                                          return filtered;
-                                      }}
-                                      options={characters}/>
-                        <TextField
-                            autoFocus
-                            margin="dense"
-                            id="href"
-                            label="Link URL"
-                            type="url"
-                            fullWidth
-                            variant="standard"
-                            value={href}
-                            onChange={handleHrefChange}
-                        />
-                        <TextField
-                            autoFocus
-                            margin="dense"
-                            id="href"
-                            label="Artist Handle"
-                            type="text"
-                            fullWidth
-                            variant="standard"
-                            value={artist}
-                            onChange={handleArtistChange}
-                        />
-                        <TextField
-                            autoFocus
-                            margin="dense"
-                            id="href"
-                            label="Art Title"
-                            type="url"
-                            fullWidth
-                            variant="standard"
-                            value={title}
-                            helperText={isCollision ? "The title already exists! This may overwrite that artwork entry!" : ""}
-                            error={isCollision}
-                            onChange={handleTitleChange}
-                            required
-                        />
-                        <DatePicker
-                            label={"Published Date"}
-                            value={publishedDate}
-                            onChange={(value) => setPublishedDate(value)}
+                        <FormControlLabel
+                            control={<Checkbox/>}
+                            label="Hidden?"
+                            value={isHidden}
+                            onChange={() => handleHidden()}
                         />
                     </Stack>
+                    <Autocomplete
+                        fullWidth
+                        value={rating}
+                        onChange={(_event, value) => setRating(value ?? Rating.General)}
+                        id="upload-rating-selector"
+                        options={Object.values(Rating)}
+                        getOptionLabel={(option) => option}
+                        renderInput={(params) => <TextField {...params} label="Rating Selection" placeholder="Rating"/>}
+                    />
+                    {/*TODO Extract this into a component*/}
+                    <Autocomplete multiple
+                                  renderInput={(params) => <TextField
+                                      {...params}
+                                      label="Character List"
+                                      placeholder="Character"
+                                      fullWidth
+                                  />}
+                                  selectOnFocus
+                                  clearOnBlur
+                                  handleHomeEndKeys
+                                  value={charactersInImage}
+                                  onChange={(_event, value) => setCharactersInImage(value)}
+                                  size={"medium"}
+                                  renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip option={option} tagProps={getTagProps({index})}/>)}
+                                  filterOptions={(options, params) => {
+                                      const filtered = filter(options, params)
+                                      const {inputValue} = params;
+                                      // Suggest the creation of a new value
+                                      const isExisting = options.some((option) => inputValue === option);
+                                      if (inputValue !== '' && !isExisting) {
+                                          filtered.push(inputValue);
+                                      }
 
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleClose}>Cancel</Button>
-                    <Button variant={"filled"} disabled={uploading || (!title || !artist || !rating)} onClick={handleUpload}>
-                        {uploading ? "Uploading..." : "Upload"}
-                    </Button>
-                </DialogActions>
-            </Dialog>
-        </>
-    );
+                                      return filtered;
+                                  }}
+                                  options={characters}/>
+                    <TextField
+                        autoFocus
+                        margin="dense"
+                        id="href"
+                        label="Link URL"
+                        type="url"
+                        fullWidth
+                        variant="standard"
+                        value={href}
+                        onChange={handleHrefChange}
+                    />
+                    <TextField
+                        autoFocus
+                        margin="dense"
+                        id="href"
+                        label="Artist Handle"
+                        type="text"
+                        fullWidth
+                        variant="standard"
+                        value={artist}
+                        onChange={handleArtistChange}
+                        required
+                    />
+                    <TextField
+                        autoFocus
+                        margin="dense"
+                        id="href"
+                        label="Art Title"
+                        type="url"
+                        fullWidth
+                        variant="standard"
+                        value={title}
+                        helperText={isCollision ? "The title already exists! This may overwrite that artwork entry!" : ""}
+                        error={isCollision}
+                        onChange={handleTitleChange}
+                        required
+                    />
+                    <DatePicker
+                        label={"Published Date"}
+                        value={publishedDate}
+                        onChange={(value) => setPublishedDate(value)}
+                    />
+                </Stack>
+
+            </DialogContent>
+            <DialogActions>
+                <Button onClick={handleClose}>Cancel</Button>
+                <Button variant={"filled"} disabled={uploading || (!title || !artist || !rating)} onClick={event => handleUpload(event)}>
+                    {uploading ? "Uploading..." : "Upload"}
+                </Button>
+            </DialogActions>
+        </Dialog>
+    </>;
 }

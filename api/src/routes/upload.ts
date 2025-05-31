@@ -37,7 +37,7 @@ export async function uploadImage(req: Request, res: Response) {
     const file = req.file;
     const bucket = process.env.BUCKET_NAME;
     if (file && bucket) {
-        const {artist, href, tags, title, published, rating, characters} = req.body;
+        const {artist, href, tags, title, published, rating, characters, isHidden} = req.body;
         const {webpUrl, id, src, thumbnailUrl, nearLosslessUrl, aspectRatio, characterArray, tagArray} = await getMainImageEntryFields(file, title, bucket, characters, tags);
         const jsonOutput: ImageInformation = {
             title: title,
@@ -54,8 +54,7 @@ export async function uploadImage(req: Request, res: Response) {
             id: id,
             nearLossless: nearLosslessUrl
         };
-        // TODO Use hidden as a request parameter
-        addToJson(jsonOutput, tagArray.includes("Hidden"));
+        addToJson(jsonOutput, JSON.parse(isHidden));
         res.json(jsonOutput);
     } else {
         res.status(422).send('No file attached!');
@@ -66,7 +65,7 @@ export async function uploadImageAlt(req: Request, res: Response) {
     const file = req.file;
     const bucket = process.env.BUCKET_NAME;
     if (file && bucket) {
-        const {href, tags, imageName: parent, rating, characters, altType} = req.body;
+        const {href, tags, imageName: parent, rating, characters, altType, isHidden} = req.body;
         const altNumber = [...JSON.parse(fs.readFileSync(path.resolve(__dirname, '../images/images.json')).toString()), ...JSON.parse(fs.readFileSync(path.resolve(__dirname, './local_scripts/hidden.json')).toString())].filter(value => value.parent === parent).length + 1;
         const {webpUrl, id, src, thumbnailUrl, nearLosslessUrl, aspectRatio, characterArray, tagArray} = await getMainImageEntryFields(file, parent, bucket, characters, tags, altNumber);
         const jsonOutput: AltInformation = {
@@ -84,7 +83,7 @@ export async function uploadImageAlt(req: Request, res: Response) {
             webp: webpUrl,
         };
 
-        addToJson(jsonOutput, tagArray.includes("Hidden"));
+        addToJson(jsonOutput, JSON.parse(isHidden));
         res.json(jsonOutput);
     } else {
         res.status(422).send('No file attached!');

@@ -31,7 +31,6 @@ export enum ArtTag {
     winter = 'Hibernal Assassin',
     aquarius = 'Aquarius Form',
     auriga = 'Auriga Form',
-    hidden = 'Hidden',
     illustration = 'Illustration',
     reference = 'Character Reference',
     chibi = 'Chibi',
@@ -130,8 +129,8 @@ export class SelectedFilters {
         }
         const imageFilterableInfo = [...image.tags, image.artist, ...image.characters, image.rating];
         const filters = this.toArray();
-        const enabledFilters = filters.filter(value => value.charAt(0) !== '-')
-        const blacklistedFilters = filters.filter(value => value.charAt(0) === '-').map(value => value.substring(1))
+        const enabledFilters = filters.filter(value => !value.startsWith('-'))
+        const blacklistedFilters = filters.filter(value => value.startsWith('-')).map(value => value.substring(1))
         const hasNoBlacklistedFilters = !blacklistedFilters.some(value => imageFilterableInfo.includes(value));
         if (enabledFilters.length > 0) {
             if (mode === 'and') {

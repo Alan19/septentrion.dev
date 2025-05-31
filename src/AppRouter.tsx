@@ -6,7 +6,7 @@ import {AboutMePage} from "./components/about/AboutMePage.tsx";
 import {CharactersPage} from "./components/lore/characters/CharactersPage.tsx";
 import {TemplatedLorePage} from "./components/lore/characters/TemplatedLorePage.tsx";
 import {AlcorWorldInfo} from "./components/lore/world/AlcorWorldInfo.tsx";
-import {BioEnhancementIntro} from "./components/lore/world/BioEnhancementIntro.tsx";
+import {BioModificationIntro} from "./components/lore/world/BioModificationIntro.tsx";
 import {AlcorOutfits} from "./components/lore/outfits/AlcorOutfits.tsx";
 import {MinimalGalleryPage} from "./components/gallery/MinimalGalleryPage.tsx";
 import React from "react";
@@ -27,7 +27,7 @@ export function AppRouter() {
             <Route index element={<CharactersPage/>}/>
             <Route path=":character" element={<TemplatedLorePage/>}/>
             <Route path="world" element={<AlcorWorldInfo/>}/>
-            <Route path="bio-enhancement" element={<BioEnhancementIntro/>}/>
+            <Route path="bio-enhancement" element={<BioModificationIntro/>}/>
             <Route path="outfits" element={<AlcorOutfits/>}/>
         </Route>
 

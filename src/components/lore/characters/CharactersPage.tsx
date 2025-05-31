@@ -26,7 +26,7 @@ export function CharactersPage() {
     const alcorverseCharacters: CharacterLink[] = [
         {
             image: alcor,
-            linkPath: '/lore/alcor'
+            linkPath: 'https://vgen.co/c/alcor/all'
         },
         {
             image: castor,
@@ -44,25 +44,25 @@ export function CharactersPage() {
         },
         {
             image: triangulum,
-            linkPath: '/lore/triangulum'
+            linkPath: 'https://vgen.co/c/alcor/triangulum'
         },
         {
             image: eclipse,
         },
         {
             image: jupiter,
-            linkPath: '/lore/jupiter'
+            linkPath: 'https://vgen.co/c/jupiter-4'
         },
         {
             image: aquarius,
-            linkPath: '/lore/aquarius'
+            linkPath: 'https://vgen.co/c/aquarius-2'
         }
     ]
 
     const ttrpgOCs: CharacterLink[] = [
         {
             image: soma,
-            linkPath: '/lore/soma'
+            linkPath: 'https://vgen.co/c/soma-2/original'
         },
         {
             image: wilton,
@@ -76,7 +76,7 @@ export function CharactersPage() {
         return characters.map(value => {
             if (value.linkPath) {
                 return <Grid item md={3} xs={6} key={value.linkPath} style={{aspectRatio: 1}}>
-                    <Link to={value.linkPath}>
+                    <Link to={value.linkPath} target={"noreferrer noopener"}>
                         <div className={"character-badge"} style={{padding: 8}}>
                             <SkeletonImage src={value.image} style={{display: "block", width: '100%', borderRadius: 8}}/>
                         </div>
