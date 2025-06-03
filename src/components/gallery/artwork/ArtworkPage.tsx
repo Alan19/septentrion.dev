@@ -68,11 +68,11 @@ export function ArtworkPage() {
                                 </IconButton>
                             </Grid>
                             <Grid item xs md style={{display: 'flex', justifyContent: 'center'}}>
-                                <SkeletonImage href={href ?? parentImageInfo.href}
-                                               style={{maxHeight: imageHeight, maxWidth: '100%', display: 'block'}}
-                                               skeletonStyle={(aspectRatio ?? 1) < 1 ? {height: imageHeight, maxWidth: '100%'} : {maxHeight: imageHeight, width: '100%'}}
-                                               src={webp}/>
-
+                                <div style={(aspectRatio ?? 1) < 1 ? {height: imageHeight, maxWidth: '100%', aspectRatio: aspectRatio} : {maxHeight: imageHeight, width: '100%', aspectRatio: aspectRatio}}>
+                                    <SkeletonImage href={href ?? parentImageInfo.href}
+                                                   style={{maxWidth: '100%'}}
+                                                   src={webp}/>
+                                </div>
                             </Grid>
                         </Grid>
                     </M3Pane>

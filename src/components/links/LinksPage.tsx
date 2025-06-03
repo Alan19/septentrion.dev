@@ -8,6 +8,10 @@ import {useDocumentTitle} from "usehooks-ts";
 export function LinksPage() {
     useDocumentTitle("septentrion.dev");
 
+    function colorImage(color: string) {
+        return {filter: `drop-shadow(0px 1000px 0 ${color}`, transform: 'translateY(-1000px)'}
+    }
+
     return <M3Pane>
         <Grid
             alignItems={"center"}
@@ -23,7 +27,7 @@ export function LinksPage() {
                 <Summary/>
             </Grid>
             <Grid item sm={3}>
-                <img width={'100%'} src={'company-logo-colored.png'} alt={'a blue circular with a stylized bow pointing upward and a knife pointing leftward'}/>
+                <img width={'100%'} src={'company-logo-colored.png'} style={colorImage("var(--md-sys-color-primary)")} alt={'a blue circular with a stylized bow pointing upward and a knife pointing leftward'}/>
             </Grid>
         </Grid>
     </M3Pane>

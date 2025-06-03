@@ -1,7 +1,6 @@
 import React, {memo, MouseEventHandler, useEffect, useState} from "react";
 import {Fade, IconButton} from "@mui/material";
 import PhotoLibraryIcon from "@mui/icons-material/PhotoLibraryOutlined";
-import Skeleton from "react-loading-skeleton";
 
 export const SkeletonImage = memo(function SkeletonImage(props: {
     src: string,
@@ -58,6 +57,6 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
             <Fade in>{renderedImage}</Fade>
         </>;
     } else {
-        return <Skeleton width={'100%'} height={'100%'} style={skeletonStyle}/>;
+        return <div style={{height: '100%', background: 'var(--md-palette-Skeleton-bg)', borderRadius: 4, animation: 'animation-c7515d 2s ease-in-out 0.5s infinite', ...skeletonStyle}}/>;
     }
 })

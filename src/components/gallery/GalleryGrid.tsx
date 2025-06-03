@@ -2,12 +2,13 @@ import {AltInformation, getParentImage, ImageEntry, ImageInformation, isImageInf
 import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {getMonthYearPairsInImageSet} from "./GalleryUtils.ts";
 import React, {Fragment} from "react";
-import {Typography} from "@mui/material";
+import {Typography, useMediaQuery} from "@mui/material";
 import {GalleryImage} from "./GalleryImage.tsx";
 import _ from "lodash";
 import {GalleryDisplayModes} from "./GalleryDisplayModes.tsx";
 import {useTagHooks} from "./UseTagHooks.tsx";
 import {getPublishedDate} from "../../../api/src/utils/utils.ts";
+import {materialDesign2Theme} from "../../MaterialDesign2Theme.tsx";
 
 interface GalleryContext {
     altData: Map<string, AltInformation[]>
@@ -15,13 +16,14 @@ interface GalleryContext {
     setSelectedImages: React.Dispatch<React.SetStateAction<string[]>>
     searchParams: string
     isTagging: boolean
-    width: number
+    width: number,
+    tolerance: number
 }
 
 function createJustifiedGrid(images: (ImageInformation | AltInformation)[], context: GalleryContext) {
     return <TSJustifiedLayout width={context.width}
                               targetRowHeight={350}
-                              targetRowHeightTolerance={0.2}
+                              targetRowHeightTolerance={context.tolerance}
                               rowSpacing={8}
                               itemSpacing={8}
                               containerStyle={{position: "relative"}}
@@ -77,6 +79,7 @@ export function GalleryGrid(props: {
 }) {
     const {altData, imageEntries} = useTagHooks();
     const {isTagging, pageNumber, setSelectedImages, displayedImages, width, searchParams, selectedImages, pageSize, displayMode} = props;
+    const isMediumOrAbove = useMediaQuery(materialDesign2Theme.breakpoints.up("md"));
     const context: GalleryContext = {
         altData: altData,
         selectedImages: selectedImages,
@@ -84,6 +87,7 @@ export function GalleryGrid(props: {
         searchParams: searchParams,
         isTagging: isTagging,
         width: width,
+        tolerance: isMediumOrAbove ? .2 : .5
     }
     const monthlyGalleries = getMonthlyGalleries(displayedImages, imageEntries, context);
 
