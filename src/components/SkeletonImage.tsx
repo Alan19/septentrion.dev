@@ -40,6 +40,7 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
     }, [src]);
 
     if (isReady && !debugSkeleton) {
+        // TODO Make Skeleton also navigate even when unloaded
         const img = <img alt={alt} loading={"lazy"} className={imageClassname} onClick={onClick} style={{display: 'block', ...style}} src={src}/>;
         const renderedImage = href ? <a target={'_blank'} style={{height: 'min-content'}} href={href}>{img}</a> : img
         return <>
@@ -57,6 +58,6 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
             <Fade in>{renderedImage}</Fade>
         </>;
     } else {
-        return <div style={{height: '100%', background: 'var(--md-palette-Skeleton-bg)', borderRadius: 4, animation: 'animation-c7515d 2s ease-in-out 0.5s infinite', ...skeletonStyle}}/>;
+        return <div style={{height: '100%', background: 'var(--md-palette-Skeleton-bg)', borderRadius: 4, animation: 'skeleton-animation 2s ease-in-out 0.5s infinite', ...skeletonStyle}}/>;
     }
 })

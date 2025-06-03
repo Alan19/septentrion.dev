@@ -8,12 +8,12 @@ import {DatePicker} from "@mui/x-date-pickers";
 import dayjs, {Dayjs} from "dayjs";
 import {Button} from "@mui/material-next";
 import {ArtTag, characters, Rating} from "../../../api/src/images/TagUtils.ts";
-import {useTagHooks} from "./UseTagHooks";
+import {useTagHooks} from "./useTagHooks.ts";
 import {AutocompleteFilterChip} from "./filters/AutocompleteFilterChip.tsx";
 import {prepareFileName} from "../../../api/src/utils/utils.ts";
 
 const filter = createFilterOptions<string>();
-export default function Uploader(props: Readonly<{ loadImageInfo: () => Promise<void>; }>) {
+export default function Uploader() {
     const [selectedFile, setSelectedFile] = useState<File>();
     const {images} = useTagHooks();
     const [tags, setTags] = useState<ArtTag[]>([]);
@@ -90,11 +90,10 @@ export default function Uploader(props: Readonly<{ loadImageInfo: () => Promise<
             formData.append("isHidden", JSON.stringify(isHidden));
 
             setUploading(true);
-            axios
-                .post("http://localhost:9000/upload", formData, {
+            axios.post("http://localhost:9000/upload", formData, {
                     headers: {"Content-Type": "multipart/form-data"},
                 })
-                .then(() => props.loadImageInfo().then(handleSuccessfulUpload))
+                .then(() => handleSuccessfulUpload())
                 .catch((reason) => console.log(reason))
                 .finally(() => {
                     setUploading(false);
@@ -207,7 +206,7 @@ export default function Uploader(props: Readonly<{ loadImageInfo: () => Promise<
                                   value={charactersInImage}
                                   onChange={(_event, value) => setCharactersInImage(value)}
                                   size={"medium"}
-                                  renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip option={option} tagProps={getTagProps({index})}/>)}
+                                  renderTags={(value, getTagProps) => value.map((option, index) => <AutocompleteFilterChip key={option} option={option} tagProps={getTagProps({index})}/>)}
                                   filterOptions={(options, params) => {
                                       const filtered = filter(options, params)
                                       const {inputValue} = params;

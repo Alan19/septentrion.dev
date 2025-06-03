@@ -8,7 +8,7 @@ import dayjs from "dayjs";
 import AltsUploader from "../AltsUploader";
 import {useNavigate, useParams, useSearchParams} from "react-router-dom";
 import {ArrowBack, ArrowOutward} from "@mui/icons-material";
-import {useTagHooks} from "../UseTagHooks";
+import {useTagHooks} from "../useTagHooks.ts";
 import {M3Pane} from "../../common/M3Pane";
 import {materialDesign2Theme} from "../../../MaterialDesign2Theme.tsx";
 import {useDocumentTitle} from "usehooks-ts";
@@ -50,6 +50,18 @@ export function ArtworkPage() {
 
     useDocumentTitle(title, {preserveTitleOnUnmount: false})
 
+    function getImageStyle(aspectRatio: number, imageHeight: string) {
+        {/*TODO Make sure this works*/
+        }
+        if (aspectRatio < 1) {
+            return {maxHeight: imageHeight, aspectRatio: aspectRatio, display: "flex", justifyContent: "center"};
+        } else if (aspectRatio === 1) {
+            return {maxHeight: imageHeight, aspectRatio: aspectRatio, display: "flex", justifyContent: "center"};
+        } else if (aspectRatio > 1) {
+            return {maxHeight: imageHeight, width: '100%', aspectRatio: aspectRatio, display: "flex", justifyContent: "center"};
+        }
+    }
+
     if (parentImageInfo && currentImageInfo) {
         const {webp, aspectRatio, href, tags, rating, characters} = currentImageInfo;
         const {artist, title, published, id, thumbnailUrl: parentThumbnail} = parentImageInfo;
@@ -67,12 +79,11 @@ export function ArtworkPage() {
                                     <ArrowBack/>
                                 </IconButton>
                             </Grid>
-                            <Grid item xs md style={{display: 'flex', justifyContent: 'center'}}>
-                                <div style={(aspectRatio ?? 1) < 1 ? {height: imageHeight, maxWidth: '100%', aspectRatio: aspectRatio} : {maxHeight: imageHeight, width: '100%', aspectRatio: aspectRatio}}>
+                            <Grid item xs md style={{display: 'flex', justifyContent: 'center', width: '100%'}}>
                                     <SkeletonImage href={href ?? parentImageInfo.href}
-                                                   style={{maxWidth: '100%'}}
+                                                   style={{maxWidth: '100%', maxHeight: imageHeight}}
+                                                   skeletonStyle={{width: '100%', aspectRatio: aspectRatio, maxHeight: imageHeight}}
                                                    src={webp}/>
-                                </div>
                             </Grid>
                         </Grid>
                     </M3Pane>
@@ -136,9 +147,9 @@ export function ArtworkPage() {
                                     <ImageList cols={3}>
                                         {altsInfo?.filter(value => !isAltTypeComplex(value.altType)).map((value, index) => <ImageListItem key={index}>
                                             <img className={"dialog-image"}
-                                                onClick={() => navigate({pathname: `/gallery/${value.id}`, search: searchParamString})}
-                                                style={{width: "100%"}}
-                                                src={value.thumbnailUrl}/>
+                                                 onClick={() => navigate({pathname: `/gallery/${value.id}`, search: searchParamString})}
+                                                 style={{width: "100%"}}
+                                                 src={value.thumbnailUrl}/>
                                         </ImageListItem>)}
                                     </ImageList>
                                 </>}

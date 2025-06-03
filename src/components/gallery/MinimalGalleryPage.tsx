@@ -1,4 +1,4 @@
-import {useTagHooks} from "./UseTagHooks";
+import {useTagHooks} from "./useTagHooks.ts";
 import {useNavigate} from "react-router-dom";
 import {Container, Fade, Typography} from "@mui/material";
 import {isImageInformation} from "../../../api/src/images/ImageInformation.ts";

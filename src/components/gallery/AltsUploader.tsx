@@ -14,7 +14,7 @@ import {AutocompleteFilterChip} from "./filters/AutocompleteFilterChip.tsx";
 // TODO Update this for new JSON structure
 export default function AltsUploader(props: Readonly<{
     imageInformation: ImageInformation,
-    altCount: number
+    altCount: number,
 }>) {
     const [selectedFile, setSelectedFile] = useState<File>();
     const [tags, setTags] = useState<ArtTag[]>([]);
@@ -67,7 +67,7 @@ export default function AltsUploader(props: Readonly<{
         setTags(props.imageInformation.tags as ArtTag[]);
     }
 
-    function handleUpload(e: any) {
+    function handleUpload(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         e.preventDefault();
 
         function handleSuccessfulUpload() {
@@ -89,9 +89,7 @@ export default function AltsUploader(props: Readonly<{
             formData.append("altType", isAltTypeComplex(altType) ? JSON.stringify(altType) : altType);
             formData.append("isHidden", JSON.stringify(isHidden));
             setUploading(true);
-            axios.post(`http://localhost:9000/upload-alt`, formData, {
-                headers: {"Content-Type": "multipart/form-data"},
-            })
+            axios.post(`http://localhost:9000/upload-alt`, formData, {headers: {"Content-Type": "multipart/form-data"}})
                 .then(() => handleSuccessfulUpload())
                 .catch((reason) => console.log(reason))
                 .finally(() => {
@@ -245,7 +243,7 @@ export default function AltsUploader(props: Readonly<{
             </DialogContent>
             <DialogActions>
                 <Button onClick={handleClose}>Cancel</Button>
-                <Button variant={"filled"} disabled={uploading || !rating || !selectedFile} onClick={handleUpload}>
+                <Button variant={"filled"} disabled={uploading || !rating || !selectedFile} onClick={event => handleUpload(event)}>
                     {uploading ? "Uploading..." : "Upload"}
                 </Button>
             </DialogActions>

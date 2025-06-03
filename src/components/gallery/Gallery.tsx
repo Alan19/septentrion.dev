@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Container, FormControlLabel, Grid2 as Grid, Pagination, Radio, RadioGroup, Stack, Typography, useMediaQuery,} from "@mui/material";
 import {ImageEntry, isImageInformation} from "../../../api/src/images/ImageInformation.ts";
 import "./gallery.css";
-import {useTagHooks} from "./UseTagHooks";
+import {useTagHooks} from "./useTagHooks.ts";
 import Uploader from "./Uploader";
 import useMeasure from 'react-use-measure';
 import {ResizeObserver} from '@juggle/resize-observer'
@@ -23,7 +23,7 @@ import {GalleryGrid} from "./GalleryGrid.tsx";
 import {BatchTagging} from "../BatchTagging.tsx";
 
 export function Gallery() {
-    const {filters, images, loadImageInfo, imageEntries} = useTagHooks();
+    const {filters, images, imageEntries} = useTagHooks();
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver});
     const [displayMode, setDisplayMode] = useQueryState<GalleryDisplayModes>('display-mode', GalleryDisplayModes.paginated);
     const [pageSize, setPageSize] = useState<number>(4);
@@ -117,7 +117,7 @@ export function Gallery() {
                 <Share/>
             </Button>
             {isDevelopment && <>
-                <Uploader loadImageInfo={loadImageInfo}/>
+                <Uploader/>
                 <BatchTagging isTagging={batchTagEnabled} setIsTagging={setBatchTagEnabled} tags={batchTagging} setTags={setBatchTagging} selectedImages={selectedImages}/>
             </>}
         </Stack>

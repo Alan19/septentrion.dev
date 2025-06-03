@@ -6,7 +6,7 @@ import {Typography, useMediaQuery} from "@mui/material";
 import {GalleryImage} from "./GalleryImage.tsx";
 import _ from "lodash";
 import {GalleryDisplayModes} from "./GalleryDisplayModes.tsx";
-import {useTagHooks} from "./UseTagHooks.tsx";
+import {useTagHooks} from "./useTagHooks.ts";
 import {getPublishedDate} from "../../../api/src/utils/utils.ts";
 import {materialDesign2Theme} from "../../MaterialDesign2Theme.tsx";
 

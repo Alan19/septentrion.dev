@@ -1,4 +1,4 @@
-import {useTagHooks} from "../gallery/UseTagHooks";
+import {useTagHooks} from "../gallery/useTagHooks.ts";
 import React, {memo, ReactNode} from "react";
 import {Container, Paper, Stack, Tooltip, Typography} from "@mui/material";
 import CalendarHeatmap, {ReactCalendarHeatmapValue} from 'react-calendar-heatmap'
