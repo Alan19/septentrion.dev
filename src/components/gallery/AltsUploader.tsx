@@ -22,7 +22,7 @@ export default function AltsUploader(props: Readonly<{
     const [uploading, setUploading] = useState<boolean>(false);
     const [open, setOpen] = React.useState(false);
     const [snackbarOpen, setSnackbarOpen] = React.useState(false);
-    const [charactersInImage, setCharactersInImage] = useState<string[]>(["Alcor"])
+    const [charactersInImage, setCharactersInImage] = useState<string[]>(props.imageInformation.characters)
     const [rating, setRating] = useState<Rating | null>();
     const [altType, setAltType] = useState<AltType>("extra")
     const [isHidden, setIsHidden] = useState(false);

@@ -7392,5 +7392,47 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/office_chibi.webp",
     "id": "bf58f2a173e8daf30e15634096b70b5a59cbc7ea34d3cbb995b47b63",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/office_chibi.webp"
+  },
+  {
+    "title": "Aquarius Hero Suit γ",
+    "artist": "@_431642",
+    "tags": [
+      "Aquarius Form",
+      "Superhero",
+      "Hoodie"
+    ],
+    "href": "https://x.com/_431642/status/1930584306868699305",
+    "published": "2025-06-05",
+    "aspectRatio": 0.35880875493362036,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_hero_suit_%CE%B3.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_hero_suit_%CE%B3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_hero_suit_%CE%B3.webp",
+    "id": "57ecf7e2008bcf6a46dfcddb2a16b84d5c724f1009251de73acafdca",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_hero_suit_%CE%B3.webp"
+  },
+  {
+    "title": "Hard at Work 🔧",
+    "artist": "@ohkuki.bsky.social",
+    "tags": [
+      "Bodysuit",
+      "Techwear",
+      "Eltanin Form"
+    ],
+    "href": "https://bsky.app/profile/ohkuki.bsky.social/post/3lqxpcyahkk27",
+    "published": "2025-06-06",
+    "aspectRatio": 0.8333333333333334,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/hard_at_work_%F0%9F%94%A7.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/hard_at_work_%F0%9F%94%A7.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/hard_at_work_%F0%9F%94%A7.webp",
+    "id": "7c14587a058a52c06d778ca2ce289c75043914000b0745dffb41286d",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/hard_at_work_%F0%9F%94%A7.webp"
   }
 ]
