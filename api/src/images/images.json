@@ -7434,5 +7434,49 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/hard_at_work_%F0%9F%94%A7.webp",
     "id": "7c14587a058a52c06d778ca2ce289c75043914000b0745dffb41286d",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/hard_at_work_%F0%9F%94%A7.webp"
+  },
+  {
+    "title": "Parkour Bodysuit β",
+    "artist": "@scrawl_naguri",
+    "tags": [
+      "Bodysuit",
+      "Eltanin Form",
+      "Techwear"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lr2wzwkn3k2y",
+    "published": "2025-06-07",
+    "aspectRatio": 0.7070608355729294,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/parkour_bodysuit_%CE%B2.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/parkour_bodysuit_%CE%B2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/parkour_bodysuit_%CE%B2.webp",
+    "id": "7f703c8a3867572c08948a763757588540cecad787b5f2af7e141f49",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/parkour_bodysuit_%CE%B2.webp"
+  },
+  {
+    "title": "Ninja Outfit 2.0 Sketchpage",
+    "artist": "‪@tg-marlo.bsky.social‬",
+    "tags": [
+      "Rastaban Form",
+      "Knives",
+      "Standard Outfit",
+      "Techwear",
+      "Sketchpage"
+    ],
+    "href": "https://bsky.app/profile/tg-marlo.bsky.social/post/3lr7qe67qhc27",
+    "published": "2025-06-09",
+    "aspectRatio": 1,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ninja_outfit_2_0_sketchpage.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ninja_outfit_2_0_sketchpage.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ninja_outfit_2_0_sketchpage.webp",
+    "id": "69797478172295de544c8e14328ca25798e74e9f0bdd7388d734aef5",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/ninja_outfit_2_0_sketchpage.webp"
   }
 ]
