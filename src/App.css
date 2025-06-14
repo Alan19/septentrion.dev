@@ -24,17 +24,20 @@
 
 .react-calendar-heatmap .color-scale-1 {
     /*noinspection CssUnresolvedCustomProperty*/
-    fill: var(--md-sys-color-primary)
+    fill: var(--md-sys-color-primary);
+    opacity: .4
 }
 
 .react-calendar-heatmap .color-scale-2 {
     /*noinspection CssUnresolvedCustomProperty*/
-    fill: var(--md-sys-color-secondary)
+    fill: var(--md-sys-color-primary);
+    opacity: .7
 }
 
 .react-calendar-heatmap .color-scale-3 {
     /*noinspection CssUnresolvedCustomProperty*/
-    fill: var(--md-sys-color-tertiary)
+    fill: var(--md-sys-color-primary);
+    opacity: 1
 }
 
 @keyframes fadeAndSlideFromBottom {

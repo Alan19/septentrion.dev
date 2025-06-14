@@ -47,7 +47,7 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
             <PageHeader title={"Commission Heatmap"}/>
             <Stack spacing={2}>
                 {Array.from(new Set(images.map(value => value.published.substring(0, 4)))).sort((a, b) => b.localeCompare(a)).map(value => <Paper key={value} style={{padding: 8}}>
-                    <Typography variant={"h6"} color={"var(--md-sys-color-tertiary)\"}>"}>{value}</Typography>
+                    <Typography variant={"h6"} color={`var(--md-sys-color-tertiary)`}>{value}</Typography>
                     {/*We have to use a hacky workaround to make the first date work*/}
                     <CalendarHeatmap classForValue={getClassForHeatmapSquare}
                                      showWeekdayLabels
