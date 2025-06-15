@@ -1,50 +1,19 @@
-# React + TypeScript + Vite
+# septentrion.dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the repository for Alcor's personal website! To run this locally, you can follow the following steps:
 
-Currently, two official plugins are available:
+1. Clone this repository.
+2. Install the npm dependencies in both the root folder and the `api` folder using `npm i`.
+3. Populate the `.env` file in the api folder with the following keys:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-    languageOptions: {
-        // other options...
-        parserOptions: {
-            project: ['./tsconfig.node.json', './tsconfig.app.json'],
-            tsconfigRootDir: import.meta.dirname,
-        },
-    },
-})
+```dotenv
+AWS_ACCESS_KEY_ID='Your AWS Access Key'
+AWS_SECRET_ACCESS_KEY='The secret key for the S3 bucket that contains your images 
+BUCKET_NAME='The name of the S3 bucket that contains your images'
+PORT=9000
+NODE_ENV=development
+REGION='The region your AWS bucket is located'
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-    // Set the react version
-    settings: {react: {version: '18.3'}},
-    plugins: {
-        // Add the react plugin
-        react,
-    },
-    rules: {
-        // other rules...
-        // Enable its recommended rules
-        ...react.configs.recommended.rules,
-        ...react.configs['jsx-runtime'].rules,
-    },
-})
-```
+4. Run `npm run dev` on both `package.json` and `api/package.json`.
+5. Run `git update-index --skip-worktree` on the `hidden.json` file so that changes to the hidden file doesn't get reflected in Git.

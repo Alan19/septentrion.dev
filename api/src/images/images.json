@@ -7478,5 +7478,28 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ninja_outfit_2_0_sketchpage.webp",
     "id": "69797478172295de544c8e14328ca25798e74e9f0bdd7388d734aef5",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/ninja_outfit_2_0_sketchpage.webp"
+  },
+  {
+    "title": "Alcor's BEASTRANCERS Character Page",
+    "artist": "@sumiwohakuneko",
+    "tags": [
+      "Aldhibah Form",
+      "Techwear",
+      "Autumnal Wavesniper",
+      "Transformation",
+      "Sketchpage"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lrltkhabf22r",
+    "published": "2025-06-14",
+    "aspectRatio": 0.6694256333082518,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_beastrancers_character_page.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcors_beastrancers_character_page.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_beastrancers_character_page.webp",
+    "id": "72b2f2674fef64fc11f874c218cabd5f3cf7c9536565cde4cd4428da",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_beastrancers_character_page.webp"
   }
 ]
