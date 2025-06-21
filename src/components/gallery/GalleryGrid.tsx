@@ -1,5 +1,5 @@
 import {AltInformation, getParentImage, ImageEntry, ImageInformation, isImageInformation} from "../../../api/src/images/ImageInformation.ts";
-import {TSJustifiedLayout} from "react-justified-layout-ts";
+import {JustifiedGrid} from "react-justified-layout-ts";
 import {getMonthYearPairsInImageSet} from "./GalleryUtils.ts";
 import React, {Fragment} from "react";
 import {Typography, useMediaQuery} from "@mui/material";
@@ -21,15 +21,15 @@ interface GalleryContext {
 }
 
 function createJustifiedGrid(images: (ImageInformation | AltInformation)[], context: GalleryContext) {
-    return <TSJustifiedLayout width={context.width}
+    return <JustifiedGrid width={context.width}
                               targetRowHeight={350}
                               targetRowHeightTolerance={context.tolerance}
                               rowSpacing={8}
                               itemSpacing={8}
                               containerStyle={{position: "relative"}}
-                              layoutItems={images.map(value => value.aspectRatio)}>
+                          aspectRatioList={images.map(value => value.aspectRatio)}>
         {images.map(value => getImageInJustifiedGrid(value, context.altData.has(isImageInformation(value) ? value.title : value.parent), context.selectedImages.includes(value.id), context))}
-    </TSJustifiedLayout>
+    </JustifiedGrid>
 }
 
 function renderGalleryForMonth(year: number, month: number, displayedImages: (ImageInformation | AltInformation)[], images: (ImageInformation | AltInformation)[], context: GalleryContext) {

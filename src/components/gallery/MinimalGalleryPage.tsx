@@ -4,13 +4,13 @@ import {Container, Fade, Typography} from "@mui/material";
 import {isImageInformation} from "../../../api/src/images/ImageInformation.ts";
 import useMeasure from "react-use-measure";
 import {ResizeObserver} from "@juggle/resize-observer";
-import {TSJustifiedLayout} from "react-justified-layout-ts";
 import {drawerColor} from "../common/Navigation";
 import {SkeletonImage} from "../SkeletonImage";
 import {useAltDisplaySettings} from "./useAltDisplaySettings";
 import {useDocumentTitle} from "usehooks-ts";
 import {useQueryState} from "../../UseQueryState.tsx";
 import {FilterMode, getShownImages, imageSort} from "./GalleryUtils.ts";
+import {JustifiedGrid} from "react-justified-layout-ts";
 
 // Page that only displays artworks in a grid, and hides all other elements
 export function MinimalGalleryPage() {
@@ -39,14 +39,12 @@ export function MinimalGalleryPage() {
                 <Typography variant={"h3"} fontFamily={"Potra"} color={"var(--md-sys-color-primary)"}>{referenceName}</Typography>
                 <div ref={ref}></div>
                 <div style={{display: "flex", flexDirection: "column", overflow: "hidden"}}>
-                    <TSJustifiedLayout width={bounds.width}
+                    <JustifiedGrid width={bounds.width}
                                        targetRowHeight={height}
                                        rowSpacing={8}
                                        itemSpacing={8}
                                        containerStyle={{position: "relative"}}
-                                       layoutItems={shownImages.map(value => (
-                                           value.aspectRatio ?? 1
-                                       ))}>
+                                   aspectRatioList={shownImages.map(value => value.aspectRatio ?? 1)}>
                         {shownImages.map(value => {
                             const title = isImageInformation(value) ? value.title : value.parent;
                             return <SkeletonImage
@@ -56,7 +54,7 @@ export function MinimalGalleryPage() {
                                 src={value.thumbnailUrl ?? value.src}
                                 imageClassname={"artImage"}/>;
                         })}
-                    </TSJustifiedLayout>
+                    </JustifiedGrid>
                 </div>
             </div>
         </Container>
