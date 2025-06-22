@@ -20,8 +20,8 @@ export function GalleryImage(props: Readonly<{
         alt={imageName}
         src={src}
         imageClassname={"artImage"}
-        style={croppedImageWithCurvedBorder}
-        skeletonStyle={croppedImageWithCurvedBorder}
+        style={{...croppedImageWithCurvedBorder, aspectRatio: aspectRatio}}
+        skeletonStyle={{...croppedImageWithCurvedBorder, aspectRatio: aspectRatio}}
     />
     const taggingImage = <div onClick={onClickWhenTagging}
                               role={"button"}

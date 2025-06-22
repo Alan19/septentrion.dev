@@ -69,8 +69,8 @@ importers:
         specifier: 19.1.0
         version: 19.1.0(react@19.1.0)
       react-justified-layout-ts:
-        specifier: ^2.1.4
-        version: 2.1.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: ^2.1.5
+        version: 2.1.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react-loading-skeleton:
         specifier: ^3.5.0
         version: 3.5.0(react@19.1.0)
@@ -1643,8 +1643,8 @@ packages:
   react-is@19.0.0:
     resolution: {integrity: sha512-H91OHcwjZsbq3ClIDHMzBShc1rotbfACdWENsmEf0IFvZ3FgGPtdHMcsv45bQ1hAbgdfiA8SnxTKfDS+x/8m2g==}
 
-  react-justified-layout-ts@2.1.4:
-    resolution: {integrity: sha512-c8bCTxVOmGjErMdtG48At5+jLpvaBHlQZ5dPf9E6UXHRYHKx27jUHrd5M7avSs9KNd7QfZ7zzbuP71QZRX8BtA==}
+  react-justified-layout-ts@2.1.5:
+    resolution: {integrity: sha512-SzqpoJdHDvPs3ulBYT+jfMNq3omQiDhjyPyB2alGgvwzLDKkPHdI6DdWBEWMjIbnCtQUsqE8qRZEYDqt+eHa9Q==}
     peerDependencies:
       react: ^18.2.0
 
@@ -3385,7 +3385,7 @@ snapshots:
 
   react-is@19.0.0: {}
 
-  react-justified-layout-ts@2.1.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-justified-layout-ts@2.1.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       '@types/node': 24.0.3
       lodash: 4.17.21
