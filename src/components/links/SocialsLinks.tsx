@@ -4,7 +4,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import CollectionsIcon from '@mui/icons-material/Collections';
 import InternalLinkButton from "./InternalLinkButton";
 import {faGithub, faTwitch, faTwitter} from "@fortawesome/free-brands-svg-icons";
-import {faCloud, faDragon} from "@fortawesome/free-solid-svg-icons";
+import {faCloud} from "@fortawesome/free-solid-svg-icons";
+import {Person} from "@mui/icons-material";
 
 export function SocialsLinks() {
     return (
@@ -32,7 +33,7 @@ export function SocialsLinks() {
 
             <Stack marginTop={2} spacing={1}>
                 <InternalLinkButton icon={<CollectionsIcon/>} text={"Gallery"} link={'/gallery'}/>
-                <InternalLinkButton icon={<FontAwesomeIcon icon={faDragon}/>} text={"Characters"} link={'/about'}/>
+                <InternalLinkButton icon={<Person/>} text={"About Me"} link={'/about'}/>
             </Stack>
         </>
     );

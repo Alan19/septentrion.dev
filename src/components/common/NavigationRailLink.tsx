@@ -8,7 +8,7 @@ export function NavigationRailLink(props: { button: React.ReactNode, selectedBut
     const navigate = useNavigate();
     const topLevelPath = (location.match(/^\/[^/]*/) ?? [''])[0];
     const {path, button, label, selectedButton} = props;
-    let isSelected = topLevelPath === path;
+    const isSelected = topLevelPath === path;
     return <div className={`navigation-rail-item ${isSelected && "selected-rail-item"}`} onClick={() => navigate(path)} style={{display: 'grid', alignItems: 'center'}}>
         <Button style={{height: '2rem', width: '3.5rem'}} color={"secondary"} variant={isSelected ? "filled" : "text"}>{isSelected ? selectedButton : button}</Button>
         <Typography style={{textAlign: "center"}} variant={"subtitle2"} className={'navigation-rail-text'}>{label}</Typography>
