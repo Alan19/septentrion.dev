@@ -7501,5 +7501,26 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_beastrancers_character_page.webp",
     "id": "72b2f2674fef64fc11f874c218cabd5f3cf7c9536565cde4cd4428da",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_beastrancers_character_page.webp"
+  },
+  {
+    "title": "Aquarius Adventuring Outfit Chibi",
+    "artist": "@kurope.bsky.social",
+    "tags": [
+      "Aquarius Form",
+      "Chibi",
+      "Techwear"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3lspovtfjkk23",
+    "published": "2025-06-28",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_adventuring_outfit_chibi.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_adventuring_outfit_chibi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_adventuring_outfit_chibi.webp",
+    "id": "96bf78f3eef536a846bffa4ba3e7a25b7afdc46d72d5a0b8acc53e1b",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_adventuring_outfit_chibi.webp"
   }
 ]
