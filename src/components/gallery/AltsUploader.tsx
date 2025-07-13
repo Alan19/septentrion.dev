@@ -25,6 +25,7 @@ export default function AltsUploader(props: Readonly<{
     const [charactersInImage, setCharactersInImage] = useState<string[]>(props.imageInformation.characters)
     const [rating, setRating] = useState<Rating | null>();
     const [altType, setAltType] = useState<AltType>("extra")
+    // TODO Track down original image in hidden.json
     const [isHidden, setIsHidden] = useState(false);
 
     const {isDevelopment} = useIsDevelopment();

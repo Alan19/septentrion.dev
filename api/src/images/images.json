@@ -7522,5 +7522,53 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_adventuring_outfit_chibi.webp",
     "id": "96bf78f3eef536a846bffa4ba3e7a25b7afdc46d72d5a0b8acc53e1b",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_adventuring_outfit_chibi.webp"
+  },
+  {
+    "title": "Indra Suit by 犬冢赤司",
+    "artist": "犬冢赤司",
+    "tags": [
+      "Bow",
+      "Superhero",
+      "Indra Suit",
+      "Eltanin Form",
+      "Half Body"
+    ],
+    "href": "",
+    "published": "2025-07-13",
+    "aspectRatio": 0.6021113942482709,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8.webp",
+    "id": "42e1557e57a6faccb9acf281ea25d4f23b033bcf9e7e5bae306a292f",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8.webp"
+  },
+  {
+    "tags": [
+      "Bow",
+      "Eltanin Form",
+      "Half Body",
+      "Indra Suit",
+      "Superhero"
+    ],
+    "href": "",
+    "aspectRatio": 0.6021113942482709,
+    "parent": "Indra Suit by 犬冢赤司",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 1
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8_1.webp",
+    "id": "742f9498526ba5dc30b5b8054446ca5947648370eb393a426e3899f5",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8_1.webp"
   }
 ]
