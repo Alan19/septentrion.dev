@@ -30,13 +30,13 @@ export function CharactersPage() {
         },
         {
             image: castor,
-            linkPath: '/lore/castor'
+            linkPath: 'https://vgen.co/c/castor-2/all'
         }
     ]
     const alcorForms: CharacterLink[] = [
         {
             image: aicore,
-            linkPath: '/lore/aicore'
+            linkPath: 'https://vgen.co/c/alcor/aicore'
         },
         {
             image: gemini,
@@ -66,6 +66,7 @@ export function CharactersPage() {
         },
         {
             image: wilton,
+            linkPath: 'https://vgen.co/c/wilton/original'
         },
         {
             image: poslani,

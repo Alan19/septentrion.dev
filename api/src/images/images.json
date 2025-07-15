@@ -7540,11 +7540,11 @@
     "characters": [
       "Alcor"
     ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8.webp",
-    "id": "42e1557e57a6faccb9acf281ea25d4f23b033bcf9e7e5bae306a292f",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8.webp"
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8_1.webp",
+    "id": "742f9498526ba5dc30b5b8054446ca5947648370eb393a426e3899f5",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8_1.webp"
   },
   {
     "tags": [
@@ -7565,10 +7565,31 @@
       "pageNumber": 0,
       "altNumber": 1
     },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8_1.png",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8_1.webp",
-    "id": "742f9498526ba5dc30b5b8054446ca5947648370eb393a426e3899f5",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8_1.webp"
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8.webp",
+    "id": "42e1557e57a6faccb9acf281ea25d4f23b033bcf9e7e5bae306a292f",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/indra_suit_by_%E7%8A%AC%E5%86%A2%E8%B5%A4%E5%8F%B8.webp"
+  },
+  {
+    "title": "Alcor Floatie",
+    "artist": "@axelshrine.bsky.social",
+    "tags": [
+      "Eltanin Form",
+      "Techwear",
+      "Full Body"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3ltvnjsdcu22e",
+    "published": "2025-07-14",
+    "aspectRatio": 1,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_floatie.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_floatie.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_floatie.webp",
+    "id": "bccf36cfc64785499b3c23b565c73ee4e4f14b303fc9387f1b71e920",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_floatie.webp"
   }
 ]
