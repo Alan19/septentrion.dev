@@ -31,6 +31,14 @@ export function CharactersPage() {
         {
             image: castor,
             linkPath: 'https://vgen.co/c/castor-2/all'
+        },
+        {
+            image: jupiter,
+            linkPath: 'https://vgen.co/c/jupiter-4'
+        },
+        {
+            image: aquarius,
+            linkPath: 'https://vgen.co/c/aquarius-2'
         }
     ]
     const alcorForms: CharacterLink[] = [
@@ -48,14 +56,6 @@ export function CharactersPage() {
         },
         {
             image: eclipse,
-        },
-        {
-            image: jupiter,
-            linkPath: 'https://vgen.co/c/jupiter-4'
-        },
-        {
-            image: aquarius,
-            linkPath: 'https://vgen.co/c/aquarius-2'
         }
     ]
 
