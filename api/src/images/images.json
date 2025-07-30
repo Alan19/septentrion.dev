@@ -7591,5 +7591,25 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_floatie.webp",
     "id": "bccf36cfc64785499b3c23b565c73ee4e4f14b303fc9387f1b71e920",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_floatie.webp"
+  },
+  {
+    "title": "Soma Outfit Sheet v2",
+    "artist": "Jeff",
+    "tags": [
+      "Techwear",
+      "Bodysuit"
+    ],
+    "href": "",
+    "published": "2025-07-29",
+    "aspectRatio": 2.4276666666666666,
+    "rating": "mainstream",
+    "characters": [
+      "Soma"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/soma_outfit_sheet_v_2.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/soma_outfit_sheet_v_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_outfit_sheet_v_2.webp",
+    "id": "b010acc9abfd872b65c45d1fee6e9802184c69ad28b36356c3ab21ab",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/soma_outfit_sheet_v_2.webp"
   }
 ]
