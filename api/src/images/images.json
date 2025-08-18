@@ -7611,5 +7611,25 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_outfit_sheet_v_2.webp",
     "id": "b010acc9abfd872b65c45d1fee6e9802184c69ad28b36356c3ab21ab",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/soma_outfit_sheet_v_2.webp"
+  },
+  {
+    "title": "Rayan Samemoto Illustration",
+    "artist": "@sumiwohakuneko",
+    "tags": [
+      "Aquarius Form",
+      "Techwear"
+    ],
+    "href": "https://skeb.jp/@sumiwohakuneko/works/15",
+    "published": "2025-08-18",
+    "aspectRatio": 0.6805877803557618,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_samemoto_illustration.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_samemoto_illustration.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_samemoto_illustration.webp",
+    "id": "e85be85db26b1e60cd6059e97533eabd7acacecd78b1edb00b31db14",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_samemoto_illustration.webp"
   }
 ]
