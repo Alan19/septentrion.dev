@@ -7695,7 +7695,7 @@
   },
   {
     "title": "Demon Hunter Chibi",
-    "artist": "‪@kurope.bsky.social‬",
+    "artist": "@kurope.bsky.social",
     "tags": [
       "Chibi",
       "Thuban Form"
@@ -7712,5 +7712,27 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/demon_hunter_chibi.webp",
     "id": "76a67c362a1dbf567aab9e66fe34d12c8dcc819ba045119e8d6ffefe",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/demon_hunter_chibi.webp"
+  },
+  {
+    "title": "Aquarius at the Beach",
+    "artist": "@Hagrang_",
+    "tags": [
+      "Aquarius Form",
+      "Bodysuit",
+      "Techwear",
+      "Full Body"
+    ],
+    "href": "https://x.com/Hagrang_/status/1964201236548223358",
+    "published": "2025-09-06",
+    "aspectRatio": 0.8056478405315615,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/aquarius_at_the_beach.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/aquarius_at_the_beach.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_at_the_beach.webp",
+    "id": "a359f3af3df798652f29938f00edd8279422d308cf400dd214f1f504",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_at_the_beach.webp"
   }
 ]
