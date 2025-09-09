@@ -7734,5 +7734,43 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/aquarius_at_the_beach.webp",
     "id": "a359f3af3df798652f29938f00edd8279422d308cf400dd214f1f504",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/aquarius_at_the_beach.webp"
+  },
+  {
+    "title": "Human Alcor Swimsuit Reference",
+    "artist": "@flflzkzh",
+    "tags": [
+      "Aldhibah Form",
+      "Techwear",
+      "Full Body"
+    ],
+    "href": "https://x.com/Koon_erang/status/1964607368358220169",
+    "published": "2025-09-07",
+    "aspectRatio": 0.6630859375,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/human_alcor_swimsuit_reference.jpeg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/human_alcor_swimsuit_reference.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/human_alcor_swimsuit_reference.webp",
+    "id": "1243fecee0a62994eb634b620fc61e7ef22898db5cfef2f53c3ccc33",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/human_alcor_swimsuit_reference.webp"
+  },
+  {
+    "title": "Castor - Erosyphos",
+    "artist": "@Kosmarin1",
+    "tags": [],
+    "href": "https://x.com/Kosmarin1/status/1963275441818436049",
+    "published": "2025-09-09",
+    "aspectRatio": 1.0988912196583758,
+    "rating": "general",
+    "characters": [
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/castor_erosyphos.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/castor_erosyphos.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_erosyphos.webp",
+    "id": "e5eb4cb57def3553a1017c8a7d44052fee6604ad3f2330a1160254ba",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/castor_erosyphos.webp"
   }
 ]
