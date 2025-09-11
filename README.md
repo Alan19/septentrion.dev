@@ -1,19 +1,69 @@
-# septentrion.dev
+# React + TypeScript + Vite
 
-This is the repository for Alcor's personal website! To run this locally, you can follow the following steps:
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-1. Clone this repository.
-2. Install the npm dependencies in both the root folder and the `api` folder using `npm i`.
-3. Populate the `.env` file in the api folder with the following keys:
+Currently, two official plugins are available:
 
-```dotenv
-AWS_ACCESS_KEY_ID='Your AWS Access Key'
-AWS_SECRET_ACCESS_KEY='The secret key for the S3 bucket that contains your images 
-BUCKET_NAME='The name of the S3 bucket that contains your images'
-PORT=9000
-NODE_ENV=development
-REGION='The region your AWS bucket is located'
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      ...tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      ...tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      ...tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-4. Run `npm run dev` on both `package.json` and `api/package.json`.
-5. Run `git update-index --skip-worktree` on the `hidden.json` file so that changes to the hidden file doesn't get reflected in Git.
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```

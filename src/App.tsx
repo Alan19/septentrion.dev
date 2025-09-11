@@ -1,34 +1,21 @@
-import React from "react";
-import "./App.css";
-import {ThemeProvider,} from "@mui/material";
-import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs'
-import {LocalizationProvider} from "@mui/x-date-pickers";
-import {CssVarsProvider} from "@mui/material-next";
-import {alcorTheme, websiteThemes} from "./MaterialYouThemes.tsx";
-import {drawerColor, Navigation} from "./components/common/Navigation";
-import {materialDesign2Theme} from "./MaterialDesign2Theme.tsx";
-import {useSettings} from "./UseSettings.ts";
-import {AppRouter} from "./AppRouter.tsx";
-import {NuqsAdapter} from "nuqs/adapters/react-router/v7";
+import {NavigationRail} from "./components/layout/NavigationRail.tsx";
+import "./components/App.css"
 
-export function App() {
-    const {appTheme} = useSettings();
+function App() {
+    ui("theme", "#5793d1")
 
-    return <CssVarsProvider theme={websiteThemes.find(value => value.name === appTheme)?.theme ?? alcorTheme}>
-        <ThemeProvider theme={materialDesign2Theme}>
-            <NuqsAdapter>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <div className="App" style={{
-                        backgroundColor: drawerColor,
-                        minHeight: "100vh",
-                        color: 'var(--md-palette-text-primary)'
-                    }}>
-                        <Navigation>
-                            <AppRouter/>
-                        </Navigation>
-                    </div>
-                </LocalizationProvider>
-            </NuqsAdapter>
-        </ThemeProvider>
-    </CssVarsProvider>;
+    return (
+        <div className={"surface-container app"}>
+            <NavigationRail/>
+            <div style={{flex: 1}} className={"content"}>
+                <div className={"surface"} style={{minHeight: "calc(100vh - 2rem)"}}>
+                    <main className={"responsive"}>
+                        <h1>Hello World!</h1>
+                    </main>
+                </div>
+            </div>
+        </div>
+    )
 }
+
+export default App
