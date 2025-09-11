@@ -1,7 +1,8 @@
-import {Link, useLocation} from "wouter";
 import {clsx} from "clsx";
 import {ModeToggle} from "./ModeToggle.tsx";
 import _ from "lodash";
+import {Link} from "react-router-dom";
+import {useLocation} from "react-router";
 
 function NavigationDestination(props: { value: { path: string; icon: string; label?: string }, isActive: boolean, className?: string }) {
     const {isActive, value} = props;
@@ -13,8 +14,8 @@ function NavigationDestination(props: { value: { path: string; icon: string; lab
 }
 
 export function NavigationRail() {
-    const location = useLocation()[0];
-    const topLevelPath = (location.match(/^\/[^/]*/) ?? [''])[0];
+    const location = useLocation();
+    const topLevelPath = (location.pathname.match(/^\/[^/]*/) ?? [''])[0];
 
     const links: { path: string, icon: string, label?: string }[] = [
         {
@@ -41,7 +42,7 @@ export function NavigationRail() {
     ]
     return <nav className={clsx("m l left surface-container",)}>
         {
-            links.map((value, index) => <NavigationDestination className={index === 0 && "top-margin"} value={value} isActive={topLevelPath === `/${value.path}`}/>)
+            links.map((value, index) => <NavigationDestination className={clsx(index === 0 && "top-margin")} value={value} isActive={topLevelPath === `/${value.path}`}/>)
         }
         <div className={"absolute bottom bottom-margin"} style={{display: "flex", gap: ".5rem", flexDirection: "column"}}>
             <ModeToggle/>

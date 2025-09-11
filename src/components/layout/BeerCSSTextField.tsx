@@ -1,7 +1,7 @@
 import * as React from "react";
-import {ReactNode} from "react";
 import _ from "lodash";
 import {clsx} from "clsx";
+import type {ReactNode} from "react";
 
 export type InputSize = "small" | "medium" | "large" | "extra";
 

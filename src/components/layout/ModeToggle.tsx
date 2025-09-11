@@ -2,8 +2,6 @@ import {useLocalStorage} from "usehooks-ts";
 import {clsx} from "clsx";
 import {useEffect} from "react";
 
-export type AppTheme = 'Hugo' | 'Marco' | 'Lucky'
-
 export type Mode = 'light' | 'dark' | 'auto';
 export function ModeToggle() {
     const [colorScheme, setColorScheme] = useLocalStorage<Mode>("preferred-color-scheme", "auto");
@@ -13,18 +11,33 @@ export function ModeToggle() {
         ui("mode", colorScheme)
     }, [colorScheme]);
 
+    const [iconName, label] = (() => {
+        switch(colorScheme) {
+            case "light":
+                return ["light_mode", "Light"]
+            case "dark":
+                return ["dark_mode", "Dark"]
+            case "auto":
+                return ["auto_mode", "System"]
+        }
+    })()
+
+    const nextColorScheme = (() => {
+        switch (colorScheme) {
+            case "light":
+                return "dark";
+            case "dark":
+                return "auto";
+            case "auto":
+                return "light";
+
+        }
+    })
+
     return <>
-        <button onClick={() => setColorScheme("light")} className={clsx("circle", colorScheme === "light" ? "tertiary" : "border tertiary-text")}>
-            <i>light_mode</i>
-            <span>Light</span>
-        </button>
-        <button onClick={() => setColorScheme("dark")} className={clsx("circle", colorScheme === "dark" ? "tertiary" : "border tertiary-text")}>
-            <i>dark_mode</i>
-            <span>Dark</span>
-        </button>
-        <button onClick={() => setColorScheme("auto")} className={clsx("circle", colorScheme === "auto" ? "tertiary" : "border tertiary-text")}>
-            <i>auto_mode</i>
-            <span>System</span>
+        <button onClick={() => setColorScheme(nextColorScheme)} className={clsx("circle border extra tertiary-border tertiary-text")}>
+            <i>{iconName}</i>
+            <span>{label}</span>
         </button>
     </>;
 }
