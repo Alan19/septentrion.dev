@@ -7750,11 +7750,11 @@
     "characters": [
       "Alcor"
     ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/human_alcor_swimsuit_reference.jpeg",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/human_alcor_swimsuit_reference.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/human_alcor_swimsuit_reference.webp",
-    "id": "1243fecee0a62994eb634b620fc61e7ef22898db5cfef2f53c3ccc33",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/human_alcor_swimsuit_reference.webp"
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/human_alcor_swimsuit_reference_1.jpg",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/human_alcor_swimsuit_reference_1.webp",
+    "id": "990b9f19d455c5ee240a9838e29c7f1b1e08741059b33f9468c75a5a",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/human_alcor_swimsuit_reference_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/human_alcor_swimsuit_reference_1.webp"
   },
   {
     "title": "Castor - Erosyphos",
@@ -7772,5 +7772,27 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/castor_erosyphos.webp",
     "id": "e5eb4cb57def3553a1017c8a7d44052fee6604ad3f2330a1160254ba",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/castor_erosyphos.webp"
+  },
+  {
+    "title": "Birthday Video Game Teaser Illustration",
+    "artist": "@flflzkzh",
+    "tags": [
+      "Rastaban Form",
+      "Standard Outfit",
+      "Illustration",
+      "Techwear"
+    ],
+    "href": "https://x.com/flflzkzh/status/1968179287477108848",
+    "published": "2025-09-17",
+    "aspectRatio": 1.7775520568816658,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/birthday_video_game_teaser_illustration.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/birthday_video_game_teaser_illustration.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/birthday_video_game_teaser_illustration.webp",
+    "id": "8cc2254b35c7096fa708296908b95a52b1eb1322c3b0880272dd1dc2",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/birthday_video_game_teaser_illustration.webp"
   }
 ]
