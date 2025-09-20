@@ -8,7 +8,7 @@ export function ProfileInfo() {
         </q>
         <br/>
         <strong>
-            Software Engineer 👨‍💻 ◈ TTRPG Enthusiast 🎲 ◈ Casual CFVG Player 🎴
+            Software Engineer 👨‍💻 ◈ TTRPG Enthusiast 🎲 ◈ CFVG Player 🎴
         </strong>
     </>;
 }

@@ -3,9 +3,23 @@
     height: 100%;
 }
 
+
 .content {
     margin-top: 1rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
     border-radius: 1rem;
+}
+
+@media (max-width:960px)  {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .app {
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+    .content {
+        margin: 0;
+        border-radius: 0;
+        overflow-y: scroll;
+    }
 }

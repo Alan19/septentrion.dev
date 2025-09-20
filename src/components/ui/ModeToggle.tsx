@@ -3,7 +3,7 @@ import {clsx} from "clsx";
 import {useEffect} from "react";
 
 export type Mode = 'light' | 'dark' | 'auto';
-export function ModeToggle() {
+export function ModeToggle(props: {className?: string}) {
     const [colorScheme, setColorScheme] = useLocalStorage<Mode>("preferred-color-scheme", "auto");
 
     // TODO Check if it's possible to detect a night mode switch
@@ -35,7 +35,7 @@ export function ModeToggle() {
     })
 
     return <>
-        <button onClick={() => setColorScheme(nextColorScheme)} className={clsx("circle border extra tertiary-border tertiary-text")}>
+        <button onClick={() => setColorScheme(nextColorScheme)} className={props.className ?? clsx("circle border extra tertiary-border tertiary-text")}>
             <i>{iconName}</i>
             <span>{label}</span>
         </button>

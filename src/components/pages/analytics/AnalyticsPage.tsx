@@ -1,6 +1,6 @@
 // import {useTagHooks} from "../gallery/useTagHooks.ts";
 // import React, {memo} from "react";
-// import CalendarHeatmap, {ReactCalendarHeatmapValue} from 'react-calendar-heatmap'
+// import CalendarHeatmap, {type ReactCalendarHeatmapValue} from 'react-calendar-heatmap'
 // import 'react-calendar-heatmap/dist/styles.css';
 // import {M3Pane} from "../common/M3Pane";
 // import {useDocumentTitle} from "usehooks-ts";

@@ -3,6 +3,7 @@ import {ModeToggle} from "./ModeToggle.tsx";
 import _ from "lodash";
 import {Link} from "react-router-dom";
 import {useLocation} from "react-router";
+import {useIsMobile} from "../../hooks/useIsMobile.ts";
 
 function NavigationDestination(props: { value: { path: string; icon: string; label?: string }, isActive: boolean, className?: string }) {
     const {isActive, value} = props;
@@ -16,6 +17,7 @@ function NavigationDestination(props: { value: { path: string; icon: string; lab
 export function NavigationRail() {
     const location = useLocation();
     const topLevelPath = (location.pathname.match(/^\/[^/]*/) ?? [''])[0];
+    const isMobile = useIsMobile();
 
     const links: { path: string, icon: string, label?: string }[] = [
         {
@@ -40,12 +42,13 @@ export function NavigationRail() {
             icon: "analytics"
         }
     ]
-    return <nav className={clsx("m l left surface-container",)}>
+
+    return <nav className={clsx("surface-container", !useIsMobile() ? "left" : "bottom")}>
         {
-            links.map((value, index) => <NavigationDestination className={clsx(index === 0 && "top-margin")} value={value} isActive={topLevelPath === `/${value.path}`}/>)
+            links.map((value, index) => <NavigationDestination className={clsx(index === 0 && !isMobile && "top-margin")} value={value} isActive={topLevelPath === `/${value.path}`}/>)
         }
-        <div className={"absolute bottom bottom-margin"} style={{display: "flex", gap: ".5rem", flexDirection: "column"}}>
+        {!useIsMobile() && <div className={"absolute bottom bottom-margin"} style={{display: "flex", gap: ".5rem", flexDirection: "column"}}>
             <ModeToggle/>
-        </div>
+        </div>}
     </nav>;
 }

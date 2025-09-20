@@ -1,4 +1,4 @@
-import {SocialMediaButton} from "../ui/SocialMediaButton.tsx";
+import {SocialMediaButton} from "../../ui/SocialMediaButton.tsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBluesky, faGithub, faTwitch, faTwitter} from "@fortawesome/free-brands-svg-icons";
 
