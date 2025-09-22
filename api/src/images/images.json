@@ -7794,5 +7794,49 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/birthday_video_game_teaser_illustration.webp",
     "id": "8cc2254b35c7096fa708296908b95a52b1eb1322c3b0880272dd1dc2",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/birthday_video_game_teaser_illustration.webp"
+  },
+  {
+    "title": "Alcor's Morning",
+    "artist": "@ssssskma",
+    "tags": [
+      "Aldhibah Form",
+      "Techwear",
+      "Bodysuit",
+      "Sketchpage"
+    ],
+    "href": "https://skeb.jp/@ssssskma/works/15",
+    "published": "2025-09-05",
+    "aspectRatio": 1.0199456029011786,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_morning.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcors_morning.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_morning.webp",
+    "id": "ca226efed3f9947f927d49f2d8e6d0330d7c602da21d340eb563883c",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_morning.webp"
+  },
+  {
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://bsky.app/profile/lavaalter.bsky.social/post/3lzc2ovg7q22h",
+    "aspectRatio": 0.75,
+    "parent": "It's HIS Bday Gift",
+    "rating": "mature",
+    "characters": [
+      "Alcor",
+      "Lava"
+    ],
+    "altType": {
+      "pageNumber": 0,
+      "altNumber": 2
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/its_his_bday_gift_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/its_his_bday_gift_2.webp",
+    "id": "d5350f21e0d119589192ba6b75b58ff5a1641cc867b2ea16d11cf8a7",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/its_his_bday_gift_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/its_his_bday_gift_2.webp"
   }
 ]
