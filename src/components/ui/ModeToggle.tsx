@@ -1,41 +1,31 @@
-import {useLocalStorage} from "usehooks-ts";
+import {useTernaryDarkMode} from "usehooks-ts";
 import {clsx} from "clsx";
 import {useEffect} from "react";
 
-export type Mode = 'light' | 'dark' | 'auto';
-export function ModeToggle(props: {className?: string}) {
-    const [colorScheme, setColorScheme] = useLocalStorage<Mode>("preferred-color-scheme", "auto");
+
+export function ModeToggle(props: { className?: string }) {
+    const {ternaryDarkMode, toggleTernaryDarkMode,} = useTernaryDarkMode()
 
     // TODO Check if it's possible to detect a night mode switch
     useEffect(() => {
-        ui("mode", colorScheme)
-    }, [colorScheme]);
+        ui("mode", ternaryDarkMode === 'system' ? 'auto' : ternaryDarkMode)
+    }, [ternaryDarkMode]);
 
     const [iconName, label] = (() => {
-        switch(colorScheme) {
+        switch (ternaryDarkMode) {
             case "light":
                 return ["light_mode", "Light"]
             case "dark":
                 return ["dark_mode", "Dark"]
-            case "auto":
+            case "system":
                 return ["auto_mode", "System"]
         }
     })()
 
-    const nextColorScheme = (() => {
-        switch (colorScheme) {
-            case "light":
-                return "dark";
-            case "dark":
-                return "auto";
-            case "auto":
-                return "light";
-
-        }
-    })
+    console.log(ternaryDarkMode)
 
     return <>
-        <button onClick={() => setColorScheme(nextColorScheme)} className={props.className ?? clsx("circle border extra tertiary-border tertiary-text")}>
+        <button onClick={toggleTernaryDarkMode} className={props.className ?? clsx("circle border extra tertiary-border tertiary-text")}>
             <i>{iconName}</i>
             <span>{label}</span>
         </button>

@@ -2,10 +2,21 @@ import {NavigationRail} from "./components/ui/NavigationRail.tsx";
 import "./components/App.css"
 import {AppRouter} from "./AppRouter.tsx";
 import {HashRouter} from "react-router";
+import {CorePalette, argbFromHex} from "@material/material-color-utilities"
 
 function App() {
-    ui("theme", "#5793d1")
 
+    console.log(ui("theme", "#5793d1"))
+
+    const colors = CorePalette.fromColors({
+        primary: argbFromHex("#B4D1FC"),
+        secondary: argbFromHex("#987BFF"),
+        tertiary: argbFromHex("#2692FF"),
+        error: argbFromHex("#ED4545"),
+        neutral:  argbFromHex("#D1D1D6"),
+        neutralVariant:  argbFromHex("#D1D1D6"),
+    });
+    console.log(colors)
     return (
         <HashRouter>
             <div className={"surface-container app"}>
@@ -15,7 +26,6 @@ function App() {
                 </div>
             </div>
         </HashRouter>
-
     )
 }
 

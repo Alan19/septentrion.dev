@@ -1,0 +1,159 @@
+{
+  "definitions": {
+    "Rating": {
+      "type": "string",
+      "enum": [
+        "mainstream",
+        "general",
+        "sensitive",
+        "mature"
+      ]
+    },
+    "AltAndPage": {
+      "type": "object",
+      "anyOf": [
+        {
+          "properties": {
+            "altNumber": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "altNumber"
+          ]
+        },
+        {
+          "properties": {
+            "pageNumber": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "pageNumber"
+          ]
+        }
+      ]
+    },
+    "ImageBase": {
+      "type": "object",
+      "properties": {
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "webp": {
+          "type": "string"
+        },
+        "src": {
+          "type": "string"
+        },
+        "thumbnailUrl": {
+          "type": "string"
+        },
+        "rating": {
+          "$ref": "#/definitions/Rating"
+        },
+        "aspectRatio": {
+          "type": "number"
+        },
+        "href": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "characters": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "tags",
+        "src",
+        "webp",
+        "thumbnailUrl",
+        "rating",
+        "aspectRatio",
+        "characters",
+        "id"
+      ]
+    },
+    "AltInformation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ImageBase"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "parent": {
+              "type": "string"
+            },
+            "altType": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/AltAndPage"
+                },
+                {
+                  "type": "string",
+                  "enum": [
+                    "extra",
+                    "cropped",
+                    "recolor"
+                  ]
+                }
+              ],
+              "default": "extra",
+              "description": "The type of alt it is, extra for things like cropped versions or additional files attached to the commission, alts for slightly modified versions of the artwork, and numbers for the position of an alt in a sequence (starting from 1, as the parent will be 0)."
+            }
+          },
+          "required": [
+            "parent",
+            "altType"
+          ]
+        }
+      ]
+    },
+    "ImageInformation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/ImageBase"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "published": {
+              "type": "string"
+            },
+            "artist": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "published",
+            "artist"
+          ]
+        }
+      ]
+    }
+  },
+  "type": "array",
+  "items": {
+    "oneOf": [
+      {
+        "$ref": "#/definitions/ImageInformation"
+      },
+      {
+        "$ref": "#/definitions/AltInformation"
+      }
+    ]
+  }
+}
