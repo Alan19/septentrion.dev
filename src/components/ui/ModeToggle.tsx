@@ -4,7 +4,7 @@ import {useEffect} from "react";
 
 
 export function ModeToggle(props: { className?: string }) {
-    const {ternaryDarkMode, toggleTernaryDarkMode,} = useTernaryDarkMode()
+    const {ternaryDarkMode, toggleTernaryDarkMode} = useTernaryDarkMode()
 
     // TODO Check if it's possible to detect a night mode switch
     useEffect(() => {
@@ -21,8 +21,6 @@ export function ModeToggle(props: { className?: string }) {
                 return ["auto_mode", "System"]
         }
     })()
-
-    console.log(ternaryDarkMode)
 
     return <>
         <button onClick={toggleTernaryDarkMode} className={props.className ?? clsx("circle border extra tertiary-border tertiary-text")}>

@@ -19,7 +19,7 @@ function App() {
     console.log(colors)
     return (
         <HashRouter>
-            <div className={"surface-container app"}>
+            <div className={"surface-container-high app"}>
                 <NavigationRail/>
                 <div style={{flex: 1}} className={"content surface"}>
                     <AppRouter/>

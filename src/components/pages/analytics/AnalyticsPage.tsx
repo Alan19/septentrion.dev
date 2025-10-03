@@ -38,7 +38,7 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
         return element;
     }
 
-    return <Container>
+    return <Container className={"fade"}>
         <h2 className={"primary-text"}>Commission Heatmap</h2>
         <div style={{display: "flex", flexDirection: "column", gap: "2rem"}}>
             {Array.from(new Set(images.map(value => value.published.substring(0, 4)))).sort((a, b) => b.localeCompare(a)).map(value => <article key={value} style={{padding: 8}}>

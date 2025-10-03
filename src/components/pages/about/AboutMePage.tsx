@@ -9,7 +9,7 @@ export function AboutMePage() {
 
     // TODO Add more text
     return (
-        <Container>
+        <Container className={"fade"}>
             <h2 className={"primary-text"}>About Me (IRL)</h2>
             <div style={{display: "flex", gap: '1rem', flexDirection: mobile ? "column" : 'row'}}>
                 <img src={"https://alcorsiteartbucket.s3.amazonaws.com/webp/moodboard.webp"} style={{width: '100%', objectFit: "contain", flex: 7}}/>

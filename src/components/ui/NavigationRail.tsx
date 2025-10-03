@@ -43,7 +43,7 @@ export function NavigationRail() {
         }
     ]
 
-    return <nav className={clsx("surface-container", !useIsMobile() ? "left" : "bottom")}>
+    return <nav className={clsx("surface-container-high", !useIsMobile() ? "left" : "bottom")}>
         {
             links.map((value, index) => <NavigationDestination className={clsx(index === 0 && !isMobile && "top-margin")} value={value} isActive={topLevelPath === `/${value.path}`}/>)
         }

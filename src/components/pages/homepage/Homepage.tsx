@@ -12,7 +12,7 @@ export function Homepage() {
 
     return <>
         {useIsMobile() && <div style={{position: "absolute", right: "1rem", top: "1rem"}}><ModeToggle className={clsx("transparent circle")}/></div>}
-        <Container className={"middle homepage-content"}>
+        <Container className={"middle homepage-content fade"}>
             <div className={"profile"}>
                 <Profile/>
             </div>
