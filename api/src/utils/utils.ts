@@ -1,4 +1,4 @@
-import {AltInformation, ImageInformation, isImageInformation} from "../images/ImageInformation";
+import {type AltInformation, type ImageInformation, isImageInformation} from "../images/ImageInformation";
 import {snakeCase} from "lodash";
 import filenamify from "filenamify";
 
