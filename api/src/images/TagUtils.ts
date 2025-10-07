@@ -124,9 +124,6 @@ export class SelectedFilters {
     }
 
     doesImageMatch(image: ImageEntry & { artist: string }, mode: 'and' | 'or') {
-        if (image.artist === undefined) {
-            console.log(image.thumbnailUrl)
-        }
         const imageFilterableInfo = [...image.tags, image.artist, ...image.characters, image.rating];
         const filters = this.toArray();
         const enabledFilters = filters.filter(value => !value.startsWith('-'))

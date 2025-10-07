@@ -7816,5 +7816,25 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_morning.webp",
     "id": "ca226efed3f9947f927d49f2d8e6d0330d7c602da21d340eb563883c",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_morning.webp"
+  },
+  {
+    "title": "Hairstyle Refinement Icon",
+    "artist": "@yamainuken.bsky.social",
+    "tags": [
+      "Thuban Form",
+      "Standard Outfit"
+    ],
+    "href": "",
+    "published": "2025-10-01",
+    "aspectRatio": 0.752,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/hairstyle_refinement_icon.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/hairstyle_refinement_icon.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/hairstyle_refinement_icon.webp",
+    "id": "832eaad169f15ee7fadde5484927448160c2fbe2e5edbec161e5da95",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/hairstyle_refinement_icon.webp"
   }
 ]
