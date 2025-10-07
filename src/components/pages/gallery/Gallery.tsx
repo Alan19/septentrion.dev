@@ -3,20 +3,26 @@ import {JustifiedGrid} from "react-justified-layout-ts";
 import {useTagHooks} from "../../../hooks/useTagHooks.ts";
 import {GallerySearchbar} from "./GallerySearchbar.tsx";
 import {Link} from "react-router-dom";
+import {ArtworkUploader} from "./uploader-modal/ArtworkUploader.tsx";
 
 export function Gallery() {
-    const {images, altData} = useTagHooks();
-    images.sort((a, b) => b.published.localeCompare(a.published))
-    return <Container className={"fade"}>
-        <h1 className={"primary-text"}>Gallery</h1>
-        <GallerySearchbar/>
-        <JustifiedGrid aspectRatioList={images.map(value => value.aspectRatio)} width={1100}>
-            {images.map(value => <Link to={value.id}>
-                <img src={value.thumbnailUrl}/>
-                {altData.get(value.title) && <button className="absolute circle secondary-container" style={{right: 8, top: 8, opacity: .75}}>
-                    <i>more</i>
-                </button>}
-            </Link>)}
-        </JustifiedGrid>
-    </Container>;
+    const {images, altData, filters} = useTagHooks();
+    const displayedImages = images.filter(value => filters.doesImageMatch(value, "and")).sort((a, b) => b.published.localeCompare(a.published))
+    return <>
+        <Container className={"fade"}>
+            <h1 className={"primary-text"}>Gallery</h1>
+            <div className={"bottom-margin"}>
+                <GallerySearchbar/>
+            </div>
+            <JustifiedGrid aspectRatioList={displayedImages.map(value => value.aspectRatio)} width={1100}>
+                {displayedImages.map(value => <Link to={value.id}>
+                    <img src={value.thumbnailUrl}/>
+                    {altData.get(value.title) && <button className="absolute circle secondary-container" style={{right: 8, top: 8, opacity: .75}}>
+                        <i>more</i>
+                    </button>}
+                </Link>)}
+            </JustifiedGrid>
+        </Container>
+        <ArtworkUploader />
+    </>;
 }

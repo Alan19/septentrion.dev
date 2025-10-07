@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import images from '../../api/src/images/images.json'
 import hidden from '../../api/src/routes/local_scripts/hidden.json'
 import {SelectedFilters} from "../../api/src/images/TagUtils.ts";
-import {useQueryState} from "./UseQueryState.tsx";
+import {useQueryState} from "./useQueryState.ts";
 
 // TODO Remove load image info export since we're using an effect to track changes
 export function useTagHooks() {

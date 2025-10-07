@@ -25,7 +25,7 @@
 }
 
 .fade {
-    animation: fade-in .6s ease-in-out;
+    animation: fade-in .45s ease-in-out;
 }
 
 @keyframes fade-in {
@@ -36,3 +36,23 @@
         opacity: 0;
     }
 }
+
+.dropdown-content {
+    z-index: 9999 !important;
+}
+
+.dropdown-content * {
+    background: var(--surface) !important;
+}
+
+.dropdown-container {
+    background: unset !important;
+    border-color: var(--outline) !important;
+    margin: 0 !important;
+}
+
+.gray {
+    color: var(--on-surface) !important;
+    font-size: 16px;
+}
+

@@ -3,13 +3,13 @@ import {useParams} from "react-router";
 import {Container} from "../../ui/Container.tsx";
 import {clsx} from "clsx";
 import {Link, useSearchParams} from "react-router-dom";
-import {type ImageInformation, isImageInformation} from "../../../../api/src/images/ImageInformation.ts";
+import {type ImageInformation, isAltInformation} from "../../../../api/src/images/ImageInformation.ts";
 
 export function Artwork() {
     const {images, altData, imageEntries} = useTagHooks()
     const imageId = encodeURIComponent(useParams().id ?? "");
     const displayedImage = imageEntries.find(value => value.id === imageId);
-    const parentImage: ImageInformation | undefined = displayedImage && isImageInformation(displayedImage) ? displayedImage : images.find(value => value.title === displayedImage?.parent)
+    const parentImage: ImageInformation | undefined = displayedImage && isAltInformation(displayedImage) ? images.find(value => displayedImage.parent === value.title) : displayedImage as ImageInformation
     const [searchParams] = useSearchParams()
     return <>
         <Container className={"fade"} style={{height: "calc(100vh - 2rem)", display: "flex", flexDirection: "column"}}>

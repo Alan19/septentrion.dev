@@ -8,8 +8,8 @@ import {useIsMobile} from "../../hooks/useIsMobile.ts";
 function NavigationDestination(props: { value: { path: string; icon: string; label?: string }, isActive: boolean, className?: string }) {
     const {isActive, value} = props;
     const {icon, path, label} = value;
-    return <Link className={props.className} to={`/${path}`}>
-        <i className={clsx(isActive && "primary-container", "ripple")}>{icon}</i>
+    return <Link className={props.className} to={`/${path}`} style={{color: "var(--on-surface-variant)"}}>
+        <i className={clsx(isActive && "secondary-container", "ripple")} >{icon}</i>
         <span className={clsx(isActive && "bold")}>{label ?? _.capitalize(path)}</span>
     </Link>;
 }
