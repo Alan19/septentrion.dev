@@ -23,7 +23,7 @@ export function GallerySearchbar() {
     return <BeerCssCombobox placeholder={"Tags"}
                             className={"max"}
                             value={filters.toArray().map(value => ({value: value, label: value}))}
-                            filterOptions={(options, query) => query.startsWith("-") ? options.filter(value => value.label.startsWith("-")) : options.filter(value => !value.label.startsWith("-"))}
+                            filterOptions={(options, query) => query === "" ? options.filter(value => !value.label.startsWith("-")) : options.filter(value => value.label.toLowerCase().startsWith(query.toLowerCase()))}
                             options={[...getSortedOptions(),
                                 ...artists.flatMap(value => [value, `-${value}`]),
                                 ...characters.flatMap(value => [value, `-${value}`]),

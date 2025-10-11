@@ -33,7 +33,7 @@ export function GalleryPagination(props: { page: number, setPage: (page: number)
         }
     }
 
-    const renderedPages = [1,
+    const renderedPages = props.maxPages < 7 ? Array.from({length: props.maxPages}, (_, i) => i + 1) :  [1,
         props.page < 5 ? 2 : "...",
         getSlotThree(),
         getSlotFour(),
@@ -41,7 +41,8 @@ export function GalleryPagination(props: { page: number, setPage: (page: number)
         props.page >= props.maxPages - 3 ? props.maxPages - 1 : '...',
         props.maxPages]
 
+
     return <nav className={`group connected bottom-align no-margin ${props.className}`} style={{height: "100%", ...props.style, marginBottom: "1rem"}}>
-        {renderedPages.map((value, index, array) => typeof value === "number" ? <button onClick={() => props.setPage(value)} className={clsx("circle", props.page === value ? "active" : "border", index === 0 ? "left-round" : index === array.length - 1 ? "right-round" : "no-round")}>{value}</button> : <button disabled style={{cursor: "text"}} className={clsx("circle", "transparent", index === 0 ? "left-round" : index === array.length - 1 ? "right-round" : "no-round")} >...</button>)}
+        {renderedPages.map((value, index, array) => typeof value === "number" ? <button onClick={() => props.setPage(value)} className={clsx("circle", props.page === value ? "active" : "border", index === 0 ? "left-round" : index === array.length - 1 ? "right-round" : "no-round")}>{value}</button> : <button disabled style={{cursor: "text"}} className={clsx("circle", "transparent", index === 0 ? "left-round" : index === array.length - 1 ? "right-round" : "no-round")}>...</button>)}
     </nav>;
 }

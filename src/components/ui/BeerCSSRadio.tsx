@@ -1,4 +1,4 @@
-import type {ReactNode} from "react";
+import React, {type ReactNode} from "react";
 import type {InputSize} from "./BeerCSSTextField.tsx";
 import _ from "lodash";
 import {clsx} from "clsx";

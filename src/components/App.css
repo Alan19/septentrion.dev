@@ -59,3 +59,15 @@
 .no-gap {
     gap: 0 !important;
 }
+
+@keyframes skeleton-animation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
