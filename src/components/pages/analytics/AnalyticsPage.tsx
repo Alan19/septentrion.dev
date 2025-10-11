@@ -5,10 +5,11 @@ import {useDocumentTitle} from "usehooks-ts";
 import {Container} from "../../ui/Container.tsx";
 import {useTagHooks} from "../../../hooks/useTagHooks.ts";
 import './analytics.css'
+import {Tooltip} from "react-tooltip";
 
 export const AnalyticsPage = memo(function AnalyticsPage() {
     const {images} = useTagHooks();
-    useDocumentTitle("Commission Analytics");
+    useDocumentTitle("Commission Analytics - septentrion.dev");
 
     const publishedDates: ReactCalendarHeatmapValue<string>[] = images.reduce<ReactCalendarHeatmapValue<string>[]>((previousValue, currentValue) => {
         const find = previousValue.find(value => value.date === currentValue.published);
@@ -22,11 +23,10 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
 
     //TODO Reimplement tooltip
     function getPublishedDateTooltip(value: ReactCalendarHeatmapValue<string> | undefined) {
-        if (!value) {
-            return;
-        } else {
+        if (value) {
             return `${value?.count} artwork${value?.count > 1 ? "s" : ""} published on ${value?.date}`;
         }
+        return;
     }
 
     function getClassForHeatmapSquare(value: ReactCalendarHeatmapValue<string> | undefined) {
@@ -34,7 +34,7 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
         return !count ? "color-empty" : `color-scale-${Math.min(Number(count), 3)}`;
     }
 
-    function getSquareElement(element: React.ReactElement<SVGRectElement, string | React.JSXElementConstructor<any>>, value: ReactCalendarHeatmapValue<string> | undefined): ReactNode {
+    function getSquareElement(element: React.ReactElement<SVGRectElement, string | React.JSXElementConstructor<never>>, value: ReactCalendarHeatmapValue<string> | undefined): ReactNode {
         return element;
     }
 
@@ -43,8 +43,15 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
         <div style={{display: "flex", flexDirection: "column", gap: "2rem"}}>
             {Array.from(new Set(images.map(value => value.published.substring(0, 4)))).sort((a, b) => b.localeCompare(a)).map(value => <article key={value} style={{padding: 8}}>
                 <b className={'tertiary-text'}>{value}</b>
+                <Tooltip id="my-tooltip" />
                 {/*We have to use a hacky workaround to make the first date work*/}
                 <CalendarHeatmap classForValue={getClassForHeatmapSquare}
+                                 //@ts-expect-error This prop can accept any object to inject to the rect component
+                                 tooltipDataAttrs={(value) => {
+                                     if (value.count) {
+                                         return ({'data-tooltip-content': getPublishedDateTooltip(value), "data-tooltip-id": "my-tooltip"});
+                                     }
+                                 }}
                                  showWeekdayLabels
                                  startDate={`${Number.parseInt(value) - 1}-12-31`}
                                  values={publishedDates}

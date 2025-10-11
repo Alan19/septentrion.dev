@@ -4,7 +4,7 @@ import {useIsMobile} from "../../../hooks/useIsMobile.ts";
 import {Bio} from "./Bio.tsx";
 
 export function AboutMePage() {
-    useDocumentTitle("About Me");
+    useDocumentTitle("About Me - septentrion.dev");
     const mobile = useIsMobile()
 
     // TODO Add more text

@@ -4,7 +4,7 @@ import {clsx} from "clsx";
 import dayjs, {type Dayjs} from "dayjs";
 import React, {useState} from "react";
 import {useTagHooks} from "../../../../hooks/useTagHooks.ts";
-import {ArtTag, Rating} from "../../../../../api/src/images/TagUtils.ts";
+import {artists, ArtTag, Rating} from "../../../../../api/src/images/TagUtils.ts";
 import {BeerCssCombobox} from "../../../ui/BeerCssCombobox.tsx";
 import {BeerCSSRadio} from "../../../ui/BeerCSSRadio.tsx";
 import {BeerCSSTextField} from "../../../ui/BeerCSSTextField.tsx";
@@ -21,7 +21,7 @@ export function ArtworkUploader() {
     const [charactersInImage, setCharactersInImage] = useState<string[]>(["Alcor"])
     const [href, setHref] = useState<string>("");
     const [title, setTitle] = useState<string>("");
-    const [artist, setArtist] = useState<string>();
+    const [artist, setArtist] = useState<string>("");
     const [uploading, setUploading] = useState<boolean>(false);
     const [publishedDate, setPublishedDate] = useState<Dayjs | null>(dayjs());
     const [isHidden, setIsHidden] = useState(false);
@@ -85,8 +85,15 @@ export function ArtworkUploader() {
                     </Dialog.Description>
                     <div style={{display: "flex", flexDirection: "column", gap: "1rem"}} className={"bottom-margin"}>
                         <BeerCSSTextField onChange={handleFileChange} type={"file"} label={"File"} inputPrefix={<i>attach_file</i>}/>
-                        <BeerCssCombobox placeholder={"Tags"} value={tags.map(value => ({label: value, value: value}))} options={Object.values(ArtTag).map(value => ({label: value, value: value}))} onChange={selectedOption => setTags(selectedOption.map(value => value.value))}/>
-                        <BeerCSSTextField type={"text"} label={"Artist Handle"} inputPrefix={<i>palette</i>} value={artist} onChange={event => setArtist(event.target.value)}/>
+                        <BeerCssCombobox placeholder={"Tags"}
+                                         value={tags.map(value => ({label: value, value: value}))}
+                                         options={Object.values(ArtTag).map(value => ({label: value, value: value}))}
+                                         onChange={selectedOption => setTags(selectedOption.map(value => value.value))}/>
+                        <BeerCssCombobox isCreatable
+                                         placeholder={"Artist Handle"}
+                                         value={artist ? [{label: artist, value: artist}] : []}
+                                         options={artists.map(value => ({label: value, value: value}))}
+                                         onChange={selectedOptions => setArtist(selectedOptions[1]?.value ?? selectedOptions[0]?.value ?? "")}/>
                         <BeerCSSTextField type={"text"} label={"URL"} inputPrefix={<i>link</i>} value={href} onChange={event => setHref(event.target.value)}/>
                         <BeerCSSTextField errorText={isCollision && "The title already exists! This may overwrite that artwork entry!"} type={"text"} label={"Artwork Title"} inputPrefix={<i>title</i>} value={title} onChange={event => setTitle(event.target.value)}/>
                         <BeerCssCombobox isCreatable onChange={selectedOption => setCharactersInImage(selectedOption.map(value => value.value))} placeholder={"Characters"} value={charactersInImage.map(value => ({value: value, label: value}))} options={Array.from(new Set(images.flatMap(value => value.characters).concat(charactersInImage))).map(value => ({value: value, label: value}))}/>

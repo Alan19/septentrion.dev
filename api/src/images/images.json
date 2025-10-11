@@ -7836,5 +7836,25 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/hairstyle_refinement_icon.webp",
     "id": "832eaad169f15ee7fadde5484927448160c2fbe2e5edbec161e5da95",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/hairstyle_refinement_icon.webp"
+  },
+  {
+    "title": "Jupiter Sketch",
+    "artist": "@KotsuFukkatsu",
+    "tags": [
+      "Jupiter Form",
+      "Sketch"
+    ],
+    "href": "",
+    "published": "2025-10-10",
+    "aspectRatio": 0.5997386759581882,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_sketch.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_sketch.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_sketch.webp",
+    "id": "7dea58e0f02ead25d79bedc682c2520db17e3cc9bfce3e2e0ac5136b",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_sketch.webp"
   }
 ]

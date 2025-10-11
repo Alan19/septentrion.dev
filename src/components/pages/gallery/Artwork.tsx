@@ -19,12 +19,12 @@ export function Artwork() {
                 </Link>
                 {parentImage?.title}
             </h3>
-            <a href={displayedImage?.href} style={{display: "contents"}}>
+            <a href={displayedImage?.href} style={{display: "contents", pointerEvents: !displayedImage.href ? "none" : "initial"}}>
                 <img style={{width: "100%", height: "100%", flex: 1, objectFit: "contain"}} src={displayedImage?.webp}/>
             </a>
             <h4 className={"bottom-margin tertiary-text"}>Tags</h4>
             <div>
-                {displayedImage?.tags.map((value, index) => <button className={clsx("chip fill round")} style={{marginLeft: index === 0 ? 0 : "inherit"}}>{value}</button>)}
+                {displayedImage?.tags.sort((a, b) => a.localeCompare(b)).map((value, index) => <button className={clsx("chip fill round")} style={{marginLeft: index === 0 ? 0 : "inherit"}}>{value}</button>)}
                 {displayedImage?.characters.map((value, index) => <button className={clsx("chip fill round")} style={{marginLeft: index === 0 ? 0 : "inherit", background: "var(--primary-container)"}}>{value}</button>)}
             </div>
             {parentImage?.title && altData.get(parentImage?.title) && <div className={"top-margin"}>
