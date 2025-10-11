@@ -8,14 +8,12 @@ import {ArtworkUploader} from "./uploader-modal/ArtworkUploader.tsx";
 import {useDocumentTitle} from "usehooks-ts";
 import {useQueryState} from "../../../hooks/useQueryState.ts";
 import {GalleryPagination} from "./GalleryPagination.tsx";
-import {useIsMobile} from "../../../hooks/useIsMobile.ts";
 
 export function Gallery() {
     const {images, altData, filters} = useTagHooks();
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver});
     const [page, setPage] = useQueryState("page", 1)
     useDocumentTitle("Gallery - septentrion.dev");
-    const isMobile = useIsMobile()
 
     const displayedImages = images.filter(value => filters.doesImageMatch(value, "and")).sort((a, b) => b.published.localeCompare(a.published))
     return <>
@@ -27,7 +25,7 @@ export function Gallery() {
             </div>
             <GalleryPagination page={page} setPage={setPage} maxPages={20} />
             <JustifiedGrid aspectRatioList={displayedImages.map(value => value.aspectRatio)} width={bounds.width} targetRowHeight={350} containerStyle={{marginTop: "1rem"}}>
-                {displayedImages.map(value => <Link to={value.id}>
+                {displayedImages.map(value => <Link to={value.id} style={{display: "contents"}}>
                     <img src={value.thumbnailUrl}/>
                     {altData.get(value.title) && <button className="absolute circle secondary-container" style={{right: 8, top: 8, opacity: .75}}>
                         <i>more</i>

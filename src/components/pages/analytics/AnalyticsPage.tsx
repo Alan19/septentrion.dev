@@ -55,10 +55,8 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
                                  showWeekdayLabels
                                  startDate={`${Number.parseInt(value) - 1}-12-31`}
                                  values={publishedDates}
-                                 transformDayElement={(element, value) => {
-                                     // @ts-expect-error Something is wrong with the types module, the element should be an element object, not props, so we put an element here and suppress the error
-                                     return getSquareElement(element, value);
-                                 }}
+                                 // @ts-expect-error Something is wrong with the types module, the element should be an element object, not props, so we put an element here and suppress the error
+                                 transformDayElement={(element, value) => getSquareElement(element, value)}
                                  endDate={`${value}-12-31`}/>
             </article>)}
         </div>
