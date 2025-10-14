@@ -1,22 +1,7 @@
-import React, {memo, type MouseEventHandler, useEffect, useState} from "react";
-import {Link} from "react-router-dom";
+import React, {type CSSProperties, type ReactNode, useEffect, useState} from "react";
 
-export const SkeletonImage = memo(function SkeletonImage(props: {
-    src: string,
-    onClick?: MouseEventHandler<HTMLImageElement>,
-    style?: React.CSSProperties,
-    hasAlts?: boolean,
-    alt?: string,
-    imageClassname?: string,
-    href?: string,
-    skeletonStyle?: React.CSSProperties,
-    debugSkeleton?: boolean,
-    id: string
-}) {
-    const {src, style, onClick, alt, skeletonStyle, imageClassname, debugSkeleton = false} = props;
-
+export function SkeletonImage({children, debug = false, src, skeletonStyle}: { children: ReactNode, debug?: boolean, src: string, skeletonStyle: CSSProperties }) {
     const [isReady, setIsReady] = useState(isImageCached());
-
     function isImageCached() {
         const image = new Image();
         image.src = src;
@@ -39,17 +24,10 @@ export const SkeletonImage = memo(function SkeletonImage(props: {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [src]);
 
-    if (isReady && !debugSkeleton) {
+    if (isReady && !debug) {
         // TODO Make Skeleton also navigate even when unloaded
-        return <Link to={props.id} style={{display: "contents"}} className={"fade"}>
-            {
-                props.hasAlts && <button className="absolute circle secondary-container" style={{right: 8, top: 8, opacity: .75}}>
-                    <i>more</i>
-                </button>
-            }
-            <img alt={alt} loading={"lazy"} className={imageClassname} onClick={onClick} style={{display: 'block', ...style}} src={src}/>
-        </Link>;
+        return children;
     } else {
         return <div style={{height: '100%', background: 'var(--surface-container)', borderRadius: 4, animation: 'skeleton-animation 2s ease-in-out 0.5s infinite', ...skeletonStyle}}/>;
     }
-})
+}

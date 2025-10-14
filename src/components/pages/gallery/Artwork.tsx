@@ -11,6 +11,7 @@ export function Artwork() {
     const displayedImage = imageEntries.find(value => value.id === imageId);
     const parentImage: ImageInformation | undefined = displayedImage && isAltInformation(displayedImage) ? images.find(value => displayedImage.parent === value.title) : displayedImage as ImageInformation
     const [searchParams] = useSearchParams()
+    
     return <>
         <Container className={"fade"} style={{height: "calc(100vh - 2rem)", display: "flex", flexDirection: "column"}}>
             <h3 className={"secondary-text bottom-margin middle-align"}>
