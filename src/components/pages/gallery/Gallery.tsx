@@ -11,14 +11,17 @@ import {GalleryPagination} from "./GalleryPagination.tsx";
 import type {ImageInformation} from "../../../../api/src/images/ImageInformation.ts";
 import {RadioGroup} from "../../ui/RadioGroup.tsx";
 import {GalleryImage} from "./GalleryImage.tsx";
+import {useIsDevelopment} from "../../../hooks/useIsDevelopment.ts";
 
 export function Gallery() {
     const {images, altData, filters} = useTagHooks();
     const [ref, bounds] = useMeasure({polyfill: ResizeObserver});
+    // TODO Remove pages when you navigate
     const [page, setPage] = useQueryState("page", 1)
     const [displayMode, setDisplayMode] = useQueryState<"paginated" | "monthly" | "all">("displayMode", "paginated")
     const [filterMode, setFilterMode] = useQueryState<"and" | "or">("filterMode", "and")
     const [searchParams] = useSearchParams();
+    const isDevelopment = useIsDevelopment();
 
     const pageSize = 4;
 
@@ -53,6 +56,6 @@ export function Gallery() {
             </JustifiedGrid>}
             {displayMode === "paginated" && <div className={"top-margin"}><GalleryPagination page={page} className={"right-align"} setPage={setPage} maxPages={Math.ceil(yearMonthPairs.length / pageSize)}/></div>}
         </Container>
-        <ArtworkUploader/>
+        {isDevelopment && <ArtworkUploader/>}
     </>;
 }
