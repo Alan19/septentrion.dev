@@ -7,6 +7,7 @@ import {type ImageInformation, isAltInformation} from "../../../../api/src/image
 import {OptionalAnchor} from "./OptionalAnchor.tsx";
 import {ArtworkUploader} from "./uploader-modal/ArtworkUploader.tsx";
 import {useIsDevelopment} from "../../../hooks/useIsDevelopment.ts";
+import _ from "lodash";
 
 export function Artwork() {
     const {images, altData, imageEntries} = useTagHooks()
@@ -23,13 +24,14 @@ export function Artwork() {
             </Link>
             {parentImage?.title}
         </h3>
-        <OptionalAnchor style={{display: "contents"}} href={displayedImage.href}>
+        <OptionalAnchor target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={displayedImage.href}>
             <img style={{width: "100%", height: "100%", flex: 1, objectFit: "contain"}} src={displayedImage?.webp}/>
         </OptionalAnchor>
         <h4 className={"bottom-margin tertiary-text"}>Tags</h4>
         <div>
-            {displayedImage?.tags.sort((a, b) => a.localeCompare(b)).map((value, index) => <button className={clsx("chip fill round")} style={{marginLeft: index === 0 ? 0 : "inherit"}}>{value}</button>)}
-            {displayedImage?.characters.map((value, index) => <button className={clsx("chip fill round")} style={{marginLeft: index === 0 ? 0 : "inherit", background: "var(--primary-container)"}}>{value}</button>)}
+            {displayedImage?.tags.sort((a, b) => a.localeCompare(b)).map((value, index) => <button className={clsx("primary-container chip")} style={{marginLeft: index === 0 ? 0 : "inherit"}}>{value}</button>)}
+            <button className={clsx("secondary-container chip")} style={{marginLeft: "inherit"}}>{_.capitalize(displayedImage.rating)}</button>
+            {displayedImage?.characters.map((value, index) => <button className={clsx("chip tertiary-container tertiary-border")} style={{marginLeft: index === 0 ? 0 : "inherit"}}>{value}</button>)}
         </div>
         {parentImage?.title && altData.get(parentImage?.title) && <div className={"top-margin"}>
             <b className={"tertiary-text"}>Alts</b>
@@ -38,6 +40,7 @@ export function Artwork() {
                 {altData.get(parentImage?.title)?.map(value => <Link to={`/gallery/${value.id}`}><img src={value.thumbnailUrl} style={{width: "100%"}}/></Link>)}
             </div>
         </div>}
+        <b className={"top-margin"}>Published {parentImage.published}</b>
         {isDevelopment && <ArtworkUploader variant={"alt"} parent={parentImage}/>}
     </Container>;
 }
