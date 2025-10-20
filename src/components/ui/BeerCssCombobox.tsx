@@ -2,7 +2,7 @@ import React, {useRef} from "react";
 import {MultiSelect, type Option} from "react-multi-select-component";
 import {useInjectClass} from "../../hooks/useInjectClass.ts";
 import './index.css'
-export function BeerCssCombobox({onChange, options, placeholder, value, isCreatable, className, filterOptions}: { value: Option[], onChange: (selectedOption: Option[]) => void, options: Option[], placeholder?: string, isCreatable?: boolean, className?: string, filterOptions?: (options: Option[], filter: string) => Promise<Option[]> | Option[] }) {
+export function BeerCssCombobox({onChange, options, placeholder, value, isCreatable, className, filterOptions, closeOnChangedValue}: { value: Option[], onChange: (selectedOption: Option[]) => void, options: Option[], placeholder?: string, isCreatable?: boolean, className?: string, filterOptions?: (options: Option[], filter: string) => Promise<Option[]> | Option[] , closeOnChangedValue?: boolean}) {
     const ref = useRef<HTMLDivElement>(null);
     useInjectClass(ref, "dropdown-container", ["field", "border", "middle-align"])
 
@@ -42,6 +42,7 @@ export function BeerCssCombobox({onChange, options, placeholder, value, isCreata
             labelledBy="Select"
             isCreatable={isCreatable}
             className={className}
+            closeOnChangedValue={closeOnChangedValue}
         />
     </div>;
 }

@@ -23,6 +23,7 @@
         "react": "^19.1.1",
         "react-calendar-heatmap": "^1.10.0",
         "react-dom": "^19.1.1",
+        "react-hook-form": "^7.65.0",
         "react-justified-layout-ts": "^2.1.5",
         "react-multi-select-component": "^4.3.4",
         "react-router": "^7.8.2",
@@ -594,6 +595,8 @@
     "react-calendar-heatmap": ["react-calendar-heatmap@1.10.0", "", { "dependencies": { "memoize-one": "^5.0.0", "prop-types": "^15.6.2" }, "peerDependencies": { "react": ">=0.14.0" } }, "sha512-e5vcrzMWzKIF710egr1FpjWyuDEFeZm39nvV25muc8Wtqqi8iDOfqREELeQ9Wouqf9hhj939gq0i+iAxo7KdSw=="],
 
     "react-dom": ["react-dom@19.1.1", "", { "dependencies": { "scheduler": "^0.26.0" }, "peerDependencies": { "react": "^19.1.1" } }, "sha512-Dlq/5LAZgF0Gaz6yiqZCf6VCcZs1ghAJyrsu84Q/GT0gV+mCxbfmKNoGRKBYMJ8IEdGPqu49YWXD02GCknEDkw=="],
+
+    "react-hook-form": ["react-hook-form@7.65.0", "", { "peerDependencies": { "react": "^16.8.0 || ^17 || ^18 || ^19" } }, "sha512-xtOzDz063WcXvGWaHgLNrNzlsdFgtUWcb32E6WFaGTd7kPZG3EeDusjdZfUsPwKCKVXy1ZlntifaHZ4l8pAsmw=="],
 
     "react-is": ["react-is@16.13.1", "", {}, "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="],
 

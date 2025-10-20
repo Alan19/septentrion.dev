@@ -56,6 +56,6 @@ export function Gallery() {
             </JustifiedGrid>}
             {displayMode === "paginated" && <div className={"top-margin"}><GalleryPagination page={page} className={"right-align"} setPage={setPage} maxPages={Math.ceil(yearMonthPairs.length / pageSize)}/></div>}
         </Container>
-        {isDevelopment && <ArtworkUploader/>}
+        {isDevelopment && <ArtworkUploader variant={"parent"}/>}
     </>;
 }

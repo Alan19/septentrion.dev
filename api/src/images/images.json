@@ -7856,5 +7856,26 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_sketch.webp",
     "id": "7dea58e0f02ead25d79bedc682c2520db17e3cc9bfce3e2e0ac5136b",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_sketch.webp"
+  },
+  {
+    "title": "Human Alcor Tech-Monk Outfit",
+    "artist": "@artsyyellow",
+    "tags": [
+      "Aldhibah Form",
+      "Techwear",
+      "Knives"
+    ],
+    "href": "https://x.com/artsyyellow/status/1978885123488497957",
+    "published": "2025-10-17",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/human_alcor_tech_monk_outfit.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/human_alcor_tech_monk_outfit.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/human_alcor_tech_monk_outfit.webp",
+    "id": "27279f06f9b84baa50f6145e4b8bfa3c938d525ce6939a8686430bff",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/human_alcor_tech_monk_outfit.webp"
   }
 ]
