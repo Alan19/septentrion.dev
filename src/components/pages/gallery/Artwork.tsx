@@ -8,6 +8,7 @@ import {OptionalAnchor} from "./OptionalAnchor.tsx";
 import {ArtworkUploader} from "./uploader-modal/ArtworkUploader.tsx";
 import {useIsDevelopment} from "../../../hooks/useIsDevelopment.ts";
 import _ from "lodash";
+import {useIsMobile} from "../../../hooks/useIsMobile.ts";
 
 export function Artwork() {
     const {images, altData, imageEntries} = useTagHooks()
@@ -16,8 +17,9 @@ export function Artwork() {
     const parentImage: ImageInformation | undefined = displayedImage && isAltInformation(displayedImage) ? images.find(value => displayedImage.parent === value.title) : displayedImage as ImageInformation
     const [searchParams] = useSearchParams()
     const isDevelopment = useIsDevelopment();
+    const isMobile = useIsMobile();
 
-    return <Container className={"fade"} style={{height: "calc(100vh - 2rem)", display: "flex", flexDirection: "column"}}>
+    return <Container className={"fade"} style={{height: `calc(100vh - ${isMobile ? '72px' : '2rem'})`, display: "flex", flexDirection: "column"}}>
         <h3 className={"secondary-text bottom-margin middle-align"}>
             <Link to={{pathname: '/gallery', search: searchParams.toString()}}>
                 <button className="transparent circle"><i>arrow_back</i></button>
@@ -35,7 +37,7 @@ export function Artwork() {
         </div>
         {parentImage?.title && altData.get(parentImage?.title) && <div className={"top-margin"}>
             <b className={"tertiary-text"}>Alts</b>
-            <div style={{display: "grid", gridTemplateColumns: "repeat(12, 1fr)", gridGap: '1rem'}}>
+            <div style={{display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gridGap: '1rem', overflowX: "scroll"}}>
                 <Link to={`/gallery/${parentImage.id}`}><img src={parentImage.thumbnailUrl} style={{width: "100%"}}/></Link>
                 {altData.get(parentImage?.title)?.map(value => <Link to={`/gallery/${value.id}`}><img src={value.thumbnailUrl} style={{width: "100%"}}/></Link>)}
             </div>

@@ -14,6 +14,7 @@ import {prepareFileName} from "../../../../../api/src/utils/utils.ts";
 import {toast, ToastContainer} from "react-toastify";
 import {Controller, useForm} from "react-hook-form";
 import type {ImageInformation} from "../../../../../api/src/images/ImageInformation.ts";
+import _ from "lodash";
 
 interface BaseImageValues {
     file: FileList;
@@ -128,7 +129,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
                             <fieldset className={"no-margin"}>
                                 <legend>Alt Type</legend>
                                 <nav>
-                                    {(["extra", "cropped", "recolor"] as const).map(r => <BeerCSSRadio key={r} label={r.charAt(0).toUpperCase() + r.slice(1)} {...register("altType", {required: true})} value={r}/>)}
+                                    {(["extra", "cropped", "recolor"] as const).map(r => <BeerCSSRadio key={r} label={_.capitalize(r)} {...register("altType", {required: true})} value={r}/>)}
                                     <BeerCSSRadio label={"Complex"} {...register("altType", {required: true})} value={"complex"}/>
                                 </nav>
                                 <nav>
@@ -142,7 +143,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
                         <fieldset className="no-margin">
                             <legend>Rating</legend>
                             <nav>
-                                {(["mainstream", "general", "sensitive", "mature"] as const).map(r => <BeerCSSRadio key={r} label={r.charAt(0).toUpperCase() + r.slice(1)} {...register("rating", {required: true})} value={r}/>)}
+                                {(["mainstream", "general", "sensitive", "mature"] as const).map(r => <BeerCSSRadio key={r} label={_.capitalize(r)} {...register("rating", {required: true})} value={r}/>)}
                             </nav>
                             <BeerCSSCheckbox {...register("hidden")} label="Hidden" className="top-margin"/>
                         </fieldset>
