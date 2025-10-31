@@ -1,5 +1,5 @@
 import images from "./images.json";
-import {ImageEntry} from "./ImageInformation";
+import {type ImageEntry} from "./ImageInformation";
 
 export enum ArtTag {
     featured = 'Featured',
@@ -68,8 +68,8 @@ export class SelectedFilters {
         if (filters && filters !== '') {
             const filterArray = filters.split('+');
             filterArray.forEach(value => {
-                let filterName = value.charAt(0) === '-' ? value.substring(1) : value;
-                let filterValue: FilterSetting = value.charAt(0) === '-' ? -1 : 1;
+                const filterName = value.charAt(0) === '-' ? value.substring(1) : value;
+                const filterValue: FilterSetting = value.charAt(0) === '-' ? -1 : 1;
                 if (Object.keys(this._artists).includes(filterName)) {
                     this._artists[filterName] = filterValue;
                 } else if (Object.keys(this._tags).includes(filterName)) {
@@ -124,9 +124,6 @@ export class SelectedFilters {
     }
 
     doesImageMatch(image: ImageEntry & { artist: string }, mode: 'and' | 'or') {
-        if (image.artist === undefined) {
-            console.log(image.thumbnailUrl)
-        }
         const imageFilterableInfo = [...image.tags, image.artist, ...image.characters, image.rating];
         const filters = this.toArray();
         const enabledFilters = filters.filter(value => !value.startsWith('-'))

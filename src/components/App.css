@@ -1,0 +1,77 @@
+.app {
+    display: flex;
+    height: 100%;
+}
+
+
+.content {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+@media (max-width:960px)  {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .app {
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+    .content {
+        margin: 0;
+        border-radius: 0;
+        overflow-y: scroll;
+    }
+}
+
+.fade {
+    animation: fade-in .45s ease-in-out;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+}
+
+.dropdown-content {
+    z-index: 9999 !important;
+}
+
+.dropdown-content * {
+    background: var(--surface) !important;
+}
+
+.dropdown-container {
+    background: unset !important;
+    border-color: var(--outline) !important;
+    margin: 0 !important;
+}
+
+.gray {
+    color: var(--on-surface) !important;
+    font-size: 16px;
+}
+
+.no-gap {
+    gap: 0 !important;
+}
+
+@keyframes skeleton-animation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.Toastify {
+    margin-top: 0 !important;
+}

@@ -1,1 +1,0 @@
-export enum GalleryDisplayModes {monthly = 'monthly', all = 'all', paginated = 'paginated'}
