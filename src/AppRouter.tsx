@@ -4,6 +4,7 @@ import {AboutMePage} from "./components/pages/about/AboutMePage.tsx";
 import {AnalyticsPage} from "./components/pages/analytics/AnalyticsPage.tsx";
 import {Gallery} from "./components/pages/gallery/Gallery.tsx";
 import {Artwork} from "./components/pages/gallery/Artwork.tsx";
+import {OCList} from "./components/pages/lore/OCList.tsx";
 
 export function AppRouter() {
     return <Routes>
@@ -14,5 +15,6 @@ export function AppRouter() {
             <Route index element={<Gallery/>}/>
             <Route path=":id" element={<Artwork/>}/>
         </Route>
+        <Route path="/lore" element={<OCList/>}/>
     </Routes>;
 }

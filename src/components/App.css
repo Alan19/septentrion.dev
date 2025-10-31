@@ -71,3 +71,7 @@
         opacity: 1;
     }
 }
+
+.Toastify {
+    margin-top: 0 !important;
+}

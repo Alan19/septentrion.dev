@@ -103,6 +103,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
 
     const {variant} = props;
 
+    const isParent = variant === "parent";
     return <>
         <Dialog.Root>
             <Dialog.Trigger className="extend square round secondary" style={{position: "fixed", bottom: "2rem", right: "2rem", display: "flex"}}>
@@ -114,8 +115,9 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
                     <Dialog.Title className={styles.Title}><h5>Upload New Image</h5></Dialog.Title>
                     <Dialog.Description className={styles.Description}>Enter a list of tags, the handle of the artist, and the file name to automatically compress and upload this file!</Dialog.Description>
                     <form onSubmit={handleSubmit(onSubmit)} style={{display: "flex", flexDirection: "column", gap: "1rem"}} className="bottom-margin">
+                        {/*TODO Combine Artwork Title and File Fields*/}
                         <BeerCSSTextField type="file" label="File" inputPrefix={<i>attach_file</i>} {...register("file", {required: true})} />
-                        {variant === "parent" && <>
+                        {isParent && <>
                             <BeerCSSTextField type="text" label="Artwork Title" inputPrefix={<i>title</i>} errorText={isCollision && "The title already exists! This may overwrite that artwork entry!"} {...register("title", {required: true})}/>
                             <Controller name="artist" control={control} rules={{required: true}} render={({field}) => <BeerCssCombobox closeOnChangedValue isCreatable placeholder="Artist Handle" value={field.value ? [{label: field.value, value: field.value}] : []} options={artists.map(a => ({label: a, value: a}))} onChange={opts => field.onChange(opts[1]?.value ?? opts[0]?.value ?? "")}/>}/>
                             <BeerCSSTextField type="date" label="Published Date" {...register("published", {required: true})} />
@@ -148,7 +150,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
                             <BeerCSSCheckbox {...register("hidden")} label="Hidden" className="top-margin"/>
                         </fieldset>
                         <div className={styles.Actions}>
-                            <button type="submit" className="primary" disabled={isSubmitting || !watchFile || !watchArtist || !watchRating || variant === "parent" && !watchTitle}>
+                            <button type="submit" className="primary" disabled={isSubmitting || !watchFile || isParent && (!watchArtist || !watchTitle) || !watchRating}>
                                 <i>upload</i> <span>Upload</span>
                             </button>
                             <button><Dialog.Close>Cancel</Dialog.Close></button>

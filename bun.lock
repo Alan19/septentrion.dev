@@ -7,6 +7,7 @@
         "@base-ui-components/react": "^1.0.0-beta.3",
         "@fontsource-variable/inter": "^5.2.8",
         "@fontsource-variable/open-sans": "^5.2.7",
+        "@fontsource/monomaniac-one": "^5.2.7",
         "@fontsource/open-sans": "^5.2.7",
         "@fortawesome/free-brands-svg-icons": "^7.0.1",
         "@fortawesome/free-solid-svg-icons": "^7.0.1",
@@ -177,6 +178,8 @@
     "@fontsource-variable/inter": ["@fontsource-variable/inter@5.2.8", "", {}, "sha512-kOfP2D+ykbcX/P3IFnokOhVRNoTozo5/JxhAIVYLpea/UBmCQ/YWPBfWIDuBImXX/15KH+eKh4xpEUyS2sQQGQ=="],
 
     "@fontsource-variable/open-sans": ["@fontsource-variable/open-sans@5.2.7", "", {}, "sha512-wzCLm2STuekK9Fz58DiuBnk4GgJpvvVtAU85a4b06ACNG/UsVjQcCvkUd6R/ETlHfsaykCUZamLRvSXg4KtWuA=="],
+
+    "@fontsource/monomaniac-one": ["@fontsource/monomaniac-one@5.2.7", "", {}, "sha512-bCp7zN5cRRR3K5pL20RnZ9M4SfR9bA+yjRGkvBM8LdShQ5hiOotcAbfJLa2JKMY31rlD+O9kZ3jfIj2ie+/yFg=="],
 
     "@fontsource/open-sans": ["@fontsource/open-sans@5.2.7", "", {}, "sha512-8yfgDYjE5O0vmTPdrcjV35y4yMnctsokmi9gN49Gcsr0sjzkMkR97AnKDe6OqZh2SFkYlR28fxOvi21bYEgMSw=="],
 
