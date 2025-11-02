@@ -27,12 +27,14 @@ export function Artwork() {
 
     return <>
         <Container className={"fade"} style={{height: `calc(100vh - ${isMobile ? '72px' : '2rem'})`, display: "flex", flexDirection: "column"}}>
-            <h3 className={"secondary-text bottom-margin middle-align"}>
+            <div className={"bottom-margin"} style={{display: "flex", alignItems: "baseline"}}>
                 <Link to={{pathname: '/gallery', search: searchParams.toString()}}>
                     <button className="transparent circle"><i>arrow_back</i></button>
                 </Link>
-                {parentImage?.title}
-            </h3>
+                <h3 className={"secondary-text no-margin"} style={{fontFamily: "Inter Variable"}}>
+                    {parentImage?.title}
+                </h3>
+            </div>
             <OptionalAnchor target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={displayedImage.href}>
                 <img style={{width: "100%", height: "100%", flex: 1, objectFit: "contain"}} src={displayedImage?.webp}/>
             </OptionalAnchor>
