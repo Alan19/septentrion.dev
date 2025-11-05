@@ -9,7 +9,7 @@ function NavigationDestination(props: { value: { path: string; icon: string; lab
     const {isActive, value} = props;
     const {icon, path, label} = value;
     return <Link className={props.className} to={`/${path}`} style={{color: "var(--on-surface-variant)"}}>
-        <i className={clsx(isActive && "secondary-container", "ripple")} >{icon}</i>
+        <i className={clsx(isActive && "secondary", "ripple")} >{icon}</i>
         <span className={clsx(isActive && "bold")}>{label ?? _.capitalize(path)}</span>
     </Link>;
 }

@@ -7939,5 +7939,24 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/chibi_ghost.webp",
     "id": "70b39acbfe0050ac6b4039d9801fa69b281d066d1a74d894ccdfa64b",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/chibi_ghost.webp"
+  },
+  {
+    "title": "Halloween Sketch 2025",
+    "artist": "@axyusagi.bsky.social",
+    "tags": [
+      "AICore Form"
+    ],
+    "href": "https://bsky.app/profile/axyusagi.bsky.social/post/3m4rb42xk522g",
+    "published": "2025-11-03",
+    "aspectRatio": 0.9036144578313253,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/halloween_sketch_2025.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/halloween_sketch_2025.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/halloween_sketch_2025.webp",
+    "id": "22fef8348ae3f0ada31ea9e8be0536b3589b4ee35ce32ee475d1a380",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/halloween_sketch_2025.webp"
   }
 ]
