@@ -29,7 +29,6 @@ export enum ArtTag {
     serotinal = 'Serotinal Circuitboard',
     autumnal = 'Autumnal Wavesniper',
     winter = 'Hibernal Assassin',
-    aquarius = 'Aquarius Form',
     auriga = 'Auriga Form',
     illustration = 'Illustration',
     reference = 'Character Reference',
