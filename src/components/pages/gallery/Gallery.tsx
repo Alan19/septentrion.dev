@@ -41,6 +41,7 @@ export function Gallery() {
                 <RadioGroup value={filterMode} setValue={setFilterMode} options={["and", "or"]} label={"Filter Mode"} className={"bottom-margin"}/>
                 <GallerySearchbar/>
                 <RadioGroup value={displayMode} setValue={setDisplayMode} options={["paginated", "monthly", "all"]} label={"Display Mode"} className={"bottom-margin top-margin"}/>
+                {displayMode === "paginated" && <div><GalleryPagination page={page} className={"right-align"} setPage={setPage} maxPages={Math.ceil(yearMonthPairs.length / pageSize)}/></div>}
             </fieldset>
             {(displayMode === "paginated" || displayMode === "monthly") && displayedMonths.map(value => {
                 const imagesInMonth = imagesForMonth[value]
@@ -54,7 +55,6 @@ export function Gallery() {
             {displayMode === "all" && <JustifiedGrid aspectRatioList={displayedImages.map(value => value.aspectRatio)} width={bounds.width} targetRowHeight={350}>
                 {displayedImages.map(value => <GalleryImage value={value}  searchParams={searchParams.toString()} hasAlts={altData.has(value.title)}/>)}
             </JustifiedGrid>}
-            {displayMode === "paginated" && <div className={"top-margin"}><GalleryPagination page={page} className={"right-align"} setPage={setPage} maxPages={Math.ceil(yearMonthPairs.length / pageSize)}/></div>}
         </Container>
         {isDevelopment && <ArtworkUploader variant={"parent"}/>}
     </>;

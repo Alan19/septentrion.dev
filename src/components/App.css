@@ -75,3 +75,12 @@
 .Toastify {
     margin-top: 0 !important;
 }
+
+.hover-border {
+    padding: .5rem;
+    border: 2px solid transparent;
+}
+
+.hover-border:hover {
+    border-color: var(--outline);;
+}

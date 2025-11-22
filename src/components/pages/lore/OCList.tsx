@@ -13,17 +13,17 @@ export function OCList() {
         <article>
             <h3 className={"secondary-text"}>Astral Wave</h3>
             <div className={"grid"}>
-                <a href={"https://vgen.co/c/alcor/rastaban"} target="_blank" rel="noopener noreferrer" style={{display: "contents"}}>
-                    <img src={alcorBadge} className={"m3 s6"} style={{width: "100%"}}/>
+                <a href={"https://vgen.co/c/alcor/rastaban"} target="_blank" rel="noopener noreferrer" style={{display: "contents"}} >
+                    <img src={alcorBadge} className={"m3 s6 hover-border"} style={{width: "100%"}} />
                 </a>
                 <a href={"https://vgen.co/c/castor-2"} target="_blank" rel="noopener noreferrer" style={{display: "contents"}}>
-                    <img src={castorBadge} className={"m3 s6"} style={{width: "100%"}}/>
+                    <img src={castorBadge} className={"m3 s6 hover-border"} style={{width: "100%"}}/>
                 </a>
                 <a href={"https://vgen.co/c/rayan-samemoto"} target="_blank" rel="noopener noreferrer" style={{display: "contents"}}>
-                    <img src={rayanBadge} className={"m3 s6"} style={{width: "100%"}}/>
+                    <img src={rayanBadge} className={"m3 s6 hover-border"} style={{width: "100%"}}/>
                 </a>
                 <a href={"https://vgen.co/c/jupiter-4"} target="_blank" rel="noopener noreferrer" style={{display: "contents"}}>
-                    <img src={jupiterBadge} className={"m3 s6"} style={{width: "100%"}}/>
+                    <img src={jupiterBadge} className={"m3 s6 hover-border"} style={{width: "100%"}}/>
                 </a>
             </div>
         </article>
@@ -31,12 +31,12 @@ export function OCList() {
             <h3 className={"tertiary-text"}>TTRPG Characters</h3>
             <div className={"grid"}>
                 <a href={"https://vgen.co/c/soma-2"} target="_blank" rel="noopener noreferrer" style={{display: "contents"}}>
-                    <img src={soma} className={"m2 s4"} style={{width: "100%"}}/>
+                    <img src={soma} className={"m2 s4 hover-border"} style={{width: "100%"}}/>
                 </a>
                 <a href={"https://vgen.co/c/wilton"} target="_blank" rel="noopener noreferrer" style={{display: "contents"}}>
-                    <img src={wilton} className={"m2 s4"} style={{width: "100%"}}/>
+                    <img src={wilton} className={"m2 s4 hover-border"} style={{width: "100%"}}/>
                 </a>
-                <img src={poslani} className={"m2 s4"} style={{width: "100%"}}/>
+                <img src={poslani} className={"m2 s4 hover-border"} style={{width: "100%"}}/>
             </div>
         </article>
     </Container>;

@@ -153,7 +153,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
                             <button type="submit" className="primary" disabled={isSubmitting || !watchFile || isParent && (!watchArtist || !watchTitle) || !watchRating}>
                                 <i>upload</i> <span>Upload</span>
                             </button>
-                            <button><Dialog.Close>Cancel</Dialog.Close></button>
+                            <Dialog.Close>Cancel</Dialog.Close>
                         </div>
                     </form>
                 </Dialog.Popup>

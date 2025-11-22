@@ -7944,8 +7944,8 @@
       "Rastaban Form",
       "Aldhibah Form"
     ],
-    "href": "",
-    "published": "2025-11-08",
+    "href": "https://vgen.co/DongDongDong/portfolio/showcase/faintalcor-s-custom-inquiry/e17c20b0-854b-417e-86d4-bc1a28e75a8a",
+    "published": "2025-11-09",
     "aspectRatio": 1.9520319786808795,
     "rating": "mainstream",
     "characters": [
@@ -7956,5 +7956,24 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_engineering_ticket.webp",
     "id": "35d28cc147bfaed6b4423965f9f6fb84d7fc1e36cfb40978048dcec6",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_engineering_ticket.webp"
+  },
+  {
+    "title": "Rayan Hiking",
+    "artist": "@PL_ChuanFeng",
+    "tags": [
+      "Full Body"
+    ],
+    "href": "",
+    "published": "2025-11-22",
+    "aspectRatio": 0.6985789080029918,
+    "rating": "mainstream",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_hiking.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_hiking.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_hiking.webp",
+    "id": "970c04721ef0f4e1a1a221e2b69054a95e2591e4f7f66b682f49df2d",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_hiking.webp"
   }
 ]
