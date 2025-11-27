@@ -7975,5 +7975,46 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_hiking.webp",
     "id": "970c04721ef0f4e1a1a221e2b69054a95e2591e4f7f66b682f49df2d",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_hiking.webp"
+  },
+  {
+    "title": "🍋🥤",
+    "artist": "@SJDYKBV",
+    "tags": [
+      "Aldhibah Form",
+      "Techwear",
+      "Illustration"
+    ],
+    "href": "https://x.com/SJDYKBV/status/1993898048007884965?s=20",
+    "published": "2025-11-26",
+    "aspectRatio": 1,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/%F0%9F%8D%8B_%F0%9F%A5%A4.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/%F0%9F%8D%8B_%F0%9F%A5%A4.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/%F0%9F%8D%8B_%F0%9F%A5%A4.webp",
+    "id": "838618c77fb602c6a7ddc6d53142a6612ecdd3b36e8562ae742ab8e3",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/%F0%9F%8D%8B_%F0%9F%A5%A4.webp"
+  },
+  {
+    "title": "Rayan Chibi Sprite",
+    "artist": "@kogikogikogi.bsky.social",
+    "tags": [
+      "Chibi"
+    ],
+    "href": "https://bsky.app/profile/kogikogikogi.bsky.social/post/3m6lge63x422p",
+    "published": "2025-11-27",
+    "aspectRatio": 0.9166666666666666,
+    "rating": "mainstream",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_chibi_sprite.gif",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_chibi_sprite.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_chibi_sprite.webp",
+    "id": "f9be3172a60149b4589db8cf2704a7a5b2bf8537e508bf6996678135",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_chibi_sprite.webp"
   }
 ]
