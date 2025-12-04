@@ -8016,5 +8016,150 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_chibi_sprite.webp",
     "id": "f9be3172a60149b4589db8cf2704a7a5b2bf8537e508bf6996678135",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_chibi_sprite.webp"
+  },
+  {
+    "title": "Rayan Full Body by Hibiki",
+    "artist": "@KingOf_Streets",
+    "tags": [
+      "Lances",
+      "Full Body"
+    ],
+    "href": "https://x.com/KingOf_Streets/status/1995573206519071087",
+    "published": "2025-12-01",
+    "aspectRatio": 1,
+    "rating": "general",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_full_body_by_hibiki.PNG",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_full_body_by_hibiki.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_full_body_by_hibiki.webp",
+    "id": "9b9aeddf9827fa8cee5d47117187a4b0e3174cd4a842583775e72f69",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_full_body_by_hibiki.webp"
+  },
+  {
+    "title": "Chainsaw Man YCH (Side B)",
+    "artist": "@jw_bash",
+    "tags": [
+      "Rastaban Form",
+      "Half Body"
+    ],
+    "href": "https://www.patreon.com/posts/ych-november-1-144985288",
+    "published": "2025-12-03",
+    "aspectRatio": 1.5121654501216546,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/chainsaw_man_ych_side_b.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/chainsaw_man_ych_side_b.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/chainsaw_man_ych_side_b.webp",
+    "id": "df78d1d17b28b68568a55a8f8340643cb33deddc0b65bf9e0bf44c1a",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/chainsaw_man_ych_side_b.webp"
+  },
+  {
+    "tags": [
+      "Half Body",
+      "Rastaban Form"
+    ],
+    "href": "https://www.patreon.com/posts/ych-november-1-144985288",
+    "aspectRatio": 0.7087669280114042,
+    "parent": "Chainsaw Man YCH (Side B)",
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Midnight"
+    ],
+    "altType": {
+      "pageNumber": "",
+      "altNumber": "1"
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/chainsaw_man_ych_side_b_2.jpg",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/chainsaw_man_ych_side_b_2.webp",
+    "id": "f8aa1514238d8288fa75d9b93a417b55e9a284e49c354d8b295e57cc",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/chainsaw_man_ych_side_b_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/chainsaw_man_ych_side_b_2.webp"
+  },
+  {
+    "title": "Flux Alcor Pat",
+    "artist": "@fluxdestiny.bsky.social",
+    "tags": [
+      "Aldhibah Form",
+      "Techwear",
+      "Chibi"
+    ],
+    "href": "",
+    "published": "2025-12-02",
+    "aspectRatio": 0.9674959871589085,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/flux_alcor_pat.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/flux_alcor_pat.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flux_alcor_pat.webp",
+    "id": "5779db527ffb8af7cee6017c5a727fb62ae427dc51185686e5737de8",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/flux_alcor_pat.webp"
+  },
+  {
+    "title": "Boyfailure Butler",
+    "artist": "@axyusagi.bsky.social",
+    "tags": [
+      "Full Body",
+      "Sketch"
+    ],
+    "href": "",
+    "published": "2025-12-04",
+    "aspectRatio": 0.9027777777777778,
+    "rating": "general",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_butler.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_butler.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_butler.webp",
+    "id": "84d65f0ddb228b9e35595d8c7cf43ce26298a2ff259b9c8e5d78d51d",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_butler.webp"
+  },
+  {
+    "title": "Rayan Triathlon Outfit Fullbody",
+    "artist": "@bonji0v0",
+    "tags": [
+      "Techwear",
+      "Bodysuit",
+      "Full Body"
+    ],
+    "href": "https://x.com/bonji0v0/status/1996219134250717230",
+    "published": "2025-12-03",
+    "aspectRatio": 0.84,
+    "rating": "mainstream",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_triathlon_outfit_fullbody.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_triathlon_outfit_fullbody.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_triathlon_outfit_fullbody.webp",
+    "id": "8c4c41d57c21dd2d1b44bc69b546cc97920f50069cfbea1be8bde03b",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_triathlon_outfit_fullbody.webp"
+  },
+  {
+    "title": "Cuddling Under the Sheets",
+    "artist": "@CheezyChezu",
+    "tags": [
+      "Half Body",
+      "Rastaban Form"
+    ],
+    "href": "https://x.com/CheezyChezu/status/1996292898854474059",
+    "published": "2025-12-03",
+    "aspectRatio": 0.8571428571428571,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/cuddling_under_the_sheets.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/cuddling_under_the_sheets.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cuddling_under_the_sheets.webp",
+    "id": "5ac420215e00760481e71639123f6ada46047c67eb4062126f975389",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cuddling_under_the_sheets.webp"
   }
 ]
