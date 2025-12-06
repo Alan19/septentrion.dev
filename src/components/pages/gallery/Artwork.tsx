@@ -26,7 +26,7 @@ export function Artwork() {
     }, [])
 
     return <>
-        <Container className={"fade"} style={{height: `calc(100vh - ${isMobile ? '72px' : '2rem'})`, display: "flex", flexDirection: "column"}}>
+        <Container className={"fade"} style={{height: `calc(100svh - ${isMobile ? '72px' : '2rem'})`, display: "flex", flexDirection: "column"}}>
             <div className={"bottom-margin"} style={{display: "flex", alignItems: "baseline"}}>
                 <Link to={{pathname: '/gallery', search: searchParams.toString()}}>
                     <button className="transparent circle"><i>arrow_back</i></button>
