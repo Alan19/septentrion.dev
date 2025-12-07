@@ -3,7 +3,7 @@ import {useParams} from "react-router";
 import {Container} from "../../ui/Container.tsx";
 import {clsx} from "clsx";
 import {Link, useSearchParams} from "react-router-dom";
-import {getHref, type ImageInformation, isAltInformation} from "../../../../api/src/images/ImageInformation.ts";
+import {getHref, type ImageBase, type ImageInformation, isAltInformation} from "../../../../api/src/images/ImageInformation.ts";
 import {OptionalAnchor} from "./OptionalAnchor.tsx";
 import {ArtworkUploader} from "./uploader-modal/ArtworkUploader.tsx";
 import {useIsDevelopment} from "../../../hooks/useIsDevelopment.ts";
@@ -31,12 +31,12 @@ export function Artwork() {
                 <Link to={{pathname: '/gallery', search: searchParams.toString()}}>
                     <button className="transparent circle"><i>arrow_back</i></button>
                 </Link>
-                <h3 className={"secondary-text no-margin"} style={{fontFamily: "Inter Variable"}}>
+                <h4 className={"secondary-text no-margin"} style={{fontFamily: "Inter Variable"}}>
                     {parentImage?.title}
-                </h3>
+                </h4>
             </div>
             <OptionalAnchor target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={displayedImage.href}>
-                <img style={{width: "100%", height: "100%", flex: 1, objectFit: "contain"}} src={displayedImage?.webp}/>
+                <img style={{width: "100%", height: "100%", minHeight: '12rem', flex: 1, objectFit: "contain"}} src={displayedImage?.webp}/>
             </OptionalAnchor>
             <h4 className={"bottom-margin tertiary-text"}>Tags</h4>
             <nav style={{display: "flex", gap: "8px", overflowX: "scroll"}} className={"no-margin"}>
@@ -52,15 +52,14 @@ export function Artwork() {
                     <i>event</i>{parentImage.published}
                 </button>
             </nav>
-
+            {parentImage?.title && altData.get(parentImage?.title) && <div className={"top-margin"}>
+                <b className={"tertiary-text"}>Alts</b>
+                <nav style={{overflowX: "scroll", blockSize: '12rem'}}>
+                    {([parentImage] as ImageBase[]).concat(altData.get(parentImage?.title))?.map(value => <Link to={`/gallery/${value.id}`} style={{display: "contents"}}><img src={value.thumbnailUrl} style={{height: "100%"}}/></Link>)}
+                </nav>
+            </div>}
         </Container>
-        {parentImage?.title && altData.get(parentImage?.title) && <Container>
-            <b className={"tertiary-text"}>Alts</b>
-            <div style={{display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gridGap: '1rem', overflowX: "scroll"}}>
-                <Link to={`/gallery/${parentImage.id}`}><img src={parentImage.thumbnailUrl} style={{width: "100%"}}/></Link>
-                {altData.get(parentImage?.title)?.map(value => <Link to={`/gallery/${value.id}`}><img src={value.thumbnailUrl} style={{width: "100%"}}/></Link>)}
-            </div>
-        </Container>}
+
         {isDevelopment && <ArtworkUploader variant={"alt"} parent={parentImage}/>}
     </>;
 }
