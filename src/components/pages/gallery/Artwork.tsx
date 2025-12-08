@@ -36,23 +36,25 @@ export function Artwork() {
                 </h4>
             </div>
             <OptionalAnchor target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={displayedImage.href}>
-                <img style={{width: "100%", height: "100%", minHeight: '12rem', flex: 1, objectFit: "contain"}} src={displayedImage?.webp}/>
+                <img style={{width: "100%", height: "100%", minHeight: '20rem', flex: 1, objectFit: "contain"}} src={displayedImage?.webp}/>
             </OptionalAnchor>
-            <h4 className={"bottom-margin tertiary-text"}>Tags</h4>
-            <nav style={{display: "flex", gap: "8px", overflowX: "scroll"}} className={"no-margin"}>
-                {displayedImage?.tags.sort((a, b) => a.localeCompare(b)).map((value) => <button className={clsx("primary-container chip no-margin")}>{value}</button>)}
-                <button className={clsx("secondary-container chip no-margin")}>{_.capitalize(displayedImage.rating)}</button>
-                {displayedImage?.characters.map((value) => <button className={clsx("chip tertiary-container tertiary-border no-margin")}>{value}</button>)}
-                <a target={"noreferrer noopener"} href={getHref(parentImage.artist)}>
+            <div className={"bottom-padding"}>
+                <h4 className={"bottom-margin tertiary-text"}>Tags</h4>
+                <nav style={{display: "flex", gap: "8px", overflowX: "scroll"}} className={"no-margin"}>
+                    {displayedImage?.tags.sort((a, b) => a.localeCompare(b)).map((value) => <button className={clsx("primary-container chip no-margin")}>{value}</button>)}
+                    <button className={clsx("secondary-container chip no-margin")}>{_.capitalize(displayedImage.rating)}</button>
+                    {displayedImage?.characters.map((value) => <button className={clsx("chip tertiary-container tertiary-border no-margin")}>{value}</button>)}
+                    <a target={"noreferrer noopener"} href={getHref(parentImage.artist)}>
+                        <button className={"no-margin chip secondary-border"}>
+                            <i>palette</i>{parentImage.artist}
+                        </button>
+                    </a>
                     <button className={"no-margin chip secondary-border"}>
-                        <i>palette</i>{parentImage.artist}
+                        <i>event</i>{parentImage.published}
                     </button>
-                </a>
-                <button className={"no-margin chip secondary-border"}>
-                    <i>event</i>{parentImage.published}
-                </button>
-            </nav>
-            {parentImage?.title && altData.get(parentImage?.title) && <div className={"top-margin"}>
+                </nav>
+            </div>
+            {parentImage?.title && altData.get(parentImage?.title) && <div>
                 <b className={"tertiary-text"}>Alts</b>
                 <nav style={{overflowX: "scroll", blockSize: '12rem'}}>
                     {([parentImage] as ImageBase[]).concat(altData.get(parentImage?.title))?.map(value => <Link to={`/gallery/${value.id}`} style={{display: "contents"}}><img src={value.thumbnailUrl} style={{height: "100%"}}/></Link>)}
