@@ -54,9 +54,9 @@ export function Artwork() {
                     </button>
                 </nav>
             </div>
-            {parentImage?.title && altData.get(parentImage?.title) && <div>
+            {parentImage?.title && altData.get(parentImage?.title) && <div style={{blockSize: '12rem', display: "flex", flexDirection: "column"}} className={"bottom-padding"}>
                 <b className={"tertiary-text"}>Alts</b>
-                <nav style={{overflowX: "scroll", blockSize: '12rem'}}>
+                <nav style={{overflowX: "scroll"}}>
                     {([parentImage] as ImageBase[]).concat(altData.get(parentImage?.title))?.map(value => <Link to={`/gallery/${value.id}`} style={{display: "contents"}}><img src={value.thumbnailUrl} style={{height: "100%"}}/></Link>)}
                 </nav>
             </div>}
