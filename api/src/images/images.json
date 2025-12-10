@@ -8044,8 +8044,8 @@
       "Rastaban Form",
       "Half Body"
     ],
-    "href": "https://www.patreon.com/posts/ych-november-1-144985288",
-    "published": "2025-12-03",
+    "href": "https://bsky.app/profile/jwbash.bsky.social/post/3m7nfgykhgk2t",
+    "published": "2025-12-10",
     "aspectRatio": 1.5121654501216546,
     "rating": "sensitive",
     "characters": [
@@ -8161,5 +8161,82 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/cuddling_under_the_sheets.webp",
     "id": "5ac420215e00760481e71639123f6ada46047c67eb4062126f975389",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/cuddling_under_the_sheets.webp"
+  },
+  {
+    "title": "Chainsaw Man YCH (Side A)",
+    "artist": "@jw_bash",
+    "tags": [
+      "Triangulum Form"
+    ],
+    "href": "https://bsky.app/profile/jwbash.bsky.social/post/3m7nfgykhgk2t",
+    "published": "2025-12-10",
+    "aspectRatio": 1.4167616875712656,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/chainsaw_man_ych_side_a.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/chainsaw_man_ych_side_a.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/chainsaw_man_ych_side_a.webp",
+    "id": "2f1240fe14ba8048d3d44a366cd60d6997639861fc6315abb0823d88",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/chainsaw_man_ych_side_a.webp"
+  },
+  {
+    "title": "Flux Rayan Design",
+    "artist": "@fluxdestiny.bsky.social",
+    "tags": [
+      "Bodysuit",
+      "Full Body"
+    ],
+    "href": "",
+    "published": "2025-12-09",
+    "aspectRatio": 0.7727272727272727,
+    "rating": "mainstream",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/flux_rayan_design.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/flux_rayan_design.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flux_rayan_design.webp",
+    "id": "a51f8390a2aa5e9b20f48b90697bccc73a50125c5a998cc90151c0cb",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/flux_rayan_design.webp"
+  },
+  {
+    "tags": [
+      "Bodysuit",
+      "Full Body"
+    ],
+    "href": "",
+    "aspectRatio": 0.7727272727272727,
+    "parent": "Flux Rayan Design",
+    "rating": "mainstream",
+    "characters": [
+      "Rayan"
+    ],
+    "altType": "cropped",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/flux_rayan_design_1.jpg",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/flux_rayan_design_1.webp",
+    "id": "a51f8390a2aa5e9b20f48b90697bccc73a50125c5a998cc90151c0cb",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/flux_rayan_design_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flux_rayan_design_1.webp"
+  },
+  {
+    "tags": [
+      "Bodysuit",
+      "Full Body"
+    ],
+    "href": "",
+    "aspectRatio": 1,
+    "parent": "Flux Rayan Design",
+    "rating": "mainstream",
+    "characters": [
+      "Rayan"
+    ],
+    "altType": "cropped",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/flux_rayan_design_2.jpg",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/flux_rayan_design_2.webp",
+    "id": "bc43d2d6e56efbb889da412e8fea0fda80e45b4b240b3faab9135752",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/flux_rayan_design_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flux_rayan_design_2.webp"
   }
 ]
