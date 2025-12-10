@@ -8038,49 +8038,6 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_full_body_by_hibiki.webp"
   },
   {
-    "title": "Chainsaw Man YCH (Side B)",
-    "artist": "@jw_bash",
-    "tags": [
-      "Rastaban Form",
-      "Half Body"
-    ],
-    "href": "https://bsky.app/profile/jwbash.bsky.social/post/3m7nfgykhgk2t",
-    "published": "2025-12-10",
-    "aspectRatio": 1.5121654501216546,
-    "rating": "sensitive",
-    "characters": [
-      "Alcor"
-    ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/chainsaw_man_ych_side_b.jpg",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/chainsaw_man_ych_side_b.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/chainsaw_man_ych_side_b.webp",
-    "id": "df78d1d17b28b68568a55a8f8340643cb33deddc0b65bf9e0bf44c1a",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/chainsaw_man_ych_side_b.webp"
-  },
-  {
-    "tags": [
-      "Half Body",
-      "Rastaban Form"
-    ],
-    "href": "https://www.patreon.com/posts/ych-november-1-144985288",
-    "aspectRatio": 0.7087669280114042,
-    "parent": "Chainsaw Man YCH (Side B)",
-    "rating": "sensitive",
-    "characters": [
-      "Alcor",
-      "Midnight"
-    ],
-    "altType": {
-      "pageNumber": "",
-      "altNumber": "1"
-    },
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/chainsaw_man_ych_side_b_2.jpg",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/chainsaw_man_ych_side_b_2.webp",
-    "id": "f8aa1514238d8288fa75d9b93a417b55e9a284e49c354d8b295e57cc",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/chainsaw_man_ych_side_b_2.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/chainsaw_man_ych_side_b_2.webp"
-  },
-  {
     "title": "Flux Alcor Pat",
     "artist": "@fluxdestiny.bsky.social",
     "tags": [
@@ -8181,6 +8138,27 @@
     "id": "2f1240fe14ba8048d3d44a366cd60d6997639861fc6315abb0823d88",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/chainsaw_man_ych_side_a.webp"
   },
+  {
+    "title": "Chainsaw Man YCH (Side B)",
+    "artist": "@jw_bash",
+    "tags": [
+      "Rastaban Form",
+      "Half Body"
+    ],
+    "href": "https://bsky.app/profile/jwbash.bsky.social/post/3m7nfgykhgk2t",
+    "published": "2025-12-10",
+    "aspectRatio": 1.5121654501216546,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/chainsaw_man_ych_side_b.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/chainsaw_man_ych_side_b.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/chainsaw_man_ych_side_b.webp",
+    "id": "df78d1d17b28b68568a55a8f8340643cb33deddc0b65bf9e0bf44c1a",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/chainsaw_man_ych_side_b.webp"
+  },
+
   {
     "title": "Flux Rayan Design",
     "artist": "@fluxdestiny.bsky.social",
