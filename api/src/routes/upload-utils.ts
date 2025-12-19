@@ -24,7 +24,7 @@ export async function uploadFile(bucket: string, fileName: string, buffer: Buffe
 export async function compressImageBuffer(sharpImage: Sharp, resizeSettings: ResizeOptions, maxFileSize: number): Promise<[Buffer, number, Metadata]> {
     let fileSize;
     let compressedImageBuffer;
-    let quality = 95;
+    let quality = 100;
     const compressedWebp = sharpImage
         .resize(resizeSettings);
     do {

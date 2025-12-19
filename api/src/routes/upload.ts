@@ -28,7 +28,7 @@ async function getMainImageEntryFields(file: Express.Multer.File, title: string,
         uploadThumbnailVersion(bucket, snakeCaseFileName, file.buffer),
         uploadFullscreenVersion(bucket, snakeCaseFileName, file.buffer),
         uploadNearLosslessVersion(bucket, snakeCaseFileName, file.buffer)]);
-    const characterArray = characters.split(',').map((char: string) => char.trim());
+    const characterArray = characters !== '' ? characters.split(',').map((char: string) => char.trim()) : [];
     const tagArray = tags !== '' ? tags.split(',').map((tag: string) => tag.trim()) : [];
     return {webpUrl, id, src, thumbnailUrl, nearLosslessUrl, aspectRatio, characterArray, tagArray};
 }

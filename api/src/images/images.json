@@ -8158,7 +8158,6 @@
     "id": "df78d1d17b28b68568a55a8f8340643cb33deddc0b65bf9e0bf44c1a",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/chainsaw_man_ych_side_b.webp"
   },
-
   {
     "title": "Flux Rayan Design",
     "artist": "@fluxdestiny.bsky.social",
@@ -8192,11 +8191,11 @@
       "Rayan"
     ],
     "altType": "cropped",
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/flux_rayan_design_1.jpg",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/flux_rayan_design_1.webp",
-    "id": "a51f8390a2aa5e9b20f48b90697bccc73a50125c5a998cc90151c0cb",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/flux_rayan_design_1.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flux_rayan_design_1.webp"
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/flux_rayan_design_3.jpg",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/flux_rayan_design_3.webp",
+    "id": "a39c45152514e237f17376c9a98c17b605ab100460f55b5fc4ddd1d3",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/flux_rayan_design_3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flux_rayan_design_3.webp"
   },
   {
     "tags": [
@@ -8216,5 +8215,132 @@
     "id": "bc43d2d6e56efbb889da412e8fea0fda80e45b4b240b3faab9135752",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/flux_rayan_design_2.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flux_rayan_design_2.webp"
+  },
+  {
+    "title": "Ninja Techwear γ",
+    "artist": "@chan1zi",
+    "tags": [
+      "Sketch",
+      "Techwear",
+      "Standard Outfit"
+    ],
+    "href": "https://vgen.co/chan1zi/portfolio/showcase/commission-sketch/2055ec50-9378-4fd1-a59d-3a8e3cfb427f",
+    "published": "2025-12-17",
+    "aspectRatio": 1.0990689013035382,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ninja_techwear_%CE%B3.jpeg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ninja_techwear_%CE%B3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ninja_techwear_%CE%B3.webp",
+    "id": "17e00df7eab8b75cc6b8701b5f7342eb804f377ddae2a7adcedd9b50",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/ninja_techwear_%CE%B3.webp"
+  },
+  {
+    "tags": [
+      "Sketch",
+      "Standard Outfit",
+      "Techwear"
+    ],
+    "href": "",
+    "aspectRatio": 0.6182952182952183,
+    "parent": "Ninja Techwear γ",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "cropped",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ninja_techwear_%CE%B3_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/ninja_techwear_%CE%B3_1.webp",
+    "id": "44b3e5f4106716e6abccfca9a939b7fde9f7c9c8e5fa04c9e24f2f5a",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ninja_techwear_%CE%B3_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ninja_techwear_%CE%B3_1.webp"
+  },
+  {
+    "tags": [
+      "Sketch",
+      "Standard Outfit",
+      "Techwear"
+    ],
+    "href": "",
+    "aspectRatio": 0.6182952182952183,
+    "parent": "Ninja Techwear γ",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "cropped",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ninja_techwear_%CE%B3_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/ninja_techwear_%CE%B3_2.webp",
+    "id": "519890b269f70e34535ef74c5cf286125f481b001d12ec4f440e85c6",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ninja_techwear_%CE%B3_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ninja_techwear_%CE%B3_2.webp"
+  },
+  {
+    "title": "Service Worker YCH",
+    "artist": "@marshiro.bsky.social",
+    "tags": [
+      "Half Body"
+    ],
+    "href": "",
+    "published": "2025-12-17",
+    "aspectRatio": 1.1666666666666667,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/service_worker_ych.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/service_worker_ych.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/service_worker_ych.webp",
+    "id": "19fa2e5e3e08ce0bee86619dc47ebad6d82e3275c52b54716e8ae1d6",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/service_worker_ych.webp"
+  },
+  {
+    "title": "Alcor's Street (Astral Wave Worldbuilding)",
+    "artist": "@Omorphia1",
+    "tags": [],
+    "href": "",
+    "published": "2025-12-18",
+    "aspectRatio": 1.7777777777777777,
+    "rating": "mainstream",
+    "characters": [],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_street_astral_wave_worldbuilding.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcors_street_astral_wave_worldbuilding.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_street_astral_wave_worldbuilding.webp",
+    "id": "4afe6cdfb17cd842cd259858319257e36d2b05d0c2a721d25d986e34",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_street_astral_wave_worldbuilding.webp"
+  },
+  {
+    "tags": [],
+    "href": "",
+    "aspectRatio": 1.7777777777777777,
+    "parent": "Alcor's Street (Astral Wave Worldbuilding)",
+    "rating": "mainstream",
+    "characters": [
+      ""
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_street_astral_wave_worldbuilding_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_street_astral_wave_worldbuilding_1.webp",
+    "id": "86140c02951bbc72be5ed9e7dfc5b9779318812ca394eff001f58c43",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcors_street_astral_wave_worldbuilding_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_street_astral_wave_worldbuilding_1.webp"
+  },
+  {
+    "tags": [],
+    "href": "",
+    "aspectRatio": 1.7777777777777777,
+    "parent": "Alcor's Street (Astral Wave Worldbuilding)",
+    "rating": "mainstream",
+    "characters": [
+      ""
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_street_astral_wave_worldbuilding_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_street_astral_wave_worldbuilding_2.webp",
+    "id": "26a7585d21edf4efd5fc7d5dd5c316e52a71f9c069cab0d5cfa99dc1",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcors_street_astral_wave_worldbuilding_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_street_astral_wave_worldbuilding_2.webp"
   }
 ]
