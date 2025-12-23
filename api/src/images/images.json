@@ -8342,5 +8342,28 @@
     "id": "26a7585d21edf4efd5fc7d5dd5c316e52a71f9c069cab0d5cfa99dc1",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcors_street_astral_wave_worldbuilding_2.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcors_street_astral_wave_worldbuilding_2.webp"
+  },
+  {
+    "title": "Jupiter δ",
+    "artist": "@TOOMIRO",
+    "tags": [
+      "Jupiter Form",
+      "Character Reference",
+      "Sketchpage",
+      "Full Body",
+      "Half Body"
+    ],
+    "href": "https://skeb.jp/@TOOMIRO/works/173",
+    "published": "2025-12-21",
+    "aspectRatio": 0.6666666666666666,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/jupiter_%CE%B4.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/jupiter_%CE%B4.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_%CE%B4.webp",
+    "id": "6ec793a1f23d6bb52255114ce838286653e9b0b6778a28b67011f5cd",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_%CE%B4.webp"
   }
 ]
