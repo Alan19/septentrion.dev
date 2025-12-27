@@ -8365,5 +8365,43 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/jupiter_%CE%B4.webp",
     "id": "6ec793a1f23d6bb52255114ce838286653e9b0b6778a28b67011f5cd",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/jupiter_%CE%B4.webp"
+  },
+  {
+    "title": "Summer Kemoheroes",
+    "artist": "@LeoO_614",
+    "tags": [
+      "Superhero"
+    ],
+    "href": "",
+    "published": "2025-12-26",
+    "aspectRatio": 0.8,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Mars"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/summer_kemoheroes.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/summer_kemoheroes.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/summer_kemoheroes.webp",
+    "id": "8b39374fdee743a12a92acee57811757cbd5850db84b179bcb1a9ad1",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/summer_kemoheroes.webp"
+  },
+  {
+    "tags": [
+      "Chibi"
+    ],
+    "href": "",
+    "aspectRatio": 0.9921197793538219,
+    "parent": "Summer Kemoheroes",
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/summer_kemoheroes_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/summer_kemoheroes_1.webp",
+    "id": "d57dd73a1fad8e2cf81ac824f57759b10b99c6afac075c3d9ba0aa7d",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/summer_kemoheroes_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/summer_kemoheroes_1.webp"
   }
 ]
