@@ -8372,8 +8372,8 @@
     "tags": [
       "Superhero"
     ],
-    "href": "",
-    "published": "2025-12-26",
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3mazivmpffs2n",
+    "published": "2025-12-27",
     "aspectRatio": 0.8,
     "rating": "sensitive",
     "characters": [
@@ -8403,5 +8403,66 @@
     "id": "d57dd73a1fad8e2cf81ac824f57759b10b99c6afac075c3d9ba0aa7d",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/summer_kemoheroes_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/summer_kemoheroes_1.webp"
+  },
+  {
+    "title": "December 2025 Christmas Chibi",
+    "artist": "@kurope.bsky.social",
+    "tags": [
+      "Chibi"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3mayylzggcs2a",
+    "published": "2025-12-27",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/december_2025_christmas_chibi.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/december_2025_christmas_chibi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/december_2025_christmas_chibi.webp",
+    "id": "a5085bb6665ff1e1aa128fe76137390438211c172e1a425a069616eb",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/december_2025_christmas_chibi.webp"
+  },
+  {
+    "title": "Summer in Croatia",
+    "artist": "@NiNO_Record",
+    "tags": [
+      "Illustration"
+    ],
+    "href": "https://bsky.app/profile/ninorec.bsky.social/post/3max5tdh5lk2v",
+    "published": "2025-12-27",
+    "aspectRatio": 1.7777777777777777,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/summer_in_croatia.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/summer_in_croatia.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/summer_in_croatia.webp",
+    "id": "8bb026a3c198bbca4f1ab3a2d61b68488903fa0bddf0098eaa0a7501",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/summer_in_croatia.webp"
+  },
+  {
+    "title": "Superhero Cityscape Freerunning",
+    "artist": "@shibenkuaihuatu",
+    "tags": [
+      "Indra Suit",
+      "Superhero",
+      "Illustration",
+      "Bodysuit"
+    ],
+    "href": "",
+    "published": "2025-12-28",
+    "aspectRatio": 1.7777777777777777,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/superhero_cityscape_freerunning.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/superhero_cityscape_freerunning.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/superhero_cityscape_freerunning.webp",
+    "id": "1666bf8b11339feca786336ae0bfbac0616220eb033664520cbfb7d3",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/superhero_cityscape_freerunning.webp"
   }
 ]
