@@ -8464,5 +8464,22 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/superhero_cityscape_freerunning.webp",
     "id": "1666bf8b11339feca786336ae0bfbac0616220eb033664520cbfb7d3",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/superhero_cityscape_freerunning.webp"
+  },
+  {
+    "title": "Rayan Festival Outfit",
+    "artist": "@booiaher.bsky.social",
+    "tags": [],
+    "href": "",
+    "published": "2026-01-04",
+    "aspectRatio": 1.6866935483870968,
+    "rating": "general",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_festival_outfit.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_festival_outfit.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_festival_outfit.webp",
+    "id": "d2ff4218c3766f6ce5c161c99f52f3ba432551824ad0306bcc148acf",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_festival_outfit.webp"
   }
 ]
