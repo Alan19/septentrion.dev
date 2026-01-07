@@ -8481,5 +8481,66 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_festival_outfit.webp",
     "id": "d2ff4218c3766f6ce5c161c99f52f3ba432551824ad0306bcc148acf",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_festival_outfit.webp"
+  },
+  {
+    "title": "Axy Onsen Sketch",
+    "artist": "@axyusagi.bsky.social",
+    "tags": [
+      "Sketch",
+      "Full Body"
+    ],
+    "href": "",
+    "published": "2026-01-01",
+    "aspectRatio": 0.792713567839196,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/axy_onsen_sketch.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/axy_onsen_sketch.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/axy_onsen_sketch.webp",
+    "id": "9d6489303ff4e2940c04b9ea9fe02b7940e67af51045c730b4d6ef10",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/axy_onsen_sketch.webp"
+  },
+  {
+    "title": "Rayan Symbiote Armor",
+    "artist": "@Mr_SO_Jun",
+    "tags": [
+      "Full Body",
+      "Superhero",
+      "Character Reference"
+    ],
+    "href": "",
+    "published": "2026-01-07",
+    "aspectRatio": 1.612578109252167,
+    "rating": "general",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_symbiote_armor.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_symbiote_armor.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_symbiote_armor.webp",
+    "id": "3d8b2996c65920f1548089ca8dea5cbb9e758c5fd697c936a0c4cd7a",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_symbiote_armor.webp"
+  },
+  {
+    "tags": [
+      "Full Body",
+      "Superhero",
+      "Chibi"
+    ],
+    "href": "",
+    "aspectRatio": 1,
+    "parent": "Rayan Symbiote Armor",
+    "rating": "general",
+    "characters": [
+      "Rayan"
+    ],
+    "altType": "extra",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_symbiote_armor_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_symbiote_armor_1.webp",
+    "id": "588cd82ff835727bb25d5a877b9271572f0985942c506f72085be1cd",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_symbiote_armor_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_symbiote_armor_1.webp"
   }
 ]
