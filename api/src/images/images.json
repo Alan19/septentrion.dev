@@ -8542,5 +8542,25 @@
     "id": "588cd82ff835727bb25d5a877b9271572f0985942c506f72085be1cd",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_symbiote_armor_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_symbiote_armor_1.webp"
+  },
+  {
+    "title": "Rayan Flux Design (タツ ver.)",
+    "artist": "@tatsupokopon.bsky.social",
+    "tags": [
+      "Bodysuit",
+      "Full Body"
+    ],
+    "href": "https://bsky.app/profile/tatsupokopon.bsky.social/post/3mcfdhu57qc26",
+    "published": "2026-01-14",
+    "aspectRatio": 0.7071398033347585,
+    "rating": "mainstream",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_flux_design_%E3%82%BF%E3%83%84_ver.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_flux_design_%E3%82%BF%E3%83%84_ver.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_flux_design_%E3%82%BF%E3%83%84_ver.webp",
+    "id": "fa0e25b9bbf9ab4e6e26e2a02397d19a9f2f2003530d1001a36c4b9e",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_flux_design_%E3%82%BF%E3%83%84_ver.webp"
   }
 ]

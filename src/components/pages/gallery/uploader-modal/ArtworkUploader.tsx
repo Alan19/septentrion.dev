@@ -53,7 +53,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
         defaultValues: {
             tags: props.variant === "alt" ? props.parent.tags as ArtTag[] : [],
             characters: props.variant === "alt" ? props.parent.characters : ["Alcor"],
-            href: "",
+            href: props.variant === "alt" ? props.parent.href : "",
             published: dayjs().format("YYYY-MM-DD"),
             hidden: false
         },
