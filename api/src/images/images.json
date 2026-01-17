@@ -8596,5 +8596,25 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/wilton_persona_5_cut_in.webp",
     "id": "a2a2c5bc61e36325d9aa8e72f56cc310ff0b2e2e9e8bd9474cb21cfe",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/wilton_persona_5_cut_in.webp"
+  },
+  {
+    "title": "Alcor Cheongsam Outfit",
+    "artist": "@M0GAKU_",
+    "tags": [
+      "Techwear",
+      "Aldhibah Form"
+    ],
+    "href": "https://x.com/M0GAKU_/status/2012538462482653294?s=20",
+    "published": "2026-01-17",
+    "aspectRatio": 1.307177389364076,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_cheongsam_outfit.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_cheongsam_outfit.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_cheongsam_outfit.webp",
+    "id": "c2dd99f10f667d86b8b9e18150148c70850a5a22bbd2c2a57d2774c3",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_cheongsam_outfit.webp"
   }
 ]
