@@ -8562,5 +8562,39 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_flux_design_%E3%82%BF%E3%83%84_ver.webp",
     "id": "fa0e25b9bbf9ab4e6e26e2a02397d19a9f2f2003530d1001a36c4b9e",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_flux_design_%E3%82%BF%E3%83%84_ver.webp"
+  },
+  {
+    "title": "Symbiote",
+    "artist": "@greyy_arts",
+    "tags": [],
+    "href": "https://x.com/greyy_arts/status/2012180069775720542?s=20",
+    "published": "2026-01-16",
+    "aspectRatio": 0.9478628464067638,
+    "rating": "mainstream",
+    "characters": [
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/symbiote.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/symbiote.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/symbiote.webp",
+    "id": "b23e6036368e3af3dcfb289eb50e9d95ef5012f38c3d9a1f2bd7b71f",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/symbiote.webp"
+  },
+  {
+    "title": "Wilton Persona 5 Cut-in",
+    "artist": "@moeqit_id",
+    "tags": [],
+    "href": "",
+    "published": "2026-01-15",
+    "aspectRatio": 1.992759452936444,
+    "rating": "mainstream",
+    "characters": [
+      "Wilton"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/wilton_persona_5_cut_in.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/wilton_persona_5_cut_in.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/wilton_persona_5_cut_in.webp",
+    "id": "a2a2c5bc61e36325d9aa8e72f56cc310ff0b2e2e9e8bd9474cb21cfe",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/wilton_persona_5_cut_in.webp"
   }
 ]
