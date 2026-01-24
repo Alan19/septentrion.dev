@@ -8616,5 +8616,25 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_cheongsam_outfit.webp",
     "id": "c2dd99f10f667d86b8b9e18150148c70850a5a22bbd2c2a57d2774c3",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_cheongsam_outfit.webp"
+  },
+  {
+    "title": "Rayan Symbiote Armor Chibi",
+    "artist": "@yamainuken.bsky.social",
+    "tags": [
+      "Chibi",
+      "Superhero"
+    ],
+    "href": "",
+    "published": "2026-01-20",
+    "aspectRatio": 1,
+    "rating": "mainstream",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_symbiote_armor_chibi.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_symbiote_armor_chibi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_symbiote_armor_chibi.webp",
+    "id": "66eed2771b77f1236cdb67407db71fd1b9b0a3cc4f8e4f45b2832e56",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_symbiote_armor_chibi.webp"
   }
 ]

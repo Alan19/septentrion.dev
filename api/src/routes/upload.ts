@@ -110,7 +110,7 @@ function addToJson(newImageEntry: ImageInformation | AltInformation, isHidden = 
 
 export async function uploadThumbnailVersion(bucket: string, imageName: string, buffer: Buffer): Promise<[string, number]> {
     const [result, quality, {height, width}] = await compressImageBuffer(sharp(buffer), {width: 2160, height: 3840, withoutEnlargement: true, fit: 'inside'}, 300000);
-    console.log(getUploadMessage('thumbnail', imageName, result, quality));
+    console.log(getUploadMessage('thumbnail', imageName, Buffer.byteLength(result), quality, Buffer.byteLength(buffer)));
     const value = await uploadFile(bucket, `thumbnail/${imageName}.webp`, result, 'image/webp');
     const aspectRatio = width !== undefined && height !== undefined ? width / height : 1;
     return [value, aspectRatio];
@@ -118,17 +118,17 @@ export async function uploadThumbnailVersion(bucket: string, imageName: string, 
 
 export async function uploadFullscreenVersion(bucket: string, imageName: string, buffer: Buffer): Promise<[string, string]> {
     const [result, quality] = await compressImageBuffer(sharp(buffer, {animated: true}), {width: 4096, height: 4096, fit: 'inside', withoutEnlargement: true}, 1000000);
-    console.log(getUploadMessage('lossy', imageName, result, quality));
+    console.log(getUploadMessage('lossy', imageName, Buffer.byteLength(result), quality, Buffer.byteLength(buffer)));
     const value = await uploadFile(bucket, `webp/${imageName}.webp`, result, 'image/webp');
 
     return [value, sha3_224(result)];
 }
 
 export async function uploadNearLosslessVersion(bucket: string, imageName: string, buffer: Buffer) {
-    const compressedImageBuffer = await sharp(buffer, {animated: true})
+    const result = await sharp(buffer, {animated: true})
         .resize({width: 4096, height: 4096, fit: 'inside', withoutEnlargement: true})
         .webp({quality: 50, nearLossless: true})
         .toBuffer();
-    console.log(getUploadMessage('near lossless', imageName, compressedImageBuffer, 50));
-    return (await uploadFile(bucket, `near_lossless/${imageName}.webp`, compressedImageBuffer, 'image/webp'));
+    console.log(getUploadMessage('near lossless', imageName, Buffer.byteLength(result), 50, Buffer.byteLength(buffer)));
+    return (await uploadFile(bucket, `near_lossless/${imageName}.webp`, result, 'image/webp'));
 }

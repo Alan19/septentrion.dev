@@ -40,6 +40,6 @@ export async function compressImageBuffer(sharpImage: Sharp, resizeSettings: Res
     return [compressedImageBuffer.data, quality, await compressedWebp.metadata()];
 }
 
-export function getUploadMessage(uploadType: string, imageName: string, result: Buffer<ArrayBufferLike>, quality: number) {
-    return `Uploading ${uploadType} version of ${imageName} with quality ${quality} a size of ${(Buffer.byteLength(result) / 1000).toFixed(2)} KB`;
+export function getUploadMessage(uploadType: string, imageName: string, resultSize: number, quality: number, originalSize: number) {
+    return `Uploading ${uploadType} version of ${imageName} with quality ${quality} a size of ${(resultSize / 1000).toFixed(2)} KB (${(resultSize / originalSize)}%)`;
 }
