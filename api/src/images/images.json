@@ -8636,5 +8636,44 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_symbiote_armor_chibi.webp",
     "id": "66eed2771b77f1236cdb67407db71fd1b9b0a3cc4f8e4f45b2832e56",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_symbiote_armor_chibi.webp"
+  },
+  {
+    "title": "Kuropeko Chibi January 2026",
+    "artist": "@kurope.bsky.social",
+    "tags": [
+      "Chibi"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3mdr6r6fnk22y",
+    "published": "2026-01-31",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/kuropeko_chibi_january_2026.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/kuropeko_chibi_january_2026.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/kuropeko_chibi_january_2026.webp",
+    "id": "21b51a9e9bfb6184008daa9964324479ec3277e03cd71c4b89aef7be",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/kuropeko_chibi_january_2026.webp"
+  },
+  {
+    "title": "Rofu YCH M11",
+    "artist": "@rofukagazaki",
+    "tags": [
+      "Full Body",
+      "Eltanin Form"
+    ],
+    "href": "",
+    "published": "2026-01-29",
+    "aspectRatio": 0.7422927267285244,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rofu_ych_m_11.jpeg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rofu_ych_m_11.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rofu_ych_m_11.webp",
+    "id": "6a7dd7411711d3fb9007311f013f4519252917fd4d9a7b2772ec1af8",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rofu_ych_m_11.webp"
   }
 ]

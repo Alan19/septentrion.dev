@@ -29,5 +29,9 @@ export function useTagHooks() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [images, hidden])
 
-    return {filters: new SelectedFilters(filterString), setFilters: setFilterString, images: imageData, altData, imageEntries};
+    function isImageHidden(entry: ImageInformation): boolean {
+        return (hidden as ImageEntry[]).filter(isImageInformation).map(value => value.title).includes(entry.title)
+    }
+
+    return {filters: new SelectedFilters(filterString), setFilters: setFilterString, images: imageData, altData, imageEntries, isImageHidden};
 }

@@ -48,7 +48,7 @@ type ParentProps = {
 }
 
 export function ArtworkUploader(props: AltProps | ParentProps) {
-    const {images} = useTagHooks();
+    const {images, isImageHidden} = useTagHooks();
     const {register, handleSubmit, control, watch, reset, formState: {isSubmitting}} = useForm<ImageValues>({
         defaultValues: {
             tags: props.variant === "alt" ? props.parent.tags as ArtTag[] : [],
@@ -64,6 +64,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
     const watchRating = watch("rating");
     const watchAltType = watch("altType");
     const watchArtist = watch("artist");
+    const watchHidden = watch("hidden");
     const isCollision = images.map(i => prepareFileName(i.title)).includes(prepareFileName(watchTitle));
 
     const onSubmit = async (data: ImageValues) => {
@@ -104,6 +105,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
     const {variant} = props;
 
     const isParent = variant === "parent";
+    const isParentHidden = variant === "alt" && isImageHidden(props.parent);
     return <>
         <Dialog.Root>
             <Dialog.Trigger className="extend square round secondary" style={{position: "fixed", bottom: "2rem", right: "2rem", display: "flex"}}>
@@ -147,7 +149,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
                             <nav>
                                 {(["mainstream", "general", "sensitive", "mature"] as const).map(r => <BeerCSSRadio key={r} label={_.capitalize(r)} {...register("rating", {required: true})} value={r}/>)}
                             </nav>
-                            <BeerCSSCheckbox {...register("hidden")} label="Hidden" className="top-margin"/>
+                            <BeerCSSCheckbox {...register("hidden", {disabled: isParentHidden})} checked={isParentHidden ? true : watchHidden}  label="Hidden" className="top-margin"/>
                         </fieldset>
                         <div className={styles.Actions}>
                             <button type="submit" className="primary" disabled={isSubmitting || !watchFile || isParent && (!watchArtist || !watchTitle) || !watchRating}>

@@ -41,5 +41,5 @@ export async function compressImageBuffer(sharpImage: Sharp, resizeSettings: Res
 }
 
 export function getUploadMessage(uploadType: string, imageName: string, resultSize: number, quality: number, originalSize: number) {
-    return `Uploading ${uploadType} version of ${imageName} with quality ${quality} a size of ${(resultSize / 1000).toFixed(2)} KB (${(resultSize / originalSize)}%)`;
+    return `Uploading ${uploadType} version of ${imageName} with quality ${quality} a size of ${(resultSize / 1000).toFixed(2)} KB (${(resultSize / originalSize * 100).toFixed(2)}%)`;
 }
