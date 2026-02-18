@@ -45,8 +45,8 @@ export const AnalyticsPage = memo(function AnalyticsPage() {
                 <b className={'tertiary-text'}>{value}</b>
                 <Tooltip id="my-tooltip" />
                 {/*We have to use a hacky workaround to make the first date work*/}
+                {/*@ts-expect-error This prop can accept any object to inject to the rect component*/}
                 <CalendarHeatmap classForValue={getClassForHeatmapSquare}
-                                 //@ts-expect-error This prop can accept any object to inject to the rect component
                                  tooltipDataAttrs={(value) => {
                                      if (value.count) {
                                          return ({'data-tooltip-content': getPublishedDateTooltip(value), "data-tooltip-id": "my-tooltip"});
