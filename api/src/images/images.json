@@ -8724,8 +8724,8 @@
       "Standard Outfit",
       "Rastaban Form"
     ],
-    "href": "",
-    "published": "2026-02-17",
+    "href": "https://x.com/AxonTatsu/status/2027757355891646650",
+    "published": "2026-02-28",
     "aspectRatio": 0.7130376344086021,
     "rating": "mainstream",
     "characters": [
@@ -8758,5 +8758,49 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/unit_tests_failing.webp",
     "id": "c7f4812c8822a31c2f1e732ad1f8229bf9fb5db471a449f2a4a9f149",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/unit_tests_failing.webp"
+  },
+  {
+    "title": "Parkour Bodysuit γ",
+    "artist": "@sumiwohakuneko",
+    "tags": [
+      "Techwear",
+      "Rastaban Form",
+      "Bodysuit",
+      "Full Body",
+      "Illustration"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3mfki7hyme22h",
+    "published": "2026-02-23",
+    "aspectRatio": 1.6602822580645162,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/parkour_bodysuit_%CE%B3.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/parkour_bodysuit_%CE%B3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/parkour_bodysuit_%CE%B3.webp",
+    "id": "679682bf5fe3537d0949edce325ab981895703a41e90a040c3118b39",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/parkour_bodysuit_%CE%B3.webp"
+  },
+  {
+    "title": "Idol Chibi",
+    "artist": "@kurope.bsky.social",
+    "tags": [
+      "Chibi",
+      "Thuban Form",
+      "Full Body"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3mfwt37dbls2c",
+    "published": "2026-02-28",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/idol_chibi.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/idol_chibi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/idol_chibi.webp",
+    "id": "6afa9a80ae03f5ce7759e68ac5f3af5f8f27d7ef42d96ef2bb0ad34b",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/idol_chibi.webp"
   }
 ]
