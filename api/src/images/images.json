@@ -8624,8 +8624,8 @@
       "Chibi",
       "Superhero"
     ],
-    "href": "",
-    "published": "2026-01-20",
+    "href": "https://x.com/Yamainu_ken/status/2030811612756742236",
+    "published": "2026-03-08",
     "aspectRatio": 1,
     "rating": "mainstream",
     "characters": [
@@ -8802,5 +8802,25 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/idol_chibi.webp",
     "id": "6afa9a80ae03f5ce7759e68ac5f3af5f8f27d7ef42d96ef2bb0ad34b",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/idol_chibi.webp"
+  },
+  {
+    "title": "Beast Rayan Reference η",
+    "artist": "@yamainuken.bsky.social",
+    "tags": [
+      "Character Reference",
+      "Full Body"
+    ],
+    "href": "",
+    "published": "2026-03-10",
+    "aspectRatio": 1.1544677903486493,
+    "rating": "general",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/beast_rayan_reference_%CE%B7.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/beast_rayan_reference_%CE%B7.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/beast_rayan_reference_%CE%B7.webp",
+    "id": "401a57d828aaa528d349281325ea84742c9af591c765b9ce73f4c09e",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/beast_rayan_reference_%CE%B7.webp"
   }
 ]
