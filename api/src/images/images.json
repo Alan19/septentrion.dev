@@ -8822,5 +8822,25 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/beast_rayan_reference_%CE%B7.webp",
     "id": "401a57d828aaa528d349281325ea84742c9af591c765b9ce73f4c09e",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/beast_rayan_reference_%CE%B7.webp"
+  },
+  {
+    "title": "AICore + Castor γ Combo Page",
+    "artist": "@Mr_SO_Jun",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "",
+    "published": "2026-03-16",
+    "aspectRatio": 1.7777777777777777,
+    "rating": "general",
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ai_core_castor_%CE%B3_combo_page.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ai_core_castor_%CE%B3_combo_page.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ai_core_castor_%CE%B3_combo_page.webp",
+    "id": "16aabf7cac3e27265c363860c5bc620c75d3dabcd87ddedefdd30ab6",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/ai_core_castor_%CE%B3_combo_page.webp"
   }
 ]
