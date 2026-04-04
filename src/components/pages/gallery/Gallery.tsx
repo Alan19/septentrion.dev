@@ -38,9 +38,9 @@ export function Gallery() {
             <h1 className={"primary-text"}>Gallery</h1>
             <fieldset className={"bottom-margin"}>
                 <legend>Filter Settings</legend>
-                <RadioGroup value={filterMode} setValue={setFilterMode} options={["and", "or"]} label={"Filter Mode"} className={"bottom-margin"}/>
+                <RadioGroup value={filterMode} setValue={setFilterMode} options={["and", "or"]} label={"Filter Mode"}/>
                 <GallerySearchbar/>
-                <RadioGroup value={displayMode} setValue={setDisplayMode} options={["paginated", "monthly", "all"]} label={"Display Mode"} className={"bottom-margin top-margin"}/>
+                <RadioGroup value={displayMode} setValue={setDisplayMode} options={["paginated", "monthly", "all"]} label={"Display Mode"} />
                 {displayMode === "paginated" && <div><GalleryPagination page={page} className={"right-align"} setPage={setPage} maxPages={Math.ceil(yearMonthPairs.length / pageSize)}/></div>}
             </fieldset>
             {(displayMode === "paginated" || displayMode === "monthly") && displayedMonths.map(value => {

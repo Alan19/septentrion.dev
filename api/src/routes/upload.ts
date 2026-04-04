@@ -2,8 +2,8 @@ import {Request, Response} from 'express';
 import sharp from "sharp";
 import {S3} from '@aws-sdk/client-s3';
 import {sha3_224} from "js-sha3";
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 import {AltInformation, ImageInformation} from '../images/ImageInformation';
 import {prepareFileName} from "../utils/utils";
 import {fromEnv} from "@aws-sdk/credential-providers";
@@ -28,8 +28,8 @@ async function getMainImageEntryFields(file: Express.Multer.File, title: string,
         uploadThumbnailVersion(bucket, snakeCaseFileName, file.buffer),
         uploadFullscreenVersion(bucket, snakeCaseFileName, file.buffer),
         uploadNearLosslessVersion(bucket, snakeCaseFileName, file.buffer)]);
-    const characterArray = characters !== '' ? characters.split(',').map((char: string) => char.trim()) : [];
-    const tagArray = tags !== '' ? tags.split(',').map((tag: string) => tag.trim()) : [];
+    const characterArray = characters === '' ? [] : characters.split(',').map((char: string) => char.trim());
+    const tagArray = tags === '' ? [] : tags.split(',').map((tag: string) => tag.trim());
     return {webpUrl, id, src, thumbnailUrl, nearLosslessUrl, aspectRatio, characterArray, tagArray};
 }
 
