@@ -82,5 +82,28 @@
 }
 
 .hover-border:hover {
-    border-color: var(--outline);;
+    border-color: var(--outline);
+}
+
+.dropdown-heading {
+    height: 48px !important;
+}
+
+.slide-right {
+    animation: slideInLeft .25s ease-out;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    20% {
+        transform: translateX(-15%);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }

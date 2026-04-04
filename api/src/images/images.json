@@ -8842,5 +8842,25 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ai_core_castor_%CE%B3_combo_page.webp",
     "id": "16aabf7cac3e27265c363860c5bc620c75d3dabcd87ddedefdd30ab6",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/ai_core_castor_%CE%B3_combo_page.webp"
+  },
+  {
+    "title": "Tamakoma-2 Alcor Chibi",
+    "artist": "@kurope.bsky.social",
+    "tags": [
+      "Chibi",
+      "Full Body"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3mijn3zclkc2e",
+    "published": "2026-04-02",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/tamakoma_2_alcor_chibi.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/tamakoma_2_alcor_chibi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/tamakoma_2_alcor_chibi.webp",
+    "id": "0d309021b4cadcc3555868cc0e1bbe20bfccc1e9ff48147733e4f9a6",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/tamakoma_2_alcor_chibi.webp"
   }
 ]

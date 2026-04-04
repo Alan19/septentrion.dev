@@ -113,15 +113,22 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
             </Dialog.Trigger>
             <Dialog.Portal>
                 <Dialog.Backdrop className={styles.Backdrop}/>
-                <Dialog.Popup className={clsx(styles.Popup, "surface")}>
+                <Dialog.Popup className={clsx(styles.Popup, "surface", "large-padding")}>
                     <Dialog.Title className={styles.Title}><h5>Upload New Image</h5></Dialog.Title>
                     <Dialog.Description className={styles.Description}>Enter a list of tags, the handle of the artist, and the file name to automatically compress and upload this file!</Dialog.Description>
-                    <form onSubmit={handleSubmit(onSubmit)} style={{display: "flex", flexDirection: "column", gap: "1rem"}} className="bottom-margin">
+                    <form onSubmit={handleSubmit(onSubmit)} style={{display: "flex", flexDirection: "column", gap: "1rem"}} className="bottom-margin fade">
                         {/*TODO Combine Artwork Title and File Fields*/}
                         <BeerCSSTextField type="file" label="File" inputPrefix={<i>attach_file</i>} {...register("file", {required: true})} />
                         {isParent && <>
                             <BeerCSSTextField type="text" label="Artwork Title" inputPrefix={<i>title</i>} errorText={isCollision && "The title already exists! This may overwrite that artwork entry!"} {...register("title", {required: true})}/>
-                            <Controller name="artist" control={control} rules={{required: true}} render={({field}) => <BeerCssCombobox closeOnChangedValue isCreatable placeholder="Artist Handle" value={field.value ? [{label: field.value, value: field.value}] : []} options={artists.map(a => ({label: a, value: a}))} onChange={opts => field.onChange(opts[1]?.value ?? opts[0]?.value ?? "")}/>}/>
+                            <Controller name="artist" control={control} rules={{required: true}} render={({field}) => <BeerCssCombobox closeOnChangedValue
+                                                                                                                                       isCreatable
+                                                                                                                                       renderText
+                                                                                                                                       placeholder="Artist Handle"
+                                                                                                                                       value={field.value ? [{label: field.value, value: field.value}] : []}
+                                                                                                                                       options={artists.map(a => ({label: a, value: a}))}
+                                                                                                                                       onChange={opts => field.onChange(opts[1]?.value ?? opts[0]?.value ?? "")}
+                                                                                                                                       />}/>
                             <BeerCSSTextField type="date" label="Published Date" {...register("published", {required: true})} />
                         </>}
 
@@ -129,21 +136,19 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
                         <BeerCSSTextField type="text" label="URL" inputPrefix={<i>link</i>} {...register("href")} />
                         <Controller name="characters" control={control} render={({field}) => <BeerCssCombobox isCreatable placeholder="Characters" value={field.value.map(v => ({label: v, value: v}))} options={Array.from(new Set(images.flatMap(i => i.characters).concat(field.value))).map(v => ({label: v, value: v}))} onChange={opts => field.onChange(opts.map(o => o.value))}/>}/>
 
-                        {variant === "alt" && <>
-                            <fieldset className={"no-margin"}>
-                                <legend>Alt Type</legend>
-                                <nav>
-                                    {(["extra", "cropped", "recolor"] as const).map(r => <BeerCSSRadio key={r} label={_.capitalize(r)} {...register("altType", {required: true})} value={r}/>)}
-                                    <BeerCSSRadio label={"Complex"} {...register("altType", {required: true})} value={"complex"}/>
-                                </nav>
-                                <nav>
-                                    {watchAltType === "complex" && <>
-                                        <BeerCSSTextField label={"Page"} type={"number"} {...register("complexInfo.pageNumber")} />
-                                        <BeerCSSTextField label={"Alt"} type={"number"} {...register("complexInfo.altNumber")} />
-                                    </>}
-                                </nav>
-                            </fieldset>
-                        </>}
+                        {variant === "alt" && <fieldset className={"no-margin"}>
+                            <legend>Alt Type</legend>
+                            <nav>
+                                {(["extra", "cropped", "recolor"] as const).map(r => <BeerCSSRadio key={r} label={_.capitalize(r)} {...register("altType", {required: true})} value={r}/>)}
+                                <BeerCSSRadio label={"Complex"} {...register("altType", {required: true})} value={"complex"}/>
+                            </nav>
+                            <nav>
+                                {watchAltType === "complex" && <>
+                                    <BeerCSSTextField label={"Page"} type={"number"} {...register("complexInfo.pageNumber")} />
+                                    <BeerCSSTextField label={"Alt"} type={"number"} {...register("complexInfo.altNumber")} />
+                                </>}
+                            </nav>
+                        </fieldset>}
                         <fieldset className="no-margin">
                             <legend>Rating</legend>
                             <nav>
