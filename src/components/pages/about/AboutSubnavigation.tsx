@@ -4,22 +4,21 @@ import {Link} from "react-router-dom";
 import {useIsMobile} from "../../../hooks/useIsMobile.ts";
 import {aboutSubRoutes} from "../../../AppRouter.tsx";
 
+function LinkButton(props: Readonly<{ path: string, name: string, isActive: boolean }>) {
+    return <Link style={{display: "contents"}} to={`${props.path}`} className={"left-padding center-align no-margin"}>
+        <button className={clsx("transparent left-align large", props.isActive ? "fill" : "large-opacity")}>
+            {props.name}
+        </button>
+    </Link>;
+}
+
 export function AboutSubnavigation() {
     const location = useLocation();
-    const currentSubroute = (new RegExp(/^\/about(.*)/).exec(location.pathname) ?? ['/about', ''])[1];
+    const currentSubroute = (new RegExp(/^\/about\/?(.*)/).exec(location.pathname) ?? ['/about', ''])[1];
     const isMobile = useIsMobile();
 
     let linkButtons = <ul className="list border small-padding">
-        <Link style={{display: "contents"}} to={`/about/`} className={"left-padding center-align no-margin"}>
-            <button className={clsx("transparent left-align large", currentSubroute === `/` ? "fill" : "small-opacity")}>
-                Overview
-            </button>
-        </Link>
-        {aboutSubRoutes.map(value => <Link style={{display: "contents"}} key={value.name} to={`/about/${value.path}`} className={"left-padding center-align no-margin"}>
-            <button className={clsx("transparent left-align large", (currentSubroute === `/${value.path}`) ? "fill" : "small-opacity")}>
-                {value.name}
-            </button>
-        </Link>)}
+        {[{path: '', name: 'Me IRL'}].concat(aboutSubRoutes).map(value => <LinkButton key={value.name} name={value.name} path={value.path} isActive={currentSubroute === value.path}/>)}
     </ul>;
 
     const togglePopover = () => {
