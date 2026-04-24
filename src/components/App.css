@@ -107,3 +107,15 @@
         opacity: 1;
     }
 }
+
+body:has(:popover-open) *:is(#uploader) {
+    pointer-events: all;
+}
+
+body:has(:popover-open) {
+    pointer-events: none;
+}
+
+#uploader {
+    pointer-events: all;
+}

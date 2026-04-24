@@ -8862,5 +8862,64 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/tamakoma_2_alcor_chibi.webp",
     "id": "0d309021b4cadcc3555868cc0e1bbe20bfccc1e9ff48147733e4f9a6",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/tamakoma_2_alcor_chibi.webp"
+  },
+  {
+    "title": "Rayan (by yuuko891)",
+    "artist": "@yuuko891.bsky.social",
+    "tags": [],
+    "href": "https://x.com/Yuuko891/status/2046504947274170461/photo/4",
+    "published": "2026-04-21",
+    "aspectRatio": 1.0224489795918368,
+    "rating": "sensitive",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_by_yuuko_891.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_by_yuuko_891.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_by_yuuko_891.webp",
+    "id": "60db1ef3a95e0fca9b5367276be981a81d32fe684ccb45b9628b8ca2",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_by_yuuko_891.webp"
+  },
+  {
+    "title": "AICore (by Abzel)",
+    "artist": "@iamblz_twt",
+    "tags": [
+      "AICore Form"
+    ],
+    "href": "",
+    "published": "2026-04-20",
+    "aspectRatio": 1.3333333333333333,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/ai_core_by_abzel.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/ai_core_by_abzel.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/ai_core_by_abzel.webp",
+    "id": "4d2882c2e1e44a71ad0c7ede160bb3714356e19303a365d090c97e0c",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/ai_core_by_abzel.webp"
+  },
+  {
+    "title": "Alcor Beastrancers Sheet v2",
+    "artist": "@soendapuss.bsky.social",
+    "tags": [
+      "Transformation",
+      "Eltanin Form",
+      "Aldhibah Form",
+      "Techwear",
+      "Hoodie"
+    ],
+    "href": "",
+    "published": "2026-04-22",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_beastrancers_sheet_v_2.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_beastrancers_sheet_v_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_beastrancers_sheet_v_2.webp",
+    "id": "915ac19c3f79403f7d1c4e7e94405725f22aff532959994d98533555",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_beastrancers_sheet_v_2.webp"
   }
 ]

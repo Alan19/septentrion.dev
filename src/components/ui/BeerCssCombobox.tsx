@@ -43,7 +43,7 @@ export function BeerCssCombobox(props: Readonly<{ value: Option[], onChange: (se
             </label>}
             value={value}
             onChange={onChange}
-            labelledBy="Select"
+            labelledBy={placeholder}
             isCreatable={isCreatable}
             className={className}
             closeOnChangedValue={closeOnChangedValue}
