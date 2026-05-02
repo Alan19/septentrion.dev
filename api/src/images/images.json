@@ -8881,13 +8881,13 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_by_yuuko_891.webp"
   },
   {
-    "title": "AICore (by Abzel)",
+    "title": "🟦<-it's somewhere between here->🟩",
     "artist": "@iamblz_twt",
     "tags": [
       "AICore Form"
     ],
-    "href": "",
-    "published": "2026-04-20",
+    "href": "https://bsky.app/profile/iamblz.bsky.social/post/3mkkufhgd2227",
+    "published": "2026-04-28",
     "aspectRatio": 1.3333333333333333,
     "rating": "general",
     "characters": [
@@ -8921,5 +8921,44 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_beastrancers_sheet_v_2.webp",
     "id": "915ac19c3f79403f7d1c4e7e94405725f22aff532959994d98533555",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_beastrancers_sheet_v_2.webp"
+  },
+  {
+    "title": "Songkran Chibi",
+    "artist": "@kurope.bsky.social",
+    "tags": [
+      "Chibi"
+    ],
+    "href": "https://www.patreon.com/posts/songkran-chibi-156983444",
+    "published": "2026-04-30",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/songkran_chibi.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/songkran_chibi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/songkran_chibi.webp",
+    "id": "cf50ab4ed4feb5a7a87b3c824308629a973ff9adc3cf77c2ad55eab9",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/songkran_chibi.webp"
+  },
+  {
+    "title": "阿綪 Q12 YCH",
+    "artist": "@AQianr",
+    "tags": [
+      "Illustration"
+    ],
+    "href": "",
+    "published": "2026-04-27",
+    "aspectRatio": 1.7777777777777777,
+    "rating": "general",
+    "characters": [
+      "Alcor",
+      "Vaun"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/%E9%98%BF%E7%B6%AA_q_12_ych.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/%E9%98%BF%E7%B6%AA_q_12_ych.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/%E9%98%BF%E7%B6%AA_q_12_ych.webp",
+    "id": "1f2854615f390d9ee84953537be49327fd94d8317757745a953d360e",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/%E9%98%BF%E7%B6%AA_q_12_ych.webp"
   }
 ]
