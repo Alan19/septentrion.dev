@@ -8955,6 +8955,25 @@
       "Alcor",
       "Vaun"
     ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/%E9%98%BF%E7%B6%AA_q_12_ych_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/%E9%98%BF%E7%B6%AA_q_12_ych_1.webp",
+    "id": "5b554b1f40cb3a87baec5dc3bcf009a749e4be610126e8eefa6ce308",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/%E9%98%BF%E7%B6%AA_q_12_ych_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/%E9%98%BF%E7%B6%AA_q_12_ych_1.webp"
+  },
+  {
+    "tags": [
+      "Illustration"
+    ],
+    "href": "",
+    "aspectRatio": 1.7777777777777777,
+    "parent": "阿綪 Q12 YCH",
+    "rating": "general",
+    "characters": [
+      "Alcor",
+      "Vaun"
+    ],
+    "altType": "extra",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/%E9%98%BF%E7%B6%AA_q_12_ych.png",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/%E9%98%BF%E7%B6%AA_q_12_ych.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/%E9%98%BF%E7%B6%AA_q_12_ych.webp",
