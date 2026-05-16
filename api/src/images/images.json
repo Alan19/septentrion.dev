@@ -8979,5 +8979,26 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/%E9%98%BF%E7%B6%AA_q_12_ych.webp",
     "id": "1f2854615f390d9ee84953537be49327fd94d8317757745a953d360e",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/%E9%98%BF%E7%B6%AA_q_12_ych.webp"
+  },
+  {
+    "title": "Beast Rayan Reference θ",
+    "artist": "@zhai94036292",
+    "tags": [
+      "Bodysuit",
+      "Full Body",
+      "Character Reference"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3mlueemj46k23",
+    "published": "2026-05-14",
+    "aspectRatio": 2.666935483870968,
+    "rating": "general",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/beast_rayan_reference_%CE%B8.jpeg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/beast_rayan_reference_%CE%B8.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/beast_rayan_reference_%CE%B8.webp",
+    "id": "50708d850abc35679af47c0c50612bf3d927919dcd2f544f50f9ab86",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/beast_rayan_reference_%CE%B8.webp"
   }
 ]
