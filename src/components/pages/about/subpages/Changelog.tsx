@@ -15,6 +15,13 @@ export function Changelog() {
   - Added Astral Wave into
   - Mobile friendly navigation drawer
 - Start maintaining a changelog`
+        },
+        {
+            version: "2.1.1",
+            date: new Date(2025, 4, 22),
+            // language=Markdown
+            description: `- Add minimum width to analytics heatmap to display better on mobile
+- Fix tooltip rendering`
         }
     ]
     return <Container className={"fade"}>

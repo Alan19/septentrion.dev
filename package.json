@@ -1,7 +1,7 @@
 {
   "name": "septentrion-dev",
   "private": true,
-  "version": "2.1.0",
+  "version": "2.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -20,7 +20,7 @@
     "@fortawesome/react-fontawesome": "^3.0.2",
     "@types/lodash": "^4.17.23",
     "@types/react-calendar-heatmap": "^1.9.0",
-    "axios": "^1.13.5",
+    "axios": "^1.16.1",
     "beercss": "^4.0.15",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",

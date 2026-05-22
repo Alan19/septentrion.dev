@@ -24,3 +24,7 @@
 .react-calendar-heatmap-weekday-labels {
     transform: translate(6px, 14px);
 }
+
+.react-calendar-heatmap {
+    min-width: 800px;
+}
