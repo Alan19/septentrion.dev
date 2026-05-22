@@ -8664,7 +8664,7 @@
       "Eltanin Form"
     ],
     "href": "",
-    "published": "2026-01-29",
+    "published": "2026-05-22",
     "aspectRatio": 0.7422927267285244,
     "rating": "sensitive",
     "characters": [
@@ -9000,5 +9000,64 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/beast_rayan_reference_%CE%B8.webp",
     "id": "50708d850abc35679af47c0c50612bf3d927919dcd2f544f50f9ab86",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/beast_rayan_reference_%CE%B8.webp"
+  },
+  {
+    "title": "World Trigger BBF",
+    "artist": "@F_Lynn21",
+    "tags": [
+      "Aldhibah Form"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3mmcz5hvnyc2r",
+    "published": "2026-05-20",
+    "aspectRatio": 0.6515323496027242,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/world_trigger_bbf.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/world_trigger_bbf.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/world_trigger_bbf.webp",
+    "id": "ab9a773283b8e02e0d7f83e8fde832afde3c2365a8b4f55189553049",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/world_trigger_bbf.webp"
+  },
+  {
+    "title": "Valentines 2026: Rayan + Alcor",
+    "artist": "@fluxdestiny.bsky.social",
+    "tags": [
+      "Aldhibah Form"
+    ],
+    "href": "",
+    "published": "2026-05-18",
+    "aspectRatio": 1,
+    "rating": "general",
+    "characters": [
+      "Alcor",
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/valentines_2026_rayan_alcor.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/valentines_2026_rayan_alcor.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/valentines_2026_rayan_alcor.webp",
+    "id": "d8b914ab4e1b5c7db190c9cbca2298d5a8f1763115cb9b76750e10ae",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/valentines_2026_rayan_alcor.webp"
+  },
+  {
+    "title": "Rayan Pokenavi",
+    "artist": "@kamen_drawer",
+    "tags": [
+      "Superhero",
+      "Character Reference"
+    ],
+    "href": "https://vgen.co/kamendrawer/portfolio/showcase/custom-service-443/d47d9c30-0563-4814-860e-df4343cd8a14",
+    "published": "2026-05-22",
+    "aspectRatio": 1.9916666666666667,
+    "rating": "general",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_pokenavi.jpeg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_pokenavi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_pokenavi.webp",
+    "id": "f5073344f72d174000b13b7dc6aaf0adb82fabeecf8f8142f28e736f",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_pokenavi.webp"
   }
 ]
