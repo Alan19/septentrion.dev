@@ -8910,7 +8910,7 @@
       "Hoodie"
     ],
     "href": "",
-    "published": "2026-04-22",
+    "published": "2026-05-23",
     "aspectRatio": 0.7069555302166477,
     "rating": "sensitive",
     "characters": [
@@ -9059,5 +9059,27 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_pokenavi.webp",
     "id": "f5073344f72d174000b13b7dc6aaf0adb82fabeecf8f8142f28e736f",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_pokenavi.webp"
+  },
+  {
+    "title": "Hosh-i Collage Page",
+    "artist": "@kiniuu_",
+    "tags": [
+      "Bodysuit",
+      "Thuban Form",
+      "Hoodie",
+      "Sketchpage"
+    ],
+    "href": "https://vgen.co/Hosh-i/portfolio/showcase/faintalcor-s-colllage-page-commission/2fb9f0d7-c8b0-401c-b477-0e2e86685bed",
+    "published": "2026-05-23",
+    "aspectRatio": 0.7142857142857143,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/hosh_i_collage_page.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/hosh_i_collage_page.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/hosh_i_collage_page.webp",
+    "id": "fb8bd7087512e41cdf4ec9d21154698b9ffb17c7b05f43422a417ee8",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/hosh_i_collage_page.webp"
   }
 ]

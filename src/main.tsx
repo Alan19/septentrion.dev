@@ -4,8 +4,8 @@ import './index.css'
 import App from './App.tsx'
 import "beercss";
 import "material-dynamic-colors";
-import '@fontsource-variable/inter'
 import '@fontsource/monomaniac-one';
+import '@fontsource-variable/outfit/wght.css';
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>

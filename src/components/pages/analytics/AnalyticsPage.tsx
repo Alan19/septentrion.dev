@@ -1,4 +1,4 @@
-import React, {memo, type ReactNode} from "react";
+import React, {memo} from "react";
 import CalendarHeatmap, {type ReactCalendarHeatmapValue} from 'react-calendar-heatmap'
 import 'react-calendar-heatmap/dist/styles.css';
 import {useDocumentTitle} from "usehooks-ts";

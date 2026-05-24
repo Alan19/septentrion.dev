@@ -7,6 +7,9 @@
         "@base-ui-components/react": "^1.0.0-rc.0",
         "@fontsource-variable/inter": "^5.2.8",
         "@fontsource-variable/open-sans": "^5.2.7",
+        "@fontsource-variable/outfit": "^5.2.8",
+        "@fontsource-variable/urbanist": "^5.2.7",
+        "@fontsource/libre-barcode-128-text": "^5.2.8",
         "@fontsource/monomaniac-one": "^5.2.7",
         "@fontsource/open-sans": "^5.2.7",
         "@fortawesome/free-brands-svg-icons": "^7.0.1",
@@ -180,6 +183,12 @@
     "@fontsource-variable/inter": ["@fontsource-variable/inter@5.2.8", "", {}, ""],
 
     "@fontsource-variable/open-sans": ["@fontsource-variable/open-sans@5.2.7", "", {}, ""],
+
+    "@fontsource-variable/outfit": ["@fontsource-variable/outfit@5.2.8", "", {}, "sha512-4oUDCZx/Tcz6HZP423w/niqEH31Gks5IsqHV2ZZz1qKHaVIZdj2f0/S1IK2n8jl6Xo0o3N+3RjNHlV9R73ozQA=="],
+
+    "@fontsource-variable/urbanist": ["@fontsource-variable/urbanist@5.2.7", "", {}, "sha512-OYeUoBQhwm3pbXG5yUxq1omO9H64Dx1eKxldKYOztrf+8GFG1vu3FP/zZpmFOwtgsPj2h6JYHX9VVWopSxvOyQ=="],
+
+    "@fontsource/libre-barcode-128-text": ["@fontsource/libre-barcode-128-text@5.2.8", "", {}, "sha512-7GXGP9wq8R1s7lCtfYPR8sAwJnETKlchbtyIcK7XNcZ4qvgYaHw4M2/jnJhOR2S3tmahSQMs2SvruCsHq9t0vA=="],
 
     "@fontsource/monomaniac-one": ["@fontsource/monomaniac-one@5.2.7", "", {}, "sha512-bCp7zN5cRRR3K5pL20RnZ9M4SfR9bA+yjRGkvBM8LdShQ5hiOotcAbfJLa2JKMY31rlD+O9kZ3jfIj2ie+/yFg=="],
 

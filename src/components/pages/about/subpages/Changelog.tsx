@@ -22,6 +22,13 @@ export function Changelog() {
             // language=Markdown
             description: `- Add minimum width to analytics heatmap to display better on mobile
 - Fix tooltip rendering`
+        },
+        {
+            version: "2.1.2",
+            date: new Date(2025, 4, 24),
+            // language=Markdown
+            description: `- Change font to Outfit
+- Minor spelling fixes`
         }
     ]
     return <Container className={"fade"}>

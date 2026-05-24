@@ -10,7 +10,7 @@ export function AboutMe() {
 
 Hello, I'm Alan, a software engineer living in NYC! This is my personal website for archiving my commissioned artworks and documenting the lore of my original characters and the world they live in! I also use this as a way to learn more about web development, especially in regard to CSS and CI/CD! I also play _Pokémon GO_, _Maplestory_, _Cardfight!! Vanguard_, and _Pathfinder 2nd Edition_ in my spare time. I hope you have a nice time looking at the artwork and at my very amateurish worldbuilding!
 
-If you're curious about how this website is made, the front end uses ReactJS and Typescript, using BeerCSS to implement the Material You design language. For uploading and compressing images, I use an Express backend, and the compressed images are stored on an S3 bucket at multiple file sizes to reduce the amount people have to download on low download speeds or mobile data. This website is updated on every commit to the main branch using a Github action that builds the
+If you're curious about how this website is made, the front end uses ReactJS and TypeScript, using BeerCSS to implement the Material You design language. For uploading and compressing images, I use an Express backend, and the compressed images are stored on an S3 bucket at multiple file sizes to reduce the amount people have to download on low download speeds or mobile data. This website is updated on every commit to the main branch using a Github action that builds the
   website and deploys it to this URL through GitHub pages!
 `;
     return <Container className={"fade"}>
