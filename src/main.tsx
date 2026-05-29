@@ -7,7 +7,7 @@ import "material-dynamic-colors";
 import '@fontsource/monomaniac-one';
 import '@fontsource-variable/outfit/wght.css';
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById('root')).render(
     <StrictMode>
         <App/>
     </StrictMode>,

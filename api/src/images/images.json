@@ -9081,5 +9081,24 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/hosh_i_collage_page.webp",
     "id": "fb8bd7087512e41cdf4ec9d21154698b9ffb17c7b05f43422a417ee8",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/hosh_i_collage_page.webp"
+  },
+  {
+    "title": "Tribal-Space Fantasy Chibi",
+    "artist": "@kurope.bsky.social",
+    "tags": [
+      "Chibi"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3mmyudrf3fc2u",
+    "published": "2026-05-29",
+    "aspectRatio": 0.705978134449872,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/tribal_space_fantasy_chibi.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/tribal_space_fantasy_chibi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/tribal_space_fantasy_chibi.webp",
+    "id": "1257c25967e3b18b515c0e3427d8c7a7e16cf3b5f3bdb011c867ac32",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/tribal_space_fantasy_chibi.webp"
   }
 ]
