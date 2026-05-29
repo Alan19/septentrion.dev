@@ -17,9 +17,9 @@ jobs:
       CI: false
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 24
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
 
-      - name: Setup Node
+      - name: Setup Bun
         uses: oven-sh/setup-bun@v2
 
       - name: Cache dependencies
