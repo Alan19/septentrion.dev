@@ -9100,5 +9100,67 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/tribal_space_fantasy_chibi.webp",
     "id": "1257c25967e3b18b515c0e3427d8c7a7e16cf3b5f3bdb011c867ac32",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/tribal_space_fantasy_chibi.webp"
+  },
+  {
+    "title": "Alcor Workout Combination Page",
+    "artist": "@NiNO_Record",
+    "tags": [
+      "Sketchpage",
+      "Techwear",
+      "Hoodie",
+      "Aldhibah Form",
+      "Bodysuit"
+    ],
+    "href": "https://x.com/NiNO_Record/status/2060543568348139543",
+    "published": "2026-05-29",
+    "aspectRatio": 1.462681409813407,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_workout_combination_page.jpeg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_workout_combination_page.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_workout_combination_page.webp",
+    "id": "520705d11e34a465e7be9874b1f5709c4ecf901edb0407c4ff22bc98",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_workout_combination_page.webp"
+  },
+  {
+    "title": "Soma Skeb-styled Sketch",
+    "artist": "@deanisketchbook.bsky.social",
+    "tags": [
+      "Full Body"
+    ],
+    "href": "",
+    "published": "2026-05-31",
+    "aspectRatio": 0.7,
+    "rating": "mainstream",
+    "characters": [
+      "Soma"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/soma_skeb_styled_sketch.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/soma_skeb_styled_sketch.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/soma_skeb_styled_sketch.webp",
+    "id": "d27d7a956047bca6148a984f14166277e38450da5278b1c041fcaef6",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/soma_skeb_styled_sketch.webp"
+  },
+  {
+    "title": "Band Boys",
+    "artist": "@axyusagi.bsky.social",
+    "tags": [
+      "Sketch",
+      "Full Body"
+    ],
+    "href": "",
+    "published": "2026-06-04",
+    "aspectRatio": 0.607583774250441,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/band_boys.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/band_boys.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/band_boys.webp",
+    "id": "39642371433e3aef060529d55896904ac54df9acd8f21cae5c26c267",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/band_boys.webp"
   }
 ]
