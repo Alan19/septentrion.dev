@@ -9150,7 +9150,7 @@
       "Sketch",
       "Full Body"
     ],
-    "href": "",
+    "href": "https://bsky.app/profile/axyusagi.bsky.social/post/3mnivm2tqrk2j",
     "published": "2026-06-04",
     "aspectRatio": 0.607583774250441,
     "rating": "general",
@@ -9162,5 +9162,46 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/band_boys.webp",
     "id": "39642371433e3aef060529d55896904ac54df9acd8f21cae5c26c267",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/band_boys.webp"
+  },
+  {
+    "title": "Alcor and Francie's Summer Vacation",
+    "artist": "@BleuATIGER",
+    "tags": [
+      "Eltanin Form"
+    ],
+    "href": "",
+    "published": "2026-06-10",
+    "aspectRatio": 1,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor",
+      "Francie"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_and_francies_summer_vacation.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_and_francies_summer_vacation.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_and_francies_summer_vacation.webp",
+    "id": "ba9f9e464ba60fe75e54907a06570529dff2a2aa2a6ec5afdfd831b7",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_and_francies_summer_vacation.webp"
+  },
+  {
+    "title": "Human Alcor Reference Sheet",
+    "artist": "@SJDYKBV",
+    "tags": [
+      "Techwear",
+      "Aldhibah Form",
+      "Character Reference"
+    ],
+    "href": "",
+    "published": "2026-06-10",
+    "aspectRatio": 2.3368924889543448,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/human_alcor_reference_sheet.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/human_alcor_reference_sheet.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/human_alcor_reference_sheet.webp",
+    "id": "ed643a1e6dd9f90a9615b0b17f0cadb9da1ee7d4d80ea95846b8f3a3",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/human_alcor_reference_sheet.webp"
   }
 ]
