@@ -78,7 +78,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
         formData.append("href", data.href);
         formData.append("characters", data.characters.join(", "));
         formData.append("rating", data.rating);
-        formData.append("isHidden", JSON.stringify(data.hidden));
+        formData.append("isHidden", JSON.stringify(data.hidden || isParentHidden));
         if (isParent(data)) {
             formData.append("title", data.title);
             formData.append("artist", data.artist);
