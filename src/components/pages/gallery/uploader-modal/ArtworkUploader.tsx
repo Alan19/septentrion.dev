@@ -46,13 +46,16 @@ type ParentProps = {
 
 export function ArtworkUploader(props: AltProps | ParentProps) {
     const {images, isImageHidden} = useTagHooks();
+    const {variant} = props;
+    const isParentHidden = variant === "alt" && isImageHidden(props.parent);
+
     const {register, handleSubmit, control, watch, reset, formState: {isSubmitting}} = useForm<ImageValues>({
         defaultValues: {
             tags: props.variant === "alt" ? props.parent.tags as ArtTag[] : [],
             characters: props.variant === "alt" ? props.parent.characters : ["Alcor"],
             href: props.variant === "alt" ? props.parent.href : "",
             published: dayjs().format("YYYY-MM-DD"),
-            hidden: false
+            hidden: isParentHidden
         },
     });
 
@@ -63,6 +66,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
     const watchArtist = watch("artist");
     const watchHidden = watch("hidden");
     const isCollision = images.map(i => prepareFileName(i.title)).includes(prepareFileName(watchTitle));
+
 
     const onSubmit = async (data: ImageValues) => {
         const file = data.file[0];
@@ -78,7 +82,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
         formData.append("href", data.href);
         formData.append("characters", data.characters.join(", "));
         formData.append("rating", data.rating);
-        formData.append("isHidden", JSON.stringify(data.hidden || isParentHidden));
+        formData.append("isHidden", JSON.stringify(data.hidden));
         if (isParent(data)) {
             formData.append("title", data.title);
             formData.append("artist", data.artist);
@@ -99,10 +103,8 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
         }
     };
 
-    const {variant} = props;
 
     const isParent = variant === "parent";
-    const isParentHidden = variant === "alt" && isImageHidden(props.parent);
     return <>
         <button popoverTarget={'uploader'} className="extend square round secondary" style={{position: "fixed", bottom: "2rem", right: "2rem", display: "flex"}}>
             <i>upload</i> <span>Upload</span>
@@ -112,6 +114,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
             <p>Enter a list of tags, the handle of the artist, and the file name to automatically compress and upload this file!</p>
             <form onSubmit={handleSubmit(onSubmit)} style={{display: "flex", flexDirection: "column", gap: "1rem"}} className="bottom-margin fade">
                 {/*TODO Combine Artwork Title and File Fields*/}
+
                 <BeerCSSTextField type="file" label="File" inputPrefix={<i>attach_file</i>} {...register("file", {required: true})} />
                 {isParent && <>
                     <BeerCSSTextField type="text" label="Artwork Title" inputPrefix={<i>title</i>} errorText={isCollision && "The title already exists! This may overwrite that artwork entry!"} {...register("title", {required: true})}/>
@@ -148,7 +151,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
                     <nav>
                         {(["mainstream", "general", "sensitive", "mature"] as const).map(r => <BeerCSSRadio key={r} label={_.capitalize(r)} {...register("rating", {required: true})} value={r}/>)}
                     </nav>
-                    <BeerCSSCheckbox {...register("hidden", {disabled: isParentHidden})} checked={isParentHidden ? true : watchHidden} label="Hidden" className="top-margin"/>
+                    <BeerCSSCheckbox {...register("hidden")} disabled={isParentHidden} label="Hidden" className="top-margin"/>
                 </fieldset>
                 <div className={"right-align"}>
                     <button type="submit" className="primary" disabled={isSubmitting || !watchFile || isParent && (!watchArtist || !watchTitle) || !watchRating}>
