@@ -9223,5 +9223,45 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_decompression.webp",
     "id": "effb82399d99973c4127bea83f67ad896c4539d1940fd87cf1e829e4",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_decompression.webp"
+  },
+  {
+    "title": "Rayan Hair Redesign Test",
+    "artist": "@tarorichi_",
+    "tags": [
+      "Full Body"
+    ],
+    "href": "",
+    "published": "2026-06-21",
+    "aspectRatio": 0.7315035799522673,
+    "rating": "sensitive",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_hair_redesign_test.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_hair_redesign_test.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_hair_redesign_test.webp",
+    "id": "0da49bf6245350b1a5c2bec32f69f3c1afaa9cc5386e7e53b47cb098",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_hair_redesign_test.webp"
+  },
+  {
+    "tags": [
+      "Full Body"
+    ],
+    "href": "",
+    "aspectRatio": 0.7315035799522673,
+    "parent": "Rayan Hair Redesign Test",
+    "rating": "sensitive",
+    "characters": [
+      "Rayan"
+    ],
+    "altType": {
+      "pageNumber": "",
+      "altNumber": "1"
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_hair_redesign_test_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_hair_redesign_test_1.webp",
+    "id": "82ba8e65a33ec639dcfd8ade9d5ea436b6a3f7fed9df3029ef3a5895",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_hair_redesign_test_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_hair_redesign_test_1.webp"
   }
 ]

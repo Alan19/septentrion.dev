@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import React from "react";
 import {useTagHooks} from "../../../../hooks/useTagHooks.ts";
-import {artists, ArtTag, Rating} from "../../../../../api/src/images/TagUtils.ts";
+import {ArtTag, Rating} from "../../../../../api/src/images/TagUtils.ts";
 import {BeerCssCombobox} from "../../../ui/BeerCssCombobox.tsx";
 import {BeerCSSRadio} from "../../../ui/BeerCSSRadio.tsx";
 import {BeerCSSTextField} from "../../../ui/BeerCSSTextField.tsx";
@@ -12,6 +12,8 @@ import {toast, ToastContainer} from "react-toastify";
 import {Controller, useForm} from "react-hook-form";
 import type {ImageInformation} from "../../../../../api/src/images/ImageInformation.ts";
 import _ from "lodash";
+import ArtistAutocomplete from "../../../ui/autocomplete/ArtistAutocomplete.tsx";
+import ExampleMultipleCombobox from "../../../ui/combobox/TagCombobox.tsx";
 
 interface BaseImageValues {
     file: FileList;
@@ -33,7 +35,7 @@ interface AltImageValues extends BaseImageValues {
     complexInfo?: { pageNumber?: number, altNumber?: number }
 }
 
-type ImageValues = ParentImageValues | AltImageValues;
+export type ImageValues = ParentImageValues | AltImageValues;
 
 type AltProps = {
     variant: "alt",
@@ -64,9 +66,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
     const watchRating = watch("rating");
     const watchAltType = watch("altType");
     const watchArtist = watch("artist");
-    const watchHidden = watch("hidden");
     const isCollision = images.map(i => prepareFileName(i.title)).includes(prepareFileName(watchTitle));
-
 
     const onSubmit = async (data: ImageValues) => {
         const file = data.file[0];
@@ -106,30 +106,22 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
 
     const isParent = variant === "parent";
     return <>
-        <button popoverTarget={'uploader'} className="extend square round secondary" style={{position: "fixed", bottom: "2rem", right: "2rem", display: "flex"}}>
+        <button data-ui={'#uploader'} className="extend square round secondary" style={{position: "fixed", bottom: "2rem", right: "2rem", display: "flex"}}>
             <i>upload</i> <span>Upload</span>
         </button>
-        <dialog popover={'auto'} style={{maxHeight: "90vh", maxWidth: 600}} id={'uploader'} className={"large-padding"}>
+        <dialog style={{maxHeight: "90vh", maxWidth: 600}} id={'uploader'} className={"large-padding"}>
             <h3>Upload New Image</h3>
             <p>Enter a list of tags, the handle of the artist, and the file name to automatically compress and upload this file!</p>
             <form onSubmit={handleSubmit(onSubmit)} style={{display: "flex", flexDirection: "column", gap: "1rem"}} className="bottom-margin fade">
                 {/*TODO Combine Artwork Title and File Fields*/}
-
                 <BeerCSSTextField type="file" label="File" inputPrefix={<i>attach_file</i>} {...register("file", {required: true})} />
                 {isParent && <>
                     <BeerCSSTextField type="text" label="Artwork Title" inputPrefix={<i>title</i>} errorText={isCollision && "The title already exists! This may overwrite that artwork entry!"} {...register("title", {required: true})}/>
-                    <Controller name="artist" control={control} rules={{required: true}} render={({field}) => <BeerCssCombobox closeOnChangedValue
-                                                                                                                               isCreatable
-                                                                                                                               renderText
-                                                                                                                               placeholder="Artist Handle"
-                                                                                                                               value={field.value ? [{label: field.value, value: field.value}] : []}
-                                                                                                                               options={artists.map(a => ({label: a, value: a}))}
-                                                                                                                               onChange={opts => field.onChange(opts[1]?.value ?? opts[0]?.value ?? "")}
-                    />}/>
+                    <ArtistAutocomplete control={control} value={watchArtist} />
                     <BeerCSSTextField type="date" label="Published Date" {...register("published", {required: true})} />
                 </>}
 
-                <Controller name="tags" control={control} render={({field}) => <BeerCssCombobox placeholder="Tags" value={field.value.map(v => ({label: v, value: v}))} options={Object.values(ArtTag).map(v => ({label: v, value: v}))} onChange={opts => field.onChange(opts.map(o => o.value))}/>}/>
+                <ExampleMultipleCombobox control={control} selectedTags={watch("tags")} />
                 <BeerCSSTextField type="text" label="URL" inputPrefix={<i>link</i>} {...register("href")} />
                 <Controller name="characters" control={control} render={({field}) => <BeerCssCombobox isCreatable placeholder="Characters" value={field.value.map(v => ({label: v, value: v}))} options={Array.from(new Set(images.flatMap(i => i.characters).concat(field.value))).map(v => ({label: v, value: v}))} onChange={opts => field.onChange(opts.map(o => o.value))}/>}/>
 
@@ -139,12 +131,16 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
                         {(["extra", "cropped", "recolor"] as const).map(r => <BeerCSSRadio key={r} label={_.capitalize(r)} {...register("altType", {required: true})} value={r}/>)}
                         <BeerCSSRadio label={"Complex"} {...register("altType", {required: true})} value={"complex"}/>
                     </nav>
-                    <nav>
+                    <div className={"grid"} style={{width: "100%"}}>
                         {watchAltType === "complex" && <>
-                            <BeerCSSTextField label={"Page"} type={"number"} {...register("complexInfo.pageNumber")} />
-                            <BeerCSSTextField label={"Alt"} type={"number"} {...register("complexInfo.altNumber")} />
+                            <div className={"s12 m6"}>
+                                <BeerCSSTextField label={"Page"} type={"number"} {...register("complexInfo.pageNumber")} />
+                            </div>
+                            <div className={"s12 m6"}>
+                                <BeerCSSTextField label={"Alt"} type={"number"} {...register("complexInfo.altNumber")} />
+                            </div>
                         </>}
-                    </nav>
+                    </div>
                 </fieldset>}
                 <fieldset className="no-margin">
                     <legend>Rating</legend>
