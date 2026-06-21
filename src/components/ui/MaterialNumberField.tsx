@@ -1,4 +1,4 @@
-import {NumberField} from "@base-ui-components/react/number-field";
+import { NumberField } from '@base-ui/react/number-field';
 import * as React from "react";
 import {clsx} from "clsx";
 import type {CSSProperties, ReactNode} from "react";
