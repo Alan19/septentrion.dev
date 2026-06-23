@@ -3,7 +3,7 @@ import * as React from "react";
 import {clsx} from "clsx";
 import type {CSSProperties, ReactNode} from "react";
 
-export function MaterialNumberField(props: { value: number, onChange: (newVal: number) => unknown, label: string, className?: string, style?: CSSProperties, min?: number, max?: number, inputPrefix?: ReactNode, helperText?: string, endAdornment?: string }) {
+export function MaterialNumberField(props: Readonly<{ value: number, onChange: (newVal: number) => unknown, label: string, className?: string, style?: CSSProperties, min?: number, max?: number, inputPrefix?: ReactNode, helperText?: string, endAdornment?: string }>) {
     const id = React.useId();
     return <NumberField.Root value={props.value} id={id} min={props.min ?? 0} max={props.max} style={{display: "flex", alignItems: "center", ...props.style}} className={clsx("top-margin", props.className)}>
         <NumberField.Decrement className={"transparent square border ripple"} style={{marginLeft: 0}} onClick={() => props.onChange(props.value - 1)}>

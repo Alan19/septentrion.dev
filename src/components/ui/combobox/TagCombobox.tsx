@@ -40,9 +40,9 @@ function TagCombobox({field, selectedTags}: Readonly<{ field: ControllerRenderPr
                     </Combobox.Empty>
                     <Combobox.List>
                         {(tag: string) => <Combobox.Item key={tag} className={"wave"} value={tag} onChange={() => field.onChange(_.xor(selectedTags, [tag]))} style={{cursor: "pointer"}}>
-                            <label className={"checkbox small-padding"} style={{display: "flex", alignItems: "center"}}>
+                            <label className={"checkbox search-target"} style={{display: "flex", alignItems: "center"}}>
                                 <input readOnly type="checkbox" style={{marginLeft: '.5rem'}} checked={selectedTags.includes(tag as ArtTag)}/>
-                                <span className={clsx(styles.ItemText)} style={{fontSize: 14}}>{tag}</span>
+                                <span className={clsx(styles.ItemText)}>{tag}</span>
                             </label>
                         </Combobox.Item>}
                     </Combobox.List>

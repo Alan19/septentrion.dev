@@ -14,6 +14,7 @@ import type {ImageInformation} from "../../../../../api/src/images/ImageInformat
 import _ from "lodash";
 import ArtistAutocomplete from "../../../ui/autocomplete/ArtistAutocomplete.tsx";
 import ExampleMultipleCombobox from "../../../ui/combobox/TagCombobox.tsx";
+import {CharacterCombobox} from "../../../ui/character-combobox/CharacterCombobox.tsx";
 
 interface BaseImageValues {
     file: FileList;
@@ -123,8 +124,7 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
 
                 <ExampleMultipleCombobox control={control} selectedTags={watch("tags")} />
                 <BeerCSSTextField type="text" label="URL" inputPrefix={<i>link</i>} {...register("href")} />
-                <Controller name="characters" control={control} render={({field}) => <BeerCssCombobox isCreatable placeholder="Characters" value={field.value.map(v => ({label: v, value: v}))} options={Array.from(new Set(images.flatMap(i => i.characters).concat(field.value))).map(v => ({label: v, value: v}))} onChange={opts => field.onChange(opts.map(o => o.value))}/>}/>
-
+                <CharacterCombobox field={control} />
                 {variant === "alt" && <fieldset className={"no-margin"}>
                     <legend>Alt Type</legend>
                     <nav>
