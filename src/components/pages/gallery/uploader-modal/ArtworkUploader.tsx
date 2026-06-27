@@ -1,20 +1,18 @@
 import dayjs from "dayjs";
 import React from "react";
 import {useTagHooks} from "../../../../hooks/useTagHooks.ts";
-import {ArtTag, Rating} from "../../../../../api/src/images/TagUtils.ts";
-import {BeerCssCombobox} from "../../../ui/BeerCssCombobox.tsx";
+import {ArtTag, characters, Rating} from "../../../../../api/src/images/TagUtils.ts";
 import {BeerCSSRadio} from "../../../ui/BeerCSSRadio.tsx";
 import {BeerCSSTextField} from "../../../ui/BeerCSSTextField.tsx";
 import {BeerCSSCheckbox} from "../../../ui/BeerCSSCheckbox.tsx";
 import axios from "axios";
 import {prepareFileName} from "../../../../../api/src/utils/utils.ts";
 import {toast, ToastContainer} from "react-toastify";
-import {Controller, useForm} from "react-hook-form";
+import {useForm} from "react-hook-form";
 import type {ImageInformation} from "../../../../../api/src/images/ImageInformation.ts";
 import _ from "lodash";
 import ArtistAutocomplete from "../../../ui/autocomplete/ArtistAutocomplete.tsx";
-import ExampleMultipleCombobox from "../../../ui/combobox/TagCombobox.tsx";
-import {CharacterCombobox} from "../../../ui/character-combobox/CharacterCombobox.tsx";
+import {MaterialCombobox} from "../../../ui/material-you-combobox/MaterialCombobox.tsx";
 
 interface BaseImageValues {
     file: FileList;
@@ -122,9 +120,9 @@ export function ArtworkUploader(props: AltProps | ParentProps) {
                     <BeerCSSTextField type="date" label="Published Date" {...register("published", {required: true})} />
                 </>}
 
-                <ExampleMultipleCombobox control={control} selectedTags={watch("tags")} />
+                <MaterialCombobox field={control} creatable={false} name={"tags"} items={Object.values(ArtTag)} placeholder={"Tags"} prefixIcon={"filter"} />
                 <BeerCSSTextField type="text" label="URL" inputPrefix={<i>link</i>} {...register("href")} />
-                <CharacterCombobox field={control} />
+                <MaterialCombobox field={control} creatable={true} name={"characters"} items={characters} placeholder={"Characters"} prefixIcon={"person_add"} />
                 {variant === "alt" && <fieldset className={"no-margin"}>
                     <legend>Alt Type</legend>
                     <nav>

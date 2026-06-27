@@ -1,5 +1,0 @@
-.Popup {
-    width: var(--anchor-width);
-    max-width: var(--available-width);
-    max-height: min(var(--available-height), 24.5rem);
-}

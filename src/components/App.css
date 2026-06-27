@@ -129,3 +129,8 @@ body:has(:popover-open) {
     cursor: pointer;
     height: 44px;
 }
+
+.search-target[data-highlighted] {
+    background-color: var(--surface-variant) !important;
+    color: var(--on-surface-variant) !important;
+}
