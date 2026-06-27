@@ -1,19 +1,43 @@
-# septentrion.dev
+# Astro Starter Kit: Minimal
 
-This is the repository for Alcor's personal website! To run this locally, you can follow the following steps:
-
-1. Clone this repository.
-2. Install the npm dependencies in both the root folder and the `api` folder using `npm i`.
-3. Populate the `.env` file in the api folder with the following keys:
-
-```dotenv
-AWS_ACCESS_KEY_ID='Your AWS Access Key'
-AWS_SECRET_ACCESS_KEY='The secret key for the S3 bucket that contains your images 
-BUCKET_NAME='The name of the S3 bucket that contains your images'
-PORT=9000
-NODE_ENV=development
-REGION='The region your AWS bucket is located'
+```sh
+npm create astro@latest -- --template minimal
 ```
 
-4. Run `npm run dev` on both `package.json` and `api/package.json`.
-5. Run `git update-index --skip-worktree` on the `hidden.json` file so that changes to the hidden file doesn't get reflected in Git.
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
+
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
