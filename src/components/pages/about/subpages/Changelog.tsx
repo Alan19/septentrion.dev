@@ -29,6 +29,12 @@ export function Changelog() {
             // language=Markdown
             description: `- Change font to Outfit
 - Minor spelling fixes`
+        },
+        {
+            version: "2.1.3",
+            date: new Date(2026, 5, 27),
+            // language=Markdown
+            description: `- Use native combobox implementation`
         }
     ]
     return <Container className={"fade"}>
