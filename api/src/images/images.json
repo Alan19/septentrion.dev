@@ -1606,8 +1606,7 @@
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/autumn_sundae.png",
     "title": "Autumn Sundae",
     "artist": "@xYazz77",
-    "tags": [
-    ],
+    "tags": [],
     "href": "https://x.com/FaintAlcor/status/1568355665919492096?s=20",
     "published": "2022-09-09",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/autumn_sundae.webp",
@@ -4214,8 +4213,7 @@
     "aspectRatio": 1.3153586904188734,
     "parent": "Alcor's Logos",
     "rating": "mainstream",
-    "characters": [
-    ],
+    "characters": [],
     "altType": "cropped",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_logos_1.png",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_logos_1.webp",
@@ -4229,8 +4227,7 @@
     "aspectRatio": 1.333984375,
     "parent": "Alcor's Logos",
     "rating": "mainstream",
-    "characters": [
-    ],
+    "characters": [],
     "altType": "cropped",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_logos_2.png",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_logos_2.webp",
@@ -8314,8 +8311,7 @@
     "aspectRatio": 1.7777777777777777,
     "parent": "Alcor's Street (Astral Wave Worldbuilding)",
     "rating": "mainstream",
-    "characters": [
-    ],
+    "characters": [],
     "altType": "recolor",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_street_astral_wave_worldbuilding_1.png",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_street_astral_wave_worldbuilding_1.webp",
@@ -8329,8 +8325,7 @@
     "aspectRatio": 1.7777777777777777,
     "parent": "Alcor's Street (Astral Wave Worldbuilding)",
     "rating": "mainstream",
-    "characters": [
-    ],
+    "characters": [],
     "altType": "extra",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcors_street_astral_wave_worldbuilding_2.png",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcors_street_astral_wave_worldbuilding_2.webp",
@@ -9232,11 +9227,11 @@
     "characters": [
       "Rayan"
     ],
-    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_hair_redesign_test.png",
-    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_hair_redesign_test.webp",
-    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_hair_redesign_test.webp",
-    "id": "0da49bf6245350b1a5c2bec32f69f3c1afaa9cc5386e7e53b47cb098",
-    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_hair_redesign_test.webp"
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_hair_redesign_test_3.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_hair_redesign_test_3.webp",
+    "id": "377f363eda0c2b9e2e8f1b08ceadc0c2f347032a77df4d8df0b9c244",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_hair_redesign_test_3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_hair_redesign_test_3.webp"
   },
   {
     "tags": [
@@ -9258,5 +9253,67 @@
     "id": "82ba8e65a33ec639dcfd8ade9d5ea436b6a3f7fed9df3029ef3a5895",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_hair_redesign_test_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_hair_redesign_test_1.webp"
+  },
+  {
+    "title": "Alcor + Rinsei Commission",
+    "artist": "@RSN_07",
+    "tags": [
+      "Full Body",
+      "Estival Checker"
+    ],
+    "href": "https://x.com/RSN_07/status/2069935209945178512",
+    "published": "2026-06-24",
+    "aspectRatio": 0.7876862936721232,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor",
+      "Rinsei"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_rinsei_commission.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_rinsei_commission.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_rinsei_commission.webp",
+    "id": "9cee3abb92417ea0db824c4dbf12e84d29145987335d7188412daa20",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_rinsei_commission.webp"
+  },
+  {
+    "title": "Rayan Hero Suit (by Dooyong)",
+    "artist": "@dooyong_9n",
+    "tags": [
+      "Superhero",
+      "Full Body"
+    ],
+    "href": "https://x.com/dooyong_9n/status/2070661699984908539",
+    "published": "2026-06-26",
+    "aspectRatio": 0.635605586825099,
+    "rating": "sensitive",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_hero_suit_by_dooyong.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_hero_suit_by_dooyong.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_hero_suit_by_dooyong.webp",
+    "id": "c4007e601eb4c68790440b46228ce915b856d5c8237bc0c14d73c11f",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_hero_suit_by_dooyong.webp"
+  },
+  {
+    "tags": [
+      "Full Body"
+    ],
+    "href": "",
+    "aspectRatio": 0.7315035799522673,
+    "parent": "Rayan Hair Redesign Test",
+    "rating": "sensitive",
+    "characters": [
+      "Rayan"
+    ],
+    "altType": {
+      "pageNumber": "",
+      "altNumber": "3"
+    },
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_hair_redesign_test.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_hair_redesign_test.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_hair_redesign_test.webp",
+    "id": "0da49bf6245350b1a5c2bec32f69f3c1afaa9cc5386e7e53b47cb098",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_hair_redesign_test.webp"
   }
 ]
