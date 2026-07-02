@@ -9220,8 +9220,8 @@
     "tags": [
       "Full Body"
     ],
-    "href": "",
-    "published": "2026-06-21",
+    "href": "https://x.com/tarorichi_/status/2072000007826554903",
+    "published": "2026-06-30",
     "aspectRatio": 0.7315035799522673,
     "rating": "sensitive",
     "characters": [
@@ -9315,5 +9315,44 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_hair_redesign_test.webp",
     "id": "0da49bf6245350b1a5c2bec32f69f3c1afaa9cc5386e7e53b47cb098",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_hair_redesign_test.webp"
+  },
+  {
+    "title": "blue waves 🌊\uD83C\uDFC4\u200D♂\uFE0F",
+    "artist": "@greyy_arts",
+    "tags": [
+      "Bodysuit",
+      "Half Body"
+    ],
+    "href": "https://x.com/greyy_arts/status/2072319313084588192",
+    "published": "2026-07-01",
+    "aspectRatio": 1.0359560067681894,
+    "rating": "mainstream",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/blue_waves_%F0%9F%8C%8A_%F0%9F%8F%84%E2%80%8D%E2%99%80%EF%B8%8F.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/blue_waves_%F0%9F%8C%8A_%F0%9F%8F%84%E2%80%8D%E2%99%80%EF%B8%8F.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/blue_waves_%F0%9F%8C%8A_%F0%9F%8F%84%E2%80%8D%E2%99%80%EF%B8%8F.webp",
+    "id": "01fec7087afeefece442c72af35aa72b1af3ecb943f52cb45cad987d",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/blue_waves_%F0%9F%8C%8A_%F0%9F%8F%84%E2%80%8D%E2%99%80%EF%B8%8F.webp"
+  },
+  {
+    "title": "Flux Alcor Sketchpage",
+    "artist": "@Nacht_art",
+    "tags": [
+      "Sketchpage"
+    ],
+    "href": "https://fixupx.com/Nacht_art/status/2072420555471335671",
+    "published": "2026-07-01",
+    "aspectRatio": 1.4,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/flux_alcor_sketchpage.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/flux_alcor_sketchpage.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flux_alcor_sketchpage.webp",
+    "id": "b41b79eae403a0bc2132930eee23420a946c9eb93403428a84242988",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/flux_alcor_sketchpage.webp"
   }
 ]

@@ -18,7 +18,7 @@ export function MaterialCombobox({field, creatable = false, items, name, prefixI
                     {prefixIcon && <i style={{paddingRight: 4}}>{prefixIcon}</i>}
                     <Combobox.Value>
                         {(selectedItems: string[]) => <React.Fragment>
-                            {selectedItems.map(item => <button className={"chip secondary-container no-border"} key={item} onClick={() => onChange(_.xor(value, [item]))}>
+                            {selectedItems.map(item => <button className={"chip"} key={item} onClick={() => onChange(_.xor(value, [item]))}>
                                 <span>{item}</span>
                                 <i>close</i>
                             </button>)}
