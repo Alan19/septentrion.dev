@@ -12,5 +12,9 @@ export default defineConfig({
             name: "Outfit",
             cssVariable: "--font-body",
         }],
-    site: 'https://beta.septentrion.dev'
+    // TODO Change these fields when it is out of beta
+    outDir: './dist/beta',
+    base: '/beta',
+    site: "https://www.septentrion.dev/beta",
+    trailingSlash: "never"
 });
