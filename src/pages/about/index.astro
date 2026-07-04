@@ -1,0 +1,21 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import '../pages.css'
+import {Content} from '../../content/about-me.md'
+import Picture from "astro/components/Picture.astro";
+import about from "../../assets/about.webp"
+import Image from "astro/components/Image.astro";
+---
+<Layout>
+    <div class="container">
+        <div>
+            <div style="display: flex;gap: 1rem; align-items: center" transition:animate="slide">
+                <h1>About Me (IRL)</h1>
+                <div class="shape sided-cookie12 primary-container">
+                    <Image src={about} alt={"image of me and my OC, Alcor, doing gardening on Pokemon berries"} style={{width: "100%", height: "100%"}} />
+                </div>
+            </div>
+            <Content />
+        </div>
+    </div>
+</Layout>

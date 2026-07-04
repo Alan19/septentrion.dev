@@ -1,0 +1,49 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import alcorBadge from "../../assets/badges/Character_Badge_-page001.webp"
+import castorBadge from "../../assets/badges/Character_Badge_-page006.webp"
+import rayanBadge from "../../assets/badges/Alcor-page007.webp"
+import jupiterBadge from "../../assets/badges/Alcor-page003.webp"
+import soma from "../../assets/badges/Character_Badge_-page005.webp"
+import wilton from "../../assets/badges/Character_Badge_-page004.webp"
+import poslani from "../../assets/badges/Character_Badge_-page010.webp"
+import Image from "astro/components/Image.astro";
+import '../pages.css'
+import './characters.css'
+---
+<Layout>
+    <div class="container">
+        <div>
+            <h1 class={"primary-text"} transition:animate="slide">Characters</h1>
+            <article>
+                <h2 class={"secondary-text"}>Astral Wave</h2>
+                <div class={"grid"}>
+                    <a href={"https://vgen.co/c/alcor/rastaban"} target="_blank" rel="noopener noreferrer" class="m3 s6">
+                        <Image alt={'diamond-shaped badge that contains the character\'s portrait and links to their vgen page'} src={alcorBadge} class={" hover-border"} style={{width: '100%', height: '100%'}}/>
+                    </a>
+                    <a href={"https://vgen.co/c/castor-2"} target="_blank" rel="noopener noreferrer" class="m3 s6">
+                        <Image alt={'diamond-shaped badge that contains the character\'s portrait and links to their vgen page'} src={castorBadge} class={" hover-border"} style={{width: '100%', height: '100%'}}/>
+                    </a>
+                    <a href={"https://vgen.co/c/rayan-samemoto"} target="_blank" rel="noopener noreferrer" class="m3 s6">
+                        <Image alt={'diamond-shaped badge that contains the character\'s portrait and links to their vgen page'} src={rayanBadge} class={" hover-border"} style={{width: '100%', height: '100%'}}/>
+                    </a>
+                    <a href={"https://vgen.co/c/jupiter-4"} target="_blank" rel="noopener noreferrer" class="m3 s6">
+                        <Image alt={'diamond-shaped badge that contains the character\'s portrait and links to their vgen page'} src={jupiterBadge} class={" hover-border"} style={{width: '100%', height: '100%'}}/>
+                    </a>
+                </div>
+            </article>
+            <article>
+                <h2 class={"tertiary-text"}>TTRPG Characters</h2>
+                <div class={"grid"}>
+                    <a href={"https://vgen.co/c/soma-2"} target="_blank" rel="noopener noreferrer" class="m3 s6">
+                        <Image alt={'diamond-shaped badge that contains the character\'s portrait and links to their vgen page'} src={soma} style={{width: '100%', height: '100%'}}/>
+                    </a>
+                    <a href={"https://vgen.co/c/wilton"} target="_blank" rel="noopener noreferrer" class="m3 s6">
+                        <Image alt={'diamond-shaped badge that contains the character\'s portrait and links to their vgen page'} src={wilton} style={{width: '100%', height: '100%'}}/>
+                    </a>
+                    <Image alt={'diamond-shaped badge that contains the character\'s portrait and links to their vgen page'} src={poslani} class={"m3 s6"} style={{width: '100%', height: '100%'}}/>
+                </div>
+            </article>
+        </div>
+    </div>
+</Layout>
