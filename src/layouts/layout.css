@@ -1,0 +1,35 @@
+*:not(i) {
+    font-family: var(--font-body), sans-serif;
+}
+
+h1 {
+    color: var(--primary)
+}
+
+.adaptive-flex, .large-adaptive-flex {
+    flex-direction: column;
+}
+
+#content {
+    flex: 1;
+    padding: 2rem;
+}
+
+@media only screen and (min-width: 601px) {
+    .adaptive-flex {
+        flex-direction: row;
+    }
+    #content {
+        flex-direction: row;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .large-flex {
+        flex: 1
+    }
+}
