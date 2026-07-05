@@ -1,0 +1,36 @@
+---
+    // Adapted from https://altan.fyi/astro-scroll-position/
+---
+<script is:inline>
+    function getNavigationBar() {
+        return document.getElementById('navigation-bar');
+    }
+
+    document.addEventListener("astro:before-swap", () => {
+        const currentScroll = getNavigationBar().scrollTop;
+        console.debug(`Before swap - Scroll position: ${currentScroll}`);
+
+        sessionStorage.setItem("scrollPositions", currentScroll);
+        console.debug(`Saved scroll position: ${currentScroll}`);
+    });
+    document.addEventListener("astro:after-swap", () => {
+        console.debug(`After swap`);
+
+        const savedScrollPosition = sessionStorage.getItem("scrollPositions") || 0;
+        console.debug(`Retrieved saved scroll position: ${savedScrollPosition}`);
+
+        if (savedScrollPosition !== undefined) {
+            getNavigationBar().scrollTo(0, savedScrollPosition);
+            console.debug(`Scrolled to position: ${savedScrollPosition}`);
+            sessionStorage.setItem("scrollPositions", 0);
+            console.debug(`Cleared saved scroll position`);
+        } else {
+            console.debug(`No saved scroll position found`);
+        }
+    });
+
+    document.addEventListener("astro:page-load", () => {
+        console.debug(`Page fully loaded: ${window.location.pathname}`);
+    });
+
+</script>
