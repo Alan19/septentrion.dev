@@ -2,22 +2,22 @@
 import {destinations} from "./destinations.ts";
 import {clsx} from "clsx";
 import PersistNavigationScroll from "./PersistNavigationScroll.astro";
-export const BASE_URL = import.meta.env.BASE_URL;
-const path = Astro.url.pathname.replace(BASE_URL, '');
+export const BASE_URL = import.meta.env.BASE_URL.replace('/', '');
+const path = Astro.url.pathname.split('/').find(value => value && value !== BASE_URL) ?? "";
 ---
 <PersistNavigationScroll />
 <nav class="m l left surface-container-high" style="position: sticky; top: 0; max-height: 100dvh; overflow-y: auto" id="navigation-bar" transition:name="navigation-bar">
     <header>
-        <a href={path.slice(1) === '' ? undefined : BASE_URL}>
+        <a href={`/`}>
             <button class={clsx("extra square round top-margin", path === "" ? "primary" : "border")}>
                 <i>home</i>
-                <span>Get started</span>
+                <span>Home</span>
             </button>
         </a>
     </header>
     {destinations.slice(1).map(value => {
-        return <a href={value.path === path.slice(1) ? undefined : `${BASE_URL}/${value.path}`}>
-            <i class={clsx("destination-icon", path.slice(1) === value.path ? 'secondary-container' : 'transparent')}>{value.icon}</i>
+        return <a href={value.path === path ? undefined : `${BASE_URL}/${value.path}`}>
+            <i class={clsx("destination-icon", path === value.path ? 'secondary-container' : 'transparent')}>{value.icon}</i>
             <span>{value.name}</span>
         </a>;
     })}

@@ -12,9 +12,7 @@ export default defineConfig({
             name: "Outfit",
             cssVariable: "--font-body",
         }],
-    // TODO Change these fields when it is out of beta
-    outDir: './dist/beta',
-    base: '/beta',
-    site: "https://www.septentrion.dev/beta",
+    site: "https://www.septentrion.dev",
+    // TODO Switch to always trailing slash later
     trailingSlash: "never"
 });
