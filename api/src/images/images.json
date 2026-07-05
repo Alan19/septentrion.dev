@@ -9317,7 +9317,7 @@
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_hair_redesign_test.webp"
   },
   {
-    "title": "blue waves 🌊\uD83C\uDFC4\u200D♂\uFE0F",
+    "title": "blue waves 🌊🏄‍♂️",
     "artist": "@greyy_arts",
     "tags": [
       "Bodysuit",
@@ -9354,5 +9354,82 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flux_alcor_sketchpage.webp",
     "id": "b41b79eae403a0bc2132930eee23420a946c9eb93403428a84242988",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/flux_alcor_sketchpage.webp"
+  },
+  {
+    "title": "Rayan Astral Wave Work Outfit",
+    "artist": "_IF8_",
+    "tags": [
+      "Bodysuit",
+      "Full Body",
+      "Sketchpage"
+    ],
+    "href": "https://x.com/OISGHN/status/2073778575581569250",
+    "published": "2026-07-05",
+    "aspectRatio": 1.5333333333333334,
+    "rating": "mainstream",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_astral_wave_work_outfit.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_astral_wave_work_outfit.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_astral_wave_work_outfit.webp",
+    "id": "0bdab2747d7f4b54aba4625a415350aff2a634b527c0e1c907bc7987",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_astral_wave_work_outfit.webp"
+  },
+  {
+    "tags": [
+      "Bodysuit",
+      "Full Body",
+      "Sketchpage"
+    ],
+    "href": "https://x.com/OISGHN/status/2073778575581569250",
+    "aspectRatio": 1.5333333333333334,
+    "parent": "Rayan Astral Wave Work Outfit",
+    "rating": "mainstream",
+    "characters": [
+      "Rayan"
+    ],
+    "altType": "recolor",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_astral_wave_work_outfit_1.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_astral_wave_work_outfit_1.webp",
+    "id": "9f22ad65adb97bde332209e49b9aa26ebbe3fa3e87cd5dedcd2d3c2a",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_astral_wave_work_outfit_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_astral_wave_work_outfit_1.webp"
+  },
+  {
+    "tags": [
+      "Bodysuit",
+      "Full Body"
+    ],
+    "href": "https://x.com/OISGHN/status/2073778575581569250",
+    "aspectRatio": 0.5497760936961764,
+    "parent": "Rayan Astral Wave Work Outfit",
+    "rating": "mainstream",
+    "characters": [
+      "Rayan"
+    ],
+    "altType": "cropped",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_astral_wave_work_outfit_2.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_astral_wave_work_outfit_2.webp",
+    "id": "c530c6c322b254d89322325ab07017c4438f9b1c6d59b156e21551a7",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_astral_wave_work_outfit_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_astral_wave_work_outfit_2.webp"
+  },
+  {
+    "tags": [
+      "Full Body",
+      "Sketchpage"
+    ],
+    "href": "https://x.com/OISGHN/status/2073778575581569250",
+    "aspectRatio": 1,
+    "parent": "Rayan Astral Wave Work Outfit",
+    "rating": "mainstream",
+    "characters": [],
+    "altType": "cropped",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_astral_wave_work_outfit_3.png",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_astral_wave_work_outfit_3.webp",
+    "id": "ae5c546dcb4e5c014bb78550e948f5e665a22aa868546dffed5b2be1",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_astral_wave_work_outfit_3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_astral_wave_work_outfit_3.webp"
   }
 ]
