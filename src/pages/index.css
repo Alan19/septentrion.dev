@@ -18,7 +18,7 @@
     }
 
     #index-image {
-        width: min(36rem, calc(100lvh - 96px));
-        height: min(36rem, calc(100lvh - 96px));
+        width: min(36rem, calc(100dvh - 96px));
+        height: min(36rem, calc(100dvh - 96px));
     }
 }
