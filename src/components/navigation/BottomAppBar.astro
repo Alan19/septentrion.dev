@@ -1,13 +1,18 @@
 ---
 import {destinations} from "./destinations.ts";
+import { BASE_URL } from "./NavigationRail.astro";
 
 const path = Astro.url.pathname;
 ---
 <footer class="s surface-container-high" style="position: sticky; bottom: 0" >
     <nav style={{display: "flex", justifyContent: "space-evenly", alignItems: "stretch"}}>
-        {destinations.map(value => <a style={{display: "flex", flexDirection: "column", flex: "1 1 0"}} href={`/${value.path}`}>
-            <button class={path.slice(1) === value.path ? 'secondary-container' : 'transparent'}><i class="destination-icon">{value.icon}</i></button>
-            <span>{value.name}</span>
-        </a>)}
+        {destinations.map(value => {
+            // TODO Switch to always trailing slash later
+            const href = value.path === '' ? BASE_URL : `${BASE_URL}/${value.path}`
+            return <a style={{display: "flex", flexDirection: "column", flex: "1 1 0"}} href={value.path === path.slice(1) ? undefined : href}>
+                <button class={path.slice(1) === value.path ? 'secondary-container' : 'transparent'}><i class="destination-icon">{value.icon}</i></button>
+                <span>{value.name}</span>
+            </a>;
+        })}
     </nav>
 </footer>
