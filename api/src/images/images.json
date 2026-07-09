@@ -9431,5 +9431,28 @@
     "id": "ae5c546dcb4e5c014bb78550e948f5e665a22aa868546dffed5b2be1",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_astral_wave_work_outfit_3.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_astral_wave_work_outfit_3.webp"
+  },
+  {
+    "title": "Giove Human Design",
+    "artist": "@OISGHN",
+    "tags": [
+      "Bodysuit",
+      "Hoodie",
+      "Character Reference",
+      "Full Body",
+      "Lances"
+    ],
+    "href": "https://x.com/OISGHN/status/2074770812335456604",
+    "published": "2026-07-08",
+    "aspectRatio": 1,
+    "rating": "mainstream",
+    "characters": [
+      "Giove"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/giove_human_design.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/giove_human_design.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/giove_human_design.webp",
+    "id": "e923c065ae537c3f9281ff9c353e77ddb1950e5f3dd5f2083db5d20a",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/giove_human_design.webp"
   }
 ]
