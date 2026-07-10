@@ -4,7 +4,7 @@ import {BASE_URL} from "../../util/consts.ts";
 
 const path = Astro.url.pathname;
 ---
-<footer class="s surface-container-high" style="position: sticky; bottom: 0" >
+<footer class="s surface-container-high" style="position: sticky; bottom: 0" transition:name="bottom-app-bar">
     <nav style={{display: "flex", justifyContent: "space-evenly", alignItems: "stretch"}}>
         {destinations.map(value => {
             const href = value.path === '' ? `/${BASE_URL}` : `${BASE_URL}/${value.path}`
