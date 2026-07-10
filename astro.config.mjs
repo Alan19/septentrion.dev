@@ -14,5 +14,17 @@ export default defineConfig({
         }],
     site: "https://www.septentrion.dev",
     // TODO Switch to always trailing slash later
-    trailingSlash: "never"
+    trailingSlash: "never",
+    image: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'alcorsiteartbucket.s3.amazonaws.com'
+            }
+        ],
+        objectFit: "contain"
+    },
+    prefetch: {
+        prefetchAll: true
+    }
 });

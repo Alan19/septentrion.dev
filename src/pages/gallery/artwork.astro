@@ -1,0 +1,22 @@
+---
+import {ArtworkComponent} from "../../components/gallery/ArtworkComponent.tsx";
+import Layout from "../../layouts/Layout.astro";
+import '../pages.css'
+
+import images from "../../content/gallery/images.json"
+import {type ImageEntry, isImageInformation} from "../../util/images.ts";
+import Image from "astro/components/Image.astro";
+const displayedImages = (images as ImageEntry[]).filter(image => isImageInformation(image)).sort((a, b) => b.published.localeCompare(a.published))
+const imageTest = displayedImages.find(value => value.id === "0bdab2747d7f4b54aba4625a415350aff2a634b527c0e1c907bc7987")
+---
+<Layout>
+    <div class="container">
+        <!--<img src="https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_astral_wave_work_outfit.webp" style="flex:1.5333333333333334;width:100%;view-transition-name:img_0bdab2747d7f4b54aba4625a415350aff2a634b527c0e1c907bc7987">-->
+        <div>
+            <ArtworkComponent client:only="react">
+                <!--{imageTest && <Image src={imageTest.webp} alt={imageTest.title} inferSize />}-->
+            </ArtworkComponent>
+        </div>
+    </div>
+</Layout>
+

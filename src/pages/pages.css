@@ -1,7 +1,6 @@
 .container {
     max-inline-size: min(100vw, 75rem);
     margin: auto;
-    display: flex;
     gap: 1rem;
 }
 

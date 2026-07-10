@@ -1,9 +1,25 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import '../pages.css'
+import images from '../../content/gallery/images.json'
+import {type ImageEntry, isImageInformation} from "../../util/images.ts";
+import {GalleryIsland} from "../../components/gallery/GalleryIsland.tsx";
+
+const displayedImages = (images as ImageEntry[]).filter(image => isImageInformation(image)).sort((a, b) => b.published.localeCompare(a.published))
 ---
 <Layout>
     <div class="container">
-        <h1 transition:animate="slide">Gallery</h1>
+        <div>
+            <h1 transition:animate="slide">Gallery</h1>
+            <div class="l">
+                <GalleryIsland images={displayedImages} componentWidth={993} targetRowHeight={300} rowHeightTolerance={.5} client:load />
+            </div>
+            <div class="m">
+                <GalleryIsland images={displayedImages} componentWidth={993} targetRowHeight={384} rowHeightTolerance={.3} client:load/>
+            </div>
+            <div class="s">
+                <GalleryIsland images={displayedImages} componentWidth={601} targetRowHeight={384} client:load/>
+            </div>
+        </div>
     </div>
 </Layout>

@@ -2,10 +2,10 @@
 import {destinations} from "./destinations.ts";
 import {clsx} from "clsx";
 import PersistNavigationScroll from "./PersistNavigationScroll.astro";
-export const BASE_URL = import.meta.env.BASE_URL.replace('/', '');
+import {BASE_URL} from "../../util/consts.ts";
 const path = Astro.url.pathname.split('/').find(value => value && value !== BASE_URL) ?? "";
 ---
-<PersistNavigationScroll />
+<!--<PersistNavigationScroll />-->
 <nav class="m l left surface-container-high" style="position: sticky; top: 0; max-height: 100dvh; overflow-y: auto" id="navigation-bar" transition:name="navigation-bar">
     <header>
         <a href={`/`}>
