@@ -1,3 +1,28 @@
 .container {
     height: 100%;
 }
+
+@media only screen and (min-width: 601px) {
+    .image-div {
+        height: calc(100dvh - 163px)
+    }
+}
+
+.horizontal-img {
+    width: 100% !important;
+    height: auto;
+}
+
+.vertical-img {
+    width: 100%;
+    height: 100%;
+}
+
+.artwork {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: top;
+    overflow-y: scroll;
+}
+

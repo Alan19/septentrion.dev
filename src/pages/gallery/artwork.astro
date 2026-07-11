@@ -11,10 +11,9 @@ const imageTest = displayedImages.find(value => value.id === "0bdab2747d7f4b54ab
 ---
 <Layout>
     <div class="container">
-        <!--<img src="https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_astral_wave_work_outfit.webp" style="flex:1.5333333333333334;width:100%;view-transition-name:img_0bdab2747d7f4b54aba4625a415350aff2a634b527c0e1c907bc7987">-->
-        <div>
+        <div >
+            <h1 transition:name="test">Artwork</h1>
             <ArtworkComponent client:only="react">
-                <!--{imageTest && <Image src={imageTest.webp} alt={imageTest.title} inferSize />}-->
             </ArtworkComponent>
         </div>
     </div>

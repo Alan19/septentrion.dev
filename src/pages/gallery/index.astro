@@ -10,7 +10,7 @@ const displayedImages = (images as ImageEntry[]).filter(image => isImageInformat
 <Layout>
     <div class="container">
         <div>
-            <h1 transition:animate="slide">Gallery</h1>
+            <h1>Gallery</h1>
             <div class="l">
                 <GalleryIsland images={displayedImages} componentWidth={993} targetRowHeight={300} rowHeightTolerance={.5} client:load />
             </div>

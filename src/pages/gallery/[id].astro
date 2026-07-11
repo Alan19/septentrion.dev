@@ -1,41 +1,43 @@
 ---
 import images from "../../content/gallery/images.json"
-import {getCollection} from "astro:content";
-import {type AltInformation, type ImageBase, type ImageEntry, isAltInformation, isImageInformation} from "../../util/images.ts";
+import {type ImageEntry, isAltInformation, isImageInformation} from "../../util/images.ts";
 import Layout from "../../layouts/Layout.astro";
 import {Image} from "astro:assets";
 import '../pages.css'
 import './artwork.css'
 import {BASE_URL} from "../../util/consts.ts";
+import {getCollection} from "astro:content";
+import type {GetStaticPaths} from "astro";
 
 export async function getStaticPaths() {
-    return images.map((post) => ({
-        params: {id: post.id},
-        props: post,
-    }));
+    const collection = await getCollection('artworks')
+    if (!collection) return [];
+    return collection.map((post) => {
+        return ({
+            params: {id: post.id},
+            props: {
+                src: post.data.webp,
+                title: post.data.title,
+                href: post.data.href,
+                id: post.id
+            },
+        });
+    });
 }
 
-const artwork: ImageEntry = Astro.props as ImageEntry;
-let title: string = "";
-if (isImageInformation(artwork)) {
-    title = artwork.title;
-} else if (isAltInformation(artwork)) {
-    title = artwork.parent;
-}
+const {src, title, href, id} = Astro.props
 ---
 <Layout>
     <div class="container">
-        {artwork &&
-                <div style="display: flex; flex-direction: column;height: calc(100dvh - 96px)">
-                    <nav style="gap: .05rem; overflow-y: hidden" class="round primary-container small-padding large-text tiny-space">
-                        <a class="link underline" href={`${BASE_URL}/gallery`}>Gallery</a>
-                        <i>chevron_right</i>
-                        <span class="bold">{title}</span>
-                    </nav>
-                    <h2>{title}</h2>
-                    <a target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={artwork.href}>
-                        <Image inferSize alt={title} style={{width: "100%", height: "100%", flex: 1, objectFit: "contain", borderRadius: 0}} src={artwork.webp} transition:name={`img-${artwork.id}`}/>
-                    </a>
-                </div>}
+        <div class="image-div">
+            <nav style="gap: .05rem; overflow-y: hidden" class="round surface-container padding large-text">
+                <a class="link underline" href={`${BASE_URL}/gallery`}>Gallery</a>
+                <i>chevron_right</i>
+                <span class="bold">{title}</span>
+            </nav>
+            <a target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={href}>
+                <Image inferSize alt={title} class={"top-margin artwork"} src={src} transition:name={`img-${id}`}/>
+            </a>
+        </div>
     </div>
 </Layout>

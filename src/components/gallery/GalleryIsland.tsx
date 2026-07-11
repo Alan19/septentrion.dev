@@ -15,7 +15,7 @@ export function GalleryIsland(props: Readonly<{
     return <div style={{display: "flex", flexDirection: "column", gap: itemSpacing}}>
         {displayOrder.slice(0, 16).map((value, index, array) => <div key={'row ' + index} style={{display: "flex", gap: itemSpacing}}>
             {value.map((imageEntry, _index, array) => <a style={{display: "contents"}} href={`${BASE_URL}/gallery/${imageEntry.id}`} key={imageEntry.id}>
-                <img className={"no-round"} src={imageEntry.webp} style={{flex: array.length === 1 ? 1 : imageEntry.aspectRatio, width: "100%", viewTransitionName: `img-${imageEntry.id}`, borderRadius: "0 !important"}}/>
+                <img alt={imageEntry.title} loading={"lazy"} className={"no-round"} src={imageEntry.webp} style={{flex: array.length === 1 ? 1 : imageEntry.aspectRatio, width: "100%", viewTransitionName: `img-${imageEntry.id}`}}/>
             </a>)}
             {(index === array.length - 1) && !!(extraElement) && <div style={{flex: extraElement}}></div>}
         </div>)}
