@@ -28,7 +28,7 @@ export async function GET(context: { site: any; }) {
             link: `/gallery/${post.id}`,
             categories: post.data.tags,
             content: `Artist: ${post.data.artist}\nRating: ${_.capitalize(post.data.rating)}\nCharacter: ${post.data.characters.join(", ")}`,
-            enclosure: {url: post.data.thumbnailUrl, length: 1000000, type: "image/webp"}
+            enclosure: {url: post.data.thumbnailUrl, length: 1000000, type: "image/png"}
         })),
         // (optional) inject custom xml
         customData: `<language>en-us</language>`,
