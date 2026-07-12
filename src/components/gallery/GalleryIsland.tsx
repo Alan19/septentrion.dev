@@ -1,9 +1,10 @@
 import {getDisplayFunction} from "./getDisplayOrder.ts";
 import {BASE_URL} from "../../util/consts.ts";
 import type {InferEntrySchema} from "astro:content";
+import {SkeletonImage} from "./SkeletonImage.tsx";
 
 export function GalleryIsland(props: Readonly<{
-    images:  InferEntrySchema<"artworks">[];
+    images: InferEntrySchema<"artworks">[];
     componentWidth: number;
     targetRowHeight: number;
     rowHeightTolerance?: number;
@@ -14,9 +15,16 @@ export function GalleryIsland(props: Readonly<{
 
     return <div style={{display: "flex", flexDirection: "column", gap: itemSpacing}}>
         {displayOrder.map((value, index, array) => <div key={'row ' + index} style={{display: "flex", gap: itemSpacing}}>
-            {value.map((imageEntry, _index, array) => <div style={{flex: array.length === 1 ? 1 : imageEntry.aspectRatio}}><a style={{display: "contents"}} href={`${BASE_URL}/gallery/${imageEntry.id}`} key={imageEntry.id}>
-                <img alt={imageEntry.title} loading={"lazy"} className={"no-round"} src={imageEntry.webp} style={{width: "100%", viewTransitionName: `img-${imageEntry.id}`, viewTransitionClass: "gallery-img"}}/>
-            </a></div>)}
+            {value.map((imageEntry, _index, array) => {
+                return <SkeletonImage src={imageEntry.webp} skeletonStyle={{aspectRatio: array.length === 1 ? 1 : imageEntry.aspectRatio, flex: array.length === 1 ? 1 : imageEntry.aspectRatio}} debug={true} key={imageEntry.title}>
+                    <a style={{display: "contents"}} href={`${BASE_URL}/gallery/${imageEntry.id}`} key={imageEntry.id}>
+                        <img alt={imageEntry.title} loading={"lazy"} className={"no-round"} src={imageEntry.webp} style={{width: "100%", viewTransitionName: `img-${imageEntry.id}`, viewTransitionClass: "gallery-img"}}/>
+                    </a>
+                </SkeletonImage>
+                return <div style={{flex: array.length === 1 ? 1 : imageEntry.aspectRatio}}><a style={{display: "contents"}} href={`${BASE_URL}/gallery/${imageEntry.id}`} key={imageEntry.id}>
+                    <img alt={imageEntry.title} loading={"lazy"} className={"no-round"} src={imageEntry.webp} style={{width: "100%", viewTransitionName: `img-${imageEntry.id}`, viewTransitionClass: "gallery-img"}}/>
+                </a></div>;
+            })}
             {(index === array.length - 1) && !!(extraElement) && <div style={{flex: extraElement}}></div>}
         </div>)}
     </div>

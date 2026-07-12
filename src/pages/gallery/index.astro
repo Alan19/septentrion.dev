@@ -4,9 +4,13 @@ import '../pages.css'
 import {type ImageEntry, isImageInformation} from "../../util/images.ts";
 import {GalleryIsland} from "../../components/gallery/GalleryIsland.tsx";
 import {getCollection} from "astro:content";
+import { getImage } from "astro:assets";
 
 const artworks = await getCollection('artworks');
-const displayedImages = artworks.map(artwork => artwork.data).sort((a, b) => b.commissionNumber - a.commissionNumber).slice(0, 16)
+const displayedImages = await Promise.all(artworks.map(artwork => artwork.data)
+    .sort((a, b) => b.commissionNumber - a.commissionNumber)
+    // .slice(0, 16)
+    .map(async value => ({...value, webp: (await getImage({src: value.webp, inferSize: true, fit: "contain"})).src})))
 ---
 <Layout>
     <div class="container">
@@ -19,7 +23,7 @@ const displayedImages = artworks.map(artwork => artwork.data).sort((a, b) => b.c
                 <GalleryIsland images={displayedImages} componentWidth={993} targetRowHeight={384} rowHeightTolerance={.3} client:load/>
             </div>
             <div class="s">
-                <GalleryIsland images={displayedImages} componentWidth={601} targetRowHeight={384} client:load/>
+                <GalleryIsland images={displayedImages} componentWidth={601} targetRowHeight={384} client:load />
             </div>
         </div>
     </div>
