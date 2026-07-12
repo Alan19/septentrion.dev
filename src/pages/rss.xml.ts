@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 import timezone from "dayjs/plugin/timezone";
 import utc from "dayjs/plugin/utc";
 import MarkdownIt from 'markdown-it';
-import ReactDOMServer from 'react-dom/server';
+import {galleryImageToString} from "../util/galleryImageToString.tsx";
 
 const parser = new MarkdownIt();
 dayjs.extend(utc);
@@ -27,7 +27,7 @@ export async function GET(context: { site: any; }) {
             pubDate: dayjs.tz(post.data.published, "America/New_York").toDate(),
             link: `/gallery/${post.id}`,
             categories: post.data.tags,
-            content: ReactDOMServer.renderToString(<img src={post.data.thumbnailUrl} alt={post.data.title}/>)
+            content: galleryImageToString(post.data.thumbnailUrl, post.data.title)
         })),
         // (optional) inject custom xml
         customData: `<language>en-us</language>`,
