@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 import timezone from "dayjs/plugin/timezone";
 import utc from "dayjs/plugin/utc";
 import MarkdownIt from 'markdown-it';
-import {galleryImageToString} from "../util/galleryImageToString.tsx";
+import _ from "lodash";
 
 const parser = new MarkdownIt();
 dayjs.extend(utc);
@@ -22,12 +22,13 @@ export async function GET(context: { site: any; }) {
         site: context.site,
         // Array of `<item>`s in output xml
         // See "Generating items" section for examples using content collections and glob imports
-        items: artworks.map(post => ({
+        items: artworks.toSorted((a, b) => a.data.commissionNumber - b.data.commissionNumber).map(post => ({
             title: post.data.title,
             pubDate: dayjs.tz(post.data.published, "America/New_York").toDate(),
             link: `/gallery/${post.id}`,
             categories: post.data.tags,
-            content: galleryImageToString(post.data.thumbnailUrl, post.data.title)
+            content: `Artist: ${post.data.artist}\nRating: ${_.capitalize(post.data.rating)}\nCharacter: ${post.data.characters.join(", ")}`,
+            enclosure: {url: post.data.thumbnailUrl, length: 1000000, type: "image/webp"}
         })),
         // (optional) inject custom xml
         customData: `<language>en-us</language>`,
