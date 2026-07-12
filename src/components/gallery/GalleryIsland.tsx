@@ -1,9 +1,9 @@
-import type {ImageInformation} from "../../util/images.ts";
 import {getDisplayFunction} from "./getDisplayOrder.ts";
 import {BASE_URL} from "../../util/consts.ts";
+import type {InferEntrySchema} from "astro:content";
 
 export function GalleryIsland(props: Readonly<{
-    images: ImageInformation[];
+    images:  InferEntrySchema<"artworks">[];
     componentWidth: number;
     targetRowHeight: number;
     rowHeightTolerance?: number;
@@ -13,10 +13,10 @@ export function GalleryIsland(props: Readonly<{
     let [displayOrder, extraElement] = getDisplayFunction(images, componentWidth, rowHeightTolerance, targetRowHeight, itemSpacing);
 
     return <div style={{display: "flex", flexDirection: "column", gap: itemSpacing}}>
-        {displayOrder.slice(0, 16).map((value, index, array) => <div key={'row ' + index} style={{display: "flex", gap: itemSpacing}}>
-            {value.map((imageEntry, _index, array) => <a style={{display: "contents"}} href={`${BASE_URL}/gallery/${imageEntry.id}`} key={imageEntry.id}>
-                <img alt={imageEntry.title} loading={"lazy"} className={"no-round"} src={imageEntry.webp} style={{flex: array.length === 1 ? 1 : imageEntry.aspectRatio, width: "100%", viewTransitionName: `img-${imageEntry.id}`}}/>
-            </a>)}
+        {displayOrder.map((value, index, array) => <div key={'row ' + index} style={{display: "flex", gap: itemSpacing}}>
+            {value.map((imageEntry, _index, array) => <div style={{flex: array.length === 1 ? 1 : imageEntry.aspectRatio}}><a style={{display: "contents"}} href={`${BASE_URL}/gallery/${imageEntry.id}`} key={imageEntry.id}>
+                <img alt={imageEntry.title} loading={"lazy"} className={"no-round"} src={imageEntry.webp} style={{width: "100%", viewTransitionName: `img-${imageEntry.id}`, viewTransitionClass: "gallery-img"}}/>
+            </a></div>)}
             {(index === array.length - 1) && !!(extraElement) && <div style={{flex: extraElement}}></div>}
         </div>)}
     </div>

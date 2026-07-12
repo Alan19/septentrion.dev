@@ -7,3 +7,9 @@
 h2 {
     color: var(--secondary)
 }
+
+::view-transition-group(.gallery-img) {
+    object-fit: contain;
+    object-position: top center;
+    overflow: hidden;
+}

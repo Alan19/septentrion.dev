@@ -1,17 +1,18 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import '../pages.css'
-import images from '../../content/gallery/images.json'
 import {type ImageEntry, isImageInformation} from "../../util/images.ts";
 import {GalleryIsland} from "../../components/gallery/GalleryIsland.tsx";
+import {getCollection} from "astro:content";
 
-const displayedImages = (images as ImageEntry[]).filter(image => isImageInformation(image)).sort((a, b) => b.published.localeCompare(a.published))
+const artworks = await getCollection('artworks');
+const displayedImages = artworks.map(artwork => artwork.data).sort((a, b) => b.commissionNumber - a.commissionNumber).slice(0, 16)
 ---
 <Layout>
     <div class="container">
         <div>
             <h1>Gallery</h1>
-            <div class="l">
+            <div class="l" style="width: 100%">
                 <GalleryIsland images={displayedImages} componentWidth={993} targetRowHeight={300} rowHeightTolerance={.5} client:load />
             </div>
             <div class="m">

@@ -1,0 +1,29 @@
+---
+import type {Rating} from "../../util/images.ts";
+import _ from "lodash";
+type Props = {
+    artist: string,
+    rating: Rating,
+    tags: string[],
+    characters: string[],
+    published: string
+}
+const {artist, rating, tags, characters, published} = Astro.props;
+---
+<div>Artist: <a class="link">{artist}</a></div>
+<div>Rating: {_.capitalize(rating)}</div>
+<div>Published: {published}</div>
+<h6>Characters</h6>
+<nav class="scroll tiny-space" style="margin-top: 0">
+    {characters.map(tag =>
+            <button class="chip">
+                <span>{tag}</span>
+            </button>)}
+</nav>
+<h6>Tags</h6>
+<nav class="scroll tiny-space" style="margin-top: 0">
+    {tags.map(tag =>
+            <button class="chip">
+                <span>{tag}</span>
+            </button>)}
+</nav>

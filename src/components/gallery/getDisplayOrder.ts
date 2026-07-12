@@ -1,9 +1,9 @@
-import type {ImageInformation} from "../../util/images.ts";
 import _ from "lodash";
+import type {InferEntrySchema} from "astro:content";
 
-export function getDisplayFunction(images: ImageInformation[], componentWidth: number, rowHeightTolerance: number, targetRowHeight: number, itemSpacing: number): [ImageInformation[][], number?] {
-    let displayOrder: ImageInformation[][] = [];
-    let rowBuffer: ImageInformation[] = [];
+export function getDisplayFunction(images:  InferEntrySchema<"artworks">[], componentWidth: number, rowHeightTolerance: number, targetRowHeight: number, itemSpacing: number): [ InferEntrySchema<"artworks">[][], number?] {
+    let displayOrder:  InferEntrySchema<"artworks">[][] = [];
+    let rowBuffer:  InferEntrySchema<"artworks">[] = [];
     const minRowWidth = componentWidth * (1 / (1 + rowHeightTolerance));
     const maxRowWidth = componentWidth * (1 / (1 - rowHeightTolerance));
     let extraElementAspectRatio;

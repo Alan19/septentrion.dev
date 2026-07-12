@@ -1,43 +1,53 @@
 ---
-import images from "../../content/gallery/images.json"
-import {type ImageEntry, isAltInformation, isImageInformation} from "../../util/images.ts";
 import Layout from "../../layouts/Layout.astro";
 import {Image} from "astro:assets";
 import '../pages.css'
 import './artwork.css'
 import {BASE_URL} from "../../util/consts.ts";
 import {getCollection} from "astro:content";
-import type {GetStaticPaths} from "astro";
+import {clsx} from "clsx";
+import _ from "lodash";
+import ImageMetadata from "../../components/gallery/ImageMetadata.astro";
 
 export async function getStaticPaths() {
     const collection = await getCollection('artworks')
     if (!collection) return [];
-    return collection.map((post) => {
-        return ({
-            params: {id: post.id},
-            props: {
-                src: post.data.webp,
-                title: post.data.title,
-                href: post.data.href,
-                id: post.id
-            },
-        });
-    });
+    return collection.map((post) => ({
+        params: {id: post.id},
+        props: post.data,
+    }));
 }
 
-const {src, title, href, id} = Astro.props
+const {webp, title, href, aspectRatio, tags, artist, characters, rating, published, commissionNumber} = Astro.props
+const {id} = Astro.params;
 ---
 <Layout>
     <div class="container">
-        <div class="image-div">
-            <nav style="gap: .05rem; overflow-y: hidden" class="round surface-container padding large-text">
+        <div style="display: flex; align-items: center; gap: .5rem">
+            <nav style="gap: .05rem; overflow-y: hidden; flex: 1" class="round surface-container padding large-text">
                 <a class="link underline" href={`${BASE_URL}/gallery`}>Gallery</a>
                 <i>chevron_right</i>
                 <span class="bold">{title}</span>
+                <small class="medium-opacity bold" style="margin-left: .5rem">(#{commissionNumber})</small>
             </nav>
+            <button class="m circle transparent large" popovertarget="metadata-dialog" popovertargetaction="show"><i>info</i></button>
+        </div>
+        <div style="display: flex; gap: 1rem" class="image-div">
             <a target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={href}>
-                <Image inferSize alt={title} class={"top-margin artwork"} src={src} transition:name={`img-${id}`}/>
+                <Image inferSize={true} alt={title} class={clsx("artwork")} src={webp} transition:name={`img-${id}`} transition:animate={"fade"} style={{viewTransitionClass: "gallery-img", flex: 1}}/>
             </a>
+            <hr class="vertical l" style="height: 100%"/>
+            <div class="left-padding right-padding s l artwork-info">
+                <h5>Artwork Info</h5>
+                <ImageMetadata rating={rating} artist={artist} characters={characters} tags={tags} published={published}/>
+            </div>
         </div>
     </div>
 </Layout>
+<dialog class="right m s" style="width: 320px" id="metadata-dialog" popover="auto">
+    <div style="display: flex; gap: 1rem; margin-bottom: 1rem">
+        <h5 style="flex: 1">Artwork Info</h5>
+        <button class="transparent circle" popovertarget="metadata-dialog" popovertargetaction="hide"><i>close</i></button>
+    </div>
+    <ImageMetadata rating={rating} artist={artist} characters={characters} tags={tags} published={published}/>
+</dialog>

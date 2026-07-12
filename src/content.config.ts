@@ -1,10 +1,13 @@
 import {defineCollection} from "astro:content";
 import images from './content/gallery/images.json'
-import {type ImageEntry, isImageInformation, Rating} from "./util/images.ts";
+import {type ImageEntry, type ImageInformation, isImageInformation, Rating} from "./util/images.ts";
 import {z} from "astro/zod";
 
 const artworks = defineCollection({
-        loader: async () => images.filter(value => isImageInformation(value as ImageEntry)),
+        loader: async () => {
+            let parentImages = images.filter(value => isImageInformation(value as ImageEntry)) as ImageInformation[];
+            return parentImages.toSorted((a, b) => a.published.localeCompare(b.published)).map((value, index) => ({...value, commissionNumber: index + 1}));
+        },
         schema: z.object({
             id: z.string(),
             title: z.string(),
@@ -17,7 +20,8 @@ const artworks = defineCollection({
             nearLossless: z.string(),
             webp: z.url(),
             aspectRatio: z.number(),
-            characters: z.array(z.string())
+            characters: z.array(z.string()),
+            commissionNumber: z.number()
         })
     },
 )
