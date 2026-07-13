@@ -1,11 +1,12 @@
 import {defineCollection} from "astro:content";
 import images from './content/gallery/images.json'
+import hiddenImages from './content/gallery/hidden.json'
 import {type ImageEntry, type ImageInformation, isImageInformation, Rating} from "./util/images.ts";
 import {z} from "astro/zod";
 
 const artworks = defineCollection({
         loader: async () => {
-            let parentImages = images.filter(value => isImageInformation(value as ImageEntry)) as ImageInformation[];
+            let parentImages = (images as ImageEntry[]).concat(hiddenImages as ImageEntry[]).filter(value => isImageInformation(value as ImageEntry)) as ImageInformation[];
             return parentImages.toSorted((a, b) => a.published.localeCompare(b.published)).map((value, index) => ({...value, commissionNumber: index + 1}));
         },
         schema: z.object({
