@@ -1,0 +1,38 @@
+---
+import type {GetStaticPaths} from "astro";
+import {getCollection} from "astro:content";
+import '../pages.css'
+import Layout from "../../layouts/Layout.astro";
+import Gallery from "../../components/gallery/Gallery.astro";
+
+export const getStaticPaths = (async ({paginate}) => {
+    const galleryImages = (await getCollection('artworks')).toSorted((a, b) => b.data.commissionNumber - a.data.commissionNumber);
+    // Generate pages from our array of astronauts, with 2 to a page
+    return paginate(galleryImages, {pageSize: 16});
+}) satisfies GetStaticPaths;
+
+// All paginated data is passed on the "page" prop
+const {page} = Astro.props;
+---
+<Layout>
+    <div class="container">
+        <h1>Gallery</h1>
+        <h2>Page {page.currentPage}</h2>
+        <div style="display: flex; gap: 1rem">
+            <!--TODO Put this into a toolbar-->
+            <a class="link" style={{visibility: page.url.first ? "visible" : "hidden"}} href={page.url.first}>First</a>
+            <a class="link" style={{visibility: page.url.prev ? "visible" : "hidden"}} href={page.url.prev}>Previous</a>
+            <a class="link" style={{visibility: page.url.next ? "visible" : "hidden"}} href={page.url.next}>Next</a>
+            <a class="link" style={{visibility: page.url.last ? "visible" : "hidden"}} href={page.url.last}>Last</a>
+        </div>
+        <div class="l">
+            <Gallery images={page.data.map(value => value.data)} componentWidth={993} targetRowHeight={300} rowHeightTolerance={.5} />
+        </div>
+        <div class="m">
+            <Gallery images={page.data.map(value => value.data)} componentWidth={601} targetRowHeight={384} rowHeightTolerance={.5} />
+        </div>
+        <div class="s">
+            <Gallery images={page.data.map(value => value.data)} componentWidth={350} targetRowHeight={384} rowHeightTolerance={.5} />
+        </div>
+    </div>
+</Layout>

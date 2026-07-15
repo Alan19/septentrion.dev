@@ -26,5 +26,11 @@ export default defineConfig({
     },
     prefetch: {
         prefetchAll: true
+    },
+    build: {
+        concurrency: 4
+    },
+    redirects: {
+        "/gallery": "/gallery/1"
     }
 });

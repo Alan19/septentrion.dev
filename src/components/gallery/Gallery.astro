@@ -1,0 +1,42 @@
+---
+import React from "react";
+import {getDisplayFunction} from "./getDisplayOrder.ts";
+import {Image} from "astro:assets";
+import type {InferEntrySchema} from "astro:content";
+import {BASE_URL} from "../../util/consts.ts";
+import './skeleton.css'
+type Props = {
+    images: InferEntrySchema<"artworks">[];
+    componentWidth: number;
+    targetRowHeight: number;
+    rowHeightTolerance?: number;
+    itemSpacing?: number;
+}
+const {images, itemSpacing = 16, targetRowHeight, rowHeightTolerance = .15, componentWidth} = Astro.props;
+let [displayOrder, extraElement] = getDisplayFunction(images, componentWidth, rowHeightTolerance, targetRowHeight, itemSpacing);
+---
+<script is:inline data-astro-rerun>
+    // noinspection ES6ConvertVarToLetConst We are using var so that the script can reinject the listener for dynamic back behavior
+    var feedLinks = document.querySelectorAll('.image-link')
+    console.log("Adding listeners")
+    feedLinks.forEach((feedLink) => {
+        feedLink?.addEventListener('click', () => {
+            localStorage.setItem('cameFromGallery', 'true')
+        })
+    })
+</script>
+<div style={{display: "flex", flexDirection: "column", gap: itemSpacing + "px"}}>
+    {displayOrder.map((value, index, array) =>
+            <div style={{display: "flex", gap: itemSpacing + "px"}}>
+                {value.map((imageEntry, _index, array) =>
+                        <div style={{flex: (array.length === 1 ? 1 : imageEntry.aspectRatio)}}>
+                            <a style={{display: "contents"}} href={`${BASE_URL}/gallery/artwork/${imageEntry.id}`} class="image-link">
+                                <div class={"skeleton"} style={{aspectRatio: imageEntry.aspectRatio}}>
+                                    <Image inferSize transition:animate={"initial"} alt={imageEntry.title} loading={"lazy"} class={"primary-border border no-round"} src={imageEntry.webp} transition:name={`img-${imageEntry.id}`} style={{width: "100%", height: 'auto', viewTransitionClass: "gallery-img"}}/>
+                                </div>
+                            </a>
+                        </div>)}
+                {(index === array.length - 1) && !!(extraElement) &&
+                        <div style={{flex: extraElement}}></div>}
+            </div>)}
+</div>

@@ -1,13 +1,14 @@
 ---
-import Layout from "../../layouts/Layout.astro";
 import {Image} from "astro:assets";
-import '../pages.css'
-import './artwork.css'
-import {BASE_URL} from "../../util/consts.ts";
+import '../../pages.css'
+import '../artwork.css'
+import {BASE_URL} from "../../../util/consts.ts";
 import {getCollection} from "astro:content";
 import {clsx} from "clsx";
 import _ from "lodash";
-import ImageMetadata from "../../components/gallery/ImageMetadata.astro";
+import ImageMetadata from "../../../components/gallery/ImageMetadata.astro";
+import Layout from "../../../layouts/Layout.astro";
+
 
 export async function getStaticPaths() {
     const collection = await getCollection('artworks')
@@ -21,11 +22,33 @@ export async function getStaticPaths() {
 const {webp, title, href, aspectRatio, tags, artist, characters, rating, published, commissionNumber} = Astro.props
 const {id} = Astro.params;
 ---
+<script>
+    import { supportsViewTransitions } from 'astro:transitions/client'
+
+    if (supportsViewTransitions) {
+        document.addEventListener('astro:page-load', callback)
+    } else {
+        callback()
+    }
+
+    function callback() {
+        const backButton = document.querySelector('.gallery-link')
+        const fromFeed = localStorage.getItem('cameFromGallery')
+        localStorage.removeItem('cameFromGallery')
+
+        backButton?.addEventListener('click', (e) => {
+            if (fromFeed && history.length > 1) {
+                e.preventDefault()
+                history.back()
+            }
+        })
+    }
+</script>
 <Layout>
     <div class="container">
         <div style="display: flex; align-items: center; gap: .5rem">
             <nav style="gap: .05rem; overflow-y: hidden; flex: 1" class="round surface-container padding large-text">
-                <a class="link underline" href={`${BASE_URL}/gallery`}>Gallery</a>
+                <a class="link underline gallery-link" href={`${BASE_URL}/gallery`}>Gallery</a>
                 <i>chevron_right</i>
                 <span class="bold">{title}</span>
                 <small class="medium-opacity bold" style="margin-left: .5rem">(#{commissionNumber})</small>
