@@ -6,7 +6,7 @@ export const destinations = [
     },
     {
         name: 'Gallery',
-        path: 'gallery',
+        path: 'gallery/1',
         icon: 'photo_library'
     },
     {

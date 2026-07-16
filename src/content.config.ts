@@ -1,12 +1,12 @@
 import {defineCollection} from "astro:content";
-import images from './content/gallery/images.json'
-import hiddenImages from './content/gallery/hidden.json'
-import {type ImageEntry, type ImageInformation, isImageInformation, Rating} from "./util/images.ts";
+import {type ImageEntry, isImageInformation, Rating} from "./util/images.ts";
 import {z} from "astro/zod";
+import * as fs from "node:fs";
+import path from "node:path";
 
 const artworks = defineCollection({
         loader: async () => {
-            let parentImages = (images as ImageEntry[]).concat(hiddenImages as ImageEntry[]).filter(value => isImageInformation(value as ImageEntry)) as ImageInformation[];
+            let parentImages = fs.readdirSync('src/content/gallery/').flatMap(value => (JSON.parse(fs.readFileSync(path.join('src/content/gallery', value)).toString()) as ImageEntry[]).filter(value => isImageInformation(value)));
             return parentImages.toSorted((a, b) => a.published.localeCompare(b.published)).map((value, index) => ({...value, commissionNumber: index + 1}));
         },
         schema: z.object({

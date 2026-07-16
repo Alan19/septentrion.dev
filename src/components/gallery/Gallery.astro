@@ -32,7 +32,13 @@ let [displayOrder, extraElement] = getDisplayFunction(images, componentWidth, ro
                         <div style={{flex: (array.length === 1 ? 1 : imageEntry.aspectRatio)}}>
                             <a style={{display: "contents"}} href={`${BASE_URL}/gallery/artwork/${imageEntry.id}`} class="image-link">
                                 <div class={"skeleton"} style={{aspectRatio: imageEntry.aspectRatio}}>
-                                    <Image inferSize transition:animate={"initial"} alt={imageEntry.title} loading={"lazy"} class={"primary-border border no-round"} src={imageEntry.webp} transition:name={`img-${imageEntry.id}`} style={{width: "100%", height: 'auto', viewTransitionClass: "gallery-img"}}/>
+                                    <Image inferSize
+                                           alt={imageEntry.title}
+                                           loading={"lazy"}
+                                           class={"primary-border border no-round"}
+                                           src={imageEntry.webp}
+                                           transition:name={`img-${imageEntry.id}`}
+                                           style={{width: "100%", height: 'auto', viewTransitionClass: "gallery-img"}}/>
                                 </div>
                             </a>
                         </div>)}

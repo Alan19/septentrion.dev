@@ -1,7 +1,6 @@
 ---
 import {destinations} from "./destinations.ts";
 import {clsx} from "clsx";
-import PersistNavigationScroll from "./PersistNavigationScroll.astro";
 import {BASE_URL} from "../../util/consts.ts";
 const path = Astro.url.pathname.split('/').find(value => value && value !== BASE_URL) ?? "";
 ---
@@ -16,7 +15,7 @@ const path = Astro.url.pathname.split('/').find(value => value && value !== BASE
         </a>
     </header>
     {destinations.slice(1).map(value => {
-        return <a href={value.path === path ? undefined : `${BASE_URL}/${value.path}`}>
+        return <a href={`${BASE_URL}/${value.path}`}>
             <i class={clsx("destination-icon", path === value.path ? 'secondary-container' : 'transparent')}>{value.icon}</i>
             <span>{value.name}</span>
         </a>;
