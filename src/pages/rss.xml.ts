@@ -6,7 +6,6 @@ import utc from "dayjs/plugin/utc";
 import MarkdownIt from 'markdown-it';
 import _ from "lodash";
 
-const parser = new MarkdownIt();
 dayjs.extend(utc);
 dayjs.extend(timezone);
 
@@ -25,7 +24,7 @@ export async function GET(context: { site: any; }) {
         items: artworks.toSorted((a, b) => a.data.commissionNumber - b.data.commissionNumber).map(post => ({
             title: post.data.title,
             pubDate: dayjs.tz(post.data.published, "America/New_York").toDate(),
-            link: `/gallery/${post.id}`,
+            link: `/gallery/artwork/${post.id}`,
             categories: post.data.tags,
             content: `Artist: ${post.data.artist}\nRating: ${_.capitalize(post.data.rating)}\nCharacter: ${post.data.characters.join(", ")}`,
             enclosure: {url: post.data.thumbnailUrl, length: 1000000, type: "image/png"}
