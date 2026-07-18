@@ -3,7 +3,8 @@
 }
 
 h1 {
-    color: var(--primary)
+    color: var(--primary);
+    font-weight: bold;
 }
 
 .adaptive-flex, .large-adaptive-flex {

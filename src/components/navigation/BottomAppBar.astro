@@ -1,17 +1,22 @@
 ---
 import {destinations} from "./destinations.ts";
 import {BASE_URL} from "../../util/consts.ts";
+import clsx from "clsx"
 
-const path = Astro.url.pathname;
+const path = Astro.url.pathname.split('/').at(1) ?? '';
+// TODO Switch to navigation drawer since there's too many destinations
 ---
 <footer class="s surface-container-high" style="position: sticky; bottom: 0" transition:name="bottom-app-bar">
     <nav style={{display: "flex", justifyContent: "space-evenly", alignItems: "stretch"}}>
         {destinations.map(value => {
-            const href = value.path === '' ? `/${BASE_URL}` : `${BASE_URL}/${value.path}`
-            return <a style={{display: "flex", flexDirection: "column", flex: "1 1 0"}} href={value.path === path.slice(1) ? undefined : href}>
-                <button class={path.slice(1) === value.path ? 'secondary-container' : 'transparent'}><i class="destination-icon">{value.icon}</i></button>
-                <span>{value.name}</span>
+            const subpath = value.matches ?? value.path;
+            return <a href={`${BASE_URL}/${value.path}`} style={{display: "flex", flexDirection: "column", flex: "1 1 0"}}>
+                <button class={clsx("destination-icon", path === subpath ? 'secondary-container' : 'transparent')}>
+                    <i>{value.icon}</i>
+                </button>
+                <span class={clsx(path === subpath && 'bold')}>{value.name}</span>
             </a>;
         })}
+
     </nav>
 </footer>

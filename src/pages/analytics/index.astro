@@ -1,10 +1,52 @@
 ---
-
 import Layout from "../../layouts/Layout.astro";
 import '../pages.css'
+import {getCollection} from "astro:content";
+import ReactCalendarHeatmap, {type ReactCalendarHeatmapValue} from "react-calendar-heatmap";
+import 'react-calendar-heatmap/dist/styles.css';
+import './heatmap.css'
+import { Tooltip } from "react-tooltip";
+
+const artworks = await getCollection('artworks');
+const dates: Array<ReactCalendarHeatmapValue<string>> = artworks.map(value => value.data.published.replaceAll('-', '/')).reduce((prev, curr) => {
+    let find = prev.find(val => val.date === curr);
+    if (find) {
+        find.count++;
+        return prev;
+    } else {
+        return prev.concat({date: curr, count: 1})
+    }
+}, [] as Array<ReactCalendarHeatmapValue<string>>)
+
+function getPublishedDateTooltip(value: ReactCalendarHeatmapValue<string> | undefined) {
+    if (value) {
+        return `${value?.count} artwork${value?.count > 1 ? "s" : ""} published on ${value?.date}`;
+    }
+}
 ---
 <Layout>
     <div class="container">
         <h1 transition:animate="slide">Analytics</h1>
+        <Tooltip client:only="react" id="my-tooltip" style={{zIndex: 9999}} />
+        <div style="display: flex; flex-direction: column; gap: 1rem" class="top-margin">
+            {Array.from(new Set(dates.map(value => value.date.split('/')[0]))).toSorted((a, b) => b.localeCompare(a)).map(value =>
+                    <article style="overflow-y: scroll; padding: 8px">
+                        <b class={'tertiary-text'}>{value}</b>
+                        <!--@ts-expect-error This prop can accept any object to inject to the react component-->
+                        <ReactCalendarHeatmap tooltipDataAttrs={(value) => {
+                                                  if (value?.count) {
+                                                      return ({'data-tooltip-content': getPublishedDateTooltip(value), "data-tooltip-id": "my-tooltip"});
+                                                  }
+                                              }}
+                                              values={dates}
+                                              startDate={new Date(`${Number(value) - 1}-12-31`)}
+                                              endDate={new Date(`${value}-12-31`)}
+                                              showWeekdayLabels={true}
+                                              classForValue={(value) => {
+                                                  const count = value?.count ?? 0;
+                                                  return count ? `color-scale-${Math.min(Number(count), 3)}` : "color-empty";
+                                              }}/>
+                    </article>)}
+        </div>
     </div>
 </Layout>

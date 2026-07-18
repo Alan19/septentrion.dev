@@ -16,8 +16,8 @@ const {page} = Astro.props;
 ---
 <Layout>
     <div class="container">
-        <h1>Gallery</h1>
-        <h2>Page {page.currentPage}</h2>
+        <h1 transition:animate="slide">Gallery</h1>
+        <h2 transition:animate="slide">Page {page.currentPage}</h2>
         <div style="display: flex; gap: 1rem">
             <!--TODO Put this into a toolbar-->
             <a class="link" style={{visibility: page.url.first ? "visible" : "hidden"}} href={page.url.first}>First</a>

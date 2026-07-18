@@ -2,7 +2,7 @@
 import {destinations} from "./destinations.ts";
 import {clsx} from "clsx";
 import {BASE_URL} from "../../util/consts.ts";
-const path = Astro.url.pathname.split('/').find(value => value && value !== BASE_URL) ?? "";
+const path = Astro.url.pathname.split('/').at(1) ?? '';
 ---
 <!--<PersistNavigationScroll />-->
 <nav class="m l left surface-container-high" style="position: sticky; top: 0; max-height: 100dvh; overflow-y: auto" id="navigation-bar" transition:name="navigation-bar">
@@ -15,9 +15,10 @@ const path = Astro.url.pathname.split('/').find(value => value && value !== BASE
         </a>
     </header>
     {destinations.slice(1).map(value => {
+        const subpath = value.matches ?? value.path;
         return <a href={`${BASE_URL}/${value.path}`}>
-            <i class={clsx("destination-icon", path === value.path ? 'secondary-container' : 'transparent')}>{value.icon}</i>
-            <span>{value.name}</span>
+            <i class={clsx("destination-icon", path === subpath ? 'secondary-container' : 'transparent')}>{value.icon}</i>
+            <span class={clsx(path === subpath && 'bold')}>{value.name}</span>
         </a>;
     })}
 </nav>
