@@ -18,7 +18,7 @@ let [displayOrder, extraElement] = getDisplayFunction(images, componentWidth, ro
 <script is:inline data-astro-rerun>
     // noinspection ES6ConvertVarToLetConst We are using var so that the script can reinject the listener for dynamic back behavior
     var feedLinks = document.querySelectorAll('.image-link')
-    console.log("Adding listeners")
+    console.debug("Adding listeners")
     feedLinks.forEach((feedLink) => {
         feedLink?.addEventListener('click', () => {
             localStorage.setItem('cameFromGallery', 'true')

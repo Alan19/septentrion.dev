@@ -4,6 +4,8 @@ import {getCollection} from "astro:content";
 import '../pages.css'
 import Layout from "../../layouts/Layout.astro";
 import Gallery from "../../components/gallery/Gallery.astro";
+import images from '../../content/gallery/images.json'
+import {navigate} from "astro:transitions/client";
 
 export const getStaticPaths = (async ({paginate}) => {
     const galleryImages = (await getCollection('artworks')).toSorted((a, b) => b.data.commissionNumber - a.data.commissionNumber);
@@ -13,10 +15,32 @@ export const getStaticPaths = (async ({paginate}) => {
 
 // All paginated data is passed on the "page" prop
 const {page} = Astro.props;
+
 ---
+<script>
+    import { navigate } from "astro:transitions/client";
+
+    const select = document.querySelector("select");
+    // Navigate to the selected option automatically.
+    if (select) {
+        select.onchange = (event) => {
+            if (event.target instanceof HTMLSelectElement) {
+                let href = event.target.value;
+                navigate(`/gallery/search?artist=${href}`);
+            }
+        };
+    }
+</script>
 <Layout>
     <div class="container">
         <h1 transition:animate="slide">Gallery</h1>
+        <div class="field label suffix border">
+            <select onchange="navigateToSearch()">
+                {Array.from(new Set(images.map(value => value.artist))).map(value => <option>{value}</option>)}
+            </select>
+            <label>Artist</label>
+            <i>arrow_drop_down</i>
+        </div>
         <h2 transition:animate="slide">Page {page.currentPage}</h2>
         <div style="display: flex; gap: 1rem">
             <!--TODO Put this into a toolbar-->
