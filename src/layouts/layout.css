@@ -11,7 +11,7 @@ h1 {
     flex-direction: column;
 }
 
-#content {
+#content, #side {
     flex: 1;
     padding: 2rem;
 }
@@ -20,12 +20,18 @@ h1 {
     .adaptive-flex {
         flex-direction: row;
     }
-    #content {
+    #content, #side {
         flex-direction: row;
         margin-right: 1rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
         border-radius: 1rem;
+    }
+    #side {
+        height: calc(100dvh - 2rem);
+        position: sticky;
+        top: 1rem;
+        width: 400px;
     }
 }
 

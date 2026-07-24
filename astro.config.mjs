@@ -29,8 +29,5 @@ export default defineConfig({
     },
     build: {
         concurrency: 4
-    },
-    redirects: {
-        "/gallery": "/gallery/1"
     }
 });

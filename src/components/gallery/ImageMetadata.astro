@@ -9,22 +9,22 @@ type Props = {
     published: string
 }
 const {artist, rating, tags, characters, published} = Astro.props;
-const artistUrl = !artist.includes('.') ? `https://x.com/${artist}` : `https://bsky.app/profile/${artist}`
+const artistUrl = !artist.includes('.') ? `https://x.com/${artist}` : `https://bsky.app/profile/${artist.substring(1)}`
 ---
 <div>Artist: <a class="link" href={artistUrl} target="_blank" rel="noopener noreferrer">{artist}</a></div>
 <div>Rating: {_.capitalize(rating)}</div>
 <div>Published: {published}</div>
 <h6>Characters</h6>
-<nav class="scroll tiny-space" style="margin-top: 0">
+<div style="margin-top: 0; display: flex; flex-wrap: wrap; gap: .5rem">
     {characters.map(tag =>
             <button class="chip">
                 <span>{tag}</span>
             </button>)}
-</nav>
+</div>
 <h6>Tags</h6>
-<nav class="scroll tiny-space" style="margin-top: 0">
+<div style="margin-top: 0; display: flex; flex-wrap: wrap; gap: .5rem">
     {tags.map(tag =>
             <button class="chip">
                 <span>{tag}</span>
             </button>)}
-</nav>
+</div>

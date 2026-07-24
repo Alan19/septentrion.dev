@@ -5,6 +5,8 @@ import {Image} from "astro:assets";
 import type {InferEntrySchema} from "astro:content";
 import {BASE_URL} from "../../util/consts.ts";
 import './skeleton.css'
+import {clsx} from "clsx";
+import {Rating} from "../../util/images.ts";
 type Props = {
     images: InferEntrySchema<"artworks">[];
     componentWidth: number;
@@ -14,6 +16,18 @@ type Props = {
 }
 const {images, itemSpacing = 16, targetRowHeight, rowHeightTolerance = .15, componentWidth} = Astro.props;
 let [displayOrder, extraElement] = getDisplayFunction(images, componentWidth, rowHeightTolerance, targetRowHeight, itemSpacing);
+
+function getBorderForRating(rating: Rating) {
+    switch (rating) {
+        case Rating.Mainstream:
+        case Rating.General:
+            return "primary-border"
+        case Rating.Sensitive:
+            return "yellow-border";
+        case Rating.Mature:
+            return "error-border";
+    }
+}
 ---
 <script is:inline data-astro-rerun>
     // noinspection ES6ConvertVarToLetConst We are using var so that the script can reinject the listener for dynamic back behavior
@@ -31,15 +45,14 @@ let [displayOrder, extraElement] = getDisplayFunction(images, componentWidth, ro
                 {value.map((imageEntry, _index, array) =>
                         <div style={{flex: (array.length === 1 ? 1 : imageEntry.aspectRatio)}}>
                             <a style={{display: "contents"}} href={`${BASE_URL}/gallery/artwork/${imageEntry.id}`} class="image-link">
-                                <div class={"skeleton"} style={{aspectRatio: imageEntry.aspectRatio}}>
-                                    <Image inferSize
+                                    <Image inferSize={true}
                                            alt={imageEntry.title}
-                                           loading={"lazy"}
-                                           class={"primary-border border no-round"}
+                                           loading={"eager"}
+                                           class={clsx("border no-round skeleton", getBorderForRating(imageEntry.rating))}
                                            src={imageEntry.webp}
                                            transition:name={`img-${imageEntry.id}`}
-                                           style={{width: "100%", height: 'auto', viewTransitionClass: "gallery-img"}}/>
-                                </div>
+                                           transition:animate={"fade"}
+                                           style={{width: "100%", height: "fit-content", viewTransitionClass: "gallery-img", aspectRatio: imageEntry.aspectRatio}}/>
                             </a>
                         </div>)}
                 {(index === array.length - 1) && !!(extraElement) &&

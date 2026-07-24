@@ -8,6 +8,8 @@ import {clsx} from "clsx";
 import _ from "lodash";
 import ImageMetadata from "../../../components/gallery/ImageMetadata.astro";
 import Layout from "../../../layouts/Layout.astro";
+import {Rating} from "../../../util/images.ts";
+import {ArtistFilter} from "../../../components/gallery/ArtistFilter.tsx";
 
 
 export async function getStaticPaths() {
@@ -59,11 +61,12 @@ const {id} = Astro.params;
             <a target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={href}>
                 <Image inferSize={true} alt={title} class={clsx("artwork")} src={webp} transition:name={`img-${id}`} transition:animate={"fade"} style={{viewTransitionClass: "gallery-img", flex: 1}}/>
             </a>
-            <hr class="vertical l" style="height: 100%"/>
-            <div class="left-padding right-padding s l artwork-info">
-                <h5>Artwork Info</h5>
-                <ImageMetadata rating={rating} artist={artist} characters={characters} tags={tags} published={published}/>
-            </div>
+        </div>
+    </div>
+    <div id="side" class="surface" slot="side">
+        <div class="filter-side-sheet">
+            <h5>Artwork Info</h5>
+            <ImageMetadata rating={rating} artist={artist} characters={characters} tags={tags} published={published}/>
         </div>
     </div>
 </Layout>

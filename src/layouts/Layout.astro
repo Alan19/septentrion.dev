@@ -27,6 +27,9 @@ import icon from "../assets/icon.webp"
     <div id="content" class="surface">
         <slot/>
     </div>
+    <div >
+            <slot name="side" />
+    </div>
     <BottomAppBar transition:persist  />
 </div>
 </body>

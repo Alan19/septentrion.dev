@@ -1,18 +1,18 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import images from "../../content/gallery/images.json";
-import Gallery from "../../components/gallery/Gallery.astro";
 import {getCollection} from "astro:content";
-import { FilteredGallery } from "../../components/gallery/FilteredGallery";
-import { ArtistFilter } from "../../components/gallery/ArtistFilter";
+import {FilteredGallery} from "../../components/gallery/FilteredGallery";
+import {ArtistFilter} from "../../components/gallery/ArtistFilter";
 
 const artworks = (await getCollection('artworks')).toSorted((a, b) => b.data.commissionNumber - a.data.commissionNumber)
 ---
 <Layout>
     <div class="container">
-        <h1 transition:animate="slide">Gallery</h1>
-        <ArtistFilter artists={Array.from(new Set(artworks.map(value => value.data.artist)))} client:only="react" />
-        <FilteredGallery images={artworks.map(value => value.data)} componentWidth={900} targetRowHeight={300} client:only="react" />
+        <h1>Gallery</h1>
+        <div style="height: 48px">
+            <ArtistFilter artists={Array.from(new Set(artworks.map(value => value.data.artist)))} client:only="react"/>
+        </div>
+        <FilteredGallery images={artworks.map(value => value.data)} componentWidth={900} targetRowHeight={300} client:only="react"/>
     </div>
 
 </Layout>

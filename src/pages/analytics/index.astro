@@ -30,7 +30,7 @@ function getPublishedDateTooltip(value: ReactCalendarHeatmapValue<string> | unde
         <Tooltip client:only="react" id="my-tooltip" style={{zIndex: 9999}} />
         <div style="display: flex; flex-direction: column; gap: 1rem" class="top-margin">
             {Array.from(new Set(dates.map(value => value.date.split('/')[0]))).toSorted((a, b) => b.localeCompare(a)).map(value =>
-                    <article style="overflow-y: scroll; padding: 8px">
+                    <article style="overflow-x: auto; padding: 8px">
                         <b class={'tertiary-text'}>{value}</b>
                         <!--@ts-expect-error This prop can accept any object to inject to the react component-->
                         <ReactCalendarHeatmap tooltipDataAttrs={(value) => {
