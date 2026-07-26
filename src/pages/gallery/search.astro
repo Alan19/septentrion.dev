@@ -2,7 +2,6 @@
 import Layout from "../../layouts/Layout.astro";
 import {getCollection} from "astro:content";
 import {FilteredGallery} from "../../components/gallery/FilteredGallery";
-import {ArtistFilter} from "../../components/gallery/ArtistFilter";
 import { GalleryFilter } from "../../components/gallery/GalleryFilter";
 import {Rating} from "../../util/images.ts";
 import _ from "lodash";
@@ -15,5 +14,5 @@ const artists =  _.uniq((await getCollection('artworks')).map(value => value.dat
         <h1>Gallery</h1>
         <FilteredGallery images={artworks.map(value => value.data)} componentWidth={900} targetRowHeight={300} client:only="react"/>
     </div>
-    <GalleryFilter artists={artists} rating={Rating.Mainstream} slot={"side"} client:only="react"  />
+    <GalleryFilter artists={artists} slot={"side"} client:only="react"  />
 </Layout>

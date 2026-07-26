@@ -1,11 +1,11 @@
-import { Rating } from "../../util/images.ts";
+import {Rating} from "../../util/images.ts";
 import _ from "lodash";
-import { persistentAtom } from "@nanostores/persistent";
-import { useStore } from "@nanostores/react";
-import { ArtistFilter } from "./ArtistFilter.tsx";
-import { clsx } from "clsx";
-import { useEffect, useState } from "react";
-import { navigate } from "astro:transitions/client";
+import {persistentAtom} from "@nanostores/persistent";
+import {useStore} from "@nanostores/react";
+import {clsx} from "clsx";
+import {navigate} from "astro:transitions/client";
+import {useSearchParamsAstro} from "../../util/useSearchParamsAstro.ts";
+import {func} from "vscode-languageserver/lib/common/utils/is";
 
 const isOpen = persistentAtom<string>('filter-sheet-open', "false");
 
@@ -18,48 +18,86 @@ export function FilterButton() {
     </button>
 }
 
-export function GalleryFilterContents(props: Readonly<{ artists: string[]; rating: Rating }>) {
-    let [currentCharacter, setCurrentCharacter] = useState("");
+export function GalleryFilterContents(props: Readonly<{ artists: string[]; rating?: Rating }>) {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    // Track this when we navigate from non-search to search
+    if (props.rating) {
+        urlSearchParams.set('rating', props.rating)
+    }
 
-    useEffect(() => {
-        setCurrentCharacter(new URLSearchParams(window.location.search).get("character") ?? "");
-    }, [])
+    const getCurrentCharacter = () => urlSearchParams.get('character');
+    const getCurrentRating = () => props.rating ?? urlSearchParams.get('rating');
+    const getCurrentArtist = () => urlSearchParams.get('artist');
 
-    function selectCharacter(character: string) {
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get("character") === character) {
-            urlParams.delete("character");
+
+    const inSearchMode = () => {
+        return getCurrentCharacter() || getCurrentArtist();
+    }
+
+    console.debug(getCurrentRating())
+
+    function handleCharacterUpdate(character: string) {
+        if (getCurrentCharacter() === character) {
+            urlSearchParams.delete('character')
+        } else {
+            urlSearchParams.set('character', character)
         }
-        else {
-            urlParams.set("character", character);
+        if (inSearchMode()) {
+            navigate('/gallery/search?' + urlSearchParams.toString());
+        } else {
+            navigate('/gallery/' + getCurrentRating())
         }
-        if (urlParams.keys().toArray().length) {
-            navigate('/gallery/search?' + urlParams.toString())
+    }
+
+    function handleRatingUpdate(rating: Rating) {
+        if (getCurrentCharacter() || getCurrentArtist()) {
+            urlSearchParams.set('rating', rating)
+            navigate('/gallery/search?' + urlSearchParams.toString());
+        } else {
+            navigate('/gallery/' + rating)
         }
-        else {
-            navigate('/gallery/mainstream')
+    }
+
+    function handleArtistUpdate(artist: string) {
+        if (!artist) {
+            urlSearchParams.delete('artist')
+        } else {
+            urlSearchParams.set('artist', artist)
+        }
+        if (inSearchMode()) {
+            navigate('/gallery/search?' + urlSearchParams.toString());
+        } else {
+            navigate('/gallery/' + getCurrentRating())
         }
     }
 
     return <>
         <h3 className="secondary-text">Filters</h3>
         <h5>Artist</h5>
-        <ArtistFilter artists={props.artists} />
+        <div className="field label suffix border">
+            <select value={getCurrentArtist() ?? ''} onChange={event => handleArtistUpdate(event.target.value)}>
+                <option value={''}>All</option>
+                {props.artists.map(value => <option key={value} value={value}>{value}</option>)}
+            </select>
+            <label>Artist</label>
+            <i>arrow_drop_down</i>
+        </div>
         <h5>Rating</h5>
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            {Object.values(Rating).map(value => <a href={`/gallery/${value}`} key={value}>
-                <button className={clsx("chip small", (props.rating === value) && "primary primary-border")} style={{ viewTransitionName: "none" }}>{_.capitalize(value)}</button>
-            </a>)}
+        <div style={{display: "flex", gap: 8, flexWrap: "wrap"}}>
+            {Object.values(Rating).map(value => <button onClick={() => handleRatingUpdate(value)}
+                                                        key={value}
+                                                        className={clsx("chip small", (getCurrentRating() === value) && "primary primary-border")}
+                                                        style={{viewTransitionName: "none"}}>{_.capitalize(value)}</button>)}
         </div>
         <h5>Characters</h5>
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            {['Alcor', 'Rayan', 'Giove', 'Castor', 'Soma', 'Wilton'].map(value => <button onClick={() => selectCharacter(value)} key={value} className={clsx("chip small", currentCharacter === value && "primary primary-border")}>{_.capitalize(value)}</button>)}
+        <div style={{display: "flex", gap: 8, flexWrap: "wrap"}}>
+            {['Alcor', 'Rayan', 'Giove', 'Castor', 'Soma', 'Wilton'].map(value => <button onClick={() => handleCharacterUpdate(value)} key={value} className={clsx("chip small", getCurrentCharacter() === value && "primary primary-border")}>{_.capitalize(value)}</button>)}
         </div>
     </>;
 }
 
-export function GalleryFilter(props: Readonly<{ artists: string[], rating: Rating }>) {
+export function GalleryFilter(props: Readonly<{ artists: string[], rating?: Rating }>) {
     return <div id="side" className="surface l">
-        <GalleryFilterContents artists={props.artists} rating={props.rating} />
+        <GalleryFilterContents artists={props.artists} rating={props.rating}/>
     </div>
 }

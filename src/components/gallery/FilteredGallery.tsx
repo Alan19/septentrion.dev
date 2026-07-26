@@ -3,6 +3,7 @@ import type {InferEntrySchema} from "astro:content";
 import {BASE_URL} from "../../util/consts.ts";
 import '../../pages/pages.css';
 import '../../pages/gallery/artwork/artwork.css';
+import {Rating, ratingToNumber} from "../../util/images.ts";
 
 export function FilteredGallery({componentWidth, images, itemSpacing = 8, rowHeightTolerance = .15, targetRowHeight}: Readonly<{
     images: InferEntrySchema<"artworks">[];
@@ -15,6 +16,7 @@ export function FilteredGallery({componentWidth, images, itemSpacing = 8, rowHei
     const searchParams = new URLSearchParams(paramsString);
     const artist = searchParams.get('artist');
     const character = searchParams.get('character');
+    const rating = searchParams.get('rating');
     let [displayOrder, extraElement] = getDisplayFunction(images.filter(value => filterImages(value)), componentWidth, rowHeightTolerance, targetRowHeight, itemSpacing);
     return <div style={{display: "flex", flexDirection: "column", gap: itemSpacing}}>
             {displayOrder.map((value, index, array) => <div style={{display: "flex", gap: itemSpacing}}>
@@ -32,6 +34,6 @@ export function FilteredGallery({componentWidth, images, itemSpacing = 8, rowHei
         </div>
 
     function filterImages(value: InferEntrySchema<"artworks">): boolean {
-        return (!artist || (artist === value.artist)) && (!character || (value.characters.includes(character)))
+        return (!artist || artist === value.artist) && (!character || value.characters.includes(character)) && (!rating || ratingToNumber(value.rating) <= ratingToNumber(rating as Rating))
     }
 }

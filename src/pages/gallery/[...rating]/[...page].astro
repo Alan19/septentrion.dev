@@ -3,31 +3,17 @@ import type {GetStaticPaths} from "astro";
 import {getCollection} from "astro:content";
 import '../../pages.css'
 import './gallery.css'
-import {Rating} from "../../../util/images.ts";
+import {Rating, ratingToNumber} from "../../../util/images.ts";
 import Layout from "../../../layouts/Layout.astro";
 import Gallery from "../../../components/gallery/Gallery.astro";
 import _ from "lodash";
-import {FilterButton, GalleryFilter, GalleryFilterContents} from "../../../components/gallery/GalleryFilter.tsx";
+import {GalleryFilter, GalleryFilterContents} from "../../../components/gallery/GalleryFilter.tsx";
 
 const artists = _.uniq((await getCollection('artworks')).map(value => value.data.artist));
 
 export const getStaticPaths = (async ({paginate}) => {
     const galleryImages = (await getCollection('artworks')).toSorted((a, b) => b.data.commissionNumber - a.data.commissionNumber);
 
-    function ratingToNumber(rating: Rating): number {
-        switch (rating) {
-            case Rating.Mainstream:
-                return 0;
-            case Rating.General:
-                return 1;
-            case Rating.Sensitive:
-                return 2;
-            case Rating.Mature:
-                return 3;
-        }
-    }
-
-    // Generate pages from our array of astronauts, with 2 to a page
     return Object.values(Rating).flatMap(rating => {
         let filteredPosts = galleryImages.filter(image => ratingToNumber(image.data.rating) <= ratingToNumber(rating));
         return paginate(filteredPosts, {pageSize: 16, params: {rating}});
@@ -40,7 +26,7 @@ const params = Astro.params;
 ---
 <Layout>
     <div class="container" style="width: 100%">
-            <h1 style="flex: 1">Gallery</h1>
+        <h1 style="flex: 1">Gallery</h1>
         <h2>Page {page.currentPage}</h2>
         <div style="display: flex; gap: 1rem">
             <!--TODO Put this into a toolbar-->
@@ -59,8 +45,8 @@ const params = Astro.params;
             <Gallery images={page.data.map(value => value.data)} componentWidth={350} targetRowHeight={384} rowHeightTolerance={.5}/>
         </div>
     </div>
-    <GalleryFilter slot="side" artists={artists} rating={params.rating} transition:persist client:load />
-    <dialog class="right s m" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto" >
-        <GalleryFilterContents client:load client:only="react" artists={artists} rating={params.rating}/>
+    <GalleryFilter slot="side" artists={artists} rating={params.rating} transition:persist={true} client:only="react"/>
+    <dialog class="right s m" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto">
+        <GalleryFilterContents client:only="react" artists={artists} rating={params.rating}/>
     </dialog>
 </Layout>

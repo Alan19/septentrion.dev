@@ -18,6 +18,18 @@ export enum Rating {
     Mature = 'mature'
 }
 
+export function ratingToNumber(rating: Rating): number {
+    switch (rating) {
+        case Rating.Mainstream:
+            return 0;
+        case Rating.General:
+            return 1;
+        case Rating.Sensitive:
+            return 2;
+        case Rating.Mature:
+            return 3;
+    }
+}
 
 export function getParentImage(id: string, imageEntries: ImageEntry[]): ImageInformation | undefined {
     const entry = imageEntries.find(value => value.id === id);
