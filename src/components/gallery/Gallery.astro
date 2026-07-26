@@ -45,8 +45,7 @@ function getBorderForRating(rating: Rating) {
                 {value.map((imageEntry, _index, array) =>
                         <div style={{flex: (array.length === 1 ? 1 : imageEntry.aspectRatio)}}>
                             <a style={{display: "contents"}} href={`${BASE_URL}/gallery/artwork/${imageEntry.id}`} class="image-link">
-                                    <Image inferSize={true}
-                                           alt={imageEntry.title}
+                                    <img alt={imageEntry.title}
                                            loading={"eager"}
                                            class={clsx("border no-round skeleton", getBorderForRating(imageEntry.rating))}
                                            src={imageEntry.webp}

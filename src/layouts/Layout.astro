@@ -23,14 +23,14 @@ import icon from "../assets/icon.webp"
 </head>
 <body class={"auto"}>
 <div style="display: flex;min-height: 100dvh" class="surface-container-high adaptive-flex">
-    <NavigationRail  />
+    <NavigationRail/>
     <div id="content" class="surface">
         <slot/>
     </div>
-    <div >
-            <slot name="side" />
+    <div>
+        <slot name="side" />
     </div>
-    <BottomAppBar transition:persist  />
+    <BottomAppBar transition:persist/>
 </div>
 </body>
 </html>

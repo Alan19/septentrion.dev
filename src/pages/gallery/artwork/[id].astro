@@ -1,16 +1,12 @@
 ---
-import {Image} from "astro:assets";
 import '../../pages.css'
-import '../artwork.css'
+import './artwork.css'
 import {BASE_URL} from "../../../util/consts.ts";
 import {getCollection} from "astro:content";
 import {clsx} from "clsx";
 import _ from "lodash";
 import ImageMetadata from "../../../components/gallery/ImageMetadata.astro";
 import Layout from "../../../layouts/Layout.astro";
-import {Rating} from "../../../util/images.ts";
-import {ArtistFilter} from "../../../components/gallery/ArtistFilter.tsx";
-
 
 export async function getStaticPaths() {
     const collection = await getCollection('artworks')
@@ -25,7 +21,7 @@ const {webp, title, href, aspectRatio, tags, artist, characters, rating, publish
 const {id} = Astro.params;
 ---
 <script>
-    import { supportsViewTransitions } from 'astro:transitions/client'
+    import {supportsViewTransitions} from 'astro:transitions/client'
 
     if (supportsViewTransitions) {
         document.addEventListener('astro:page-load', callback)
@@ -50,7 +46,7 @@ const {id} = Astro.params;
     <div class="container">
         <div style="display: flex; align-items: center; gap: .5rem">
             <nav style="gap: .05rem; overflow-y: hidden; flex: 1" class="round surface-container padding large-text">
-                <a class="link underline gallery-link" href={`${BASE_URL}/gallery/1`}>Gallery</a>
+                <a class="link underline gallery-link" href={`${BASE_URL}/gallery/mainstream`}>Gallery</a>
                 <i>chevron_right</i>
                 <span class="bold">{title}</span>
                 <small class="medium-opacity bold" style="margin-left: .5rem">(#{commissionNumber})</small>
@@ -58,19 +54,28 @@ const {id} = Astro.params;
             <button class="m circle transparent large" popovertarget="metadata-dialog" popovertargetaction="show"><i>info</i></button>
         </div>
         <div style="display: flex; gap: 1rem" class="image-div">
-            <a target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={href}>
-                <Image inferSize={true} alt={title} class={clsx("artwork")} src={webp} transition:name={`img-${id}`} transition:animate={"fade"} style={{viewTransitionClass: "gallery-img", flex: 1}}/>
-            </a>
+            {href ? <a target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={href}>
+                <img alt={title}
+                     class={clsx("artwork")}
+                     src={webp}
+                     transition:name={`img-${id}`}
+                     style={{viewTransitionClass: "gallery-img", flex: 1}}/>
+            </a> : <img alt={title}
+                        class={clsx("artwork")}
+                        src={webp}
+                        transition:name={`img-${id}`}
+                        style={{viewTransitionClass: "gallery-img", flex: 1}}/>}
+
         </div>
     </div>
-    <div id="side" class="surface" slot="side">
+    <div id="side" class="surface s l" slot="side">
         <div class="filter-side-sheet">
             <h5>Artwork Info</h5>
             <ImageMetadata rating={rating} artist={artist} characters={characters} tags={tags} published={published}/>
         </div>
     </div>
 </Layout>
-<dialog class="right m s" style="width: 320px" id="metadata-dialog" popover="auto">
+<dialog class="right m" style="width: 320px" id="metadata-dialog" popover="auto">
     <div style="display: flex; gap: 1rem; margin-bottom: 1rem">
         <h5 style="flex: 1">Artwork Info</h5>
         <button class="transparent circle" popovertarget="metadata-dialog" popovertargetaction="hide"><i>close</i></button>

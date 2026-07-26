@@ -2,18 +2,20 @@ import {getDisplayFunction} from "./getDisplayOrder.ts";
 import type {InferEntrySchema} from "astro:content";
 import {BASE_URL} from "../../util/consts.ts";
 import '../../pages/pages.css';
-import '../../pages/gallery/artwork.css';
+import '../../pages/gallery/artwork/artwork.css';
 
-export function FilteredGallery({componentWidth, images, itemSpacing = 8, rowHeightTolerance = .15, targetRowHeight}: {
+export function FilteredGallery({componentWidth, images, itemSpacing = 8, rowHeightTolerance = .15, targetRowHeight}: Readonly<{
     images: InferEntrySchema<"artworks">[];
     componentWidth: number;
     targetRowHeight: number;
     rowHeightTolerance?: number;
     itemSpacing?: number;
-}) {
+}>) {
     const paramsString = window.location.search;
     const searchParams = new URLSearchParams(paramsString);
-    let [displayOrder, extraElement] = getDisplayFunction(images.filter(value => value.artist === searchParams.get('artist')), componentWidth, rowHeightTolerance, targetRowHeight, itemSpacing);
+    const artist = searchParams.get('artist');
+    const character = searchParams.get('character');
+    let [displayOrder, extraElement] = getDisplayFunction(images.filter(value => filterImages(value)), componentWidth, rowHeightTolerance, targetRowHeight, itemSpacing);
     return <div style={{display: "flex", flexDirection: "column", gap: itemSpacing}}>
             {displayOrder.map((value, index, array) => <div style={{display: "flex", gap: itemSpacing}}>
                 {value.map((imageEntry, _index, array) =>
@@ -28,4 +30,8 @@ export function FilteredGallery({componentWidth, images, itemSpacing = 8, rowHei
                     <div style={{flex: extraElement}}></div>}
             </div>)}
         </div>
+
+    function filterImages(value: InferEntrySchema<"artworks">): boolean {
+        return (!artist || (artist === value.artist)) && (!character || (value.characters.includes(character)))
+    }
 }

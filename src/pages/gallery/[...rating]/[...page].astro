@@ -3,14 +3,13 @@ import type {GetStaticPaths} from "astro";
 import {getCollection} from "astro:content";
 import '../../pages.css'
 import './gallery.css'
-import {ArtistFilter} from "../../../components/gallery/ArtistFilter.tsx";
 import {Rating} from "../../../util/images.ts";
 import Layout from "../../../layouts/Layout.astro";
 import Gallery from "../../../components/gallery/Gallery.astro";
 import _ from "lodash";
-import ImageMetadata from "../../../components/gallery/ImageMetadata.astro";
+import {FilterButton, GalleryFilter, GalleryFilterContents} from "../../../components/gallery/GalleryFilter.tsx";
 
-const artworks = Array.from(new Set((await getCollection('artworks')).map(value => value.data.artist)));
+const artists = _.uniq((await getCollection('artworks')).map(value => value.data.artist));
 
 export const getStaticPaths = (async ({paginate}) => {
     const galleryImages = (await getCollection('artworks')).toSorted((a, b) => b.data.commissionNumber - a.data.commissionNumber);
@@ -41,10 +40,7 @@ const params = Astro.params;
 ---
 <Layout>
     <div class="container" style="width: 100%">
-        <div style="display: flex">
             <h1 style="flex: 1">Gallery</h1>
-            <!--<button id="filter-button" class="transparent circle primary" popovertarget="filter-dialog"><i class="fill">filter_alt</i></button>-->
-        </div>
         <h2>Page {page.currentPage}</h2>
         <div style="display: flex; gap: 1rem">
             <!--TODO Put this into a toolbar-->
@@ -54,7 +50,7 @@ const params = Astro.params;
             <a class="link" style={{visibility: page.url.last ? "visible" : "hidden"}} href={page.url.last}>Last</a>
         </div>
         <div class="l">
-            <Gallery images={page.data.map(value => value.data)} componentWidth={993} targetRowHeight={300} rowHeightTolerance={.5}/>
+            <Gallery images={page.data.map(value => value.data)} componentWidth={817} targetRowHeight={300} rowHeightTolerance={.5}/>
         </div>
         <div class="m">
             <Gallery images={page.data.map(value => value.data)} componentWidth={601} targetRowHeight={384} rowHeightTolerance={.5}/>
@@ -63,38 +59,8 @@ const params = Astro.params;
             <Gallery images={page.data.map(value => value.data)} componentWidth={350} targetRowHeight={384} rowHeightTolerance={.5}/>
         </div>
     </div>
-    <div id="side" class="surface l" slot="side">
-        <div class="filter-side-sheet">
-            <h3 class="secondary-text">Filters</h3>
-            <h5>Artist</h5>
-            <ArtistFilter client:load artists={artworks}/>
-            <h5>Rating</h5>
-            <div style="display: flex; gap: 8px; flex-wrap: wrap">
-                {Object.values(Rating).map(value => <a href={`/gallery/${value}`}>
-                    <button class="chip small">{_.capitalize(value)}</button>
-                </a>)}
-            </div>
-            <h5>Characters</h5>
-            <div style="display: flex; gap: 8px; flex-wrap: wrap">
-                {['Alcor', 'Rayan', 'Giove', 'Castor', 'Soma', 'Wilton'].map(value =>
-                        <button class="chip small">{_.capitalize(value)}</button>)}
-            </div>
-        </div>
-    </div>
-    <dialog class="right s m" style="width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto">
-        <h3 class="secondary-text">Filters</h3>
-        <h5>Artist</h5>
-        <ArtistFilter client:load artists={artworks}/>
-        <h5>Rating</h5>
-        <div style="display: flex; gap: 8px; flex-wrap: wrap">
-            {Object.values(Rating).map(value => <a href={`/gallery/${value}`}>
-                <button class="chip small">{_.capitalize(value)}</button>
-            </a>)}
-        </div>
-        <h5>Characters</h5>
-        <div style="display: flex; gap: 8px; flex-wrap: wrap">
-            {['Alcor', 'Rayan', 'Giove', 'Castor', 'Soma', 'Wilton'].map(value =>
-                    <button class="chip small">{_.capitalize(value)}</button>)}
-        </div>
+    <GalleryFilter slot="side" artists={artists} rating={params.rating} transition:persist client:load />
+    <dialog class="right s m" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto" >
+        <GalleryFilterContents client:load client:only="react" artists={artists} rating={params.rating}/>
     </dialog>
 </Layout>
