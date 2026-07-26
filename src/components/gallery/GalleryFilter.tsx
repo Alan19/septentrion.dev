@@ -4,6 +4,7 @@ import {persistentAtom} from "@nanostores/persistent";
 import {useStore} from "@nanostores/react";
 import {clsx} from "clsx";
 import {navigate} from "astro:transitions/client";
+import { isDev } from "../../util/consts.ts";
 
 const isOpen = persistentAtom<string>('filter-sheet-open', "false");
 
@@ -82,7 +83,7 @@ export function GalleryFilterContents(props: Readonly<{ artists: string[]; ratin
         </div>
         <h5>Rating</h5>
         <div style={{display: "flex", gap: 8, flexWrap: "wrap"}}>
-            {Object.values(Rating).map(value => <button onClick={() => handleRatingUpdate(value)}
+            {Object.values(Rating).filter(value => value !== Rating.Mature || value === Rating.Mature && isDev).map(value => <button onClick={() => handleRatingUpdate(value)}
                                                         key={value}
                                                         className={clsx("chip small", (getCurrentRating() === value) && "primary primary-border")}
                                                         style={{viewTransitionName: "none"}}>{_.capitalize(value)}</button>)}

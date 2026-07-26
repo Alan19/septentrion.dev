@@ -8,13 +8,14 @@ import Layout from "../../../layouts/Layout.astro";
 import Gallery from "../../../components/gallery/Gallery.astro";
 import _ from "lodash";
 import {GalleryFilterContents} from "../../../components/gallery/GalleryFilter.tsx";
+import {isDev} from "../../../util/consts.ts";
 
 const artists = _.uniq((await getCollection('artworks')).map(value => value.data.artist));
 
 export const getStaticPaths = (async ({paginate}) => {
     const galleryImages = (await getCollection('artworks')).toSorted((a, b) => b.data.commissionNumber - a.data.commissionNumber);
 
-    return Object.values(Rating).flatMap(rating => {
+    return Object.values(Rating).filter(value => value !== Rating.Mature || value === Rating.Mature && isDev).flatMap(rating => {
         let filteredPosts = galleryImages.filter(image => ratingToNumber(image.data.rating) <= ratingToNumber(rating));
         return paginate(filteredPosts, {pageSize: 16, params: {rating}});
     })
