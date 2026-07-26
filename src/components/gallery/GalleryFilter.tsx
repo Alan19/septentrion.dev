@@ -4,8 +4,6 @@ import {persistentAtom} from "@nanostores/persistent";
 import {useStore} from "@nanostores/react";
 import {clsx} from "clsx";
 import {navigate} from "astro:transitions/client";
-import {useSearchParamsAstro} from "../../util/useSearchParamsAstro.ts";
-import {func} from "vscode-languageserver/lib/common/utils/is";
 
 const isOpen = persistentAtom<string>('filter-sheet-open', "false");
 
@@ -77,7 +75,7 @@ export function GalleryFilterContents(props: Readonly<{ artists: string[]; ratin
         <div className="field label suffix border">
             <select value={getCurrentArtist() ?? ''} onChange={event => handleArtistUpdate(event.target.value)}>
                 <option value={''}>All</option>
-                {props.artists.map(value => <option key={value} value={value}>{value}</option>)}
+                {props.artists.toSorted((a, b) => a.localeCompare(b)).map(value => <option key={value} value={value}>{value}</option>)}
             </select>
             <label>Artist</label>
             <i>arrow_drop_down</i>
