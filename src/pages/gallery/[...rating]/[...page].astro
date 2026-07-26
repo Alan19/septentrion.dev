@@ -7,7 +7,7 @@ import {Rating, ratingToNumber} from "../../../util/images.ts";
 import Layout from "../../../layouts/Layout.astro";
 import Gallery from "../../../components/gallery/Gallery.astro";
 import _ from "lodash";
-import {GalleryFilter, GalleryFilterContents} from "../../../components/gallery/GalleryFilter.tsx";
+import {GalleryFilterContents} from "../../../components/gallery/GalleryFilter.tsx";
 
 const artists = _.uniq((await getCollection('artworks')).map(value => value.data.artist));
 
@@ -45,7 +45,9 @@ const params = Astro.params;
             <Gallery images={page.data.map(value => value.data)} componentWidth={350} targetRowHeight={384} rowHeightTolerance={.5}/>
         </div>
     </div>
-    <GalleryFilter slot="side" artists={artists} rating={params.rating} transition:persist={true} client:only="react"/>
+    <div id="side" class="surface l" slot="side">
+        <GalleryFilterContents artists={artists} rating={params.rating} transition:persist={true} client:only="react"/>
+    </div>
     <dialog class="right s m" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto">
         <GalleryFilterContents client:only="react" artists={artists} rating={params.rating}/>
     </dialog>

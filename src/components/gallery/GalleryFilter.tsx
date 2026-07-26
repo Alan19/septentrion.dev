@@ -95,9 +95,3 @@ export function GalleryFilterContents(props: Readonly<{ artists: string[]; ratin
         </div>
     </>;
 }
-
-export function GalleryFilter(props: Readonly<{ artists: string[], rating?: Rating }>) {
-    return <div id="side" className="surface l">
-        <GalleryFilterContents artists={props.artists} rating={props.rating}/>
-    </div>
-}
