@@ -44,3 +44,11 @@ h1 {
 ::view-transition-group(bottom-app-bar) {
     z-index: 1;
 }
+
+
+body:has(:popover-open) {
+    .container, #navigation-bar {
+        pointer-events: none;
+        touch-action: none;
+    }
+}

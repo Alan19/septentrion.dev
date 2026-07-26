@@ -10,10 +10,19 @@ const artists = _.uniq((await getCollection('artworks')).map(value => value.data
 ---
 <Layout>
     <div class="container">
-        <h1>Gallery</h1>
+        <div style="display: flex">
+            <h1 style="flex: 1">Gallery</h1>
+            <button id="filter-button" class={"transparent circle s m"} popovertarget="filter-dialog">
+                <i>filter_alt</i>
+            </button>
+        </div>
+        <h3>Search Results</h3>
         <FilteredGallery images={artworks.map(value => value.data)} componentWidth={900} targetRowHeight={300} client:only="react"/>
     </div>
     <div id="side" class="surface l" slot="side">
         <GalleryFilterContents artists={artists} client:only="react"/>
     </div>
+    <dialog class="right s m" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto" transition:name="filter-dialog">
+        <GalleryFilterContents client:only="react" artists={artists} />
+    </dialog>
 </Layout>

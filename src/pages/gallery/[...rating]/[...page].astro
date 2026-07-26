@@ -9,6 +9,7 @@ import Gallery from "../../../components/gallery/Gallery.astro";
 import _ from "lodash";
 import {GalleryFilterContents} from "../../../components/gallery/GalleryFilter.tsx";
 import {isDev} from "../../../util/consts.ts";
+import {clsx} from "clsx";
 
 const artists = _.uniq((await getCollection('artworks')).map(value => value.data.artist));
 
@@ -27,7 +28,12 @@ const params = Astro.params;
 ---
 <Layout>
     <div class="container" style="width: 100%">
-        <h1 style="flex: 1">Gallery</h1>
+        <div style="display: flex">
+            <h1 style="flex: 1">Gallery</h1>
+            <button id="filter-button" class={"transparent circle s m"} popovertarget="filter-dialog">
+                <i>filter_alt</i>
+            </button>
+        </div>
         <h2>Page {page.currentPage}</h2>
         <div style="display: flex; gap: 1rem">
             <!--TODO Put this into a toolbar-->
@@ -49,7 +55,7 @@ const params = Astro.params;
     <div id="side" class="surface l" slot="side">
         <GalleryFilterContents artists={artists} rating={params.rating} transition:persist={true} client:only="react"/>
     </div>
-    <dialog class="right s m" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto">
+    <dialog class="right s m" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto" transition:name="filter-dialog">
         <GalleryFilterContents client:only="react" artists={artists} rating={params.rating}/>
     </dialog>
 </Layout>

@@ -32,10 +32,3 @@
     object-position: top;
     border-radius: 0;
 }
-
-body:has(:popover-open) {
-    #content, #navigation-bar {
-        pointer-events: none;
-        touch-action: none;
-    }
-}

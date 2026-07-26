@@ -12,7 +12,7 @@ export function FilterButton() {
     const $isOpen = useStore(isOpen);
     const open: boolean = JSON.parse($isOpen)
 
-    return <button id="filter-button" className={clsx("transparent circle", open && 'primary')} onClick={() => isOpen.set(JSON.stringify(!open))} popoverTarget="filter-dialog" suppressHydrationWarning>
+    return <button id="filter-button" className={clsx("transparent circle", open && 'primary')} popoverTarget="filter-dialog" suppressHydrationWarning>
         <i className={clsx(open && 'fill')} suppressHydrationWarning>filter_alt</i>
     </button>
 }

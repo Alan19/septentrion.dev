@@ -1,10 +1,3 @@
 ::view-transition-group(filter-dialog) {
     z-index: 5;
 }
-
-body:has(:popover-open) {
-    #content, #navigation-bar {
-        pointer-events: none;
-        touch-action: none;
-    }
-}
