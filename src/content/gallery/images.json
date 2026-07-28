@@ -9454,5 +9454,24 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/giove_human_design.webp",
     "id": "e923c065ae537c3f9281ff9c353e77ddb1950e5f3dd5f2083db5d20a",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/giove_human_design.webp"
+  },
+  {
+    "title": "Oh shoot, employed furries!",
+    "artist": "@axyusagi.bsky.social",
+    "tags": [
+      "Alcor"
+    ],
+    "characters": [
+      "Alcor"
+    ],
+    "href": "https://bsky.app/profile/axyusagi.bsky.social/post/3mr4g53qjt22i",
+    "published": "2026-07-20",
+    "aspectRatio": 0.6233974358974359,
+    "rating": "general",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/oh_shoot_employed_furries.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/oh_shoot_employed_furries.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/oh_shoot_employed_furries.webp",
+    "id": "37ea344be56bbdc0946ae136e88490982c3153bdb0985c99e8bc116f",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/oh_shoot_employed_furries.webp"
   }
 ]

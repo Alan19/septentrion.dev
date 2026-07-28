@@ -10,6 +10,7 @@ import _ from "lodash";
 import {GalleryFilterContents} from "../../../components/gallery/GalleryFilter.tsx";
 import {isDev} from "../../../util/consts.ts";
 import {clsx} from "clsx";
+import { ArtUploader } from "../../../components/uploader/ArtUploader";
 
 const artists = _.uniq((await getCollection('artworks')).map(value => value.data.artist));
 
@@ -58,4 +59,6 @@ const params = Astro.params;
     <dialog class="right s m" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto" transition:name="filter-dialog">
         <GalleryFilterContents client:only="react" artists={artists} rating={params.rating}/>
     </dialog>
+    {isDev && <ArtUploader client:load />}
+
 </Layout>

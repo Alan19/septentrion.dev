@@ -1,9 +1,8 @@
 ---
 import React from "react";
 import {getDisplayFunction} from "./getDisplayOrder.ts";
-import {Image} from "astro:assets";
 import type {InferEntrySchema} from "astro:content";
-import {BASE_URL} from "../../util/consts.ts";
+import {BASE_URL, isDev} from "../../util/consts.ts";
 import './skeleton.css'
 import {clsx} from "clsx";
 import {Rating} from "../../util/images.ts";
