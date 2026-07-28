@@ -9,8 +9,9 @@ import sharp, {type Metadata, type ResizeOptions, type Sharp} from "sharp";
 import {sha3_224} from "js-sha3";
 import * as fs from "node:fs";
 import _ from "lodash";
+import {isDev} from "../../util/consts.ts";
 
-export const prerender = false;
+export const prerender = !isDev;
 dotenv.config();
 
 export const s3 = new S3({
