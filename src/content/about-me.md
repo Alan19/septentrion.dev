@@ -1,6 +1,6 @@
 Hello, I'm Alan, a software engineer living in NYC! This is my personal website for archiving my commissioned artworks and documenting the lore of my original characters and the world they live in! I also use this as a way to learn more about web development, especially in regard to CSS and CI/CD! I also play Pokémon GO, Maplestory, Cardfight!! Vanguard, and Pathfinder 2nd Edition in my spare time. I hope you have a nice time looking at the artwork and at my very amateurish worldbuilding!
 
-If you're curious about how this website is made, the front end uses ReactJS and TypeScript, using BeerCSS to implement the Material You design language. For uploading and compressing images, I use an Express backend, and the compressed images are stored on an S3 bucket at multiple file sizes to reduce the amount people have to download on low download speeds or mobile data. This website is updated on every commit to the main branch using a Github action that builds the website and deploys it to this URL through GitHub pages!
+If you're curious about how this website is made, the front end uses Astro and TypeScript, using BeerCSS to implement the Material You design language. For uploading and compressing images, I compress images by using Sharp endpoint located on project (when run in dev only), before uploading it to a S3 bucket. This website is updated on every commit to the main branch using a Github action that builds the website and deploys it to this URL through Cloudflare pages!
 
 ---
 
