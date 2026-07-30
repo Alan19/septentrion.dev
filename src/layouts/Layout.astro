@@ -6,6 +6,10 @@ import './theme.css'
 import BottomAppBar from "../components/navigation/BottomAppBar.astro";
 import NavigationRail from "../components/navigation/NavigationRail.astro";
 import icon from "../assets/icon.webp"
+import preview from '../assets/logo.png'
+const title = "septentrion.dev"
+const description = "Alcor's personal website for his commissioned artwork and interests"
+const SITE_TITLE = 'septentrion.dev'
 ---
 <html lang="en">
 <head>
@@ -18,8 +22,34 @@ import icon from "../assets/icon.webp"
     <Font cssVariable="--font-body"/>
     <meta name="viewport" content="width=device-width"/>
     <meta name="generator" content={Astro.generator}/>
+    <link
+            rel="alternate"
+            type="application/rss+xml"
+            title={SITE_TITLE}
+            href={new URL('rss.xml', Astro.site)}
+    />
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content={title}/>
+    <meta name="description" content={description}/>
+    <meta name="color-scheme" content="dark light"/>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content={Astro.url}/>
+    <meta property="og:title" content={title}/>
+    <meta property="og:description" content={description}/>
+    <meta property="og:image" content={new URL(preview.src, Astro.url)}/>
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:url" content={Astro.url}/>
+    <meta property="twitter:title" content={title}/>
+    <meta property="twitter:description" content={description}/>
+    <meta property="twitter:image" content={new URL(preview.src, Astro.url)}/>
+
     <title>septentrion.dev</title>
-    <ClientRouter/>
+    <!--<ClientRouter/>-->
 </head>
 <body class={"auto"}>
 <div style="display: flex;min-height: 100dvh" class="surface-container-high adaptive-flex">
