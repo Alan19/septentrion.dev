@@ -16,12 +16,6 @@ export default defineConfig({
     // TODO Switch to always trailing slash later
     trailingSlash: "never",
     image: {
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'alcorsiteartbucket.s3.amazonaws.com'
-            }
-        ],
         objectFit: "contain"
     },
     prefetch: {

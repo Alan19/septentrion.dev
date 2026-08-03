@@ -7,6 +7,7 @@ import {clsx} from "clsx";
 import _ from "lodash";
 import ImageMetadata from "../../../components/gallery/ImageMetadata.astro";
 import Layout from "../../../layouts/Layout.astro";
+import {Image} from "astro:assets";
 
 export async function getStaticPaths() {
     const collection = await getCollection('artworks')
@@ -55,16 +56,21 @@ const {id} = Astro.params;
         </div>
         <div style="display: flex; gap: 1rem" class="image-div">
             {href ? <a target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={href}>
-                <img alt={title}
-                     class={clsx("artwork")}
-                     src={webp}
-                     transition:name={`img-${id}`}
-                     style={{viewTransitionClass: "gallery-img", flex: 1}}/>
-            </a> : <img alt={title}
-                        class={clsx("artwork")}
-                        src={webp}
-                        transition:name={`img-${id}`}
-                        style={{viewTransitionClass: "gallery-img", flex: 1}}/>}
+                        <Image width={1200}
+                               height={1200 / aspectRatio}
+                               alt={title}
+                               class={clsx("artwork")}
+                               src={webp}
+                               transition:name={`img-${id}`}
+                               style={{viewTransitionClass: "gallery-img", flex: 1}}/>
+                    </a> :
+                    <Image width={1200}
+                           height={1200}
+                           alt={title}
+                           class={clsx("artwork")}
+                           src={webp}
+                           transition:name={`img-${id}`}
+                           style={{viewTransitionClass: "gallery-img", flex: 1}}/>}
 
         </div>
     </div>

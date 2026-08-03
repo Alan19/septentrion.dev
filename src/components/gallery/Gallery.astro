@@ -1,8 +1,8 @@
 ---
-import React from "react";
 import {getDisplayFunction} from "./getDisplayOrder.ts";
 import type {InferEntrySchema} from "astro:content";
-import {BASE_URL, isDev} from "../../util/consts.ts";
+import {BASE_URL} from "../../util/consts.ts";
+import {Image} from "astro:assets";
 import './skeleton.css'
 import {clsx} from "clsx";
 import {Rating} from "../../util/images.ts";
@@ -44,13 +44,14 @@ function getBorderForRating(rating: Rating) {
                 {value.map((imageEntry, _index, array) =>
                         <div style={{flex: (array.length === 1 ? 1 : imageEntry.aspectRatio)}}>
                             <a style={{display: "contents"}} href={`${BASE_URL}/gallery/artwork/${imageEntry.id}`} class="image-link">
-                                    <img alt={imageEntry.title}
-                                           loading={"eager"}
-                                           class={clsx("border no-round skeleton", getBorderForRating(imageEntry.rating))}
-                                           src={imageEntry.webp}
-                                           transition:name={`img-${imageEntry.id}`}
-                                           transition:animate={"fade"}
-                                           style={{width: "100%", height: "fit-content", viewTransitionClass: "gallery-img", aspectRatio: imageEntry.aspectRatio}}/>
+                                <Image width={1200}
+                                       height={1200 / imageEntry.aspectRatio}
+                                       alt={imageEntry.title}
+                                       class={clsx("border no-round skeleton", getBorderForRating(imageEntry.rating))}
+                                       src={imageEntry.thumbnailUrl}
+                                       transition:name={`img-${imageEntry.id}`}
+                                       transition:animate={"fade"}
+                                       style={{width: "100%", height: "fit-content", viewTransitionClass: "gallery-img", aspectRatio: imageEntry.aspectRatio}}/>
                             </a>
                         </div>)}
                 {(index === array.length - 1) && !!(extraElement) &&
