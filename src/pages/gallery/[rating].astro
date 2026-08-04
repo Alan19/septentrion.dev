@@ -49,5 +49,5 @@ const {rating} = Astro.params;
     <dialog class="right s m" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto" transition:name="filter-dialog">
         <GalleryFilterContents client:only="react" artists={artists} rating={rating}/>
     </dialog>
-    {isDev && <ArtUploader client:load/>}
+    {isDev && <ArtUploader client:load artists={artists}/>}
 </Layout>

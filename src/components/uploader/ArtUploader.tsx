@@ -3,6 +3,7 @@ import _ from "lodash";
 import {type FieldValues, useForm} from "react-hook-form";
 import dayjs from "dayjs";
 import {toast, ToastContainer} from "react-toastify";
+import {MultiSelect, type Option} from "react-multi-select-component";
 
 export interface UploadFormData {
     file: File,
@@ -19,10 +20,15 @@ export type ParentImageFormData = UploadFormData & {
     hidden: boolean
 }
 
-export function ArtUploader() {
-    const {register, handleSubmit} = useForm<Record<keyof ParentImageFormData, unknown>>({defaultValues: {published: dayjs().format("YYYY-MM-DD"), hidden: false}});
+interface IDefaultItemRendererProps {
+    checked: boolean;
+    option: Option;
+    disabled?: boolean;
+    onClick: () => void;
+}
 
-
+export function ArtUploader(props: Readonly<{ artists: string[] }>) {
+    const {register, handleSubmit, setValue, watch} = useForm<Record<keyof ParentImageFormData, unknown>>({defaultValues: {published: dayjs().format("YYYY-MM-DD"), hidden: false}});
     async function submit(fieldValues: FieldValues) {
         const formData = Object.entries(fieldValues).reduce((previousValue, [key, value]) => {
             switch (key) {
@@ -49,8 +55,11 @@ export function ArtUploader() {
         // TODO Add toast, maybe add formatting
     }
 
+    let artist = watch("artist") as string | undefined;
+    let selectedArtist: Option[] = artist ? [{label: artist, value: artist}] : [];
+    console.log(`Current Artist: ${artist}`)
     return <>
-        <button popoverTarget={"uploader"} className="circle extra" style={{"position": "fixed", "bottom": '3rem', right: "3rem", zIndex: 10}}>
+        <button popoverTarget={"uploader"} className="circle extra" style={{"position": "fixed", "bottom": '3rem', right: "3rem", zIndex: 2}}>
             <i>add</i>
         </button>
         <dialog id={"uploader"} popover={"auto"} style={{zIndex: 10}} suppressHydrationWarning>
@@ -66,10 +75,23 @@ export function ArtUploader() {
                     <input type="text" {...register("title", {required: true})}/>
                     <label>Name</label>
                 </div>
-                <div className="field label border">
-                    <input type="text" {...register("artist", {required: true})}/>
-                    <label>Artist</label>
-                </div>
+                <MultiSelect options={props.artists.map(value => ({value: value, label: value}))}
+                             hasSelectAll={false}
+                             isCreatable
+                             value={selectedArtist}
+                             valueRenderer={selected => selected.length
+                                 ? selected.map(({ label }) => label)
+                                 : "Artist"}
+                             labelledBy={"Artist"}
+                             onChange={(selected: Option[]) => {
+                                 let clickedValue = selected.pop()?.value;
+                                 setValue("artist", clickedValue);
+                             }}
+                             ItemRenderer={({checked, option, onClick, disabled}: IDefaultItemRendererProps) => <label className="radio tiny-padding" style={{display: "flex"}} onClick={onClick}>
+                                 <input type="radio" checked={checked} disabled={disabled} readOnly />
+                                 <span>{option.label}</span>
+                             </label>}
+                />
                 <div className="field label border">
                     <input type="text" {...register("href")}/>
                     <label>Link</label>

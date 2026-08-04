@@ -9473,5 +9473,39 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/oh_shoot_employed_furries.webp",
     "id": "37ea344be56bbdc0946ae136e88490982c3153bdb0985c99e8bc116f",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/oh_shoot_employed_furries.webp"
+  },
+  {
+    "title": "Sleepover Boys",
+    "artist": "@axyusagi.bsky.social",
+    "tags": [
+      "Rastaban Form"
+    ],
+    "href": "https://bsky.app/profile/axyusagi.bsky.social/post/3ms7mdsue7s27",
+    "published": "2026-08-03",
+    "aspectRatio": 0.6901528013582343,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/sleepover_boys.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/sleepover_boys.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sleepover_boys.webp",
+    "id": "e51e70159acebe450d3c22e23a7a0f068dc1d97ca48df995841be7ac",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/sleepover_boys.webp"
+  },
+  {
+    "title": "Flux Destiny Pool Party 2026",
+    "artist": "@fluxdestiny.bsky.social",
+    "tags": [],
+    "href": "",
+    "published": "2026-08-03",
+    "aspectRatio": 1.3735427075898168,
+    "rating": "general",
+    "characters": [],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/flux_destiny_pool_party_2026.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/flux_destiny_pool_party_2026.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flux_destiny_pool_party_2026.webp",
+    "id": "06622a0f9ff76271d5fa1f4c99841cc086860f48d4db79a000545505",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/flux_destiny_pool_party_2026.webp"
   }
 ]

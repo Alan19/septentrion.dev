@@ -41,6 +41,7 @@
     "react-dom": "^19.2.7",
     "react-hook-form": "^7.83.0",
     "react-justified-layout-ts": "^2.2.1",
+    "react-multi-select-component": "^4.3.4",
     "react-toastify": "^11.1.0",
     "react-tooltip": "^6.0.8",
     "sanitize-html": "^2.17.6",
