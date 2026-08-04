@@ -4,6 +4,7 @@ import {type FieldValues, useForm} from "react-hook-form";
 import dayjs from "dayjs";
 import {toast, ToastContainer} from "react-toastify";
 import {MultiSelect, type Option} from "react-multi-select-component";
+import {useState} from "react";
 
 export interface UploadFormData {
     file: File,
@@ -29,7 +30,9 @@ interface IDefaultItemRendererProps {
 
 export function ArtUploader(props: Readonly<{ artists: string[] }>) {
     const {register, handleSubmit, setValue, watch} = useForm<Record<keyof ParentImageFormData, unknown>>({defaultValues: {published: dayjs().format("YYYY-MM-DD"), hidden: false}});
+    const [uploading, setUploading] = useState(true);
     async function submit(fieldValues: FieldValues) {
+        setUploading(true)
         const formData = Object.entries(fieldValues).reduce((previousValue, [key, value]) => {
             switch (key) {
                 case "file":
@@ -40,7 +43,8 @@ export function ArtUploader(props: Readonly<{ artists: string[] }>) {
                     previousValue.set(key, value.split(',').map((value1: string) => value1.trim()).toString())
                     break;
                 case "hidden":
-                    previousValue.set(key, JSON.stringify(value))
+                    previousValue.set(key, JSON.stringify(value));
+                    break;
                 default:
                     previousValue.set(key, value);
                     break;
@@ -48,16 +52,15 @@ export function ArtUploader(props: Readonly<{ artists: string[] }>) {
             return previousValue;
         }, new FormData());
         console.log(formData)
-        const response = await fetch("/api/upload", {
+        await fetch("/api/upload", {
             method: "POST",
             body: formData,
-        }).then(value => toast("Upload success!"));
-        // TODO Add toast, maybe add formatting
+        }).then(() => toast("Upload success!")).finally(() => setUploading(false));
+        // TODO Add more clear result messages
     }
 
     let artist = watch("artist") as string | undefined;
     let selectedArtist: Option[] = artist ? [{label: artist, value: artist}] : [];
-    console.log(`Current Artist: ${artist}`)
     return <>
         <button popoverTarget={"uploader"} className="circle extra" style={{"position": "fixed", "bottom": '3rem', right: "3rem", zIndex: 2}}>
             <i>add</i>
@@ -111,7 +114,7 @@ export function ArtUploader(props: Readonly<{ artists: string[] }>) {
                 <fieldset>
                     <legend>Rating</legend>
                     <nav>
-                        {Object.values(Rating).map(value => <label className="radio">
+                        {Object.values(Rating).map(value => <label className="radio" key={value}>
                                 <input type="radio" value={value} {...register("rating", {required: true})}/>
                                 <span>{_.capitalize(value)}</span>
                             </label>
@@ -122,7 +125,7 @@ export function ArtUploader(props: Readonly<{ artists: string[] }>) {
                     <input type="checkbox" {...register("hidden")} />
                     <span>Hidden</span>
                 </label>
-                <button className={"top-margin"}>Submit</button>
+                <button disabled={uploading} className={"top-margin"}>Submit</button>
             </form>
         </dialog>
         <ToastContainer/>

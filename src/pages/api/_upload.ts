@@ -11,7 +11,7 @@ import * as fs from "node:fs";
 import _ from "lodash";
 
 dotenv.config();
-export const prerender = true;
+export const prerender = false;
 
 export const s3 = new S3({
     region: process.env.REGION,
