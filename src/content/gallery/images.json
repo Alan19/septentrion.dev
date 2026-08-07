@@ -9501,11 +9501,48 @@
     "published": "2026-08-03",
     "aspectRatio": 1.3735427075898168,
     "rating": "general",
-    "characters": ["Rayan"],
+    "characters": [
+      "Rayan"
+    ],
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/flux_destiny_pool_party_2026.jpg",
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/flux_destiny_pool_party_2026.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/flux_destiny_pool_party_2026.webp",
     "id": "06622a0f9ff76271d5fa1f4c99841cc086860f48d4db79a000545505",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/flux_destiny_pool_party_2026.webp"
+  },
+  {
+    "title": "Human Alcor Reference Sheet 2026",
+    "artist": "@amainu_dog",
+    "tags": [],
+    "href": "",
+    "published": "2026-08-04",
+    "aspectRatio": 0.8963333333333333,
+    "rating": "general",
+    "characters": [],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/human_alcor_reference_sheet_2026.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/human_alcor_reference_sheet_2026.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/human_alcor_reference_sheet_2026.webp",
+    "id": "f062ed46dad124275872a3d0b4cafc3ce4601e208c934f00f915e172",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/human_alcor_reference_sheet_2026.webp"
+  },
+  {
+    "title": "Swordsman Chibi",
+    "artist": "@kurope.bsky.social",
+    "tags": [
+      "Rastaban Form",
+      "Chibi"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3msdzi2zaws2u",
+    "published": "2026-08-05",
+    "aspectRatio": 0.7069555302166477,
+    "rating": "general",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/swordsman_chibi.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/swordsman_chibi.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/swordsman_chibi.webp",
+    "id": "6180c1e282821f1e5e33ea27b02c983b098d7575d37c8c3d196e21de",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/swordsman_chibi.webp"
   }
 ]
