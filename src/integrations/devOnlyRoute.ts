@@ -1,6 +1,6 @@
-import type { AstroIntegration } from 'astro';
-import { fileURLToPath } from 'node:url';
-import { globbySync } from 'globby';
+import type {AstroIntegration} from 'astro';
+import {fileURLToPath} from 'node:url';
+import {globbySync} from 'globby';
 import kleur from 'kleur';
 import path from 'node:path';
 import slash from 'slash';
@@ -15,7 +15,7 @@ export default function integration(): AstroIntegration {
         name: 'astro-dev-only-routes',
         hooks: {
             // TODO: handle refresh when new routes are created or deleted
-            'astro:config:setup': ({ injectRoute, config, command }) => {
+            'astro:config:setup': ({injectRoute, config, command}) => {
                 if (command === 'build') {
                     return;
                 }
@@ -49,10 +49,10 @@ export default function integration(): AstroIntegration {
                         )
                         .replace(pageExtRE, '');
 
-                    return { routePath, pagesDirRelativePath };
+                    return {routePath, pagesDirRelativePath};
                 });
 
-                for (let { routePath, pagesDirRelativePath } of devOnlyRoutes) {
+                for (let {routePath, pagesDirRelativePath} of devOnlyRoutes) {
                     // BUG in astro: deeply nested index.astro routes collide with root index.astro
                     // Open an issue
                     // const filename = routePath.slice(
