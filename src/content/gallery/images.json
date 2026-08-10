@@ -9544,5 +9544,26 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/swordsman_chibi.webp",
     "id": "6180c1e282821f1e5e33ea27b02c983b098d7575d37c8c3d196e21de",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/swordsman_chibi.webp"
+  },
+  {
+    "title": "Luminous Divinating Engine, Vaun&Alcor",
+    "artist": "@isekhard",
+    "tags": [
+      "Illustration",
+      "Bodysuit"
+    ],
+    "href": "",
+    "published": "2026-08-07",
+    "aspectRatio": 0.7406710567576043,
+    "rating": "general",
+    "characters": [
+      "Alcor",
+      "Vaun"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/luminous_divinating_engine_vaun_alcor.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/luminous_divinating_engine_vaun_alcor.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/luminous_divinating_engine_vaun_alcor.webp",
+    "id": "934e259dc6f8a811fcc4f04754fb940eeefd001aa59ff831759336dd",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/luminous_divinating_engine_vaun_alcor.webp"
   }
 ]

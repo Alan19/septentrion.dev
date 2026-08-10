@@ -1,11 +1,11 @@
 // @ts-check
 import {defineConfig, fontProviders} from 'astro/config';
-
 import react from '@astrojs/react';
+import DevOnlyRoute from "./src/integrations/devOnlyRoute.ts"
 
 // https://astro.build/config
 export default defineConfig({
-    integrations: [react()],
+    integrations: [react(), DevOnlyRoute()],
     fonts: [
         {
             provider: fontProviders.fontsource(),
