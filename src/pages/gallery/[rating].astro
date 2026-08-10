@@ -1,5 +1,4 @@
 ---
-import type {GetStaticPaths} from "astro";
 import {getCollection, type InferEntrySchema} from "astro:content";
 import '../pages.css'
 import './gallery.css'
@@ -13,6 +12,8 @@ import Gallery from "../../components/gallery/Gallery.astro";
 
 const artworks = await getCollection('artworks');
 const artists = _.uniq(artworks.map(value => value.data.artist));
+const characters = _.uniq(artworks.flatMap(value => value.data.characters));
+const tags = _.uniq(artworks.flatMap(value => value.data.tags));
 
 export async function getStaticPaths() {
     const artworks = (await getCollection('artworks')).toSorted((a, b) => b.data.commissionNumber - a.data.commissionNumber)
@@ -29,25 +30,33 @@ const {rating} = Astro.params;
     <div class="container" style="width: 100%">
         <div style="display: flex">
             <h1 style="flex: 1">Gallery</h1>
-            <button id="filter-button" class={"transparent circle s m"} popovertarget="filter-dialog">
+            <button id="filter-button" class={"transparent circle s m gallery gallery-l"} popovertarget="filter-dialog">
                 <i>filter_alt</i>
             </button>
         </div>
-        <div class="l">
-            <Gallery images={artworksForRating.map(value => value)} componentWidth={817} targetRowHeight={300} rowHeightTolerance={.5}/>
-        </div>
-        <div class="m">
-            <Gallery images={artworksForRating.map(value => value)} componentWidth={601} targetRowHeight={384} rowHeightTolerance={.5}/>
-        </div>
-        <div class="s">
-            <Gallery images={artworksForRating.map(value => value)} componentWidth={350} targetRowHeight={384} rowHeightTolerance={.5}/>
+        <div class="top-margin">
+            <div class="gallery gallery-xxl">
+                <Gallery images={artworksForRating.map(value => value)} componentWidth={1200} targetRowHeight={384} rowHeightTolerance={.5}/>
+            </div>
+            <div class="gallery gallery-xl">
+                <Gallery images={artworksForRating.map(value => value)} componentWidth={609} targetRowHeight={192} rowHeightTolerance={.5}/>
+            </div>
+            <div class="gallery gallery-l">
+                <Gallery images={artworksForRating.map(value => value)} componentWidth={817} targetRowHeight={192} rowHeightTolerance={.5}/>
+            </div>
+            <div class="m">
+                <Gallery images={artworksForRating.map(value => value)} componentWidth={425} targetRowHeight={192} rowHeightTolerance={.5}/>
+            </div>
+            <div class="s">
+                <Gallery images={artworksForRating.map(value => value)} componentWidth={350} targetRowHeight={192} rowHeightTolerance={.5}/>
+            </div>
         </div>
     </div>
-    <div id="side" class="surface l" slot="side">
+    <div id="side" class="surface l gallery gallery-xl gallery-xxl" slot="side">
         <GalleryFilterContents artists={artists} rating={rating} transition:persist={true} client:only="react"/>
     </div>
-    <dialog class="right s m" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto" transition:name="filter-dialog">
+    <dialog class="right s m l" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto" transition:name="filter-dialog">
         <GalleryFilterContents client:only="react" artists={artists} rating={rating}/>
     </dialog>
-    {isDev && <ArtUploader client:load artists={artists}/>}
+    {isDev && <ArtUploader client:load artists={artists} characters={characters} tags={tags}/>}
 </Layout>

@@ -15,10 +15,11 @@ export async function getStaticPaths() {
     return collection.map((post) => ({
         params: {id: post.id},
         props: post.data,
+        cacheKey: post.digest
     }));
 }
 
-const {webp, title, href, aspectRatio, tags, artist, characters, rating, published, commissionNumber} = Astro.props
+const {webp, title, href, aspectRatio, tags, artist, characters, rating, published, commissionNumber, alts} = Astro.props
 const {id} = Astro.params;
 ---
 <script>
@@ -57,6 +58,7 @@ const {id} = Astro.params;
         <div style="display: flex; gap: 1rem" class="image-div">
             {href ? <a target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={href}>
                         <Image width={1200}
+                               id="artwork"
                                height={1200 / aspectRatio}
                                alt={title}
                                class={clsx("artwork")}
@@ -65,6 +67,7 @@ const {id} = Astro.params;
                                style={{viewTransitionClass: "gallery-img", flex: 1}}/>
                     </a> :
                     <Image width={1200}
+                           id="artwork"
                            height={1200}
                            alt={title}
                            class={clsx("artwork")}
@@ -77,7 +80,7 @@ const {id} = Astro.params;
     <div id="side" class="surface s l" slot="side">
         <div class="filter-side-sheet">
             <h5>Artwork Info</h5>
-            <ImageMetadata rating={rating} artist={artist} characters={characters} tags={tags} published={published}/>
+            <ImageMetadata rating={rating} artist={artist} characters={characters} tags={tags} published={published} alts={alts} parentWebp={webp} parentAspectRatio={aspectRatio}/>
         </div>
     </div>
 </Layout>
@@ -86,5 +89,5 @@ const {id} = Astro.params;
         <h5 style="flex: 1">Artwork Info</h5>
         <button class="transparent circle" popovertarget="metadata-dialog" popovertargetaction="hide"><i>close</i></button>
     </div>
-    <ImageMetadata rating={rating} artist={artist} characters={characters} tags={tags} published={published}/>
+    <ImageMetadata rating={rating} artist={artist} characters={characters} tags={tags} published={published} alts={alts} parentWebp={webp} parentAspectRatio={aspectRatio} />
 </dialog>

@@ -1,14 +1,19 @@
 ---
+import Image from "astro/components/Image.astro";
 import type {Rating} from "../../util/images.ts";
 import _ from "lodash";
+import type {InferEntrySchema} from "astro:content";
 type Props = {
     artist: string,
     rating: Rating,
     tags: string[],
     characters: string[],
-    published: string
+    published: string,
+    alts: InferEntrySchema<"artworks">["alts"],
+    parentWebp: string,
+    parentAspectRatio: number
 }
-const {artist, rating, tags, characters, published} = Astro.props;
+const {artist, rating, tags, characters, published, alts, parentWebp, parentAspectRatio} = Astro.props;
 const artistUrl = !artist.includes('.') ? `https://x.com/${artist}` : `https://bsky.app/profile/${artist.substring(1)}`
 ---
 <div>Artist: <a class="link" href={artistUrl} target="_blank" rel="noopener noreferrer">{artist}</a></div>
@@ -28,3 +33,10 @@ const artistUrl = !artist.includes('.') ? `https://x.com/${artist}` : `https://b
                 <span>{tag}</span>
             </button>)}
 </div>
+{!!alts.length && <>
+    <h5>Alts</h5>
+    <nav class="scroll">
+        <Image src={parentWebp} alt={'parent image'} onclick={`const el = document.getElementById('artwork');el.src = '${parentWebp}'`} style={{height: '12rem', width: "auto"}} width={1200} height={1200 / parentAspectRatio} />
+        {alts.map(value => <Image src={value.webp} alt={value.parent + ' alt'} onclick={`const el = document.getElementById('artwork');el.src = '${value.webp}'`} style={{height: '12rem', width: "auto"}} width={1200} height={1200 / value.aspectRatio} />)}
+    </nav>
+</>}

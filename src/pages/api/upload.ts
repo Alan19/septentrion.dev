@@ -11,8 +11,11 @@ import * as fs from "node:fs";
 import _ from "lodash";
 
 dotenv.config();
-export const prerender = false;
 
+export const prerender = false;
+export function getStaticPaths() {
+    return [{ params: { redirects: 'upload' } }];
+}
 export const s3 = new S3({
     region: process.env.REGION,
     credentials: fromEnv(),

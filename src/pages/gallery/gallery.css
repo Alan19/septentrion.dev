@@ -7,7 +7,7 @@
 }
 
 .dropdown-heading {
-    height: 48px !important;
+    min-height: 48px !important;
     padding-left: 15px !important;
     padding-right: 15px !important;
 }
@@ -46,4 +46,28 @@
 
 .rmsc .search input:focus {
     background-color: var(--surface-container-low) !important;
+}
+
+@media only screen and (max-width: 992px) {
+    :is(.gallery) {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+    :is(.gallery):not(.gallery-l) {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1791px) {
+    :is(.gallery):not(.gallery-xl) {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 1792px) {
+    :is(.gallery):not(.gallery-xxl) {
+        display: none !important;
+    }
 }

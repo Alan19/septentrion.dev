@@ -54,7 +54,6 @@ function getBorderForRating(rating: Rating) {
                                        style={{width: "100%", height: "fit-content", viewTransitionClass: "gallery-img", aspectRatio: imageEntry.aspectRatio}}/>
                             </a>
                         </div>)}
-                {(index === array.length - 1) && !!(extraElement) &&
-                        <div style={{flex: extraElement}}></div>}
+                {(index === array.length - 1) && !!(extraElement) && <div style={{flex: extraElement}}></div>}
             </div>)}
 </div>

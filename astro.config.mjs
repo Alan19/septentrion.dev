@@ -22,6 +22,10 @@ export default defineConfig({
         prefetchAll: true
     },
     build: {
-        concurrency: 4
+        concurrency: 4,
+
+    },
+    experimental: {
+        incrementalBuild: true
     }
 });
