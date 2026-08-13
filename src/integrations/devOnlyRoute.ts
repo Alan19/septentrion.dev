@@ -16,7 +16,7 @@ export default function integration(): AstroIntegration {
         hooks: {
             // TODO: handle refresh when new routes are created or deleted
             'astro:config:setup': ({injectRoute, config, command}) => {
-                if (command === 'build') {
+                if (command === 'build' || command === "preview") {
                     return;
                 }
                 let pagesDir = new URL('./src/pages', config.root);

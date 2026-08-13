@@ -48,6 +48,13 @@
     background-color: var(--surface-container-low) !important;
 }
 
+@media only screen and (min-width: 1201px) {
+    :is(.filter-button) {
+        display: none !important;
+    }
+}
+
+
 @media only screen and (max-width: 992px) {
     :is(.gallery) {
         display: none !important;

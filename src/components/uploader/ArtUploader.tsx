@@ -4,7 +4,6 @@ import {type FieldValues, useForm} from "react-hook-form";
 import dayjs from "dayjs";
 import {toast, ToastContainer} from "react-toastify";
 import {MultiSelect, type Option} from "react-multi-select-component";
-import {useState} from "react";
 
 export interface UploadFormData {
     file: File,
@@ -39,7 +38,6 @@ export function ArtUploader(props: Readonly<{ artists: string[], characters: str
                     break;
                 case "tags":
                 case "characters":
-                    console.log(value)
                     previousValue.set(key, value.map((value1: string) => value1.trim()).join(',').toString())
                     break;
                 case "hidden":
@@ -103,7 +101,7 @@ export function ArtUploader(props: Readonly<{ artists: string[], characters: str
                              hasSelectAll={false}
                              isCreatable
                              value={selectedTags}
-                             valueRenderer={selected => selected.length ? selected.map(({label}) => <button className="chip small fill round" style={{marginRight: '.25rem'}}>
+                             valueRenderer={selected => selected.length ? selected.map(({label}) => <button key={label} className="chip small fill round" style={{marginRight: '.25rem'}}>
                                  <span>{label}</span>
                                  <i>close</i>
                              </button>) : "Tags"}
@@ -118,7 +116,7 @@ export function ArtUploader(props: Readonly<{ artists: string[], characters: str
                              hasSelectAll={false}
                              isCreatable
                              value={selectedCharacters}
-                             valueRenderer={selected => selected.length ? selected.map(({label}) => <button className="chip small fill round" style={{marginRight: '.25rem'}}>
+                             valueRenderer={selected => selected.length ? selected.map(({label}) => <button key={label} className="chip small fill round" style={{marginRight: '.25rem'}}>
                                  <span>{label}</span>
                                  <i>close</i>
                              </button>) : "Characters"}
