@@ -36,7 +36,18 @@ const artistUrl = !artist.includes('.') ? `https://x.com/${artist}` : `https://b
 {!!alts.length && <>
     <h5>Alts</h5>
     <nav class="scroll">
-        <Image src={parentWebp} alt={'parent image'} onclick={`const el = document.getElementById('artwork');el.src = '${parentWebp}'`} style={{height: '12rem', width: "auto"}} width={1200} height={1200 / parentAspectRatio} />
-        {alts.map(value => <Image src={value.webp} alt={value.parent + ' alt'} onclick={`const el = document.getElementById('artwork');el.src = '${value.webp}'`} style={{height: '12rem', width: "auto"}} width={1200} height={1200 / value.aspectRatio} />)}
+        <Image src={parentWebp}
+               alt={'parent image'}
+               onclick={`const el = document.getElementById('artwork');el.src = '${parentWebp}'`}
+               style={{height: '12rem', width: "auto"}}
+               width={500}
+               height={192}/>
+        {alts.map(value =>
+                <Image src={value.webp}
+                       alt={value.parent + ' alt'}
+                       onclick={`const el = document.getElementById('artwork');el.src = '${value.webp}'`}
+                       style={{height: '12rem', width: "auto"}}
+                       width={500}
+                       height={192}/>)}
     </nav>
 </>}

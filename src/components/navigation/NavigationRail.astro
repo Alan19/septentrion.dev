@@ -6,7 +6,7 @@ import PersistNavigationScroll from "./PersistNavigationScroll.astro";
 const path = Astro.url.pathname.split('/').at(1) ?? '';
 ---
 <PersistNavigationScroll />
-<nav class="m l left surface-container-high" style="position: sticky; top: 0; max-height: 100dvh; overflow-y: auto" id="navigation-bar" transition:name="navigation-bar">
+<nav class="m l left surface-container-high" style="position: sticky; top: 0; max-height: 100dvh; overflow-y: auto" id="navigation-bar">
     <header>
         <a href={`/`}>
             <button class={clsx("extra square round top-margin", path === "" ? "primary" : "border primary-border")}>

@@ -20,42 +20,58 @@ export async function getStaticPaths() {
 
     return Object.values(Rating)
         .filter(value => value !== Rating.Mature || isDev)
-        .map(rating => ({params: {rating: rating}, props: artworks.flatMap(value => value.data).filter(value => ratingToNumber(value.rating) <= ratingToNumber(rating))}));
+        .map(rating => ({
+            params: {rating: rating},
+            props: artworks
+                .flatMap(value => value.data)
+                .filter(value => ratingToNumber(value.rating) <= ratingToNumber(rating))
+        }));
 }
 
 const artworksForRating = Object.values(Astro.props) as InferEntrySchema<"artworks">[];
 const {rating} = Astro.params;
+
+const rowHeight = 288;
 ---
 <Layout>
     <div class="container" style="width: 100%">
         <div style="display: flex">
-            <h1 style="flex: 1">Gallery</h1>
+            <h1 style="flex: 1">Commissions</h1>
             <button id="filter-button" class={"transparent circle filter-button"} popovertarget="filter-dialog">
                 <i>filter_alt</i>
             </button>
         </div>
         <div class="top-margin">
-            <div class="gallery gallery-xxl">
-                <Gallery images={artworksForRating.map(value => value)} componentWidth={1200} targetRowHeight={384} rowHeightTolerance={.5}/>
+            <div class="gallery-xl gallery-xxl">
+                <Gallery images={artworksForRating.map(value => value)}
+                         componentWidth={1200}
+                         targetRowHeight={rowHeight}
+                         rowHeightTolerance={.5}/>
             </div>
-            <div class="gallery gallery-xl">
-                <Gallery images={artworksForRating.map(value => value)} componentWidth={609} targetRowHeight={192} rowHeightTolerance={.5}/>
+            <div class="gallery-l">
+                <Gallery images={artworksForRating.map(value => value)}
+                         componentWidth={1000}
+                         targetRowHeight={rowHeight}
+                         rowHeightTolerance={.5}/>
             </div>
-            <div class="gallery gallery-l">
-                <Gallery images={artworksForRating.map(value => value)} componentWidth={817} targetRowHeight={192} rowHeightTolerance={.5}/>
+            <div class="gallery-m">
+                <Gallery images={artworksForRating.map(value => value)}
+                         componentWidth={650}
+                         targetRowHeight={rowHeight}
+                         rowHeightTolerance={.5}/>
             </div>
-            <div class="m">
-                <Gallery images={artworksForRating.map(value => value)} componentWidth={425} targetRowHeight={192} rowHeightTolerance={.5}/>
-            </div>
-            <div class="s">
-                <Gallery images={artworksForRating.map(value => value)} componentWidth={350} targetRowHeight={192} rowHeightTolerance={.5}/>
+            <div class="gallery-s">
+                <Gallery images={artworksForRating.map(value => value)}
+                         componentWidth={350}
+                         targetRowHeight={rowHeight}
+                         rowHeightTolerance={.5}/>
             </div>
         </div>
     </div>
-    <div id="side" class="surface l gallery gallery-xl gallery-xxl" slot="side">
-        <GalleryFilterContents artists={artists} rating={rating} transition:persist={true} client:only="react"/>
+    <div id="side" class="surface l gallery-xxl" slot="side">
+        <GalleryFilterContents artists={artists} rating={rating} client:only="react"/>
     </div>
-    <dialog class="right s m l" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto" transition:name="filter-dialog">
+    <dialog class="right" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto">
         <GalleryFilterContents client:only="react" artists={artists} rating={rating}/>
     </dialog>
     {isDev && <ArtUploader client:load artists={artists} characters={characters} tags={tags}/>}

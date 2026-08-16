@@ -16,14 +16,12 @@ export default defineConfig({
     // TODO Switch to always trailing slash later
     trailingSlash: "never",
     image: {
-        objectFit: "contain"
+        objectFit: "scale-down",
+        domains: ["alcorsiteartbucket.s3.amazonaws.com"],
+
     },
     prefetch: {
         prefetchAll: true
-    },
-    build: {
-        concurrency: 4,
-
     },
     experimental: {
         incrementalBuild: true

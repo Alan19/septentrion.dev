@@ -6,7 +6,7 @@ import clsx from "clsx"
 const path = Astro.url.pathname.split('/').at(1) ?? '';
 // TODO Switch to navigation drawer since there's too many destinations
 ---
-<footer class="s surface-container-high" style="position: sticky; bottom: 0" transition:name="bottom-app-bar">
+<footer class="s surface-container-high" style="position: sticky; bottom: 0">
     <nav style={{display: "flex", justifyContent: "space-evenly", alignItems: "stretch"}}>
         {destinations.map(value => {
             const subpath = value.matches ?? value.path;

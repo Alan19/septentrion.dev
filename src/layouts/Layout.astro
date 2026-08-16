@@ -44,7 +44,6 @@ const SITE_TITLE = 'septentrion.dev'
     <meta property="twitter:image" content={new URL(preview.src, Astro.url)}/>
 
     <title>septentrion.dev</title>
-    <!--<ClientRouter/>-->
 </head>
 <body class={"auto"}>
 <div style="display: flex;min-height: 100dvh" class="secondary-container adaptive-flex">
@@ -55,7 +54,7 @@ const SITE_TITLE = 'septentrion.dev'
     <div>
         <slot name="side" />
     </div>
-    <BottomAppBar transition:persist/>
+    <BottomAppBar/>
 </div>
 </body>
 </html>

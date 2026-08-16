@@ -38,12 +38,13 @@ const imageBackupsDir = path.join(folderName);
 fs.ensureDirSync(imageBackupsDir);
 const downloadedImages: string[] = [];
 
-downloadImages()
+await downloadImages()
     .then(() => console.log('All images downloaded successfully'))
     .catch(err => console.error('Error in downloading image:', err))
-    .finally(() => fs.readdir(imageBackupsDir, (_err, files) => files
-        .filter(value => !downloadedImages.includes(value))
-        .forEach((file) => fs.unlink(path.join(imageBackupsDir, file)))));
+
+fs.readdir(imageBackupsDir, (_err, files) => files
+    .filter(value => !downloadedImages.includes(value))
+    .forEach((file) => fs.unlink(path.join(imageBackupsDir, file))));
 
 async function downloadImageEntry(item: ImageInformation | AltInformation, entriesToDownload: (ImageInformation | AltInformation)[]) {
     const published = getPublishedDate(item, entriesToDownload)

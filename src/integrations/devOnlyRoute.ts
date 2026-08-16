@@ -24,24 +24,19 @@ export default function integration(): AstroIntegration {
                 // TODO: support .mdx, .md, .ts, .js
                 const devOnlyFiles = globbySync(
                     [
-                        `**/${DOUBLE_UNDERSCORE}*.(astro|ts|tsx)`,
+                        `**/${DOUBLE_UNDERSCORE}*.(astro|ts|tsx|mdx|md|js)`,
+                        `**/${DOUBLE_UNDERSCORE}*/**/*.(astro|ts|tsx|md|mdx|js)`
                     ],
-                    {
-                        cwd: pagesDir,
-                    }
+                    {cwd: pagesDir}
                 );
                 if (devOnlyFiles.length === 0) {
                     log('warn', 'No dev-only routes found.');
                     return;
                 }
                 const devOnlyRoutes = devOnlyFiles.map((route) => {
-                    const firstIndexOfDoubleUnderscore =
-                        route.indexOf(DOUBLE_UNDERSCORE);
+                    const firstIndexOfDoubleUnderscore = route.indexOf(DOUBLE_UNDERSCORE);
 
-                    const pagesDirRelativePath = route.slice(
-                        0,
-                        firstIndexOfDoubleUnderscore
-                    );
+                    const pagesDirRelativePath = route.slice(0, firstIndexOfDoubleUnderscore);
                     const routePath = route
                         .slice(
                             firstIndexOfDoubleUnderscore +
@@ -61,7 +56,7 @@ export default function integration(): AstroIntegration {
                     // if (filename === 'index') {
                     //     filename = ''
                     // }
-                    const entryPoint = slash(
+                    const entrypoint = slash(
                         path.join(
                             fileURLToPath(pagesDir),
                             pagesDirRelativePath,
@@ -72,21 +67,15 @@ export default function integration(): AstroIntegration {
                         path.join(pagesDirRelativePath, routePath)
                     );
 
-                    injectRoute({
-                        entryPoint,
-                        pattern,
-                    });
+                    injectRoute({entrypoint, pattern});
                 }
 
+                // Info for logging
                 const devOnlyRoutesCount = devOnlyRoutes.length;
-                const devOnlyRoutesTreeView = createTreeView(
-                    foldersToConsumableTree(devOnlyFiles)
-                );
+                const devOnlyRoutesTreeView = createTreeView(foldersToConsumableTree(devOnlyFiles));
                 log(
                     'info',
-                    `Found ${devOnlyRoutesCount} dev-only route${
-                        devOnlyRoutesCount > 1 ? 's' : ''
-                    }. Here they are:\n${kleur.bold(devOnlyRoutesTreeView)}`
+                    `Found ${devOnlyRoutesCount} dev-only route${devOnlyRoutesCount > 1 ? 's' : ''}. Here they are:\n${kleur.bold(devOnlyRoutesTreeView)}`
                 );
             },
         },

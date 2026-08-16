@@ -11,7 +11,7 @@
 }
 
 .skeleton {
-    background: var(--surface-container);
+    background: var(--surface-container-high);
     border-radius: 4px;
-    /*animation: skeleton-animation 2s ease-in-out 0.5s infinite*/
+    animation: skeleton-animation 2s ease-in-out 0.5s infinite
 }
