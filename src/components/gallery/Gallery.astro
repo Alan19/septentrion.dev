@@ -6,7 +6,7 @@ import {Image} from "astro:assets";
 import './skeleton.css'
 import {clsx} from "clsx";
 import {Rating} from "../../util/images.ts";
-import { ImageSkeleton } from "./ImageSkeleton";
+
 type Props = {
     images: InferEntrySchema<"artworks">[];
     componentWidth: number;
@@ -46,7 +46,7 @@ function getBorderForRating(rating: Rating) {
                         <div style={{flex: (array.length === 1 ? 1 : imageEntry.aspectRatio)}}>
                             <a style={{display: "contents"}} href={`${BASE_URL}/gallery/artwork/${imageEntry.id}`} class="image-link">
                                 <Image width={1200}
-                                       height={500}
+                                       height={1200 / imageEntry.aspectRatio}
                                        format="webp"
                                        quality={"mid"}
                                        alt={imageEntry.title}
