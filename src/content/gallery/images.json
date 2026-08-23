@@ -9565,5 +9565,82 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/luminous_divinating_engine_vaun_alcor.webp",
     "id": "934e259dc6f8a811fcc4f04754fb940eeefd001aa59ff831759336dd",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/luminous_divinating_engine_vaun_alcor.webp"
+  },
+  {
+    "title": "Rainy Day YCH (Alcor)",
+    "artist": "@shjTK_13",
+    "tags": [
+      "Half Body"
+    ],
+    "href": "",
+    "published": "2026-08-22",
+    "aspectRatio": 0.723404255319149,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rainy_day_ych_alcor.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rainy_day_ych_alcor.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rainy_day_ych_alcor.webp",
+    "id": "840b5e4e24aebd151a8bf25fbec10c79263df694c7677d7c750b4563",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rainy_day_ych_alcor.webp"
+  },
+  {
+    "title": "Rainy Day YCH (Rayan)",
+    "artist": "@shjTK_13",
+    "tags": [
+      "Half Body"
+    ],
+    "href": "",
+    "published": "2026-08-22",
+    "aspectRatio": 0.723404255319149,
+    "rating": "sensitive",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rainy_day_ych_rayan.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rainy_day_ych_rayan.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rainy_day_ych_rayan.webp",
+    "id": "1f1dd839edfdb8d570599491ba8f5b6a12caabeed084bad3ae46f8e5",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rainy_day_ych_rayan.webp"
+  },
+  {
+    "title": "Rainy Day YCH (Giove)",
+    "artist": "@shjTK_13",
+    "tags": [
+      "Half Body"
+    ],
+    "href": "",
+    "published": "2026-08-22",
+    "aspectRatio": 0.672663668165917,
+    "rating": "sensitive",
+    "characters": [
+      "Giove"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rainy_day_ych_giove.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rainy_day_ych_giove.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rainy_day_ych_giove.webp",
+    "id": "26823450b0ec94fcb88411a039ac012e644ac082fd361206258aca9e",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rainy_day_ych_giove.webp"
+  },
+  {
+    "title": "Chainsaw Man Pool YCH Colored",
+    "artist": "@EdwardArts_",
+    "tags": [
+      "Triangulum Form",
+      "Eltanin Form"
+    ],
+    "href": "",
+    "published": "2026-08-23",
+    "aspectRatio": 0.6134137810423225,
+    "rating": "sensitive",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/chainsaw_man_pool_ych_colored.jpg",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/chainsaw_man_pool_ych_colored.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/chainsaw_man_pool_ych_colored.webp",
+    "id": "7dbf9ba3906c272611008e790d28e45a5578b46ceca4f17d7c6251e2",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/chainsaw_man_pool_ych_colored.webp"
   }
 ]
