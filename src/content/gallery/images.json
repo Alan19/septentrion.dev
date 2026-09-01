@@ -9642,5 +9642,71 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/chainsaw_man_pool_ych_colored.webp",
     "id": "7dbf9ba3906c272611008e790d28e45a5578b46ceca4f17d7c6251e2",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/chainsaw_man_pool_ych_colored.webp"
+  },
+  {
+    "title": "Alcor Exocolonist-like Outfit",
+    "artist": "@bkomei",
+    "tags": [
+      "Techwear",
+      "Bodysuit",
+      "Full Body",
+      "Character Reference",
+      "Aldhibah Form"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3mtzgm5ymqs22",
+    "published": "2026-08-26",
+    "aspectRatio": 1.4649180327868851,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_exocolonist_like_outfit.alcor1cepng",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_exocolonist_like_outfit.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_exocolonist_like_outfit.webp",
+    "id": "c9a5f74da26776e47733ad64fffeb1441b7bc40e6129381267ef44ec",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_exocolonist_like_outfit.webp"
+  },
+  {
+    "title": "Regrain Researcher, Alcor",
+    "artist": "@jing56",
+    "tags": [
+      "Full Body",
+      "Illustration"
+    ],
+    "href": "",
+    "published": "2026-08-30",
+    "aspectRatio": 0.8033240997229917,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/regrain_researcher_alcor.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/regrain_researcher_alcor.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/regrain_researcher_alcor.webp",
+    "id": "e1085681f279bd911e0b984b87e170bd4587f009824a8e57da12f2e2",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/regrain_researcher_alcor.webp"
+  },
+  {
+    "title": "Time Passes Fast...",
+    "artist": "@axyusagi.bsky.social",
+    "tags": [
+      "Illustration"
+    ],
+    "href": "https://bsky.app/profile/axyusagi.bsky.social/post/3mudhlwykdk22",
+    "published": "2026-08-30",
+    "aspectRatio": 1.2195318805488298,
+    "rating": "general",
+    "characters": [
+      "Alcor",
+      "Rhew",
+      "Rei",
+      "Neptune",
+      "zteji"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/time_passes_fast.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/time_passes_fast.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/time_passes_fast.webp",
+    "id": "fcd11b7a498d85e3bec073e4aa4cea2dbbbad8f9b37e347bae868401",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/time_passes_fast.webp"
   }
 ]
