@@ -3,7 +3,7 @@ import type {InferEntrySchema} from "astro:content";
 import {BASE_URL} from "../../util/consts.ts";
 import '../../pages/pages.css';
 import '../../pages/gallery/artwork/artwork.css';
-import {Rating, ratingToNumber} from "../../util/images.ts";
+import {Rating, ratingToNumber} from "../../util/rating.ts";
 
 export function FilteredGallery({componentWidth, images, itemSpacing = 8, rowHeightTolerance = .15, targetRowHeight}: Readonly<{
     images: InferEntrySchema<"artworks">[];

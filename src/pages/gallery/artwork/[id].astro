@@ -8,6 +8,8 @@ import _ from "lodash";
 import ImageMetadata from "../../../components/gallery/ImageMetadata.astro";
 import Layout from "../../../layouts/Layout.astro";
 import {Image} from "astro:assets";
+import { ArtUploader } from '../../../components/uploader/ArtUploader';
+import type {ImageInformation} from "../../../util/images.ts";
 
 export async function getStaticPaths() {
     const collection = await getCollection('artworks')
@@ -19,7 +21,22 @@ export async function getStaticPaths() {
     }));
 }
 
-const {webp, title, href, aspectRatio, tags, artist, characters, rating, published, commissionNumber, alts} = Astro.props
+const {
+    webp,
+    title,
+    href,
+    aspectRatio,
+    tags,
+    artist,
+    characters,
+    rating,
+    published,
+    commissionNumber,
+    alts,
+    nearLossless,
+    thumbnailUrl,
+    src
+} = Astro.props
 const {id} = Astro.params;
 ---
 <script>
@@ -45,49 +62,65 @@ const {id} = Astro.params;
     }
 </script>
 <Layout>
-    <div class="container">
-        <div style="display: flex; align-items: center; gap: .5rem">
-            <nav style="gap: .05rem; overflow-y: hidden; flex: 1" class="round surface-container padding large-text">
-                <a class="link underline gallery-link" href={`${BASE_URL}/gallery/mainstream`}>Gallery</a>
-                <i>chevron_right</i>
-                <span class="bold">{title}</span>
-                <small class="medium-opacity bold" style="margin-left: .5rem">(#{commissionNumber})</small>
-            </nav>
-            <button class="m circle transparent large" popovertarget="metadata-dialog" popovertargetaction="show"><i>info</i></button>
-        </div>
-        <div style="display: flex; gap: 1rem" class="image-div">
-            {href ? <a target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={href}>
-                        <Image width={1200}
-                               id="artwork"
-                               height={1200}
-                               alt={title}
-                               class={clsx("artwork")}
-                               src={webp}
-                               transition:name={`img-${id}`}
-                               style={{viewTransitionClass: "gallery-img", flex: 1}}/>
-                    </a> :
-                    <Image width={1200}
-                           id="artwork"
-                           height={1200}
-                           alt={title}
-                           class={clsx("artwork")}
-                           src={webp}
-                           transition:name={`img-${id}`}
-                           style={{viewTransitionClass: "gallery-img", flex: 1}}/>}
+    <div style="display: flex; align-items: center; gap: .5rem" class="top-margin">
+        <nav style="gap: .05rem; overflow-y: hidden; flex: 1" class="round surface-container padding large-text">
+            <a class="link underline gallery-link" href={`${BASE_URL}/gallery/mainstream`}>Gallery</a>
+            <i>chevron_right</i>
+            <span class="bold">{title}</span>
+            <small class="medium-opacity bold" style="margin-left: .5rem">(#{commissionNumber})</small>
+        </nav>
+        <button class="m circle transparent large" popovertarget="metadata-dialog" popovertargetaction="show"><i>info</i></button>
+    </div>
+    {href ? <a target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={href}>
+                <Image width={1200}
+                       id="artwork"
+                       height={1200}
+                       alt={title}
+                       class={clsx("artwork")}
+                       src={webp}
+                       transition:name={`img-${id}`}
+                       style={{viewTransitionClass: "gallery-img", flex: 1}}/>
+            </a> :
+            <Image width={1200}
+                   id="artwork"
+                   height={1200}
+                   alt={title}
+                   class={clsx("artwork")}
+                   src={webp}
+                   transition:name={`img-${id}`}
+                   style={{viewTransitionClass: "gallery-img", flex: 1}}/>}
 
-        </div>
-    </div>
-    <div id="side" class="surface s l" slot="side">
-        <div class="filter-side-sheet">
-            <h5>Artwork Info</h5>
-            <ImageMetadata rating={rating} artist={artist} characters={characters} tags={tags} published={published} alts={alts} parentWebp={webp} parentAspectRatio={aspectRatio}/>
-        </div>
-    </div>
+    <article class="surface s l metadata" slot="side" style="max-width: 400px; margin: 1rem auto; overflow-y: scroll">
+        <h5 style="font-weight: bold">Artwork Info</h5>
+        <h6>{title} <small class="medium-opacity bold" style="margin-left: .5rem">(#{commissionNumber})</small></h6>
+        <ImageMetadata rating={rating}
+                       artist={artist}
+                       characters={characters}
+                       tags={tags}
+                       published={published}
+                       alts={alts}
+                       parentWebp={webp}
+                       parentAspectRatio={aspectRatio}/>
+    </article>
+    <ArtUploader client:load characters={characters} tags={tags} type="alt" parent={{webp,
+        title,
+        href,
+        aspectRatio,
+        tags,
+        artist,
+        characters,
+        rating,
+        published,
+        id,
+        src,
+        thumbnailUrl,
+        nearLossless
+    }} isParentHidden={false}/>
 </Layout>
-<dialog class="right m" style="width: 320px" id="metadata-dialog" popover="auto">
-    <div style="display: flex; gap: 1rem; margin-bottom: 1rem">
-        <h5 style="flex: 1">Artwork Info</h5>
-        <button class="transparent circle" popovertarget="metadata-dialog" popovertargetaction="hide"><i>close</i></button>
-    </div>
-    <ImageMetadata rating={rating} artist={artist} characters={characters} tags={tags} published={published} alts={alts} parentWebp={webp} parentAspectRatio={aspectRatio} />
-</dialog>
+<!--<dialog class="right m" style="width: 320px" id="metadata-dialog" popover="auto">-->
+<!--    <div style="display: flex; gap: 1rem; margin-bottom: 1rem">-->
+<!--        <h5 style="flex: 1">Artwork Info</h5>-->
+<!--        <button class="transparent circle" popovertarget="metadata-dialog" popovertargetaction="hide"><i>close</i></button>-->
+<!--    </div>-->
+<!--    <ImageMetadata rating={rating} artist={artist} characters={characters} tags={tags} published={published} alts={alts} parentWebp={webp} parentAspectRatio={aspectRatio} />-->
+<!--</dialog>-->

@@ -9630,8 +9630,8 @@
       "Triangulum Form",
       "Eltanin Form"
     ],
-    "href": "",
-    "published": "2026-08-23",
+    "href": "https://x.com/EdwardArts_/status/2094561301506695547",
+    "published": "2026-08-31",
     "aspectRatio": 0.6134137810423225,
     "rating": "sensitive",
     "characters": [
@@ -9673,7 +9673,7 @@
       "Full Body",
       "Illustration"
     ],
-    "href": "",
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3mugop2nvzs2y",
     "published": "2026-08-30",
     "aspectRatio": 0.8033240997229917,
     "rating": "mainstream",
@@ -9708,5 +9708,46 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/time_passes_fast.webp",
     "id": "fcd11b7a498d85e3bec073e4aa4cea2dbbbad8f9b37e347bae868401",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/time_passes_fast.webp"
+  },
+  {
+    "title": "Rayan Flux Destiny Full Body by GabrL",
+    "artist": "@gabrl-art.bsky.social",
+    "tags": [],
+    "href": "",
+    "published": "2026-09-02",
+    "aspectRatio": 0.8333333333333334,
+    "rating": "mainstream",
+    "characters": [
+      "Rayan"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_flux_destiny_full_body_by_gabr_l.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_flux_destiny_full_body_by_gabr_l.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_flux_destiny_full_body_by_gabr_l.webp",
+    "id": "2449d6a3b32f11e6e83350ea4f827386878a3927677a6dcb8631297e",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_flux_destiny_full_body_by_gabr_l.webp"
+  },
+  {
+    "title": "Alcor Character Illustration by StR_Lite",
+    "artist": "@StR_Lite",
+    "tags": [
+      "Standard Outfit",
+      "Knives",
+      "Techwear",
+      "Hoodie",
+      "Character Reference",
+      "Full Body"
+    ],
+    "href": "https://bsky.app/profile/str-lite.bsky.social/post/3mukcrxvj2c2x",
+    "published": "2026-09-02",
+    "aspectRatio": 0.7727272727272727,
+    "rating": "mainstream",
+    "characters": [
+      "Alcor"
+    ],
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_character_illustration_by_st_r_lite.png",
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_character_illustration_by_st_r_lite.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_character_illustration_by_st_r_lite.webp",
+    "id": "c79c030e938cee180f26a1628c4c65fc9a454668bc328b2ecae36a5f",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_character_illustration_by_st_r_lite.webp"
   }
 ]

@@ -1,7 +1,8 @@
 import {defineCollection, getCollection} from "astro:content";
 import {ArtworkLoader} from "./loaders/artworkLoader.ts";
 import {z} from "astro/zod";
-import {Rating} from "./util/images.ts";
+
+import {Rating} from "./util/rating.ts";
 
 const altSchema = z.object({
     id: z.string(),
@@ -14,7 +15,8 @@ const altSchema = z.object({
     aspectRatio: z.number(),
     characters: z.array(z.string()),
     parent: z.string(),
-    altType: z.union([z.enum(["extra", "cropped", "recolor"]), z.object({altNumber: z.nullish(z.number()), pageNumber: z.nullish(z.number())})])
+    altType: z.union([z.enum(["extra", "cropped", "recolor"]), z.object({altNumber: z.nullish(z.number()), pageNumber: z.nullish(z.number())})]),
+    src: z.url()
 })
 
 const parentSchema = z.object({
@@ -31,7 +33,8 @@ const parentSchema = z.object({
     aspectRatio: z.number(),
     characters: z.array(z.string()),
     commissionNumber: z.number(),
-    alts: z.array(altSchema)
+    alts: z.array(altSchema),
+    src: z.url()
 });
 
 const artworks = defineCollection({

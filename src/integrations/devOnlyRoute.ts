@@ -8,7 +8,7 @@ import slash from 'slash';
 // Adapted from https://github.com/MoustaphaDev/astro-dev-only-routes/blob/main/packages/integration/src/index.ts
 // const pageExtRE = /\.(astro|mdx|md|tsx|ts|jsx|js)$/; Support later
 
-const pageExtRE = /\.astro$/;
+const pageExtRE = /\.(astro)$/;
 const DOUBLE_UNDERSCORE = '__';
 export default function integration(): AstroIntegration {
     return {
@@ -65,7 +65,7 @@ export default function integration(): AstroIntegration {
                     );
                     const pattern = slash(
                         path.join(pagesDirRelativePath, routePath)
-                    );
+                    ).replace('.ts', '');
 
                     injectRoute({entrypoint, pattern});
                 }

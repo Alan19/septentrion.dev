@@ -19,9 +19,9 @@ const artists = _.uniq((await getCollection('artworks')).map(value => value.data
         <h3>Search Results</h3>
         <FilteredGallery images={artworks.map(value => value.data)} componentWidth={900} targetRowHeight={300} client:only="react"/>
     </div>
-    <div id="side" class="surface l" slot="side">
+    <article class="surface l" slot="side">
         <GalleryFilterContents artists={artists} client:only="react"/>
-    </div>
+    </article>
     <dialog class="right s m" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto" transition:name="filter-dialog">
         <GalleryFilterContents client:only="react" artists={artists} />
     </dialog>
