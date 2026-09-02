@@ -23,18 +23,18 @@ export const s3 = new S3({
 })
 
 function getFormData(data: FormData) {
-    return <ParentImageFormData>data.entries().reduce((previousValue, [key, value]) => {
+    return data.entries().reduce((previousValue, [key, value]) => {
         // Add new fields here as necessary
         switch (key) {
             case "hidden":
-                return {...previousValue, [key]: JSON.parse(<string>value)};
+                return {...previousValue, [key]: JSON.parse(value as string)};
             case "tags":
             case "characters":
-                return {...previousValue, [key]: value === '' ? [] : (<string>value).split(',').map(value1 => value1.trim())}
+                return {...previousValue, [key]: value === '' ? [] : (value as string).split(',').map(value1 => value1.trim())}
             default:
                 return {...previousValue, [key]: value};
         }
-    }, {});
+    }, {}) as ParentImageFormData;
 }
 
 export const POST: APIRoute = async ({request}) => {

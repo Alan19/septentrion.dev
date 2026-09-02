@@ -1,21 +1,21 @@
 ---
-import {ClientRouter, slide} from "astro:transitions";
-import './layout.css'
 import Font from "astro/components/Font.astro";
 import './theme.css'
-import BottomAppBar from "../components/navigation/BottomAppBar.astro";
-import NavigationRail from "../components/navigation/NavigationRail.astro";
 import icon from "../assets/icon.webp"
 import preview from '../assets/logo.png'
 const title = "septentrion.dev"
 const description = "Alcor's personal website for his commissioned artwork and interests"
 const SITE_TITLE = 'septentrion.dev'
+import sprite from './2.gif'
+import {destinations} from "../components/navigation/destinations.ts";
+import './layout.css'
 ---
+<!--<ClientRouter fallback="none"/>-->
 <html lang="en">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/beercss@4.0.21/dist/cdn/beer.min.css" rel="stylesheet"/>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@4.0.21/dist/cdn/beer.min.js"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.4/dist/cdn/material-dynamic-colors.min.js"></script>
+    <link href="../../node_modules/beercss/dist/cdn/beer.min.css" rel="stylesheet"/>
+    <script type="module" is:inline src="../../node_modules/beercss/dist/cdn/beer.min.js"></script>
+    <script type="module" is:inline src="../../node_modules/material-dynamic-colors/dist/cdn/material-dynamic-colors.min.js"></script>
     <meta charset="utf-8"/>
     <meta name="color-scheme" content="light dark"/>
     <link rel="icon" href={icon.src}/>
@@ -46,15 +46,27 @@ const SITE_TITLE = 'septentrion.dev'
     <title>septentrion.dev</title>
 </head>
 <body class={"auto"}>
-<div style="display: flex;min-height: 100dvh" class="secondary-container adaptive-flex">
-    <NavigationRail/>
-    <div id="content" class="surface">
+<nav class="space border round left-padding right-padding"
+     style="width: fit-content; margin: auto;top: 1rem; z-index: 2;">
+    {destinations.slice(0).map((value, index) => <a href={`/${value.path}`}>
+        <button class="transparent circle large">
+            <i class="large">{value.icon}</i>
+        </button>
+    </a>)}
+</nav>
+<div id="main" class="grid">
+    <div class="l2 s12">
+        <a href="/" style="display: contents">
+            <img src={sprite.src}
+                 style="width: min(100%, 12rem); position:sticky; top: 1rem; view-transition-name: alcor-gif"/>
+        </a>
+    </div>
+    <div id="content" class="l8">
         <slot/>
     </div>
-    <div>
-        <slot name="side" />
+    <div style="flex: 1" class="l2 s12">
+        <slot name="side"/>
     </div>
-    <BottomAppBar/>
 </div>
 </body>
 </html>

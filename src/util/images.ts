@@ -1,3 +1,5 @@
+import type {Rating} from "./rating.ts";
+
 export interface ImageBase {
     tags: string[];
     webp: string;
@@ -9,26 +11,6 @@ export interface ImageBase {
     href?: string;
     characters: string[];
     id: string;
-}
-
-export enum Rating {
-    Mainstream = 'mainstream',
-    General = 'general',
-    Sensitive = 'sensitive',
-    Mature = 'mature'
-}
-
-export function ratingToNumber(rating: Rating): number {
-    switch (rating) {
-        case Rating.Mainstream:
-            return 0;
-        case Rating.General:
-            return 1;
-        case Rating.Sensitive:
-            return 2;
-        case Rating.Mature:
-            return 3;
-    }
 }
 
 export function getParentImage(id: string, imageEntries: ImageEntry[]): ImageInformation | undefined {

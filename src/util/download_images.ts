@@ -8,6 +8,7 @@ import axios from "axios";
 import {sha3_224} from "js-sha3";
 import {type AltInformation, type ImageInformation, isAltInformation, isImageInformation} from "./images.ts";
 import {prepareFileName} from "../pages/api/__upload.ts";
+import node from 'node:os';
 
 export function getPublishedDate(item: ImageInformation | AltInformation, allImages: (ImageInformation | AltInformation)[]) {
     return isImageInformation(item) ? item.published : allImages
@@ -32,7 +33,7 @@ const options = program.opts();
 const ratingFilter: ('general' | 'mainstream' | 'sensitive' | 'mature')[] = options.rating ?? [];
 const mode: "near-lossless" | "lossy" | "thumbnail" = options.mode;
 const folderName = [...ratingFilter, _.snakeCase(mode)].join("_");
-const imageBackupsDir = path.join(folderName);
+const imageBackupsDir = path.join(node.homedir(), 'septentrion.dev-backups', folderName);
 
 // Empty and ensure folder exists
 fs.ensureDirSync(imageBackupsDir);

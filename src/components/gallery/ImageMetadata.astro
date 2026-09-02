@@ -1,8 +1,9 @@
 ---
 import Image from "astro/components/Image.astro";
-import type {Rating} from "../../util/images.ts";
 import _ from "lodash";
 import type {InferEntrySchema} from "astro:content";
+import {Rating} from "../../util/rating.ts";
+import {getDisplayFunction} from "./getDisplayOrder.ts";
 type Props = {
     artist: string,
     rating: Rating,
@@ -15,6 +16,7 @@ type Props = {
 }
 const {artist, rating, tags, characters, published, alts, parentWebp, parentAspectRatio} = Astro.props;
 const artistUrl = !artist.includes('.') ? `https://x.com/${artist}` : `https://bsky.app/profile/${artist.substring(1)}`
+
 ---
 <div>Artist: <a class="link" href={artistUrl} target="_blank" rel="noopener noreferrer">{artist}</a></div>
 <div>Rating: {_.capitalize(rating)}</div>
@@ -33,21 +35,21 @@ const artistUrl = !artist.includes('.') ? `https://x.com/${artist}` : `https://b
                 <span>{tag}</span>
             </button>)}
 </div>
-{!!alts.length && <>
+{!!alts.length &&
+<>
     <h5>Alts</h5>
-    <nav class="scroll">
-        <Image src={parentWebp}
-               alt={'parent image'}
-               onclick={`const el = document.getElementById('artwork');el.src = '${parentWebp}'`}
-               style={{height: '12rem', width: "auto"}}
-               width={500}
-               height={192}/>
-        {alts.map(value =>
-                <Image src={value.webp}
-                       alt={value.parent + ' alt'}
-                       onclick={`const el = document.getElementById('artwork');el.src = '${value.webp}'`}
-                       style={{height: '12rem', width: "auto"}}
-                       width={500}
-                       height={192}/>)}
-    </nav>
+
+    <Image src={parentWebp}
+           alt={'parent image'}
+           onclick={`const el = document.getElementById('artwork');el.src = '${parentWebp}'`}
+           style={{width: "100%", height: "auto"}}
+           width={400}
+           height={800}/>
+    {alts.map(value =>
+            <Image src={value.webp}
+                   alt={value.parent + ' alt'}
+                   onclick={`const el = document.getElementById('artwork');el.src = '${value.webp}'`}
+                   style={{width: "100%", height: "auto"}}
+                   width={400}
+                   height={800}/>)}
 </>}
