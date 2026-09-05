@@ -2,12 +2,6 @@
     z-index: 5;
 }
 
-@media only screen and (min-width: 1792px) {
-    :is(.filter-button) {
-        display: none !important;
-    }
-}
-
 .gallery-img {
     width: 100%;
     height: auto;

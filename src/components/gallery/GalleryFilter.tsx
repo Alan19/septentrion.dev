@@ -73,7 +73,7 @@ export function GalleryFilterContents(props: Readonly<{ artists: string[]; ratin
         }
     }
 
-    return <fieldset>
+    return <div>
         <legend className="secondary-text bold"><h3>Filters</h3></legend>
         <h5>Artist</h5>
         <div className="field label suffix border">
@@ -100,5 +100,5 @@ export function GalleryFilterContents(props: Readonly<{ artists: string[]; ratin
                 onClick={() => handleCharacterUpdate(value)} key={value}
                 className={clsx("chip small", getCurrentCharacter() === value && "primary primary-border")}>{_.capitalize(value)}</button>)}
         </div>
-    </fieldset>;
+    </div>;
 }

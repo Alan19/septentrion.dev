@@ -33,11 +33,11 @@ const {rating} = Astro.params;
 
 const rowHeight = 288;
 ---
-<Layout>
+<Layout middlePanelClass="s12 l7" rightPanelClass="l l3">
     <div class="container" style="width: 100%">
         <div style="display: flex">
-            <h1 style="flex: 1">Commissions</h1>
-            <button id="filter-button" class={"transparent circle filter-button"} popovertarget="filter-dialog">
+            <h1 style="flex: 1">Gallery</h1>
+            <button id="filter-button" class={"transparent circle s m"} popovertarget="filter-dialog">
                 <i>filter_alt</i>
             </button>
         </div>
@@ -68,11 +68,11 @@ const rowHeight = 288;
             </div>
         </div>
     </div>
-    <div class="surface-container top-margin" slot="side" style="max-width: 400px; margin-left: auto; position: sticky; top: 3rem">
+    <article class="surface-container top-margin l" slot="side" style="max-width: 400px; margin-left: auto; position: sticky; top: 3rem">
         <GalleryFilterContents artists={artists} rating={rating} client:only="react"/>
-    </div>
-    <!--<dialog class="right" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto">-->
-    <!--    <GalleryFilterContents client:only="react" artists={artists} rating={rating}/>-->
-    <!--</dialog>-->
+    </article>
+    <dialog class="right s m" style="max-width: 400px; border-top-left-radius: 2rem; border-bottom-left-radius: 2rem" id="filter-dialog" popover="auto">
+        <GalleryFilterContents client:only="react" artists={artists} rating={rating}/>
+    </dialog>
     {isDev && <ArtUploader client:load artists={artists} characters={characters} tags={tags} type="parent"/>}
 </Layout>

@@ -9,6 +9,14 @@ const SITE_TITLE = 'septentrion.dev'
 import sprite from './2.gif'
 import {destinations} from "../components/navigation/destinations.ts";
 import './layout.css'
+import {Image} from "astro:assets";
+interface LayoutProps {
+    leftPanelClass?: string;
+    middlePanelClass?: string;
+    rightPanelClass?: string;
+}
+
+const {leftPanelClass = 'l l2', middlePanelClass = 's12 l8', rightPanelClass = 'l l2'}: LayoutProps = Astro.props;
 ---
 <!--<ClientRouter fallback="none"/>-->
 <html lang="en">
@@ -55,16 +63,15 @@ import './layout.css'
     </a>)}
 </nav>
 <div id="main" class="grid">
-    <div class="l2 s12">
+    <div class={leftPanelClass}>
+        <Image alt="a gif of Alcor" src={sprite} style="width: min(100%, 12rem); height: auto; position:sticky; top: 1rem; view-transition-name: alcor-gif" />
         <a href="/" style="display: contents">
-            <img src={sprite.src}
-                 style="width: min(100%, 12rem); position:sticky; top: 1rem; view-transition-name: alcor-gif"/>
         </a>
     </div>
-    <div id="content" class="l8">
+    <div id="content" class={middlePanelClass} style="width: 100%">
         <slot/>
     </div>
-    <div style="flex: 1" class="l2 s12">
+    <div style="flex: 1" class={rightPanelClass}>
         <slot name="side"/>
     </div>
 </div>
