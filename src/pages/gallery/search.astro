@@ -8,7 +8,7 @@ import _ from "lodash";
 const artworks = (await getCollection('artworks')).toSorted((a, b) => b.data.commissionNumber - a.data.commissionNumber)
 const artists = _.uniq((await getCollection('artworks')).map(value => value.data.artist));
 ---
-<Layout>
+<Layout middlePanelClass="s12 l7" rightPanelClass="l l3">
     <div class="container">
         <div style="display: flex">
             <h1 style="flex: 1">Gallery</h1>
