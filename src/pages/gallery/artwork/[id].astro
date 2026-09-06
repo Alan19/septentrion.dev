@@ -45,36 +45,40 @@ const {
     src
 } = Astro.props
 const {id} = Astro.params;
+
+const maxWidthAndHeight = 1300
 ---
 <DynamicGalleryBack />
 <Layout>
-    <div style="display: flex; align-items: center; gap: .5rem" class="top-margin">
-        <nav style="gap: .05rem; overflow-y: hidden; flex: 1" class="round surface-container padding large-text">
-            <a class="link underline gallery-link" href={`${BASE_URL}/gallery/mainstream`}>Gallery</a>
-            <i>chevron_right</i>
-            <span class="bold">{title}</span>
-            <small class="medium-opacity bold" style="margin-left: .5rem">(#{commissionNumber})</small>
-        </nav>
-        <button class="s m circle transparent large" popovertarget="metadata-dialog" popovertargetaction="show"><i>info</i></button>
-    </div>
-    {href ? <a target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={href}>
-                <Image width={1200}
+    <div style="max-width: 1200px">
+        <div style="display: flex; align-items: center; gap: .5rem" class="top-margin">
+            <nav style="gap: .05rem; overflow-y: hidden; flex: 1" class="round surface-container padding large-text">
+                <a class="link underline gallery-link" href={`${BASE_URL}/gallery/mainstream`}>Gallery</a>
+                <i>chevron_right</i>
+                <span class="bold">{title}</span>
+                <small class="medium-opacity bold" style="margin-left: .5rem">(#{commissionNumber})</small>
+            </nav>
+            <button class="s m circle transparent large" popovertarget="metadata-dialog" popovertargetaction="show"><i>info</i></button>
+        </div>
+        {href ? <a target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={href}>
+                    <Image width={maxWidthAndHeight}
+                           id="artwork"
+                           height={maxWidthAndHeight}
+                           alt={title}
+                           class={clsx("artwork")}
+                           src={webp}
+                           transition:name={`img-${id}`}
+                           style={{viewTransitionClass: "gallery-img", flex: 1}}/>
+                </a> :
+                <Image width={maxWidthAndHeight}
                        id="artwork"
-                       height={1200}
+                       height={maxWidthAndHeight}
                        alt={title}
                        class={clsx("artwork")}
                        src={webp}
                        transition:name={`img-${id}`}
-                       style={{viewTransitionClass: "gallery-img", flex: 1}}/>
-            </a> :
-            <Image width={1200}
-                   id="artwork"
-                   height={1200}
-                   alt={title}
-                   class={clsx("artwork")}
-                   src={webp}
-                   transition:name={`img-${id}`}
-                   style={{viewTransitionClass: "gallery-img", flex: 1}}/>}
+                       style={{viewTransitionClass: "gallery-img", flex: 1}}/>}
+    </div>
 
     <article class="surface s l metadata" slot="side" style="max-width: 400px; margin: 1rem auto; overflow-y: scroll">
         <h5 style="font-weight: bold">Artwork Info</h5>
