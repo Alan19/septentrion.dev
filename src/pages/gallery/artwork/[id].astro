@@ -1,15 +1,19 @@
 ---
 import '../../pages.css'
 import './artwork.css'
-import {BASE_URL} from "../../../util/consts.ts";
+import {BASE_URL, isDev} from "../../../util/consts.ts";
 import {getCollection} from "astro:content";
 import {clsx} from "clsx";
 import _ from "lodash";
 import ImageMetadata from "../../../components/gallery/ImageMetadata.astro";
 import Layout from "../../../layouts/Layout.astro";
-import {Image} from "astro:assets";
 import { ArtUploader } from '../../../components/uploader/ArtUploader';
-import type {ImageInformation} from "../../../util/images.ts";
+import {Image} from "astro:assets";
+import DynamicGalleryBack from "../../../components/DynamicGalleryBack.astro";
+import hiddenImages from '../../../content/gallery/hidden.json'
+
+const allTags = _.uniq((await getCollection('artworks')).flatMap(value => value.data.tags))
+const allCharacters = _.uniq((await getCollection('artworks')).flatMap(value => value.data.characters))
 
 export async function getStaticPaths() {
     const collection = await getCollection('artworks')
@@ -39,28 +43,7 @@ const {
 } = Astro.props
 const {id} = Astro.params;
 ---
-<script>
-    import {supportsViewTransitions} from 'astro:transitions/client'
-
-    if (supportsViewTransitions) {
-        document.addEventListener('astro:page-load', callback)
-    } else {
-        callback()
-    }
-
-    function callback() {
-        const backButton = document.querySelector('.gallery-link')
-        const fromFeed = localStorage.getItem('cameFromGallery')
-        localStorage.removeItem('cameFromGallery')
-
-        backButton?.addEventListener('click', (e) => {
-            if (fromFeed && history.length > 1) {
-                e.preventDefault()
-                history.back()
-            }
-        })
-    }
-</script>
+<DynamicGalleryBack />
 <Layout>
     <div style="display: flex; align-items: center; gap: .5rem" class="top-margin">
         <nav style="gap: .05rem; overflow-y: hidden; flex: 1" class="round surface-container padding large-text">
@@ -102,7 +85,7 @@ const {id} = Astro.params;
                        parentWebp={webp}
                        parentAspectRatio={aspectRatio}/>
     </article>
-    <ArtUploader client:load characters={characters} tags={tags} type="alt" parent={{webp,
+    {isDev && <ArtUploader client:load characters={allCharacters} tags={allTags} type="alt" parent={{webp,
         title,
         href,
         aspectRatio,
@@ -115,7 +98,7 @@ const {id} = Astro.params;
         src,
         thumbnailUrl,
         nearLossless
-    }} isParentHidden={false}/>
+    }} isParentHidden={!!hiddenImages.find(entry => entry.title === title)}/>}
 </Layout>
 <!--<dialog class="right m" style="width: 320px" id="metadata-dialog" popover="auto">-->
 <!--    <div style="display: flex; gap: 1rem; margin-bottom: 1rem">-->

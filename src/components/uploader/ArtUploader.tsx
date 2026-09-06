@@ -90,13 +90,17 @@ export function ArtUploader(props: Readonly<ParentUploaderProps | AltUploaderPro
         }
     });
 
-    let artist = watch("artist");
+    const artist = watch("artist");
     let selectedArtist: Option[] = artist ? [{label: artist, value: artist}] : [];
+
     const tags = watch("tags") as string[] | undefined;
     const selectedTags: Option[] = tags?.map(value => ({label: value, value: value})) ?? [];
 
     const characters = watch("characters") as string[] | undefined;
     const selectedCharacters: Option[] = characters?.map(value => ({label: value, value: value})) ?? [];
+
+    const watchAltType = watch("altType")
+
     return <>
         <button popoverTarget={"uploader"} className="circle extra" style={{"position": "fixed", "bottom": '3rem', right: "3rem", zIndex: 2}} suppressHydrationWarning>
             <i>add</i>
@@ -194,16 +198,22 @@ export function ArtUploader(props: Readonly<ParentUploaderProps | AltUploaderPro
                             </label>
                         )}
                     </nav>
-                    {/*<div className={"grid"} style={{width: "100%"}}>*/}
-                    {/*    {watchAltType === "complex" && <>*/}
-                    {/*        <div className={"s12 m6"}>*/}
-                    {/*            <BeerCSSTextField label={"Page"} type={"number"} {...register("complexInfo.pageNumber")} />*/}
-                    {/*        </div>*/}
-                    {/*        <div className={"s12 m6"}>*/}
-                    {/*            <BeerCSSTextField label={"Alt"} type={"number"} {...register("complexInfo.altNumber")} />*/}
-                    {/*        </div>*/}
-                    {/*    </>}*/}
-                    {/*</div>*/}
+                    <div className={"grid"} style={{width: "100%"}}>
+                        {watchAltType === "complex" && <>
+                            <div className={"s12 m6"}>
+                                <div className="field label border">
+                                    <input type="number" {...register("complexInfo.pageNumber")}/>
+                                    <label>Page</label>
+                                </div>
+                            </div>
+                            <div className={"s12 m6"}>
+                                <div className="field label border">
+                                    <input type="number" {...register("complexInfo.altNumber")}/>
+                                    <label>Alt</label>
+                                </div>
+                            </div>
+                        </>}
+                    </div>
                 </fieldset>}
 
                 <fieldset>
