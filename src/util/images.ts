@@ -34,6 +34,7 @@ export type AltType = 'extra' | 'cropped' | 'recolor' | 'complex';
 export interface AltInformation extends ImageBase {
     parent: string;
     altType: AltType;
+    complexInfo?: { pageNumber?: number, altNumber?: number }
 }
 
 export type ImageEntry = AltInformation | ImageInformation;

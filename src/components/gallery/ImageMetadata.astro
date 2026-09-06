@@ -16,7 +16,6 @@ type Props = {
 }
 const {artist, rating, tags, characters, published, alts, parentWebp, parentAspectRatio} = Astro.props;
 const artistUrl = !artist.includes('.') ? `https://x.com/${artist}` : `https://bsky.app/profile/${artist.substring(1)}`
-
 ---
 <div>Artist: <a class="link" href={artistUrl} target="_blank" rel="noopener noreferrer">{artist}</a></div>
 <div>Rating: {_.capitalize(rating)}</div>
@@ -39,17 +38,19 @@ const artistUrl = !artist.includes('.') ? `https://x.com/${artist}` : `https://b
 <>
     <h5>Alts</h5>
 
-    <Image src={parentWebp}
-           alt={'parent image'}
-           onclick={`const el = document.getElementById('artwork');el.src = '${parentWebp}'`}
-           style={{width: "100%", height: "auto"}}
-           width={400}
-           height={800}/>
-    {alts.map(value =>
-            <Image src={value.webp}
-                   alt={value.parent + ' alt'}
-                   onclick={`const el = document.getElementById('artwork');el.src = '${value.webp}'`}
-                   style={{width: "100%", height: "auto"}}
-                   width={400}
-                   height={800}/>)}
+    <div style="display: flex; flex-direction: column; gap: .5rem">
+        <Image src={parentWebp}
+               alt={'parent image'}
+               onclick={`const el = document.getElementById('artwork');el.src = '${parentWebp}'`}
+               class={'artwork-alt'}
+               width={400}
+               height={800}/>
+        {alts.map(value =>
+                <Image src={value.webp}
+                       alt={value.parent + ' alt'}
+                       onclick={`const el = document.getElementById('artwork');el.src = '${value.webp}'`}
+                       class={'artwork-alt'}
+                       width={400}
+                       height={800}/>)}
+    </div>
 </>}

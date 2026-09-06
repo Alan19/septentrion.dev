@@ -2,10 +2,9 @@
     object-fit: contain;
     object-position: top;
     border-radius: 0;
-    max-width: 100%;
+    width: 100%;
     max-height: calc(100dvh - 8rem - 20px - 56px - 2rem);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem .5rem;
 }
 
 #container {
@@ -14,4 +13,10 @@
 
 .metadata {
     max-height: calc(100dvh - 8rem - 56px - 1rem);
+}
+
+.artwork-alt {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
 }

@@ -10,7 +10,6 @@ import {sha3_224} from "js-sha3";
 import * as fs from "node:fs";
 import _ from "lodash";
 import {getCollection} from "astro:content";
-import {Rating} from "../../util/rating.ts";
 
 dotenv.config();
 
@@ -36,83 +35,70 @@ export const POST: APIRoute = async ({request}) => {
     console.log(formValues)
 
     if (process.env.BUCKET_NAME) {
-        if (formValues.type !== "parent") {
-            console.log(formValues.complexInfo)
-            const parent = artworks.find(value => value.data.title === formValues.title);
-            if (parent) {
-                const altNumber = (parent?.data.alts.length ?? 0) + 1;
-                const {
-                    aspectRatio,
-                    id,
-                    nearLosslessUrl,
-                    src,
-                    thumbnailUrl,
-                    webpUrl
-                } = await uploadImage(formValues.file, formValues.title, process.env.BUCKET_NAME, altNumber);
-                const resultJSON: AltInformation = {
-                    parent: formValues.title,
-                    altType: formValues.altType,
-                    tags: formValues.tags,
-                    webp: webpUrl,
-                    src: src,
-                    thumbnailUrl: thumbnailUrl,
-                    nearLossless: nearLosslessUrl,
-                    rating: formValues.rating,
-                    aspectRatio: aspectRatio,
-                    characters: formValues.characters,
-                    id: id
-                }
-                addToJson(resultJSON, formValues.hidden)
-                return new Response(
-                    JSON.stringify({
-                        message: "Success!",
-                        output: resultJSON
-                    }),
-                    {status: 200}
-                );
-            }
-            else {
-                return new Response(
-                    JSON.stringify({message: "Parent entry not found!"}),
-                    {status: 400}
-                );
-            }
+        let altNumber: number | undefined;
+        if (formValues.type === 'alt') {
+            altNumber = (artworks.find(value => value.data.title === formValues.title)?.data.alts.length ?? 0) + 1;
+        } else {
+            altNumber = undefined;
         }
-        const {file, tags, artist, hidden, rating, title, published, characters, href} = formValues
-
-        // Validate the data - you'll probably want to do more than this
-        if (!title || !artist || !rating || !published || !file || !process.env.BUCKET_NAME) {
+        const {
+            aspectRatio,
+            id,
+            nearLosslessUrl,
+            src,
+            thumbnailUrl,
+            webpUrl
+        } = await uploadImage(formValues.file, formValues.title, process.env.BUCKET_NAME, altNumber);
+        if (formValues.type === 'alt') {
+            const uploadData: AltInformation = {
+                altType: formValues.altType,
+                aspectRatio: aspectRatio,
+                characters: formValues.characters,
+                id: id,
+                nearLossless: nearLosslessUrl,
+                parent: formValues.title,
+                rating: formValues.rating,
+                src: src,
+                tags: formValues.tags,
+                thumbnailUrl: thumbnailUrl,
+                webp: webpUrl,
+                href: formValues.href,
+                complexInfo: formValues.complexInfo
+            }
+            addToJson(uploadData, formValues.hidden)
             return new Response(
-                JSON.stringify({message: "Missing required fields!"}),
-                {status: 400}
+                JSON.stringify({
+                    message: `Successfully uploaded alt ${altNumber} for ${formValues.title}!`,
+                    output: formValues
+                }),
+                {status: 200}
             );
         }
-        const {webpUrl, id, src, thumbnailUrl, nearLosslessUrl, aspectRatio, } = await uploadImage(file, title, process.env.BUCKET_NAME)
-        const jsonOutput: ImageInformation = {
-            title: title,
-            artist: artist,
-            tags: tags,
-            href: href,
-            published: published,
-            aspectRatio: aspectRatio,
-            rating: rating,
-            characters: characters,
-            src: src,
-            thumbnailUrl: thumbnailUrl,
-            webp: webpUrl,
-            id: id,
-            nearLossless: nearLosslessUrl
-        };
-        addToJson(jsonOutput, hidden);
-        // Do something with the data, then return a success response
-        return new Response(
-            JSON.stringify({
-                message: "Success!",
-                output: jsonOutput
-            }),
-            {status: 200}
-        );
-
+        else {
+            const uploadData: ImageInformation = {
+                artist: formValues.artist,
+                aspectRatio: aspectRatio,
+                characters: formValues.characters,
+                href: formValues.href,
+                id: id,
+                nearLossless: nearLosslessUrl,
+                published: formValues.published,
+                rating: formValues.rating,
+                src: src,
+                tags: formValues.tags,
+                thumbnailUrl: thumbnailUrl,
+                title: formValues.title,
+                webp: webpUrl
+            }
+            addToJson(uploadData, formValues.hidden)
+            return new Response(
+                JSON.stringify({
+                    message: `Successfully uploaded ${formValues.title}!`,
+                    output: formValues
+                }),
+                {status: 200}
+            );
+        }
     }
     return new Response(
         JSON.stringify({message: "Bucket is undefined!"}),

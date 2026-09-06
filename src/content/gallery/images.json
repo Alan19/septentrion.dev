@@ -9749,5 +9749,27 @@
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_character_illustration_by_st_r_lite.webp",
     "id": "c79c030e938cee180f26a1628c4c65fc9a454668bc328b2ecae36a5f",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_character_illustration_by_st_r_lite.webp"
+  },
+  {
+    "artist": "@emit-azure.bsky.social",
+    "aspectRatio": 1,
+    "characters": [
+      "Alcor",
+      "John Thompson"
+    ],
+    "href": "https://x.com/Emit_Main/status/2096249881396699173?s=20",
+    "id": "82502a298027e6e8f6263da3d1467973e42b1b9f39c72435429603c4",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/game_boys.webp",
+    "published": "2026-09-06",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/game_boys.png",
+    "tags": [
+      "Techwear",
+      "Aldhibah Form",
+      "Bodysuit"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/game_boys.webp",
+    "title": "Game Boys",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/game_boys.webp"
   }
 ]
