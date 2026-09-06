@@ -13,43 +13,37 @@ export interface UploadFormData {
     tags: string[],
     rating: Rating,
     characters: string[],
-    href?: string
+    href?: string,
+    title: string
+    hidden: boolean
 }
 
 export type ParentImageFormData = UploadFormData & {
-    title: string,
     artist: string,
     published: string,
-    hidden: boolean
     type: "parent"
 }
 
 export type AltImageFormData = UploadFormData & {
-    altType: "complex" | "cropped" | "recolor" | "extra";
-    complexInfo?: { pageNumber?: number, altNumber?: number },
+    altType: "complex" | "cropped" | "recolor" | "extra"
+    complexInfo?: { pageNumber?: number, altNumber?: number }
     type: "alt"
+}
+
+const serializeUploadData = (fieldValues: FieldValues) => {
+    return Object.entries(fieldValues).reduce((previousValue, [key, value]) => {
+        if (key === "file") {
+            previousValue.set('file', fieldValues.file[0]);
+        } else {
+            previousValue.set(key, JSON.stringify(value))
+        }
+        return previousValue;
+    }, new FormData());
 }
 
 async function submit(fieldValues: FieldValues) {
     console.log("Uploading!", fieldValues)
-    const formData = Object.entries(fieldValues).reduce((previousValue, [key, value]) => {
-        switch (key) {
-            case "file":
-                previousValue.set('file', fieldValues.file[0]);
-                break;
-            case "tags":
-            case "characters":
-                previousValue.set(key, value.map((value1: string) => value1.trim()).join(',').toString())
-                break;
-            case "hidden":
-                previousValue.set(key, JSON.stringify(value));
-                break;
-            default:
-                previousValue.set(key, value);
-                break;
-        }
-        return previousValue;
-    }, new FormData());
+    const formData = serializeUploadData(fieldValues);
     console.log(formData)
     await fetch("/api/upload", {
         method: "POST",
@@ -86,7 +80,8 @@ export function ArtUploader(props: Readonly<ParentUploaderProps | AltUploaderPro
             href: props.type === "alt" ? props.parent.href : "",
             characters: props.type === "alt" ? props.parent.characters : ["Alcor"],
             tags: props.type === "alt" ? props.parent.tags : [],
-            type: isParent ? "parent" : "alt"
+            type: isParent ? "parent" : "alt",
+            title: !isParent ? props.parent.title : ""
         }
     });
 
@@ -202,13 +197,13 @@ export function ArtUploader(props: Readonly<ParentUploaderProps | AltUploaderPro
                         {watchAltType === "complex" && <>
                             <div className={"s12 m6"}>
                                 <div className="field label border">
-                                    <input type="number" {...register("complexInfo.pageNumber")}/>
+                                    <input type="number" {...register("complexInfo.pageNumber", {valueAsNumber: true, min: 0})}/>
                                     <label>Page</label>
                                 </div>
                             </div>
                             <div className={"s12 m6"}>
                                 <div className="field label border">
-                                    <input type="number" {...register("complexInfo.altNumber")}/>
+                                    <input type="number" {...register("complexInfo.altNumber", {valueAsNumber: true, min: 0})}/>
                                     <label>Alt</label>
                                 </div>
                             </div>
@@ -232,8 +227,7 @@ export function ArtUploader(props: Readonly<ParentUploaderProps | AltUploaderPro
                            disabled={props.type === "alt" && props.isParentHidden}/>
                     <span>Hidden</span>
                 </label>
-                <input disabled={!formState.isValid || formState.isSubmitting} type={"submit"}
-                       className={"button top-margin"}/>
+                <input disabled={!formState.isValid || formState.isSubmitting} type={"submit"} className={"button top-margin"}/>
             </form>
         </dialog>
         <ToastContainer/>

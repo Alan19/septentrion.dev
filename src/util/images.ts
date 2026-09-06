@@ -29,19 +29,11 @@ export interface ImageInformation extends ImageBase {
     artist: string;
 }
 
-export type AltType = 'extra' | 'cropped' | 'recolor' | { altNumber?: number, pageNumber?: number };
+export type AltType = 'extra' | 'cropped' | 'recolor' | 'complex';
 
 export interface AltInformation extends ImageBase {
     parent: string;
     altType: AltType;
-}
-
-export function isAltTypeComplex(altType: AltType | undefined): altType is { altNumber?: number, pageNumber?: number } {
-    return typeof altType === 'object';
-}
-
-export function getAltAndPageNumber(a: AltInformation) {
-    return isAltTypeComplex(a.altType) ? a.altType : {pageNumber: 0, altNumber: 0};
 }
 
 export type ImageEntry = AltInformation | ImageInformation;
