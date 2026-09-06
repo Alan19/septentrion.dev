@@ -55,8 +55,7 @@ import 'material-dynamic-colors/dist/cdn/material-dynamic-colors.min'
     <title>septentrion.dev</title>
 </head>
 <body class={"auto"}>
-<nav class="space border round left-padding right-padding"
-     style="width: fit-content; margin: auto;top: 1rem; z-index: 2;">
+<nav class="space border round left-padding right-padding" id="navigation-bar" style="width: fit-content; margin: auto;top: 1rem; z-index: 2;">
     {destinations.slice(0).map((value, index) => <a href={`/${value.path}`}>
         <button class="transparent circle large">
             <i class="large">{value.icon}</i>

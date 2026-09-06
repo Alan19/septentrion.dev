@@ -60,3 +60,10 @@ body {
         display: none;
     }
 }
+
+body:has(:popover-open) {
+    #content, #navigation-bar {
+        pointer-events: none;
+        touch-action: none;
+    }
+}

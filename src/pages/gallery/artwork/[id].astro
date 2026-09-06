@@ -10,7 +10,10 @@ import Layout from "../../../layouts/Layout.astro";
 import { ArtUploader } from '../../../components/uploader/ArtUploader';
 import {Image} from "astro:assets";
 import DynamicGalleryBack from "../../../components/DynamicGalleryBack.astro";
-import hiddenImages from '../../../content/gallery/hidden.json'
+
+import fs from "node:fs";
+import {type AltInformation, type ImageInformation, isImageInformation} from "../../../util/images.ts";
+const hiddenImages: (ImageInformation | AltInformation)[] = fs.existsSync('src/content/gallery/hidden.json') ? JSON.parse(fs.readFileSync('src/content/gallery/hidden.json').toString()) : []
 
 const allTags = _.uniq((await getCollection('artworks')).flatMap(value => value.data.tags))
 const allCharacters = _.uniq((await getCollection('artworks')).flatMap(value => value.data.characters))
@@ -52,7 +55,7 @@ const {id} = Astro.params;
             <span class="bold">{title}</span>
             <small class="medium-opacity bold" style="margin-left: .5rem">(#{commissionNumber})</small>
         </nav>
-        <button class="m circle transparent large" popovertarget="metadata-dialog" popovertargetaction="show"><i>info</i></button>
+        <button class="s m circle transparent large" popovertarget="metadata-dialog" popovertargetaction="show"><i>info</i></button>
     </div>
     {href ? <a target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={href}>
                 <Image width={1200}
@@ -98,12 +101,12 @@ const {id} = Astro.params;
         src,
         thumbnailUrl,
         nearLossless
-    }} isParentHidden={!!hiddenImages.find(entry => entry.title === title)}/>}
+    }} isParentHidden={!!hiddenImages.find(entry => isImageInformation(entry) && entry.title === title)}/>}
 </Layout>
-<!--<dialog class="right m" style="width: 320px" id="metadata-dialog" popover="auto">-->
-<!--    <div style="display: flex; gap: 1rem; margin-bottom: 1rem">-->
-<!--        <h5 style="flex: 1">Artwork Info</h5>-->
-<!--        <button class="transparent circle" popovertarget="metadata-dialog" popovertargetaction="hide"><i>close</i></button>-->
-<!--    </div>-->
-<!--    <ImageMetadata rating={rating} artist={artist} characters={characters} tags={tags} published={published} alts={alts} parentWebp={webp} parentAspectRatio={aspectRatio} />-->
-<!--</dialog>-->
+<dialog class="right" style="width: 320px" id="metadata-dialog" popover="auto">
+    <div style="display: flex; gap: 1rem; margin-bottom: 1rem">
+        <h5 style="flex: 1">Artwork Info</h5>
+        <button class="transparent circle" popovertarget="metadata-dialog" popovertargetaction="hide"><i>close</i></button>
+    </div>
+    <ImageMetadata rating={rating} artist={artist} characters={characters} tags={tags} published={published} alts={alts} parentWebp={webp} parentAspectRatio={aspectRatio} />
+</dialog>
