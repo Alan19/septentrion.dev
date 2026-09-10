@@ -14,6 +14,21 @@ import './index.css'
         <SocialMediaLinks/>
     </div>
     <div style="max-height: 36rem;">
-        <Image src={logo} alt={"an image of smug Alcor by Kuttoyaki"} class={"circle primary-border border center"} id="index-image" width={600} height={600} style={{maxHeight: '400px', maxWidth: '400px'}}/>
+        <Image src={logo} alt={"an image of smug Alcor by Kuttoyaki"} class={"circle primary-border border center"}
+               id="index-image" width={600} height={600} style={{maxHeight: '400px', maxWidth: '400px'}}/>
+    </div>
+    <!--Display RSS in bottom right-->
+    <a href="/rss.xml" style="display: contents">
+        <button class="transparent circle s m" style="position: absolute; bottom: 1rem; right: 1rem">
+            <i>rss_feed</i>
+        </button>
+
+    </a>
+    <div slot="side" style="height: 100%;">
+        <a href="/rss.xml" style="display: contents">
+            <button class="transparent circle" style="position: absolute; bottom: 1rem; right: 1rem">
+                <i>rss_feed</i>
+            </button>
+        </a>
     </div>
 </Layout>

@@ -24,5 +24,10 @@ export const destinations = [
         name: 'Analytics',
         path: 'analytics',
         icon: 'analytics'
+    },
+    {
+        name: 'Blog',
+        path: 'blog',
+        icon: 'dynamic_feed'
     }
 ]

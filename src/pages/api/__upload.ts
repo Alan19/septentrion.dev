@@ -24,7 +24,6 @@ export const s3 = new S3({
 
 function getFormData(data: FormData) {
     return data.entries().reduce((previousValue, [key, value]) => {
-        // Add new fields here as necessary
         return key === "file" ? {...previousValue, [key]: value} : {...previousValue, [key]: JSON.parse(<string>value)};
     }, {}) as ParentImageFormData | AltImageFormData;
 }

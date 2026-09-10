@@ -12,7 +12,7 @@ body {
     --inner: 24, 56, 127;
     --middle: 36, 87, 171;
     --outer: 46, 111, 206;
-    background: repeat center linear-gradient(315deg, rgba(var(--outer), 100%) 0%, rgba(var(--middle), 100%) 20%, rgba(var(--inner), 100%) 30%, rgba(var(--inner), 100%) 70%, rgba(var(--middle), 100%) 80%, rgba(var(--outer), 100%) 100%);
+    background: linear-gradient(315deg, rgba(var(--outer), 100%) 0%, rgba(var(--middle), 100%) 20%, rgba(var(--inner), 100%) 30%, rgba(var(--inner), 100%) 70%, rgba(var(--middle), 100%) 80%, rgba(var(--outer), 100%) 100%) no-repeat fixed center;
     min-height: 100dvh;
 }
 
