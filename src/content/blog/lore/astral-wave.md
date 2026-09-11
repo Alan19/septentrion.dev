@@ -2,6 +2,7 @@
 title: Astral Wave Synopsis
 description: Synopsis for my custom world, Astral Wave
 pubDate: 2026-09-07
+tags: ['Worldbuilding', 'Lore']
 ---
 > **Tl;dr:** 27th century utopian civilization focused around wargames where people can create avatars with morphological freedom
 ## The World
