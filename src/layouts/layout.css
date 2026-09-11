@@ -50,6 +50,7 @@ body {
         top: 2rem;
         width: 12rem;
     }
+
     .home-button {
         display: none;
     }
@@ -62,8 +63,11 @@ body {
 }
 
 body:has(:popover-open) {
-    #content, #navigation-bar {
-        pointer-events: none;
-        touch-action: none;
-    }
+    pointer-events: none;
+    touch-action: none;
+}
+
+dialog * {
+    pointer-events: auto !important;
+    touch-action: auto !important;
 }

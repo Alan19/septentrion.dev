@@ -9771,5 +9771,24 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/game_boys.webp",
     "title": "Game Boys",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/game_boys.webp"
+  },
+  {
+    "artist": "@endheriel.bsky.social",
+    "aspectRatio": 0.9609375,
+    "characters": [
+      "Alcor"
+    ],
+    "href": "https://bsky.app/profile/endheriel.bsky.social/post/3mv7cp4dbqc2w",
+    "id": "ecfb36ba9985c9ea28c870f06b59c95fcb5be0f2be6ad02fded711fb",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/kick.webp",
+    "published": "2026-09-11",
+    "rating": "general",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/kick.jpg",
+    "tags": [
+      "Eltanin Form"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/kick.webp",
+    "title": "Kick!",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/kick.webp"
   }
 ]

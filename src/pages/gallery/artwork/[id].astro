@@ -47,6 +47,7 @@ const {
 const {id} = Astro.params;
 
 const maxWidthAndHeight = 1300
+// TODO Extract duplicate components into a React component to avoid component duplication
 ---
 <DynamicGalleryBack />
 <Layout>
@@ -62,20 +63,24 @@ const maxWidthAndHeight = 1300
         </div>
         {href ? <a target="_blank" rel="noopener noreferrer" style={{display: "contents"}} href={href}>
                     <Image width={maxWidthAndHeight}
+                           quality={"max"}
                            id="artwork"
                            height={maxWidthAndHeight}
                            alt={title}
                            class={clsx("artwork")}
                            src={webp}
+                           loading={'eager'}
                            transition:name={`img-${id}`}
                            style={{viewTransitionClass: "gallery-img", flex: 1}}/>
                 </a> :
                 <Image width={maxWidthAndHeight}
+                       quality={"max"}
                        id="artwork"
                        height={maxWidthAndHeight}
                        alt={title}
                        class={clsx("artwork")}
                        src={webp}
+                       loading={'eager'}
                        transition:name={`img-${id}`}
                        style={{viewTransitionClass: "gallery-img", flex: 1}}/>}
     </div>
