@@ -7,9 +7,13 @@ import slash from 'slash';
 
 // Adapted from https://github.com/MoustaphaDev/astro-dev-only-routes/blob/main/packages/integration/src/index.ts
 // const pageExtRE = /\.(astro|mdx|md|tsx|ts|jsx|js)$/; Support later
+interface FileTree {
+    [k: string]: FileTree | undefined
+}
 
 const pageExtRE = /\.(astro)$/;
 const DOUBLE_UNDERSCORE = '__';
+
 export default function integration(): AstroIntegration {
     return {
         name: 'astro-dev-only-routes',
@@ -108,29 +112,39 @@ function log(
     );
 }
 
-function foldersToConsumableTree(folders: string[]) {
-    const tree = {};
-    for (let folder of folders) {
+
+function foldersToConsumableTree(devOnlyFiles: string[]) {
+    const tree: FileTree = {};
+    for (let folder of devOnlyFiles) {
         const parts = folder.split(path.sep);
         const rootKey = parts.shift();
-        if (!rootKey) {
-            continue;
+        if (rootKey) {
+            addNestedKeys(tree, [rootKey, ...parts]);
         }
-        addNestedKeys(tree, [rootKey, ...parts]);
     }
     return tree;
 }
 
-function addNestedKeys(obj: object, keys: string[]) {
-    let cursor = obj;
-    for (let key of keys) {
-        cursor[key] = cursor[key] || {};
-        cursor = cursor[key];
+/**
+ * Add nested keys by using a cursor, starting at the top of the file path
+ * @param obj The FileTree object to be modified
+ * @param keys An array of the components of the filepath, separated by /
+ */
+function addNestedKeys(obj: FileTree, keys: string[]) {
+    let cursor: FileTree = obj;
+    for (let i = 0; i < keys.length; i++) {
+        let key = keys[i];
+        if (i === keys.length - 1) {
+            cursor[key] = undefined;
+        } else {
+            cursor[key] = {}
+            cursor = cursor[key];
+        }
     }
 }
 
 // TODO: make this
-function createTreeView(tree, indent = 0) {
+function createTreeView(tree: FileTree, indent = 0) {
     const BRANCH = kleur.magenta('├─');
     const HALF_BRANCH = kleur.magenta('└─');
     const DOWN_TRIANGLE = '▼';
@@ -145,15 +159,13 @@ function createTreeView(tree, indent = 0) {
         const padding = '   '.repeat(indent);
         const branch = isLastKey ? HALF_BRANCH : BRANCH;
         result += `${padding} ${branch} ${maybeDownTriangle} ${key}\n`;
-        if (typeof value === 'object') {
+        if (value !== undefined) {
             result += createTreeView(value, indent + 1);
-        } else {
-            result += `${padding}${branch} ${value}\n`;
         }
     }
     return result;
 }
 
-function isDir(tree) {
-    return Object.keys(tree).length > 0;
+function isDir(tree: FileTree | undefined) {
+    return tree !== undefined;
 }

@@ -1,7 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import {getCollection} from "astro:content";
-const blog = await getCollection('blog')
+const blog = (await getCollection('blog'))
+    .toSorted((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
 
 ---
 <Layout>

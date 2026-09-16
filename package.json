@@ -53,9 +53,9 @@
   "devDependencies": {
     "@astrojs/language-server": "^2.16.16",
     "@astrojs/ts-plugin": "^1.10.10",
-    "wrangler": "^4.111.0",
     "@types/fs-extra": "^11.0.4",
     "axios": "^1.19.0",
-    "fs-extra": "^11.4.0"
+    "fs-extra": "^11.4.0",
+    "wrangler": "^4.111.0"
   }
 }
