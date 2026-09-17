@@ -9790,5 +9790,153 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/kick.webp",
     "title": "Kick!",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/kick.webp"
+  },
+  {
+    "artist": "@Saizkola",
+    "aspectRatio": 0.7066704675028507,
+    "characters": [
+      "Alcor"
+    ],
+    "href": "https://vgen.co/Saizkola/portfolio/showcase/faintalcor-s-skeb-full-body-boy-shota-anime-illustration/70311991-6c73-463c-847f-e17d87333524",
+    "id": "936bfd80f80a6c1fa549d4c2d840cb38ae3f4a3568a5801040a3e436",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/voyaging_across_the_interstellar_expanse.webp",
+    "published": "2026-09-16",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/voyaging_across_the_interstellar_expanse.png",
+    "tags": [
+      "Techwear",
+      "Aldhibah Form",
+      "Full Body",
+      "Illustration"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/voyaging_across_the_interstellar_expanse.webp",
+    "title": "Voyaging across the interstellar expanse",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/voyaging_across_the_interstellar_expanse.webp"
+  },
+  {
+    "artist": "@shibenkuaihuatu",
+    "aspectRatio": 0.7070545121392579,
+    "characters": [
+      "Alcor"
+    ],
+    "href": "",
+    "id": "fbc88c66a5d41a96042c731503780670a73da6580ace6462d9dc6a91",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/layerloop.webp",
+    "published": "2026-09-10",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/layerloop.png",
+    "tags": [
+      "Bodysuit",
+      "Full Body",
+      "Rastaban Form"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/layerloop.webp",
+    "title": "Layerloop",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/layerloop.webp"
+  },
+  {
+    "artist": "@shibenkuaihuatu",
+    "aspectRatio": 0.6771613092617056,
+    "characters": [
+      "Alcor"
+    ],
+    "href": "",
+    "id": "d4300a393a863f2ca9773cd98b691c823fb138c7bf0a281584c88b35",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/galethorn.webp",
+    "published": "2026-09-10",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/galethorn.png",
+    "tags": [
+      "Rastaban Form",
+      "Full Body",
+      "Superhero",
+      "Bodysuit"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/galethorn.webp",
+    "title": "Galethorn",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/galethorn.webp"
+  },
+  {
+    "altType": "cropped",
+    "aspectRatio": 0.7070545121392579,
+    "characters": [
+      "Alcor"
+    ],
+    "id": "928af65e2abe9e84f8796e3c5f34207a58f38deeb26911fd82265812",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/layerloop_1.webp",
+    "parent": "Layerloop",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/layerloop_1.png",
+    "tags": [
+      "Bodysuit",
+      "Full Body",
+      "Rastaban Form"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/layerloop_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/layerloop_1.webp",
+    "href": ""
+  },
+  {
+    "altType": "extra",
+    "aspectRatio": 0.6771613092617056,
+    "characters": [
+      "Alcor"
+    ],
+    "id": "59a3d17c3d57c7c68c5e9ed7b7ecfe7490aa51a77650ae3e72047fb9",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/galethorn_1.webp",
+    "parent": "Galethorn",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/galethorn_1.png",
+    "tags": [
+      "Rastaban Form",
+      "Full Body",
+      "Superhero",
+      "Bodysuit"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/galethorn_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/galethorn_1.webp",
+    "href": ""
+  },
+  {
+    "altType": "cropped",
+    "aspectRatio": 0.6771613092617056,
+    "characters": [
+      "Alcor"
+    ],
+    "id": "38e325ffd006792d8f88f06dbe804d4cb3f4f5c330df1b7a5c8cd9e9",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/galethorn_2.webp",
+    "parent": "Galethorn",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/galethorn_2.png",
+    "tags": [
+      "Rastaban Form",
+      "Full Body",
+      "Superhero",
+      "Bodysuit"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/galethorn_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/galethorn_2.webp",
+    "href": ""
+  },
+  {
+    "altType": "cropped",
+    "aspectRatio": 0.6771613092617056,
+    "characters": [
+      "Alcor"
+    ],
+    "id": "d093459b8a58ee69e92d0cdbc2ba6f439fbda0e73279915cea70fa4f",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/galethorn_3.webp",
+    "parent": "Galethorn",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/galethorn_3.png",
+    "tags": [
+      "Rastaban Form",
+      "Full Body",
+      "Superhero",
+      "Bodysuit"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/galethorn_3.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/galethorn_3.webp",
+    "href": ""
   }
 ]

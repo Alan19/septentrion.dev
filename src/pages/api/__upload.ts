@@ -15,7 +15,6 @@ dotenv.config();
 
 export const prerender = false;
 const artworks = await getCollection('artworks')
-console.log(artworks)
 export const s3 = new S3({
     region: process.env.REGION,
     credentials: fromEnv(),
@@ -23,9 +22,10 @@ export const s3 = new S3({
 })
 
 function getFormData(data: FormData) {
-    return data.entries().reduce((previousValue, [key, value]) => {
-        return key === "file" ? {...previousValue, [key]: value} : {...previousValue, [key]: JSON.parse(<string>value)};
-    }, {}) as ParentImageFormData | AltImageFormData;
+    return data.entries().reduce((previousValue, [key, value]) => key === "file" ?
+            {...previousValue, [key]: value} :
+            {...previousValue, [key]: JSON.parse(value as string)},
+        {}) as ParentImageFormData | AltImageFormData;
 }
 
 export const POST: APIRoute = async ({request}) => {
@@ -72,8 +72,7 @@ export const POST: APIRoute = async ({request}) => {
                 }),
                 {status: 200}
             );
-        }
-        else {
+        } else {
             const uploadData: ImageInformation = {
                 artist: formValues.artist,
                 aspectRatio: aspectRatio,
@@ -145,7 +144,12 @@ function addToJson(newImageEntry: ImageInformation | AltInformation, isHidden = 
 }
 
 export async function uploadThumbnailVersion(bucket: string, imageName: string, buffer: Buffer): Promise<[string, number]> {
-    const [result, quality, {height, width}] = await compressImageBuffer(sharp(buffer), {width: 2160, height: 3840, withoutEnlargement: true, fit: 'inside'}, 300000);
+    const [result, quality, {height, width}] = await compressImageBuffer(sharp(buffer), {
+        width: 2160,
+        height: 3840,
+        withoutEnlargement: true,
+        fit: 'inside'
+    }, 300000);
     console.log(getUploadMessage('thumbnail', imageName, Buffer.byteLength(result), quality, Buffer.byteLength(buffer)));
     const value = await uploadFile(bucket, `thumbnail/${imageName}.webp`, result, 'image/webp');
     const aspectRatio = width !== undefined && height !== undefined ? width / height : 1;
@@ -153,7 +157,12 @@ export async function uploadThumbnailVersion(bucket: string, imageName: string, 
 }
 
 export async function uploadFullscreenVersion(bucket: string, imageName: string, buffer: Buffer): Promise<[string, string]> {
-    const [result, quality] = await compressImageBuffer(sharp(buffer, {animated: true}), {width: 4096, height: 4096, fit: 'inside', withoutEnlargement: true}, 1000000);
+    const [result, quality] = await compressImageBuffer(sharp(buffer, {animated: true}), {
+        width: 4096,
+        height: 4096,
+        fit: 'inside',
+        withoutEnlargement: true
+    }, 1000000);
     console.log(getUploadMessage('lossy', imageName, Buffer.byteLength(result), quality, Buffer.byteLength(buffer)));
     const value = await uploadFile(bucket, `webp/${imageName}.webp`, result, 'image/webp');
 
