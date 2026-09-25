@@ -9938,5 +9938,22 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/galethorn_3.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/galethorn_3.webp",
     "href": ""
+  },
+  {
+    "artist": "@fujimachine.bsky.social",
+    "aspectRatio": 0.7271171941830624,
+    "characters": [
+      "Rayan"
+    ],
+    "href": "",
+    "id": "27f8c9d3eb6cbc4020494a8573c814cabdf1fe55039f70ba2d46f7ee",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_swim_briefs_themed_outfit.webp",
+    "published": "2026-09-24",
+    "rating": "sensitive",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_swim_briefs_themed_outfit.jpeg",
+    "tags": [],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_swim_briefs_themed_outfit.webp",
+    "title": "Rayan Swim Briefs-themed Outfit",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_swim_briefs_themed_outfit.webp"
   }
 ]

@@ -7,8 +7,8 @@ import _ from "lodash";
 import axios from "axios";
 import {sha3_224} from "js-sha3";
 import {type AltInformation, type ImageInformation, isAltInformation, isImageInformation} from "./images.ts";
-import {prepareFileName} from "../pages/api/__upload.ts";
 import node from 'node:os';
+import {prepareFileName} from "./utility_functions.ts";
 
 export function getPublishedDate(item: ImageInformation | AltInformation, allImages: (ImageInformation | AltInformation)[]) {
     return isImageInformation(item) ? item.published : allImages

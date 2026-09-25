@@ -30,6 +30,7 @@ import 'material-dynamic-colors/dist/cdn/material-dynamic-colors.min'
     <meta name="viewport" content="width=device-width"/>
     <meta name="generator" content={Astro.generator}/>
     <link href="https://cdn.jsdelivr.net/npm/beercss@5.0.3/dist/cdn/beer.min.css" rel="stylesheet" />
+    <link rel="alternate" type="application/atom+xml" title="septentrion.dev RSS" href="/rss.xml">
     <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@5.0.3/dist/cdn/beer.min.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.4/dist/cdn/material-dynamic-colors.min.js"></script>
 
@@ -55,7 +56,8 @@ import 'material-dynamic-colors/dist/cdn/material-dynamic-colors.min'
     <title>{title ?? "septentrion.dev"}</title>
 </head>
 <body class={"auto"}>
-<nav class="space border round left-padding right-padding" id="navigation-bar" style="width: fit-content; margin: auto;top: 1rem; z-index: 2;">
+<!--TODO Make header and footer fixed and put the rest of the links on the bottom on mobile-->
+<nav class="space border round left-padding right-padding" id="navigation-bar" style="width: fit-content; margin: auto;top: 1rem; z-index: 2; max-width: calc(100vw - 96px); overflow-x: scroll">
     {destinations.slice(0).map((value, index) => <a href={`/${value.path}`}>
         <button class="transparent circle large">
             <i class="large">{value.icon}</i>

@@ -13,7 +13,7 @@ const blog = (await getCollection('blog'))
                     <i>article</i>
                     <div class="max">
                         <h5 class="small">{value.data.title}</h5>
-                        <div>{value.data.description}</div>
+                        <div class="wrap">{value.data.description}</div>
                     </div>
                 </a>
             </li>)}
