@@ -9955,5 +9955,79 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_swim_briefs_themed_outfit.webp",
     "title": "Rayan Swim Briefs-themed Outfit",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_swim_briefs_themed_outfit.webp"
+  },
+  {
+    "artist": "@zerocubits0506",
+    "aspectRatio": 1.625487646293888,
+    "characters": [
+      "Alcor",
+      "Rayan",
+      "Giove"
+    ],
+    "href": "https://x.com/zerocubits0506/status/2105706159915352169",
+    "id": "162dfa4a6a432a0da481e6b4bc683c02a2fef3882f2a05edb9e2be93",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/abs_mirror_selfie_ych.webp",
+    "published": "2026-10-01",
+    "rating": "general",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/abs_mirror_selfie_ych.webp",
+    "tags": [
+      "Half Body"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/abs_mirror_selfie_ych.webp",
+    "title": "Abs Mirror Selfie YCH",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/abs_mirror_selfie_ych.webp"
+  },
+  {
+    "artist": "@gabrl-art.bsky.social",
+    "aspectRatio": 0.9928443649373881,
+    "characters": [
+      "Alcor"
+    ],
+    "href": "",
+    "id": "3a6372a2dbf2f3d70a6f5364e54166cb542b7d93446bec18034a967c",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/superhero_cat_alcor.webp",
+    "published": "2026-10-26",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/superhero_cat_alcor.png",
+    "tags": [
+      "Full Body",
+      "Superhero"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/superhero_cat_alcor.webp",
+    "title": "Superhero Cat Alcor ",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/superhero_cat_alcor.webp"
+  },
+  {
+    "artist": "@hachio81",
+    "aspectRatio": 1.7777777777777777,
+    "characters": [
+      "Alcor"
+    ],
+    "href": "https://skeb.jp/@hachio81/works/466",
+    "id": "43edf4558b52384abba162c00ac26d189ba9fb149e09b5645641785c",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/astral_wave_downtown_brooklyn.webp",
+    "published": "2026-09-27",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/astral_wave_downtown_brooklyn.png",
+    "tags": [],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/astral_wave_downtown_brooklyn.webp",
+    "title": "Astral Wave Downtown Brooklyn",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/astral_wave_downtown_brooklyn.webp"
+  },
+  {
+    "altType": "extra",
+    "aspectRatio": 0.7271171941830624,
+    "characters": [
+      "Rayan"
+    ],
+    "id": "c533a41b51d57858c7da9d42c441e9cca6b9c4007609205ca842da88",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_swim_briefs_themed_outfit_1.webp",
+    "parent": "Rayan Swim Briefs-themed Outfit",
+    "rating": "sensitive",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_swim_briefs_themed_outfit_1.jpeg",
+    "tags": [],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_swim_briefs_themed_outfit_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_swim_briefs_themed_outfit_1.webp",
+    "href": ""
   }
 ]
