@@ -9945,13 +9945,15 @@
     "characters": [
       "Rayan"
     ],
-    "href": "",
+    "href": "https://bsky.app/profile/fujimachine.bsky.social/post/3mxhfrc2i7c2a",
     "id": "27f8c9d3eb6cbc4020494a8573c814cabdf1fe55039f70ba2d46f7ee",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_swim_briefs_themed_outfit.webp",
-    "published": "2026-09-24",
+    "published": "2026-10-09",
     "rating": "sensitive",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_swim_briefs_themed_outfit.jpeg",
-    "tags": [],
+    "tags": [
+      "Full Body"
+    ],
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_swim_briefs_themed_outfit.webp",
     "title": "Rayan Swim Briefs-themed Outfit",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_swim_briefs_themed_outfit.webp"
@@ -9986,7 +9988,7 @@
     "href": "",
     "id": "3a6372a2dbf2f3d70a6f5364e54166cb542b7d93446bec18034a967c",
     "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/superhero_cat_alcor.webp",
-    "published": "2026-10-26",
+    "published": "2026-10-10",
     "rating": "mainstream",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/superhero_cat_alcor.png",
     "tags": [
@@ -10029,5 +10031,104 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_swim_briefs_themed_outfit_1.webp",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_swim_briefs_themed_outfit_1.webp",
     "href": ""
+  },
+  {
+    "artist": "@lougouvea",
+    "aspectRatio": 0.802,
+    "characters": [
+      "Giove"
+    ],
+    "href": "https://vgen.co/radsakee/portfolio/showcase/faintalcor-s-colored-sketch/289faffe-1ec4-4f4a-be68-4345758e50c3",
+    "id": "7044b6e6489a5e73dc8554a6b9f5b86fc6f2f6f75bfb336f48054b85",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/giove_sketch_by_lou_gouvea.webp",
+    "published": "2026-10-06",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/giove_sketch_by_lou_gouvea.png",
+    "tags": [
+      "Full Body"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/giove_sketch_by_lou_gouvea.webp",
+    "title": "Giove Sketch by Lou Gouvea",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/giove_sketch_by_lou_gouvea.webp"
+  },
+  {
+    "artist": "@axyusagi.bsky.social",
+    "aspectRatio": 0.6416184971098265,
+    "characters": [
+      "Alcor"
+    ],
+    "href": "https://bsky.app/profile/axyusagi.bsky.social/post/3mxrv4t3a2c2q",
+    "id": "37d3dd808dc876b7ce270f6d994ad67f317d41dcd65d00f872657437",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_oshawott_themed_outfit.webp",
+    "published": "2026-10-13",
+    "rating": "general",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_oshawott_themed_outfit.png",
+    "tags": [
+      "Full Body",
+      "Bodysuit"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_oshawott_themed_outfit.webp",
+    "title": "Alcor Oshawott Themed Outfit",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_oshawott_themed_outfit.webp"
+  },
+  {
+    "artist": "@shadesofgreyfell.bsky.social",
+    "aspectRatio": 0.8275862068965517,
+    "characters": [
+      "Alcor"
+    ],
+    "href": "https://bsky.app/profile/shadesofgreyfell.bsky.social/post/3mxrtptgqnc2s",
+    "id": "2b59b44f56e67bba5b2089add1de2b198f56a9848209aaeaf316d8e6",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/shades_of_greyfell_skeb_like_portrait.webp",
+    "published": "2026-10-13",
+    "rating": "general",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/shades_of_greyfell_skeb_like_portrait.png",
+    "tags": [
+      "Bodysuit",
+      "Half Body"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/shades_of_greyfell_skeb_like_portrait.webp",
+    "title": "Shades of Greyfell Skeb-like Portrait",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/shades_of_greyfell_skeb_like_portrait.webp"
+  },
+  {
+    "artist": "@cowocz",
+    "aspectRatio": 0.9569230769230769,
+    "characters": [
+      "Alcor"
+    ],
+    "href": "https://bsky.app/profile/cowocz.bsky.social/post/3mycm3tbaz22c",
+    "id": "ef65f1b8197504a9b2f96ebafd4dde8eb6a80fb8bec0c8a5fc8e985d",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_parkour_by_cowocz.webp",
+    "published": "2026-10-20",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_parkour_by_cowocz.jpeg",
+    "tags": [
+      "Illustration",
+      "Techwear",
+      "Bodysuit"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_parkour_by_cowocz.webp",
+    "title": "Alcor Parkour (by cowocz)",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_parkour_by_cowocz.webp"
+  },
+  {
+    "artist": "@wolfmalro",
+    "aspectRatio": 1.069515306122449,
+    "characters": [
+      "Giove"
+    ],
+    "href": "https://x.com/wolfmalro/status/2115104254226731462?a=yUy6O4hkOIH56ppRXzc",
+    "id": "ba17a2572e67c41d607cf043297e310070550851c7ac07c6987fca2e",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/giove_armored_phenomenon_v_3.webp",
+    "published": "2026-10-27",
+    "rating": "general",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/giove_armored_phenomenon_v_3.jpg",
+    "tags": [
+      "Full Body"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/giove_armored_phenomenon_v_3.webp",
+    "title": "Giove Armored Phenomenon v3",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/giove_armored_phenomenon_v_3.webp"
   }
 ]
