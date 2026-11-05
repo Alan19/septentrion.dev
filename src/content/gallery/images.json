@@ -755,7 +755,7 @@
     "title": "AICore Reference Sheet",
     "href": "https://twitter.com/_IF8_/status/1511456805255204864?s=20&t=LDMcFgp5TKPMy3gynfKchA",
     "src": "https://alcorsiteartbucket.s3.amazonaws.com/aicore_reference_sheet.jpg",
-    "artist": "@OISGHN",
+    "artist": "@_if8_",
     "tags": [
       "AICore Form",
       "Rastaban Form",
@@ -2487,7 +2487,7 @@
   },
   {
     "title": "Soma Microbot Cowl",
-    "artist": "@OISGHN",
+    "artist": "@_if8_",
     "tags": [
       "Bodysuit",
       "Hoodie",
@@ -6772,7 +6772,7 @@
   },
   {
     "title": "Alcor Battle Artwork",
-    "artist": "@OISGHN",
+    "artist": "@_if8_",
     "tags": [
       "Bodysuit",
       "Techwear",
@@ -9357,7 +9357,7 @@
   },
   {
     "title": "Rayan Astral Wave Work Outfit",
-    "artist": "@OISGHN",
+    "artist": "@_if8_",
     "tags": [
       "Bodysuit",
       "Full Body",
@@ -9434,7 +9434,7 @@
   },
   {
     "title": "Giove Human Design",
-    "artist": "@OISGHN",
+    "artist": "@_if8_",
     "tags": [
       "Bodysuit",
       "Hoodie",
@@ -9514,8 +9514,8 @@
     "title": "Human Alcor Reference Sheet 2026",
     "artist": "@amainu_dog",
     "tags": [],
-    "href": "",
-    "published": "2026-08-04",
+    "href": "https://x.com/amainu_dog/status/2115362251402342548",
+    "published": "2026-10-28",
     "aspectRatio": 0.8963333333333333,
     "rating": "general",
     "characters": [],
@@ -10130,5 +10130,128 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/giove_armored_phenomenon_v_3.webp",
     "title": "Giove Armored Phenomenon v3",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/giove_armored_phenomenon_v_3.webp"
+  },
+  {
+    "artist": "@TORU_R8",
+    "aspectRatio": 1.4651539708265802,
+    "characters": [
+      "Giove"
+    ],
+    "href": "",
+    "id": "c0294e3e1f7a9c2cbd97838c72b35f55daab0739a8dfc5a31b9c55cd",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/giove_fashion_shot.webp",
+    "published": "2026-10-27",
+    "rating": "sensitive",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/giove_fashion_shot.png",
+    "tags": [
+      "Full Body"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/giove_fashion_shot.webp",
+    "title": "Giove Fashion Shot",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/giove_fashion_shot.webp"
+  },
+  {
+    "artist": "@kurope.bsky.social",
+    "aspectRatio": 0.7069555302166477,
+    "characters": [
+      "Alcor"
+    ],
+    "href": "https://bsky.app/profile/faintalcor.septentrion.dev/post/3mzbh34wojc2j",
+    "id": "1f0dc11c846388d326e5aae737ea66f43f79d319401a393acfb3f722",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/monster_suit_chibi.webp",
+    "published": "2026-11-01",
+    "rating": "general",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/monster_suit_chibi.png",
+    "tags": [
+      "Chibi"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/monster_suit_chibi.webp",
+    "title": "Monster Suit Chibi",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/monster_suit_chibi.webp"
+  },
+  {
+    "artist": "@AQianr",
+    "aspectRatio": 1.7777777777777777,
+    "characters": [
+      "Alcor",
+      "Naxy"
+    ],
+    "href": "",
+    "id": "3ca1bb3f79e35df5c8bd5e033284561d4f9d5c496fd2eb32fb28679c",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/halloween_ych_2026.webp",
+    "published": "2026-10-28",
+    "rating": "general",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/halloween_ych_2026.png",
+    "tags": [
+      "Thuban Form",
+      "Illustration",
+      "Full Body"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/halloween_ych_2026.webp",
+    "title": "Halloween YCH 2026",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/halloween_ych_2026.webp"
+  },
+  {
+    "artist": "@furry_ONandOFF",
+    "aspectRatio": 0.703125,
+    "characters": [
+      "Rayan"
+    ],
+    "href": "",
+    "id": "f56f43aa00f5b84ad72dc97f8da272720f7aeea6e2f6c1e59f263544",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_half_body_by_%EC%86%8C%EB%A7%9D%EB%A3%A1.webp",
+    "published": "2026-11-01",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_half_body_by_%EC%86%8C%EB%A7%9D%EB%A3%A1.jpeg",
+    "tags": [
+      "Half Body"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_half_body_by_%EC%86%8C%EB%A7%9D%EB%A3%A1.webp",
+    "title": "Rayan Half-Body by 소망룡",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_half_body_by_%EC%86%8C%EB%A7%9D%EB%A3%A1.webp"
+  },
+  {
+    "artist": "@dragonmc233.bsky.social",
+    "aspectRatio": 0.5625,
+    "characters": [
+      "Alcor"
+    ],
+    "href": "https://bsky.app/profile/dragonmc233.bsky.social/post/3mz4ajrz53s2o",
+    "id": "be9006e47b5ea0c6fe1d1999938543fc2169b5d269a8f331073050c7",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/alcor_half_body_by_%E6%98%9F%E9%BE%99.webp",
+    "published": "2026-10-30",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/alcor_half_body_by_%E6%98%9F%E9%BE%99.png",
+    "tags": [
+      "Half Body",
+      "Knives",
+      "Standard Outfit"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/alcor_half_body_by_%E6%98%9F%E9%BE%99.webp",
+    "title": "Alcor Half Body by 星龙",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/alcor_half_body_by_%E6%98%9F%E9%BE%99.webp"
+  },
+  {
+    "artist": "@_if8_",
+    "aspectRatio": 1.1310344827586207,
+    "characters": [
+      "Alcor",
+      "Castor"
+    ],
+    "href": "https://x.com/_if8_/status/2117628340026913192",
+    "id": "e64949c72be9d22ae194063e2584d1241e33e4fca73e4d7413331cdf",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/sporty_alcor_sketchpage.webp",
+    "published": "2026-11-03",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/sporty_alcor_sketchpage.png",
+    "tags": [
+      "Bodysuit",
+      "Sketchpage",
+      "Techwear",
+      "Rastaban Form"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/sporty_alcor_sketchpage.webp",
+    "title": "Sporty Alcor Sketchpage",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sporty_alcor_sketchpage.webp"
   }
 ]
