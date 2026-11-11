@@ -111,6 +111,7 @@ export function ArtUploader(props: Readonly<ParentUploaderProps | AltUploaderPro
                     <label>File</label>
                 </div>
 
+                {/*TODO Add suggest title button*/}
                 {isParent && <div className="field label border">
                     <input type="text" {...register("title", {required: true})}/>
                     <label>Name</label>

@@ -10253,5 +10253,63 @@
     "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/sporty_alcor_sketchpage.webp",
     "title": "Sporty Alcor Sketchpage",
     "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/sporty_alcor_sketchpage.webp"
+  },
+  {
+    "artist": "@rideon86387024",
+    "aspectRatio": 0.6787450287229342,
+    "characters": [
+      "Alcor"
+    ],
+    "href": "",
+    "id": "3418b475a0be110d71e3ce0ccdf1047b2d8b08459148336d9bff885e",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_small_ver_vertical_painting.webp",
+    "published": "2026-11-10",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_small_ver_vertical_painting.png",
+    "tags": [
+      "Bodysuit",
+      "Full Body"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_small_ver_vertical_painting.webp",
+    "title": "Rayan (Small Ver) Vertical Painting",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_small_ver_vertical_painting.webp"
+  },
+  {
+    "altType": "extra",
+    "aspectRatio": 2.2,
+    "characters": [
+      "Alcor"
+    ],
+    "id": "03826473f76b0b3bc33e5ee74f102acc4646552a44d70ae40cec539d",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_small_ver_vertical_painting_1.webp",
+    "parent": "Rayan (Small Ver) Vertical Painting",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_small_ver_vertical_painting_1.png",
+    "tags": [
+      "Bodysuit",
+      "Full Body"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_small_ver_vertical_painting_1.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_small_ver_vertical_painting_1.webp",
+    "href": ""
+  },
+  {
+    "altType": "extra",
+    "aspectRatio": 0.874,
+    "characters": [
+      "Alcor"
+    ],
+    "id": "55f9036617e3c50dab9f7f744038c3189a01237829c550d0a34a062b",
+    "nearLossless": "https://alcorsiteartbucket.s3.amazonaws.com/near_lossless/rayan_small_ver_vertical_painting_2.webp",
+    "parent": "Rayan (Small Ver) Vertical Painting",
+    "rating": "mainstream",
+    "src": "https://alcorsiteartbucket.s3.amazonaws.com/rayan_small_ver_vertical_painting_2.png",
+    "tags": [
+      "Bodysuit",
+      "Full Body"
+    ],
+    "thumbnailUrl": "https://alcorsiteartbucket.s3.amazonaws.com/thumbnail/rayan_small_ver_vertical_painting_2.webp",
+    "webp": "https://alcorsiteartbucket.s3.amazonaws.com/webp/rayan_small_ver_vertical_painting_2.webp",
+    "href": ""
   }
 ]

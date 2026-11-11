@@ -45,7 +45,7 @@ function getBorderForRating(rating: Rating) {
     var element = document.querySelector('#monthly-switch');
     console.log(element)
     element.addEventListener('change', (event) => {
-        console.log('onchange',event.target )
+        console.log('onchange',event.target.value )
         if (event.target.value === 'checked') {
             document.querySelector('#non-monthly-gallery').style.display = 'none';
             document.querySelector('#monthly-gallery').style.display = 'block';
@@ -56,15 +56,15 @@ function getBorderForRating(rating: Rating) {
         }
     })
 </script>
-<div class="field middle-align">
-    <nav>
-        <h6>Monthly mode</h6>
-        <label class="switch">
-            <input type="checkbox" id="monthly-switch">
-            <span></span>
-        </label>
-    </nav>
-</div>
+<!--<div class="field middle-align">-->
+<!--    <nav>-->
+<!--        <h6>Monthly mode</h6>-->
+<!--        <label class="switch">-->
+<!--            <input type="checkbox" id="monthly-switch">-->
+<!--            <span></span>-->
+<!--        </label>-->
+<!--    </nav>-->
+<!--</div>-->
 <div id="monthly-gallery">
     {_.uniq(images.map(value => value.published.substring(0, 7)).sort((a, b) => b.localeCompare(a))).map(value => <h3>
             {dayjs(value).format("MMMM YYYY")}

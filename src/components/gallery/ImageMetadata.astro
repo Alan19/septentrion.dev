@@ -38,7 +38,7 @@ const artistUrl = !artist.includes('.') ? `https://x.com/${artist}` : `https://b
 <>
     <h5>Alts</h5>
 
-    <div style="display: flex; flex-direction: column; gap: .5rem">
+    <div style="display: flex; flex-flow: row wrap; gap: .5rem">
         <Image src={parentWebp}
                alt={'parent image'}
                onclick={`const el = document.getElementById('artwork');el.src = '${parentWebp}'`}

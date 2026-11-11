@@ -19,6 +19,7 @@ interface LayoutProps {
 const {leftPanelClass = 'l l2', middlePanelClass = 's12 l8', rightPanelClass = 'l l2', title = "septentrion.dev"}: LayoutProps = Astro.props;
 
 import 'material-dynamic-colors/dist/cdn/material-dynamic-colors.min'
+import ClientRouter from "astro/components/ClientRouter.astro";
 ---
 <!--<ClientRouter fallback="none"/>-->
 <html lang="en">
